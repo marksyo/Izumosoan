@@ -48,7 +48,9 @@ function setupFormValidation() {
             try {
                 // 准备表单数据
                 const formData = new FormData(form);
-                console.log (formData);
+                for (let [key, value] of formData.entries()) {
+                    console.log(`${key}: ${value}`);
+                }
                 // 发送请求
                 const response = await fetch('https://kaiseiweb.onrender.com/contactform/AjaxForm.php', {
                     method: 'POST',
