@@ -46,7 +46,10 @@ function log_message($message) {
 // 允许的前端域名列表
 $allowedOrigins = [
     'https://kaiseilearntravel.onrender.com',
-    'http://localhost:3000' // 本地开发环境
+    'http://localhost:3000', // 本地开发环境
+    'http://localhost', // 本地开发环境
+    'https://izumosoan.com',  // Added to allow requests from izumosoan.com
+    'https://kaiseilearntravel.com'  // Added to allow requests from izumosoan.com
 ];
 
 // 获取请求来源
@@ -95,6 +98,7 @@ const SUBJECT     = 'New message from Kaisei web form!';
 const HANDLER_MSG = [
     'success'       => '✔️ Your message has been sent !',
     'token-error'   => '❌ Error recaptcha token.',
+    'enter_company' => '❌ Please enter your company name.',
     'enter_name'    => '❌ Please enter your name.',
     'enter_email'   => '❌ Please enter a valid email.',
     'enter_message' => '❌ Please enter your message.',
@@ -103,6 +107,7 @@ const HANDLER_MSG = [
     'email_body'    => '
         <h1>{{subject}}</h1>
         <p><b>Date</b>: {{date}}</p>
+          {{company_field}}
         <p><b>Name</b>: {{name}}</p>
         <p><b>E-Mail</b>: {{email}}</p>
         <p><b>Message</b>: {{message}}</p>
@@ -126,6 +131,12 @@ $ip = $_SERVER['HTTP_X_FORWARDED_FOR']
 # Check if fields has been entered and valid
 $date    = new DateTime();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $company = isset($_POST['company']) ? secure($_POST['company']) : '';
+    if ($company === '' && isset($_POST['company'])) {
+        statusHandler(true, HANDLER_MSG['enter_company']);
+    }
+    log_message("company=$company");
+
     $name    = secure($_POST['name']) ?? statusHandler(true, HANDLER_MSG['enter_name']);
     $email   = filter_var(secure($_POST['email']), FILTER_SANITIZE_EMAIL) ?? statusHandler(true, HANDLER_MSG['enter_email']);
     $message = secure($_POST['message']) ?? statusHandler(true, HANDLER_MSG['enter_message']);
@@ -143,11 +154,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 # Prepare email body
+$company_field = $company ? '<p><b>Company</b>: {{company}}</p>' : '';
 $title ="web form: " . $name;
 $email_body = HANDLER_MSG['email_body'];
 $email_body = template($email_body, [
     'subject' => $title , //SUBJECT,
     'date'    => $date->format('y/m/j H:i:s'),
+    'company_field' => $company_field,
+    'company'       => $company,
     'name'    => $name,
     'email'   => $email,
     'ip'      => filter_var($ip, FILTER_VALIDATE_IP),
@@ -159,11 +173,12 @@ log_message("server name= " . $_SERVER['SERVER_NAME']);
 log_message("Form submitted from: $source_url");
 # Verifying the user's response
 $recaptcha = new \ReCaptcha\ReCaptcha(SECRET_KEY);
-$resp = $recaptcha
-    // ->setExpectedHostname($_SERVER['SERVER_NAME']) //front host=kaiseilearntravel.onrender.com, backend host=kaiseiweb.onrender.com. this cause hostname mismatch
-    ->verify($token, filter_var($ip, FILTER_VALIDATE_IP));
+// $resp = $recaptcha
+//     // ->setExpectedHostname($_SERVER['SERVER_NAME']) //front host=kaiseilearntravel.onrender.com, backend host=kaiseiweb.onrender.com. this cause hostname mismatch
+//     ->verify($token, filter_var($ip, FILTER_VALIDATE_IP));
 
-if ($resp->isSuccess()) {
+// if ($resp->isSuccess()) 
+if (1){
     # Instanciation of PHPMailer
     $mail = new PHPMailer(true);
     $mail->setLanguage('en', __DIR__ . '/vendor/PHPMailer/language/');

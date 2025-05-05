@@ -48,9 +48,9 @@ function setupFormValidation() {
             try {
                 // 准备表单数据
                 const formData = new FormData(form);
-                for (let [key, value] of formData.entries()) {
-                    console.log(`${key}: ${value}`);
-                }
+                // for (let [key, value] of formData.entries()) {
+                //     console.log(`${key}: ${value}`);
+                // }
                 // 发送请求
                 const response = await fetch('https://kaiseiweb.onrender.com/contactform/AjaxForm.php', {
                     method: 'POST',
@@ -62,6 +62,16 @@ function setupFormValidation() {
                 // 处理响应
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 
+                // 检查Content-Type
+                // 检查Content-Type
+                // const contentType = response.headers.get('content-type');
+                // console.log('Response Content-Type:', contentType); // Debug log
+                // if (!contentType || !contentType.toLowerCase().startsWith('application/json')) {
+                //     const text = await response.text();
+                //     console.error('Non-JSON response:', text);
+                //     throw new Error(`Expected JSON, received: ${text.slice(0, 100)}...`);
+                // }
+
                 const result = await response.json();
                 handleResponse(form, result);
 
