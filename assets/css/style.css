@@ -1130,8 +1130,9 @@ hr {
 .mobile_menu {
     position: absolute;
     right: 0px;
-    width: 100%;
-    z-index: 99
+    top: 50px;
+    width: 50%;
+    z-index: 99;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -5060,4 +5061,128 @@ html[lang="zh"] #InputArea.form-select {
 
 .right-caption{
     padding-left: 30px;
+}
+
+/* 添加以下CSS到style.css */
+@media (max-width: 767px) {
+
+    .header-dropdown {
+    position: relative;
+    right: 120px;
+    top: -120px;
+    line-height: 1.5;
+    padding: 0px 0 0 5px;
+}
+
+    /* 移动端头部容器 */
+    .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        background: #fff;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        position: relative;
+    }
+
+    /* 优化下拉菜单 */
+    .mobile-language-dropdown {
+        position: absolute;
+        z-index: 1000;
+        width: 50%;
+        top: 10px;
+        right: 0px;
+    }
+
+    .dropdown-toggle {
+        display: flex;
+        align-items: center;
+        padding: 8px 16px;
+        border: 1px solid #e0e0e0;
+        border-radius: 25px;
+        background: #f8f9fa;
+        transition: all 0.3s ease;
+    }
+
+    .dropdown-toggle:hover {
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0,136,15,0.1);
+    }
+
+    .current-lang {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 500;
+        color: #305534;
+    }
+
+    .fa-chevron-down {
+        margin-left: 8px;
+        font-size: 12px;
+        color: #666;
+        transition: transform 0.3s ease;
+    }
+
+    /* 下拉菜单展开状态 */
+    .mobile-language-dropdown.active .dropdown-toggle {
+        background: #fff;
+        border-color: #00880F;
+    }
+
+    .mobile-language-dropdown.active .fa-chevron-down {
+        transform: rotate(180deg);
+        color: #00880F;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 120%;
+        left: 0;
+        width: 160px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+    }
+
+    .mobile-language-dropdown.active .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .dropdown-menu li {
+        padding: 8px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .dropdown-menu li:last-child {
+        border-bottom: 0;
+    }
+
+    .dropdown-menu a {
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        gap: 12px;
+        color: #305534;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+    }
+
+    .dropdown-menu a:hover {
+        background: #f8fff9;
+        transform: translateX(4px);
+    }
+
+    .dropdown-menu .active a {
+        background: #00880F;
+        color: #fff;
+    }
+
+    
 }

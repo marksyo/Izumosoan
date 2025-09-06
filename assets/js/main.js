@@ -263,3 +263,28 @@ $(document).ready(function() {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // 语言切换功能
+  const langDropdown = document.querySelector('.mobile-language-dropdown');
+  const langToggle = langDropdown?.querySelector('.dropdown-toggle');
+
+  langToggle?.addEventListener('click', function(e) {
+      e.stopPropagation();
+      langDropdown.classList.toggle('active');
+  });
+
+  // 点击外部关闭菜单
+  document.addEventListener('click', function(e) {
+      if (!langDropdown.contains(e.target)) {
+          langDropdown.classList.remove('active');
+      }
+  });
+
+  // 菜单项点击处理
+  document.querySelectorAll('.dropdown-menu a').forEach(item => {
+      item.addEventListener('click', function() {
+          langDropdown.classList.remove('active');
+      });
+  });
+});
