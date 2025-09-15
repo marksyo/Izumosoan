@@ -131,9 +131,9 @@ a {
     text-decoration: none
 }
 
-a:hover {
+/* a:hover {
     color: #fff
-}
+} */
 
 a:focus,
 a:hover {
@@ -1633,7 +1633,9 @@ hr {
     z-index: -1;
     border-radius: 5px
 }
-
+.cat-icon{
+    margin-bottom: 10px;
+}
 .categories-area .single-cat .cat-icon {
     margin-bottom: 25px
 }
@@ -1796,6 +1798,8 @@ hr {
 }
 
 .our-services2 .single-services .services-cap h5 a {
+    margin-top:10px;
+    padding-top: 10px;
     font-size: 24px;
     line-height: 1.4;
     margin-bottom: 12px;
@@ -2854,7 +2858,8 @@ hr {
     font-family: "Barlow", sans-serif;
     font-size: 24px !important;
     color: #00880F !important;
-    margin-bottom: 0px;
+    margin-top:10px;
+    margin-bottom: 10px;
     font-weight: 600 !important;
     display: block
 }
@@ -4966,6 +4971,8 @@ span.number {
     height: 100px;
     line-height: 91px;
     font-size: 900%;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .text-bg-danger {
@@ -5185,4 +5192,24 @@ html[lang="zh"] #InputArea.form-select {
     }
 
     
+}
+.py-1 {
+    padding-top: 10px;
+}
+.title-line {
+
+  margin: 10px 0 0 0;
+  background: linear-gradient(transparent 50%, #37f165 0%);
+  padding: 0 5px;
+  font-weight: 700;
+  color: #000;
+}
+
+.title-yellowline {
+
+  margin: 10px 0 0 0;
+  background: linear-gradient(transparent 50%, hwb(59 11% 9% / 0.798) 0%);
+  padding: 0 5px;
+  font-weight: 700;
+  color: #000;
 }
