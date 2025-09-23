@@ -5074,9 +5074,11 @@ html[lang="zh"] #InputArea.form-select {
 @media (max-width: 767px) {
 
     .header-dropdown {
-    position: relative;
+    /* position: relative; */
+            position: absolute;
+        top: -30px;
     right: 120px;
-    top: -120px;
+    /* top: -120px; */
     line-height: 1.5;
     padding: 0px 0 0 5px;
 }
