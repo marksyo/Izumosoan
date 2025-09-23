@@ -5289,3 +5289,6 @@ html[lang="zh"] #InputArea.form-select {
     font-weight: bold;
     letter-spacing: 0.05em;
 }
+.small-text{
+        font-size: 14px !important;
+}
