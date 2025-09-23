@@ -89,7 +89,8 @@
             </div>
         </div>
     </header>
-<main>
+
+    <main>
     <!-- Slider Area Start -->
     <div class="slider-area" id="home">
         <div class="slider-active dot-style">
@@ -98,7 +99,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-caption text-center">
-                                <h1 data-animation="fadeInUp" data-delay=".4s">用技术创造安心生活</h1>
+                                <h1 data-animation="fadeInUp" data-delay=".4s">用技术支持安心生活</h1>
                                 <p data-animation="fadeInUp" data-delay=".4s">出云创安合同公司消除“不安”，创造安全社会。</p>
                                 <a href="#services" class="btn_1 hero-btn" data-animation="bounceIn" data-delay=".8s">查看服务</a>
                                 <a href="#contact" class="btn_1 hero-btn" data-animation="bounceIn" data-delay=".8s">联系我们</a>
@@ -335,7 +336,7 @@
                         </div>
                     </div>
                 </div>
-                <img src="../assets/img/producrts/fuan.jpg" alt="消除不安的形象" loading="lazy">
+                <img src="../assets/img/producrts/fuan-zh.jpg" alt="消除不安的形象" loading="lazy">
             </div>
         </div>
     </div>
@@ -375,8 +376,48 @@
                         <label for="InputTel"><span class="badge text-bg-danger align-middle">必填</span>电话号码</label>
                     </div>
                     <div class="col-lg-6">
-                        <input type="text" id="InputTel" name="phone" placeholder="例）0312345678" pattern="[0-9\-]+" class="form-control validate[required]" required="" aria-describedby="tel-error
-    <footer>
+                        <input type="text" id="InputTel" name="phone" placeholder="例）0312345678" pattern="[0-9\-]+" class="form-control validate[required]" required="" aria-describedby="tel-error">
+                        <span id="tel-error" class="error-message" style="display: none; color: red;">请输入正确的电话号码格式</span>
+                    </div>
+                </div>
+                <div class="mb-4 row justify-content-center">
+                    <div class="col-lg-3">
+                        <label for="InputMail"><span class="badge text-bg-danger align-middle">必填</span>电子邮件地址</label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="email" id="InputMail" name="email" placeholder="例）abc@abc.com" class="form-control validate[required]" required="" aria-describedby="email-error">
+                        <span id="email-error" class="error-message" style="display: none; color: red;">请输入电子邮件地址</span>
+                    </div>
+                </div>
+                <div class="mb-4 row justify-content-center">
+                    <div class="col-lg-3 lh-lg">
+                        <label for="InputText"><span class="badge text-bg-light align-middle">可选</span>消息正文</label>
+                    </div>
+                    <div class="col-lg-6">
+                        <textarea name="message" id="InputText" rows="4" cols="50" style="height: 170px;" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <label for="flexCheckIndeterminate-1">
+                        <input type="checkbox" name="privacy" value="agree" id="flexCheckIndeterminate-1" class="form-check-input align-text-top">
+                        <span class="text-primary"><a href="privacy_policy.html" class="text-primary">同意个人信息处理</a></span>
+                    </label>
+                </div>
+                <div class="mt-3 row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="text-center">
+                            <input name="recaptcha-token" type="hidden">
+                            <button type="submit" id="submitButton" class="btn btn-primary btn-lg submit_btn fw-bold" disabled="" ontouchstart="">确认页面</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Form End -->
+</main>
+
+   <footer>
         <div class="footer-wrappper section-img-bg2" data-background="../assets/img/gallery/footer-bg.jpg">
             <div class="footer-area footer-padding">
                 <div class="container">
