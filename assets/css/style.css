@@ -5196,6 +5196,9 @@ html[lang="zh"] #InputArea.form-select {
 .py-1 {
     padding-top: 10px;
 }
+.py-3 {
+    padding-top: 30px;
+}
 .title-line {
 
   margin: 10px 0 0 0;
@@ -5212,4 +5215,77 @@ html[lang="zh"] #InputArea.form-select {
   padding: 0 5px;
   font-weight: 700;
   color: #000;
+}
+.privacy-policy-section ol {
+    
+    padding-left: 100px;
+    padding-right: 100px;
+
+}
+.privacy-policy-section ol li{
+    list-style: decimal;
+    margin: 10px 0;
+}
+.right-Text{
+    
+    margin: 29px 60px 10px 0px;
+    text-align: right;
+
+}
+
+.tableContents th.table-yellow {
+    background-color: #f9e5ad !important;
+}
+
+.tableContents .v-middle {
+    vertical-align: middle !important;
+}
+.tableContents .t-center {
+    text-align: center !important;
+}
+.tableContents th, .tableContents td {
+    border: 1px solid #c5d3dd;
+}
+.tableContents td.table-blue {
+    background-color: #ebf6fd !important;
+}
+
+.tableContents .v-middle {
+    vertical-align: middle !important;
+}
+.tableContents .t-left {
+    text-align: left !important;
+}
+.tableContents td {
+    padding: 9px;
+    vertical-align: top;
+}
+.tableContents th, .tableContents td {
+    border: 1px solid #c5d3dd;
+}
+.tableContents td.table-pink {
+    background-color: #ffebe4 !important;
+}
+
+.box29 {
+    margin: 2em 0;
+    background: #dcefff;
+    max-width: 500px;
+    margin: 1em auto !important;
+}
+
+.features ul {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 40px;
+    margin-left: 30px;
+}
+.box29 .box-title {
+    font-size: 1.2em;
+    background: #5fb3f5;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
 }
