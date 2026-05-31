@@ -62,9 +62,9 @@
             <nav>
                 <ul>
                     <li><a href='index.html'>ホーム</a></li>
-                    <li><a href='products.html'>製品</a></li>
-                    <li><a href='services.html'>サービス</a></li>
                     <li><a href='about.html'>会社概要</a></li>
+                    <li><a href='services.html'>サービス</a></li>
+                    <li><a href='case-studies.html' class='active'>実績</a></li>
                     <li><a href='index.html#contact'>お問い合わせ</a></li>
                 </ul>
                 <div class='language-switcher'>
@@ -88,68 +88,84 @@
 
         <section class='section-padding section-bg'>
             <div class='container'>
-                <h2>最近のプロジェクト事例</h2>
+                <h2>プロジェクト事例</h2>
                 <div class='projects-grid'>
                     <div class='project-card'>
                         <div class='project-image'>
-                            <img src='../assets/img/cards/server-install.jpg' alt='データセンターネットワーク施工'>
+                            <img src='../assets/img/cards/server-install.jpg' alt='データセンター ネットワーク基盤構築'>
                         </div>
                         <div class='project-content'>
-                            <h3>地方データセンター ネットワークインフラ構築</h3>
+                            <span class='project-badge'>某外資系データセンター</span>
+                            <h3>データセンター ネットワーク基盤構築</h3>
                             <p class='project-category'>ネットワーク・通信インフラ</p>
-                            <p>地方都市のデータセンターにサーバーラック間の高速バックボーンネットワークを設計・施工し、冗長構成により99.99%の可用性を実現しました。</p>
+                            <p class='project-problem'><strong>課題:</strong> 関東圏に新設される外資系データセンターにおいて、サーバーラック間の高速バックボーンネットワークと管理ネットワークの設計・施工が必要でした。99.999%の可用性が求められ、かつ短期間での納入が必須条件でした。</p>
+                            <p class='project-solution'><strong>対応:</strong> コアスイッチの冗長化構成を設計し、Cat6a配線とシングルモード光ファイバーを併用。48ラック分のパッチパネル末端まで一貫施工。48時間の通電試験を実施し、全リンクの品質を検証しました。</p>
+                            <p class='project-result'><strong>成果:</strong> 99.99%の可用性を達成し、予定工期を1週間短縮。現在も運用保守を継続中。</p>
                             <div class='project-details'>
-                                <span>工期: 3ヶ月</span>
-                                <span>規模: 50ラック</span>
-                                <span>技術: Cat6a, シングルモード光ファイバー</span>
+                                <span><i class="fas fa-calendar-alt"></i> 期間: 3ヶ月</span>
+                                <span><i class="fas fa-server"></i> 規模: 48ラック</span>
+                                <span><i class="fas fa-microchip"></i> 技術: Cat6a, SMF</span>
+                                <span><i class="fas fa-check-circle"></i> 可用性: 99.99%</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class='project-card'>
                         <div class='project-image'>
-                            <img src='../assets/img/cards/monitoring-system.jpg' alt='IoTセンサーネットワーク'>
+                            <img src='../assets/img/cards/monitoring-system.jpg' alt='製造工場 遠隔監視システム'>
                         </div>
                         <div class='project-content'>
+                            <span class='project-badge'>某自動車部品製造工場</span>
                             <h3>製造工場 IoTセンサーネットワーク導入</h3>
                             <p class='project-category'>現場運用デジタル化支援</p>
-                            <p>自動車部品工場に設備の振動・温度監視のIoTセンサーネットワークを導入し、予知保全によりダウンタイムを30%削減しました。</p>
+                            <p class='project-problem'><strong>課題:</strong> 中部地区の自動車部品工場では、設備の突発故障によるライン停止が月平均3回発生し、1回あたり約2時間の生産ロスが生じていました。設備管理者は4名で200台以上の工作機械を管理しており、状態把握が属人的になっていました。</p>
+                            <p class='project-solution'><strong>対応:</strong> 各工作機械に振動・温度・電力消費を監視するIoTセンサーを設置し、LoRaWANゲートウェイ経由でクラウドにデータを集約。異常値が検出された場合にメール通知が飛ぶ予知保全システムを構築しました。</p>
+                            <p class='project-result'><strong>成果:</strong> 設備のダウンタイムを30%削減。突発停止は月1回未満に減少。管理者の現場巡回時間が週20時間から8時間に短縮。</p>
                             <div class='project-details'>
-                                <span>工期: 2ヶ月</span>
-                                <span>設置ポイント: 200箇所</span>
-                                <span>技術: LoRaWAN, ゲートウェイ連動</span>
+                                <span><i class="fas fa-calendar-alt"></i> 期間: 2ヶ月</span>
+                                <span><i class="fas fa-chart-line"></i> 設置点: 200箇所</span>
+                                <span><i class="fas fa-wifi"></i> 技術: LoRaWAN</span>
+                                <span><i class="fas fa-check-circle"></i> ダウンタイム: ▲30%</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class='project-card'>
                         <div class='project-image'>
-                            <img src='../assets/img/cards/agv-robot.jpg' alt='海外ロボット導入'>
+                            <img src='../assets/img/cards/agv-robot.jpg' alt='物流倉庫 AGV自動搬送システム'>
                         </div>
                         <div class='project-content'>
-                            <h3>海外ロボットシステム 日本現場導入サポート</h3>
-                            <p class='project-category'>技術システム導入・現場実装支援</p>
-                            <p>欧州製の自動搬送ロボットを日本工場に導入し、安全規格対応及び現場スタッフトレーニングを含む全方位的なサポートを提供しました。</p>
+                            <span class='project-badge'>某大型物流倉庫</span>
+                            <h3>物流倉庫 AGV自動搬送システム導入</h3>
+                            <p class='project-category'>自動化システム導入支援</p>
+                            <p class='project-problem'><strong>課題:</strong> 関東地区の大型物流倉庫では、入出庫処理量が前年比30%増加する一方、作業員の確保が困難になっていました。フォークリフトと手作業による搬送では夜間稼働に対応できず、出荷遅延が常態化。</p>
+                            <p class='project-solution'><strong>対応:</strong> 欧州製AGV12台を導入し、倉庫管理システム（WMS）との連携を構築。搬送ルートの最適化アルゴリズムを実装し、安全柵や警告灯など安全対策も一括施工。作業員向けの運用トレーニングも提供。</p>
+                            <p class='project-result'><strong>成果:</strong> 搬送効率が60%向上し、24時間稼働が可能に。出荷遅延はゼロとなり、作業員の負荷も大幅軽減。</p>
                             <div class='project-details'>
-                                <span>工期: 4ヶ月</span>
-                                <span>台数: 15台</span>
-                                <span>対応: 安全フェンス設置, 言語ローカライズ</span>
+                                <span><i class="fas fa-calendar-alt"></i> 期間: 4ヶ月</span>
+                                <span><i class="fas fa-robot"></i> 台数: 12台</span>
+                                <span><i class="fas fa-project-diagram"></i> 技術: WMS連携, AGV</span>
+                                <span><i class="fas fa-check-circle"></i> 効率: ▲60%</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class='project-card'>
                         <div class='project-image'>
-                            <img src='../assets/img/cards/security-system.jpg' alt='消防連動システム'>
+                            <img src='../assets/img/cards/security-system.jpg' alt='産業団地 総合セキュリティシステム'>
                         </div>
                         <div class='project-content'>
-                            <h3>老舗ホテル 消防設備連動通信システム</h3>
-                            <p class='project-category'>ネットワーク・通信・消防インフラ</p>
-                            <p>歴史的建造物を改装したホテルに、既存消防設備と連動する異常検知システムを構築。建物外観を損なわずに法規制遵守と運用効率を両立しました。</p>
+                            <span class='project-badge'>某産業団地（設備管理会社）</span>
+                            <h3>産業団地 総合セキュリティシステム構築</h3>
+                            <p class='project-category'>セキュリティ・消防連携システム</p>
+                            <p class='project-problem'><strong>課題:</strong> 関西地区の産業団地では、10棟の工場・倉庫が個別に異なるセキュリティシステムを運用しており、入退管理が統一されていませんでした。また、消防設備との連動が不十分で、法令対応に課題を抱えていました。</p>
+                            <p class='project-solution'><strong>対応:</strong> 既存の監視カメラ・入退室管理・消防設備を一元的に管理するプラットフォームを構築。各棟を光ファイバーで接続し、中央管理室から全棟を監視可能に。消防署との連絡を自動化する通報システムも実装。</p>
+                            <p class='project-result'><strong>成果:</strong> セキュリティインシデントへの初動対応時間が平均15分から4分に短縮。年間のセキュリティ運用コストを25%削減。</p>
                             <div class='project-details'>
-                                <span>工期: 1.5ヶ月</span>
-                                <span>客室数: 80室</span>
-                                <span>技術: 無線センサーネットワーク, 4Gバックアップ</span>
+                                <span><i class="fas fa-calendar-alt"></i> 期間: 5ヶ月</span>
+                                <span><i class="fas fa-building"></i> 棟数: 10棟</span>
+                                <span><i class="fas fa-video"></i> 技術: 監視・消防連携</span>
+                                <span><i class="fas fa-check-circle"></i> 対応速度: ▲73%</span>
                             </div>
                         </div>
                     </div>
@@ -158,6 +174,39 @@
         </section>
 
         <section class='section-padding'>
+            <div class='container'>
+                <h2>業種別実績</h2>
+                <p class='section-subtitle'>さまざまな業種でのネットワーク構築・システム導入実績</p>
+                <div class='industry-grid'>
+                    <div class='industry-card'>
+                        <div class='industry-icon'><i class="fas fa-car"></i></div>
+                        <h4>自動車部品製造</h4>
+                        <p>某自動車部品工場 ネットワーク基盤構築</p>
+                        <span class='industry-detail'>生産ラインIoTネットワーク, 無線カバレッジ設計</span>
+                    </div>
+                    <div class='industry-card'>
+                        <div class='industry-icon'><i class="fas fa-warehouse"></i></div>
+                        <h4>物流・倉庫</h4>
+                        <p>某大型物流倉庫 Wi-Fi環境＋AGV導入</p>
+                        <span class='industry-detail'>無線LAN設計, AGV制御NW, WMS連携</span>
+                    </div>
+                    <div class='industry-card'>
+                        <div class='industry-icon'><i class="fas fa-industry"></i></div>
+                        <h4>外資系製造業</h4>
+                        <p>某外資系製造企業 ERPシステム移行支援</p>
+                        <span class='industry-detail'>サーバー移設, クライアントNW再設計, セキュリティ対策</span>
+                    </div>
+                    <div class='industry-card'>
+                        <div class='industry-icon'><i class="fas fa-microchip"></i></div>
+                        <h4>半導体・精密機器</h4>
+                        <p>某半導体工場 クリーンルーム内ネットワーク施工</p>
+                        <span class='industry-detail'>クリーンルーム対応ケーブル, 静電対策, 厳格な塵埃管理</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class='section-padding section-bg'>
             <div class='container'>
                 <h2>お客様の声</h2>
                 <div class='voices-grid'>
@@ -182,6 +231,14 @@
                 </div>
             </div>
         </section>
+
+        <div class='text-center section-padding'>
+            <div class='container'>
+                <h2>あなたの現場の課題を解決します</h2>
+                <p>まずはお気軽にご相談ください</p>
+                <a href='index.html#contact' class='btn-primary'>お問い合わせ</a>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -197,7 +254,7 @@
                         <li><a href='index.html'>ホーム</a></li>
                         <li><a href='about.html'>会社概要</a></li>
                         <li><a href='services.html'>サービス内容</a></li>
-                        <li><a href='case-studies.html'>実績紹介</a></li>
+                        <li><a href='case-studies.html' class='active'>実績紹介</a></li>
                     </ul>
                 </div>
                 <div class='footer-contact'>

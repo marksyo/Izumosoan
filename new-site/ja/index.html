@@ -51,21 +51,35 @@
     <link rel='stylesheet' href='../assets/css/style.css'>
     <link rel='stylesheet' href='../assets/css/custom.css'>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function() {
+            var path = window.location.pathname;
+            var dirs = ['/zh/', '/ja/', '/en/'];
+            for (var i = 0; i < dirs.length; i++) {
+                if (path.indexOf(dirs[i]) >= 0) return;
+            }
+            var lang = (navigator.language || navigator.userLanguage || 'ja').substring(0, 2);
+            var target = (lang === 'zh') ? 'zh' : (lang === 'en') ? 'en' : 'ja';
+            var idx = path.lastIndexOf('/');
+            var base = (idx >= 0) ? path.substring(0, idx + 1) : '/';
+            window.location.replace(base + target + '/index.html');
+        })();
+    </script>
 </head>
 <body>
     <header>
         <div class='container'>
             <div class='logo'>
-                <a href='index.html'>
+                <a href='#'>
                     <img src='../assets/img/logo/logo.png' alt='Izumo Soan' style='height:100px;'>
                 </a>
             </div>
             <nav>
                 <ul>
                     <li><a href='index.html'>ホーム</a></li>
-                    <li><a href='products.html'>製品</a></li>
-                    <li><a href='services.html'>サービス</a></li>
                     <li><a href='about.html'>会社概要</a></li>
+                    <li><a href='services.html'>サービス</a></li>
+                    <li><a href='case-studies.html'>実績</a></li>
                     <li><a href='index.html#contact'>お問い合わせ</a></li>
                 </ul>
                 <div class='language-switcher'>
@@ -84,191 +98,292 @@
         <!-- Hero Section -->
         <section class='hero'>
             <div class='container'>
-                <h1>技術を現場の力に</h1>
+                <h1>技術を現場の力に。</h1>
                 <p class='subtitle'>
+                    日本現場への導入と運用を支える
+                </p>
+                <p class='hero-desc'>
                     現場、安全、運用をつなぐテクノロジーパートナー
                 </p>
                 <div class='hero-buttons'>
                     <a href='services.html' class='btn-primary'>サービス詳細を見る</a>
-                    <a href='index.html#contact' class='btn-secondary'>無料相談を予約する</a>
+                    <a href='index.html#contact' class='btn-secondary'>無料相談を予約</a>
                 </div>
             </div>
         </section>
 
-        <!-- Business 1: 現場インフラ実施支援 -->
-        <section class='section-padding section-bg'>
-            <div class='container'>
-                <div class="section-title">
-                    <h2>業務一：現場インフラ実施支援</h2>
-                    <p>ネットワーク・光ファイバー・セキュリティ・機器設置——現場を計画通り安定して進めます。</p>
-                </div>
-                <div class='problem-grid problem-grid-2col'>
-                    <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/cards/network-cabling.jpg" alt="ネットワーク配線施工"></div>
-                        <i class="fas fa-network-wired card-icon"></i>
-                        <h3>ネットワーク配線施工</h3>
-                        <p>データセンター、オフィスビル、工場の総合配線施工。Cat6A/Cat7銅線ケーブル配線、光ファイバー融着と端末処理、配線パネル整理と識別、ラッキングとケーブルマネジメント、テスト認証とレポート納品を含みます。</p>
-                    </div>
-                    <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/cards/fiber-optic.jpg" alt="光ファイバー敷設工事"></div>
-                        <i class="fas fa-cable-car card-icon"></i>
-                        <h3>光ファイバー敷設工事</h3>
-                        <p>建物内外の光ケーブル敷設と接続。シングルモード/マルチモード光ケーブル施工、架空/管路/トレイ敷設、光ファイバー融着とOTDRテスト、ODF架設置と成端、幹線光ケーブル導入と中間配線を含みます。</p>
-                    </div>
-                    <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/cards/security-system.jpg" alt="セキュリティ弱電工事"></div>
-                        <i class="fas fa-shield-alt card-icon"></i>
-                        <h3>セキュリティ弱電工事</h3>
-                        <p>監視カメラシステム、入退管理システム、入退管理機器の現場設置と実装。カメラ設置と調整、入退管理システム配線、ネットワーク機器ラック設置、現場弱電配管敷設とテストを含みます。</p>
-                    </div>
-                    <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/cards/server-install.jpg" alt="機器設置と設定"></div>
-                        <i class="fas fa-server card-icon"></i>
-                        <h3>機器設置と設定</h3>
-                        <p>通信機器及びサーバーラックの現場設置。機器のラッキングと設置、電源と接地工事、ネットワーク接続と導通確認、ラベル整理とドキュメント納品、現場環境への適合と調整を含みます。</p>
-                    </div>
-                </div>
-                <div style='text-align:center; margin-top:30px;'>
-                    <a href='services-network-infrastructure.html' class='btn-primary'>詳しく見る</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Business 2: システム製品の現場実装支援 -->
+        <!-- 主なサービス業種 (Target Industries) -->
         <section class='section-padding'>
             <div class='container'>
                 <div class="section-title">
-                    <h2>業務二：システム製品の現場実装支援</h2>
-                    <p>制御システム・ロボット・情報システム——技術製品を実際の現場で実装します。</p>
+                    <h2>主なサービス業種</h2>
+                    <p>製造業からデータセンターまで、幅広い現場で技術導入と運用を支援しています。</p>
                 </div>
-                <div class='problem-grid problem-grid-2col'>
-                    <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/cards/plc-system.jpg" alt="工場制御システムの現場実装"></div>
-                        <i class="fas fa-industry card-icon"></i>
-                        <h3>工場制御システムの現場実装</h3>
-                        <p>PLC及び各種制御システムの現場設置と調整。制御盤組立と配線、現場計器とセンサー配線、上位機とコントローラーの通信確認、I/Oテストと連動調整、現場検収とドキュメント納品を含みます。</p>
+                <div class='industry-grid'>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-industry"></i> 製造業工場</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 自動化設備導入</li>
+                            <li><i class="fas fa-check"></i> PLC現場調整・デバッグ</li>
+                            <li><i class="fas fa-check"></i> ネットワーク・OT環境構築</li>
+                            <li><i class="fas fa-check"></i> 故障調査・原因特定</li>
+                        </ul>
                     </div>
-                    <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/cards/agv-robot.jpg" alt="物流ロボットの導入"></div>
-                        <i class="fas fa-robot card-icon"></i>
-                        <h3>物流ロボットの導入</h3>
-                        <p>AGV/AMR及びその他の物流ロボットの現場導入支援。現場環境調査と走行ルート確認、ステーションと充電ステーション設置、システムと上位スケジューリングシステムの連動調整、現場安全確認、試運転支援と操作トレーニングを含みます。</p>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-warehouse"></i> 物流倉庫</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> AGV/AMR導入支援</li>
+                            <li><i class="fas fa-check"></i> Wi-Fiカバレッジ設計</li>
+                            <li><i class="fas fa-check"></i> WMS現場実装</li>
+                            <li><i class="fas fa-check"></i> 設備通信テスト</li>
+                        </ul>
                     </div>
-                    <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/cards/erp-upgrade.jpg" alt="既存ERP情報システムの改修"></div>
-                        <i class="fas fa-database card-icon"></i>
-                        <h3>既存ERP情報システムの改修</h3>
-                        <p>既存ERPシステムのアップグレードと改修の現場支援。サーバーとクライアント環境確認、ネットワーク設定と通信テスト、データ移行と検証、切替作業の現場サポート、新システム導入後の動作確認を含みます。</p>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-database"></i> データセンター</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 光ファイバー施工</li>
+                            <li><i class="fas fa-check"></i> ネットワーク配線</li>
+                            <li><i class="fas fa-check"></i> ラック・機器設置</li>
+                            <li><i class="fas fa-check"></i> 検証テスト</li>
+                        </ul>
                     </div>
-                    <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/cards/monitoring-system.jpg" alt="設備監視システムの通信テスト"></div>
-                        <i class="fas fa-rss card-icon"></i>
-                        <h3>設備監視システムの通信テスト</h3>
-                        <p>各種設備監視システムの通信確認と現場検証。現場機器と監視システム間の通信テスト、ネットワークパス確認、プロトコルと通信パラメータ設定、データ収集検証、通信異常の調査とレポートを含みます。</p>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-building"></i> ビル・施設</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> セキュリティシステム</li>
+                            <li><i class="fas fa-check"></i> 入退室管理システム</li>
+                            <li><i class="fas fa-check"></i> 弱電工事</li>
+                            <li><i class="fas fa-check"></i> ネットワーク基盤</li>
+                        </ul>
                     </div>
-                </div>
-                <div style='text-align:center; margin-top:30px;'>
-                    <a href='services-tech-implementation.html' class='btn-primary'>詳しく見る</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Business 3: 現場運用の継続的改善支援 -->
-        <section class='section-padding section-bg'>
-            <div class='container'>
-                <div class="section-title">
-                    <h2>業務三：現場運用の継続的改善支援</h2>
-                    <p>調査・故障分析・デジタル化・システム評価——現場の継続的改善を支援します。</p>
-                </div>
-                <div class='problem-grid problem-grid-2col'>
-                    <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/cards/factory-analysis.jpg" alt="製造現場の問題調査と解決"></div>
-                        <i class="fas fa-search card-icon"></i>
-                        <h3>製造現場の問題調査と解決</h3>
-                        <p>システム製品は通常、現場からのデータフィードバックが必要です。私たちは製造現場に深く入り込み、実際の稼働状態を調査し、隠れた問題を発見し、実行可能な改善策を提供します。</p>
-                    </div>
-                    <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/cards/logistics-troubleshooting.jpg" alt="物流現場の故障分析と解決"></div>
-                        <i class="fas fa-exclamation-triangle card-icon"></i>
-                        <h3>物流現場の故障分析と解決</h3>
-                        <p>自動化システムに障害が発生すると、生産ラインが停止します。私たちは故障原因を分析し、根本問題を特定し、停止問題を解決して現場の安定稼働を回復します。</p>
-                    </div>
-                    <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/cards/digitalization.jpg" alt="現場運用のデジタル化"></div>
-                        <i class="fas fa-chart-bar card-icon"></i>
-                        <h3>現場運用のデジタル化</h3>
-                        <p>重要なデータを記録し、AI分析を通じて改善の好循環を形成します。現場の経験を再利用可能なデータ資産に変換し、運用効率を継続的に向上させます。</p>
-                    </div>
-                    <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/cards/system-renewal.jpg" alt="システムの更新要否判断"></div>
-                        <i class="fas fa-sync card-icon"></i>
-                        <h3>システムの更新要否判断</h3>
-                        <p>システムの更新要否の判断、優れたデータと経験の継承方法。現場の実際の運用観点からシステム寿命を評価し、合理的なアップグレードと移行計画を策定します。</p>
-                    </div>
-                </div>
-                <div style='text-align:center; margin-top:30px;'>
-                    <a href='services-field-digitalization.html' class='btn-primary'>詳しく見る</a>
                 </div>
             </div>
         </section>
 
-        <!-- Why Choose Us -->
+        <!-- 現場が直面する課題 -->
         <section class='section-padding section-bg'>
             <div class='container'>
                 <div class="section-title">
-                    <h2>出雲創安が選ばれる理由</h2>
-                    <p>現場を真に理解してこそ、技術は安定して稼働します。</p>
+                    <h2>現場が直面する課題</h2>
+                    <p>技術と現場のギャップを埋め、持続可能な運営を実現します。</p>
                 </div>
+                <div class='problem-grid'>
+                    <div class='card-item problem-item'>
+                        <h3><i class="fas fa-exclamation-triangle"></i> ネットワークとシステムの連携困難</h3>
+                        <p>異なるベンダーのシステムがうまく連携せず、現場運営に支障をきたす。</p>
+                    </div>
+                    <div class='card-item problem-item'>
+                        <h3><i class="fas fa-database"></i> 現場と運営の情報断層</h3>
+                        <p>現場で起きていることがリアルタイムで運営側に伝わらず、意思決定が遅れる。</p>
+                    </div>
+                    <div class='card-item problem-item'>
+                        <h3><i class="fas fa-globe"></i> 海外技術の導入障壁</h3>
+                        <p>優れた海外技術でも、日本の施工ルールや現場慣習に合わせられず導入が難しい。</p>
+                    </div>
+                    <div class='card-item problem-item'>
+                        <h3><i class="fas fa-cogs"></i> 多システム管理の複雑さ</h3>
+                        <p>消防、監視、ネットワークなど別々に管理され、トータル最適化ができない。</p>
+                    </div>
+                    <div class='card-item problem-item'>
+                        <h3><i class="fas fa-eye-slash"></i> 現場運営の可視化不足</h3>
+                        <p>設備の状態や作業進捗が見えず、予防保守や迅速対応ができない。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- 導入実績 (Mini Case Studies) -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>導入実績</h2>
+                    <p>お客様の現場で実際に成果を出したプロジェクトをご紹介します。</p>
+                </div>
+                <div class='mini-case-grid'>
+                    <div class='mini-case-card'>
+                        <img src='../assets/img/cards/fiber-optic.jpg' alt='データセンター光ファイバー工事' style='width:100%;height:180px;object-fit:cover;display:block;'>
+                        <div class='mini-case-body'>
+                            <span class='case-cat'>データセンター</span>
+                            <h3>データセンター光ファイバー工事</h3>
+                            <p>規模：500芯<br>内容：融接・試験・ODF施工<br>工期：3週間</p>
+                            <div class='case-meta'>
+                                <span><i class="fas fa-map-marker-alt"></i> 関東</span>
+                                <span><i class="fas fa-check-circle" style="color:#48bb78;"></i> 完了</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='mini-case-card'>
+                        <img src='../assets/img/cards/agv-robot.jpg' alt='物流倉庫AGV導入支援' style='width:100%;height:180px;object-fit:cover;display:block;'>
+                        <div class='mini-case-body'>
+                            <span class='case-cat'>物流倉庫</span>
+                            <h3>物流倉庫AGV導入支援</h3>
+                            <p>台数：20台<br>内容：ネットワーク調査・経路確認・現地調整・操作研修<br>工期：6ヶ月</p>
+                            <div class='case-meta'>
+                                <span><i class="fas fa-map-marker-alt"></i> 関東</span>
+                                <span><i class="fas fa-check-circle" style="color:#48bb78;"></i> 完了</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='mini-case-card'>
+                        <img src='../assets/img/cards/erp-upgrade.jpg' alt='製造業ERP更新プロジェクト' style='width:100%;height:180px;object-fit:cover;display:block;'>
+                        <div class='mini-case-body'>
+                            <span class='case-cat'>製造業</span>
+                            <h3>製造業ERP更新プロジェクト</h3>
+                            <p>ユーザー数：100+<br>内容：データ移行・NW切替・ユーザー研修・立上支援<br>工期：4ヶ月</p>
+                            <div class='case-meta'>
+                                <span><i class="fas fa-map-marker-alt"></i> 中部</span>
+                                <span><i class="fas fa-check-circle" style="color:#48bb78;"></i> 完了</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style='text-align:center; margin-top:2.5rem;'>
+                    <a href='case-studies.html' class='btn-primary'>実績をもっと見る</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 私たちのソリューション -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>私たちのソリューション</h2>
+                    <p>長年の現場経験に基づいた、確実で高品質なエンジニアリングを提供します。</p>
+                </div>
+                <div class='solution-grid'>
+                    <div class='card-item solution-card'>
+                        <div class='solution-icon'><i class="fas fa-broadcast-tower"></i></div>
+                        <h3>ネットワーク・通信・消防基盤</h3>
+                        <p>現場の安全・安定運営のための基盤構築。光ファイバー施工から消防システムまで、トータルでサポートします。</p>
+                    </div>
+                    <div class='card-item solution-card'>
+                        <div class='solution-icon'><i class="fas fa-tools"></i></div>
+                        <h3>技術システム導入・現場支援</h3>
+                        <p>海外の優れた技術を日本現場に確実に導入。ロボットからAIまで、現場での実運用を強力に支援します。</p>
+                    </div>
+                    <div class='card-item solution-card'>
+                        <div class='solution-icon'><i class="fas fa-laptop-code"></i></div>
+                        <h3>現場運営のデジタル化</h3>
+                        <p>現場の情報を見える化し、運営効率を向上。QR管理やAIアシストにより、次世代の現場運営を実現します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 海外メーカー向け現場実装パートナー -->
+        <section class='overseas-section'>
+            <div class='container'>
+                <h2>海外メーカー向け現場実装パートナー</h2>
+                <p class='section-sub'>We bridge technology and Japanese worksites.</p>
+                <div class='overseas-grid'>
+                    <div class='overseas-left'>
+                        <h3>日本市場への導入と運用をワンストップで</h3>
+                        <p>
+                            海外メーカーの優れた製品を日本のお客様の現場で確実に稼働させるには、<br><br>
+                            日本の施工基準への適合、現場スタッフとのコミュニケーション、導入後の運用サポートまで、幅広い対応力が必要です。<br><br>
+                            出雲創安は、海外テクノロジーと日本現場の間に立ち、導入から定着までをトータルに支援します。
+                        </p>
+                    </div>
+                    <div class='overseas-right'>
+                        <h4>対応領域</h4>
+                        <div class='overseas-capabilities'>
+                            <span><i class="fas fa-check-circle"></i> 日本語対応</span>
+                            <span><i class="fas fa-check-circle"></i> 英語対応</span>
+                            <span><i class="fas fa-check-circle"></i> 中文対応</span>
+                            <span><i class="fas fa-check-circle"></i> 現場施工管理</span>
+                            <span><i class="fas fa-check-circle"></i> ネットワーク工事</span>
+                            <span><i class="fas fa-check-circle"></i> システム導入支援</span>
+                            <span><i class="fas fa-check-circle"></i> ユーザートレーニング</span>
+                            <span><i class="fas fa-check-circle"></i> 運用改善支援</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- なぜ出雲創安を選ぶのか -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>なぜ出雲創安を選ぶのか</h2>
+                    <p>現場を知り尽くしたプロフェッショナルが、お客様の課題を解決します。</p>
+                </div>
                 <div class='why-grid'>
-
                     <div class='card-item why-item'>
-                        <div class="why-thumb"><img src="../assets/img/why/field-experience.jpg" alt="長期現場実戦経験"></div>
-                        <h3>長期現場実戦経験</h3>
-                        <p>業界20年以上の工業現場、ネットワーク通信、システム導入、現場運用に関する経験。私たちは知っています——現場に本当に必要なのは、単なる技術ではなく、「物事を推進し、安定して実装できる人」であることを。</p>
+                        <h3>20年以上の現場経験</h3>
+                        <p>産業現場でのネットワーク・通信システムの設計・構築・保守の豊富な実績。現場目線での提案が可能です。</p>
                     </div>
-
                     <div class='card-item why-item'>
-                        <div class="why-thumb"><img src="../assets/img/why/problem-solving.jpg" alt="現場を理解してこそ、真の問題解決ができる"></div>
-                        <h3>現場を理解してこそ、真の問題解決ができる</h3>
-                        <p>優れたシステムも現場に適応できなければ、真の価値を生み出せません。出雲創安はシステム、ネットワーク、自動化、OT/ITを理解するだけでなく、現場のスタッフがどのように働くか、なぜ工事が遅延しやすいか、なぜシステムの継続運用が難しいか、運用現場の真の課題を理解しています。私たちは「現場に立って考える」ことを重視します。</p>
+                        <h3>日本全国のプロジェクト対応</h3>
+                        <p>関東・中部・関西・九州など、日本各地の現場での施工・導入実績があります。</p>
                     </div>
-
                     <div class='card-item why-item'>
-                        <div class="why-thumb"><img src="../assets/img/why/project-coordination.jpg" alt="現場推進とコーディネーション能力"></div>
-                        <h3>現場推進とコーディネーション能力</h3>
-                        <p>多くのプロジェクトが失敗する原因は、技術不足ではなく、現場リソース不足、マルチチーム連携の困難さ、コミュニケーションと責任の不明確さにあります。出雲創安はPM経験、マルチベンダー調整能力、現場実装経験、継続運用の視点を持ち、お客様の現場導入リスクを低減し、プロジェクトの安定推進を確保します。</p>
+                        <h3>ネットワーク×自動化の両領域</h3>
+                        <p>ネットワークエンジニアリングと制御・自動化の両方をカバー。OT/ITの境界を意識しません。</p>
                     </div>
-
                     <div class='card-item why-item'>
-                        <div class="why-thumb"><img src="../assets/img/why/ot-it-integration.jpg" alt="OT/IT融合能力"></div>
-                        <h3>OT / IT 融合能力</h3>
-                        <p>現場システムにはIT技術だけでなく、設備、制御、運用、保守の関係を理解することが必要です。当社はOT（現場制御）とIT（情報システム）の両面の理解能力を持ち、「現場の長期運用」の観点からより合理的なシステム構造を構築します。</p>
+                        <h3>OT/IT融合能力</h3>
+                        <p>制御システム(OT)と情報システム(IT)の両方を理解し、最適なバランスでシステムを構築します。</p>
                     </div>
-
                     <div class='card-item why-item'>
-                        <div class="why-thumb"><img src="../assets/img/why/multi-vendor.jpg" alt="マルチベンダーシステム統合能力"></div>
-                        <h3>マルチベンダーシステム統合能力</h3>
-                        <p>実際の現場では、システムは異なるメーカーから提供されることがほとんどです。本当に難しいのは単一機器ではなく、全体を安定して連携動作させることです。出雲創安は異なるシステムの統合、異なるチームの調整、異なる現場環境への適合が可能で、お客様が真に運用可能で、保守可能で、拡張可能な現場システムを構築できるよう支援します。</p>
+                        <h3>多ベンダー整合力</h3>
+                        <p>異なるメーカーのシステムをつなぎ、現場でうまく動作させる技術力。ベンダーロックインを防ぎます。</p>
                     </div>
-
                     <div class='card-item why-item'>
-                        <div class="why-thumb"><img src="../assets/img/why/field-support.jpg" alt="単なる施工ではなく、現場の問題解決"></div>
-                        <h3>単なる施工ではなく、現場の問題解決</h3>
-                        <p>私たちは、真に価値ある技術は現場で継続的に機能し続けなければならないと信じています。したがって出雲創安は、設備、システム、工事だけでなく、現場が本当に安定し、効率的で、運用しやすくなっているかどうかに注目します。</p>
+                        <h3>エンジニアリングマインド</h3>
+                        <p>「技術は現場のためにある」という考え方で、本当に使えるソリューションを提供します。</p>
                     </div>
-
+                </div>
+                <div class='why-check-grid'>
+                    <div class='why-check-item'><i class="fas fa-check-circle"></i> 日本語対応</div>
+                    <div class='why-check-item'><i class="fas fa-check-circle"></i> English対応</div>
+                    <div class='why-check-item'><i class="fas fa-check-circle"></i> 中文対応</div>
+                    <div class='why-check-item'><i class="fas fa-check-circle"></i> 工程実施</div>
+                    <div class='why-check-item'><i class="fas fa-check-circle"></i> システム導入</div>
+                    <div class='why-check-item'><i class="fas fa-check-circle"></i> 故障調査</div>
+                    <div class='why-check-item'><i class="fas fa-check-circle"></i> 長期運用</div>
+                    <div class='why-check-item'><i class="fas fa-check-circle"></i> トレーニング</div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- 対応実績技術領域 -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>対応実績技術領域</h2>
+                    <p>ネットワーク・セキュリティ・制御・監視——幅広い技術領域に対応しています。</p>
+                </div>
+                <div class='tech-grid'>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-network-wired"></i> ネットワーク</span>
+                        <span class='tech-name'>Cisco / Juniper / Fortinet / Allied Telesis</span>
+                    </div>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-eye"></i> 監視・セキュリティ</span>
+                        <span class='tech-name'>Hikvision / Dahua / Axis / i-PRO</span>
+                    </div>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-microchip"></i> 制御・PLC</span>
+                        <span class='tech-name'>Siemens / Mitsubishi / Omron / Keyence</span>
+                    </div>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-robot"></i> 自動化・AGV</span>
+                        <span class='tech-name'>Dematic / Daifuku / Toyota Industries</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせ -->
         <section class='contact-section' id='contact'>
             <div class='container'>
+                <div class="section-title">
+                    <h2>お問い合わせ</h2>
+                    <p>現場の課題について、まずはお気軽にご相談ください。</p>
+                </div>
                 <div class="contact-container">
                     <div class="contact-form-wrapper">
-                        <h2>お問い合わせ</h2>
-                        <p>現場に関するどんな課題でも、お気軽にご相談ください。</p>
                         <form action='#' method='POST' id='contact-form'
                               data-success='お問い合わせありがとうございます。内容を確認の上、ご連絡いたします。'
                               data-error='送信に失敗しました。しばらく経ってからもう一度お試しください。'
@@ -292,8 +407,33 @@
                             </div>
                             <button type='submit' class='btn-primary'>メッセージを送信する</button>
                         </form>
+                        <!-- Process Flow -->
+                        <div style='margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--border-color);'>
+                            <h3 style='font-size:1.1rem; text-align:center; margin-bottom:1.5rem;'>ご相談の流れ</h3>
+                            <div class='process-flow'>
+                                <div class='process-step'>
+                                    <div class='step-num'>1</div>
+                                    <div class='step-label'>お問い合わせ</div>
+                                </div>
+                                <div class='process-step'>
+                                    <div class='step-num'>2</div>
+                                    <div class='step-label'>オンラインヒアリング</div>
+                                </div>
+                                <div class='process-step'>
+                                    <div class='step-num'>3</div>
+                                    <div class='step-label'>現場調査</div>
+                                </div>
+                                <div class='process-step'>
+                                    <div class='step-num'>4</div>
+                                    <div class='step-label'>ご提案</div>
+                                </div>
+                                <div class='process-step'>
+                                    <div class='step-num'>5</div>
+                                    <div class='step-label'>実施支援</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -303,31 +443,31 @@
         <div class='container'>
             <div class='footer-content'>
                 <div class='footer-logo'>
-                    <img src='../assets/img/logo/logo.jpg' alt='Izumo Soan' >
-                    <p class='logo-desp'>現場、安全、運用をつなぐテクノロジーパートナー</p>
+                    <img src='../assets/img/logo/logo.png' alt='Izumo Soan'>
+                    <p class='logo-desp'>技術を現場の力に。</p>
                 </div>
                 <div class='footer-links'>
-                    <h4>クイックリンク</h4>
+                    <h4>メニュー</h4>
                     <ul>
                         <li><a href='index.html'>ホーム</a></li>
                         <li><a href='about.html'>会社概要</a></li>
-                        <li><a href='services.html'>サービス内容</a></li>
-                        <li><a href='case-studies.html'>実績紹介</a></li>
+                        <li><a href='services.html'>サービス</a></li>
+                        <li><a href='case-studies.html'>実績</a></li>
                     </ul>
                 </div>
                 <div class='footer-contact'>
-                    <h4>会社情報</h4>
+                    <h4>お問い合わせ</h4>
                     <ul class="mb-20">
-                        <li>電話：050-1258-9122</li>
-                        <li>メール：info@izumosoan.com</li>
-                        <li>所在地：東京都葛飾区東立石4-37-8</li>
+                        <li>050-1258-9122</li>
+                        <li>info@izumosoan.com</li>
+                        <li>日本东京都葛饰区东立石4-37-8</li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class='footer-bottom'>
             <div class="container">
-                <p class="text-center foot-bot">&copy; 2026 出云创安 Izumo Soan. All rights reserved.</p>
+                <p>&copy; 2026 出云创安 Izumo Soan. All rights reserved.</p>
             </div>
         </div>
     </footer>

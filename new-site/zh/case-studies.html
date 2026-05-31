@@ -62,9 +62,9 @@
             <nav>
                 <ul>
                     <li><a href='index.html'>首页</a></li>
-                    <li><a href='products.html'>产品</a></li>
-                    <li><a href='services.html'>服务</a></li>
                     <li><a href='about.html'>公司概况</a></li>
+                    <li><a href='services.html'>服务</a></li>
+                    <li><a href='case-studies.html' class='active'>案例展示</a></li>
                     <li><a href='index.html#contact'>联系我们</a></li>
                 </ul>
                 <div class='language-switcher'>
@@ -88,68 +88,84 @@
 
         <section class='section-padding section-bg'>
             <div class='container'>
-                <h2>近期项目案例</h2>
+                <h2>项目案例</h2>
                 <div class='projects-grid'>
                     <div class='project-card'>
                         <div class='project-image'>
                             <img src='../assets/img/cards/server-install.jpg' alt='数据中心网络基础设施构建'>
                         </div>
                         <div class='project-content'>
+                            <span class='project-badge'>某外资数据中心</span>
                             <h3>数据中心网络基础设施构建</h3>
-                            <p class='project-category'>网络·通信工程施工</p>
-                            <p>为某大型数据中心提供全流程网络基础设施施工服务，实现99.99%可用性目标。</p>
+                            <p class='project-category'>网络·通信基础设施</p>
+                            <p class='project-problem'><strong>挑战:</strong> 东京圈新建的外资数据中心需要在机柜之间构建高速骨干网络和管理网络，要求99.999%的可用性，且交付周期非常紧张。</p>
+                            <p class='project-solution'><strong>方案:</strong> 设计了冗余核心交换机架构，采用Cat6a布线和单模光纤并用。48个机柜从配线架到末端整体施工，实施48小时通电测试验证所有链路质量。</p>
+                            <p class='project-result'><strong>成果:</strong> 达成99.99%可用性，提前1周完工。目前继续提供运维保障服务。</p>
                             <div class='project-details'>
-                                <span>结果: 99.99% 可用性达成</span>
-                                <span>地区: 关东地区</span>
-                                <span>周期: 6个月</span>
+                                <span><i class="fas fa-calendar-alt"></i> 周期: 3个月</span>
+                                <span><i class="fas fa-server"></i> 规模: 48机柜</span>
+                                <span><i class="fas fa-microchip"></i> 技术: Cat6a, 单模光纤</span>
+                                <span><i class="fas fa-check-circle"></i> 可用性: 99.99%</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class='project-card'>
                         <div class='project-image'>
-                            <img src='../assets/img/cards/monitoring-system.jpg' alt='工厂远程监控系统导入'>
+                            <img src='../assets/img/cards/monitoring-system.jpg' alt='工厂远程监控系统'>
                         </div>
                         <div class='project-content'>
-                            <h3>工厂远程监控系统导入</h3>
-                            <p class='project-category'>技术系统导入</p>
-                            <p>为某制造工厂导入远程设备监控系统，整合PLC数据与上位管理系统。</p>
+                            <span class='project-badge'>某汽车零部件制造工厂</span>
+                            <h3>制造工厂IoT传感器网络部署</h3>
+                            <p class='project-category'>现场运营数字化支持</p>
+                            <p class='project-problem'><strong>挑战:</strong> 中部地区的汽车零部件工厂设备突发故障导致生产线每月平均停机3次，每次约2小时的生产损失。4名设备管理员需要管理200多台设备，状态监控依赖人工经验。</p>
+                            <p class='project-solution'><strong>方案:</strong> 在各设备上安装振动、温度、电力消耗监测传感器，通过LoRaWAN网关将数据汇总至云平台，异常时自动发送邮件通知，实现预测性维护。</p>
+                            <p class='project-result'><strong>成果:</strong> 设备停机时间降低30%，突发停机降至每月不到1次。管理员现场巡检时间从每周20小时缩减至8小时。</p>
                             <div class='project-details'>
-                                <span>结果: 运维工时削减40%</span>
-                                <span>地区: 中部地区</span>
-                                <span>周期: 4个月</span>
+                                <span><i class="fas fa-calendar-alt"></i> 周期: 2个月</span>
+                                <span><i class="fas fa-chart-line"></i> 监测点: 200个</span>
+                                <span><i class="fas fa-wifi"></i> 技术: LoRaWAN</span>
+                                <span><i class="fas fa-check-circle"></i> 停机时间: -30%</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class='project-card'>
                         <div class='project-image'>
-                            <img src='../assets/img/cards/agv-robot.jpg' alt='物流仓库AGV自动化导入'>
+                            <img src='../assets/img/cards/agv-robot.jpg' alt='物流仓库AGV自动化系统'>
                         </div>
                         <div class='project-content'>
-                            <h3>物流仓库AGV自动化导入</h3>
-                            <p class='project-category'>自动化系统导入</p>
-                            <p>为某大型物流仓库导入AGV自动搬运系统，优化搬运流程与人机协作。</p>
+                            <span class='project-badge'>某大型物流仓库</span>
+                            <h3>物流仓库AGV自动搬运系统导入</h3>
+                            <p class='project-category'>自动化系统导入支持</p>
+                            <p class='project-problem'><strong>挑战:</strong> 关东地区的大型物流仓库出入库量同比增长30%，但劳动力短缺问题日益严重。叉车加人工搬运方式无法支持夜间作业，发货延迟成为常态。</p>
+                            <p class='project-solution'><strong>方案:</strong> 导入12台欧洲制造AGV，与仓库管理系统（WMS）对接。实施路径优化算法，同步安装安全护栏、警示灯等安全设施，并提供操作培训。</p>
+                            <p class='project-result'><strong>成果:</strong> 搬运效率提升60%，实现24小时全天候运行。发货延迟归零，作业人员负担大幅减轻。</p>
                             <div class='project-details'>
-                                <span>结果: 搬运效率提升60%</span>
-                                <span>地区: 关东地区</span>
-                                <span>周期: 8个月</span>
+                                <span><i class="fas fa-calendar-alt"></i> 周期: 4个月</span>
+                                <span><i class="fas fa-robot"></i> 数量: 12台</span>
+                                <span><i class="fas fa-project-diagram"></i> 技术: WMS, AGV</span>
+                                <span><i class="fas fa-check-circle"></i> 效率: +60%</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class='project-card'>
                         <div class='project-image'>
-                            <img src='../assets/img/cards/security-system.jpg' alt='工业园区综合安防系统升级'>
+                            <img src='../assets/img/cards/security-system.jpg' alt='工业园区综合安防系统'>
                         </div>
                         <div class='project-content'>
+                            <span class='project-badge'>某工业园区（设施管理公司）</span>
                             <h3>工业园区综合安防系统升级</h3>
-                            <p class='project-category'>安防消防工程</p>
-                            <p>为某工业园区全面升级安防系统，整合监控、门禁和消防联动。</p>
+                            <p class='project-category'>安防·消防联动系统</p>
+                            <p class='project-problem'><strong>挑战:</strong> 关西地区的工业园区内10栋厂房和仓库各自运行不同的安防系统，出入管理无法统一。消防设备联动不足，存在法规合规风险。</p>
+                            <p class='project-solution'><strong>方案:</strong> 构建统一管理平台，整合现有监控摄像头、门禁系统和消防设备。各栋建筑通过光纤连接至中央控制室，实现集中监控。同步实施消防自动通报系统。</p>
+                            <p class='project-result'><strong>成果:</strong> 安全事件首次响应时间从平均15分钟缩短至4分钟。年度安防运营成本降低25%。</p>
                             <div class='project-details'>
-                                <span>结果: 安防响应时间缩短70%</span>
-                                <span>地区: 近畿地区</span>
-                                <span>周期: 5个月</span>
+                                <span><i class="fas fa-calendar-alt"></i> 周期: 5个月</span>
+                                <span><i class="fas fa-building"></i> 栋数: 10栋</span>
+                                <span><i class="fas fa-video"></i> 技术: 监控·门禁·消防</span>
+                                <span><i class="fas fa-check-circle"></i> 响应时间: -73%</span>
                             </div>
                         </div>
                     </div>
@@ -159,7 +175,40 @@
 
         <section class='section-padding'>
             <div class='container'>
-                <h2>客户之声</h2>
+                <h2>行业案例</h2>
+                <p class='section-subtitle'>覆盖多行业的网络构建与系统导入业绩</p>
+                <div class='industry-grid'>
+                    <div class='industry-card'>
+                        <div class='industry-icon'><i class="fas fa-car"></i></div>
+                        <h4>汽车零部件制造</h4>
+                        <p>某汽车零部件工厂 网络基础设施构建</p>
+                        <span class='industry-detail'>生产线IoT网络, 无线覆盖设计</span>
+                    </div>
+                    <div class='industry-card'>
+                        <div class='industry-icon'><i class="fas fa-warehouse"></i></div>
+                        <h4>物流·仓储</h4>
+                        <p>某大型物流仓库 Wi-Fi环境+AGV导入</p>
+                        <span class='industry-detail'>无线LAN设计, AGV控制网络, WMS对接</span>
+                    </div>
+                    <div class='industry-card'>
+                        <div class='industry-icon'><i class="fas fa-industry"></i></div>
+                        <h4>外资制造企业</h4>
+                        <p>某外资制造企业 ERP系统升级迁移</p>
+                        <span class='industry-detail'>服务器迁移, 客户端网络重构, 安全加固</span>
+                    </div>
+                    <div class='industry-card'>
+                        <div class='industry-icon'><i class="fas fa-microchip"></i></div>
+                        <h4>半导体·精密设备</h4>
+                        <p>某半导体工厂 洁净室网络施工</p>
+                        <span class='industry-detail'>洁净室专用线缆, 静电防护, 严格粉尘管理</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <h2>客户评价</h2>
                 <div class='voices-grid'>
                     <div class='voice-card'>
                         <div class='voice-content'>
@@ -183,9 +232,10 @@
             </div>
         </section>
 
-        <div class='text-center section-padding section-bg'>
+        <div class='text-center section-padding'>
             <div class='container'>
-                <h2>和我们一起，打造真正的现场运营</h2>
+                <h2>让我们助您解决现场难题</h2>
+                <p>欢迎随时咨询</p>
                 <a href='index.html#contact' class='btn-primary'>联系我们</a>
             </div>
         </div>
@@ -204,7 +254,7 @@
                         <li><a href='index.html'>首页</a></li>
                         <li><a href='about.html'>公司概况</a></li>
                         <li><a href='services.html'>服务内容</a></li>
-                        <li><a href='case-studies.html'>案例展示</a></li>
+                        <li><a href='case-studies.html' class='active'>案例展示</a></li>
                     </ul>
                 </div>
                 <div class='footer-contact'>
