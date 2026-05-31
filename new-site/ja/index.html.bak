@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>出云创安 | 现场・安全・运营的技术伙伴</title>
+    <meta name='description' content='出云创安（Izumo Soan）は現場の持続稼働を支援する技術エンジニアリング会社です。ネットワーク・通信・消防基盤、技術システム導入支援、現場運営のデジタル化を提供します。'>
+    <link rel='stylesheet' href='assets/css/style.css'>
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <h1>出云创安</h1>
+                <p>Izumo Soan</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href='#'>ホーム</a></li>
+                    <li><a href='about/'>会社概要</a></li>
+                    <li><a href='services/'>サービス</a></li>
+                    <li><a href='case-studies/'>実績</a></li>
+                    <li><a href='#contact'>お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class='hero'>
+            <div class='container'>
+                <h1>連接現場、安全與運營的技術夥伴</h1>
+                <p class='subtitle'>
+                    ネットワーク・通信・消防基盤<br>
+                    技術システム導入・現場実施支援<br>
+                    現場運営のデジタル化支援
+                </p>
+                <div class='hero-buttons'>
+                    <a href='services/' class='btn-primary'>サービス詳細を見る</a>
+                    <a href='#contact' class='btn-secondary'>無料相談を予約</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class='problem'>
+            <div class='container'>
+                <h2>現場が直面する課題</h2>
+                <div class='problem-grid'>
+                    <div class='problem-item'>
+                        <h3>ネットワークとシステムの連携困難</h3>
+                        <p>異なるベンダーのシステムがうまく連携せず、現場運営に支障をきたす。</p>
+                    </div>
+                    <div class='problem-item'>
+                        <h3>現場と運営の情報断層</h3>
+                        <p>現場で起きていることがリアルタイムで運営側に伝わらず、意思決定が遅れる。</p>
+                    </div>
+                    <div class='problem-item'>
+                        <h3>海外技術の日本現場への導入障壁</h3>
+                        <p>優れた海外技術でも、日本の施工ルールや現場慣習に合わせられず導入が難しい。</p>
+                    </div>
+                    <div class='problem-item'>
+                        <h3>多システム管理の複雑さ</h3>
+                        <p>消防、監視、ネットワークなど別々に管理され、トータル最適化ができない。</p>
+                    </div>
+                    <div class='problem-item'>
+                        <h3>現場運営の可視化不足</h3>
+                        <p>設備の状態や作業進捗が見えず、予防保守や迅速対応ができない。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section class='solution'>
+            <div class='container'>
+                <h2>私たちのソリューション</h2>
+                <div class='solution-grid'>
+                    <div class='solution-card'>
+                        <div class='solution-icon'>📡</div>
+                        <h3>ネットワーク・通信・消防基盤</h3>
+                        <p>現場の安全・安定運営のための基盤構築。光ファイバー施工、LAN/Wi-Fi構築、ネットワーク配線、弱電工程、通信基盤、消防関連通信システム、小型機房基盤、ネットワーク安定化支援。</p>
+                    </div>
+                    <div class='solution-card'>
+                        <div class='solution-icon'>🔧</div>
+                        <h3>技術システム導入・現場実施支援</h3>
+                        <p>海外の優れた技術を日本現場に確実に導入。海外技術システム導入支援、ロボットシステム現場実施、IoTシステム部署、AIシステム現場導入、データセンター現場协调、多厂商システム整合、PM/現場協調支援、日本本地技术サポート。</p>
+                    </div>
+                    <div class='solution-card'>
+                        <div class='solution-icon'>💻</div>
+                        <h3>現場運営のデジタル化支援</h3>
+                        <p>現場の情報を見える化し、運営効率を向上。工程記録管理、写真管理、状態共有、作業記録、Change管理支援、QR管理、現場情報可视化、AIアシスト現场管理。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class='why-us'>
+            <div class='container'>
+                <h2>なぜ出云创安を選ぶのか</h2>
+                <div class='why-grid'>
+                    <div class='why-item'>
+                        <h3>横河電機21年の経験</h3>
+                        <p>産業現場でのネットワーク・通信システムの設計・構築・保守の豊富な実績。</p>
+                    </div>
+                    <div class='why-item'>
+                        <h3>データセンター現場経験</h3>
+                        <p>大規模施設のネットワーク基盤構築と安定化運営のノウハウ。</p>
+                    </div>
+                    <div class='why-item'>
+                        <h3>PM・現場協調能力</h3>
+                        <p>複数ベンダー・チームを束ねて、予定通り・品質よくプロジェクトを完了。</p>
+                    </div>
+                    <div class='why-item'>
+                        <h3>OT/IT融合能力</h3>
+                        <p>制御システム(OT)と情報システム(IT)の両方を理解し、最適なバランスを提供。</p>
+                    </div>
+                    <div class='why-item'>
+                        <h3>多厂商整合力</h3>
+                        <p>異なるメーカーのシステムをつなぎ、現場でうまく動作させる技術力。</p>
+                    </div>
+                    <div class='why-item'>
+                        <h3>エンジニアリングマインド</h3>
+                        <p>「技術は現場のためにある」という考え方で、本当に使えるソリューションを提供。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class='contact' id='contact'>
+            <div class='container'>
+                <h2>お問い合わせ</h2>
+                <p>現場の課題について、まずはお気軽にご相談ください。</p>
+                <form action='https://formspree.io/f/your-form-id' method='POST'>
+                    <div class='form-group'>
+                        <label for='name'>お名前</label>
+                        <input type='text' id='name' name='name' required>
+                    </div>
+                    <div class='form-group'>
+                        <label for='email'>メールアドレス</label>
+                        <input type='email' id='email' name='email' required>
+                    </div>
+                    <div class='form-group'>
+                        <label for='company'>会社名・組織名</label>
+                        <input type='text' id='company' name='company'>
+                    </div>
+                    <div class='form-group'>
+                        <label for='phone'>電話番号</label>
+                        <input type='tel' id='phone' name='phone'>
+                    </div>
+                    <div class='form-group'>
+                        <label for='message'>お問い合わせ内容</label>
+                        <textarea id='message' name='message' rows='5' required></textarea>
+                    </div>
+                    <button type='submit' class='btn-primary'>送信する</button>
+                </form>
+                <div class='contact-info'>
+                    <h3>または直接お電話にて</h3>
+                    <p>電話: 03-xxxx-xxxx</p>
+                    <p>メール: info@izumosoan.jp</p>
+                    <p>WeChat: IzumoSoan_JP</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <h1>出云创安</h1>
+                    <p>Izumo Soan</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>メニュー</h4>
+                    <ul>
+                        <li><a href='#'>ホーム</a></li>
+                        <li><a href='about/'>会社概要</a></li>
+                        <li><a href='services/'>サービス</a></li>
+                        <li><a href='case-studies/'>実績</a></li>
+                    </ul>
+                </div>
+                <div class='footer-contact'>
+                    <h4>お問い合わせ</h4>
+                    <p>電話: 03-xxxx-xxxx</p>
+                    <p>メール: info@izumosoan.jp</p>
+                </div>
+            </div>
+            <div class='footer-bottom'>
+                <p>&copy; 2026 出云创安 Izumo Soan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src='assets/js/main.js'></script>
+</body>
+</html>
