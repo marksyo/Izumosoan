@@ -2333,3 +2333,53 @@ footer .container {
     .contact-form-wrapper { padding: 1.5rem; }
     footer .footer-content { grid-template-columns: 1fr; }
 }
+
+.product-showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.product-showcase-card {
+    display: block;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+}
+.product-showcase-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,53,84,0.12);
+    border-color: var(--accent-color);
+}
+.product-showcase-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+.product-showcase-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: var(--primary-color);
+}
+.product-showcase-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+.product-showcase-cta {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+@media (max-width: 768px) {
+    .product-showcase-grid {
+        grid-template-columns: 1fr;
+    }
+}

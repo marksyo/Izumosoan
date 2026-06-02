@@ -12,21 +12,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     langSelect.addEventListener('change', function() {
         var lang = this.value;
-        var base = '';
+        var root = '/';
         var siteIdx = path.indexOf('/new-site/');
         if (siteIdx >= 0) {
-            base = path.substring(0, siteIdx + 10);
-        } else {
-            base = path.substring(0, path.lastIndexOf('/') + 1);
+            root = path.substring(0, siteIdx + 10);
         }
         function go(href) {
             window.location.href = href;
         }
         function fallback() {
-            if (lang === 'ja') go(base + 'index.html');
-            else go(base + lang + '/index.html');
+            go(root + lang + '/index.html');
         }
-        var target = (lang === 'ja') ? base + filename : base + lang + '/' + filename;
+        var target = root + lang + '/' + filename;
         // Check if target page exists; fallback to index if not
         fetch(target, { method: 'HEAD' }).then(function(r) {
             if (r.ok) go(target);
