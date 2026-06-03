@@ -1,509 +1,522 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zh">
-
+<html lang='zh'>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>出云创安有限责任公司</title>
-    <meta name="description" content="出云创安有限责任公司通过AI安防摄像头、智能锁，网络设计，网络配线，和系统评估服务，支持社会的安全和中小企业自动化。">
-    <meta name="keywords" content="AI安防摄像头, 智能锁,网络设计，网络配线， 系统评估, 自动化支持, 出云创安, 社区安全">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../assets/css/slicknav.css">
-    <link rel="stylesheet" href="../assets/css/animate.min.css">
-    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="../assets/css/themify-icons.css">
-    <link rel="stylesheet" href="../assets/css/slick.css">
-    <link rel="stylesheet" href="../assets/css/nice-select.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        @media (max-width: 767px) {
-            .ttl-text {
-                display: block;
-                white-space: normal;
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>出云创安 | 现场・安全・运营的技术伙伴</title>
+    <meta name='description' content='出云创安（Izumo Soan）是一家支持现场持续运营的技术工程公司。我们提供网络・通信・消防基础设施、技术系统导入支持、现场运营的数字化服务。'>
+    
+    <!-- SEO: hreflang -->
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/index.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/index.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/index.html">
+    <link rel="canonical" href="https://izumosoan.com/zh/index.html">
+
+    <!-- SEO: Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="出雲創安 Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/zh/index.html">
+    <meta property="og:title" content="出云创安 | 现场・安全・运营的技术伙伴">
+    <meta property="og:description" content="出云创安（Izumo Soan）是一家支持现场持续运营的技术工程公司。我们提供网络・通信・消防基础设施、技术系统导入支持、现场运营的数字化服务。">
+    <meta property="og:locale" content="zh_CN">
+
+    <!-- SEO: JSON-LD Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "出雲創安 Izumo Soan",
+        "url": "https://izumosoan.com",
+        "telephone": "050-1258-9122",
+        "email": "info@izumosoan.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "东京都葛饰区",
+            "addressRegion": "东京",
+            "streetAddress": "东立石4-37-8",
+            "addressCountry": "JP"
+        },
+        "description": "连接现场、安全与运营的技术伙伴"
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel='stylesheet' href='../assets/css/fontawesome-all.min.css'>
+    <link rel='stylesheet' href='../assets/css/style.css'>
+    <link rel='stylesheet' href='../assets/css/custom.css'>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function() {
+            var path = window.location.pathname;
+            var dirs = ['/zh/', '/ja/', '/en/'];
+            for (var i = 0; i < dirs.length; i++) {
+                if (path.indexOf(dirs[i]) >= 0) return;
             }
-        }
-
-        .language_bar_chooser .active strong {
-            font-weight: bold;
-            color: #007bff;
-        }
-    </style>
+            var lang = (navigator.language || navigator.userLanguage || 'ja').substring(0, 2);
+            var target = (lang === 'zh') ? 'zh' : (lang === 'en') ? 'en' : 'ja';
+            var idx = path.lastIndexOf('/');
+            var base = (idx >= 0) ? path.substring(0, idx + 1) : '/';
+            window.location.replace(base + target + '/index.html');
+        })();
+    </script>
 </head>
-
 <body>
     <header>
-        <div class="header-area">
-            <div class="main-header">
-                <div class="header-bottom header-sticky">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-xl-2 col-lg-2">
-                                <div class="logo">
-                                    <a href="index.html"><img src="../assets/img/logo/logo.jpg" alt="出云创安有限责任公司标志"></a>
-                                </div>
-                            </div>
-                            <div class="col-xl-10 col-lg-10">
-                                <div class="main-menu f-right d-none d-lg-block">
-                                    <nav>
-                                        <ul id="navigation">
-                                            <li><a href="./index.html#home">首页</a></li>
-                                            <li><a href="./index.html#services">服务</a></li>
-                                            <li><a href="./index.html#about">关于我们</a></li>
-                                            <li><a href="./index.html#contact">联系我们</a></li>
-                                            <li>
-                                                <div class="header-dropdown">
-                                                    <button class="dropdown-link" aria-label="语言选择" aria-haspopup="true"
-                                                        aria-expanded="false">
-                                                        <img src="../assets/img/flags/zh.png" alt="简体中文" width="20"
-                                                            height="20"> <i class="fas fa-caret-down"></i>
-                                                    </button>
-                                                    <ul class="language_bar_chooser" role="menu">
-                                                        <li role="menuitem"><a rel="alternate" hreflang="en"
-                                                                href="../en/index.html"><img
-                                                                    src="../assets/img/flags/en.png" alt="英语"
-                                                                    width="20" height="20"> 英语</a></li>
-                                                        <li role="menuitem"><a rel="alternate" hreflang="ja"
-                                                                href="../ja/index.html"><img
-                                                                    src="../assets/img/flags/ja.png" alt="日语"
-                                                                    width="20" height="20"> 日语</a></li>
-                                                        <li class="active" role="menuitem"><img
-                                                                src="../assets/img/flags/zh.png" alt="简体中文" width="20"
-                                                                height="20"> <strong>简体中文</strong></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class='container'>
+            <div class='logo'>
+                <a href='index.html'>
+                    <img src='../assets/img/logo/logo.png' alt='Izumo Soan' style='height:100px;'>
+                </a>
             </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
+            <nav>
+                <ul>
+                    <li><a href='index.html' class='active'>首页</a></li>
+                    <li><a href='services.html'>服务</a></li>
+                    <li><a href='products.html'>产品</a></li>
+                    <li><a href='case-studies.html'>案例展示</a></li>
+                    <li><a href='about.html'>公司概况</a></li>
+                    <li><a href='overseas-partner.html'>海外伙伴</a></li>
+                    <li><a href='index.html#contact'>联系我们</a></li>
+                </ul>                <div class='language-switcher'>
+                    <span class='lang-label'><i class="fas fa-globe"></i></span>
+                    <select id='lang-select'>
+                        <option value='ja'>日本語</option>
+                        <option value='en'>English</option>
+                        <option value='zh' selected>中文</option>
+                    </select>
+                </div>
+            </nav>
         </div>
     </header>
 
     <main>
-    <!-- Slider Area Start -->
-    <div class="slider-area" id="home">
-        <div class="slider-active dot-style">
-            <div class="single-slider slider-height hero-overly slider-bg1 d-flex align-items-center">
-                <div class="container justify-content-center">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-caption text-center">
-                                <h1 data-animation="fadeInUp" data-delay=".4s">用技术支持安心生活</h1>
-                                <p data-animation="fadeInUp" data-delay=".4s">出云创安合同公司消除“不安”，创造安全社会。</p>
-                                <a href="#services" class="btn_1 hero-btn" data-animation="bounceIn" data-delay=".8s">查看服务</a>
-                                <a href="#contact" class="btn_1 hero-btn" data-animation="bounceIn" data-delay=".8s">联系我们</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Slider Area End -->
-    <!-- Services Area Start -->
-    <section class="categories-area section-bg" id="services">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-12">
-                    <div class="section-tittle text-center mb-60">
-                        <h2>我们的服务</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <img src="../assets/img/icon/services1.svg" alt="缓解物理入侵不安的图标" loading="lazy">
-                        </div>
-                        <div class="cat-cap">
-                            <h5>物理入侵的不安</h5>
-                            <p>为防止住宅和营业所的不法入侵，规划和发展高性能防犯摄像头，通过安装服务增强住宅和营业所的安全。</p>
-                        </div>
-                        <img src="../assets/img/producrts/camera.jpg" alt="出云创安的AI防犯摄像头" loading="lazy">
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <img src="../assets/img/icon/services2.svg" alt="缓解通信不安的图标" loading="lazy">
-                        </div>
-                        <div class="cat-cap">
-                            <h5>通信的不安</h5>
-                            <p>为消除网络断开或数据被盗的不安，提供网络设计、施工、检查、无线通信等服务。</p>
-                        </div>
-                        <img src="../assets/img/producrts/network.jpg" alt="网络" loading="lazy">
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <img src="../assets/img/icon/services3.svg" alt="缓解复杂技术不安的图标" loading="lazy">
-                        </div>
-                        <div class="cat-cap">
-                            <h5>复杂技术的不安</h5>
-                            <p>为防止投资系统不符合预期的担忧，在购买前后负责选择和评估，确保无遗憾。</p>
-                        </div>
-                        <img src="../assets/img/producrts/technology.jpg" alt="系统评估服务" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Services Area End -->
-    <!-- Our Services Start -->
-    <section class="our-services2">
-        <div class="container">
-            <div class="row">
-                <h2 class="text-center py-1">AI摄像头</h2>
-                <p class="point">
-                    <span class="number">01</span>
+        <!-- Hero Section -->
+        <section class='hero'>
+            <div class='container'>
+                <h1>技术赋能现场</h1>
+                <p class='subtitle'>
+                    支持海外技术在日本现场落地与持续运行
                 </p>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6 p-0">
-                    <div class="single-services text-center">
-                        <div class="services-ion">
-                            <img src="../assets/img/icon/icon.svg" alt="防犯摄像头图标" loading="lazy">
-                        </div>
-                        <div class="services-cap">
-                            <h5><a href="./camsys.html">防犯摄像头</a></h5>
-                            <p>在独栋住宅、办公室、公寓、走廊等安装AI摄像头，消除入侵的不安。</p>
-                        </div>
-                        <img class="img-fluid" src="../assets/img/producrts/camera2.jpg" alt="适用于住宅和办公室的AI防犯摄像头" loading="lazy">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 p-0">
-                    <div class="single-services text-center">
-                        <div class="services-ion">
-                            <img src="../assets/img/icon/icon.svg" alt="车牌识别图标" loading="lazy">
-                        </div>
-                        <div class="services-cap">
-                            <h5><a href="services/facerez.html">人脸识别</a></h5>
-                            <p>人脸识别系统在办公楼、建筑工地、安全场所的门禁检查自动化中发挥作用。</p>
-                        </div>
-                        <img class="img-fluid" src="../assets/img/producrts/facerez.jpg" alt="人脸识别" loading="lazy">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 p-0">
-                    <div class="single-services text-center">
-                        <div class="services-ion">
-                            <img src="../assets/img/icon/icon.svg" alt="安全管理图标" loading="lazy">
-                        </div>
-                        <div class="services-cap">
-                            <h5><a href="services/safety-management.html">AI监控分析系统</a></h5>
-                            <p>AI分析监控摄像头的视频，能够检测特定行为、人物或物体。</p>
-                        </div>
-                        <img class="img-fluid" src="../assets/img/producrts/cardecetion.gif" alt="工厂安全管理用AI摄像头" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Our Services End -->
-    <!-- Our Services Start -->
-    <section class="our-services2">
-        <div class="container">
-            <div class="row">
-                <h2 class="text-center py-1">通信的不安</h2>
-                <p class="point">
-                    <span class="number">02</span>
+                <p class='hero-desc'>
+                    连接现场、安全与运营的技术伙伴
                 </p>
-            </div>
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <img src="../assets/img/icon/services1.svg" alt="缓解物理入侵不安的图标" loading="lazy">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="./camsys.html">室内外监控解决方案</a></h5>
-                            <p>提供防灾、监控、信息用摄像头系统的设计、安装、维护服务。</p>
-                        </div>
-                        <img class="img-fluid" src="../assets/img/producrts/camera.jpg" alt="监控系统" loading="lazy">
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <img src="../assets/img/icon/services2.svg" alt="有线通信" loading="lazy">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="./network.html">网络设计与施工</a></h5>
-                            <p>提供使用光纤或LAN电缆的有线网络设计、施工、检查服务。</p>
-                        </div>
-                        <img class="img-fluid" src="../assets/img/producrts/fiberlan.jpg" alt="网络" loading="lazy">
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <img src="../assets/img/icon/services3.svg" alt="缓解复杂技术不安的图标" loading="lazy">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="./wireless.html">无线通信</a></h5>
-                            <p>提供安全构建无线接入点和Wi-Fi环境的服务，提供无线通话、数据通信、远程访问等。</p>
-                        </div>
-                        <img class="img-fluid" src="../assets/img/producrts/network.jpg" alt="无线通信" loading="lazy">
-                    </div>
+                <div class='hero-buttons'>
+                    <a href='services.html' class='btn-primary'>查看我们的服务</a>
+                    <a href='index.html#contact' class='btn-secondary'>联系我们</a>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Our Services End -->
-    <!-- Our Services Start -->
-    <section class="our-services2">
-        <div class="container">
-            <div class="row">
-                <h2 class="text-center py-1">技术系统引入</h2>
-                <p class="point">
-                    <span class="number">03</span>
-                </p>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6 p-0">
-                    <div class="single-services">
-                        <div class="services-ion">
-                            <img src="../assets/img/icon/icon.svg" alt="IT化或DX化支持图标" loading="lazy">
-                        </div>
-                        <div class="services-cap">
-                            <h5><a href="software.html">软件开发</a></h5>
-                            <p>本公司在业务运营和生产现场的系统引入方面有丰富经验，承接嵌入式系统、Windows软件、通信、ERP业务系统、Web制作、Web应用程序等各种软件开发。</p>
-                        </div>
-                        <img class="img-fluid" src="../assets/img/producrts/coding.jpg" alt="IT化・DX化支持服务" loading="lazy">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 p-0">
-                    <div class="single-services">
-                        <div class="services-ion">
-                            <img src="../assets/img/icon/icon.svg" alt="自动化系统图标" loading="lazy">
-                        </div>
-                        <div class="services-cap">
-                            <h5><a href="automation.html">自动化系统</a></h5>
-                            <p>自动化系统的引入面临复杂技术。如果公司没有这样的人才，该怎么办？借用外部人才。我们在自动化领域有多年经验，确保客户无遗憾。</p>
-                        </div>
-                        <img class="img-fluid" src="../assets/img/producrts/robot.jpg" alt="自动化系统引入支持" loading="lazy">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 p-0">
-                    <div class="single-services">
-                        <div class="services-ion">
-                            <img src="../assets/img/icon/icon.svg" alt="中立评估图标" loading="lazy">
-                        </div>
-                        <div class="services-cap">
-                            <h5><a href="evaluation.html">中立立场与客观评估</a></h5>
-                            <p>从不偏向供应商或特定产品的中立立场，在系统引入前后负责评估技术与质量，确保真正有益于客户，消除不安。</p>
-                        </div>
-                        <img class="img-fluid" src="../assets/img/producrts/people.jpg" alt="中立立场下的系统评估" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Our Services End -->
-    <!-- About Area Start -->
-    <div class="about-area section-bg2" id="about">
-        <div class="container">
-            <div class="row align-items-end">
-                <div class="offset-xl-1 offset-lg-1 col-xl-6 col-lg-6 col-md-10">
-                    <div class="about-cap-Left">
-                        <div class="center-width">
-                                <img class="img-fluid" src="../assets/img/producrts/companymark.jpg" alt="izumosoan" loading="lazy">
-                        </div>
-                        <div class="section-tittle section-tittle2 mb-50">
-                            <h2>关于公司名称</h2>
-                            <p>在出云，有传说在农历十月（神在月），全国的神明聚集到出云国。<br>
-                                我们向神明祈求安全，旨在创造正义的安全社会。这就是“出云创安”公司名称的含义。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-5 col-md-10">
-                    <div class="right-caption">
-                        <div class="small-tittle mb-50">
-                            <h4>我们的使命</h4>
-                            <p>
-                                创安合同公司旨在通过摄像头、通信和自动化系统领域的技术产品和施工服务消除“不安”，为社区安全做出贡献。<br>
-                                利用我们在IT和自动化领域的多年经验，为中小企业自动化投资的技术不安提供亲切的帮助服务。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <img src="../assets/img/producrts/fuan-zh.jpg" alt="消除不安的形象" loading="lazy">
-            </div>
-        </div>
-    </div>
-    <!-- About Area End -->
-    <!-- Form Start -->
-    <section id="contact" class="form">
-        <div class="container">
-            <div class="row">
-                <div class="ttl_box text-center">
-                    <p class="ttl-english">FORM</p>
-                    <h2 class="ttl-text">联系表单</h2>
-                    <div class="question-line"></div>
-                </div>
-            </div>
-            <form action="" method="POST" id="contactForm2" class="needs-validation" novalidate>
-                <div id="alert-statut" class="alert-container"></div>
-                <div class="mb-4 row justify-content-center">
-                    <div class="col-lg-3">
-                        <label for="InputCompany"><span class="badge text-bg-danger align-middle">必填</span>公司/组织名称</label>
-                    </div>
-                    <div class="col-lg-6">
-                        <input type="text" id="InputCompany" name="company" placeholder="例）出云创安 / 个人" class="form-control validate[required]" required="" aria-describedby="company-error">
-                        <span id="company-error" class="error-message" style="display: none; color: red;">请输入公司名称</span>
-                    </div>
-                </div>
-                <div class="mb-4 row justify-content-center">
-                    <div class="col-lg-3 lh-lg">
-                        <label for="InputName"><span class="badge text-bg-danger align-middle">必填</span>姓名</label>
-                    </div>
-                    <div class="col-lg-6">
-                        <input type="text" id="InputName" name="name" placeholder="例）出云　创安" class="form-control validate[required]" required="" aria-describedby="name-error">
-                        <span id="name-error" class="error-message" style="display: none; color: red;">请输入姓名</span>
-                    </div>
-                </div>
-                <div class="mb-4 row justify-content-center">
-                    <div class="col-lg-3 lh-lg">
-                        <label for="InputTel"><span class="badge text-bg-danger align-middle">必填</span>电话号码</label>
-                    </div>
-                    <div class="col-lg-6">
-                        <input type="text" id="InputTel" name="phone" placeholder="例）0312345678" pattern="[0-9\-]+" class="form-control validate[required]" required="" aria-describedby="tel-error">
-                        <span id="tel-error" class="error-message" style="display: none; color: red;">请输入正确的电话号码格式</span>
-                    </div>
-                </div>
-                <div class="mb-4 row justify-content-center">
-                    <div class="col-lg-3">
-                        <label for="InputMail"><span class="badge text-bg-danger align-middle">必填</span>电子邮件地址</label>
-                    </div>
-                    <div class="col-lg-6">
-                        <input type="email" id="InputMail" name="email" placeholder="例）abc@abc.com" class="form-control validate[required]" required="" aria-describedby="email-error">
-                        <span id="email-error" class="error-message" style="display: none; color: red;">请输入电子邮件地址</span>
-                    </div>
-                </div>
-                <div class="mb-4 row justify-content-center">
-                    <div class="col-lg-3 lh-lg">
-                        <label for="InputText"><span class="badge text-bg-light align-middle">可选</span>消息正文</label>
-                    </div>
-                    <div class="col-lg-6">
-                        <textarea name="message" id="InputText" rows="4" cols="50" style="height: 170px;" class="form-control"></textarea>
-                    </div>
-                </div>
-                <div class="text-center mt-3">
-                    <label for="flexCheckIndeterminate-1">
-                        <input type="checkbox" name="privacy" value="agree" id="flexCheckIndeterminate-1" class="form-check-input align-text-top">
-                        <span class="text-primary"><a href="privacy_policy.html" class="text-primary">同意个人信息处理</a></span>
-                    </label>
-                </div>
-                <div class="mt-3 row justify-content-center">
-                    <div class="col-md-6">
-                        <div class="text-center">
-                            <input name="recaptcha-token" type="hidden">
-                            <button type="submit" id="submitButton" class="btn btn-primary btn-lg submit_btn fw-bold" disabled="" ontouchstart="">确认页面</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section>
-    <!-- Form End -->
-</main>
+        </section>
 
-   <footer>
-        <div class="footer-wrappper section-img-bg2" data-background="../assets/img/gallery/footer-bg.jpg">
-            <div class="footer-area footer-padding">
-                <div class="container">
-                    <div class="row justify-content-between">
-                        <div class="col-xl-3 col-lg-5 col-md-5 col-sm-6">
-                            <div class="single-footer-caption">
-                                <div class="footer-logo mb-25">
-                                    <a href="index.html"><img src="../assets/img/logo/izumo_logo.jpg"
-                                            alt="出云创安有限责任公司页脚标志" loading="lazy"></a>
-                                </div>
-                                <div class="footer-tittle">
-                                    <div class="footer-pera">
-                                        <p>出云创安有限责任公司通过技术和优质服务，创造安全与安心的未来。</p>
-                                    </div>
-                                </div>
+        <!-- 主要服务对象 (Target Industries) -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>主要服务对象</h2>
+                    <p>从制造业到数据中心，我们在广泛的行业领域支持技术导入与现场运营。</p>
+                </div>
+                <div class='industry-grid'>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-industry"></i> 制造业工厂</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 自动化设备导入</li>
+                            <li><i class="fas fa-check"></i> PLC现场调试</li>
+                            <li><i class="fas fa-check"></i> 网络与OT环境建设</li>
+                            <li><i class="fas fa-check"></i> 故障调查</li>
+                        </ul>
+                    </div>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-warehouse"></i> 物流仓库</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> AGV/AMR导入支援</li>
+                            <li><i class="fas fa-check"></i> Wi-Fi覆盖设计</li>
+                            <li><i class="fas fa-check"></i> WMS现场实施</li>
+                            <li><i class="fas fa-check"></i> 设备通信测试</li>
+                        </ul>
+                    </div>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-database"></i> 数据中心</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 光纤施工</li>
+                            <li><i class="fas fa-check"></i> 网络布线</li>
+                            <li><i class="fas fa-check"></i> 机柜与设备安装</li>
+                            <li><i class="fas fa-check"></i> 验证测试</li>
+                        </ul>
+                    </div>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-building"></i> 楼宇与园区</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 安防系统</li>
+                            <li><i class="fas fa-check"></i> 门禁系统</li>
+                            <li><i class="fas fa-check"></i> 弱电工程</li>
+                            <li><i class="fas fa-check"></i> 网络基础设施</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 我们的解决方案 -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>我们的解决方案</h2>
+                    <p>基于多年现场经验，提供可靠、高质量的工程服务。</p>
+                </div>
+                <div class='solution-grid'>
+                    <div class='card-item solution-card'>
+                        <div class='solution-number'>1</div>
+                        <div class='solution-icon'><i class="fas fa-broadcast-tower"></i></div>
+                        <h3>网络·通信·消防基础设施</h3>
+                        <p>为现场安全稳定运营构建基础。从光纤施工到消防系统，提供全面支持。</p>
+                    </div>
+                    <div class='card-item solution-card'>
+                        <div class='solution-number'>2</div>
+                        <div class='solution-icon'><i class="fas fa-tools"></i></div>
+                        <h3>技术系统导入与现场支援</h3>
+                        <p>将海外优秀技术切实导入日本现场。从机器人到AI，强力支持现场实际运用。</p>
+                    </div>
+                    <div class='card-item solution-card'>
+                        <div class='solution-number'>3</div>
+                        <div class='solution-icon'><i class="fas fa-laptop-code"></i></div>
+                        <h3>现场运营的数字化</h3>
+                        <p>实现现场信息可视化，提升运营效率。通过QR管理和AI辅助，实现下一代现场运营。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 项目案例 (Mini Case Studies) -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>项目案例</h2>
+                    <p>为您介绍我们在客户现场实际取得成果的项目。</p>
+                </div>
+                <div class='mini-case-grid'>
+                    <div class='mini-case-card'>
+                        <img src='../assets/img/cards/fiber-optic.jpg' alt='数据中心光纤工程' style='width:100%;height:180px;object-fit:cover;display:block;'>
+                        <div class='mini-case-body'>
+                            <span class='case-cat'>数据中心</span>
+                            <h3>数据中心光纤工程</h3>
+                            <p>规模：500芯光纤<br>内容：熔接·测试·ODF施工<br>工期：3周</p>
+                            <div class='case-meta'>
+                                <span><i class="fas fa-map-marker-alt"></i> 关东</span>
+                                <span><i class="fas fa-check-circle" style="color:#48bb78;"></i> 已完成</span>
                             </div>
                         </div>
-                        <div class="offset-xl-2 col-xl-2 col-lg-3 col-md-4 col-sm-5">
-                            <div class="single-footer-caption mb-20">
-                                <div class="footer-tittle">
-                                    <h4>服务</h4>
-                                    <ul>
-                                        <li><a href="./index.html#home">首页</a></li>
-                                        <li><a href="./index.html#services">服务</a></li>
-                                        <li><a href="./index.html#about">关于我们</a></li>
-                                        <li><a href="./index.html#contact">联系我们</a></li>
-                                    </ul>
-                                </div>
+                    </div>
+                    <div class='mini-case-card'>
+                        <img src='../assets/img/cards/agv-robot.jpg' alt='物流仓库AGV导入支援' style='width:100%;height:180px;object-fit:cover;display:block;'>
+                        <div class='mini-case-body'>
+                            <span class='case-cat'>物流仓库</span>
+                            <h3>物流仓库AGV导入支援</h3>
+                            <p>数量：20台AGV<br>内容：网络调查·路径确认·现场联调·操作培训<br>工期：6个月</p>
+                            <div class='case-meta'>
+                                <span><i class="fas fa-map-marker-alt"></i> 关东</span>
+                                <span><i class="fas fa-check-circle" style="color:#48bb78;"></i> 已完成</span>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                            <div class="single-footer-caption mb-20">
-                                <div class="footer-tittle">
-                                    <h4>公司住址</h4>
-                                    <ul class="mb-20">
-                                        <li>电话：050-1258-9122</li>
-                                        <li>邮件: info@izumosoan.com</li>
-                                        <li>地址：日本东京都葛饰区东立石4-37-8</li>
-                                    </ul>
-                                    <p class="small-text"><a href="./customer_harassment.html">客户文明接待基本方针</a></p>
+                    </div>
+                    <div class='mini-case-card'>
+                        <img src='../assets/img/cards/erp-upgrade.jpg' alt='制造企业ERP升级项目' style='width:100%;height:180px;object-fit:cover;display:block;'>
+                        <div class='mini-case-body'>
+                            <span class='case-cat'>制造业</span>
+                            <h3>制造企业ERP升级项目</h3>
+                            <p>用户数：100+<br>内容：数据迁移·网络切换·用户培训·上线支援<br>工期：4个月</p>
+                            <div class='case-meta'>
+                                <span><i class="fas fa-map-marker-alt"></i> 中部</span>
+                                <span><i class="fas fa-check-circle" style="color:#48bb78;"></i> 已完成</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style='text-align:center; margin-top:2.5rem;'>
+                    <a href='case-studies.html' class='btn-primary'>查看更多案例</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 海外厂商现场落地合作伙伴 -->
+        <section class='overseas-section'>
+            <div class='container'>
+                <h2>海外厂商现场落地合作伙伴</h2>
+                <p class='section-sub'>We bridge technology and Japanese worksites.</p>
+                <div class='overseas-grid'>
+                    <div class='overseas-left'>
+                        <h3>一站式支持您的产品在日本现场落地</h3>
+                        <p>
+                            海外厂商的优质产品要在日本客户现场稳定运行，需要符合日本施工标准、与现场团队沟通、以及导入后的运维支持。<br><br>
+                            出云创安作为海外技术与日本现场之间的桥梁，提供从导入到落地的一站式服务。
+                        </p>
+                        <div style='text-align:center;margin-top:1.5rem;'>
+                            <a href='overseas-partner.html' class='overseas-btn'>了解更多 →</a>
+                        </div>
+                    </div>
+                    <div class='overseas-right'>
+                        <h4>对应能力</h4>
+                        <div class='overseas-capabilities'>
+                            <span><i class="fas fa-check-circle"></i> 日语对应</span>
+                            <span><i class="fas fa-check-circle"></i> 英语对应</span>
+                            <span><i class="fas fa-check-circle"></i> 中文对应</span>
+                            <span><i class="fas fa-check-circle"></i> 现场施工管理</span>
+                            <span><i class="fas fa-check-circle"></i> 网络工程</span>
+                            <span><i class="fas fa-check-circle"></i> 系统导入支援</span>
+                            <span><i class="fas fa-check-circle"></i> 用户培训</span>
+                            <span><i class="fas fa-check-circle"></i> 运维改善支援</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 为什么选择出云创安 -->
+        <section class='section-padding why-section'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>为什么选择出云创安</h2>
+                    <p>将现场对应能力通过经验、覆盖范围、技术领域、语言支持的4个数字进行可视化呈现。</p>
+                </div>
+                <div class='why-number-row'>
+                    <div class='why-number-card'>
+                        <span>现场经验</span>
+                        <strong>20<span>年以上</span></strong>
+                        <p>网络、通信、设备联动的设计·构建·维护</p>
+                    </div>
+                    <div class='why-number-card'>
+                        <span>覆盖区域</span>
+                        <strong>4<span>大区域</span></strong>
+                        <p>关东·中部·关西·九州等地的导入实绩</p>
+                    </div>
+                    <div class='why-number-card'>
+                        <span>技术领域</span>
+                        <strong>3<span>大领域</span></strong>
+                        <p>网络工程施工、系统产品的现场导入、现场运营的数字化</p>
+                    </div>
+                    <div class='why-number-card'>
+                        <span>语言支持</span>
+                        <strong>3<span>种语言</span></strong>
+                        <p>日语·英语·中文进行现场协作</p>
+                    </div>
+                </div>
+                <div class='why-grid'>
+                    <div class='card-item why-item why-metric-card' style='--why-color:#005a9c;'>
+                        <div class='why-rank'>01</div>
+                        <h3>20年以上的现场经验</h3>
+                        <p class='why-metric'>凭经验做出判断</p>
+                        <p>创业团队在工业现场的网络、通信系统的设计、构建、维护方面有多年经验。能够从现场视角提出方案。</p>
+                        <span class='why-tag'>设计·构建·维护</span>
+                    </div>
+                    <div class='card-item why-item why-metric-card' style='--why-color:#0f766e;'>
+                        <div class='why-rank'>02</div>
+                        <h3>日本全国项目对应</h3>
+                        <p class='why-metric'>可在多地开展工作</p>
+                        <p>在关东、中部、关西、九州等日本各地拥有现场施工和导入实绩。</p>
+                        <span class='why-tag'>关东 / 中部 / 关西 / 九州</span>
+                    </div>
+                    <div class='card-item why-item why-metric-card' style='--why-color:#7c3aed;'>
+                        <div class='why-rank'>03</div>
+                        <h3>三大技术领域</h3>
+                        <p class='why-metric'>从现场零到一全程负责</p>
+                        <p>网络工程施工、系统产品的现场导入、现场运营的数字化，提供跨领域支持。</p>
+                        <span class='why-tag'>Network / Systems / Digital</span>
+                    </div>
+                    <div class='card-item why-item why-metric-card' style='--why-color:#b45309;'>
+                        <div class='why-rank'>04</div>
+                        <h3>OT/IT融合能力</h3>
+                        <p class='why-metric'>连接现场设备与信息系统</p>
+                        <p>同时理解控制系统(OT)和信息系统(IT)，以最佳平衡构建系统。</p>
+                        <span class='why-tag'>控制 / 信息 / 运营</span>
+                    </div>
+                    <div class='card-item why-item why-metric-card' style='--why-color:#be123c;'>
+                        <div class='why-rank'>05</div>
+                        <h3>多厂商整合能力</h3>
+                        <p class='why-metric'>协调厂商之间的偏差</p>
+                        <p>连接不同厂商的系统，使其在现场顺畅运行。防止供应商锁定。</p>
+                        <span class='why-tag'>Multi Vendor</span>
+                    </div>
+                    <div class='card-item why-item why-metric-card' style='--why-color:#2563eb;'>
+                        <div class='why-rank'>06</div>
+                        <h3>工程思维</h3>
+                        <p class='why-metric'>考虑到导入后的运维</p>
+                        <p>秉承"技术为现场而生"的理念，提供真正可用的解决方案。</p>
+                        <span class='why-tag'>注重长期运维</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 对应实绩技术领域 -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>对应实绩技术领域</h2>
+                    <p>网络·安防·控制·自动化——覆盖广泛的技术领域。</p>
+                </div>
+                <div class='tech-grid'>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-network-wired"></i> 网络构建</span>
+                        <span class='tech-name'>LAN及光纤布线工程到网络交换机设置、测试等</span>
+                    </div>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-eye"></i> 监控·安防</span>
+                        <span class='tech-name'>监控摄像头的设置·维护、各类智能锁、人脸识别导入</span>
+                    </div>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-microchip"></i> 工厂控制·机器人</span>
+                        <span class='tech-name'>PLC/DCS的工厂控制系统、制造现场与物流仓库的机器人导入</span>
+                    </div>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-robot"></i> WES / WMS / ERP</span>
+                        <span class='tech-name'>各类软件系统的导入、系统间的联动、旧系统改造</span>
+                    </div>
+                </div>
+                <p style='text-align:center; font-size:0.85rem; color:var(--text-muted); margin-top:1.5rem;'>* 以上为对应实绩的技术领域，不代表特定厂商的正式合作伙伴认证。</p>
+            </div>
+        </section>
+
+        <!-- 自研产品方案 -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>自研产品方案</h2>
+                    <p>我们同时提供为解决现场实际课题而自主研发的产品。</p>
+                </div>
+                <div class='product-showcase-grid'>
+                    <a href='products-safeops.html' class='product-showcase-card'>
+                        <div class='product-showcase-icon'><i class="fas fa-shield-alt"></i></div>
+                        <h3>IZUMO SafeOps</h3>
+                        <p>通过数字化手段管理现场作业安全的平台。实现作业许可管理、风险评估、作业实绩的一元化管理。</p>
+                        <span class='product-showcase-cta'>了解更多 →</span>
+                    </a>
+                    <a href='products-sitebridge.html' class='product-showcase-card'>
+                        <div class='product-showcase-icon'><i class="fas fa-link"></i></div>
+                        <h3>IZUMO SiteBridge</h3>
+                        <p>实时统合多个据点现场数据进行可视化的现场数据联动平台，可平滑对接现有系统。</p>
+                        <span class='product-showcase-cta'>了解更多 →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系我们 -->
+        <section class='contact-section' id='contact'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>联系我们</h2>
+                    <p>关于现场课题，欢迎随时咨询。</p>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-form-wrapper">
+                        <form action='#' method='POST' id='contact-form'
+                              data-success='感谢您的咨询，我们将尽快与您联系。'
+                              data-error='发送失败，请稍后重试。'
+                              data-submit='发送消息'
+                              data-sending='发送中...'>
+                            <div class='form-group'>
+                                <label for='name'>姓名</label>
+                                <input type='text' id='name' name='name' placeholder="请输入您的姓名" required>
+                            </div>
+                            <div class='form-group'>
+                                <label for='email'>邮箱</label>
+                                <input type='email' id='email' name='email' placeholder="example@izumosoan.jp" required>
+                            </div>
+                            <div class='form-group'>
+                                <label for='company'>公司/组织名称</label>
+                                <input type='text' id='company' name='company' placeholder="出云创安有限公司">
+                            </div>
+                            <div class='form-group'>
+                                <label for='message'>咨询内容</label>
+                                <textarea id='message' name='message' rows='5' placeholder="请描述您的需求或现场问题" required></textarea>
+                            </div>
+                            <button type='submit' class='btn-primary'>发送消息</button>
+                            <p style='font-size:0.85rem;color:var(--text-muted);margin-top:0.75rem;'><a href='privacy.html' target='_blank'>隐私政策</a></p>
+                        </form>
+                        <div style='margin-top:1rem; padding:1rem; background:var(--bg-light); border-radius:6px; border:1px solid var(--border-color);'>
+                            <p style='font-size:0.85rem; margin-bottom:0.25rem; color:var(--text-muted);'><strong>【回复时间】</strong></p>
+                            <p style='font-size:0.85rem; margin-bottom:0; color:var(--text-muted);'>通常会在1个工作日内回复。</p>
+                        </div>
+                        <!-- Process Flow -->
+                        <div style='margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--border-color);'>
+                            <h3 style='font-size:1.1rem; text-align:center; margin-bottom:1.5rem;'>服务流程</h3>
+                            <div class='process-flow'>
+                                <div class='process-step'>
+                                    <div class='step-num'>1</div>
+                                    <div class='step-label'>在线咨询</div>
+                                </div>
+                                <div class='process-step'>
+                                    <div class='step-num'>2</div>
+                                    <div class='step-label'>线上沟通</div>
+                                </div>
+                                <div class='process-step'>
+                                    <div class='step-num'>3</div>
+                                    <div class='step-label'>现场调研</div>
+                                </div>
+                                <div class='process-step'>
+                                    <div class='step-num'>4</div>
+                                    <div class='step-label'>方案提案</div>
+                                </div>
+                                <div class='process-step'>
+                                    <div class='step-num'>5</div>
+                                    <div class='step-label'>实施支援</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom-area">
-                <div class="container">
-                    <div class="footer-border">
-                        <div class="row d-flex align-items-center">
-                            <div class="col-xl-12">
-                                <div class="footer-copy-right text-center">
-                                    <p>© 2025 出云创安有限责任公司。保留所有权利。</p>
-                                </div>
-                            </div>
-                        </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../assets/img/logo/logo.png' alt='Izumo Soan'>
+                    <p class='logo-desp'>技术赋能现场</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>菜单</h4>
+                    <ul>
+                        <li><a href='index.html'>首页</a></li>
+                        <li><a href='about.html'>公司概况</a></li>
+                        <li><a href='services.html'>服务</a></li>
+                        <li><a href='case-studies.html'>案例</a></li>
+                        <li><a href='overseas-partner.html'>海外厂商伙伴</a></li>
+                        <li><a href='privacy.html'>隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>产品信息</h4>
+                    
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='products-safeops.html'>
+                            <span>IZUMO SafeOps</span>
+                            <small>现场安全运营管理平台</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>智能现场的运维改善平台</small>
+                        </a>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 出雲創安 Izumo Soan. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    <div id="back-top">
-        <a title="Go to Top" href="#"><i class="fas fa-level-up-alt"></i></a>
-    </div>
-    <!-- JS here -->
-    <script defer src="../assets/js/vendor/modernizr-3.5.0.min.js"></script>
-    <script defer src="../assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script defer src="../assets/js/popper.min.js"></script>
-    <script defer src="../assets/js/bootstrap.min.js"></script>
-    <script defer src="../assets/js/owl.carousel.min.js"></script>
-    <script defer src="../assets/js/slick.min.js"></script>
-    <script defer src="../assets/js/jquery.slicknav.min.js"></script>
-    <script defer src="../assets/js/wow.min.js"></script>
-    <script defer src="../assets/js/jquery.magnific-popup.js"></script>
-    <!-- <script defer src="../assets/js/jquery.nice-select.min.js"></script> -->
-    
-    <script defer src="../assets/js/plugins.js"></script>
-    <script defer src="../assets/js/main.js"></script>
 
-    <!-- contact form  -->
-    <script defer src="https://www.google.com/recaptcha/api.js?render=6LcvrBcrAAAAAFZ_zegpjQnud2i7Mn0_xjrnHeNq"></script>
-    
-    <script src="../contactform/AjaxForm.js"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93b01815df3d4575',t:'MTc0NjQ0NjYwMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-
+    <script src='../assets/js/main.js'></script>
+    <script src='../assets/js/lang-switcher.js'></script>
+    <script src='../assets/js/contact-form.js'></script>
+</body>
 </html>

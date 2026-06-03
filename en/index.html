@@ -1,510 +1,522 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-
+﻿<!DOCTYPE html>
+<html lang='en'>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Izumo Soan LLC</title>
-    <meta name="description" content="Izumo Soan LLC supports community safety and  software automation through AI security cameras, smart locks, network technology, system evaluation services.">
-    <meta name="keywords" content="AI security cameras, smart locks, network design, cabling work,  evaluation, automation support, Izumo Soan, community safety">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../assets/css/slicknav.css">
-    <link rel="stylesheet" href="../assets/css/animate.min.css">
-    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="../assets/css/themify-icons.css">
-    <link rel="stylesheet" href="../assets/css/slick.css">
-    <link rel="stylesheet" href="../assets/css/nice-select.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        @media (max-width: 767px) {
-            .ttl-text {
-                display: block;
-                white-space: normal;
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Izumo Soan | Your Technology Partner for Field, Safety & Operations</title>
+    <meta name='description' content='Izumo Soan is a technology engineering company that supports continuous field operations. We provide network, communications, fire safety infrastructure, technical system deployment support, and digital transformation services for field operations.'>
+    
+    <!-- SEO: hreflang -->
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/index.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/index.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/index.html">
+    <link rel="canonical" href="https://izumosoan.com/en/index.html">
+
+    <!-- SEO: Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/en/index.html">
+    <meta property="og:title" content="Izumo Soan | Your Technology Partner for Field, Safety & Operations">
+    <meta property="og:description" content="Izumo Soan is a technology engineering company that supports continuous field operations. We provide network, communications, fire safety infrastructure, technical system deployment support, and digital transformation services for field operations.">
+    <meta property="og:locale" content="en_US">
+
+    <!-- SEO: JSON-LD Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Izumo Soan",
+        "url": "https://izumosoan.com",
+        "telephone": "050-1258-9122",
+        "email": "info@izumosoan.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Katsushika-ku, Tokyo",
+            "addressRegion": "Tokyo",
+            "streetAddress": "4-37-8 Higashi-Tateishi",
+            "addressCountry": "JP"
+        },
+        "description": "Your technology partner connecting field, safety & operations"
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel='stylesheet' href='../assets/css/fontawesome-all.min.css'>
+    <link rel='stylesheet' href='../assets/css/style.css'>
+    <link rel='stylesheet' href='../assets/css/custom.css'>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function() {
+            var path = window.location.pathname;
+            var dirs = ['/zh/', '/ja/', '/en/'];
+            for (var i = 0; i < dirs.length; i++) {
+                if (path.indexOf(dirs[i]) >= 0) return;
             }
-        }
-
-        .language_bar_chooser .active strong {
-            font-weight: bold;
-            color: #007bff;
-        }
-        
-    </style>
+            var lang = (navigator.language || navigator.userLanguage || 'ja').substring(0, 2);
+            var target = (lang === 'zh') ? 'zh' : (lang === 'en') ? 'en' : 'ja';
+            var idx = path.lastIndexOf('/');
+            var base = (idx >= 0) ? path.substring(0, idx + 1) : '/';
+            window.location.replace(base + target + '/index.html');
+        })();
+    </script>
 </head>
-
 <body>
     <header>
-        <div class="header-area">
-            <div class="main-header">
-                <div class="header-bottom header-sticky">
-                    <div class="container">
-                       
-                        <div class="row align-items-center">
-                            <div class="col-xs-4 col-lg-2">
-                                <div class="logo">
-                                    <a href="index.html"><img src="../assets/img/logo/logo.jpg" alt="Izumo Soan LLC Logo"></a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-lg-8">
-                                <div class="mobile_menu  d-block d-lg-none"></div>
-                                <div class="main-menu f-right d-none d-lg-block">
-                                    <nav>
-                                        <ul id="navigation">
-                                            <li><a href="./index.html#home">Home</a></li>
-                                            <li><a href="./index.html#services">Services</a></li>
-                                            <li><a href="./index.html#about">About Us</a></li>
-                                            <li><a href="./index.html#contact">Contact</a></li>
-                                            
-                                        </ul>
-                                    </nav>
-                                   
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-lg-2">
-                                 <div class="header-dropdown f-right">
-                                        <button class="dropdown-link" aria-label="Language selection" aria-haspopup="true"
-                                            aria-expanded="false">
-                                            <img src="../assets/img/flags/en.png" alt="English" width="20"
-                                                height="20"> <i class="fas fa-caret-down"></i>
-                                        </button>
-                                        <ul class="language_bar_chooser" role="menu">
-                                            <li class="active" role="menuitem"><img
-                                                    src="../assets/img/flags/en.png" alt="English" width="20"
-                                                    height="20"> <strong>English</strong></li>
-                                            <li role="menuitem"><a rel="alternate" hreflang="ja"
-                                                    href="../ja/index.html"><img
-                                                        src="../assets/img/flags/ja.png" alt="Japanese"
-                                                        width="20" height="20"> Japanese</a></li>
-                                            <li role="menuitem"><a rel="alternate" hreflang="zh"
-                                                    href="../zh/index.html"><img
-                                                        src="../assets/img/flags/zh.png" alt="Simplified Chinese"
-                                                        width="20" height="20"> Simplified Chinese</a></li>
-                                        </ul>
-                                    </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
+        <div class='container'>
+            <div class='logo'>
+                <a href='#'>
+                    <img src='../assets/img/logo/logo.png' alt='Izumo Soan' style='height:100px;'>
+                </a>
             </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
+            <nav>
+                <ul>
+                    <li><a href='index.html' class='active'>Home</a></li>
+                    <li><a href='services.html'>Services</a></li>
+                    <li><a href='products.html'>Products</a></li>
+                    <li><a href='case-studies.html'>Case Studies</a></li>
+                    <li><a href='about.html'>About</a></li>
+                    <li><a href='overseas-partner.html'>Overseas Partner</a></li>
+                    <li><a href='index.html#contact'>Contact</a></li>
+                </ul>                <div class='language-switcher'>
+                    <span class='lang-label'><i class="fas fa-globe"></i></span>
+                    <select id='lang-select'>
+<option value='ja'>日本語</option>
+                        <option value='en' selected>English</option>
+                        <option value='zh'>中文</option>
+                    </select>
+                </div>
+            </nav>
         </div>
     </header>
-<main>
-    <!-- Slider Area Start -->
-    <div class="slider-area" id="home">
-        <div class="slider-active dot-style">
-            <div class="single-slider slider-height hero-overly slider-bg1 d-flex align-items-center">
-                <div class="container justify-content-center">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-caption text-center">
-                                <h1 data-animation="fadeInUp" data-delay=".4s">Supporting Peaceful Living with Technology</h1>
-                                <p data-animation="fadeInUp" data-delay=".4s">Izumo Souan LLC eliminates "anxieties" and creates a safe society.</p>
-                                <a href="#services" class="btn_1 hero-btn" data-animation="bounceIn" data-delay=".8s">View Services</a>
-                                <a href="#contact" class="btn_1 hero-btn" data-animation="bounceIn" data-delay=".8s">Contact Us</a>
+
+    <main>
+        <!-- Hero Section -->
+        <section class='hero'>
+            <div class='container'>
+                <h1>Technology that powers the field</h1>
+                <p class='subtitle'>
+                    We support technology deployment and operations on Japanese worksites
+                </p>
+                <p class='hero-desc'>
+                    Your technology partner connecting field, safety & operations
+                </p>
+                <div class='hero-buttons'>
+                    <a href='services.html' class='btn-primary'>View Our Services</a>
+                    <a href='index.html#contact' class='btn-secondary'>Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Target Industries -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>Industries We Serve</h2>
+                    <p>From manufacturing to data centers, we support technology deployment across a wide range of fields.</p>
+                </div>
+                <div class='industry-grid'>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-industry"></i> Manufacturing Factories</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Automation equipment deployment</li>
+                            <li><i class="fas fa-check"></i> PLC field tuning/debugging</li>
+                            <li><i class="fas fa-check"></i> Network &amp; OT environment setup</li>
+                            <li><i class="fas fa-check"></i> Fault investigation</li>
+                        </ul>
+                    </div>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-warehouse"></i> Logistics Warehouses</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> AGV/AMR deployment support</li>
+                            <li><i class="fas fa-check"></i> Wi-Fi coverage design</li>
+                            <li><i class="fas fa-check"></i> WMS on-site implementation</li>
+                            <li><i class="fas fa-check"></i> Equipment communication testing</li>
+                        </ul>
+                    </div>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-database"></i> Data Centers</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Fiber optic installation</li>
+                            <li><i class="fas fa-check"></i> Network cabling</li>
+                            <li><i class="fas fa-check"></i> Rack &amp; equipment installation</li>
+                            <li><i class="fas fa-check"></i> Verification testing</li>
+                        </ul>
+                    </div>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-building"></i> Buildings &amp; Facilities</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Security systems</li>
+                            <li><i class="fas fa-check"></i> Access control systems</li>
+                            <li><i class="fas fa-check"></i> Low-voltage electrical work</li>
+                            <li><i class="fas fa-check"></i> Network infrastructure</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Solutions -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>Our Solutions</h2>
+                    <p>Reliable, high-quality engineering backed by years of field experience.</p>
+                </div>
+                <div class='solution-grid'>
+                    <div class='card-item solution-card'>
+                        <div class='solution-number'>1</div>
+                        <div class='solution-icon'><i class="fas fa-broadcast-tower"></i></div>
+                        <h3>Network, Communications &amp; Fire Safety Infrastructure</h3>
+                        <p>Total support for building a safe and stable operational foundation — from fiber optic installation to fire safety systems.</p>
+                    </div>
+                    <div class='card-item solution-card'>
+                        <div class='solution-number'>2</div>
+                        <div class='solution-icon'><i class="fas fa-tools"></i></div>
+                        <h3>Technical System Deployment &amp; Field Support</h3>
+                        <p>Reliable deployment of advanced overseas technologies on Japanese worksites — from robotics to AI — with strong on-site operational support.</p>
+                    </div>
+                    <div class='card-item solution-card'>
+                        <div class='solution-number'>3</div>
+                        <div class='solution-icon'><i class="fas fa-laptop-code"></i></div>
+                        <h3>Field Operations Digitalization</h3>
+                        <p>Visualize field data and improve operational efficiency. Next-generation site management through QR tracking and AI-assisted tools.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mini Case Studies -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>Project Highlights</h2>
+                    <p>Real projects that delivered measurable results for our clients.</p>
+                </div>
+                <div class='mini-case-grid'>
+                    <div class='mini-case-card'>
+                        <img src='../assets/img/cards/fiber-optic.jpg' alt='Data Center Fiber Optic Project' style='width:100%;height:180px;object-fit:cover;display:block;'>
+                        <div class='mini-case-body'>
+                            <span class='case-cat'>Data Center</span>
+                            <h3>Data Center Fiber Optic Project</h3>
+                            <p>Scale: 500 fibers<br>Scope: Splicing, testing &amp; ODF installation<br>Duration: 3 weeks</p>
+                            <div class='case-meta'>
+                                <span><i class="fas fa-map-marker-alt"></i> Kanto</span>
+                                <span><i class="fas fa-check-circle" style="color:#48bb78;"></i> Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='mini-case-card'>
+                        <img src='../assets/img/cards/agv-robot.jpg' alt='Logistics Warehouse AGV Deployment' style='width:100%;height:180px;object-fit:cover;display:block;'>
+                        <div class='mini-case-body'>
+                            <span class='case-cat'>Logistics Warehouse</span>
+                            <h3>Logistics Warehouse AGV Deployment</h3>
+                            <p>Units: 20 AGVs<br>Scope: Network survey, route check, on-site tuning &amp; training<br>Duration: 6 months</p>
+                            <div class='case-meta'>
+                                <span><i class="fas fa-map-marker-alt"></i> Kanto</span>
+                                <span><i class="fas fa-check-circle" style="color:#48bb78;"></i> Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='mini-case-card'>
+                        <img src='../assets/img/cards/erp-upgrade.jpg' alt='Manufacturing ERP Upgrade' style='width:100%;height:180px;object-fit:cover;display:block;'>
+                        <div class='mini-case-body'>
+                            <span class='case-cat'>Manufacturing</span>
+                            <h3>Manufacturing ERP Upgrade</h3>
+                            <p>Users: 100+<br>Scope: Data migration, network cutover, user training &amp; go-live support<br>Duration: 4 months</p>
+                            <div class='case-meta'>
+                                <span><i class="fas fa-map-marker-alt"></i> Chubu</span>
+                                <span><i class="fas fa-check-circle" style="color:#48bb78;"></i> Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style='text-align:center; margin-top:2.5rem;'>
+                    <a href='case-studies.html' class='btn-primary'>View More Case Studies</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overseas Manufacturers -->
+        <section class='overseas-section'>
+            <div class='container'>
+                <h2>On-Site Deployment Partner for Overseas Manufacturers</h2>
+                <p class='section-sub'>We bridge technology and Japanese worksites.</p>
+                <div class='overseas-grid'>
+                    <div class='overseas-left'>
+                        <h3>One-stop support for bringing your technology to the Japanese market</h3>
+                        <p>
+                            Getting overseas manufacturers' advanced products running reliably on Japanese worksites requires<br><br>
+                            compliance with Japanese installation standards, effective communication with field staff, and ongoing operational support — a wide range of capabilities.<br><br>
+                            Izumo Soan bridges the gap between foreign technology and Japanese worksites, providing total support from deployment to long-term adoption.
+                        </p>
+                        <div style='text-align:center;margin-top:1.5rem;'>
+                            <a href='overseas-partner.html' class='overseas-btn'>Learn More →</a>
+                        </div>
+                    </div>
+                    <div class='overseas-right'>
+                        <h4>Capabilities</h4>
+                        <div class='overseas-capabilities'>
+                            <span><i class="fas fa-check-circle"></i> Japanese/English/Chinese language support</span>
+                            <span><i class="fas fa-check-circle"></i> Field construction management</span>
+                            <span><i class="fas fa-check-circle"></i> Network engineering</span>
+                            <span><i class="fas fa-check-circle"></i> System deployment support</span>
+                            <span><i class="fas fa-check-circle"></i> User training</span>
+                            <span><i class="fas fa-check-circle"></i> Operations improvement support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class='section-padding why-section'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>Why Choose Izumo Soan</h2>
+                    <p>Field capabilities visualized through four key metrics — experience, coverage, technology, and languages.</p>
+                </div>
+                <div class='why-number-row'>
+                    <div class='why-number-card'>
+                        <span>Field Experience</span>
+                        <strong>20<span>+ Years</span></strong>
+                        <p>Network, communications, and equipment integration — design, construction, and maintenance</p>
+                    </div>
+                    <div class='why-number-card'>
+                        <span>Coverage Areas</span>
+                        <strong>4<span> Regions</span></strong>
+                        <p>Kanto, Chubu, Kansai, Kyushu — proven deployment track record</p>
+                    </div>
+                    <div class='why-number-card'>
+                        <span>Technical Fields</span>
+                        <strong>3<span> Pillars</span></strong>
+                        <p>Network construction, system product deployment, field operations digitalization</p>
+                    </div>
+                    <div class='why-number-card'>
+                        <span>Languages</span>
+                        <strong>3<span> Languages</span></strong>
+                        <p>Japanese, English, Chinese — seamless field coordination</p>
+                    </div>
+                </div>
+                <div class='why-grid'>
+                    <div class='card-item why-item why-metric-card' style='--why-color:#005a9c;'>
+                        <div class='why-rank'>01</div>
+                        <h3>Over 20 Years of Field Experience</h3>
+                        <p class='why-metric'>Experience You Can Rely On</p>
+                        <p>The founding team has years of experience in industrial network and communication system design, construction, and maintenance. We bring a field-first perspective to every proposal.</p>
+                        <span class='why-tag'>Design / Construction / Maintenance</span>
+                    </div>
+                    <div class='card-item why-item why-metric-card' style='--why-color:#0f766e;'>
+                        <div class='why-rank'>02</div>
+                        <h3>Nationwide Project Coverage</h3>
+                        <p class='why-metric'>Active Across Multiple Regions</p>
+                        <p>Construction and deployment experience across Japan — Kanto, Chubu, Kansai, Kyushu, and beyond.</p>
+                        <span class='why-tag'>Kanto / Chubu / Kansai / Kyushu</span>
+                    </div>
+                    <div class='card-item why-item why-metric-card' style='--why-color:#7c3aed;'>
+                        <div class='why-rank'>03</div>
+                        <h3>Three Technical Pillars</h3>
+                        <p class='why-metric'>Taking Full Responsibility from Zero to One</p>
+                        <p>Network construction, system product deployment, and field operations digitalization — we provide cross-functional support across all three domains.</p>
+                        <span class='why-tag'>Network / Systems / Digital</span>
+                    </div>
+                    <div class='card-item why-item why-metric-card' style='--why-color:#b45309;'>
+                        <div class='why-rank'>04</div>
+                        <h3>OT/IT Integration</h3>
+                        <p class='why-metric'>Connecting Field Equipment and Information Systems</p>
+                        <p>Deep understanding of both control systems (OT) and information systems (IT) to build optimally balanced system architectures.</p>
+                        <span class='why-tag'>Control / Info / Operations</span>
+                    </div>
+                    <div class='card-item why-item why-metric-card' style='--why-color:#be123c;'>
+                        <div class='why-rank'>05</div>
+                        <h3>Multi-Vendor Coordination</h3>
+                        <p class='why-metric'>Resolving Gaps Between Vendors</p>
+                        <p>Connecting systems from different manufacturers and making them work reliably in the field — preventing vendor lock-in.</p>
+                        <span class='why-tag'>Multi Vendor</span>
+                    </div>
+                    <div class='card-item why-item why-metric-card' style='--why-color:#2563eb;'>
+                        <div class='why-rank'>06</div>
+                        <h3>Engineering Mindset</h3>
+                        <p class='why-metric'>Thinking Beyond Deployment to Operations</p>
+                        <p>"Technology exists for the field" — delivering solutions that are truly usable and sustainable on the worksite.</p>
+                        <span class='why-tag'>Long-term Operations Focus</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compatible Technologies -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>Technology Expertise</h2>
+                    <p>Network, security, control, surveillance — broad technology coverage across multiple domains.</p>
+                </div>
+                <div class='tech-grid'>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-network-wired"></i> Network Infrastructure</span>
+                        <span class='tech-name'>From LAN and fiber optic cabling to network switch configuration and testing</span>
+                    </div>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-eye"></i> Surveillance &amp; Security</span>
+                        <span class='tech-name'>Surveillance camera installation and maintenance, various smart locks, and facial recognition deployment</span>
+                    </div>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-microchip"></i> Factory Control &amp; Robotics</span>
+                        <span class='tech-name'>Factory control systems using PLC/DCS, robot deployment in manufacturing and logistics warehouses</span>
+                    </div>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-robot"></i> WES / WMS / ERP</span>
+                        <span class='tech-name'>Implementation of various software systems, inter-system integration, and legacy system modification</span>
+                    </div>
+                </div>
+                <p style='text-align:center; font-size:0.85rem; color:var(--text-muted); margin-top:1.5rem;'>* Listed technologies represent areas of proven capability and do not imply official partner certification from any vendor.</p>
+            </div>
+        </section>
+
+        <!-- Our Products -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>Our Product Solutions</h2>
+                    <p>We also offer our own products developed to solve real on-site challenges.</p>
+                </div>
+                <div class='product-showcase-grid'>
+                    <a href='products-safeops.html' class='product-showcase-card'>
+                        <div class='product-showcase-icon'><i class="fas fa-shield-alt"></i></div>
+                        <h3>IZUMO SafeOps</h3>
+                        <p>A digital platform for managing worksite safety. Centralize permit management, risk assessment, and work records.</p>
+                        <span class='product-showcase-cta'>Learn More →</span>
+                    </a>
+                    <a href='products-sitebridge.html' class='product-showcase-card'>
+                        <div class='product-showcase-icon'><i class="fas fa-link"></i></div>
+                        <h3>IZUMO SiteBridge</h3>
+                        <p>A real-time field data integration platform that unifies and visualizes data across multiple sites, seamlessly connecting with existing systems.</p>
+                        <span class='product-showcase-cta'>Learn More →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class='contact-section' id='contact'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>Contact Us</h2>
+                    <p>Have a challenge on your worksite? Get in touch for a free consultation.</p>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-form-wrapper">
+                        <form action='#' method='POST' id='contact-form'
+                              data-success='Thank you for your inquiry. We will review and get back to you shortly.'
+                              data-error='Failed to send. Please try again later.'
+                              data-submit='Send Message'
+                              data-sending='Sending...'>
+                            <div class='form-group'>
+                                <label for='name'>Name</label>
+                                <input type='text' id='name' name='name' placeholder="Your Name" required>
+                            </div>
+                            <div class='form-group'>
+                                <label for='email'>Email</label>
+                                <input type='email' id='email' name='email' placeholder="example@izumosoan.jp" required>
+                            </div>
+                            <div class='form-group'>
+                                <label for='company'>Company / Organization</label>
+                                <input type='text' id='company' name='company' placeholder="Company Name">
+                            </div>
+                            <div class='form-group'>
+                                <label for='message'>Message</label>
+                                <textarea id='message' name='message' rows='5' placeholder="Please describe your inquiry" required></textarea>
+                            </div>
+                            <button type='submit' class='btn-primary'>Send Message</button>
+                            <p style='font-size:0.85rem;color:var(--text-muted);margin-top:0.75rem;'><a href='privacy.html' target='_blank'>Privacy Policy</a></p>
+                        </form>
+                        <div style='margin-top:1rem; padding:1rem; background:var(--bg-light); border-radius:6px; border:1px solid var(--border-color);'>
+                            <p style='font-size:0.85rem; margin-bottom:0.25rem; color:var(--text-muted);'><strong>【Reply Timeline】</strong></p>
+                            <p style='font-size:0.85rem; margin-bottom:0; color:var(--text-muted);'>We typically respond within 1 business day.</p>
+                        </div>
+                        <!-- Process Flow -->
+                        <div style='margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--border-color);'>
+                            <h3 style='font-size:1.1rem; text-align:center; margin-bottom:1.5rem;'>How It Works</h3>
+                            <div class='process-flow'>
+                                <div class='process-step'>
+                                    <div class='step-num'>1</div>
+                                    <div class='step-label'>Inquiry</div>
+                                </div>
+                                <div class='process-step'>
+                                    <div class='step-num'>2</div>
+                                    <div class='step-label'>Online Consultation</div>
+                                </div>
+                                <div class='process-step'>
+                                    <div class='step-num'>3</div>
+                                    <div class='step-label'>Site Survey</div>
+                                </div>
+                                <div class='process-step'>
+                                    <div class='step-num'>4</div>
+                                    <div class='step-label'>Proposal</div>
+                                </div>
+                                <div class='process-step'>
+                                    <div class='step-num'>5</div>
+                                    <div class='step-label'>Implementation Support</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Slider Area End -->
-    <!-- Services Area Start -->
-    <section class="categories-area section-bg" id="services">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-12">
-                    <div class="section-tittle text-center mb-60">
-                        <h2>Our Services</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <img src="../assets/img/icon/services1.svg" alt="Icon to alleviate anxiety about physical intrusion" loading="lazy">
-                        </div>
-                        <div class="cat-cap">
-                            <h5>Anxiety about Physical Intrusion</h5>
-                            <p>To prevent unauthorized entry into homes and businesses, we plan and develop high-performance security cameras and provide installation services to enhance the safety of residences and offices.</p>
-                        </div>
-                        <img src="../assets/img/producrts/camera.jpg" alt="Izumo Souan's AI Security Camera" loading="lazy">
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <img src="../assets/img/icon/services2.svg" alt="Icon to alleviate anxiety about family safety" loading="lazy">
-                        </div>
-                        <div class="cat-cap">
-                            <h5>Anxiety about Communication</h5>
-                            <p>To eliminate concerns about network disconnections or data theft, we provide network design, construction, inspection, and wireless communication services.</p>
-                        </div>
-                        <img src="../assets/img/producrts/network.jpg" alt="Network" loading="lazy">
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <img src="../assets/img/icon/services3.svg" alt="Icon to alleviate anxiety about complex technology" loading="lazy">
-                        </div>
-                        <div class="cat-cap">
-                            <h5>Anxiety about Complex Technology</h5>
-                            <p>To prevent concerns that invested systems may not function as expected, we responsibly select and evaluate systems before and after purchase to ensure no regrets.</p>
-                        </div>
-                        <img src="../assets/img/producrts/technology.jpg" alt="System Evaluation Service" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Services Area End -->
-    <!-- Our Services Start -->
-    <section class="our-services2">
-        <div class="container">
-            <div class="row">
-                <h2 class="text-center py-1">AI Cameras</h2>
-                <p class="point">
-                    <span class="number">01</span>
-                </p>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6 p-0">
-                    <div class="single-services text-center">
-                        <div class="services-ion">
-                            <img src="../assets/img/icon/icon.svg" alt="Security Camera Icon" loading="lazy">
-                        </div>
-                        <div class="services-cap">
-                            <h5><a href="./camsys.html">Security Cameras</a></h5>
-                            <p>Install AI cameras in single-family homes, offices, apartments, hallways, etc., to eliminate concerns about intrusions.</p>
-                        </div>
-                        <img class="img-fluid" src="../assets/img/producrts/camera2.jpg" alt="AI Security Cameras for Homes and Offices" loading="lazy">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 p-0">
-                    <div class="single-services text-center">
-                        <div class="services-ion">
-                            <img src="../assets/img/icon/icon.svg" alt="License Plate Recognition Icon" loading="lazy">
-                        </div>
-                        <div class="services-cap">
-                            <h5><a href="services/facerez.html">Facial Recognition</a></h5>
-                            <p>Facial recognition systems are effective for automating gate inspections in office buildings, construction sites, and secure locations.</p>
-                        </div>
-                        <img class="img-fluid" src="../assets/img/producrts/facerez.jpg" alt="Facial Recognition" loading="lazy">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 p-0">
-                    <div class="single-services text-center">
-                        <div class="services-ion">
-                            <img src="../assets/img/icon/icon.svg" alt="Safety Management Icon" loading="lazy">
-                        </div>
-                        <div class="services-cap">
-                            <h5><a href="services/safety-management.html">AI Surveillance Analysis System</a></h5>
-                            <p>AI analyzes surveillance camera footage to detect specific behaviors, individuals, or objects.</p>
-                        </div>
-                        <img class="img-fluid" src="../assets/img/producrts/cardecetion.gif" alt="AI Camera for Factory Safety Management" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Our Services End -->
-    <!-- Our Services Start -->
-    <section class="our-services2">
-        <div class="container">
-            <div class="row">
-                <h2 class="text-center py-1">Anxiety about Communication</h2>
-                <p class="point">
-                    <span class="number">02</span>
-                </p>
-            </div>
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <img src="../assets/img/icon/services1.svg" alt="Icon to alleviate anxiety about physical intrusion" loading="lazy">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="./camsys.html">Indoor/Outdoor Surveillance Solutions</a></h5>
-                            <p>We provide design, installation, and maintenance services for disaster prevention, surveillance, and information camera systems.</p>
-                        </div>
-                        <img class="img-fluid" src="../assets/img/producrts/camera.jpg" alt="Surveillance System" loading="lazy">
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <img src="../assets/img/icon/services2.svg" alt="Wired Communication" loading="lazy">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="./network.html">Network Design and Construction</a></h5>
-                            <p>We provide design, construction, and inspection services for wired networks using fiber optics or LAN cables.</p>
-                        </div>
-                        <img class="img-fluid" src="../assets/img/producrts/fiberlan.jpg" alt="Network" loading="lazy">
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <img src="../assets/img/icon/services3.svg" alt="Icon to alleviate anxiety about complex technology" loading="lazy">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="./wireless.html">Wireless Communication</a></h5>
-                            <p>We provide services to securely build wireless access points and Wi-Fi environments, offering wireless calls, data communication, and remote access.</p>
-                        </div>
-                        <img class="img-fluid" src="../assets/img/producrts/network.jpg" alt="Wireless Communication" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Our Services End -->
-    <!-- Our Services Start -->
-    <section class="our-services2">
-        <div class="container">
-            <div class="row">
-                <h2 class="text-center py-1">Technology System Implementation</h2>
-                <p class="point">
-                    <span class="number">03</span>
-                </p>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6 p-0">
-                    <div class="single-services">
-                        <div class="services-ion">
-                            <img src="../assets/img/icon/icon.svg" alt="IT/DX Support Icon" loading="lazy">
-                        </div>
-                        <div class="services-cap">
-                            <h5><a href="software.html">Software Development</a></h5>
-                            <p>We have experience in introducing systems to business operations and production sites. We undertake development of embedded systems, Windows software, communication systems, ERP business systems, web production, and web applications.</p>
-                        </div>
-                        <img class="img-fluid" src="../assets/img/producrts/coding.jpg" alt="IT/DX Support Service" loading="lazy">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 p-0">
-                    <div class="single-services">
-                        <div class="services-ion">
-                            <img src="../assets/img/icon/icon.svg" alt="Automation System Icon" loading="lazy">
-                        </div>
-                        <div class="services-cap">
-                            <h5><a href="automation.html">Automation Systems</a></h5>
-                            <p>Implementing automation systems involves complex technology. If your company lacks such talent, consider external help. We have years of experience in automation and ensure customer satisfaction without regrets.</p>
-                        </div>
-                        <img class="img-fluid" src="../assets/img/producrts/robot.jpg" alt="Automation System Implementation Support" loading="lazy">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 p-0">
-                    <div class="single-services">
-                        <div class="services-ion">
-                            <img src="../assets/img/icon/icon.svg" alt="Neutral Evaluation Icon" loading="lazy">
-                        </div>
-                        <div class="services-cap">
-                            <h5><a href="evaluation.html">Neutral Position and Objective Evaluation</a></h5>
-                            <p>From a neutral standpoint without bias toward vendors or specific products, we responsibly evaluate technology and quality before and after system implementation to ensure it benefits the client and eliminates anxieties.</p>
-                        </div>
-                        <img class="img-fluid" src="../assets/img/producrts/people.jpg" alt="System Evaluation from a Neutral Position" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Our Services End -->
-    <!-- About Area Start -->
-    <div class="about-area section-bg2" id="about">
-        <div class="container">
-            <div class="row align-items-end">
-                <div class="offset-xl-1 offset-lg-1 col-xl-6 col-lg-6 col-md-10">
-                    <div class="about-cap-Left">
-                        <div class="center-width">
-                                <img class="img-fluid" src="../assets/img/producrts/companymark.jpg" alt="izumosoan" loading="lazy">
-                        </div>
-                        <div class="section-tittle section-tittle2 mb-50">
-                            <h2>About Our Company Name</h2>
-                            <p>In Izumo, there is a tradition that in the tenth month of the lunar calendar (the month of the gods' gathering), gods from all over Japan gather in Izumo Province.<br>
-                                We pray to the gods for safety and aim to create a just and safe society. This is the meaning behind our company name "Izumo Souan."</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-5 col-md-10">
-                    <div class="right-caption">
-                        <div class="small-tittle mb-50">
-                            <h4>Our Mission</h4>
-                            <p>
-                                Izumo Soan LLC aims to contribute to community safety by providing technology products and construction services in cameras, communication, and automation systems to eliminate "anxieties."<br>
-                                Leveraging our long experience in IT and automation, we provide accessible support services to alleviate technological anxieties in automation investments for small and medium-sized enterprises.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <img src="../assets/img/producrts/fuan-en.jpg" alt="Image representing the elimination of anxieties" loading="lazy">
-            </div>
-        </div>
-    </div>
-    <!-- About Area End -->
-    <!-- Form Start -->
-    <section id="contact" class="form">
-        <div class="container">
-            <div class="row">
-                <div class="ttl_box text-center">
-                    <p class="ttl-english">FORM</p>
-                    <h2 class="ttl-text">Contact Form</h2>
-                    <div class="question-line"></div>
-                </div>
-            </div>
-            <form action="" method="POST" id="contactForm2" class="needs-validation" novalidate>
-                <div id="alert-statut" class="alert-container"></div>
-                <div class="mb-4 row justify-content-center">
-                    <div class="col-lg-3">
-                        <label for="InputCompany"><span class="badge text-bg-danger align-middle">Required</span> Company/Organization Name</label>
-                    </div>
-                    <div class="col-lg-6">
-                        <input type="text" id="InputCompany" name="company" placeholder="e.g., Izumo Souan / Individual" class="form-control validate[required]" required="" aria-describedby="company-error">
-                        <span id="company-error" class="error-message" style="display: none; color: red;">Please enter company name</span>
-                    </div>
-                </div>
-                <div class="mb-4 row justify-content-center">
-                    <div class="col-lg-3 lh-lg">
-                        <label for="InputName"><span class="badge text-bg-danger align-middle">Required</span> Name</label>
-                    </div>
-                    <div class="col-lg-6">
-                        <input type="text" id="InputName" name="name" placeholder="e.g., Izumo Souan" class="form-control validate[required]" required="" aria-describedby="name-error">
-                        <span id="name-error" class="error-message" style="display: none; color: red;">Please enter name</span>
-                    </div>
-                </div>
-                <div class="mb-4 row justify-content-center">
-                    <div class="col-lg-3 lh-lg">
-                        <label for="InputTel"><span class="badge text-bg-danger align-middle">Required</span> Phone Number</label>
-                    </div>
-                    <div class="col-lg-6">
-                        <input type="text" id="InputTel" name="phone" placeholder="e.g., 0312345678" pattern="[0-9\-]+" class="form-control validate[required]" required="" aria-describedby="tel-error">
-                        <span id="tel-error" class="error-message" style="display: none; color: red;">Please enter phone number in correct format</span>
-                    </div>
-                </div>
-                <div class="mb-4 row justify-content-center">
-                    <div class="col-lg-3">
-                        <label for="InputMail"><span class="badge text-bg-danger align-middle">Required</span> Email Address</label>
-                    </div>
-                    <div class="col-lg-6">
-                        <input type="email" id="InputMail" name="email" placeholder="e.g., abc@abc.com" class="form-control validate[required]" required="" aria-describedby="email-error">
-                        <span id="email-error" class="error-message" style="display: none; color: red;">Please enter email address</span>
-                    </div>
-                </div>
-                <div class="mb-4 row justify-content-center">
-                    <div class="col-lg-3 lh-lg">
-                        <label for="InputText"><span class="badge text-bg-light align-middle">Optional</span> Message</label>
-                    </div>
-                    <div class="col-lg-6">
-                        <textarea name="message" id="InputText" rows="4" cols="50" style="height: 170px;" class="form-control"></textarea>
-                    </div>
-                </div>
-                <div class="text-center mt-3">
-                    <label for="flexCheckIndeterminate-1">
-                        <input type="checkbox" name="privacy" value="agree" id="flexCheckIndeterminate-1" class="form-check-input align-text-top">
-                        <span class="text-primary"><a href="privacy_policy.html" class="text-primary">I agree to the handling of personal information</a></span>
-                    </label>
-                </div>
-                <div class="mt-3 row justify-content-center">
-                    <div class="col-md-6">
-                        <div class="text-center">
-                            <input name="recaptcha-token" type="hidden">
-                            <button type="submit" id="submitButton" class="btn btn-primary btn-lg submit_btn fw-bold" disabled="" ontouchstart="">To Confirmation</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section>
-    <!-- Form End -->
-</main>
+        </section>
+    </main>
+
     <footer>
-        <div class="footer-wrappper section-img-bg2" data-background="../assets/img/gallery/footer-bg.jpg">
-            <div class="footer-area footer-padding">
-                <div class="container">
-                    <div class="row justify-content-between">
-                        <div class="col-xl-3 col-lg-5 col-md-5 col-sm-6">
-                            <div class="single-footer-caption">
-                                <div class="footer-logo mb-25">
-                                    <a href="index.html"><img src="../assets/img/logo/izumo_logo.jpg"
-                                            alt="Izumo Soan LLC Footer Logo" loading="lazy"></a>
-                                </div>
-                                <div class="footer-tittle">
-                                    <div class="footer-pera">
-                                        <p>Izumo Soan LLC creates a future of safety and security through technology and services.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="offset-xl-2 col-xl-2 col-lg-3 col-md-4 col-sm-5">
-                            <div class="single-footer-caption mb-20">
-                                <div class="footer-tittle">
-                                    <h4>Services</h4>
-                                    <ul>
-                                        <li><a href="./index.html#home">Home</a></li>
-                                        <li><a href="./index.html#services">Services</a></li>
-                                        <li><a href="./index.html#about">About Us</a></li>
-                                        <li><a href="./index.html#contact">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                            <div class="single-footer-caption mb-20">
-                                <div class="footer-tittle">
-                                    <h4>Contact Us</h4>
-                                    <ul class="mb-20">
-                                        <li>Phone: 050-1258-9122</li>
-                                        <li>Mail: info@izumosoan.com</li>
-                                        <li>Address: 4-37-8 Higashi-Tateishi, Katsushika-ku, Tokyo</li>
-                                    </ul>
-                                    <p class="small-text"><a href="./customer_harassment.html">Customer Harassment Basic Policy</a></p>
-                                </div>
-                            </div>
-                        </div>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../assets/img/logo/logo.png' alt='Izumo Soan'>
+                    <p class='logo-desp'>Technology that powers the field</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href='index.html'>Home</a></li>
+                        <li><a href='about.html'>About</a></li>
+                        <li><a href='services.html'>Services</a></li>
+                        <li><a href='case-studies.html'>Case Studies</a></li>
+                        <li><a href='overseas-partner.html'>Overseas Partner</a></li>
+                        <li><a href='privacy.html'>Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>Products</h4>
+                    
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='products-safeops.html'>
+                            <span>IZUMO SafeOps</span>
+                            <small>Field Safety Operations Platform</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>Smart Site Operations Platform</small>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom-area">
-                <div class="container">
-                    <div class="footer-border">
-                        <div class="row d-flex align-items-center">
-                            <div class="col-xl-12">
-                                <div class="footer-copy-right text-center">
-                                    <p>© 2025 Izumo Soan LLC. All rights reserved.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 Izumo Soan. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    <div id="back-top">
-        <a title="Go to Top" href="#"><i class="fas fa-level-up-alt"></i></a>
-    </div>
-    <!-- JS here -->
-    <script defer src="../assets/js/vendor/modernizr-3.5.0.min.js"></script>
-    <script defer src="../assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script defer src="../assets/js/popper.min.js"></script>
-    <script defer src="../assets/js/bootstrap.min.js"></script>
-    <script defer src="../assets/js/owl.carousel.min.js"></script>
-    <script defer src="../assets/js/slick.min.js"></script>
-    <script defer src="../assets/js/jquery.slicknav.min.js"></script>
-    <script defer src="../assets/js/wow.min.js"></script>
-    <script defer src="../assets/js/jquery.magnific-popup.js"></script>
-    <!-- <script defer src="../assets/js/jquery.nice-select.min.js"></script> -->
-    
-    <script defer src="../assets/js/plugins.js"></script>
-    <script defer src="../assets/js/main.js"></script>
 
-    <!-- contact form  -->
-    <script defer src="https://www.google.com/recaptcha/api.js?render=6LcvrBcrAAAAAFZ_zegpjQnud2i7Mn0_xjrnHeNq"></script>
-    
-    <script src="../contactform/AjaxForm.js"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93b01815df3d4575',t:'MTc0NjQ0NjYwMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-
+    <script src='../assets/js/main.js'></script>
+    <script src='../assets/js/lang-switcher.js'></script>
+    <script src='../assets/js/contact-form.js'></script>
+</body>
 </html>
+

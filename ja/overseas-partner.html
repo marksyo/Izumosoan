@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>海外メーカー向け現場実装パートナー | 出雲創安 Izumo Soan</title>
+    <meta name='description' content='出雲創安は海外メーカー・海外スタートアップの日本市場進出を、現場レベルで支援します。技術導入、現場対応、施工管理、運用サポートまで一貫対応。'>
+    <meta property='og:title' content='海外メーカー向け現場実装パートナー | 出雲創安 Izumo Soan'>
+    <meta property='og:description' content='出雲創安は海外メーカー・海外スタートアップの日本市場進出を、現場レベルで支援します。'>
+    <meta property='og:type' content='website'>
+    <meta property='og:url' content='https://izumosoan.com/ja/overseas-partner.html'>
+    <meta property='og:site_name' content='出雲創安 Izumo Soan'>
+    <meta property='og:locale' content='ja_JP'>
+    <link rel='canonical' href='https://izumosoan.com/ja/overseas-partner.html'>
+    <link rel='alternate' hreflang='ja' href='https://izumosoan.com/ja/overseas-partner.html'>
+    <link rel='alternate' hreflang='en' href='https://izumosoan.com/en/overseas-partner.html'>
+    <link rel='alternate' hreflang='zh' href='https://izumosoan.com/zh/overseas-partner.html'>
+    <link rel='alternate' hreflang='x-default' href='https://izumosoan.com/ja/overseas-partner.html'>
+    <script type='application/ld+json'>
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "出雲創安 Izumo Soan",
+        "url": "https://izumosoan.com",
+        "telephone": "050-1258-9122",
+        "email": "info@izumosoan.com",
+        "logo": "https://izumosoan.com/assets/img/logo/logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "葛飾区",
+            "addressRegion": "東京都",
+            "streetAddress": "東立石4-37-8",
+            "addressCountry": "JP"
+        },
+        "description": "海外技術を日本現場へ定着させる現地実装パートナー"
+    }
+    </script>
+    <link rel='stylesheet' href='../assets/css/style.css'>
+    <link rel='stylesheet' href='../assets/css/custom.css'>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='index.html'>
+                    <img src='../assets/img/logo/logo.png' alt='Izumo Soan' style='height:100px;'>
+                </a>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
+            <nav>
+                <ul>
+                    <li><a href='index.html'>ホーム</a></li>
+                    <li><a href='services.html'>サービス</a></li>
+                    <li><a href='products.html'>製品</a></li>
+                    <li><a href='case-studies.html'>実績</a></li>
+                    <li><a href='about.html'>会社概要</a></li>
+                    <li><a href='overseas-partner.html' class='active'>海外パートナー</a></li>
+                    <li><a href='index.html#contact'>お問い合わせ</a></li>
+                </ul>
+                <div class='language-switcher'>
+                    <span class='lang-label'><i class="fas fa-globe"></i></span>
+                    <select id='lang-select'>
+                        <option value='ja' selected>日本語</option>
+                        <option value='en'>English</option>
+                        <option value='zh'>中文</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section 1: Hero -->
+    <section class='hero hero-mini' style='background:linear-gradient(135deg, #0a1628 0%, #13203a 50%, #1a2f4a 100%);'>
+        <div class='container'>
+            <h1>日本市場で、貴社の技術を<br>確実に現場へ届ける</h1>
+            <p class='hero-sub'>日本進出に必要な現場対応・導入支援・運用サポートをワンストップで提供</p>
+            <p class='hero-desc'>海外メーカーやスタートアップが直面する言語・文化・技術サポートの課題を解決し、日本市場への展開を支援します。</p>
+            <div class='hero-buttons'>
+                <a href='index.html#contact' class='btn btn-primary'>お問い合わせ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Stats -->
+    <section class='section'>
+        <div class='container'>
+            <div class='why-number-row'>
+                <div class='why-number-card'>
+                    <span>現場経験</span>
+                    <strong>20<small>+</small></strong>
+                    <span>Years</span>
+                    <p>日本の現場で20年以上の経験</p>
+                </div>
+                <div class='why-number-card'>
+                    <span>対応言語</span>
+                    <strong>3</strong>
+                    <span>Languages</span>
+                    <p>日本語 / English / 中文</p>
+                </div>
+                <div class='why-number-card'>
+                    <span>対応エリア</span>
+                    <strong>全国</strong>
+                    <span>Nationwide</span>
+                    <p>日本全国主要エリア対応</p>
+                </div>
+                <div class='why-number-card'>
+                    <span>技術領域</span>
+                    <strong>OT+IT</strong>
+                    <span>Field Knowledge</span>
+                    <p>現場技術とITの両方をカバー</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Challenges -->
+    <section class='section section-alt'>
+        <div class='container'>
+            <h2 class='section-title'>技術が優れていても、日本市場への展開は簡単ではありません</h2>
+            <div class='card-grid grid-4'>
+                <div class='card card-top-border'>
+                    <div class='card-icon'><i class='fas fa-language'></i></div>
+                    <h3>言語の壁</h3>
+                    <p>顧客との技術打合せや現場調整が難しい</p>
+                </div>
+                <div class='card card-top-border'>
+                    <div class='card-icon'><i class='fas fa-hard-hat'></i></div>
+                    <h3>現場文化の違い</h3>
+                    <p>日本独自の安全基準や品質要求への対応</p>
+                </div>
+                <div class='card card-top-border'>
+                    <div class='card-icon'><i class='fas fa-headset'></i></div>
+                    <h3>導入後サポート</h3>
+                    <p>現地技術サポート体制の不足</p>
+                </div>
+                <div class='card card-top-border'>
+                    <div class='card-icon'><i class='fas fa-rocket'></i></div>
+                    <h3>PoC後の展開</h3>
+                    <p>試験導入後に本格展開へ進まない</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Comparison Table -->
+    <section class='section'>
+        <div class='container'>
+            <h2 class='section-title'>販売だけでは、日本市場で成功できません</h2>
+            <div class='compare-table-wrap'>
+                <table class='compare-table'>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class='compare-col-agent'>一般代理店</th>
+                            <th class='compare-col-izumo'>出雲創安</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>アプローチ</td>
+                            <td>製品紹介</td>
+                            <td>技術理解</td>
+                        </tr>
+                        <tr>
+                            <td>活動の中心</td>
+                            <td>営業中心</td>
+                            <td>現場中心</td>
+                        </tr>
+                        <tr>
+                            <td>契約後</td>
+                            <td>契約後終了</td>
+                            <td>運用まで支援</td>
+                        </tr>
+                        <tr>
+                            <td>顧客との関係</td>
+                            <td>顧客紹介</td>
+                            <td>導入成功支援</td>
+                        </tr>
+                        <tr>
+                            <td>重視するもの</td>
+                            <td>販売重視</td>
+                            <td>長期運用重視</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class='compare-conclusion'>日本市場では、「売ること」よりも「定着させること」が重要です。</p>
+        </div>
+    </section>
+
+    <!-- Section 5: Support Model -->
+    <section class='section section-alt'>
+        <div class='container'>
+            <h2 class='section-title'>日本市場における現地実装パートナー</h2>
+            <div class='process-flow-row'>
+                <div class='process-flow-node process-flow-start'>海外メーカー</div>
+                <div class='process-flow-arrow'><i class='fas fa-arrow-right'></i></div>
+                <div class='process-flow-node process-flow-mid'>出雲創安</div>
+                <div class='process-flow-arrow'><i class='fas fa-arrow-right'></i></div>
+                <div class='process-flow-node process-flow-end'>日本顧客</div>
+            </div>
+            <p style='text-align:center;max-width:800px;margin:0 auto 2.5rem;font-size:1.1rem;line-height:1.8;color:var(--text-muted);'>私たちは販売代理店ではなく、海外技術を日本の現場へ定着させる「実装パートナー」です。</p>
+            <div class='card-grid grid-3'>
+                <div class='card card-top-border'>
+                    <div class='card-icon'><i class='fas fa-language'></i></div>
+                    <h3>日本語対応</h3>
+                    <p>顧客との技術打合せ・現場調整を日本語で代行</p>
+                </div>
+                <div class='card card-top-border'>
+                    <div class='card-icon'><i class='fas fa-headset'></i></div>
+                    <h3>技術窓口</h3>
+                    <p>日本顧客からの問い合わせを一次対応</p>
+                </div>
+                <div class='card card-top-border'>
+                    <div class='card-icon'><i class='fas fa-search'></i></div>
+                    <h3>現場調査</h3>
+                    <p>日本工場の要求事項を確認・適合性評価</p>
+                </div>
+                <div class='card card-top-border'>
+                    <div class='card-icon'><i class='fas fa-tools'></i></div>
+                    <h3>導入支援</h3>
+                    <p>設置工事・配線・試運転・検証を一貫対応</p>
+                </div>
+                <div class='card card-top-border'>
+                    <div class='card-icon'><i class='fas fa-chalkboard-teacher'></i></div>
+                    <h3>教育訓練</h3>
+                    <p>現場スタッフ向け操作教育・マニュアル作成</p>
+                </div>
+                <div class='card card-top-border'>
+                    <div class='card-icon'><i class='fas fa-wrench'></i></div>
+                    <h3>保守サポート</h3>
+                    <p>導入後の障害対応・定期点検・運用支援</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Case Studies -->
+    <section class='section'>
+        <div class='container'>
+            <h2 class='section-title'>実際の支援事例</h2>
+            <div class='card-grid grid-3'>
+                <div class='card card-top-border'>
+                    <div class='project-image' style='height:160px;margin:0;'>
+                        <img src='../assets/img/cards/china-robots.jpg' alt='中国ロボットメーカー'>
+                    </div>
+                    <div style='padding:1.5rem 0 0;'>
+                        <h3>中国ロボットメーカー</h3>
+                        <div class='case-problem' style='margin-bottom:0.5rem;'>
+                            <h4>Before</h4>
+                            <p>物流倉庫での導入実績は豊富だが、日本24/7の生産現場での経験がなく、24時間対応のサポート体制もない。</p>
+                        </div>
+                        <div class='case-support' style='margin-bottom:0.5rem;'>
+                            <h4>支援内容</h4>
+                            <p>現場向けソフト開発要件の定義・開発・ロボット導入・調整・検収を一貫対応。ロボットのハード障害や特殊業務フローに対応するため、現場スタッフが使いやすい故障処理ツールを開発し、トレーニングを実施。</p>
+                        </div>
+                        <div class='case-result'>
+                            <h4>After</h4>
+                            <p>ロボット故障時も迅速に復旧できる体制を構築。24/7の安定生産を実現し、ロボットメーカーのサポート課題を解決。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class='card card-top-border'>
+                    <div class='project-image' style='height:160px;margin:0;'>
+                        <img src='../assets/img/cards/MES-support.jpg' alt='海外MESメーカー'>
+                    </div>
+                    <div style='padding:1.5rem 0 0;'>
+                        <h3>海外MESメーカー</h3>
+                        <div class='case-problem' style='margin-bottom:0.5rem;'>
+                            <h4>Before</h4>
+                            <p>日本顧客は、生産ラインのデータを記録し効率改善に活かせる、シンプルで実用的なMESを必要としていた。現場の多種多様な設備や顧客の生産システムとの通信が必須であり、通信インターフェースの調査が鍵だった。</p>
+                        </div>
+                        <div class='case-support' style='margin-bottom:0.5rem;'>
+                            <h4>支援内容</h4>
+                            <p>顧客要件をヒアリングし詳細化。通信が必要な機器をリスト化し、ドキュメント調査・通信ソフトのテストを一台ずつ実施。MESをインストールし各機器の通信インターフェースを設定。最終的にリアルタイムでデータを可視化するシステムを構築。</p>
+                        </div>
+                        <div class='case-result'>
+                            <h4>After</h4>
+                            <p>顧客はMESのダッシュボードで現場の状況を一目で把握できるようになり、生産ライン改善のためのデータ基盤を獲得。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class='card card-top-border'>
+                    <div class='project-image' style='height:160px;margin:0;'>
+                        <img src='../assets/img/cards/security-system.jpg' alt='中国AIカメラ＋PLCによるロボット安全監視システム'>
+                    </div>
+                    <div style='padding:1.5rem 0 0;'>
+                        <h3>中国AIカメラメーカー</h3>
+                        <div class='case-problem' style='margin-bottom:0.5rem;'>
+                            <h4>Before</h4>
+                            <p>物流倉庫で走行するロボットと作業員の安全を確保したい。ロボット故障時の原因特定に時間がかかる。</p>
+                        </div>
+                        <div class='case-support' style='margin-bottom:0.5rem;'>
+                            <h4>支援内容</h4>
+                            <p>中国製AIカメラ＋PLCを現地調達・連携。人とロボットを検知し制御システムへ通知。カメラ映像からロボットの移動軌跡を追跡し故障原因の特定を支援。</p>
+                        </div>
+                        <div class='case-result'>
+                            <h4>After</h4>
+                            <p>安全監視の自動化を実現、故障対応時間を大幅短縮。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Tech Areas -->
+    <section class='section section-alt'>
+        <div class='container'>
+            <h2 class='section-title'>対応可能な技術領域</h2>
+            <div class='card-grid grid-4'>
+                <div class='card card-top-border'>
+                    <div class='card-icon'><i class='fas fa-network-wired'></i></div>
+                    <h3>通信インフラ</h3>
+                    <ul class='tech-list'>
+                        <li>LAN / 光ファイバー / Wi-Fi / 5G</li>
+                        <li>ネットワーク構築・設計</li>
+                    </ul>
+                </div>
+                <div class='card card-top-border'>
+                    <div class='card-icon'><i class='fas fa-database'></i></div>
+                    <h3>データセンター</h3>
+                    <ul class='tech-list'>
+                        <li>ラック構築 / ケーブリング</li>
+                        <li>ネットワーク設備導入</li>
+                    </ul>
+                </div>
+                <div class='card card-top-border'>
+                    <div class='card-icon'><i class='fas fa-industry'></i></div>
+                    <h3>産業向け設備とソフトウエア</h3>
+                    <ul class='tech-list'>
+                        <li>センサー / 制御設備 / 生産関連ソフトウエア</li>
+                    </ul>
+                </div>
+                <div class='card card-top-border'>
+                    <div class='card-icon'><i class='fas fa-robot'></i></div>
+                    <h3>自動化システム</h3>
+                    <ul class='tech-list'>
+                        <li>DCS/PLC / AGV / IoT / センサー / 遠隔監視</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Collaboration Flow -->
+    <section class='section'>
+        <div class='container'>
+            <h2 class='section-title'>ご相談から導入まで</h2>
+            <p style='text-align:center;max-width:600px;margin:0 auto 2.5rem;font-size:1.05rem;color:var(--text-muted);'>プロジェクトの規模や状況に応じて柔軟に対応します。</p>
+            <div class='phase-flow'>
+                <div class='phase-item'>
+                    <div class='phase-label'>Step 1</div>
+                    <div class='phase-title'>お問い合わせ</div>
+                    <div class='phase-desc'>まずはお気軽にご相談ください</div>
+                </div>
+                <div class='phase-arrow'><i class='fas fa-arrow-down'></i></div>
+                <div class='phase-item'>
+                    <div class='phase-label'>Step 2</div>
+                    <div class='phase-title'>オンライン打合せ</div>
+                    <div class='phase-desc'>貴社の技術・製品をヒアリング</div>
+                </div>
+                <div class='phase-arrow'><i class='fas fa-arrow-down'></i></div>
+                <div class='phase-item'>
+                    <div class='phase-label'>Step 3</div>
+                    <div class='phase-title'>技術確認</div>
+                    <div class='phase-desc'>日本市場での適合性を評価</div>
+                </div>
+                <div class='phase-arrow'><i class='fas fa-arrow-down'></i></div>
+                <div class='phase-item'>
+                    <div class='phase-label'>Step 4</div>
+                    <div class='phase-title'>現場調査</div>
+                    <div class='phase-desc'>実際の導入先で現地確認</div>
+                </div>
+                <div class='phase-arrow'><i class='fas fa-arrow-down'></i></div>
+                <div class='phase-item'>
+                    <div class='phase-label'>Step 5</div>
+                    <div class='phase-title'>PoC支援</div>
+                    <div class='phase-desc'>試験導入をサポート</div>
+                </div>
+                <div class='phase-arrow'><i class='fas fa-arrow-down'></i></div>
+                <div class='phase-item'>
+                    <div class='phase-label'>Step 6</div>
+                    <div class='phase-title'>本導入</div>
+                    <div class='phase-desc'>本格稼働を全面支援</div>
+                </div>
+                <div class='phase-arrow'><i class='fas fa-arrow-down'></i></div>
+                <div class='phase-item'>
+                    <div class='phase-label'>Step 7</div>
+                    <div class='phase-title'>運用サポート</div>
+                    <div class='phase-desc'>導入後の安定運用を継続支援</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Target Clients -->
+    <section class='section section-alt'>
+        <div class='container'>
+            <h2 class='section-title'>こんな企業様に最適です</h2>
+            <div class='checklist-wrap'>
+                <div class='checklist-item'>
+                    <i class='fas fa-check-circle'></i>
+                    <span>日本市場へ初進出したい</span>
+                </div>
+                <div class='checklist-item'>
+                    <i class='fas fa-check-circle'></i>
+                    <span>日本国内の技術サポート体制を構築したい</span>
+                </div>
+                <div class='checklist-item'>
+                    <i class='fas fa-check-circle'></i>
+                    <span>PoCから本導入へ進めたい</span>
+                </div>
+                <div class='checklist-item'>
+                    <i class='fas fa-check-circle'></i>
+                    <span>日本の現場に強いパートナーを探している</span>
+                </div>
+                <div class='checklist-item'>
+                    <i class='fas fa-check-circle'></i>
+                    <span>自社で日本法人を設立する前に市場を開拓したい</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Final CTA -->
+    <section class='cta-section section' style='background:linear-gradient(135deg, #0a1628 0%, #1a2f4a 100%);'>
+        <div class='container'>
+            <div style='text-align:center;max-width:720px;margin:0 auto;'>
+                <h2>日本市場での成功を、技術面から支援します</h2>
+                <p style='color:#ccc;font-size:1.1rem;line-height:1.8;margin-bottom:2rem;'>
+                    貴社製品の販売だけではなく、現場導入から運用定着まで。<br>
+                    出雲創安は、日本市場における信頼できる現地技術パートナーとして支援します。
+                </p>
+
+                <div class='hero-buttons'>
+                    <a href='index.html#contact' class='btn btn-primary'>お問い合わせ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../assets/img/logo/logo.png' alt='Izumo Soan'>
+                    <p class='logo-desp'>技術を現場の力に。</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>メニュー</h4>
+                    <ul>
+                        <li><a href='index.html'>ホーム</a></li>
+                        <li><a href='about.html'>会社概要</a></li>
+                        <li><a href='services.html'>サービス</a></li>
+                        <li><a href='case-studies.html'>実績</a></li>
+<li><a href='overseas-partner.html'>海外メーカーパートナー</a></li>
+                        </ul>
+                    </div>
+                    <div class='footer-products'>
+                        <h4>製品情報</h4>
+                        
+                        <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='products-safeops.html'>
+                            <span>IZUMO SafeOps</span>
+                            <small>現場安全運営調整プラットフォーム</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>スマート現場の運用改善プラットフォーム</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class='container'>
+                <p class='footer-copyright'>&copy; 2026 出雲創安 Izumo Soan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src='../assets/js/lang-switcher.js'></script>
+    <script src='../assets/js/contact-form.js'></script>
+</body>
+</html>

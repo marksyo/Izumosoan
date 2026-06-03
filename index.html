@@ -1,44 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-
+﻿<!DOCTYPE html>
+<html lang='ja'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>出雲創安合同会社</title>
-    <meta name="description" content="出雲創安合同会社はAI防犯カメラやスマートロックの開発・設置、システム評価サービスで地域の安全と中小企業の自動化を支援します。">
-    <meta name="keywords" content="AI防犯カメラ, スマートロック, システム評価, 自動化支援, 出雲創安, 地域安全">
-    
-    <meta name="robots" content="index, follow">
-
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-MMMKLQBC');</script>
-    <!-- End Google Tag Manager -->
-</head>
-
-<body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMMKLQBC" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    hello, Welcome to Izumosoan!
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>出雲創安 | 現場・安全・運用のテクノロジーパートナー</title>
+    <meta name='description' content='出雲創安（Izumo Soan）は現場の持続稼働を支援する技術エンジニアリング会社です。'>
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/index.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/index.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/index.html">
+    <link rel="canonical" href="https://izumosoan.com/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="出雲創安 Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/index.html">
+    <meta property="og:title" content="出雲創安 | 現場・安全・運用のテクノロジーパートナー">
+    <meta property="og:description" content="出雲創安（Izumo Soan）は現場の持続稼働を支援する技術エンジニアリング会社です。">
+    <meta property="og:locale" content="ja_JP">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"出雲創安 Izumo Soan","url":"https://izumosoan.com","telephone":"050-1258-9122","email":"info@izumosoan.com","address":{"@type":"PostalAddress","addressLocality":"葛飾区","addressRegion":"東京都","streetAddress":"東立石4-37-8","addressCountry":"JP"},"description":"現場、安全、運用をつなぐテクノロジーパートナー"}</script>
     <script>
-        // Get the browser's language
-        const browserLanguage = navigator.language || navigator.userLanguage;
-
-        // Redirect to the English version if the browser language is English
-        if (browserLanguage === "ja") {
-            window.location.href = "ja/index.html";
-        } else {
-            window.location.href = "en/index.html";
-        }
+        (function(){
+            var p=window.location.pathname;
+            if(p.indexOf('/zh/')>=0||p.indexOf('/ja/')>=0||p.indexOf('/en/')>=0)return;
+            var l=(navigator.language||navigator.userLanguage||'ja').substring(0,2);
+            var t=l==='zh'?'zh':l==='en'?'en':'ja';
+            window.location.replace('./'+t+'/index.html');
+        })();
     </script>
+</head>
+<body>
+    <p style="text-align:center;margin-top:3rem;font-family:sans-serif;">
+        Redirecting to <a href="ja/index.html">日本語</a> | <a href="en/index.html">English</a> | <a href="zh/index.html">中文</a>
+    </p>
 </body>
-
 </html>
