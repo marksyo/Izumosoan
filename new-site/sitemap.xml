@@ -18,6 +18,30 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://izumosoan.com/ja/overseas-partner.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/overseas-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/overseas-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/overseas-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/overseas-partner.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/en/overseas-partner.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/overseas-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/overseas-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/overseas-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/overseas-partner.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/zh/overseas-partner.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/overseas-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/overseas-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/overseas-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/overseas-partner.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://izumosoan.com/ja/about.html</loc>
     <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/about.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/about.html"/>
