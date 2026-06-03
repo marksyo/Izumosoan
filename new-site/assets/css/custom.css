@@ -50,7 +50,7 @@ body {
 
 .section-title {
     text-align: center;
-    max-width: 800px;
+    max-width: 860px;
     margin: 0 auto 60px;
 }
 
@@ -2799,7 +2799,113 @@ footer .container {
     .phase-item { min-width: 100px; }
 }
 
+/* Comparison table */
+.compare-table-wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-white);
+}
+.compare-table th,
+.compare-table td {
+    padding: 1rem 1.25rem;
+    text-align: center;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+.compare-table th {
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 1.1rem 1.25rem;
+}
+.compare-table th:first-child,
+.compare-table td:first-child {
+    background: var(--bg-light);
+    text-align: left;
+    font-weight: 700;
+    color: var(--primary-color);
+    width: 30%;
+}
+.compare-col-agent {
+    background: #f0f2f5 !important;
+    color: var(--text-muted) !important;
+}
+.compare-col-izumo {
+    background: var(--primary-color) !important;
+    color: white !important;
+}
+.compare-table td:nth-child(2) {
+    color: var(--text-muted);
+}
+.compare-table td:nth-child(3) {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.compare-table tr:last-child td {
+    border-bottom: none;
+}
+.compare-conclusion {
+    text-align: center;
+    max-width: 800px;
+    margin: 2.5rem auto 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    padding: 1.25rem 1.5rem;
+    border-top: 3px solid var(--accent-color);
+    line-height: 1.6;
+}
+
+/* Checklist */
+.checklist-wrap {
+    max-width: 650px;
+    margin: 0 auto;
+}
+.checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    transition: var(--transition);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.checklist-item:hover {
+    transform: translateX(6px);
+    border-color: var(--accent-color);
+    box-shadow: var(--box-shadow-hover);
+}
+.checklist-item i {
+    font-size: 1.5rem;
+    color: #2d8659;
+    flex-shrink: 0;
+}
+.checklist-item span {
+    flex: 1;
+}
+
 @media (max-width: 768px) {
+    .compare-table th,
+    .compare-table td {
+        padding: 0.75rem 0.75rem;
+        font-size: 0.85rem;
+    }
+    .checklist-item {
+        font-size: 0.95rem;
+        padding: 1rem;
+    }
     .hero-mini { padding: 70px 0 50px; }
     .hero-mini h1 { font-size: 2rem; }
     .card-grid.grid-4,
