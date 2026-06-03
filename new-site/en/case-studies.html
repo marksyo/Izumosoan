@@ -4,7 +4,7 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Case Studies | Izumo Soan</title>
-    <meta name='description' content='Izumo Soan project portfolio and client testimonials. Featuring network construction, data center support, and field digitalization case studies.'>
+    <meta name='description' content='Izumo Soan project case studies and client testimonials. Network construction, data center support, field digitalization and more.'>
     
     <!-- SEO: hreflang -->
     <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/case-studies.html">
@@ -15,10 +15,10 @@
 
     <!-- SEO: Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="出云创安 Izumo Soan">
+    <meta property="og:site_name" content="Izumo Soan">
     <meta property="og:url" content="https://izumosoan.com/en/case-studies.html">
     <meta property="og:title" content="Case Studies | Izumo Soan">
-    <meta property="og:description" content="Izumo Soan project portfolio and client testimonials. Featuring network construction, data center support, and field digitalization case studies.">
+    <meta property="og:description" content="Izumo Soan project case studies and client testimonials.">
     <meta property="og:locale" content="en_US">
 
     <!-- SEO: JSON-LD Organization -->
@@ -32,12 +32,14 @@
         "email": "info@izumosoan.com",
         "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Katsushika-ku, Tokyo",
+            "addressLocality": "Katsushika",
             "addressRegion": "Tokyo",
-            "streetAddress": "4-37-8 Higashi-Tateishi",
+            "streetAddress": "4-37-8 Higashitateishi",
             "addressCountry": "JP"
         },
-        "description": "Your technology partner connecting field, safety & operations"</script>
+        "description": "Bridging the field, safety, and operations"
+    }
+    </script>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,17 +61,17 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href='index.html' class='active'>Home</a></li>
+                    <li><a href='index.html'>Home</a></li>
                     <li><a href='services.html'>Services</a></li>
                     <li><a href='products.html'>Products</a></li>
-                    <li><a href='case-studies.html'>Case Studies</a></li>
+                    <li><a href='case-studies.html' class='active'>Case Studies</a></li>
                     <li><a href='about.html'>About</a></li>
                     <li><a href='overseas-partner.html'>Overseas Partner</a></li>
                     <li><a href='index.html#contact'>Contact</a></li>
                 </ul>                <div class='language-switcher'>
                     <span class='lang-label'><i class="fas fa-globe"></i></span>
                     <select id='lang-select'>
-<option value='ja'>日本語</option>
+                        <option value='ja'>日本語</option>
                         <option value='en' selected>English</option>
                         <option value='zh'>中文</option>
                     </select>
@@ -81,184 +83,277 @@
     <main>
         <section class='page-header'>
             <div class='container'>
-                <h1>Our Projects</h1>
-                <p class='subtitle'>Trust and results built in the field</p>
-            </div>
-        </section>
-
-        <section class='section-padding section-bg'>
-            <div class='container'>
-                <h2>Project Case Studies</h2>
-                <p class='case-disclosure-note'>Some project names have been withheld due to confidentiality agreements, but we clearly indicate the industry, scale, scope of work, and measurable results to help you evaluate.</p>
-                <div class='projects-grid'>
-                    <div class='project-card'>
-                        <div class='project-image'>
-                            <img src='../assets/img/cards/server-install.jpg' alt='Data Center Network Infrastructure'>
-                        </div>
-                        <div class='project-content'>
-                            <span class='project-badge'>A Global Data Center Operator</span>
-                            <h3>Data Center Network Infrastructure Build</h3>
-                            <p class='project-category'>Network & Communications Infrastructure</p>
-                            <p class='project-problem'><strong>Challenge:</strong> A newly built data center in the Greater Tokyo area required high-speed backbone network design and construction between server racks, with 99.999% availability demanded and an aggressive delivery timeline.</p>
-                            <p class='project-solution'><strong>Solution:</strong> Designed redundant core switch architecture combining Cat6a cabling and single-mode fiber. End-to-end patching for 48 racks with 48-hour burn-in testing to validate all link quality.</p>
-                            <p class='project-result'><strong>Result:</strong> Achieved 99.99% availability, completed 1 week ahead of schedule. Ongoing operations and maintenance contract in place.</p>
-                            <div class='project-proof'>
-                                <strong>Scope of Work:</strong> Design review, cabling installation, optical loss testing, cutover witness, maintenance handover
-                            </div>
-                            <blockquote class='project-comment'>"Despite the tight deadline, all test records and handover documents were well-prepared, making post-launch verification easy."<span>Data Center Operations Manager</span></blockquote>
-                            <div class='project-details'>
-                                <span><i class="fas fa-calendar-alt"></i> Duration: 3 months</span>
-                                <span><i class="fas fa-server"></i> Scale: 48 racks</span>
-                                <span><i class="fas fa-microchip"></i> Tech: Cat6a, SMF</span>
-                                <span><i class="fas fa-check-circle"></i> Availability: 99.99%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class='project-card'>
-                        <div class='project-image'>
-                            <img src='../assets/img/cards/monitoring-system.jpg' alt='Factory Remote Monitoring System'>
-                        </div>
-                        <div class='project-content'>
-                            <span class='project-badge'>An Automotive Parts Manufacturer</span>
-                            <h3>Manufacturing Plant IoT Sensor Network Deployment</h3>
-                            <p class='project-category'>Field Operations Digitalization Support</p>
-                            <p class='project-problem'><strong>Challenge:</strong> A Chubu-region automotive parts plant experienced an average of 3 sudden equipment failures per month, each causing approximately 2 hours of production loss. Four facility managers oversaw 200+ machine tools with no centralized monitoring.</p>
-                            <p class='project-solution'><strong>Solution:</strong> Installed IoT sensors on each machine tool to monitor vibration, temperature, and power consumption. Data was aggregated via LoRaWAN gateways to a cloud platform with automated email alerts for anomaly detection.</p>
-                            <p class='project-result'><strong>Result:</strong> Equipment downtime reduced by 30%. Unplanned stoppages dropped to fewer than 1 per month. Manager site patrol time reduced from 20 to 8 hours per week.</p>
-                            <div class='project-proof'>
-                                <strong>Before vs After:</strong> Unplanned stoppages from avg. 3/month to &lt;1/month, patrol time from 20h/week to 8h/week
-                            </div>
-                            <blockquote class='project-comment'>"They adjusted the notification conditions based on how the system would actually be used on-site, so we could immediately integrate it into our maintenance workflow."<span>Director of Equipment, Manufacturing</span></blockquote>
-                            <div class='project-details'>
-                                <span><i class="fas fa-calendar-alt"></i> Duration: 2 months</span>
-                                <span><i class="fas fa-chart-line"></i> Points: 200</span>
-                                <span><i class="fas fa-wifi"></i> Tech: LoRaWAN</span>
-                                <span><i class="fas fa-check-circle"></i> Downtime: -30%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class='project-card'>
-                        <div class='project-image'>
-                            <img src='../assets/img/cards/agv-robot.jpg' alt='Logistics Warehouse AGV System'>
-                        </div>
-                        <div class='project-content'>
-                            <span class='project-badge'>A Large Logistics Warehouse Operator</span>
-                            <h3>Logistics Warehouse AGV Automated Transport System</h3>
-                            <p class='project-category'>Automation System Deployment Support</p>
-                            <p class='project-problem'><strong>Challenge:</strong> A large Kanto-region logistics warehouse saw inbound/outbound volumes increase 30% year-on-year while facing labor shortages. Forklift and manual transport could not support night operations, causing chronic shipment delays.</p>
-                            <p class='project-solution'><strong>Solution:</strong> Deployed 12 European-made AGVs integrated with the Warehouse Management System (WMS). Implemented route optimization algorithms, safety barriers, warning lights, and operator training.</p>
-                            <p class='project-result'><strong>Result:</strong> Transport efficiency improved by 60%. Enabled 24/7 operations. Shipment delays eliminated and worker workload significantly reduced.</p>
-                            <div class='project-proof'>
-                                <strong>Scope of Work:</strong> Wireless site survey, AGV route verification, WMS integration, on-site operator training, safety measures
-                            </div>
-                            <blockquote class='project-comment'>"What made the biggest difference was that they handled not only the system but also the explanation to site staff as one integrated package."<span>Logistics Warehouse Operations Manager</span></blockquote>
-                            <div class='project-details'>
-                                <span><i class="fas fa-calendar-alt"></i> Duration: 4 months</span>
-                                <span><i class="fas fa-robot"></i> Units: 12</span>
-                                <span><i class="fas fa-project-diagram"></i> Tech: WMS, AGV</span>
-                                <span><i class="fas fa-check-circle"></i> Efficiency: +60%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class='project-card'>
-                        <div class='project-image'>
-                            <img src='../assets/img/cards/security-system.jpg' alt='Industrial Park Security System'>
-                        </div>
-                        <div class='project-content'>
-                            <span class='project-badge'>An Industrial Park (Facility Management Company)</span>
-                            <h3>Industrial Park Integrated Security System</h3>
-                            <p class='project-category'>Security & Fire Alarm Integration</p>
-                            <p class='project-problem'><strong>Challenge:</strong> A Kansai-region industrial park had 10 factory/warehouse buildings each running different security systems with no unified access control. Fire alarm integration was inadequate, posing regulatory compliance risks.</p>
-                            <p class='project-solution'><strong>Solution:</strong> Built a centralized management platform integrating existing surveillance cameras, access control, and fire alarm equipment. Connected all buildings via fiber optic backbone. Implemented automated fire department notification.</p>
-                            <p class='project-result'><strong>Result:</strong> Initial security incident response time reduced from 15 to 4 minutes on average. Annual security operational costs reduced by 25%.</p>
-                            <div class='project-proof'>
-                                <strong>Before vs After:</strong> Initial response from avg. 15 min to 4 min, annual ops cost reduced 25%
-                            </div>
-                            <blockquote class='project-comment'>"Information that was scattered across different buildings is now centralized in the control room, allowing faster decision-making during night shifts."<span>Facility Management Company Supervisor</span></blockquote>
-                            <div class='project-details'>
-                                <span><i class="fas fa-calendar-alt"></i> Duration: 5 months</span>
-                                <span><i class="fas fa-building"></i> Buildings: 10</span>
-                                <span><i class="fas fa-video"></i> Tech: CCTV, Access, Fire</span>
-                                <span><i class="fas fa-check-circle"></i> Response: -73%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h1>Success Stories</h1>
+                <p class='subtitle'>Trust and results built on the front lines</p>
             </div>
         </section>
 
         <section class='section-padding'>
             <div class='container'>
-                <h2>Projects by Industry</h2>
-                <p class='section-subtitle'>Network construction and system integration across diverse industries</p>
-                <div class='industry-grid'>
-                    <div class='industry-card'>
-                        <div class='industry-icon'><i class="fas fa-car"></i></div>
-                        <h4>Automotive Parts Manufacturing</h4>
-                        <p>Automotive parts factory network infrastructure build</p>
-                        <span class='industry-detail'>Production line IoT network, wireless coverage design</span>
-                    </div>
-                    <div class='industry-card'>
-                        <div class='industry-icon'><i class="fas fa-warehouse"></i></div>
-                        <h4>Logistics & Warehousing</h4>
-                        <p>Large logistics warehouse Wi-Fi + AGV deployment</p>
-                        <span class='industry-detail'>Wireless LAN design, AGV control network, WMS integration</span>
-                    </div>
-                    <div class='industry-card'>
-                        <div class='industry-icon'><i class="fas fa-industry"></i></div>
-                        <h4>Foreign-owned Manufacturing</h4>
-                        <p>Foreign-owned manufacturer ERP system migration</p>
-                        <span class='industry-detail'>Server relocation, client network redesign, security hardening</span>
-                    </div>
-                    <div class='industry-card'>
-                        <div class='industry-icon'><i class="fas fa-microchip"></i></div>
-                        <h4>Semiconductor & Precision Equipment</h4>
-                        <p>Semiconductor factory cleanroom network construction</p>
-                        <span class='industry-detail'>Cleanroom-compliant cabling, ESD protection, strict dust control</span>
-                    </div>
+                <div class="section-title">
+                    <h2>Case Studies That Deliver Results</h2>
+                    <p>Izumo Soan supports clients across telecommunications infrastructure, overseas technology deployment, and system operations improvement.</p>
                 </div>
+                <p style='text-align:center;max-width:720px;margin:0 auto 2rem;font-size:1.05rem;line-height:1.8;'>
+                    We do more than just install systems and equipment.<br>
+                    From site surveys to design, deployment, and continuous improvement —<br>
+                    we provide end-to-end support to ensure our clients achieve real results.
+                </p>
             </div>
         </section>
 
+        <!-- Case 1: Telecommunications Infrastructure -->
         <section class='section-padding section-bg'>
             <div class='container'>
-                <h2>Client Testimonials</h2>
-                <div class='voices-grid'>
-                    <div class='voice-card'>
-                        <div class='voice-content'>
-                            <p class='quote'>"Izumo Soan's engineers don't just deploy technology — they truly understand how it is used on the ground. The system has become very convenient for our employees to use."</p>
-                            <p class='author'>Director of Equipment, Manufacturing</p>
-                            <p class='project-ref'>— Manufacturing IoT Sensor Network Project</p>
-                        </div>
+                <div class="section-title">
+                    <h2><span class='section-number'>1</span> Telecommunications Infrastructure</h2>
+                </div>
+                <div class='project-card'>
+                    <div class='project-image'>
+                        <img src='../assets/img/cards/server-install.jpg' alt='Data Center Fiber Optic Relocation'>
                     </div>
-                    <div class='voice-card'>
-                        <div class='voice-content'>
-                            <p class='quote'>"After commissioning them for network stability support, they not only fixed the fault but also conducted root cause analysis and preventive measures. The same issue has never recurred."</p>
-                            <p class='author'>Operations Manager, IT Services</p>
-                            <p class='project-ref'>— Data Center Network Infrastructure Project</p>
+                    <div class='project-content'>
+                        <span class='project-badge'>Foreign-affiliated Data Center</span>
+                        <h3>Data Center Fiber Optic Relocation Project</h3>
+
+                        <h4 style='margin-top:1.5rem;color:#d4232b;'>Challenge (Before)</h4>
+                        <p>Due to facility expansion, the data center needed to relocate existing fiber optic cabling routes. The following challenges were identified:</p>
+                        <ul style='margin-bottom:1.5rem;padding-left:1.5rem;'>
+                            <li style='margin-bottom:0.5rem;'>Hundreds of fiber cores in active operation</li>
+                            <li style='margin-bottom:0.5rem;'>Zero service downtime permitted</li>
+                            <li style='margin-bottom:0.5rem;'>Complex cabling routes</li>
+                            <li style='margin-bottom:0.5rem;'>Limited working hours</li>
+                        </ul>
+
+                        <h4 style='margin-top:2rem;color:var(--accent-color);'>Project Flow</h4>
+                        <div class='case-flow' style='margin-bottom:2rem;'>
+                            <div class='case-flow-item'>Problem Identified <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>Site Survey <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>Route Design <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>Cutover Plan <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>Construction & Migration <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>Stable Operations</div>
                         </div>
-                    </div>
-                    <div class='voice-card'>
-                        <div class='voice-content'>
-                            <p class='quote'>"Since introducing the on-site photo management system, progress confirmation and quality inspections have become incredibly convenient. We cut site visits by more than half, yet inspections are more thorough."</p>
-                            <p class='author'>Site Supervisor, Construction Company</p>
-                            <p class='project-ref'>— Industrial Park Security System Project</p>
+
+                        <h4 style='margin-top:2rem;color:var(--accent-color);'>Our Support</h4>
+                        <p>Izumo Soan performed the following:</p>
+                        <ul style='margin-bottom:1.5rem;padding-left:1.5rem;'>
+                            <li style='margin-bottom:0.5rem;'>Site survey</li>
+                            <li style='margin-bottom:0.5rem;'>Cable route design</li>
+                            <li style='margin-bottom:0.5rem;'>ODF configuration review</li>
+                            <li style='margin-bottom:0.5rem;'>Fiber fusion splicing</li>
+                            <li style='margin-bottom:0.5rem;'>Cutover procedure documentation</li>
+                            <li style='margin-bottom:0.5rem;'>On-site construction management</li>
+                        </ul>
+
+                        <h4 style='margin-top:2rem;color:#2d8659;'>Result (After)</h4>
+                        <div class='project-proof'>
+                            <ul style='padding-left:1.5rem;margin-bottom:0;'>
+                                <li style='margin-bottom:0.5rem;'>Zero service downtime</li>
+                                <li style='margin-bottom:0.5rem;'>Completed on schedule</li>
+                                <li style='margin-bottom:0.5rem;'>Improved configuration for future expansion</li>
+                                <li style='margin-bottom:0.5rem;'>Enhanced cable management</li>
+                            </ul>
+                        </div>
+
+                        <blockquote class='project-comment' style='margin-top:1.5rem;'>
+                            "From the preliminary survey to cutover day management, everything was handled with great care. We felt confident entrusting them with the entire process."
+                            <span>Data Center Operations Manager</span>
+                        </blockquote>
+
+                        <div class='project-details'>
+                            <span><i class="fas fa-calendar-alt"></i> Duration: 3 months</span>
+                            <span><i class="fas fa-server"></i> Scale: Hundreds of cores</span>
+                            <span><i class="fas fa-check-circle"></i> Downtime: Zero</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class='text-center section-padding'>
+        <!-- Case 2: Overseas Technology Deployment -->
+        <section class='section-padding'>
             <div class='container'>
-                <h2>Let's Solve Your On-site Challenges</h2>
-                <p>Contact us for a free consultation</p>
+                <div class="section-title">
+                    <h2><span class='section-number'>2</span> Overseas Technology Deployment</h2>
+                </div>
+                <div class='project-card'>
+                    <div class='project-image'>
+                        <img src='../assets/img/cards/china-robots.jpg' alt='Chinese Robot Manufacturer Japan Factory Deployment'>
+                    </div>
+                    <div class='project-content'>
+                        <span class='project-badge'>Overseas Manufacturer</span>
+                        <h3>Chinese Robot Manufacturer — Japan Factory Deployment</h3>
+
+                        <h4 style='margin-top:1.5rem;color:#d4232b;'>Challenge (Before)</h4>
+                        <p>A Chinese manufacturer was expanding into the Japanese market but faced the following challenges:</p>
+                        <ul style='margin-bottom:1.5rem;padding-left:1.5rem;'>
+                            <li style='margin-bottom:0.5rem;'>No prior experience deploying in Japanese manufacturing sites</li>
+                            <li style='margin-bottom:0.5rem;'>Unfamiliar with Japanese factory requirements</li>
+                            <li style='margin-bottom:0.5rem;'>No local support structure</li>
+                            <li style='margin-bottom:0.5rem;'>Concerns about post-deployment operations</li>
+                        </ul>
+
+                        <h4 style='margin-top:2rem;color:var(--accent-color);'>Project Flow</h4>
+                        <div class='case-flow' style='margin-bottom:2rem;'>
+                            <div class='case-flow-item'>Market Research <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>Client Discovery <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>Site Survey <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>On-site Deployment <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>Operations Training <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>Full Production</div>
+                        </div>
+
+                        <h4 style='margin-top:2rem;color:var(--accent-color);'>Our Support</h4>
+                        <p>Izumo Soan provided the following services:</p>
+                        <ul style='margin-bottom:1.5rem;padding-left:1.5rem;'>
+                            <li style='margin-bottom:0.5rem;'>Technical meetings with Japanese customers</li>
+                            <li style='margin-bottom:0.5rem;'>Compiled technical development specifications in Japanese</li>
+                            <li style='margin-bottom:0.5rem;'>Site surveys</li>
+                            <li style='margin-bottom:0.5rem;'>Installation planning</li>
+                            <li style='margin-bottom:0.5rem;'>Deployment support</li>
+                            <li style='margin-bottom:0.5rem;'>Operator training</li>
+                        </ul>
+
+                        <h4 style='margin-top:2rem;color:#2d8659;'>Result (After)</h4>
+                        <div class='project-proof'>
+                            <ul style='padding-left:1.5rem;margin-bottom:0;'>
+                                <li style='margin-bottom:0.5rem;'>First project completed successfully</li>
+                                <li style='margin-bottom:0.5rem;'>High customer satisfaction</li>
+                                <li style='margin-bottom:0.5rem;'>Established Japan market foundation</li>
+                                <li style='margin-bottom:0.5rem;'>Built long-term client relationship</li>
+                            </ul>
+                        </div>
+
+                        <blockquote class='project-comment' style='margin-top:1.5rem;'>
+                            "Thanks to support that truly understood Japanese worksite realities, we were able to proceed with deployment smoothly. They analyzed the risks on-site, proposed countermeasures, and implemented them, which stabilized our production."
+                            <span>Chinese Robot Manufacturer</span>
+                        </blockquote>
+
+                        <div class='project-details'>
+                            <span><i class="fas fa-calendar-alt"></i> PoC Duration: 3 months</span>
+                            <span><i class="fas fa-robot"></i> Scale: 30 units</span>
+                            <span><i class="fas fa-check-circle"></i> Client Rating: Excellent</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case 3: System Operations Improvement -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2><span class='section-number'>3</span> System Operations Improvement</h2>
+                </div>
+                <div class='project-card'>
+                    <div class='project-image'>
+                        <img src='../assets/img/cards/agv-robot.jpg' alt='AGV Operations Troubleshooting Project'>
+                    </div>
+                    <div class='project-content'>
+                        <span class='project-badge'>Logistics Warehouse</span>
+                        <h3>AGV Operations Troubleshooting Project</h3>
+
+                        <h4 style='margin-top:1.5rem;color:#d4232b;'>Challenge (Before)</h4>
+                        <p>An AGV system deployed in a logistics warehouse was experiencing the following issues:</p>
+                        <ul style='margin-bottom:1.5rem;padding-left:1.5rem;'>
+                            <li style='margin-bottom:0.5rem;'>Frequent stoppages</li>
+                            <li style='margin-bottom:0.5rem;'>Unexplained alarms</li>
+                            <li style='margin-bottom:0.5rem;'>Poor coordination between customer, distributor, and robot manufacturer</li>
+                            <li style='margin-bottom:0.5rem;'>Recurring problems</li>
+                        </ul>
+
+                        <h4 style='margin-top:2rem;color:var(--accent-color);'>Project Flow</h4>
+                        <div class='case-flow' style='margin-bottom:2rem;'>
+                            <div class='case-flow-item'>Problem Analysis <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>Field Interviews <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>Log Analysis <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>Improvement Plan <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>Process Standardization <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>Continuous Improvement</div>
+                        </div>
+
+                        <h4 style='margin-top:2rem;color:var(--accent-color);'>Our Support</h4>
+                        <p>Izumo Soan provided the following services:</p>
+                        <ul style='margin-bottom:1.5rem;padding-left:1.5rem;'>
+                            <li style='margin-bottom:0.5rem;'>Fault log analysis</li>
+                            <li style='margin-bottom:0.5rem;'>On-site interviews</li>
+                            <li style='margin-bottom:0.5rem;'>Fault investigation</li>
+                            <li style='margin-bottom:0.5rem;'>Improvement proposals</li>
+                            <li style='margin-bottom:0.5rem;'>Operations rule standardization</li>
+                            <li style='margin-bottom:0.5rem;'>Preventive measure development</li>
+                        </ul>
+
+                        <h4 style='margin-top:2rem;color:#2d8659;'>Result (After)</h4>
+                        <div class='project-proof'>
+                            <ul style='padding-left:1.5rem;margin-bottom:0;'>
+                                <li style='margin-bottom:0.5rem;'>Significant reduction in stoppages</li>
+                                <li style='margin-bottom:0.5rem;'>Reduced incident response time</li>
+                                <li style='margin-bottom:0.5rem;'>Standardized operations procedures</li>
+                                <li style='margin-bottom:0.5rem;'>Reduced field staff burden</li>
+                            </ul>
+                        </div>
+
+                        <blockquote class='project-comment' style='margin-top:1.5rem;'>
+                            "From a desperate situation, they didn't just handle the incidents — they supported us with continuous improvement."
+                            <span>Logistics Company</span>
+                        </blockquote>
+
+                        <div class='project-details'>
+                            <span><i class="fas fa-calendar-alt"></i> Duration: 2 months</span>
+                            <span><i class="fas fa-chart-line"></i> Improvements: 6 items</span>
+                            <span><i class="fas fa-check-circle"></i> Stoppages: Significantly reduced</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Style -->
+        <section class='section-padding' style='background:linear-gradient(135deg, #003554 0%, #005a9c 100%);color:white;'>
+            <div class='container'>
+                <div style='text-align:center;max-width:720px;margin:0 auto;'>
+                    <h2 style='color:white;'>Our Approach</h2>
+                    <p style='color:rgba(255,255,255,0.9);font-size:1.1rem;line-height:1.9;margin-bottom:2rem;'>
+                        We are neither a construction-only contractor nor a pure software vendor.<br><br>
+                        We take pride in understanding the field, understanding the technology,<br>
+                        and supporting our clients with operations in mind.<br><br>
+                        That is why we offer flexible support tailored to each client<br>
+                        across telecommunications infrastructure, overseas technology deployment,<br>
+                        and system operations improvement.
+                    </p>
+                    <div style='display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;'>
+                        <div style='text-align:center;padding:1rem;flex:1;min-width:140px;'>
+                            <i class="fas fa-broadcast-tower" style='font-size:2.5rem;color:rgba(255,255,255,0.8);margin-bottom:0.75rem;display:block;'></i>
+                            <span style='font-weight:600;color:white;'>Telecom Infrastructure</span>
+                        </div>
+                        <div style='text-align:center;padding:1rem;flex:1;min-width:140px;'>
+                            <i class="fas fa-globe-asia" style='font-size:2.5rem;color:rgba(255,255,255,0.8);margin-bottom:0.75rem;display:block;'></i>
+                            <span style='font-weight:600;color:white;'>Overseas Tech Deployment</span>
+                        </div>
+                        <div style='text-align:center;padding:1rem;flex:1;min-width:140px;'>
+                            <i class="fas fa-chart-line" style='font-size:2.5rem;color:rgba(255,255,255,0.8);margin-bottom:0.75rem;display:block;'></i>
+                            <span style='font-weight:600;color:white;'>Systems Ops Improvement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class='section-padding'>
+            <div class='container' style='text-align:center;'>
+                <h2>We Don't Stop at Deployment</h2>
+                <p style='max-width:600px;margin:0 auto 2rem;font-size:1.1rem;line-height:1.8;'>
+                    Overseas technology deployment, telecom infrastructure, system operations improvement —<br>
+                    Izumo Soan supports you as a partner committed to delivering results.
+                </p>
+                <p style='margin-bottom:2rem;font-size:1.05rem;'>
+                    Please feel free to reach out and discuss your challenges with us.
+                </p>
                 <a href='index.html#contact' class='btn-primary'>Contact Us</a>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer>
@@ -266,7 +361,7 @@
             <div class='footer-content'>
                 <div class='footer-logo'>
                     <img src='../assets/img/logo/logo.png' alt='Izumo Soan'>
-                    <p class='logo-desp'>Technology that powers the field</p>
+                    <p class='logo-desp'>Technology that powers the field.</p>
                 </div>
                 <div class='footer-links'>
                     <h4>Menu</h4>
@@ -281,15 +376,14 @@
                 </div>
                 <div class='footer-products'>
                     <h4>Products</h4>
-                    
                     <div class='footer-product-banners'>
                         <a class='footer-product-banner footer-product-safeops' href='products-safeops.html'>
                             <span>IZUMO SafeOps</span>
-                            <small>Field Safety Operations Platform</small>
+                            <small>On-site Safety Operations Platform</small>
                         </a>
                         <a class='footer-product-banner footer-product-sitebridge' href='products-sitebridge.html'>
                             <span>IZUMO SiteBridge</span>
-                            <small>Smart Site Operations Platform</small>
+                            <small>Smart Site Operations Improvement Platform</small>
                         </a>
                     </div>
                 </div>

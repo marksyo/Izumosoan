@@ -61,10 +61,10 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href='index.html' class='active'>ホーム</a></li>
+                    <li><a href='index.html'>ホーム</a></li>
                     <li><a href='services.html'>サービス</a></li>
                     <li><a href='products.html'>製品</a></li>
-                    <li><a href='case-studies.html'>実績</a></li>
+                    <li><a href='case-studies.html' class='active'>実績</a></li>
                     <li><a href='about.html'>会社概要</a></li>
                     <li><a href='overseas-partner.html'>海外パートナー</a></li>
                     <li><a href='index.html#contact'>お問い合わせ</a></li>
@@ -83,184 +83,274 @@
     <main>
         <section class='page-header'>
             <div class='container'>
-                <h1>私たちの実績</h1>
+                <h1>成功事例</h1>
                 <p class='subtitle'>現場で築いてきた信頼と実績</p>
-            </div>
-        </section>
-
-        <section class='section-padding section-bg'>
-            <div class='container'>
-                <h2>プロジェクト事例</h2>
-                <p class='case-disclosure-note'>守秘義務のある案件は社名を伏せていますが、業種・規模・担当範囲・成果数値を明示し、検討時に判断しやすい形で掲載しています。</p>
-                <div class='projects-grid'>
-                    <div class='project-card'>
-                        <div class='project-image'>
-                            <img src='../assets/img/cards/server-install.jpg' alt='データセンター ネットワーク基盤構築'>
-                        </div>
-                        <div class='project-content'>
-                            <span class='project-badge'>某外資系データセンター</span>
-                            <h3>データセンター ネットワーク基盤構築</h3>
-                            <p class='project-category'>ネットワーク・通信インフラ</p>
-                            <p class='project-problem'><strong>課題:</strong> 関東圏に新設される外資系データセンターにおいて、サーバーラック間の高速バックボーンネットワークと管理ネットワークの設計・施工が必要でした。99.999%の可用性が求められ、かつ短期間での納入が必須条件でした。</p>
-                            <p class='project-solution'><strong>対応:</strong> コアスイッチの冗長化構成を設計し、Cat6a配線とシングルモード光ファイバーを併用。48ラック分のパッチパネル末端まで一貫施工。48時間の通電試験を実施し、全リンクの品質を検証しました。</p>
-                            <p class='project-result'><strong>成果:</strong> 99.99%の可用性を達成し、予定工期を1週間短縮。現在も運用保守を継続中。</p>
-                            <div class='project-proof'>
-                                <strong>担当範囲:</strong> 設計レビュー、配線施工、光損失試験、切替立会い、保守引継ぎ
-                            </div>
-                            <blockquote class='project-comment'>「短納期でも試験記録と引継ぎ資料が揃っており、運用開始後の確認がしやすかったです。」<span>データセンター 運用担当者</span></blockquote>
-                            <div class='project-details'>
-                                <span><i class="fas fa-calendar-alt"></i> 期間: 3ヶ月</span>
-                                <span><i class="fas fa-server"></i> 規模: 48ラック</span>
-                                <span><i class="fas fa-microchip"></i> 技術: Cat6a, SMF</span>
-                                <span><i class="fas fa-check-circle"></i> 可用性: 99.99%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class='project-card'>
-                        <div class='project-image'>
-                            <img src='../assets/img/cards/monitoring-system.jpg' alt='製造工場 遠隔監視システム'>
-                        </div>
-                        <div class='project-content'>
-                            <span class='project-badge'>某自動車部品製造工場</span>
-                            <h3>製造工場 IoTセンサーネットワーク導入</h3>
-                            <p class='project-category'>現場運用デジタル化支援</p>
-                            <p class='project-problem'><strong>課題:</strong> 中部地区の自動車部品工場では、設備の突発故障によるライン停止が月平均3回発生し、1回あたり約2時間の生産ロスが生じていました。設備管理者は4名で200台以上の工作機械を管理しており、状態把握が属人的になっていました。</p>
-                            <p class='project-solution'><strong>対応:</strong> 各工作機械に振動・温度・電力消費を監視するIoTセンサーを設置し、LoRaWANゲートウェイ経由でクラウドにデータを集約。異常値が検出された場合にメール通知が飛ぶ予知保全システムを構築しました。</p>
-                            <p class='project-result'><strong>成果:</strong> 設備のダウンタイムを30%削減。突発停止は月1回未満に減少。管理者の現場巡回時間が週20時間から8時間に短縮。</p>
-                            <div class='project-proof'>
-                                <strong>導入前後:</strong> 突発停止 月平均3回から月1回未満へ、巡回時間 週20時間から8時間へ短縮
-                            </div>
-                            <blockquote class='project-comment'>「現場の使い方を前提に通知条件を調整してくれたため、導入後すぐに保全業務へ組み込めました。」<span>製造業 設備部長</span></blockquote>
-                            <div class='project-details'>
-                                <span><i class="fas fa-calendar-alt"></i> 期間: 2ヶ月</span>
-                                <span><i class="fas fa-chart-line"></i> 設置点: 200箇所</span>
-                                <span><i class="fas fa-wifi"></i> 技術: LoRaWAN</span>
-                                <span><i class="fas fa-check-circle"></i> ダウンタイム: ▲30%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class='project-card'>
-                        <div class='project-image'>
-                            <img src='../assets/img/cards/agv-robot.jpg' alt='物流倉庫 AGV自動搬送システム'>
-                        </div>
-                        <div class='project-content'>
-                            <span class='project-badge'>某大型物流倉庫</span>
-                            <h3>物流倉庫 AGV自動搬送システム導入</h3>
-                            <p class='project-category'>自動化システム導入支援</p>
-                            <p class='project-problem'><strong>課題:</strong> 関東地区の大型物流倉庫では、入出庫処理量が前年比30%増加する一方、作業員の確保が困難になっていました。フォークリフトと手作業による搬送では夜間稼働に対応できず、出荷遅延が常態化。</p>
-                            <p class='project-solution'><strong>対応:</strong> 欧州製AGV12台を導入し、倉庫管理システム（WMS）との連携を構築。搬送ルートの最適化アルゴリズムを実装し、安全柵や警告灯など安全対策も一括施工。作業員向けの運用トレーニングも提供。</p>
-                            <p class='project-result'><strong>成果:</strong> 搬送効率が60%向上し、24時間稼働が可能に。出荷遅延はゼロとなり、作業員の負荷も大幅軽減。</p>
-                            <div class='project-proof'>
-                                <strong>担当範囲:</strong> 無線環境調査、AGV経路確認、WMS連携、現場操作研修、安全対策施工
-                            </div>
-                            <blockquote class='project-comment'>「システムだけでなく、現場スタッフへの説明まで一体で進められたことが大きかったです。」<span>物流倉庫 運用責任者</span></blockquote>
-                            <div class='project-details'>
-                                <span><i class="fas fa-calendar-alt"></i> 期間: 4ヶ月</span>
-                                <span><i class="fas fa-robot"></i> 台数: 12台</span>
-                                <span><i class="fas fa-project-diagram"></i> 技術: WMS連携, AGV</span>
-                                <span><i class="fas fa-check-circle"></i> 効率: ▲60%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class='project-card'>
-                        <div class='project-image'>
-                            <img src='../assets/img/cards/security-system.jpg' alt='産業団地 総合セキュリティシステム'>
-                        </div>
-                        <div class='project-content'>
-                            <span class='project-badge'>某産業団地（設備管理会社）</span>
-                            <h3>産業団地 総合セキュリティシステム構築</h3>
-                            <p class='project-category'>セキュリティ・消防連携システム</p>
-                            <p class='project-problem'><strong>課題:</strong> 関西地区の産業団地では、10棟の工場・倉庫が個別に異なるセキュリティシステムを運用しており、入退管理が統一されていませんでした。また、消防設備との連動が不十分で、法令対応に課題を抱えていました。</p>
-                            <p class='project-solution'><strong>対応:</strong> 既存の監視カメラ・入退室管理・消防設備を一元的に管理するプラットフォームを構築。各棟を光ファイバーで接続し、中央管理室から全棟を監視可能に。消防署との連絡を自動化する通報システムも実装。</p>
-                            <p class='project-result'><strong>成果:</strong> セキュリティインシデントへの初動対応時間が平均15分から4分に短縮。年間のセキュリティ運用コストを25%削減。</p>
-                            <div class='project-proof'>
-                                <strong>導入前後:</strong> 初動対応 平均15分から4分へ短縮、年間運用コスト25%削減
-                            </div>
-                            <blockquote class='project-comment'>「棟ごとに分かれていた情報が中央管理室にまとまり、夜間対応の判断が速くなりました。」<span>設備管理会社 管理担当者</span></blockquote>
-                            <div class='project-details'>
-                                <span><i class="fas fa-calendar-alt"></i> 期間: 5ヶ月</span>
-                                <span><i class="fas fa-building"></i> 棟数: 10棟</span>
-                                <span><i class="fas fa-video"></i> 技術: 監視・消防連携</span>
-                                <span><i class="fas fa-check-circle"></i> 対応速度: ▲73%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
         <section class='section-padding'>
             <div class='container'>
-                <h2>業種別実績</h2>
-                <p class='section-subtitle'>さまざまな業種でのネットワーク構築・システム導入実績</p>
-                <div class='industry-grid'>
-                    <div class='industry-card'>
-                        <div class='industry-icon'><i class="fas fa-car"></i></div>
-                        <h4>自動車部品製造</h4>
-                        <p>某自動車部品工場 ネットワーク基盤構築</p>
-                        <span class='industry-detail'>生産ラインIoTネットワーク, 無線カバレッジ設計</span>
-                    </div>
-                    <div class='industry-card'>
-                        <div class='industry-icon'><i class="fas fa-warehouse"></i></div>
-                        <h4>物流・倉庫</h4>
-                        <p>某大型物流倉庫 Wi-Fi環境＋AGV導入</p>
-                        <span class='industry-detail'>無線LAN設計, AGV制御NW, WMS連携</span>
-                    </div>
-                    <div class='industry-card'>
-                        <div class='industry-icon'><i class="fas fa-industry"></i></div>
-                        <h4>外資系製造業</h4>
-                        <p>某外資系製造企業 ERPシステム移行支援</p>
-                        <span class='industry-detail'>サーバー移設, クライアントNW再設計, セキュリティ対策</span>
-                    </div>
-                    <div class='industry-card'>
-                        <div class='industry-icon'><i class="fas fa-microchip"></i></div>
-                        <h4>半導体・精密機器</h4>
-                        <p>某半導体工場 クリーンルーム内ネットワーク施工</p>
-                        <span class='industry-detail'>クリーンルーム対応ケーブル, 静電対策, 厳格な塵埃管理</span>
-                    </div>
+                <div class="section-title">
+                    <h2>現場で成果を生み出す支援事例</h2>
+                    <p>出雲創安は、通信インフラ構築、海外技術導入、システム運用改善の各分野で、お客様の課題解決を支援しています。</p>
                 </div>
+                <p style='text-align:center;max-width:720px;margin:0 auto 2rem;font-size:1.05rem;line-height:1.8;'>
+                    私たちは単にシステムや設備を導入するだけではありません。<br>
+                    現場調査から設計・導入・運用改善まで、一貫して支援し、<br>
+                    お客様が実際に成果を得られることを重視しています。
+                </p>
             </div>
         </section>
 
+        <!-- Case 1: 通信・インフラ構築支援 -->
         <section class='section-padding section-bg'>
             <div class='container'>
-                <h2>お客様の声</h2>
-                <div class='voices-grid'>
-                    <div class='voice-card'>
-                        <div class='voice-content'>
-                            <p class='quote'>「出雲創安のエンジニアは技術を導入するだけでなく、現場の実際の使い方を真に理解しており、従業員にとって非常に使いやすいシステムになりました。」</p>
-                            <p class='author'>製造業 設備部長</p>
-                            <p class='project-ref'>— 製造工場 IoTセンサーネットワーク導入 プロジェクト</p>
-                        </div>
+                <div class="section-title">
+                    <h2><span class='section-number'>1</span> 通信・インフラ構築支援</h2>
+                </div>
+                <div class='project-card'>
+                    <div class='project-image'>
+                        <img src='../assets/img/cards/server-install.jpg' alt='データセンター光ファイバー移設プロジェクト'>
                     </div>
-                    <div class='voice-card'>
-                        <div class='voice-content'>
-                            <p class='quote'>「ネットワーク安定化サポートを依頼したところ、障害対応だけでなく根本原因分析と予防策まで実施。その後、同じ問題は発生していません。」</p>
-                            <p class='author'>ITサービス 運用マネージャー</p>
-                            <p class='project-ref'>— データセンター ネットワーク基盤構築 プロジェクト</p>
+                    <div class='project-content'>
+                        <span class='project-badge'>某外資系データセンター</span>
+                        <h3>データセンター光ファイバー移設プロジェクト</h3>
+
+                        <h4 style='margin-top:1.5rem;color:#d4232b;'>課題（Before）</h4>
+                        <p>データセンターの設備増設に伴い、既設の光ファイバー配線ルートを変更する必要がありました。しかし、以下の課題がありました。</p>
+                        <ul style='margin-bottom:1.5rem;padding-left:1.5rem;'>
+                            <li style='margin-bottom:0.5rem;'>数百芯規模の光ファイバーが稼働中</li>
+                            <li style='margin-bottom:0.5rem;'>サービス停止は許されない</li>
+                            <li style='margin-bottom:0.5rem;'>配線経路が複雑</li>
+                            <li style='margin-bottom:0.5rem;'>作業時間に制限がある</li>
+                        </ul>
+
+                        <h4 style='margin-top:2rem;color:var(--accent-color);'>プロジェクトの流れ</h4>
+                        <div class='case-flow' style='margin-bottom:2rem;'>
+                            <div class='case-flow-item'>課題発生 <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>現地調査 <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>配線ルート設計 <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>切替計画作成 <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>施工・切替作業 <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>安定運用開始</div>
                         </div>
-                    </div>
-                    <div class='voice-card'>
-                        <div class='voice-content'>
-                            <p class='quote'>「現場写真管理システムを導入してから、工程進捗確認と品質チェックが非常に便利になりました。現場訪問回数は半分以下になりましたが、検査はより詳細になりました。」</p>
-                            <p class='author'>建設会社 現場監理</p>
-                            <p class='project-ref'>— 産業団地 総合セキュリティシステム構築 プロジェクト</p>
+
+                        <h4 style='margin-top:2rem;color:var(--accent-color);'>支援内容</h4>
+                        <p>出雲創安は以下を実施しました。</p>
+                        <ul style='margin-bottom:1.5rem;padding-left:1.5rem;'>
+                            <li style='margin-bottom:0.5rem;'>現地調査</li>
+                            <li style='margin-bottom:0.5rem;'>配線ルート設計</li>
+                            <li style='margin-bottom:0.5rem;'>ODF構成見直し</li>
+                            <li style='margin-bottom:0.5rem;'>光ファイバー融着作業</li>
+                            <li style='margin-bottom:0.5rem;'>切替手順書作成</li>
+                            <li style='margin-bottom:0.5rem;'>作業当日の施工管理</li>
+                        </ul>
+
+                        <h4 style='margin-top:2rem;color:#2d8659;'>結果（After）</h4>
+                        <div class='project-proof'>
+                            <ul style='padding-left:1.5rem;margin-bottom:0;'>
+                                <li style='margin-bottom:0.5rem;'>サービス停止ゼロ</li>
+                                <li style='margin-bottom:0.5rem;'>スケジュール通り完了</li>
+                                <li style='margin-bottom:0.5rem;'>将来の増設にも対応可能な構成へ改善</li>
+                                <li style='margin-bottom:0.5rem;'>配線管理性の向上</li>
+                            </ul>
+                        </div>
+
+                        <blockquote class='project-comment' style='margin-top:1.5rem;'>
+                            「事前調査から切替当日の管理まで非常に丁寧で、安心して任せることができました。」
+                            <span>データセンター運営会社様</span>
+                        </blockquote>
+
+                        <div class='project-details'>
+                            <span><i class="fas fa-calendar-alt"></i> 期間: 3ヶ月</span>
+                            <span><i class="fas fa-server"></i> 規模: 数百芯</span>
+                            <span><i class="fas fa-check-circle"></i> サービス停止: ゼロ</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class='text-center section-padding'>
+        <!-- Case 2: 海外技術導入支援 -->
+        <section class='section-padding'>
             <div class='container'>
-                <h2>あなたの現場の課題を解決します</h2>
-                <p>まずはお気軽にご相談ください</p>
+                <div class="section-title">
+                    <h2><span class='section-number'>2</span> 海外技術導入支援</h2>
+                </div>
+                <div class='project-card'>
+                    <div class='project-image'>
+                        <img src='../assets/img/cards/china-robots.jpg' alt='中国ロボットメーカーの日本工場導入支援'>
+                    </div>
+                    <div class='project-content'>
+                        <span class='project-badge'>海外メーカー様</span>
+                        <h3>中国ロボットメーカーの日本工場導入支援</h3>
+
+                        <h4 style='margin-top:1.5rem;color:#d4232b;'>課題（Before）</h4>
+                        <p>中国メーカーが日本市場への展開を進めていましたが、以下の課題を抱えていました。</p>
+                        <ul style='margin-bottom:1.5rem;padding-left:1.5rem;'>
+                            <li style='margin-bottom:0.5rem;'>日本製造現場への導入経験がなし</li>
+                            <li style='margin-bottom:0.5rem;'>日本工場の要求事項が分からない</li>
+                            <li style='margin-bottom:0.5rem;'>現地サポート体制がない</li>
+                            <li style='margin-bottom:0.5rem;'>導入後の運用に不安がある</li>
+                        </ul>
+
+                        <h4 style='margin-top:2rem;color:var(--accent-color);'>プロジェクトの流れ</h4>
+                        <div class='case-flow' style='margin-bottom:2rem;'>
+                            <div class='case-flow-item'>市場調査 <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>顧客ヒアリング <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>現地調査 <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>現場導入 <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>運用教育 <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>本格運用</div>
+                        </div>
+
+                        <h4 style='margin-top:2rem;color:var(--accent-color);'>支援内容</h4>
+                        <p>出雲創安は、以下を実施しました。</p>
+                        <ul style='margin-bottom:1.5rem;padding-left:1.5rem;'>
+                            <li style='margin-bottom:0.5rem;'>日本顧客との技術打合せ</li>
+                            <li style='margin-bottom:0.5rem;'>日本語での技術開発仕様書をまとめ</li>
+                            <li style='margin-bottom:0.5rem;'>現場調査</li>
+                            <li style='margin-bottom:0.5rem;'>設置計画作成</li>
+                            <li style='margin-bottom:0.5rem;'>導入支援</li>
+                            <li style='margin-bottom:0.5rem;'>操作教育</li>
+                        </ul>
+
+                        <h4 style='margin-top:2rem;color:#2d8659;'>結果（After）</h4>
+                        <div class='project-proof'>
+                            <ul style='padding-left:1.5rem;margin-bottom:0;'>
+                                <li style='margin-bottom:0.5rem;'>初案件を成功裏に完了</li>
+                                <li style='margin-bottom:0.5rem;'>顧客評価を獲得</li>
+                                <li style='margin-bottom:0.5rem;'>日本市場での展開基盤を構築</li>
+                                <li style='margin-bottom:0.5rem;'>継続案件につながる関係を構築</li>
+                            </ul>
+                        </div>
+
+                        <blockquote class='project-comment' style='margin-top:1.5rem;'>
+                            「日本の現場事情を理解したサポートのおかげで、スムーズに導入を進めることができました。現場のリスクを分析して頂き、そして提案され、対策実施したことで客様の生産が安定することができました。」
+                            <span>中国ロボットメーカー様</span>
+                        </blockquote>
+
+                        <div class='project-details'>
+                            <span><i class="fas fa-calendar-alt"></i> 導入期間: 3ヶ月</span>
+                            <span><i class="fas fa-robot"></i> 導入規模: 30台</span>
+                            <span><i class="fas fa-check-circle"></i> 顧客評価: 高評価獲得</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case 3: システム運用・改善支援 -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2><span class='section-number'>3</span> システム運用・改善支援</h2>
+                </div>
+                <div class='project-card'>
+                    <div class='project-image'>
+                        <img src='../assets/img/cards/agv-robot.jpg' alt='AGV運用トラブル改善プロジェクト'>
+                    </div>
+                    <div class='project-content'>
+                        <span class='project-badge'>某物流倉庫</span>
+                        <h3>AGV運用トラブル改善プロジェクト</h3>
+
+                        <h4 style='margin-top:1.5rem;color:#d4232b;'>課題（Before）</h4>
+                        <p>物流倉庫に導入されたAGVシステムで、以下の問題が発生していました。</p>
+                        <ul style='margin-bottom:1.5rem;padding-left:1.5rem;'>
+                            <li style='margin-bottom:0.5rem;'>頻繁な停止</li>
+                            <li style='margin-bottom:0.5rem;'>原因不明のアラーム</li>
+                            <li style='margin-bottom:0.5rem;'>顧客と代理店とロボットメーカの連携不足</li>
+                            <li style='margin-bottom:0.5rem;'>同じ問題の再発</li>
+                        </ul>
+
+                        <h4 style='margin-top:2rem;color:var(--accent-color);'>プロジェクトの流れ</h4>
+                        <div class='case-flow' style='margin-bottom:2rem;'>
+                            <div class='case-flow-item'>課題分析 <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>現場ヒアリング <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>ログ解析 <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>改善提案 <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>運用ルール整備 <i class="fas fa-arrow-down"></i></div>
+                            <div class='case-flow-item'>継続改善</div>
+                        </div>
+
+                        <h4 style='margin-top:2rem;color:var(--accent-color);'>支援内容</h4>
+                        <p>出雲創安は、以下を実施しました。</p>
+                        <ul style='margin-bottom:1.5rem;padding-left:1.5rem;'>
+                            <li style='margin-bottom:0.5rem;'>障害ログ分析</li>
+                            <li style='margin-bottom:0.5rem;'>現場ヒアリング</li>
+                            <li style='margin-bottom:0.5rem;'>障害調査</li>
+                            <li style='margin-bottom:0.5rem;'>改善提案</li>
+                            <li style='margin-bottom:0.5rem;'>運用ルール整備</li>
+                            <li style='margin-bottom:0.5rem;'>再発防止策の策定</li>
+                        </ul>
+
+                        <h4 style='margin-top:2rem;color:#2d8659;'>結果（After）</h4>
+                        <div class='project-proof'>
+                            <ul style='padding-left:1.5rem;margin-bottom:0;'>
+                                <li style='margin-bottom:0.5rem;'>停止回数を大幅削減</li>
+                                <li style='margin-bottom:0.5rem;'>障害対応時間を短縮</li>
+                                <li style='margin-bottom:0.5rem;'>運用ルールを標準化</li>
+                                <li style='margin-bottom:0.5rem;'>現場負担を軽減</li>
+                            </ul>
+                        </div>
+
+                        <blockquote class='project-comment' style='margin-top:1.5rem;'>
+                            「絶望的な状況から、単なる障害対応ではなく、継続的な改善まで支援していただけました。」
+                            <span>関・・物流企業様</span>
+                        </blockquote>
+
+                        <div class='project-details'>
+                            <span><i class="fas fa-calendar-alt"></i> 期間: 2ヶ月</span>
+                            <span><i class="fas fa-chart-line"></i> 改善項目: 6件</span>
+                            <span><i class="fas fa-check-circle"></i> 停止回数: 大幅削減</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 支援スタイル -->
+        <section class='section-padding' style='background:linear-gradient(135deg, #003554 0%, #005a9c 100%);color:white;'>
+            <div class='container'>
+                <div style='text-align:center;max-width:720px;margin:0 auto;'>
+                    <h2 style='color:white;'>出雲創安の支援スタイル</h2>
+                    <p style='color:rgba(255,255,255,0.9);font-size:1.1rem;line-height:1.9;margin-bottom:2rem;'>
+                        私たちは単なる施工会社でも、単なるシステムベンダーでもありません。<br><br>
+                        現場を理解し、技術を理解し、運用まで見据えて支援することを大切にしています。<br><br>
+                        そのため、通信インフラ構築、海外技術の日本導入、システム運用改善の各フェーズで、お客様に合わせた柔軟な支援を提供しています。
+                    </p>
+                    <div style='display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;'>
+                        <div style='text-align:center;padding:1rem;flex:1;min-width:140px;'>
+                            <i class="fas fa-broadcast-tower" style='font-size:2.5rem;color:rgba(255,255,255,0.8);margin-bottom:0.75rem;display:block;'></i>
+                            <span style='font-weight:600;color:white;'>通信インフラ構築</span>
+                        </div>
+                        <div style='text-align:center;padding:1rem;flex:1;min-width:140px;'>
+                            <i class="fas fa-globe-asia" style='font-size:2.5rem;color:rgba(255,255,255,0.8);margin-bottom:0.75rem;display:block;'></i>
+                            <span style='font-weight:600;color:white;'>海外技術の日本導入</span>
+                        </div>
+                        <div style='text-align:center;padding:1rem;flex:1;min-width:140px;'>
+                            <i class="fas fa-chart-line" style='font-size:2.5rem;color:rgba(255,255,255,0.8);margin-bottom:0.75rem;display:block;'></i>
+                            <span style='font-weight:600;color:white;'>システム運用改善</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class='section-padding'>
+            <div class='container' style='text-align:center;'>
+                <h2>技術の導入だけで終わらせない</h2>
+                <p style='max-width:600px;margin:0 auto 2rem;font-size:1.1rem;line-height:1.8;'>
+                    海外技術の日本導入、通信インフラ構築、システム運用改善まで。<br>
+                    出雲創安は、現場で成果を出すためのパートナーとして支援します。
+                </p>
+                <p style='margin-bottom:2rem;font-size:1.05rem;'>
+                    貴社の課題について、ぜひお気軽にご相談ください。
+                </p>
                 <a href='index.html#contact' class='btn-primary'>お問い合わせ</a>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer>
