@@ -3,95 +3,372 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://izumosoan.com/index.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/index.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/index.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/index.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/index.html"/>
-    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://izumosoan.com/ja/index.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/index.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/index.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/index.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/en/index.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/en/index.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/zh/index.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/zh/index.html"/>
   </url>
   <url>
     <loc>https://izumosoan.com/ja/about.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/about.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/about.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/about.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/en/about.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/en/about.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/zh/about.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/zh/about.html"/>
   </url>
   <url>
     <loc>https://izumosoan.com/ja/services.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/services.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/services.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/services.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/en/services.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/services.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/en/services.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/zh/services.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/services.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/zh/services.html"/>
   </url>
   <url>
     <loc>https://izumosoan.com/ja/products.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/products.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/products.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/products.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/products.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/en/products.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/products.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/products.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/products.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/en/products.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/zh/products.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/products.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/products.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/products.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/zh/products.html"/>
   </url>
   <url>
     <loc>https://izumosoan.com/ja/case-studies.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/case-studies.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/case-studies.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/case-studies.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/en/case-studies.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/en/case-studies.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/zh/case-studies.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/zh/case-studies.html"/>
   </url>
   <url>
     <loc>https://izumosoan.com/ja/overseas-partner.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/overseas-partner.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/overseas-partner.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/overseas-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/overseas-partner.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/en/overseas-partner.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/overseas-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/overseas-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/overseas-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/en/overseas-partner.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/zh/overseas-partner.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/overseas-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/overseas-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/overseas-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/zh/overseas-partner.html"/>
   </url>
   <url>
     <loc>https://izumosoan.com/ja/privacy.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/en/privacy.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/zh/privacy.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/zh/privacy.html"/>
   </url>
   <url>
     <loc>https://izumosoan.com/ja/products-safeops.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/products-safeops.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/products-safeops.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/products-safeops.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/products-safeops.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/en/products-safeops.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/products-safeops.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/products-safeops.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/products-safeops.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/en/products-safeops.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/zh/products-safeops.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/products-safeops.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/products-safeops.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/products-safeops.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/zh/products-safeops.html"/>
   </url>
   <url>
     <loc>https://izumosoan.com/ja/products-sitebridge.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/products-sitebridge.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/products-sitebridge.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/products-sitebridge.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/products-sitebridge.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/en/products-sitebridge.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/products-sitebridge.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/products-sitebridge.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/products-sitebridge.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/en/products-sitebridge.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/zh/products-sitebridge.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/products-sitebridge.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/products-sitebridge.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/products-sitebridge.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/zh/products-sitebridge.html"/>
   </url>
   <url>
     <loc>https://izumosoan.com/ja/services-network-infrastructure.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/services-network-infrastructure.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/services-network-infrastructure.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/services-network-infrastructure.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/services-network-infrastructure.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/en/services-network-infrastructure.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/services-network-infrastructure.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/services-network-infrastructure.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/services-network-infrastructure.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/en/services-network-infrastructure.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/zh/services-network-infrastructure.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/services-network-infrastructure.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/services-network-infrastructure.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/services-network-infrastructure.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/zh/services-network-infrastructure.html"/>
   </url>
   <url>
     <loc>https://izumosoan.com/ja/services-tech-implementation.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/services-tech-implementation.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/services-tech-implementation.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/services-tech-implementation.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/services-tech-implementation.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/en/services-tech-implementation.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/services-tech-implementation.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/services-tech-implementation.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/services-tech-implementation.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/en/services-tech-implementation.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/zh/services-tech-implementation.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/services-tech-implementation.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/services-tech-implementation.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/services-tech-implementation.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/zh/services-tech-implementation.html"/>
   </url>
   <url>
     <loc>https://izumosoan.com/ja/services-field-digitalization.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/services-field-digitalization.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/services-field-digitalization.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/services-field-digitalization.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/services-field-digitalization.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/en/services-field-digitalization.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/services-field-digitalization.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/services-field-digitalization.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/services-field-digitalization.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/en/services-field-digitalization.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/zh/services-field-digitalization.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/services-field-digitalization.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/services-field-digitalization.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/services-field-digitalization.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/zh/services-field-digitalization.html"/>
   </url>
 </urlset>
