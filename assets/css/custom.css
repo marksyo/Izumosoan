@@ -442,7 +442,7 @@ header nav ul li a::after {
 .solution-number {
     width: 2.25rem;
     height: 2.25rem;
-    margin: 0 auto 1.25rem;
+    margin: 10px auto 0.5rem;
     border-radius: 50%;
     background: var(--primary-color);
     color: var(--bg-white);
