@@ -461,7 +461,6 @@ header nav ul li a::after {
     color: var(--accent-color);
     display: inline-block;
     transition: var(--transition);
-    height: 10px;
 }
 
 .solution-card:hover .solution-icon {

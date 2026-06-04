@@ -41,20 +41,47 @@
     }
     </script>
 
+    <!-- SEO: JSON-LD BreadcrumbList -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "首页",
+            "item": "https://izumosoan.com/zh/index.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "产品",
+            "item": "https://izumosoan.com/zh/products.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "IZUMO SiteBridge",
+            "item": "https://izumosoan.com/zh/products-sitebridge.html"
+        }
+    ]
+}
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <link rel='stylesheet' href='../assets/css/fontawesome-all.min.css'>
-    <link rel='stylesheet' href='../assets/css/style.css'>
-    <link rel='stylesheet' href='../assets/css/custom.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../assets/css/style.min.css'>
 </head>
 <body>
     <header>
         <div class='container'>
             <div class='logo'>
                 <a href='index.html'>
-                    <img src='../assets/img/logo/logo.png' alt='Izumo Soan' style='height:100px;'>
+                    <img src='../assets/img/logo/logo.webp' alt='Izumo Soan' style='height:100px;'>
                 </a>
             </div>
             <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
@@ -93,7 +120,7 @@
                     </div>
                 </div>
                 <figure class='safeops-hero-visual'>
-                    <img src='../assets/img/cards/agv-robot.jpg' alt='物流机器人与智能现场运营'>
+                    <img src='../assets/img/cards/agv-robot.webp' alt='物流机器人与智能现场运营'>
                 </figure>
             </div>
         </section>
@@ -130,7 +157,7 @@
                 </div>
                 <div class='problem-grid problem-grid-2col'>
                     <div class='scene-card'>
-                        <figure class='scene-media'><img src='../assets/img/cards/agv-robot.jpg' alt='机器人系统与实际业务流程的差异'></figure>
+                        <figure class='scene-media'><img src='../assets/img/cards/agv-robot.webp' alt='机器人系统与实际业务流程的差异'></figure>
                         <div class='scene-body'>
                             <span class='scene-label'><i class="fas fa-triangle-exclamation"></i> 业务流程差异</span>
                             <h3>实际业务流程比演示复杂得多</h3>
@@ -138,7 +165,7 @@
                         </div>
                     </div>
                     <div class='scene-card'>
-                        <figure class='scene-media'><img src='../assets/img/cards/factory-analysis.jpg' alt='系统与现场流程不一致'></figure>
+                        <figure class='scene-media'><img src='../assets/img/cards/factory-analysis.webp' alt='系统与现场流程不一致'></figure>
                         <div class='scene-body'>
                             <span class='scene-label'><i class="fas fa-diagram-project"></i> 流程变化</span>
                             <h3>系统与现场流程不一致</h3>
@@ -146,7 +173,7 @@
                         </div>
                     </div>
                     <div class='scene-card'>
-                        <figure class='scene-media'><img src='../assets/img/safeops/safeops-scattered-info-photo.png' alt='故障应对信息分散导致流程不透明'></figure>
+                        <figure class='scene-media'><img src='../assets/img/safeops/safeops-scattered-info-photo.webp' alt='故障应对信息分散导致流程不透明'></figure>
                         <div class='scene-body'>
                             <span class='scene-label'><i class="fas fa-circle-question"></i> 应对进度</span>
                             <h3>故障应对流程不透明</h3>
@@ -154,7 +181,7 @@
                         </div>
                     </div>
                     <div class='scene-card'>
-                        <figure class='scene-media'><img src='../assets/img/why/ot-it-integration.jpg' alt='海外技术团队无法实时了解现场'></figure>
+                        <figure class='scene-media'><img src='../assets/img/why/ot-it-integration.webp' alt='海外技术团队无法实时了解现场'></figure>
                         <div class='scene-body'>
                             <span class='scene-label'><i class="fas fa-globe"></i> 远程协作</span>
                             <h3>海外技术团队无法实时了解现场</h3>
@@ -213,7 +240,7 @@
                         <span class='feature-icon'><i class="fas fa-tv"></i></span>
                         <h4>运营状况可视化</h4>
                         <figure class='ui-mockup-tiny feature-example-image'>
-                            <img src='../assets/img/cards/monitoring-system.jpg' alt='系统状态与故障应对进度的可视化'>
+                            <img src='../assets/img/cards/monitoring-system.webp' alt='系统状态与故障应对进度的可视化'>
                         </figure>
                         <p>客户可实时查看当前系统状态、当前风险、当前故障应对进度与当前运营影响，提供现场"尽在掌握"的安心感。</p>
                     </div>
@@ -221,7 +248,7 @@
                         <span class='feature-icon'><i class="fas fa-magnifying-glass-chart"></i></span>
                         <h4>现场观察与运营分析</h4>
                         <figure class='ui-mockup-tiny feature-example-image'>
-                            <img src='../assets/img/cards/factory-analysis.jpg' alt='现场观察与运营变化分析'>
+                            <img src='../assets/img/cards/factory-analysis.webp' alt='现场观察与运营变化分析'>
                         </figure>
                         <p>不止于日志分析，更关注人员行为、运营变化、高峰流量、路线冲突与操作习惯，真正理解现场为何发生问题。</p>
                     </div>
@@ -229,7 +256,7 @@
                         <span class='feature-icon'><i class="fas fa-people-arrows"></i></span>
                         <h4>远程技术团队协作</h4>
                         <figure class='ui-mockup-tiny feature-example-image'>
-                            <img src='../assets/img/why/multi-vendor.jpg' alt='客户、现场工程师与远程技术团队的协作'>
+                            <img src='../assets/img/why/multi-vendor.webp' alt='客户、现场工程师与远程技术团队的协作'>
                         </figure>
                         <p>连接海外开发团队、日本现场、客户运营负责人与IZUMO现场工程师，将问题应对流程透明化与结构化。</p>
                     </div>
@@ -237,7 +264,7 @@
                         <span class='feature-icon'><i class="fas fa-arrows-rotate"></i></span>
                         <h4>持续改善机制</h4>
                         <figure class='ui-mockup-tiny feature-example-image'>
-                            <img src='../assets/img/why/problem-solving.jpg' alt='从临时对策到长期改善的持续改善机制'>
+                            <img src='../assets/img/why/problem-solving.webp' alt='从临时对策到长期改善的持续改善机制'>
                         </figure>
                         <p>将临时恢复、长期改善、效果确认分开管理，防止同类问题重复发生，避免改善措施停留在口头约定。</p>
                     </div>
@@ -283,7 +310,7 @@
                         <p>IZUMO 将现场工程经验、OT/IT理解力、多厂商协作能力与智能系统现场导入经验相结合，帮助客户让复杂的智能系统在现场真正稳定运行。</p>
                     </div>
                     <figure class='safeops-concept-image'>
-                        <img src='../assets/img/why/field-experience.jpg' alt='理解现场的运营改善能力'>
+                        <img src='../assets/img/why/field-experience.webp' alt='理解现场的运营改善能力'>
                     </figure>
                 </div>
             </div>
@@ -316,7 +343,7 @@
         <div class='container'>
             <div class='footer-content'>
                 <div class='footer-logo'>
-                    <img src='../assets/img/logo/logo.png' alt='Izumo Soan'>
+                    <img src='../assets/img/logo/logo.webp' alt='Izumo Soan'>
                     <p class='logo-desp'>技术赋能现场</p>
                 </div>
                 <div class='footer-links'>

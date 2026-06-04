@@ -41,20 +41,47 @@
     }
     </script>
 
+    <!-- SEO: JSON-LD BreadcrumbList -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ホーム",
+            "item": "https://izumosoan.com/ja/index.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "製品",
+            "item": "https://izumosoan.com/ja/products.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "IZUMO SiteBridge",
+            "item": "https://izumosoan.com/ja/products-sitebridge.html"
+        }
+    ]
+}
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <link rel='stylesheet' href='../assets/css/fontawesome-all.min.css'>
-    <link rel='stylesheet' href='../assets/css/style.css'>
-    <link rel='stylesheet' href='../assets/css/custom.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../assets/css/style.min.css'>
 </head>
 <body>
     <header>
         <div class='container'>
             <div class='logo'>
                 <a href='#'>
-                    <img src='../assets/img/logo/logo.png' alt='Izumo Soan' style='height:100px;'>
+                    <img src='../assets/img/logo/logo.webp' alt='Izumo Soan' style='height:100px;'>
                 </a>
             </div>
             <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
@@ -93,7 +120,7 @@
                     </div>
                 </div>
                 <figure class='safeops-hero-visual'>
-                    <img src='../assets/img/cards/agv-robot.jpg' alt='物流ロボットとスマート現場運用'>
+                    <img src='../assets/img/cards/agv-robot.webp' alt='物流ロボットとスマート現場運用'>
                 </figure>
             </div>
         </section>
@@ -130,7 +157,7 @@
                 </div>
                 <div class='problem-grid problem-grid-2col'>
                     <div class='scene-card'>
-                        <figure class='scene-media'><img src='../assets/img/cards/agv-robot.jpg' alt='ロボットシステムと実際の業務プロセスの差異'></figure>
+                        <figure class='scene-media'><img src='../assets/img/cards/agv-robot.webp' alt='ロボットシステムと実際の業務プロセスの差異'></figure>
                         <div class='scene-body'>
                             <span class='scene-label'><i class="fas fa-triangle-exclamation"></i> 業務プロセスの差異</span>
                             <h3>実際の業務プロセスはデモより複雑</h3>
@@ -138,7 +165,7 @@
                         </div>
                     </div>
                     <div class='scene-card'>
-                        <figure class='scene-media'><img src='../assets/img/cards/factory-analysis.jpg' alt='システムと現場プロセスの不一致'></figure>
+                        <figure class='scene-media'><img src='../assets/img/cards/factory-analysis.webp' alt='システムと現場プロセスの不一致'></figure>
                         <div class='scene-body'>
                             <span class='scene-label'><i class="fas fa-diagram-project"></i> プロセス変化</span>
                             <h3>システムと現場プロセスの不一致</h3>
@@ -146,7 +173,7 @@
                         </div>
                     </div>
                     <div class='scene-card'>
-                        <figure class='scene-media'><img src='../assets/img/safeops/safeops-scattered-info-photo.png' alt='障害対応情報の分散によるプロセスの不透明さ'></figure>
+                        <figure class='scene-media'><img src='../assets/img/safeops/safeops-scattered-info-photo.webp' alt='障害対応情報の分散によるプロセスの不透明さ'></figure>
                         <div class='scene-body'>
                             <span class='scene-label'><i class="fas fa-circle-question"></i> 対応進捗</span>
                             <h3>障害対応プロセスが不透明</h3>
@@ -154,7 +181,7 @@
                         </div>
                     </div>
                     <div class='scene-card'>
-                        <figure class='scene-media'><img src='../assets/img/why/ot-it-integration.jpg' alt='海外技術チームが現場をリアルタイムに理解できない'></figure>
+                        <figure class='scene-media'><img src='../assets/img/why/ot-it-integration.webp' alt='海外技術チームが現場をリアルタイムに理解できない'></figure>
                         <div class='scene-body'>
                             <span class='scene-label'><i class="fas fa-globe"></i> 遠隔連携</span>
                             <h3>海外技術チームが現場をリアルタイムに理解できない</h3>
@@ -213,7 +240,7 @@
                         <span class='feature-icon'><i class="fas fa-tv"></i></span>
                         <h4>運用状況の可視化</h4>
                         <figure class='ui-mockup-tiny feature-example-image'>
-                            <img src='../assets/img/cards/monitoring-system.jpg' alt='システム状態と障害対応進捗の可視化'>
+                            <img src='../assets/img/cards/monitoring-system.webp' alt='システム状態と障害対応進捗の可視化'>
                         </figure>
                         <p>顧客が現在のシステム状態、リスク、障害対応進捗、運用影響をリアルタイムに確認し、現場を「掌握している」安心感を提供します。</p>
                     </div>
@@ -221,7 +248,7 @@
                         <span class='feature-icon'><i class="fas fa-magnifying-glass-chart"></i></span>
                         <h4>現場観察と運用分析</h4>
                         <figure class='ui-mockup-tiny feature-example-image'>
-                            <img src='../assets/img/cards/factory-analysis.jpg' alt='現場観察と運用変化の分析'>
+                            <img src='../assets/img/cards/factory-analysis.webp' alt='現場観察と運用変化の分析'>
                         </figure>
                         <p>ログ分析だけでなく、要員行動、現場運用の変化、ピーク流量、ルート競合、操作習慣を重視し、現場でなぜ問題が発生するのかを真に理解します。</p>
                     </div>
@@ -229,7 +256,7 @@
                         <span class='feature-icon'><i class="fas fa-people-arrows"></i></span>
                         <h4>遠隔技術チーム連携</h4>
                         <figure class='ui-mockup-tiny feature-example-image'>
-                            <img src='../assets/img/why/multi-vendor.jpg' alt='顧客、現場エンジニア、遠隔技術チームの連携'>
+                            <img src='../assets/img/why/multi-vendor.webp' alt='顧客、現場エンジニア、遠隔技術チームの連携'>
                         </figure>
                         <p>海外開発チーム、日本現場、顧客運用担当者、IZUMO 現場エンジニアをつなぎ、問題対応プロセスを透明化・構造化します。</p>
                     </div>
@@ -237,7 +264,7 @@
                         <span class='feature-icon'><i class="fas fa-arrows-rotate"></i></span>
                         <h4>継続的改善メカニズム</h4>
                         <figure class='ui-mockup-tiny feature-example-image'>
-                            <img src='../assets/img/why/problem-solving.jpg' alt='暫定対策から長期改善への継続的改善メカニズム'>
+                            <img src='../assets/img/why/problem-solving.webp' alt='暫定対策から長期改善への継続的改善メカニズム'>
                         </figure>
                         <p>暫定復旧、長期改善、効果確認を分けて管理し、同じ問題の繰り返しを防止。改善策が口約束で終わることも防ぎます。</p>
                     </div>
@@ -283,7 +310,7 @@
                         <p>IZUMO は現場エンジニアリング経験、OT / IT 理解力、マルチベンダー連携能力、スマートシステム現場導入経験を組み合わせ、複雑なスマートシステムを現場で真に安定稼働させるお手伝いをします。</p>
                     </div>
                     <figure class='safeops-concept-image'>
-                        <img src='../assets/img/why/field-experience.jpg' alt='現場を理解した運用改善能力'>
+                        <img src='../assets/img/why/field-experience.webp' alt='現場を理解した運用改善能力'>
                     </figure>
                 </div>
             </div>
@@ -316,7 +343,7 @@
         <div class='container'>
             <div class='footer-content'>
                 <div class='footer-logo'>
-                    <img src='../assets/img/logo/logo.png' alt='Izumo Soan'>
+                    <img src='../assets/img/logo/logo.webp' alt='Izumo Soan'>
                     <p class='logo-desp'>技術を現場の力に。</p>
                 </div>
                 <div class='footer-links'>

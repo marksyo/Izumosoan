@@ -40,6 +40,34 @@
         "description": "現場、安全、運用をつなぐテクノロジーパートナー"
     }
     </script>
+
+    <!-- SEO: JSON-LD BreadcrumbList -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ホーム",
+            "item": "https://izumosoan.com/ja/index.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "製品",
+            "item": "https://izumosoan.com/ja/products.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "IZUMO SafeOps",
+            "item": "https://izumosoan.com/ja/products-safeops.html"
+        }
+    ]
+}
+    </script>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,16 +75,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel='stylesheet' href='../assets/css/fontawesome-all.min.css'>
-    <link rel='stylesheet' href='../assets/css/style.css'>
-    <link rel='stylesheet' href='../assets/css/custom.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../assets/css/style.min.css'>
 </head>
 <body>
     <header>
         <div class='container'>
             <div class='logo'>
                 <a href='#'>
-                    <img src='../assets/img/logo/logo.png' alt='Izumo Soan' style='height:100px;'>
+                    <img src='../assets/img/logo/logo.webp' alt='Izumo Soan' style='height:100px;'>
                 </a>
             </div>
             <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
@@ -96,7 +123,7 @@
                     </div>
                 </div>
                 <figure class='safeops-hero-visual'>
-                    <img src='../assets/img/safeops/safeops-hero-scene.png' alt='SafeOps がデータセンター現場でエリアステータスとリスク情報を共有'>
+                    <img src='../assets/img/safeops/safeops-hero-scene.webp' alt='SafeOps がデータセンター現場でエリアステータスとリスク情報を共有'>
                 </figure>
             </div>
         </section>
@@ -122,7 +149,7 @@
             <div class='container'>
                 <div class='product-concept'>
                     <figure class='safeops-concept-image'>
-                        <img src='../assets/img/safeops/safeops_image.png' alt='複雑な工場現場での工事と運用の調整シーン'>
+                        <img src='../assets/img/safeops/safeops_image.webp' alt='複雑な工場現場での工事と運用の調整シーン'>
                     </figure>
                     <div class='concept-text'>
                         <h3>IZUMO SafeOps とは</h3>
@@ -143,7 +170,7 @@
                 </div>
                 <div class='problem-grid problem-grid-2col'>
                     <div class='scene-card'>
-                        <figure class='scene-media'><img src='../assets/img/cards/info_notononeboard.jpg' alt='ホワイトボード、スマホ、図面、会議画面に分散する現場情報'></figure>
+                        <figure class='scene-media'><img src='../assets/img/cards/info_notononeboard.webp' alt='ホワイトボード、スマホ、図面、会議画面に分散する現場情報'></figure>
                         <div class='scene-body'>
                             <span class='scene-label'><i class="fas fa-sitemap"></i> ホワイトボード・Slack・電話・会議</span>
                             <h3>現場情報の分散</h3>
@@ -151,7 +178,7 @@
                         </div>
                     </div>
                     <div class='scene-card'>
-                        <figure class='scene-media'><img src='../assets/img/cards/no_timely_info.jpg' alt='工事現場の仮囲いと安全隔離'></figure>
+                        <figure class='scene-media'><img src='../assets/img/cards/no_timely_info.webp' alt='工事現場の仮囲いと安全隔離'></figure>
                         <div class='scene-body'>
                             <span class='scene-label'><i class="fas fa-triangle-exclamation"></i> 封鎖帯 · リスク警告 · 一時変更</span>
                             <h3>現場の変化がタイムリーに共有されない</h3>
@@ -159,7 +186,7 @@
                         </div>
                     </div>
                     <div class='scene-card'>
-                        <figure class='scene-media'><img src='../assets/img/cards/multi-team-info.jpg' alt='複数の現場チームが工事エリアで調整作業中'></figure>
+                        <figure class='scene-media'><img src='../assets/img/cards/multi-team-info.webp' alt='複数の現場チームが工事エリアで調整作業中'></figure>
                         <div class='scene-body'>
                             <span class='scene-label'><i class="fas fa-people-arrows"></i> 元請 · 下請 · メーカー · 運用</span>
                             <h3>複数チームの調整が困難</h3>
@@ -167,7 +194,7 @@
                         </div>
                     </div>
                     <div class='scene-card'>
-                        <figure class='scene-media'><img src='../assets/img/cards/safetyinfo.jpg' alt='エンジニアが現場のリスクと安全経験をレビュー'></figure>
+                        <figure class='scene-media'><img src='../assets/img/cards/safetyinfo.webp' alt='エンジニアが現場のリスクと安全経験をレビュー'></figure>
                         <div class='scene-body'>
                             <span class='scene-label'><i class="fas fa-book"></i> PDF · Excel · メール · KYミーティング</span>
                             <h3>安全経験が蓄積されない</h3>
@@ -284,7 +311,7 @@
                         <h4>安全事故とリスク記録</h4>
                         <p>事故の経緯、原因分析、再発防止策、水平展開内容を一元記録し、現場の安全ナレッジベースを構築。同様の問題の再発を防止します。</p>
                         <figure class='ui-mockup-tiny feature-example-image'>
-                            <img src='../assets/img/safeops/safeops-risk-record.png' alt='事故の経緯記録、原因分析、再発防止策を蓄積するイメージ'>
+                            <img src='../assets/img/safeops/safeops-risk-record.webp' alt='事故の経緯記録、原因分析、再発防止策を蓄積するイメージ'>
                         </figure>
                     </div>
                 </div>
@@ -299,21 +326,21 @@
                 </div>
                 <div class='safeops-char-grid'>
                     <div class='char-scene'>
-                        <figure class='char-scene-image'><img src='../assets/img/safeops/safeops-plan-review.png' alt='エンジニアが現場で施工図面を確認'></figure>
+                        <figure class='char-scene-image'><img src='../assets/img/safeops/safeops-plan-review.webp' alt='エンジニアが現場で施工図面を確認'></figure>
                         <div class='char-scene-body'>
                             <h4>現場の負担を増やさない</h4>
                             <p>現場の混乱を減らすこと。SafeOps は複雑な操作を追求せず、「最もシンプルな方法で最も重要な現場の変化を共有する」ことに重点を置いています。</p>
                         </div>
                     </div>
                     <div class='char-scene'>
-                        <figure class='char-scene-image'><img src='../assets/img/safeops/safeops-data-center.png' alt='データセンター継続稼働中の工事調整シーン'></figure>
+                        <figure class='char-scene-image'><img src='../assets/img/safeops/safeops-data-center.webp' alt='データセンター継続稼働中の工事調整シーン'></figure>
                         <div class='char-scene-body'>
                             <h4>継続稼働中の複雑な現場に最適</h4>
                             <p>データセンター、半導体工場、自動化物流現場、稼働中の施設改修、複数チーム同時施工現場に特に適しています。</p>
                         </div>
                     </div>
                     <div class='char-scene'>
-                        <figure class='char-scene-image'><img src='../assets/img/safeops/safeops-construction-team.png' alt='エンジニアが工事現場で図面と安全事項について議論'></figure>
+                        <figure class='char-scene-image'><img src='../assets/img/safeops/safeops-construction-team.webp' alt='エンジニアが工事現場で図面と安全事項について議論'></figure>
                         <div class='char-scene-body'>
                             <h4>現場を理解してこそ、真の課題解決ができる</h4>
                             <p>IZUMO SOAN はソフトウェア開発者だけではありません。私たちはデータセンター工事、ネットワーク・通信施工、システム現場導入に長年携わり、現場の実際の運用を真に理解しています。</p>
@@ -332,19 +359,19 @@
                 </div>
                 <div class='safeops-use-grid'>
                     <figure>
-                        <img src='../assets/img/safeops/safeops-data-center.png' alt='データセンター現場'>
+                        <img src='../assets/img/safeops/safeops-data-center.webp' alt='データセンター現場'>
                         <figcaption>データセンター</figcaption>
                     </figure>
                     <figure>
-                        <img src='../assets/img/safeops/safeops-semi-factory.png' alt='半導体工場現場'>
+                        <img src='../assets/img/safeops/safeops-semi-factory.webp' alt='半導体工場現場'>
                         <figcaption>半導体工場</figcaption>
                     </figure>
                     <figure>
-                        <img src='../assets/img/safeops/safeops-logistics.png' alt='自動化物流現場'>
+                        <img src='../assets/img/safeops/safeops-logistics.webp' alt='自動化物流現場'>
                         <figcaption>自動化物流現場</figcaption>
                     </figure>
                     <figure>
-                        <img src='../assets/img/safeops/safeops-construction-team.png' alt='複数チーム同時施工現場'>
+                        <img src='../assets/img/safeops/safeops-construction-team.webp' alt='複数チーム同時施工現場'>
                         <figcaption>複数チーム同時施工現場</figcaption>
                     </figure>
                 </div>
@@ -380,7 +407,7 @@
         <div class='container'>
             <div class='footer-content'>
                 <div class='footer-logo'>
-                    <img src='../assets/img/logo/logo.png' alt='Izumo Soan'>
+                    <img src='../assets/img/logo/logo.webp' alt='Izumo Soan'>
                     <p class='logo-desp'>技術を現場の力に。</p>
                 </div>
                 <div class='footer-links'>

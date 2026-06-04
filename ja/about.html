@@ -40,6 +40,28 @@
         "description": "現場、安全、運用をつなぐテクノロジーパートナー"
     }
     </script>
+
+    <!-- SEO: JSON-LD BreadcrumbList -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ホーム",
+            "item": "https://izumosoan.com/ja/index.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "会社概要",
+            "item": "https://izumosoan.com/ja/about.html"
+        }
+    ]
+}
+    </script>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,16 +69,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel='stylesheet' href='../assets/css/fontawesome-all.min.css'>
-    <link rel='stylesheet' href='../assets/css/style.css'>
-    <link rel='stylesheet' href='../assets/css/custom.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../assets/css/style.min.css'>
 </head>
 <body>
     <header>
         <div class='container'>
             <div class='logo'>
                 <a href='#'>
-                    <img src='../assets/img/logo/logo.png' alt='Izumo Soan' style='height:100px;'>
+                    <img src='../assets/img/logo/logo.webp' alt='Izumo Soan' style='height:100px;'>
                 </a>
             </div>
             <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
@@ -148,7 +169,7 @@
                     <p>技術は現場に奉仕する</p>
                 </div>
                 <div class="about-image-full">
-                    <img src="../assets/img/why/field-experience.jpg" alt="技術は現場のためにある">
+                    <img src="../assets/img/why/field-experience.webp" alt="技術は現場のためにある">
                 </div>
                 <div class='philosophy-content'>
                     <p>当社の創業チームは、長年にわたり現場工学に携わってきたエンジニアで構成されています。</p>
@@ -189,7 +210,7 @@
                     <p>結びつける・守る・安定</p>
                 </div>
                 <div class="about-image-full">
-                    <img src="../assets/img/why/ot-it-integration.jpg" alt="出雲と創安">
+                    <img src="../assets/img/why/ot-it-integration.webp" alt="出雲と創安">
                 </div>
                 <div style='display:grid; grid-template-columns: 1fr 1fr; gap: 3rem;'>
                     <div class='name-explanation'>
@@ -225,25 +246,25 @@
                 </div>
                 <div class='problem-grid problem-grid-2col'>
                     <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/cards/monitoring-system.jpg" alt="現場と技術の乖離"></div>
+                        <div class="card-thumb"><img src="../assets/img/cards/monitoring-system.webp" alt="現場と技術の乖離"></div>
                         <i class="fas fa-plug card-icon"></i>
                         <h3>現場と技術の乖離</h3>
                         <p>技術がどんなに優れていても、現場の条件や運用ニーズに合わなければ意味がありません。</p>
                     </div>
                     <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/cards/server-install.jpg" alt="短期的な視点"></div>
+                        <div class="card-thumb"><img src="../assets/img/cards/server-install.webp" alt="短期的な視点"></div>
                         <i class="fas fa-clock card-icon"></i>
                         <h3>短期的な視点</h3>
                         <p>多くのソリューションは導入時は効果的でも、長期的な運用における保守や拡張性が考慮されていません。</p>
                     </div>
                     <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/cards/network-cabling.jpg" alt="情報のサイロ化"></div>
+                        <div class="card-thumb"><img src="../assets/img/cards/network-cabling.webp" alt="情報のサイロ化"></div>
                         <i class="fas fa-network-wired card-icon"></i>
                         <h3>情報のサイロ化</h3>
                         <p>異なるシステム間で情報が共有できず、意思決定に必要な全体像が見えません。</p>
                     </div>
                     <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/cards/fiber-optic.jpg" alt="複雑性への対応困難"></div>
+                        <div class="card-thumb"><img src="../assets/img/cards/fiber-optic.webp" alt="複雑性への対応困難"></div>
                         <i class="fas fa-cogs card-icon"></i>
                         <h3>複雑性への対応困難</h3>
                         <p>マルチベンダー環境でのシステム統合や、日本特有の施工慣習への適応に課題があります。</p>
@@ -260,25 +281,25 @@
                 </div>
                 <div class='problem-grid problem-grid-2col'>
                     <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/cards/digitalization.jpg" alt="ソフトウェアの本質"></div>
+                        <div class="card-thumb"><img src="../assets/img/cards/digitalization.webp" alt="ソフトウェアの本質"></div>
                         <i class="fas fa-code card-icon"></i>
                         <h3>「ソフトウェアの本質は現実世界の状態変化を管理すること」</h3>
                         <p>重要なのはコード自体ではなく、コードが現場でどのような変化をもたらすかです。</p>
                     </div>
                     <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/why/problem-solving.jpg" alt="真の価値は現場の問題解決にあり"></div>
+                        <div class="card-thumb"><img src="../assets/img/why/problem-solving.webp" alt="真の価値は現場の問題解決にあり"></div>
                         <i class="fas fa-bullseye card-icon"></i>
                         <h3>「真の価値は現場の問題解決に由来する」</h3>
                         <p>技術仕様を満たすだけでは十分ではありません。価値は実際の現場問題を解決することにあります。</p>
                     </div>
                     <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/why/field-support.jpg" alt="エンジニアは現場の言葉を話せなければならない"></div>
+                        <div class="card-thumb"><img src="../assets/img/why/field-support.webp" alt="エンジニアは現場の言葉を話せなければならない"></div>
                         <i class="fas fa-comments card-icon"></i>
                         <h3>エンジニアは現場の言葉を話せなければならない</h3>
                         <p>技術用語を理解するだけでなく、現場スタッフのニーズや制約を理解しなければなりません。</p>
                     </div>
                     <div class='card-item problem-item'>
-                        <div class="card-thumb"><img src="../assets/img/cards/system-renewal.jpg" alt="シンプルさと信頼性の追求"></div>
+                        <div class="card-thumb"><img src="../assets/img/cards/system-renewal.webp" alt="シンプルさと信頼性の追求"></div>
                         <i class="fas fa-check-circle card-icon"></i>
                         <h3>シンプルさと信頼性の追求</h3>
                         <p>過剰な設計よりも、現場が本当に必要とし、長期的に使用できるソリューションを提供します。</p>
@@ -296,7 +317,7 @@
                 <div class='team-grid'>
                     <article class='team-card'>
                         <div class='team-photo'>
-                            <img src='../assets/img/why/field-experience.jpg' alt='現場エンジニアリング担当'>
+                            <img src='../assets/img/why/field-experience.webp' alt='現場エンジニアリング担当'>
                         </div>
                         <div class='team-body'>
                             <span class='team-role'>Lead Field Engineer</span>
@@ -311,7 +332,7 @@
                     </article>
                     <article class='team-card'>
                         <div class='team-photo'>
-                            <img src='../assets/img/why/project-coordination.jpg' alt='プロジェクト調整担当'>
+                            <img src='../assets/img/why/project-coordination.webp' alt='プロジェクト調整担当'>
                         </div>
                         <div class='team-body'>
                             <span class='team-role'>Project Coordinator</span>
@@ -326,7 +347,7 @@
                     </article>
                     <article class='team-card '>
                         <div class='team-photo'>
-                            <img src='../assets/img/why/problem-solving.jpg' alt='ノートPCで試作開発を進めるエンジニア'>
+                            <img src='../assets/img/why/problem-solving.webp' alt='ノートPCで試作開発を進めるエンジニア'>
                         </div>
                         <div class='team-body'>
                             <span class='team-role'>Protype Developer</span>
@@ -412,7 +433,7 @@
         <div class='container'>
             <div class='footer-content'>
                 <div class='footer-logo'>
-                    <img src='../assets/img/logo/logo.png' alt='Izumo Soan'>
+                    <img src='../assets/img/logo/logo.webp' alt='Izumo Soan'>
                     <p class='logo-desp'>技術を現場の力に。</p>
                 </div>
                 <div class='footer-links'>
