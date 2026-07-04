@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang='en'>
 <head>
     <meta charset='UTF-8'>
@@ -50,6 +50,21 @@
     <link rel='stylesheet' href='../assets/css/fontawesome-all.min.css'>
     <link rel='stylesheet' href='../assets/css/style.css'>
     <link rel='stylesheet' href='../assets/css/custom.css'>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function() {
+            var path = window.location.pathname;
+            var dirs = ['/zh/', '/ja/', '/en/'];
+            for (var i = 0; i < dirs.length; i++) {
+                if (path.indexOf(dirs[i]) >= 0) return;
+            }
+            var lang = (navigator.language || navigator.userLanguage || 'ja').substring(0, 2);
+            var target = (lang === 'zh') ? 'zh' : (lang === 'en') ? 'en' : 'ja';
+            var idx = path.lastIndexOf('/');
+            var base = (idx >= 0) ? path.substring(0, idx + 1) : '/';
+            window.location.replace(base + target + '/index.html');
+        })();
+    </script>
 </head>
 <body>
     <header>
@@ -61,11 +76,11 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href='index.html' class='active'>Home</a></li>
+                    <li><a href='index.html'>Home</a></li>
                     <li><a href='services.html'>Services</a></li>
                     <li><a href='products.html'>Products</a></li>
                     <li><a href='case-studies.html'>Case Studies</a></li>
-                    <li><a href='about.html'>About</a></li>
+                    <li><a href='about.html' class='active'>About</a></li>
                     <li><a href='overseas-partner.html'>Overseas Partner</a></li>
                     <li><a href='index.html#contact'>Contact</a></li>
                 </ul>                <div class='language-switcher'>
@@ -190,7 +205,7 @@
                 <div class="about-image-full">
                     <img src="../assets/img/why/ot-it-integration.jpg" alt="Izumo and Soan">
                 </div>
-                <div style='display:grid; grid-template-columns: 1fr 1fr; gap: 3rem;'>
+                <div class='name-meaning-grid'>
                     <div class='name-explanation'>
                         <h3>Izumo</h3>
                         <p>Izumo is one of Japan's most legendary mythological lands. Izumo symbolizes:</p>

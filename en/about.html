@@ -86,6 +86,28 @@
     </script>
     
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../assets/css/style.min.css'>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function() {
+            var path = window.location.pathname;
+            var dirs = ['/zh/', '/ja/', '/en/'];
+            for (var i = 0; i < dirs.length; i++) {
+                if (path.indexOf(dirs[i]) >= 0) return;
+            }
+            var lang = (navigator.language || navigator.userLanguage || 'ja').substring(0, 2);
+            var target = (lang === 'zh') ? 'zh' : (lang === 'en') ? 'en' : 'ja';
+            var idx = path.lastIndexOf('/');
+            var base = (idx >= 0) ? path.substring(0, idx + 1) : '/';
+            window.location.replace(base + target + '/index.html');
+        })();
+    </script>
 <body>
     <header>
         <div class='container'>
