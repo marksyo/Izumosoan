@@ -451,6 +451,10 @@
                                 <label for='message'>お問い合わせ内容</label>
                                 <textarea id='message' name='message' rows='5' placeholder="ご相談内容をご記入ください" required></textarea>
                             </div>
+                            <div class='hp-field' aria-hidden='true' style='position:absolute;left:-9999px;top:-9999px;height:0;width:0;overflow:hidden'>
+                                <label for='hp-website'>Leave this field empty</label>
+                                <input type='text' id='hp-website' name='website' tabindex='-1' autocomplete='off'>
+                            </div>
                             <button type='submit' class='btn-primary'>メッセージを送信する</button>
                             <p style='font-size:0.85rem;color:var(--text-muted);margin-top:0.75rem;'><a href='privacy.html' target='_blank'>プライバシーポリシー</a>に同意の上、送信します。</p>
                         </form>
