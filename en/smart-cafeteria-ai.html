@@ -118,13 +118,26 @@
     <script type="application/ld+json">
     {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can AI image recognition work with existing tableware?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, no special tableware is required. You can use your existing dishes as-is, significantly reducing implementation costs."}}, {"@type": "Question", "name": "How accurate is the recognition?", "acceptedAnswer": {"@type": "Answer", "text": "The AI recognizes dishes in approximately 1 second and can identify 8 or more items simultaneously. Accuracy continuously improves through ongoing learning."}}, {"@type": "Question", "name": "What payment methods are supported?", "acceptedAnswer": {"@type": "Answer", "text": "Face recognition, QR code, and IC cards (including transit cards) are supported. Hands-free payment via face recognition is available."}}, {"@type": "Question", "name": "What types of AI settlement terminals are available?", "acceptedAnswer": {"@type": "Answer", "text": "Two types are available: dual-channel (for large cafeterias, with two recognition areas) and single-channel (for small to mid-size cafeterias, compact design)."}}]}
     </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/logo/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/logo/apple-touch-icon.png">
 </head>
 <body>
     <header>
         <div class='container'>
             <div class='logo'>
-                <a href='#'><img src='../assets/img/logo/logo.webp' alt='Izumo Soan' style='height:100px;'></a>
+                <a href='#'><img src='../assets/img/logo/logo.webp' alt='Izumo Soan' class='header-logo-img' style='height:80px;'></a>
             </div>
+                        <div class='language-switcher'>
+                    <span class='lang-label'><i class="fas fa-globe"></i></span>
+                    <select id='lang-select'>
+                        <option value='ja'>日本語</option>
+                        <option value='en' selected>English</option>
+                        <option value='zh'>中文</option>
+                    </select>
+                </div>
             <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
             <nav>
                 <ul>
@@ -136,15 +149,7 @@
                     <li><a href='overseas-partner.html'>Partners</a></li>
                     <li><a href='index.html#contact'>Contact</a></li>
                 </ul>
-                <div class='language-switcher'>
-                    <span class='lang-label'><i class="fas fa-globe"></i></span>
-                    <select id='lang-select'>
-                        <option value='ja'>日本語</option>
-                        <option value='en' selected>English</option>
-                        <option value='zh'>中文</option>
-                    </select>
-                </div>
-            </nav>
+                </nav>
         </div>
     </header>
 

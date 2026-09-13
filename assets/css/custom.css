@@ -2978,3 +2978,101 @@ footer .container {
         padding: 0.75rem 1rem;
     }
 }
+
+/* ===== Responsive Header Logo ===== */
+.header-logo-img {
+    height: 100px;
+    width: auto;
+    max-width: 100%;
+    display: block;
+}
+@media (max-width: 768px) {
+    .header-logo-img {
+        height: 56px !important;
+        width: auto;
+        max-width: 200px;
+    }
+}
+@media (max-width: 480px) {
+    .header-logo-img {
+        height: 44px !important;
+        width: auto;
+        max-width: 160px;
+    }
+}
+
+
+/* ===== Mobile Language Switcher - left of hamburger ===== */
+.language-switcher {
+    order: 2;
+}
+.hamburger {
+    order: 3;
+}
+@media (max-width: 768px) {
+    header .container {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .language-switcher {
+        position: absolute;
+        right: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 4px 10px !important;
+        font-size: 0.8rem;
+    }
+    .language-switcher .lang-label {
+        font-size: 0.7rem;
+    }
+    #lang-select {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* ===== Product Grid - 3 columns PC, 1 column mobile ===== */
+.product-showcase-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    max-width: 1200px;
+}
+@media (max-width: 992px) {
+    .product-showcase-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+
+/* ===== PC Header: Logo + Lang-switcher left, Nav right ===== */
+@media (min-width: 769px) {
+    header .container {
+        gap: 1.5rem;
+    }
+    header nav {
+        margin-left: auto;
+    }
+    .language-switcher {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+/* ===== PC Header: wider container, compact nav ===== */
+@media (min-width: 769px) {
+    header .container {
+        max-width: 1400px;
+        width: 95%;
+        padding: 0.75rem 2rem;
+    }
+    header nav ul {
+        gap: 1.2rem;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+    header nav ul li a {
+        font-size: 0.88rem;
+        padding: 0.5rem 0;
+    }
+}

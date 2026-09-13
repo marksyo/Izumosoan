@@ -118,13 +118,26 @@
     <script type="application/ld+json">
     {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "AI图像识别精算可以使用现有餐具吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以，无需专用餐具。可以直接使用现有餐具，大幅降低导入成本。"}}, {"@type": "Question", "name": "识别精度如何？", "acceptedAnswer": {"@type": "Answer", "text": "AI约1秒即可识别菜品，可同时识别8个以上菜品。通过持续学习，精度不断提升。"}}, {"@type": "Question", "name": "支持哪些支付方式？", "acceptedAnswer": {"@type": "Answer", "text": "支持人脸识别、QR码、IC卡（含交通卡）。可实现刷脸免接触支付。"}}, {"@type": "Question", "name": "AI精算终端有哪些类型？", "acceptedAnswer": {"@type": "Answer", "text": "提供双通道（适合大规模食堂，2个识别区域）和单通道（适合中小规模食堂，紧凑设计）两种类型。"}}]}
     </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/logo/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/logo/apple-touch-icon.png">
 </head>
 <body>
     <header>
         <div class='container'>
             <div class='logo'>
-                <a href='#'><img src='../assets/img/logo/logo.webp' alt='Izumo Soan' style='height:100px;'></a>
+                <a href='#'><img src='../assets/img/logo/logo.webp' alt='Izumo Soan' class='header-logo-img' style='height:80px;'></a>
             </div>
+                        <div class='language-switcher'>
+                    <span class='lang-label'><i class="fas fa-globe"></i></span>
+                    <select id='lang-select'>
+                        <option value='ja'>日本語</option>
+                        <option value='en'>English</option>
+                        <option value='zh' selected>中文</option>
+                    </select>
+                </div>
             <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
             <nav>
                 <ul>
@@ -136,15 +149,7 @@
                     <li><a href='overseas-partner.html'>海外合作伙伴</a></li>
                     <li><a href='index.html#contact'>联系我们</a></li>
                 </ul>
-                <div class='language-switcher'>
-                    <span class='lang-label'><i class="fas fa-globe"></i></span>
-                    <select id='lang-select'>
-                        <option value='ja'>日本語</option>
-                        <option value='en'>English</option>
-                        <option value='zh' selected>中文</option>
-                    </select>
-                </div>
-            </nav>
+                </nav>
         </div>
     </header>
 

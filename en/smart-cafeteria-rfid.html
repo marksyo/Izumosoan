@@ -128,13 +128,26 @@
     <script type="application/ld+json">
     {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many dishes can RFID read at once?", "acceptedAnswer": {"@type": "Answer", "text": "It can read 30 or more dishes within 1 second with over 99% accuracy."}}, {"@type": "Question", "name": "Can RFID tableware be washed?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, RFID-embedded tableware is washable and reusable. It is highly durable for long-term use."}}, {"@type": "Question", "name": "How is information written to the tableware?", "acceptedAnswer": {"@type": "Answer", "text": "A smart dispenser writes menu information to the tableware. It can be changed at any time, allowing different pricing per meal with the same dish."}}, {"@type": "Question", "name": "How much operational effort does the RFID method require?", "acceptedAnswer": {"@type": "Answer", "text": "The RFID method requires the least operational management among the three methods. Simply placing dishes on the terminal completes automatic recognition and settlement."}}]}
     </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/logo/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/logo/apple-touch-icon.png">
 </head>
 <body>
     <header>
         <div class='container'>
             <div class='logo'>
-                <a href='#'><img src='../assets/img/logo/logo.webp' alt='Izumo Soan' style='height:100px;'></a>
+                <a href='#'><img src='../assets/img/logo/logo.webp' alt='Izumo Soan' class='header-logo-img' style='height:80px;'></a>
             </div>
+                        <div class='language-switcher'>
+                    <span class='lang-label'><i class="fas fa-globe"></i></span>
+                    <select id='lang-select'>
+                        <option value='ja'>日本語</option>
+                        <option value='en' selected>English</option>
+                        <option value='zh'>中文</option>
+                    </select>
+                </div>
             <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
             <nav>
                 <ul>
@@ -146,15 +159,7 @@
                     <li><a href='overseas-partner.html'>Partners</a></li>
                     <li><a href='index.html#contact'>Contact</a></li>
                 </ul>
-                <div class='language-switcher'>
-                    <span class='lang-label'><i class="fas fa-globe"></i></span>
-                    <select id='lang-select'>
-                        <option value='ja'>日本語</option>
-                        <option value='en' selected>English</option>
-                        <option value='zh'>中文</option>
-                    </select>
-                </div>
-            </nav>
+                </nav>
         </div>
     </header>
 

@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>スマート食堂 無料POC｜AI画像認識・RFID・計量精算｜出雲創安</title>
+    <meta name='description' content='食堂の精算をAI画像認識・RFID・計量精算で自動化。行列ゼロ、人件費削減、データ経営を実現。無料POC（概念実証）受付中。'>
+    <link rel="canonical" href="https://izumosoan.com/ja/lp-smart-cafeteria.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="出雲創安 Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/ja/lp-smart-cafeteria.html">
+    <meta property="og:title" content="スマート食堂 無料POC｜AI画像認識・RFID・計量精算｜出雲創安">
+    <meta property="og:description" content="食堂の精算をAI画像認識・RFID・計量精算で自動化。行列ゼロ、人件費削減、データ経営を実現。無料POC受付中。">
+    <meta property="og:locale" content="ja_JP">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../assets/css/style.min.css'>
+
+    <style>
+    /* ===== LP Reset & Base ===== */
+    header, footer, nav { display: none !important; }
+    body { overflow-x: hidden; }
+
+
+    /* ===== 1. First View ===== */
+    .lp-hero {
+        position: relative; min-height: 100vh; display: flex; align-items: center;
+        justify-content: center; text-align: center; padding: 120px 20px 80px;
+        background: url('../assets/img/cafeteria/cafeteria-hero.webp') center/cover no-repeat;
+        color: #fff;
+    }
+    .lp-hero::before {
+        content: ''; position: absolute; inset: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0.62) 0%, rgba(48,85,52,0.72) 100%);
+    }
+    .lp-hero-inner { position: relative; z-index: 1; max-width: 800px; }
+    .lp-hero h1, .lp-hero h2, .lp-hero h3, .lp-hero br { color: #fff !important; }
+    .lp-hero h1 {
+        font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 700;
+        line-height: 1.4; margin-bottom: 20px;
+        text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+    }
+    .lp-hero .lp-sub {
+        font-size: clamp(0.95rem, 2.2vw, 1.2rem); line-height: 1.8;
+        margin-bottom: 32px; color: rgba(255,255,255,0.92) !important;
+    }
+    .lp-hero .lp-note {
+        font-size: 0.85rem; color: rgba(255,255,255,0.75) !important; margin-top: 16px;
+    }
+
+    /* ===== CTA Button ===== */
+    .lp-cta-btn {
+        display: inline-block; background: #00880F; color: #fff;
+        padding: 16px 40px; border-radius: 8px; font-size: 1.15rem;
+        font-weight: 700; text-decoration: none;
+        box-shadow: 0 4px 20px rgba(0,136,15,0.4);
+        transition: background 0.3s, transform 0.2s;
+        border: none; cursor: pointer;
+    }
+    .lp-cta-btn:hover { background: #006e0c; transform: translateY(-2px); color: #fff; text-decoration: none; }
+
+    /* ===== Section Common ===== */
+    .lp-section { padding: 72px 20px; }
+    .lp-section-bg { background: #EFF6F0; }
+    .lp-container { max-width: 1100px; margin: 0 auto; }
+    .lp-section-title {
+        text-align: center; margin-bottom: 48px;
+    }
+    .lp-section-title h2 {
+        font-size: clamp(1.4rem, 3vw, 2rem); color: #305534;
+        font-weight: 700; margin-bottom: 12px;
+    }
+    .lp-section-title p { color: #666; font-size: 0.95rem; }
+
+    /* ===== 2. Challenges ===== */
+    .lp-challenges {
+        display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    }
+    .lp-challenge-card {
+        background: #fff; border-radius: 12px; padding: 32px 20px;
+        text-align: center; box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+        transition: transform 0.3s;
+    }
+    .lp-challenge-card:hover { transform: translateY(-4px); }
+    .lp-challenge-icon { font-size: 2.4rem; margin-bottom: 14px; }
+    .lp-challenge-card h3 { font-size: 1.05rem; color: #305534; margin-bottom: 8px; }
+    .lp-challenge-card p { font-size: 0.88rem; color: #666; margin: 0; }
+
+    /* ===== 3. Solution 3 columns ===== */
+    .lp-solutions {
+        display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+    }
+    .lp-solution-card {
+        background: #fff; border-radius: 14px; overflow: hidden;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+        transition: transform 0.3s; border-top: 4px solid #00880F;
+    }
+    .lp-solution-card:hover { transform: translateY(-5px); }
+    .lp-solution-card img {
+        width: 100%; height: 200px; object-fit: contain;
+        background: #f9f9f9; padding: 16px;
+    }
+    .lp-solution-body { padding: 24px; }
+    .lp-solution-body h3 { font-size: 1.15rem; color: #305534; margin-bottom: 10px; text-align: center; }
+    .lp-solution-body p { font-size: 0.93rem; color: #555; margin: 0 0 14px; line-height: 1.7; text-align: center; }
+    .lp-solution-body ul { list-style: none; padding: 0; margin: 0; }
+    .lp-solution-body ul li { font-size: 0.88rem; color: #333; padding: 5px 0; line-height: 1.5; text-align: left; }
+    .lp-solution-body ul li i { color: #00880F; margin-right: 8px; font-size: 0.8rem; }
+
+    /* ===== 4. Numbers / Stats ===== */
+    .lp-stats {
+        display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    }
+    .lp-stat-card {
+        text-align: center; background: #fff; border-radius: 12px;
+        padding: 36px 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .lp-stat-num {
+        font-family: 'Barlow', sans-serif; font-size: 3rem; font-weight: 700;
+        color: #00880F; line-height: 1;
+    }
+    .lp-stat-label {
+        font-size: 0.9rem; color: #555; margin-top: 10px;
+    }
+
+    /* ===== 5. Mid CTA ===== */
+    .lp-mid-cta {
+        background: #00880F; padding: 56px 20px; text-align: center; color: #fff;
+    }
+    .lp-mid-cta h2 { font-size: clamp(1.3rem, 3vw, 1.7rem); color: #fff; margin-bottom: 24px; font-weight: 700; }
+    .lp-mid-cta .lp-cta-btn {
+        background: #fff; color: #00880F;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    .lp-mid-cta .lp-cta-btn:hover { background: #f0f0f0; color: #006e0c; }
+
+    /* ===== 6. Gallery ===== */
+    .lp-gallery {
+        display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+    .lp-gallery-item {
+        border-radius: 10px; overflow: hidden;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        background: #fff;
+    }
+    .lp-gallery-item img {
+        width: 100%; height: 200px; object-fit: contain;
+        background: #f5f5f5; padding: 12px;
+    }
+    .lp-gallery-caption {
+        padding: 12px 14px; font-size: 0.88rem; color: #555;
+        text-align: center; font-weight: 500;
+    }
+
+    /* ===== 7. Steps ===== */
+    .lp-steps {
+        display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+    }
+    .lp-step {
+        text-align: center; position: relative;
+        background: #fff; border-radius: 12px; padding: 32px 16px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .lp-step-num {
+        width: 48px; height: 48px; border-radius: 50%;
+        background: #00880F; color: #fff;
+        font-size: 1.2rem; font-weight: 700;
+        display: flex; align-items: center; justify-content: center;
+        margin: 0 auto 14px;
+    }
+    .lp-step h3 { font-size: 1.05rem; color: #305534; margin-bottom: 8px; }
+    .lp-step p { font-size: 0.88rem; color: #666; margin: 0; }
+    .lp-step-arrow {
+        display: none; position: absolute; right: -16px; top: 50%;
+        transform: translateY(-50%); font-size: 1.3rem; color: #00880F; z-index: 2;
+    }
+    @media (min-width: 769px) {
+        .lp-step-arrow { display: block; }
+    }
+
+    /* ===== 8. FAQ (CSS-only accordion) ===== */
+    .lp-faq { max-width: 780px; margin: 0 auto; }
+    .lp-faq details {
+        border-bottom: 1px solid #ddd; overflow: hidden;
+    }
+    .lp-faq summary {
+        padding: 18px 0; cursor: pointer; font-weight: 600; font-size: 1rem;
+        color: #2c3e50; list-style: none; display: flex; justify-content: space-between;
+        align-items: center;
+    }
+    .lp-faq summary::-webkit-details-marker { display: none; }
+    .lp-faq summary::after {
+        content: '\f078'; font-family: 'Font Awesome 5 Free'; font-weight: 900;
+        font-size: 0.85rem; color: #00880F; transition: transform 0.3s;
+        flex-shrink: 0; margin-left: 12px;
+    }
+    .lp-faq details[open] summary::after { transform: rotate(180deg); }
+    .lp-faq summary:hover { color: #00880F; }
+    .lp-faq .lp-faq-answer {
+        padding: 0 0 18px; font-size: 0.95rem; color: #555; line-height: 1.8;
+    }
+
+    /* ===== 9. Form ===== */
+    .lp-form-section { background: #EFF6F0; padding: 72px 20px; }
+    .lp-form-wrapper {
+        max-width: 680px; margin: 0 auto;
+        background: #fff; border-radius: 16px; padding: 48px 40px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .lp-form-wrapper h2 {
+        font-size: 1.5rem; color: #305534; text-align: center; margin-bottom: 32px;
+    }
+    .lp-form-group { margin-bottom: 20px; }
+    .lp-form-group label {
+        display: block; margin-bottom: 6px; font-weight: 600;
+        font-size: 0.92rem; color: #333;
+    }
+    .lp-form-group label .lp-required {
+        color: #e53e3e; font-size: 0.8rem; margin-left: 4px;
+    }
+    .lp-form-group input[type='text'],
+    .lp-form-group input[type='email'],
+    .lp-form-group select,
+    .lp-form-group textarea {
+        width: 100%; padding: 12px 14px; border: 1px solid #ccc;
+        border-radius: 6px; font-size: 0.95rem;
+        font-family: 'Noto Sans JP', sans-serif;
+        transition: border-color 0.3s;
+        box-sizing: border-box;
+    }
+    .lp-form-group input:focus,
+    .lp-form-group select:focus,
+    .lp-form-group textarea:focus {
+        outline: none; border-color: #00880F;
+        box-shadow: 0 0 0 3px rgba(0,136,15,0.12);
+    }
+    .lp-form-group textarea { resize: vertical; min-height: 100px; }
+    .lp-checkbox-group {
+        display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px;
+    }
+    .lp-checkbox-group label {
+        font-weight: 400; font-size: 0.92rem; display: flex; align-items: center; gap: 6px; cursor: pointer;
+    }
+    .lp-checkbox-group input[type='checkbox'] {
+        accent-color: #00880F; width: 18px; height: 18px;
+    }
+    .lp-form-submit {
+        display: block; width: 100%; padding: 16px;
+        background: #00880F; color: #fff; border: none; border-radius: 8px;
+        font-size: 1.1rem; font-weight: 700; cursor: pointer;
+        transition: background 0.3s; margin-top: 8px;
+    }
+    .lp-form-submit:hover { background: #006e0c; }
+    .lp-form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+    .lp-form-privacy {
+        font-size: 0.82rem; color: #888; text-align: center; margin-top: 14px;
+    }
+    .lp-form-privacy a { color: #00880F; }
+
+    /* ===== 10. Bottom Copyright ===== */
+    .lp-bottom {
+        padding: 28px 20px; text-align: center; background: #305534; color: rgba(255,255,255,0.8) !important;
+    }
+    .lp-bottom-logo { margin-bottom: 10px; }
+    .lp-bottom-logo img { height: 36px; opacity: 0.9; }
+    .lp-bottom p, .lp-bottom span { font-size: 0.82rem; margin: 0; color: rgba(255,255,255,0.8) !important; }
+    .lp-bottom a { color: rgba(255,255,255,0.9) !important; text-decoration: underline !important; font-size: 0.82rem !important; }
+
+    /* ===== Honeypot ===== */
+    .lp-hp { position: absolute; left: -9999px; top: -9999px; height: 0; width: 0; overflow: hidden; }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 991px) {
+        .lp-challenges { grid-template-columns: repeat(2, 1fr); }
+        .lp-solutions { grid-template-columns: repeat(2, 1fr); }
+        .lp-stats { grid-template-columns: repeat(2, 1fr); }
+        .lp-gallery { grid-template-columns: repeat(2, 1fr); }
+        .lp-steps { grid-template-columns: repeat(2, 1fr); }
+        .lp-step-arrow { display: none !important; }
+    }
+    @media (max-width: 575px) {
+        .lp-challenges,
+        .lp-solutions,
+        .lp-stats,
+        .lp-gallery,
+        .lp-steps { grid-template-columns: 1fr; }
+        .lp-form-wrapper { padding: 32px 20px; }
+        .lp-hero { min-height: 90vh; padding: 100px 16px 60px; }
+    }
+    </style>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/logo/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/logo/apple-touch-icon.png">
+</head>
+<body>
+
+    <!-- Logo Bar (no navigation) -->
+    <main>
+
+    <!-- ===== 1. First View ===== -->
+    <section class='lp-hero'>
+        <div class='lp-hero-inner'>
+            <h1>昼休みの10分、<br>行列に消えていませんか？</h1>
+            <p class='lp-sub'>AI精算なら1秒で完了。1,000食のピークも行列ゼロに。<br>AI画像認識・RFID・計量精算 — 食堂に最適な方式をご提案</p>
+            <a href='#lp-form' class='lp-cta-btn lp-smooth'>無料POCに申し込む ▼</a>
+            <p class='lp-note'>※ 導入前の無料検証です。お気軽にお申し込みください。</p>
+        </div>
+    </section>
+
+    <!-- ===== 2. Challenges ===== -->
+    <section class='lp-section'>
+        <div class='lp-container'>
+            <div class='lp-section-title'>
+                <h2>ランチタイム、こうなっていませんか？</h2>
+            </div>
+            <div class='lp-challenges'>
+                <div class='lp-challenge-card'>
+                    <div class='lp-challenge-icon'>🕐</div>
+                    <h3>10分以上の行列</h3>
+                    <p>ランチピークに長蛇の列。60分の昼休みのうち10分以上が行列に消え、従業員の不満が蓄積。</p>
+                </div>
+                <div class='lp-challenge-card'>
+                    <div class='lp-challenge-icon'>💰</div>
+                    <h3>行列のためにレジ増員</h3>
+                    <p>行列を減らすために窓口を増やし、各窓口に1〜2名のレジ担当。人件費が膨らむ悪循環。</p>
+                </div>
+                <div class='lp-challenge-card'>
+                    <div class='lp-challenge-icon'>📊</div>
+                    <h3>ピーク予測ができない</h3>
+                    <p>どの時間帯に何食出るか分からず、備餐の過不足や行列の長さをコントロールできない。</p>
+                </div>
+                <div class='lp-challenge-card'>
+                    <div class='lp-challenge-icon'>💳</div>
+                    <h3>支払いがもたつく</h3>
+                    <p>現金・回数券でのやり取りが遅く、1人あたり30秒以上。これがピーク時の行列をさらに悪化させる。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 3. Solutions ===== -->
+    <section class='lp-section lp-section-bg'>
+        <div class='lp-container'>
+            <div class='lp-section-title'>
+                <h2>1秒精算で、行列がなくなる。</h2>
+            </div>
+            <div class='lp-solutions'>
+                <div class='lp-solution-card'>
+                    <img src='../assets/img/cafeteria/cafeteria-ai.webp' alt='AI画像認識精算'>
+                    <div class='lp-solution-body'>
+                        <h3>AI画像認識精算</h3>
+                        <p>置くだけでAIが料理を認識。専用食器不要で、既存の食器をそのまま使用可能。</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>約1秒で料理を自動認識</li>
+                            <li><i class="fas fa-check"></i>専用食器不要、導入コスト削減</li>
+                            <li><i class="fas fa-check"></i>一度に8品以上を同時認識</li>
+                            <li><i class="fas fa-check"></i>栄養成分を自動分析</li>
+                            <li><i class="fas fa-check"></i>顔認証・QR・ICカード決済対応</li>
+                            <li><i class="fas fa-check"></i>顔パスで手ぶら決済、快適な食堂体験</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='lp-solution-card'>
+                    <img src='../assets/img/cafeteria/cafeteria-rfid.webp' alt='RFID精算'>
+                    <div class='lp-solution-body'>
+                        <h3>RFID精算</h3>
+                        <p>RFID食器を置くだけ。1秒で30品以上を読取。世界中の食堂で実績豊富。</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>一度に30個以上の食器を瞬時読取</li>
+                            <li><i class="fas fa-check"></i>読取精度99%以上</li>
+                            <li><i class="fas fa-check"></i>食器は洗浄・繰り返し使用可能</li>
+                            <li><i class="fas fa-check"></i>世界中の大学・企業食堂で実績</li>
+                            <li><i class="fas fa-check"></i>運営管理の手間が最も少ない方式</li>
+                            <li><i class="fas fa-check"></i>顔認証・QR・ICカード決済</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='lp-solution-card'>
+                    <img src='../assets/img/cafeteria/cafeteria-weighing.webp' alt='計量精算'>
+                    <div class='lp-solution-body'>
+                        <h3>計量精算</h3>
+                        <p>グラム単位で公平課金。食品ロス削減にも貢献。ビュッフェ・自助式に最適。</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>高精度電子秤でグラム単位計量</li>
+                            <li><i class="fas fa-check"></i>食べた分だけ支払う公平な課金</li>
+                            <li><i class="fas fa-check"></i>食品ロス30%以上削減</li>
+                            <li><i class="fas fa-check"></i>専用食器不要、既存の食器で運用可能</li>
+                            <li><i class="fas fa-check"></i>トレー紐付けで完全自動精算</li>
+                            <li><i class="fas fa-check"></i>顔認証・QR・ICカード決済</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 4. Numbers ===== -->
+    <section class='lp-section'>
+        <div class='lp-container'>
+            <div class='lp-section-title'>
+                <h2>数字で見る導入効果</h2>
+            </div>
+            <div class='lp-stats'>
+                <div class='lp-stat-card'>
+                    <div class='lp-stat-num'>1<span style="font-size:1.4rem;">秒</span></div>
+                    <div class='lp-stat-label'>精算スピード</div>
+                </div>
+                <div class='lp-stat-card'>
+                    <div class='lp-stat-num'>30<span style="font-size:1.4rem;">+</span></div>
+                    <div class='lp-stat-label'>一度に読取可能な品数</div>
+                </div>
+                <div class='lp-stat-card'>
+                    <div class='lp-stat-num'>80<span style="font-size:1.4rem;">%</span></div>
+                    <div class='lp-stat-label'>レジ人員削減率</div>
+                </div>
+                <div class='lp-stat-card'>
+                    <div class='lp-stat-num'>30<span style="font-size:1.4rem;">%</span></div>
+                    <div class='lp-stat-label'>食品ロス削減率</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 5. Mid CTA ===== -->
+    <section class='lp-mid-cta'>
+        <h2>行列ゼロの食堂を、無料で体験しませんか？</h2>
+        <a href='#lp-form' class='lp-cta-btn lp-smooth'>無料POCに申し込む ▼</a>
+    </section>
+
+    <!-- ===== 6. Product Gallery ===== -->
+    <section class='lp-section'>
+        <div class='lp-container'>
+            <div class='lp-section-title'>
+                <h2>導入機器のご紹介</h2>
+            </div>
+            <div class='lp-gallery'>
+                <div class='lp-gallery-item'>
+                    <img src='../assets/img/cafeteria/AIimagepay.jpg' alt='AI精算画面'>
+                    <div class='lp-gallery-caption'>AI精算画面</div>
+                </div>
+                <div class='lp-gallery-item'>
+                    <img src='../assets/img/cafeteria/AItype.jpg' alt='双通道AI精算端末'>
+                    <div class='lp-gallery-caption'>双通道AI精算端末</div>
+                </div>
+                <div class='lp-gallery-item'>
+                    <img src='../assets/img/cafeteria/AItype-2.jpg' alt='単通道AI精算端末'>
+                    <div class='lp-gallery-caption'>単通道AI精算端末</div>
+                </div>
+                <div class='lp-gallery-item'>
+                    <img src='../assets/img/cafeteria/RFIDtype.jpg' alt='RFID精算台'>
+                    <div class='lp-gallery-caption'>RFID精算台</div>
+                </div>
+                <div class='lp-gallery-item'>
+                    <img src='../assets/img/cafeteria/weight1.jpg' alt='計量端末'>
+                    <div class='lp-gallery-caption'>計量端末</div>
+                </div>
+                <div class='lp-gallery-item'>
+                    <img src='../assets/img/cafeteria/weightplate.jpg' alt='計量ステーション'>
+                    <div class='lp-gallery-caption'>計量ステーション</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 7. Steps ===== -->
+    <section class='lp-section lp-section-bg'>
+        <div class='lp-container'>
+            <div class='lp-section-title'>
+                <h2>導入までの4ステップ</h2>
+            </div>
+            <div class='lp-steps'>
+                <div class='lp-step'>
+                    <div class='lp-step-num'>1</div>
+                    <h3>ヒアリング</h3>
+                    <p>食堂の規模・形態・課題をお伺いします。</p>
+                    <span class='lp-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                </div>
+                <div class='lp-step'>
+                    <div class='lp-step-num'>2</div>
+                    <h3>最適提案</h3>
+                    <p>3方式から最適な組み合わせをご提案します。</p>
+                    <span class='lp-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                </div>
+                <div class='lp-step'>
+                    <div class='lp-step-num'>3</div>
+                    <h3>無料POC</h3>
+                    <p>実際の食堂環境でテスト運用を実施します。</p>
+                    <span class='lp-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                </div>
+                <div class='lp-step'>
+                    <div class='lp-step-num'>4</div>
+                    <h3>本導入</h3>
+                    <p>運用開始、継続サポートをご提供します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 8. FAQ ===== -->
+    <section class='lp-section'>
+        <div class='lp-container'>
+            <div class='lp-section-title'>
+                <h2>よくある質問</h2>
+            </div>
+            <div class='lp-faq'>
+                <details>
+                    <summary>どの方式が自社に合っていますか？</summary>
+                    <div class='lp-faq-answer'>食堂の規模・形態・運営方法をヒアリングした上で、最適な方式をご提案いたします。定食スタイルにはAI画像認識やRFID方式、ビュッフェスタイルには計量方式が適しています。複数方式の併用も可能です。</div>
+                </details>
+                <details>
+                    <summary>既存の食器をそのまま使えますか？</summary>
+                    <div class='lp-faq-answer'>AI画像認識方式であれば、既存の食器をそのまま使用できます。RFID方式は専用のRFID内蔵食器が必要です。計量方式は専用トレーを使用します。</div>
+                </details>
+                <details>
+                    <summary>どのような決済方法に対応していますか？</summary>
+                    <div class='lp-faq-answer'>顔認証、QRコード、ICカード（交通系含む）、クレジットカードに対応しています。方式によって対応範囲が異なりますので、詳細はお問い合わせください。</div>
+                </details>
+                <details>
+                    <summary>導入にかかる期間はどのくらいですか？</summary>
+                    <div class='lp-faq-answer'>ヒアリングからPOC開始まで約1〜2ヶ月、POC実施期間は約1〜3ヶ月が目安です。</div>
+                </details>
+                <details>
+                    <summary>3つの方式を組み合わせることは可能ですか？</summary>
+                    <div class='lp-faq-answer'>はい、可能です。同一食堂内で複数の精算方式を併用できます。例えば、定食コーナーはAI方式、ビュッフェコーナーは計量方式といった運用が可能です。</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 9. Form ===== -->
+    <section class='lp-form-section' id='lp-form'>
+        <div class='lp-container'>
+            <div class='lp-form-wrapper'>
+                <h2>無料POCのお申し込み・ご相談</h2>
+                <div style='background: #EFF6F0; border-radius: 10px; padding: 20px 24px; margin-bottom: 28px; font-size: 0.9rem; line-height: 1.8; color: #333;'>
+                    <p style='font-weight: 700; color: #305534; margin-bottom: 8px; font-size: 0.95rem;'>【無料POCの概要】</p>
+                    <ul style='list-style: none; padding: 0; margin: 0;'>
+                        <li>✅ 対象：企業・学校・病院等の食堂運営者様</li>
+                        <li>✅ 期間：要相談</li>
+                        <li>✅ 費用：POC期間中は無料（機器貸出・設置・サポート含む）</li>
+                        <li>✅ 対応エリア：関東</li>
+                        <li>✅ 条件：1日100食以上の食堂が目安です</li>
+                    </ul>
+                </div>
+                <form id='lp-contact-form'
+                      data-success='お申し込みありがとうございます。内容を確認の上、ご連絡いたします。'
+                      data-error='送信に失敗しました。しばらく経ってからもう一度お試しください。'
+                      data-submit='無料POCに申し込む'
+                      data-sending='送信中...'>
+
+                    <div class='lp-form-group'>
+                        <label for='lp-name'>お名前 <span class='lp-required'>*必須</span></label>
+                        <input type='text' id='lp-name' name='name' placeholder='出雲 太郎' required>
+                    </div>
+
+                    <div class='lp-form-group'>
+                        <label for='lp-email'>メールアドレス <span class='lp-required'>*必須</span></label>
+                        <input type='email' id='lp-email' name='email' placeholder='example@company.co.jp' required>
+                    </div>
+
+                    <div class='lp-form-group'>
+                        <label for='lp-company'>会社名・組織名</label>
+                        <input type='text' id='lp-company' name='company' placeholder='株式会社○○'>
+                    </div>
+
+                    <div class='lp-form-group'>
+                        <label for='lp-scale'>食堂の規模</label>
+                        <select id='lp-scale' name='scale'>
+                            <option value='' selected disabled>選択してください</option>
+                            <option value='~100食/日'>〜100食/日</option>
+                            <option value='100~500食/日'>100〜500食/日</option>
+                            <option value='500~1000食/日'>500〜1000食/日</option>
+                            <option value='1000食以上/日'>1000食以上/日</option>
+                        </select>
+                    </div>
+
+                    <div class='lp-form-group'>
+                        <label>関心のある方式</label>
+                        <div class='lp-checkbox-group'>
+                            <label><input type='checkbox' name='interest' value='AI画像認識'> AI画像認識</label>
+                            <label><input type='checkbox' name='interest' value='RFID'> RFID</label>
+                            <label><input type='checkbox' name='interest' value='計量精算'> 計量精算</label>
+                            <label><input type='checkbox' name='interest' value='まだ決まっていない'> まだ決まっていない</label>
+                        </div>
+                    </div>
+
+                    <div class='lp-form-group'>
+                        <label for='lp-message'>ご質問・ご要望</label>
+                        <textarea id='lp-message' name='message' rows='4' placeholder='ご質問やご要望がございましたらご記入ください'></textarea>
+                    </div>
+
+                    <!-- Honeypot -->
+                    <div class='lp-hp' aria-hidden='true'>
+                        <label for='lp-hp-website'>Leave this field empty</label>
+                        <input type='text' id='lp-hp-website' name='website' tabindex='-1' autocomplete='off'>
+                    </div>
+
+                    <button type='submit' class='lp-form-submit'>無料POCに申し込む</button>
+
+                    <p class='lp-form-privacy'>
+                        <a href='privacy.html' target='_blank'>プライバシーポリシー</a>に同意の上、送信します。
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 10. Bottom ===== -->
+    <div class='lp-bottom'>
+        <div class='lp-bottom-logo'>
+            <img src='../assets/img/logo/logo.webp' alt='出雲創安'>
+        </div>
+        <p>&copy; 2026 出雲創安 Izumo Soan. All rights reserved. ｜ <a href='privacy.html'>プライバシーポリシー</a></p>
+    </div>
+
+    </main>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+    /* Smooth scroll for CTA buttons */
+    document.querySelectorAll('.lp-smooth').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    /* EmailJS form handler (same config as index.html) */
+    (function() {
+        var form = document.getElementById('lp-contact-form');
+        if (!form) return;
+
+        emailjs.init('43OQ_Ry644Q3c0bdc');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            /* Honeypot check */
+            var hp = form.querySelector('input[name="website"]');
+            if (hp && hp.value.trim() !== '') {
+                var okMsg = form.getAttribute('data-success') || 'Sent!';
+                alert(okMsg);
+                form.reset();
+                return;
+            }
+
+            var btn = form.querySelector('.lp-form-submit');
+            var originalText = form.getAttribute('data-submit') || '無料POCに申し込む';
+            btn.disabled = true;
+            btn.textContent = form.getAttribute('data-sending') || '送信中...';
+
+            /* Collect checkbox values into a hidden string for emailjs */
+            var interests = [];
+            form.querySelectorAll('input[name="interest"]:checked').forEach(function(cb) {
+                interests.push(cb.value);
+            });
+            var interestStr = interests.join(', ') || '未選択';
+
+            /* Build template params */
+            var params = {
+                name: form.querySelector('[name="name"]').value,
+                email: form.querySelector('[name="email"]').value,
+                company: form.querySelector('[name="company"]').value || '未入力',
+                message: '[LP スマート食堂 POC申込]\n'
+                    + '食堂規模: ' + (form.querySelector('[name="scale"]').value || '未選択') + '\n'
+                    + '関心方式: ' + interestStr + '\n\n'
+                    + (form.querySelector('[name="message"]').value || 'なし')
+            };
+
+            emailjs.send('izumosoan_contact', 'template_l4qxgu6', params)
+                .then(function() {
+                    var msg = form.getAttribute('data-success') || 'Sent!';
+                    alert(msg);
+                    form.reset();
+                })
+                .catch(function() {
+                    var msg = form.getAttribute('data-error') || 'Failed.';
+                    alert(msg);
+                })
+                .finally(function() {
+                    btn.disabled = false;
+                    btn.textContent = originalText;
+                });
+        });
+    })();
+    </script>
+
+</body>
+</html>

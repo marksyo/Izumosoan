@@ -78,7 +78,7 @@
     .lp-stat-note { text-align: center; font-size: 0.78rem; color: #999; margin-top: 20px; }
 
     /* ===== ③ Target ===== */
-    .lp-targets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .lp-targets { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
     .lp-target-card { background: #fff; border-radius: 12px; padding: 28px 16px; text-align: center; border: 2px solid #e8eef3; transition: all 0.3s; }
     .lp-target-card:hover { border-color: #00880F; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,136,15,0.1); }
     .lp-target-icon { font-size: 2.2rem; margin-bottom: 10px; }
@@ -256,6 +256,11 @@
                     <div class='lp-target-icon'>🏥</div>
                     <h3>病院・施設食堂</h3>
                     <p>スタッフの負担を減らし、効率的な運営をしたい</p>
+                </div>
+                <div class='lp-target-card'>
+                    <div class='lp-target-icon'>📈</div>
+                    <h3>1日100食以上の食堂</h3>
+                    <p>ピーク時の処理能力を上げて回転率を改善したい</p>
                 </div>
             </div>
         </div>
@@ -599,12 +604,11 @@ document.querySelectorAll('.lp-smooth').forEach(function(btn) {
 (function() {
     var form = document.getElementById('lp-contact-form');
     if (!form) return;
-    if (typeof emailjs !== 'undefined') { emailjs.init('43OQ_Ry644Q3c0bdc'); }
+    emailjs.init('43OQ_Ry644Q3c0bdc');
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         var hp = form.querySelector('input[name="website"]');
         if (hp && hp.value.trim() !== '') { alert(form.getAttribute('data-success')); form.reset(); return; }
-        if (typeof emailjs === 'undefined') { alert('送信機能を読み込み中です。ページを再読み込みしてください。'); return; }
         var btn = form.querySelector('.lp-form-submit');
         var originalText = form.getAttribute('data-submit');
         btn.disabled = true;
