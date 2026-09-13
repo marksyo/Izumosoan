@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>AI Image Recognition Checkout | Smart Cafeteria Solutions | Izumo Soan</title>
+    <meta name='description' content='AI image recognition instantly identifies dishes and auto-calculates the total. No special dishware required — use your existing dishes as-is. Dual-lane and single-lane models to match your cafeteria scale. Free POC available.'>
+
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/smart-cafeteria-ai.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/smart-cafeteria-ai.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/smart-cafeteria-ai.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/smart-cafeteria-ai.html">
+    <link rel="canonical" href="https://izumosoan.com/en/smart-cafeteria-ai.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="出雲創安 Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/en/smart-cafeteria-ai.html">
+    <meta property="og:title" content="AI Image Recognition Checkout | Smart Cafeteria Solutions | Izumo Soan">
+    <meta property="og:description" content="AI image recognition instantly identifies dishes and auto-calculates the total. No special dishware required — use your existing dishes as-is. Dual-lane and single-lane models to match your cafeteria scale. Free POC available.">
+    <meta property="og:locale" content="en_US">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"出雲創安 Izumo Soan","url":"https://izumosoan.com","address":{"@type":"PostalAddress","addressLocality":"Katsushika-ku","addressRegion":"Tokyo","streetAddress":"Higashitateishi 4-37-8","addressCountry":"JP"},"description":"Technology partner connecting field, safety and operations"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://izumosoan.com/en/index.html"},{"@type":"ListItem","position":2,"name":"Services","item":"https://izumosoan.com/en/services.html"},{"@type":"ListItem","position":3,"name":"Smart Cafeteria","item":"https://izumosoan.com/en/smart-cafeteria.html"},{"@type":"ListItem","position":4,"name":"AI Image Recognition Checkout","item":"https://izumosoan.com/en/smart-cafeteria-ai.html"}]}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../assets/css/style.min.css'>
+
+    <style>
+    /* AI Image Recognition page-specific styles */
+    .aic-ai-hero { background: linear-gradient(135deg, #EFF6F0 0%, #d4edda 100%); padding: 80px 0 60px; }
+    .aic-ai-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .aic-ai-hero h1 { font-size: 2.4rem; color: #2c3e50; margin-bottom: 10px; }
+    .aic-ai-hero .subtitle { font-size: 1.15rem; color: #555; line-height: 1.8; margin-bottom: 20px; }
+    .aic-ai-hero-points { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 28px; }
+    .aic-ai-hero-points span { background: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; color: #00880F; border: 1px solid #00880F; }
+    .aic-ai-hero-points span i { margin-right: 6px; }
+    .aic-ai-hero-visual { border-radius: 16px; overflow: hidden; }
+    .aic-ai-hero-visual img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; display: block; }
+    .aic-ai-hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .aic-ai-breadcrumb { padding: 14px 0; font-size: 0.85rem; color: #888; }
+    .aic-ai-breadcrumb a { color: #00880F; text-decoration: none; }
+    .aic-ai-breadcrumb a:hover { text-decoration: underline; }
+    .aic-ai-breadcrumb span { margin: 0 6px; }
+
+    .aic-ai-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 30px; }
+    .aic-ai-step { text-align: center; position: relative; }
+    .aic-ai-step-num { width: 50px; height: 50px; border-radius: 50%; background: #00880F; color: #fff; font-size: 1.3rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .aic-ai-step-icon { font-size: 2.5rem; color: #00880F; margin-bottom: 12px; }
+    .aic-ai-step h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .aic-ai-step p { font-size: 0.9rem; color: #666; }
+    .aic-ai-step-arrow { display: none; }
+    @media (min-width: 768px) {
+        .aic-ai-step-arrow { display: block; position: absolute; right: -20px; top: 50px; font-size: 1.5rem; color: #00880F; }
+    }
+
+    .aic-ai-products { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .aic-ai-product-card { background: #fff; border-radius: 14px; padding: 36px 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); transition: transform 0.3s; border-top: 4px solid #00880F; }
+    .aic-ai-product-card:hover { transform: translateY(-5px); }
+    .aic-ai-product-card .aic-ai-product-img { margin-bottom: 20px; text-align: center; min-height: 220px; display: flex; align-items: center; justify-content: center; }
+    .aic-ai-product-card .aic-ai-product-img img { max-width: 100%; max-height: 240px; object-fit: contain; border-radius: 8px; }
+    .aic-ai-product-card h3 { font-size: 1.25rem; text-align: center; margin-bottom: 10px; color: #2c3e50; }
+    .aic-ai-product-card .aic-ai-product-desc { font-size: 0.93rem; color: #555; line-height: 1.8; margin-bottom: 18px; text-align: center; }
+    .aic-ai-product-card ul { list-style: none; padding: 0; margin: 0; }
+    .aic-ai-product-card ul li { font-size: 0.9rem; color: #333; padding: 6px 0; border-bottom: 1px solid #f0f0f0; }
+    .aic-ai-product-card ul li:last-child { border-bottom: none; }
+    .aic-ai-product-card ul li i { color: #00880F; margin-right: 8px; font-size: 0.85rem; }
+
+    .aic-ai-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .aic-ai-feature-card { background: #fff; border-radius: 12px; padding: 30px 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.3s; }
+    .aic-ai-feature-card:hover { transform: translateY(-4px); }
+    .aic-ai-feature-card i { font-size: 2rem; color: #00880F; margin-bottom: 14px; }
+    .aic-ai-feature-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    .aic-ai-feature-card p { font-size: 0.9rem; color: #666; margin: 0; line-height: 1.7; }
+
+    .aic-ai-spec-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .aic-ai-spec-table th, .aic-ai-spec-table td { padding: 14px 18px; border-bottom: 1px solid #ddd; text-align: left; font-size: 0.92rem; }
+    .aic-ai-spec-table thead th { background: #305534; color: #fff; font-weight: 600; }
+    .aic-ai-spec-table tbody tr:nth-child(even) { background: #f9f9f9; }
+    .aic-ai-spec-table td:first-child { font-weight: 600; color: #2c3e50; white-space: nowrap; min-width: 150px; }
+
+    .aic-ai-effects { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .aic-ai-effect-card { background: #fff; border-radius: 12px; padding: 30px 20px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.3s; }
+    .aic-ai-effect-card:hover { transform: translateY(-4px); }
+    .aic-ai-effect-card i { font-size: 2.2rem; color: #00880F; margin-bottom: 14px; }
+    .aic-ai-effect-card h3 { font-size: 1.05rem; margin-bottom: 10px; }
+    .aic-ai-effect-card p { font-size: 0.9rem; color: #666; margin: 0; }
+
+    .aic-ai-cta { background: #305534; padding: 60px 0; text-align: center; color: #fff; }
+    .aic-ai-cta h2 { color: #fff; font-size: 1.6rem; margin-bottom: 12px; }
+    .aic-ai-cta p { color: rgba(255,255,255,0.85); margin-bottom: 24px; }
+    .aic-ai-cta .btn-primary { background: #00880F; color: #fff; padding: 14px 32px; border-radius: 6px; font-size: 1rem; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.3s; }
+    .aic-ai-cta .btn-primary:hover { background: #00660C; text-decoration: none; }
+    .aic-ai-cta .aic-ai-phone { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-top: 16px; }
+    .aic-ai-cta .aic-ai-phone i { margin-right: 6px; }
+
+    @media (max-width: 991px) {
+        .aic-ai-hero-grid { grid-template-columns: 1fr; }
+        .aic-ai-features { grid-template-columns: repeat(2, 1fr); }
+        .aic-ai-products { grid-template-columns: repeat(2, 1fr); }
+        .aic-ai-steps { grid-template-columns: repeat(3, 1fr); }
+        .aic-ai-effects { grid-template-columns: repeat(2, 1fr); }
+        .aic-ai-hero h1 { font-size: 1.8rem; }
+    }
+    @media (max-width: 575px) {
+        .aic-ai-features, .aic-ai-products, .aic-ai-steps, .aic-ai-effects { grid-template-columns: 1fr; }
+        .aic-ai-spec-table { font-size: 0.82rem; }
+        .aic-ai-spec-table th, .aic-ai-spec-table td { padding: 10px 10px; }
+    }
+    </style>
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can AI image recognition work with existing tableware?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, no special tableware is required. You can use your existing dishes as-is, significantly reducing implementation costs."}}, {"@type": "Question", "name": "How accurate is the recognition?", "acceptedAnswer": {"@type": "Answer", "text": "The AI recognizes dishes in approximately 1 second and can identify 8 or more items simultaneously. Accuracy continuously improves through ongoing learning."}}, {"@type": "Question", "name": "What payment methods are supported?", "acceptedAnswer": {"@type": "Answer", "text": "Face recognition, QR code, and IC cards (including transit cards) are supported. Hands-free payment via face recognition is available."}}, {"@type": "Question", "name": "What types of AI settlement terminals are available?", "acceptedAnswer": {"@type": "Answer", "text": "Two types are available: dual-channel (for large cafeterias, with two recognition areas) and single-channel (for small to mid-size cafeterias, compact design)."}}]}
+    </script>
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='#'><img src='../assets/img/logo/logo.webp' alt='Izumo Soan' style='height:100px;'></a>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
+            <nav>
+                <ul>
+                    <li><a href='index.html'>Home</a></li>
+                    <li><a href='services.html' class='active'>Services</a></li>
+                    <li><a href='products.html'>Products</a></li>
+                    <li><a href='case-studies.html'>Case Studies</a></li>
+                    <li><a href='about.html'>About</a></li>
+                    <li><a href='overseas-partner.html'>Partners</a></li>
+                    <li><a href='index.html#contact'>Contact</a></li>
+                </ul>
+                <div class='language-switcher'>
+                    <span class='lang-label'><i class="fas fa-globe"></i></span>
+                    <select id='lang-select'>
+                        <option value='ja'>日本語</option>
+                        <option value='en' selected>English</option>
+                        <option value='zh'>中文</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <div class='aic-ai-breadcrumb'>
+            <div class='container'>
+                <a href='index.html'>Home</a><span>›</span>
+                <a href='services.html'>Services</a><span>›</span>
+                <a href='smart-cafeteria.html'>Smart Cafeteria</a><span>›</span>
+                AI Image Recognition Checkout
+            </div>
+        </div>
+
+        <!-- 1. Hero -->
+        <section class='aic-ai-hero'>
+            <div class='container aic-ai-hero-grid'>
+                <div>
+                    <h1>AI Instantly Identifies Every Dish.</h1>
+                    <p class='subtitle'>AI cameras automatically recognize dishes on the tray, instantly calculating items and totals.<br>No special dishware needed — use your existing dishes. Seamless payment via face recognition, QR code, or IC card.</p>
+                    <div class='aic-ai-hero-points'>
+                        <span><i class="fas fa-check"></i>No Special Dishware</span>
+                        <span><i class="fas fa-check"></i>~1 Second Recognition</span>
+                        <span><i class="fas fa-check"></i>Auto Nutrition Analysis</span>
+                    </div>
+                    <div class='aic-ai-hero-buttons'>
+                        <a href='index.html#contact' class='btn-primary'>Request Free Demo / POC</a>
+                    </div>
+                </div>
+                <div class='aic-ai-hero-visual'>
+                    <img src='../assets/img/cafeteria/AIimagepay.jpg' alt='AI image recognition checkout — recognizing dishes and calculating totals with face recognition payment'>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. How It Works (3 Steps) -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>How AI Image Recognition Works</h2>
+                    <p>Simply place the tray and dishes are automatically recognized. Checkout is complete in 3 easy steps.</p>
+                </div>
+                <div class='aic-ai-steps'>
+                    <div class='aic-ai-step'>
+                        <div class='aic-ai-step-num'>1</div>
+                        <div class='aic-ai-step-icon'><i class="fas fa-utensils"></i></div>
+                        <h3>Place Dishes on the Tray</h3>
+                        <p>Load your chosen dishes onto the tray and set it on the terminal. No special dishware or operation required.</p>
+                        <span class='aic-ai-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                    </div>
+                    <div class='aic-ai-step'>
+                        <div class='aic-ai-step-num'>2</div>
+                        <div class='aic-ai-step-icon'><i class="fas fa-camera"></i></div>
+                        <h3>AI Camera Auto-Recognition</h3>
+                        <p>AI instantly identifies each dish and displays the item names and prices on the screen.</p>
+                        <span class='aic-ai-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                    </div>
+                    <div class='aic-ai-step'>
+                        <div class='aic-ai-step-num'>3</div>
+                        <div class='aic-ai-step-icon'><i class="fas fa-user-check"></i></div>
+                        <h3>Pay via Face / QR / IC Card</h3>
+                        <p>Complete payment smoothly using face recognition, QR code, IC card, or your preferred method.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Product Lineup -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>AI Checkout Terminal Lineup</h2>
+                    <p>Choose from two models to match your cafeteria's scale and layout.</p>
+                </div>
+                <div class='aic-ai-products'>
+                    <div class='aic-ai-product-card'>
+                        <div class='aic-ai-product-img'>
+                            <img src='../assets/img/cafeteria/AItype.jpg' alt='AI Checkout Terminal (Dual-Lane) — large table-top model'>
+                        </div>
+                        <h3>AI Checkout Terminal (Dual-Lane)</h3>
+                        <p class='aic-ai-product-desc'>High-throughput model with two recognition zones.<br>Designed for large cafeterias and peak-hour high-volume processing.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>Dual 15.6-inch touchscreen displays</li>
+                            <li><i class="fas fa-check"></i>Recognizes 8+ items simultaneously</li>
+                            <li><i class="fas fa-check"></i>Recognition complete within 2 seconds</li>
+                            <li><i class="fas fa-check"></i>IC card / QR code / face recognition</li>
+                        </ul>
+                    </div>
+                    <div class='aic-ai-product-card'>
+                        <div class='aic-ai-product-img'>
+                            <img src='../assets/img/cafeteria/AItype-2.jpg' alt='AI Checkout Terminal (Single-Lane) — slim kiosk model'>
+                        </div>
+                        <h3>AI Checkout Terminal (Single-Lane)</h3>
+                        <p class='aic-ai-product-desc'>Compact, slim kiosk design.<br>Ideal for small to mid-size cafeterias or spaces with limited room.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>15.6-inch main display + side panel</li>
+                            <li><i class="fas fa-check"></i>Compact design saves space</li>
+                            <li><i class="fas fa-check"></i>Flexible placement — fits anywhere</li>
+                            <li><i class="fas fa-check"></i>IC card / QR code / face recognition</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Key Features -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'><h2>Key Features</h2></div>
+                <div class='aic-ai-features'>
+                    <div class='aic-ai-feature-card'>
+                        <i class="fas fa-utensil-spoon"></i>
+                        <h3>No Special Dishware</h3>
+                        <p>Use your existing dishes as-is — no need to replace them with dedicated dishware. Dramatically reduces implementation costs.</p>
+                    </div>
+                    <div class='aic-ai-feature-card'>
+                        <i class="fas fa-bolt"></i>
+                        <h3>High-Speed Recognition</h3>
+                        <p>Recognizes dishes and calculates totals in approximately 1 second. Significantly reduces peak-hour checkout lines and user stress.</p>
+                    </div>
+                    <div class='aic-ai-feature-card'>
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>Nutrition Analysis</h3>
+                        <p>Automatically calculates nutritional data (calories, sodium, protein, etc.) for each meal. Supports employee health management.</p>
+                    </div>
+                    <div class='aic-ai-feature-card'>
+                        <i class="fas fa-desktop"></i>
+                        <h3>PC Management Platform</h3>
+                        <p>Centralized web-based management for products, orders, sales analytics, and equipment. Dramatically improves operational efficiency.</p>
+                    </div>
+                    <div class='aic-ai-feature-card'>
+                        <i class="fas fa-wallet"></i>
+                        <h3>Multiple Payment Options</h3>
+                        <p>Supports face recognition, QR code, and IC card payments. Enables hygienic and efficient cashless operations.</p>
+                    </div>
+                    <div class='aic-ai-feature-card'>
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Data Utilization</h3>
+                        <p>Leverage accumulated data — sales, menu popularity, peak-hour analysis — to continuously improve cafeteria operations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Technical Specifications -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>Technical Specifications</h2>
+                    <p>Key specifications for the AI Checkout Terminal (Dual-Lane)</p>
+                </div>
+                <div style='overflow-x:auto;'>
+                    <table class='aic-ai-spec-table'>
+                        <thead>
+                            <tr><th>Item</th><th>Specification</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>CPU</td><td>64-bit 8-core CPU</td></tr>
+                            <tr><td>Storage</td><td>16G FLASH, 2G DDR3</td></tr>
+                            <tr><td>Display</td><td>Main: 15.6" 1080P touchscreen / Sub: 15.6" 1080P touchscreen</td></tr>
+                            <tr><td>QR Scanner</td><td>QR Code, Code 128/39, etc. — 360° rotation reading</td></tr>
+                            <tr><td>Face Recognition Camera</td><td>Dual infrared camera, 2MP</td></tr>
+                            <tr><td>Contactless Card</td><td>M1/CPU card, ISO/IEC14443 compliant</td></tr>
+                            <tr><td>Communication</td><td>Ethernet 10/100Mbps, WiFi 2.4GHz, Bluetooth 4.0</td></tr>
+                            <tr><td>Power</td><td>AC220V input, DC12V/5A output</td></tr>
+                            <tr><td>Operating Environment</td><td>-10℃ to 50℃, humidity 10–93%</td></tr>
+                            <tr><td>Dimensions</td><td>1475 × 650 × 1100mm</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Implementation Benefits -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'><h2>Implementation Benefits</h2></div>
+                <div class='aic-ai-effects'>
+                    <div class='aic-ai-effect-card'>
+                        <i class="fas fa-user-minus"></i>
+                        <h3>Reduced Cashier Staff</h3>
+                        <p>Save 1–2 staff members per checkout lane. Helps alleviate chronic labor shortages.</p>
+                    </div>
+                    <div class='aic-ai-effect-card'>
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h3>Faster Checkout</h3>
+                        <p>Dramatically shortens peak-hour lines, allowing employees to make the most of their lunch breaks.</p>
+                    </div>
+                    <div class='aic-ai-effect-card'>
+                        <i class="fas fa-check-double"></i>
+                        <h3>Zero Billing Errors</h3>
+                        <p>AI-powered auto-calculation eliminates human errors, ensuring accurate billing every time.</p>
+                    </div>
+                    <div class='aic-ai-effect-card'>
+                        <i class="fas fa-seedling"></i>
+                        <h3>Reduced Food Waste</h3>
+                        <p>Data-driven meal planning enables accurate preparation, reducing food waste and environmental impact.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CTA -->
+        <section class='aic-ai-cta'>
+            <div class='container'>
+                <h2>Experience AI Checkout in Action</h2>
+                <p>Considering AI image recognition checkout for your cafeteria?<br>Contact us for a free demo, POC consultation, or to request materials.</p>
+                <a href='index.html#contact' class='btn-primary'>Contact Us / Request Demo</a>
+                <div class='aic-ai-phone'><i class="fas fa-phone-alt"></i> 050-1258-9122</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../assets/img/logo/logo.webp' alt='Izumo Soan'>
+                    <p class='logo-desp'>Technology that powers the field</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href='index.html'>Home</a></li>
+                        <li><a href='about.html'>About</a></li>
+                        <li><a href='services.html'>Services</a></li>
+                        <li><a href='case-studies.html'>Case Studies</a></li>
+                        <li><a href='overseas-partner.html'>Overseas Partner</a></li>
+                        <li><a href='privacy.html'>Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>Products</h4>
+                    
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='smart-cafeteria.html'>
+                            <span>Smart Cafeteria</span>
+                            <small>AI Recognition · RFID · Weighing</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>Smart Site Operations Platform</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 Izumo Soan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src='../assets/js/main.js'></script>
+    <script src='../assets/js/lang-switcher.js'></script>
+</body>
+</html>

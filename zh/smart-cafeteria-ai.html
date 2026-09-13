@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang='zh'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>AI图像识别结算 | 智慧食堂解决方案 | 出云创安</title>
+    <meta name='description' content='AI图像识别瞬间识别食堂菜品并自动结算。无需专用餐具，可直接使用现有餐具。提供双通道·单通道两种类型，适配不同规模食堂。免费POC进行中。'>
+
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/smart-cafeteria-ai.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/smart-cafeteria-ai.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/smart-cafeteria-ai.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/smart-cafeteria-ai.html">
+    <link rel="canonical" href="https://izumosoan.com/zh/smart-cafeteria-ai.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="出云创安 Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/zh/smart-cafeteria-ai.html">
+    <meta property="og:title" content="AI图像识别结算 | 智慧食堂解决方案 | 出云创安">
+    <meta property="og:description" content="AI图像识别瞬间识别食堂菜品并自动结算。无需专用餐具，可直接使用现有餐具。提供双通道·单通道两种类型，适配不同规模食堂。免费POC进行中。">
+    <meta property="og:locale" content="zh_CN">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"出云创安 Izumo Soan","url":"https://izumosoan.com","address":{"@type":"PostalAddress","addressLocality":"葛飾区","addressRegion":"東京都","streetAddress":"東立石4-37-8","addressCountry":"JP"},"description":"连接现场、安全与运营的技术合作伙伴"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://izumosoan.com/zh/index.html"},{"@type":"ListItem","position":2,"name":"服务","item":"https://izumosoan.com/zh/services.html"},{"@type":"ListItem","position":3,"name":"智慧食堂","item":"https://izumosoan.com/zh/smart-cafeteria.html"},{"@type":"ListItem","position":4,"name":"AI图像识别结算","item":"https://izumosoan.com/zh/smart-cafeteria-ai.html"}]}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../assets/css/style.min.css'>
+
+    <style>
+    /* AI Image Recognition page-specific styles */
+    .aic-ai-hero { background: linear-gradient(135deg, #EFF6F0 0%, #d4edda 100%); padding: 80px 0 60px; }
+    .aic-ai-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .aic-ai-hero h1 { font-size: 2.4rem; color: #2c3e50; margin-bottom: 10px; }
+    .aic-ai-hero .subtitle { font-size: 1.15rem; color: #555; line-height: 1.8; margin-bottom: 20px; }
+    .aic-ai-hero-points { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 28px; }
+    .aic-ai-hero-points span { background: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; color: #00880F; border: 1px solid #00880F; }
+    .aic-ai-hero-points span i { margin-right: 6px; }
+    .aic-ai-hero-visual { border-radius: 16px; overflow: hidden; }
+    .aic-ai-hero-visual img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; display: block; }
+    .aic-ai-hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .aic-ai-breadcrumb { padding: 14px 0; font-size: 0.85rem; color: #888; }
+    .aic-ai-breadcrumb a { color: #00880F; text-decoration: none; }
+    .aic-ai-breadcrumb a:hover { text-decoration: underline; }
+    .aic-ai-breadcrumb span { margin: 0 6px; }
+
+    .aic-ai-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 30px; }
+    .aic-ai-step { text-align: center; position: relative; }
+    .aic-ai-step-num { width: 50px; height: 50px; border-radius: 50%; background: #00880F; color: #fff; font-size: 1.3rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .aic-ai-step-icon { font-size: 2.5rem; color: #00880F; margin-bottom: 12px; }
+    .aic-ai-step h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .aic-ai-step p { font-size: 0.9rem; color: #666; }
+    .aic-ai-step-arrow { display: none; }
+    @media (min-width: 768px) {
+        .aic-ai-step-arrow { display: block; position: absolute; right: -20px; top: 50px; font-size: 1.5rem; color: #00880F; }
+    }
+
+    .aic-ai-products { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .aic-ai-product-card { background: #fff; border-radius: 14px; padding: 36px 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); transition: transform 0.3s; border-top: 4px solid #00880F; }
+    .aic-ai-product-card:hover { transform: translateY(-5px); }
+    .aic-ai-product-card .aic-ai-product-img { margin-bottom: 20px; text-align: center; min-height: 220px; display: flex; align-items: center; justify-content: center; }
+    .aic-ai-product-card .aic-ai-product-img img { max-width: 100%; max-height: 240px; object-fit: contain; border-radius: 8px; }
+    .aic-ai-product-card h3 { font-size: 1.25rem; text-align: center; margin-bottom: 10px; color: #2c3e50; }
+    .aic-ai-product-card .aic-ai-product-desc { font-size: 0.93rem; color: #555; line-height: 1.8; margin-bottom: 18px; text-align: center; }
+    .aic-ai-product-card ul { list-style: none; padding: 0; margin: 0; }
+    .aic-ai-product-card ul li { font-size: 0.9rem; color: #333; padding: 6px 0; border-bottom: 1px solid #f0f0f0; }
+    .aic-ai-product-card ul li:last-child { border-bottom: none; }
+    .aic-ai-product-card ul li i { color: #00880F; margin-right: 8px; font-size: 0.85rem; }
+
+    .aic-ai-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .aic-ai-feature-card { background: #fff; border-radius: 12px; padding: 30px 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.3s; }
+    .aic-ai-feature-card:hover { transform: translateY(-4px); }
+    .aic-ai-feature-card i { font-size: 2rem; color: #00880F; margin-bottom: 14px; }
+    .aic-ai-feature-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    .aic-ai-feature-card p { font-size: 0.9rem; color: #666; margin: 0; line-height: 1.7; }
+
+    .aic-ai-spec-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .aic-ai-spec-table th, .aic-ai-spec-table td { padding: 14px 18px; border-bottom: 1px solid #ddd; text-align: left; font-size: 0.92rem; }
+    .aic-ai-spec-table thead th { background: #305534; color: #fff; font-weight: 600; }
+    .aic-ai-spec-table tbody tr:nth-child(even) { background: #f9f9f9; }
+    .aic-ai-spec-table td:first-child { font-weight: 600; color: #2c3e50; white-space: nowrap; min-width: 150px; }
+
+    .aic-ai-effects { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .aic-ai-effect-card { background: #fff; border-radius: 12px; padding: 30px 20px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.3s; }
+    .aic-ai-effect-card:hover { transform: translateY(-4px); }
+    .aic-ai-effect-card i { font-size: 2.2rem; color: #00880F; margin-bottom: 14px; }
+    .aic-ai-effect-card h3 { font-size: 1.05rem; margin-bottom: 10px; }
+    .aic-ai-effect-card p { font-size: 0.9rem; color: #666; margin: 0; }
+
+    .aic-ai-cta { background: #305534; padding: 60px 0; text-align: center; color: #fff; }
+    .aic-ai-cta h2 { color: #fff; font-size: 1.6rem; margin-bottom: 12px; }
+    .aic-ai-cta p { color: rgba(255,255,255,0.85); margin-bottom: 24px; }
+    .aic-ai-cta .btn-primary { background: #00880F; color: #fff; padding: 14px 32px; border-radius: 6px; font-size: 1rem; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.3s; }
+    .aic-ai-cta .btn-primary:hover { background: #00660C; text-decoration: none; }
+    .aic-ai-cta .aic-ai-phone { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-top: 16px; }
+    .aic-ai-cta .aic-ai-phone i { margin-right: 6px; }
+
+    @media (max-width: 991px) {
+        .aic-ai-hero-grid { grid-template-columns: 1fr; }
+        .aic-ai-features { grid-template-columns: repeat(2, 1fr); }
+        .aic-ai-products { grid-template-columns: repeat(2, 1fr); }
+        .aic-ai-steps { grid-template-columns: repeat(3, 1fr); }
+        .aic-ai-effects { grid-template-columns: repeat(2, 1fr); }
+        .aic-ai-hero h1 { font-size: 1.8rem; }
+    }
+    @media (max-width: 575px) {
+        .aic-ai-features, .aic-ai-products, .aic-ai-steps, .aic-ai-effects { grid-template-columns: 1fr; }
+        .aic-ai-spec-table { font-size: 0.82rem; }
+        .aic-ai-spec-table th, .aic-ai-spec-table td { padding: 10px 10px; }
+    }
+    </style>
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "AI图像识别精算可以使用现有餐具吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以，无需专用餐具。可以直接使用现有餐具，大幅降低导入成本。"}}, {"@type": "Question", "name": "识别精度如何？", "acceptedAnswer": {"@type": "Answer", "text": "AI约1秒即可识别菜品，可同时识别8个以上菜品。通过持续学习，精度不断提升。"}}, {"@type": "Question", "name": "支持哪些支付方式？", "acceptedAnswer": {"@type": "Answer", "text": "支持人脸识别、QR码、IC卡（含交通卡）。可实现刷脸免接触支付。"}}, {"@type": "Question", "name": "AI精算终端有哪些类型？", "acceptedAnswer": {"@type": "Answer", "text": "提供双通道（适合大规模食堂，2个识别区域）和单通道（适合中小规模食堂，紧凑设计）两种类型。"}}]}
+    </script>
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='#'><img src='../assets/img/logo/logo.webp' alt='Izumo Soan' style='height:100px;'></a>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
+            <nav>
+                <ul>
+                    <li><a href='index.html'>首页</a></li>
+                    <li><a href='services.html' class='active'>服务</a></li>
+                    <li><a href='products.html'>产品</a></li>
+                    <li><a href='case-studies.html'>实绩</a></li>
+                    <li><a href='about.html'>公司概要</a></li>
+                    <li><a href='overseas-partner.html'>海外合作伙伴</a></li>
+                    <li><a href='index.html#contact'>联系我们</a></li>
+                </ul>
+                <div class='language-switcher'>
+                    <span class='lang-label'><i class="fas fa-globe"></i></span>
+                    <select id='lang-select'>
+                        <option value='ja'>日本語</option>
+                        <option value='en'>English</option>
+                        <option value='zh' selected>中文</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <div class='aic-ai-breadcrumb'>
+            <div class='container'>
+                <a href='index.html'>首页</a><span>›</span>
+                <a href='services.html'>服务</a><span>›</span>
+                <a href='smart-cafeteria.html'>智慧食堂</a><span>›</span>
+                AI图像识别结算
+            </div>
+        </div>
+
+        <!-- 1. Hero -->
+        <section class='aic-ai-hero'>
+            <div class='container aic-ai-hero-grid'>
+                <div>
+                    <h1>AI瞬间识别菜品。</h1>
+                    <p class='subtitle'>AI摄像头自动识别托盘上的菜品，瞬间计算品目与金额。<br>无需专用餐具，可直接使用现有餐具，支持人脸识别和QR码顺畅完成支付。</p>
+                    <div class='aic-ai-hero-points'>
+                        <span><i class="fas fa-check"></i>无需专用餐具</span>
+                        <span><i class="fas fa-check"></i>约1秒完成识别</span>
+                        <span><i class="fas fa-check"></i>营养数据自动分析</span>
+                    </div>
+                    <div class='aic-ai-hero-buttons'>
+                        <a href='index.html#contact' class='btn-primary'>申请免费演示/POC</a>
+                    </div>
+                </div>
+                <div class='aic-ai-hero-visual'>
+                    <img src='../assets/img/cafeteria/AIimagepay.jpg' alt='AI图像识别结算 - 识别菜品计算金额·人脸识别支付画面'>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 工作原理（3步骤） -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>AI图像识别的工作原理</h2>
+                    <p>只需将托盘放上即可自动识别菜品。简单3步完成结算。</p>
+                </div>
+                <div class='aic-ai-steps'>
+                    <div class='aic-ai-step'>
+                        <div class='aic-ai-step-num'>1</div>
+                        <div class='aic-ai-step-icon'><i class="fas fa-utensils"></i></div>
+                        <h3>将菜品放入托盘</h3>
+                        <p>将喜欢的菜品放入托盘，放置于结算终端上。无需特殊餐具或操作。</p>
+                        <span class='aic-ai-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                    </div>
+                    <div class='aic-ai-step'>
+                        <div class='aic-ai-step-num'>2</div>
+                        <div class='aic-ai-step-icon'><i class="fas fa-camera"></i></div>
+                        <h3>AI摄像头自动识别</h3>
+                        <p>AI瞬间识别菜品种类，将品名和金额显示在屏幕上。</p>
+                        <span class='aic-ai-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                    </div>
+                    <div class='aic-ai-step'>
+                        <div class='aic-ai-step-num'>3</div>
+                        <div class='aic-ai-step-icon'><i class="fas fa-user-check"></i></div>
+                        <h3>人脸识别/QR/IC卡支付</h3>
+                        <p>通过人脸识别、QR码、IC卡等方式顺畅完成支付。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 产品介绍 -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>AI结算终端产品线</h2>
+                    <p>根据食堂规模和布局，可从两种类型中选择。</p>
+                </div>
+                <div class='aic-ai-products'>
+                    <div class='aic-ai-product-card'>
+                        <div class='aic-ai-product-img'>
+                            <img src='../assets/img/cafeteria/AItype.jpg' alt='AI结算终端（双通道）- 大型桌面式'>
+                        </div>
+                        <h3>AI结算终端（双通道）</h3>
+                        <p class='aic-ai-product-desc'>搭载2个识别区域的高处理能力型号。<br>适用于大规模食堂及高峰时段的大量处理需求。</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>15.6英寸双屏触控显示</li>
+                            <li><i class="fas fa-check"></i>一次可同时识别8个以上菜品</li>
+                            <li><i class="fas fa-check"></i>2秒内完成识别</li>
+                            <li><i class="fas fa-check"></i>IC卡 / QR码 / 人脸识别支付</li>
+                        </ul>
+                    </div>
+                    <div class='aic-ai-product-card'>
+                        <div class='aic-ai-product-img'>
+                            <img src='../assets/img/cafeteria/AItype-2.jpg' alt='AI结算终端（单通道）- 纤薄自助机型'>
+                        </div>
+                        <h3>AI结算终端（单通道）</h3>
+                        <p class='aic-ai-product-desc'>紧凑纤薄设计的自助机型。<br>最适合中小规模食堂及空间有限的场所。</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>15.6英寸主屏 + 侧面板</li>
+                            <li><i class="fas fa-check"></i>紧凑设计，节省空间</li>
+                            <li><i class="fas fa-check"></i>灵活安装，不挑场地</li>
+                            <li><i class="fas fa-check"></i>IC卡 / QR码 / 人脸识别支付</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 主要特点 -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'><h2>主要特点</h2></div>
+                <div class='aic-ai-features'>
+                    <div class='aic-ai-feature-card'>
+                        <i class="fas fa-utensil-spoon"></i>
+                        <h3>无需专用餐具</h3>
+                        <p>可直接使用现有餐具，无需更换专用餐具。大幅降低导入成本。</p>
+                    </div>
+                    <div class='aic-ai-feature-card'>
+                        <i class="fas fa-bolt"></i>
+                        <h3>高速识别</h3>
+                        <p>约1秒完成菜品识别和金额计算。大幅缩短高峰时段排队时间，减轻用餐者压力。</p>
+                    </div>
+                    <div class='aic-ai-feature-card'>
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>营养分析</h3>
+                        <p>自动计算所选菜品的营养成分（卡路里、盐分、蛋白质等）。助力员工健康管理。</p>
+                    </div>
+                    <div class='aic-ai-feature-card'>
+                        <i class="fas fa-desktop"></i>
+                        <h3>PC管理平台</h3>
+                        <p>通过网页浏览器统一管理商品管理、订单管理、销售分析、设备管理。大幅提升运营效率。</p>
+                    </div>
+                    <div class='aic-ai-feature-card'>
+                        <i class="fas fa-wallet"></i>
+                        <h3>多样化支付</h3>
+                        <p>支持人脸识别、QR码、IC卡。无现金运营，实现卫生且高效的结算。</p>
+                    </div>
+                    <div class='aic-ai-feature-card'>
+                        <i class="fas fa-chart-line"></i>
+                        <h3>数据活用</h3>
+                        <p>销售额、菜品人气度、高峰时段分析等，利用积累的数据改善食堂运营。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 技术规格 -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>技术规格</h2>
+                    <p>AI结算终端（双通道）主要规格</p>
+                </div>
+                <div style='overflow-x:auto;'>
+                    <table class='aic-ai-spec-table'>
+                        <thead>
+                            <tr><th>项目</th><th>规格</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>CPU</td><td>64位8核CPU</td></tr>
+                            <tr><td>存储</td><td>16G FLASH, 2G DDR3</td></tr>
+                            <tr><td>显示屏</td><td>主屏: 15.6英寸 1080P 触控屏 / 副屏: 15.6英寸 1080P 触控屏</td></tr>
+                            <tr><td>QR扫描</td><td>QR Code, Code 128/39等，支持360°旋转读取</td></tr>
+                            <tr><td>人脸识别摄像头</td><td>双红外摄像头，200万像素</td></tr>
+                            <tr><td>非接触式卡</td><td>M1/CPU卡，ISO/IEC14443兼容</td></tr>
+                            <tr><td>通信</td><td>Ethernet 10/100Mbps, WiFi 2.4GHz, Bluetooth 4.0</td></tr>
+                            <tr><td>电源</td><td>AC220V输入, DC12V/5A输出</td></tr>
+                            <tr><td>工作环境</td><td>-10℃～50℃, 湿度10～93%</td></tr>
+                            <tr><td>外形尺寸</td><td>1475 × 650 × 1100mm</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. 导入效果 -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'><h2>导入效果</h2></div>
+                <div class='aic-ai-effects'>
+                    <div class='aic-ai-effect-card'>
+                        <i class="fas fa-user-minus"></i>
+                        <h3>削减收银人员</h3>
+                        <p>每个窗口减少1～2名人工成本。有效缓解长期人手不足问题。</p>
+                    </div>
+                    <div class='aic-ai-effect-card'>
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h3>结算速度提升</h3>
+                        <p>大幅缩短高峰时段排队时间。让员工更有效利用午休时间。</p>
+                    </div>
+                    <div class='aic-ai-effect-card'>
+                        <i class="fas fa-check-double"></i>
+                        <h3>结算零失误</h3>
+                        <p>AI自动计算消除人工计算错误。实现准确的结算处理。</p>
+                    </div>
+                    <div class='aic-ai-effect-card'>
+                        <i class="fas fa-seedling"></i>
+                        <h3>减少食品浪费</h3>
+                        <p>通过数据分析实现精准备餐计划，减少食品废弃，降低环境负荷。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CTA -->
+        <section class='aic-ai-cta'>
+            <div class='container'>
+                <h2>欢迎体验AI结算演示</h2>
+                <p>正在考虑导入AI图像识别结算系统？<br>免费演示·POC咨询、资料索取等，欢迎随时联系我们。</p>
+                <a href='index.html#contact' class='btn-primary'>咨询·演示申请</a>
+                <div class='aic-ai-phone'><i class="fas fa-phone-alt"></i> 050-1258-9122</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../assets/img/logo/logo.webp' alt='Izumo Soan'>
+                    <p class='logo-desp'>技术赋能现场。</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>菜单</h4>
+                    <ul>
+                        <li><a href='index.html'>首页</a></li>
+                        <li><a href='about.html'>公司概况</a></li>
+                        <li><a href='services.html'>服务</a></li>
+                        <li><a href='case-studies.html'>案例</a></li>
+                        <li><a href='overseas-partner.html'>海外合作伙伴</a></li>
+                        <li><a href='privacy.html'>隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>产品信息</h4>
+                    
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='smart-cafeteria.html'>
+                            <span>智慧食堂</span>
+                            <small>AI图像识别·RFID·计量精算</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>智能现场的运维改善平台</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 出雲創安 Izumo Soan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src='../assets/js/main.js'></script>
+    <script src='../assets/js/lang-switcher.js'></script>
+</body>
+</html>

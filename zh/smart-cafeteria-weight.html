@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang='zh'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>称重结算 | 智慧食堂解决方案 | 出云创安</title>
+    <meta name='description' content='高精度电子秤自动称量菜品重量，按克计费结算。最适合"吃多少付多少"的自助餐模式。减少食品浪费·自动结算·数据分析，革新食堂运营。免费POC进行中。'>
+
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/smart-cafeteria-weight.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/smart-cafeteria-weight.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/smart-cafeteria-weight.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/smart-cafeteria-weight.html">
+    <link rel="canonical" href="https://izumosoan.com/zh/smart-cafeteria-weight.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="出云创安 Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/zh/smart-cafeteria-weight.html">
+    <meta property="og:title" content="称重结算 | 智慧食堂解决方案 | 出云创安">
+    <meta property="og:description" content="高精度电子秤自动称量菜品重量，按克计费结算。最适合"吃多少付多少"的自助餐模式。减少食品浪费·自动结算·数据分析，革新食堂运营。">
+    <meta property="og:locale" content="zh_CN">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"出云创安 Izumo Soan","url":"[REDACTED_CONN_STRING]://type":"PostalAddress","addressLocality":"葛飾区","addressRegion":"東京都","streetAddress":"東立石4-37-8","addressCountry":"JP"},"description":"连接现场、安全与运营的技术合作伙伴"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://izumosoan.com/zh/index.html"},{"@type":"ListItem","position":2,"name":"服务","item":"https://izumosoan.com/zh/services.html"},{"@type":"ListItem","position":3,"name":"智慧食堂","item":"https://izumosoan.com/zh/smart-cafeteria.html"},{"@type":"ListItem","position":4,"name":"称重结算","item":"https://izumosoan.com/zh/smart-cafeteria-weight.html"}]}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../assets/css/style.min.css'>
+
+    <style>
+    /* Weight Settlement page-specific styles */
+    .aic-wt-hero { background: linear-gradient(135deg, #EFF6F0 0%, #d4edda 100%); padding: 80px 0 60px; }
+    .aic-wt-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .aic-wt-hero h1 { font-size: 2.4rem; color: #2c3e50; margin-bottom: 10px; }
+    .aic-wt-hero .subtitle { font-size: 1.15rem; color: #555; line-height: 1.8; margin-bottom: 20px; }
+    .aic-wt-hero-points { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 28px; }
+    .aic-wt-hero-points span { background: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; color: #00880F; border: 1px solid #00880F; }
+    .aic-wt-hero-points span i { margin-right: 6px; }
+    .aic-wt-hero-visual { border-radius: 16px; overflow: hidden; min-height: 320px; }
+    .aic-wt-hero-visual img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; display: block; }
+    .aic-wt-hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* Breadcrumb */
+    .aic-wt-breadcrumb { padding: 14px 0; font-size: 0.85rem; color: #888; }
+    .aic-wt-breadcrumb a { color: #00880F; text-decoration: none; }
+    .aic-wt-breadcrumb a:hover { text-decoration: underline; }
+    .aic-wt-breadcrumb span { margin: 0 6px; color: #bbb; }
+
+    /* How it works — Steps */
+    .aic-wt-flow-img { text-align: center; margin-bottom: 40px; }
+    .aic-wt-flow-img img { max-width: 100%; border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
+    .aic-wt-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 30px; }
+    .aic-wt-step { text-align: center; position: relative; }
+    .aic-wt-step-num { width: 50px; height: 50px; border-radius: 50%; background: #00880F; color: #fff; font-size: 1.3rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .aic-wt-step-icon { font-size: 2.5rem; color: #00880F; margin-bottom: 12px; }
+    .aic-wt-step h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .aic-wt-step p { font-size: 0.9rem; color: #666; line-height: 1.7; }
+    .aic-wt-step-arrow { display: none; }
+    @media (min-width: 768px) {
+        .aic-wt-step-arrow { display: block; position: absolute; right: -20px; top: 50px; font-size: 1.5rem; color: #00880F; }
+    }
+
+    /* Product cards */
+    .aic-wt-products { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .aic-wt-product-card { background: #fff; border-radius: 14px; padding: 36px 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); transition: transform 0.3s; border-top: 4px solid #00880F; }
+    .aic-wt-product-card:hover { transform: translateY(-5px); }
+    .aic-wt-product-card .aic-wt-product-img { margin-bottom: 20px; text-align: center; min-height: 200px; display: flex; align-items: center; justify-content: center; }
+    .aic-wt-product-card .aic-wt-product-img img { width: 100%; max-height: 240px; object-fit: contain; border-radius: 8px; }
+    .aic-wt-product-card h3 { font-size: 1.2rem; text-align: center; margin-bottom: 14px; color: #2c3e50; }
+    .aic-wt-product-card .aic-wt-product-desc { font-size: 0.93rem; color: #555; line-height: 1.8; }
+
+    /* Features grid */
+    .aic-wt-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .aic-wt-feature-card { background: #fff; border-radius: 12px; padding: 30px 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.3s; }
+    .aic-wt-feature-card:hover { transform: translateY(-4px); }
+    .aic-wt-feature-card i { font-size: 2rem; color: #00880F; margin-bottom: 14px; }
+    .aic-wt-feature-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    .aic-wt-feature-card p { font-size: 0.9rem; color: #666; margin: 0; line-height: 1.7; }
+
+    /* Specs table */
+    .aic-wt-specs { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .aic-wt-specs th, .aic-wt-specs td { padding: 14px 16px; border-bottom: 1px solid #ddd; text-align: left; font-size: 0.92rem; }
+    .aic-wt-specs thead th { background: #305534; color: #fff; font-weight: 600; }
+    .aic-wt-specs tbody tr:nth-child(even) { background: #f9f9f9; }
+    .aic-wt-specs td:first-child { font-weight: 600; color: #2c3e50; min-width: 180px; }
+    .aic-wt-specs .aic-wt-spec-group td { background: #EFF6F0; font-weight: 700; color: #305534; font-size: 0.95rem; border-bottom: 2px solid #00880F; }
+
+    /* Impact section */
+    .aic-wt-impacts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .aic-wt-impact-card { background: #fff; border-radius: 14px; padding: 32px 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); display: flex; gap: 20px; align-items: flex-start; transition: transform 0.3s; }
+    .aic-wt-impact-card:hover { transform: translateY(-4px); }
+    .aic-wt-impact-icon { width: 56px; height: 56px; min-width: 56px; border-radius: 50%; background: linear-gradient(135deg, #00880F, #305534); color: #fff; font-size: 1.4rem; display: flex; align-items: center; justify-content: center; }
+    .aic-wt-impact-card h3 { font-size: 1.1rem; margin-bottom: 6px; color: #2c3e50; }
+    .aic-wt-impact-card p { font-size: 0.9rem; color: #666; margin: 0; line-height: 1.7; }
+
+    /* CTA */
+    .aic-wt-cta { background: #305534; padding: 60px 0; text-align: center; color: #fff; }
+    .aic-wt-cta h2 { color: #fff; font-size: 1.6rem; margin-bottom: 12px; }
+    .aic-wt-cta p { color: rgba(255,255,255,0.85); margin-bottom: 24px; }
+    .aic-wt-cta .btn-primary { background: #00880F; color: #fff; padding: 14px 32px; border-radius: 6px; font-size: 1rem; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.3s; }
+    .aic-wt-cta .btn-primary:hover { background: #00660C; text-decoration: none; }
+    .aic-wt-cta .aic-wt-phone { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-top: 16px; }
+    .aic-wt-cta .aic-wt-phone i { margin-right: 6px; }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+        .aic-wt-hero-grid { grid-template-columns: 1fr; }
+        .aic-wt-features { grid-template-columns: repeat(2, 1fr); }
+        .aic-wt-products { grid-template-columns: repeat(2, 1fr); }
+        .aic-wt-steps { grid-template-columns: repeat(2, 1fr); }
+        .aic-wt-impacts { grid-template-columns: repeat(2, 1fr); }
+        .aic-wt-hero h1 { font-size: 1.8rem; }
+    }
+    @media (max-width: 575px) {
+        .aic-wt-features, .aic-wt-products, .aic-wt-steps, .aic-wt-impacts { grid-template-columns: 1fr; }
+        .aic-wt-specs { font-size: 0.82rem; }
+        .aic-wt-specs th, .aic-wt-specs td { padding: 10px 10px; }
+    }
+    </style>
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "计量精算的精度如何？", "acceptedAnswer": {"@type": "Answer", "text": "高精度电子秤可实现克级计量，量程30kg，确保准确计费。"}}, {"@type": "Question", "name": "计量精算需要专用餐具吗？", "acceptedAnswer": {"@type": "Answer", "text": "不需要专用餐具。可使用现有餐具，通过托盘绑定实现自动精算。"}}, {"@type": "Question", "name": "食品浪费削减效果如何？", "acceptedAnswer": {"@type": "Answer", "text": "通过吃多少付多少的机制，可削减30%以上的食品浪费，为SDGs做出贡献。"}}, {"@type": "Question", "name": "计量精算适合什么类型的食堂？", "acceptedAnswer": {"@type": "Answer", "text": "最适合自助餐式食堂。用户可自由选择所需分量，满意度也随之提升。"}}]}
+    </script>
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='#'><img src='../assets/img/logo/logo.webp' alt='Izumo Soan' style='height:100px;'></a>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
+            <nav>
+                <ul>
+                    <li><a href='index.html'>首页</a></li>
+                    <li><a href='services.html' class='active'>服务</a></li>
+                    <li><a href='products.html'>产品</a></li>
+                    <li><a href='case-studies.html'>实绩</a></li>
+                    <li><a href='about.html'>公司概要</a></li>
+                    <li><a href='overseas-partner.html'>海外合作伙伴</a></li>
+                    <li><a href='index.html#contact'>联系我们</a></li>
+                </ul>
+                <div class='language-switcher'>
+                    <span class='lang-label'><i class="fas fa-globe"></i></span>
+                    <select id='lang-select'>
+                        <option value='ja'>日本語</option>
+                        <option value='en'>English</option>
+                        <option value='zh' selected>中文</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <div class='aic-wt-breadcrumb'>
+            <div class='container'>
+                <a href='index.html'>首页</a><span>›</span>
+                <a href='services.html'>服务</a><span>›</span>
+                <a href='smart-cafeteria.html'>智慧食堂</a><span>›</span>
+                称重结算
+            </div>
+        </div>
+
+        <!-- 1. Hero -->
+        <section class='aic-wt-hero'>
+            <div class='container aic-wt-hero-grid'>
+                <div>
+                    <h1>吃多少，智能付多少。</h1>
+                    <p class='subtitle'>高精度电子秤按克计费结算。最适合自助餐模式食堂的"吃多少付多少"下一代解决方案。</p>
+                    <div class='aic-wt-hero-points'>
+                        <span><i class="fas fa-check"></i>精确到克</span>
+                        <span><i class="fas fa-check"></i>减少食品浪费</span>
+                        <span><i class="fas fa-check"></i>最适合自助餐</span>
+                    </div>
+                    <div class='aic-wt-hero-buttons'>
+                        <a href='index.html#contact' class='btn-primary'>申请免费演示/POC</a>
+                        <a href='#how-it-works' class='btn-secondary'>了解详情</a>
+                    </div>
+                </div>
+                <div class='aic-wt-hero-visual'>
+                    <img src='../assets/img/cafeteria/weight-using.jpg' alt='使用称重结算系统的食堂自助取餐线'>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 工作原理 -->
+        <section class='section-padding' id='how-it-works'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>称重结算的工作原理</h2>
+                    <p>简单3步，吃多少智能付多少。</p>
+                </div>
+                <div class='aic-wt-flow-img'>
+                    <img src='../assets/img/cafeteria/weightsys-zh.jpg' alt='称重结算系统流程图（托盘绑定→称重自助取餐→自动结算）'>
+                </div>
+                <div class='aic-wt-steps'>
+                    <div class='aic-wt-step'>
+                        <div class='aic-wt-step-num'>1</div>
+                        <div class='aic-wt-step-icon'><i class="fas fa-id-card"></i></div>
+                        <h3>托盘绑定</h3>
+                        <p>通过人脸识别、QR码、IC卡将托盘与个人绑定。只需将托盘放在感应区域即可完成绑定。</p>
+                        <span class='aic-wt-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                    </div>
+                    <div class='aic-wt-step'>
+                        <div class='aic-wt-step-num'>2</div>
+                        <div class='aic-wt-step-icon'><i class="fas fa-utensils"></i></div>
+                        <h3>自助取餐</h3>
+                        <p>在各菜品站点自由取用想要的量。电子秤实时称量重量，按克自动计算。</p>
+                        <span class='aic-wt-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                    </div>
+                    <div class='aic-wt-step'>
+                        <div class='aic-wt-step-num'>3</div>
+                        <div class='aic-wt-step-icon'><i class="fas fa-cash-register"></i></div>
+                        <h3>自动结算</h3>
+                        <p>用餐结束后，自动计算合计金额。只需支付取用的量。无需收银台，顺畅完成。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 产品介绍 -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>产品介绍</h2>
+                    <p>实现称重结算的两大核心设备。</p>
+                </div>
+                <div class='aic-wt-products'>
+                    <div class='aic-wt-product-card'>
+                        <div class='aic-wt-product-img'>
+                            <img src='../assets/img/cafeteria/weight1.jpg' alt='托盘绑定终端（平板+IC卡读取器+感应区域）'>
+                        </div>
+                        <h3>托盘绑定终端</h3>
+                        <p class='aic-wt-product-desc'>通过人脸识别、QR码、IC卡将托盘与用户绑定的专用终端。触控屏实时确认认证状态。只需将托盘放在感应区域（Tray Reading Area）即可完成绑定，顺畅开始用餐。</p>
+                    </div>
+                    <div class='aic-wt-product-card'>
+                        <div class='aic-wt-product-img'>
+                            <img src='../assets/img/cafeteria/weightplate.jpg' alt='称重结算站点（电子秤+食品保温容器+显示面板+感应区域）'>
+                        </div>
+                        <h3>称重结算站点</h3>
+                        <p class='aic-wt-product-desc'>高精度电子秤、食品保温容器、显示面板的一体化套装。取用菜品时实时称量重量，按克自动计算。将托盘放在感应区域即自动记录，准确计入取用量。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 主要特点 -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'><h2>主要特点</h2></div>
+                <div class='aic-wt-features'>
+                    <div class='aic-wt-feature-card'>
+                        <i class="fas fa-balance-scale"></i>
+                        <h3>精确到克</h3>
+                        <p>高精度电子秤准确称量菜品重量。实现公平透明的结算。</p>
+                    </div>
+                    <div class='aic-wt-feature-card'>
+                        <i class="fas fa-leaf"></i>
+                        <h3>减少食品浪费</h3>
+                        <p>只取想吃的量，大幅减少食品废弃。助力SDGs贡献和环境负荷降低。</p>
+                    </div>
+                    <div class='aic-wt-feature-card'>
+                        <i class="fas fa-concierge-bell"></i>
+                        <h3>最适合自助模式</h3>
+                        <p>最适合自助餐式食堂。可自由选择喜欢的菜品和想要的量。</p>
+                    </div>
+                    <div class='aic-wt-feature-card'>
+                        <i class="fas fa-cash-register"></i>
+                        <h3>自动结算</h3>
+                        <p>用餐结束后自动计算合计金额。无需收银台，大幅削减人工成本。</p>
+                    </div>
+                    <div class='aic-wt-feature-card'>
+                        <i class="fas fa-desktop"></i>
+                        <h3>PC管理平台</h3>
+                        <p>通过网页统一管理商品管理、订单管理、销售分析、设备管理。支持数据驱动的运营。</p>
+                    </div>
+                    <div class='aic-wt-feature-card'>
+                        <i class="fas fa-wallet"></i>
+                        <h3>多样化支付</h3>
+                        <p>支持人脸识别、QR码、IC卡。无现金卫生且顺畅的支付体验。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 技术规格 -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'><h2>技术规格</h2></div>
+                <div style='overflow-x:auto;'>
+                    <table class='aic-wt-specs'>
+                        <thead>
+                            <tr><th>项目</th><th>规格</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr class='aic-wt-spec-group'><td colspan='2'>托盘绑定终端</td></tr>
+                            <tr><td>OS</td><td>Android</td></tr>
+                            <tr><td>显示屏</td><td>8～10英寸 触控屏</td></tr>
+                            <tr><td>认证方式</td><td>人脸识别·QR·IC卡</td></tr>
+                            <tr><td>通信</td><td>WiFi / TCP/IP</td></tr>
+                            <tr class='aic-wt-spec-group'><td colspan='2'>称重结算站点</td></tr>
+                            <tr><td>电子秤精度</td><td>克级精度（量程30kg）</td></tr>
+                            <tr><td>显示屏</td><td>带显示面板</td></tr>
+                            <tr><td>提示</td><td>语音·光引导</td></tr>
+                            <tr><td>通信</td><td>WiFi / TCP/IP</td></tr>
+                            <tr><td>工作环境</td><td>-10℃～50℃</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. 导入效果 -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>导入效果</h2>
+                    <p>称重结算系统带来的具体成效。</p>
+                </div>
+                <div class='aic-wt-impacts'>
+                    <div class='aic-wt-impact-card'>
+                        <div class='aic-wt-impact-icon'><i class="fas fa-recycle"></i></div>
+                        <div>
+                            <h3>食品浪费减少30%以上</h3>
+                            <p>吃多少付多少的机制消除浪费。大幅减少食品废弃，兼顾成本削减与SDGs贡献。</p>
+                        </div>
+                    </div>
+                    <div class='aic-wt-impact-card'>
+                        <div class='aic-wt-impact-icon'><i class="fas fa-smile"></i></div>
+                        <div>
+                            <h3>用户满意度提升</h3>
+                            <p>自由选择喜欢的量，提升用户满意度。也有助于健康管理，促进食堂利用率提升。</p>
+                        </div>
+                    </div>
+                    <div class='aic-wt-impact-card'>
+                        <div class='aic-wt-impact-icon'><i class="fas fa-user-slash"></i></div>
+                        <div>
+                            <h3>零收银人员</h3>
+                            <p>完全自动结算，无需收银员。大幅削减人工成本，从根本改善食堂运营成本结构。</p>
+                        </div>
+                    </div>
+                    <div class='aic-wt-impact-card'>
+                        <div class='aic-wt-impact-icon'><i class="fas fa-chart-line"></i></div>
+                        <div>
+                            <h3>数据驱动运营</h3>
+                            <p>实时分析热门菜品和消费趋势。基于数据的菜单改善和经营优化。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CTA -->
+        <section class='aic-wt-cta'>
+            <div class='container'>
+                <h2>体验称重结算开启食堂的未来</h2>
+                <p>正在考虑导入称重结算解决方案？<br>免费演示·POC咨询、资料索取等，欢迎随时联系我们。</p>
+                <a href='index.html#contact' class='btn-primary'>咨询·演示申请</a>
+                <div class='aic-wt-phone'><i class="fas fa-phone-alt"></i> 050-1258-9122</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../assets/img/logo/logo.webp' alt='Izumo Soan'>
+                    <p class='logo-desp'>技术赋能现场。</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>菜单</h4>
+                    <ul>
+                        <li><a href='index.html'>首页</a></li>
+                        <li><a href='about.html'>公司概况</a></li>
+                        <li><a href='services.html'>服务</a></li>
+                        <li><a href='case-studies.html'>案例</a></li>
+                        <li><a href='overseas-partner.html'>海外合作伙伴</a></li>
+                        <li><a href='privacy.html'>隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>产品信息</h4>
+                    
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='smart-cafeteria.html'>
+                            <span>智慧食堂</span>
+                            <small>AI图像识别·RFID·计量精算</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>智能现场的运维改善平台</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 出雲創安 Izumo Soan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src='../assets/js/main.js'></script>
+    <script src='../assets/js/lang-switcher.js'></script>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>RFID Checkout | Smart Cafeteria Solutions | Izumo Soan</title>
+    <meta name='description' content='Place RFID-embedded dishware on the checkout counter for instant auto-settlement. Reads 30+ items at once in under 1 second. A proven, reliable system used in cafeterias worldwide. Free POC available.'>
+
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/smart-cafeteria-rfid.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/smart-cafeteria-rfid.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/smart-cafeteria-rfid.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/smart-cafeteria-rfid.html">
+    <link rel="canonical" href="https://izumosoan.com/en/smart-cafeteria-rfid.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="出雲創安 Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/en/smart-cafeteria-rfid.html">
+    <meta property="og:title" content="RFID Checkout | Smart Cafeteria Solutions | Izumo Soan">
+    <meta property="og:description" content="Place RFID-embedded dishware on the checkout counter for instant auto-settlement. Reads 30+ items at once in under 1 second. A proven, reliable system used in cafeterias worldwide.">
+    <meta property="og:locale" content="en_US">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"出雲創安 Izumo Soan","url":"[REDACTED_CONN_STRING]://type":"PostalAddress","addressLocality":"Katsushika-ku","addressRegion":"Tokyo","streetAddress":"Higashitateishi 4-37-8","addressCountry":"JP"},"description":"Technology partner connecting field, safety and operations"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://izumosoan.com/en/index.html"},{"@type":"ListItem","position":2,"name":"Services","item":"https://izumosoan.com/en/services.html"},{"@type":"ListItem","position":3,"name":"Smart Cafeteria","item":"https://izumosoan.com/en/smart-cafeteria.html"},{"@type":"ListItem","position":4,"name":"RFID Checkout","item":"https://izumosoan.com/en/smart-cafeteria-rfid.html"}]}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../assets/css/style.min.css'>
+
+    <style>
+    /* RFID Checkout page-specific styles */
+
+    /* Hero */
+    .aic-rfid-hero { background: linear-gradient(135deg, #EFF6F0 0%, #d4edda 100%); padding: 80px 0 60px; }
+    .aic-rfid-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .aic-rfid-hero h1 { font-size: 2.4rem; color: #2c3e50; margin-bottom: 10px; }
+    .aic-rfid-hero .subtitle { font-size: 1.15rem; color: #555; line-height: 1.8; margin-bottom: 20px; }
+    .aic-rfid-hero-points { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 28px; }
+    .aic-rfid-hero-points span { background: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; color: #00880F; border: 1px solid #00880F; }
+    .aic-rfid-hero-points span i { margin-right: 6px; }
+    .aic-rfid-hero-visual { border-radius: 16px; overflow: hidden; }
+    .aic-rfid-hero-visual img { width: 100%; height: auto; display: block; border-radius: 16px; }
+    .aic-rfid-hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* Breadcrumb */
+    .aic-rfid-breadcrumb { background: #f8f9fa; padding: 12px 0; font-size: 0.85rem; }
+    .aic-rfid-breadcrumb a { color: #00880F; text-decoration: none; }
+    .aic-rfid-breadcrumb a:hover { text-decoration: underline; }
+    .aic-rfid-breadcrumb span { color: #999; margin: 0 6px; }
+    .aic-rfid-breadcrumb .current { color: #666; }
+
+    /* How it works - Steps */
+    .aic-rfid-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 30px; }
+    .aic-rfid-step { text-align: center; position: relative; }
+    .aic-rfid-step-num { width: 50px; height: 50px; border-radius: 50%; background: #00880F; color: #fff; font-size: 1.3rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .aic-rfid-step-icon { font-size: 2.5rem; color: #00880F; margin-bottom: 12px; }
+    .aic-rfid-step h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .aic-rfid-step p { font-size: 0.9rem; color: #666; }
+    .aic-rfid-step-arrow { display: none; }
+    @media (min-width: 768px) {
+        .aic-rfid-step-arrow { display: block; position: absolute; right: -20px; top: 50px; font-size: 1.5rem; color: #00880F; }
+    }
+    .aic-rfid-how-note { background: #EFF6F0; border-left: 4px solid #00880F; padding: 16px 20px; border-radius: 0 8px 8px 0; margin-top: 30px; font-size: 0.95rem; color: #444; line-height: 1.8; }
+
+    /* Product Card */
+    .aic-rfid-product { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+    .aic-rfid-product-img { border-radius: 14px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    .aic-rfid-product-img img { width: 100%; height: auto; display: block; }
+    .aic-rfid-product-info h3 { font-size: 1.5rem; color: #2c3e50; margin-bottom: 6px; }
+    .aic-rfid-product-info .aic-rfid-product-sub { font-size: 0.95rem; color: #00880F; font-weight: 500; margin-bottom: 16px; }
+    .aic-rfid-product-info ul { list-style: none; padding: 0; margin: 0 0 20px 0; }
+    .aic-rfid-product-info ul li { font-size: 0.93rem; color: #333; padding: 7px 0; border-bottom: 1px solid #eee; }
+    .aic-rfid-product-info ul li i { color: #00880F; margin-right: 10px; font-size: 0.85rem; width: 16px; text-align: center; }
+    .aic-rfid-product-info .aic-rfid-chip-badge { display: inline-block; background: linear-gradient(135deg, #00880F, #305534); color: #fff; padding: 8px 18px; border-radius: 6px; font-size: 0.9rem; font-weight: 600; margin-top: 8px; }
+
+    /* RFID Dishware Section */
+    .aic-rfid-dish-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .aic-rfid-dish-card { background: #fff; border-radius: 12px; padding: 30px 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.3s; text-align: center; }
+    .aic-rfid-dish-card:hover { transform: translateY(-4px); }
+    .aic-rfid-dish-card i { font-size: 2.2rem; color: #00880F; margin-bottom: 14px; }
+    .aic-rfid-dish-card h3 { font-size: 1.05rem; margin-bottom: 10px; color: #2c3e50; }
+    .aic-rfid-dish-card p { font-size: 0.9rem; color: #666; margin: 0; line-height: 1.7; }
+
+    /* Features Grid */
+    .aic-rfid-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .aic-rfid-feature-card { background: #fff; border-radius: 12px; padding: 30px 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.3s; }
+    .aic-rfid-feature-card:hover { transform: translateY(-4px); }
+    .aic-rfid-feature-card i { font-size: 2rem; color: #00880F; margin-bottom: 14px; }
+    .aic-rfid-feature-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    .aic-rfid-feature-card p { font-size: 0.9rem; color: #666; margin: 0; line-height: 1.7; }
+
+    /* Spec Table */
+    .aic-rfid-spec { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .aic-rfid-spec th, .aic-rfid-spec td { padding: 14px 16px; border-bottom: 1px solid #ddd; text-align: left; font-size: 0.92rem; }
+    .aic-rfid-spec thead th { background: #305534; color: #fff; font-weight: 600; }
+    .aic-rfid-spec tbody tr:nth-child(even) { background: #f9f9f9; }
+    .aic-rfid-spec tbody tr:hover { background: #EFF6F0; }
+    .aic-rfid-spec td:first-child { font-weight: 600; color: #2c3e50; white-space: nowrap; min-width: 140px; }
+
+    /* CTA */
+    .aic-rfid-cta { background: #305534; padding: 60px 0; text-align: center; color: #fff; }
+    .aic-rfid-cta h2 { color: #fff; font-size: 1.6rem; margin-bottom: 12px; }
+    .aic-rfid-cta p { color: rgba(255,255,255,0.85); margin-bottom: 24px; }
+    .aic-rfid-cta .btn-primary { background: #00880F; color: #fff; padding: 14px 32px; border-radius: 6px; font-size: 1rem; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.3s; }
+    .aic-rfid-cta .btn-primary:hover { background: #00660C; text-decoration: none; }
+    .aic-rfid-cta .aic-rfid-phone { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-top: 16px; }
+    .aic-rfid-cta .aic-rfid-phone i { margin-right: 6px; }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+        .aic-rfid-hero-grid { grid-template-columns: 1fr; }
+        .aic-rfid-product { grid-template-columns: 1fr; }
+        .aic-rfid-features, .aic-rfid-dish-grid { grid-template-columns: repeat(2, 1fr); }
+        .aic-rfid-steps { grid-template-columns: repeat(2, 1fr); }
+        .aic-rfid-hero h1 { font-size: 1.8rem; }
+    }
+    @media (max-width: 575px) {
+        .aic-rfid-features, .aic-rfid-dish-grid, .aic-rfid-steps { grid-template-columns: 1fr; }
+        .aic-rfid-spec { font-size: 0.82rem; }
+        .aic-rfid-spec th, .aic-rfid-spec td { padding: 10px 10px; }
+    }
+    </style>
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many dishes can RFID read at once?", "acceptedAnswer": {"@type": "Answer", "text": "It can read 30 or more dishes within 1 second with over 99% accuracy."}}, {"@type": "Question", "name": "Can RFID tableware be washed?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, RFID-embedded tableware is washable and reusable. It is highly durable for long-term use."}}, {"@type": "Question", "name": "How is information written to the tableware?", "acceptedAnswer": {"@type": "Answer", "text": "A smart dispenser writes menu information to the tableware. It can be changed at any time, allowing different pricing per meal with the same dish."}}, {"@type": "Question", "name": "How much operational effort does the RFID method require?", "acceptedAnswer": {"@type": "Answer", "text": "The RFID method requires the least operational management among the three methods. Simply placing dishes on the terminal completes automatic recognition and settlement."}}]}
+    </script>
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='#'><img src='../assets/img/logo/logo.webp' alt='Izumo Soan' style='height:100px;'></a>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
+            <nav>
+                <ul>
+                    <li><a href='index.html'>Home</a></li>
+                    <li><a href='services.html' class='active'>Services</a></li>
+                    <li><a href='products.html'>Products</a></li>
+                    <li><a href='case-studies.html'>Case Studies</a></li>
+                    <li><a href='about.html'>About</a></li>
+                    <li><a href='overseas-partner.html'>Partners</a></li>
+                    <li><a href='index.html#contact'>Contact</a></li>
+                </ul>
+                <div class='language-switcher'>
+                    <span class='lang-label'><i class="fas fa-globe"></i></span>
+                    <select id='lang-select'>
+                        <option value='ja'>日本語</option>
+                        <option value='en' selected>English</option>
+                        <option value='zh'>中文</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <div class='aic-rfid-breadcrumb'>
+            <div class='container'>
+                <a href='index.html'>Home</a>
+                <span>›</span>
+                <a href='services.html'>Services</a>
+                <span>›</span>
+                <a href='smart-cafeteria.html'>Smart Cafeteria</a>
+                <span>›</span>
+                <span class='current'>RFID Checkout</span>
+            </div>
+        </div>
+
+        <!-- 1. Hero -->
+        <section class='aic-rfid-hero'>
+            <div class='container aic-rfid-hero-grid'>
+                <div>
+                    <h1>Just Place It. Checkout Complete.</h1>
+                    <p class='subtitle'>Place RFID-embedded dishware on the checkout counter to instantly recognize all items and totals.<br>A fast, accurate, and reliable checkout method used in cafeterias worldwide.</p>
+                    <div class='aic-rfid-hero-points'>
+                        <span><i class="fas fa-check"></i>Reads 30+ Items at Once</span>
+                        <span><i class="fas fa-check"></i>Under 1 Second</span>
+                        <span><i class="fas fa-check"></i>Proven Track Record Worldwide</span>
+                    </div>
+                    <div class='aic-rfid-hero-buttons'>
+                        <a href='index.html#contact' class='btn-primary'>Request Free Demo / POC</a>
+                        <a href='smart-cafeteria.html' class='btn-secondary'>← Compare All 3 Methods</a>
+                    </div>
+                </div>
+                <div class='aic-rfid-hero-visual'>
+                    <img src='../assets/img/cafeteria/RFIDtype.jpg' alt='RFID checkout counter — dual-lane with two reading zones and displays'>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. How It Works (3 Steps) -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>How RFID Checkout Works</h2>
+                    <p>RFID chips embedded in the dishware are read instantly by the counter's reader — a simple and reliable checkout method.</p>
+                </div>
+                <div class='aic-rfid-steps'>
+                    <div class='aic-rfid-step'>
+                        <div class='aic-rfid-step-num'>1</div>
+                        <div class='aic-rfid-step-icon'><i class="fas fa-utensils"></i></div>
+                        <h3>Choose Dishes with RFID Dishware</h3>
+                        <p>Each dish has an embedded RFID chip. Simply choose your food and place it on the tray. No special operation needed.</p>
+                        <span class='aic-rfid-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                    </div>
+                    <div class='aic-rfid-step'>
+                        <div class='aic-rfid-step-num'>2</div>
+                        <div class='aic-rfid-step-icon'><i class="fas fa-broadcast-tower"></i></div>
+                        <h3>Place on Counter for Auto-Recognition</h3>
+                        <p>Place the tray on the counter and the built-in reader scans all RFID chips in under 1 second, displaying items and totals on screen.</p>
+                        <span class='aic-rfid-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                    </div>
+                    <div class='aic-rfid-step'>
+                        <div class='aic-rfid-step-num'>3</div>
+                        <div class='aic-rfid-step-icon'><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Pay via Face / QR / IC Card</h3>
+                        <p>Complete cashless payment with face recognition, QR code, IC card, or your preferred method. Smooth and seamless.</p>
+                    </div>
+                </div>
+                <div class='aic-rfid-how-note'>
+                    <strong>💡 How RFID Chips Work:</strong> RFID chips sealed in the bottom of each dish store menu information (item name and price). A high-frequency reader built into the counter activates the chips via electromagnetic waves — no battery required. This enables accurate recognition of 30+ dishes simultaneously in under 1 second.
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Product -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>RFID Smart Checkout Counter</h2>
+                    <p>Fast, stable, and accurate. The RFID smart checkout counter with a proven track record in cafeterias worldwide.</p>
+                </div>
+                <div class='aic-rfid-product'>
+                    <div class='aic-rfid-product-img'>
+                        <img src='../assets/img/cafeteria/RFIDtype.jpg' alt='RFID Smart Checkout Counter — dual 15.6-inch touchscreens'>
+                    </div>
+                    <div class='aic-rfid-product-info'>
+                        <h3>RFID Smart Checkout Counter</h3>
+                        <p class='aic-rfid-product-sub'>Dual 15.6" 1080P Touchscreens</p>
+                        <ul>
+                            <li><i class="fas fa-bolt"></i>Reads 30+ dishes in under 1 second</li>
+                            <li><i class="fas fa-id-card"></i>IC card / QR code / face recognition payment</li>
+                            <li><i class="fas fa-volume-up"></i>Voice and light guidance (natural voice)</li>
+                            <li><i class="fas fa-wifi"></i>WiFi / TCP/IP (Ethernet) communication</li>
+                            <li><i class="fas fa-concierge-bell"></i>Ideal for set-meal and small-dish style cafeterias</li>
+                            <li><i class="fas fa-edit"></i>Add or remove items on-screen before payment</li>
+                        </ul>
+                        <div class='aic-rfid-chip-badge'>
+                            <i class="fas fa-microchip" style="margin-right: 6px;"></i>Chip-based: High accuracy · Stable · Fast
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. About RFID Dishware -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>About RFID Dishware</h2>
+                    <p>Dedicated dishware combining durability for repeated use with flexibility to rewrite menu data on demand.</p>
+                </div>
+                <div class='aic-rfid-dish-grid'>
+                    <div class='aic-rfid-dish-card'>
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>High Durability</h3>
+                        <p>RFID dishware is dishwasher-safe and designed for repeated use. Chips are sealed in the dish bottom, resistant to water and impact. Reliable for long-term use.</p>
+                    </div>
+                    <div class='aic-rfid-dish-card'>
+                        <i class="fas fa-pen-fancy"></i>
+                        <h3>Smart Dispenser Writing</h3>
+                        <p>Use the smart dispenser to write menu information (item name and price) to the dish's chip. Set different menus and prices per meal — the same dish can serve breakfast, lunch, and dinner.</p>
+                    </div>
+                    <div class='aic-rfid-dish-card'>
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Batch Writing</h3>
+                        <p>Supports batch writing of menu data to multiple dishes at once. Prepare large quantities quickly, dramatically improving cafeteria operational efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Key Features -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'><h2>Key Features</h2></div>
+                <div class='aic-rfid-features'>
+                    <div class='aic-rfid-feature-card'>
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h3>Fast &amp; Accurate</h3>
+                        <p>Reads 30+ dishes in under 1 second with 99%+ recognition accuracy. Delivers reliable and stable checkout.</p>
+                    </div>
+                    <div class='aic-rfid-feature-card'>
+                        <i class="fas fa-globe-asia"></i>
+                        <h3>Proven Track Record</h3>
+                        <p>Adopted by universities, corporations, and hospital cafeterias worldwide. A trusted system backed by years of real-world operation.</p>
+                    </div>
+                    <div class='aic-rfid-feature-card'>
+                        <i class="fas fa-desktop"></i>
+                        <h3>Management Platform</h3>
+                        <p>Centralized web-based management for menu items, cafeteria data, order details, and sales analytics. Supports data-driven operations.</p>
+                    </div>
+                    <div class='aic-rfid-feature-card'>
+                        <i class="fas fa-magic"></i>
+                        <h3>Auto-Recognition &amp; Checkout</h3>
+                        <p>Just place the dishes and items with prices appear automatically. No staff operation needed — fully automated checkout.</p>
+                    </div>
+                    <div class='aic-rfid-feature-card'>
+                        <i class="fas fa-credit-card"></i>
+                        <h3>Multiple Payment Options</h3>
+                        <p>Supports face recognition, QR code, and IC card. Flexible payment methods to suit all users.</p>
+                    </div>
+                    <div class='aic-rfid-feature-card'>
+                        <i class="fas fa-edit"></i>
+                        <h3>Order Correction</h3>
+                        <p>Add or remove items on-screen before payment. Ensures accurate billing and peace of mind for users.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Technical Specifications -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'><h2>Technical Specifications</h2></div>
+                <div style='overflow-x:auto;'>
+                    <table class='aic-rfid-spec'>
+                        <thead>
+                            <tr><th>Item</th><th>Specification</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>CPU</td><td>64-bit 8-core CPU</td></tr>
+                            <tr><td>Storage</td><td>16G FLASH, 2G DDR3</td></tr>
+                            <tr><td>Display</td><td>Dual 15.6" 1080P touchscreens</td></tr>
+                            <tr><td>QR Scanner</td><td>QR Code, Code 128/39, etc. — 360° rotation</td></tr>
+                            <tr><td>Face Recognition Camera</td><td>Dual infrared camera, 2MP</td></tr>
+                            <tr><td>RFID Reading</td><td>30+ items at once, read time under 1 second</td></tr>
+                            <tr><td>Contactless Card</td><td>M1/CPU card, ISO/IEC14443 compliant</td></tr>
+                            <tr><td>Communication</td><td>Ethernet 10/100Mbps, WiFi 2.4GHz, Bluetooth 4.0</td></tr>
+                            <tr><td>Voice Guide</td><td>Natural voice guidance</td></tr>
+                            <tr><td>Dimensions</td><td>1475×650×1100mm (counter type)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CTA -->
+        <section class='aic-rfid-cta'>
+            <div class='container'>
+                <h2>Experience the Power of RFID Checkout</h2>
+                <p>Just place it and checkout is complete — experience the speed and accuracy with a live demo.<br>Contact us for a free demo, POC consultation, or to request materials.</p>
+                <a href='index.html#contact' class='btn-primary'>Contact Us / Request Demo</a>
+                <div class='aic-rfid-phone'><i class="fas fa-phone-alt"></i> 050-1258-9122</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../assets/img/logo/logo.webp' alt='Izumo Soan'>
+                    <p class='logo-desp'>Technology that powers the field</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href='index.html'>Home</a></li>
+                        <li><a href='about.html'>About</a></li>
+                        <li><a href='services.html'>Services</a></li>
+                        <li><a href='case-studies.html'>Case Studies</a></li>
+                        <li><a href='overseas-partner.html'>Overseas Partner</a></li>
+                        <li><a href='privacy.html'>Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>Products</h4>
+                    
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='smart-cafeteria.html'>
+                            <span>Smart Cafeteria</span>
+                            <small>AI Recognition · RFID · Weighing</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>Smart Site Operations Platform</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 Izumo Soan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src='../assets/js/main.js'></script>
+    <script src='../assets/js/lang-switcher.js'></script>
+</body>
+</html>

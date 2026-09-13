@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang='zh'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>RFID结算 | 智慧食堂解决方案 | 出云创安</title>
+    <meta name='description' content='将内置RFID的餐具放在结算台上即可瞬间完成全部菜品自动结算。一次读取30个以上，1秒内高速结算。全球食堂广泛应用的稳定方案。免费POC进行中。'>
+
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/smart-cafeteria-rfid.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/smart-cafeteria-rfid.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/smart-cafeteria-rfid.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/smart-cafeteria-rfid.html">
+    <link rel="canonical" href="https://izumosoan.com/zh/smart-cafeteria-rfid.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="出云创安 Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/zh/smart-cafeteria-rfid.html">
+    <meta property="og:title" content="RFID结算 | 智慧食堂解决方案 | 出云创安">
+    <meta property="og:description" content="将内置RFID的餐具放在结算台上即可瞬间完成全部菜品自动结算。一次读取30个以上，1秒内高速结算。全球食堂广泛应用的稳定方案。">
+    <meta property="og:locale" content="zh_CN">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"出云创安 Izumo Soan","url":"[REDACTED_CONN_STRING]://type":"PostalAddress","addressLocality":"葛飾区","addressRegion":"東京都","streetAddress":"東立石4-37-8","addressCountry":"JP"},"description":"连接现场、安全与运营的技术合作伙伴"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://izumosoan.com/zh/index.html"},{"@type":"ListItem","position":2,"name":"服务","item":"https://izumosoan.com/zh/services.html"},{"@type":"ListItem","position":3,"name":"智慧食堂","item":"https://izumosoan.com/zh/smart-cafeteria.html"},{"@type":"ListItem","position":4,"name":"RFID结算","item":"https://izumosoan.com/zh/smart-cafeteria-rfid.html"}]}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../assets/css/style.min.css'>
+
+    <style>
+    /* RFID结算 page-specific styles */
+
+    /* Hero */
+    .aic-rfid-hero { background: linear-gradient(135deg, #EFF6F0 0%, #d4edda 100%); padding: 80px 0 60px; }
+    .aic-rfid-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .aic-rfid-hero h1 { font-size: 2.4rem; color: #2c3e50; margin-bottom: 10px; }
+    .aic-rfid-hero .subtitle { font-size: 1.15rem; color: #555; line-height: 1.8; margin-bottom: 20px; }
+    .aic-rfid-hero-points { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 28px; }
+    .aic-rfid-hero-points span { background: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; color: #00880F; border: 1px solid #00880F; }
+    .aic-rfid-hero-points span i { margin-right: 6px; }
+    .aic-rfid-hero-visual { border-radius: 16px; overflow: hidden; }
+    .aic-rfid-hero-visual img { width: 100%; height: auto; display: block; border-radius: 16px; }
+    .aic-rfid-hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* Breadcrumb */
+    .aic-rfid-breadcrumb { background: #f8f9fa; padding: 12px 0; font-size: 0.85rem; }
+    .aic-rfid-breadcrumb a { color: #00880F; text-decoration: none; }
+    .aic-rfid-breadcrumb a:hover { text-decoration: underline; }
+    .aic-rfid-breadcrumb span { color: #999; margin: 0 6px; }
+    .aic-rfid-breadcrumb .current { color: #666; }
+
+    /* How it works - Steps */
+    .aic-rfid-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 30px; }
+    .aic-rfid-step { text-align: center; position: relative; }
+    .aic-rfid-step-num { width: 50px; height: 50px; border-radius: 50%; background: #00880F; color: #fff; font-size: 1.3rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .aic-rfid-step-icon { font-size: 2.5rem; color: #00880F; margin-bottom: 12px; }
+    .aic-rfid-step h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .aic-rfid-step p { font-size: 0.9rem; color: #666; }
+    .aic-rfid-step-arrow { display: none; }
+    @media (min-width: 768px) {
+        .aic-rfid-step-arrow { display: block; position: absolute; right: -20px; top: 50px; font-size: 1.5rem; color: #00880F; }
+    }
+    .aic-rfid-how-note { background: #EFF6F0; border-left: 4px solid #00880F; padding: 16px 20px; border-radius: 0 8px 8px 0; margin-top: 30px; font-size: 0.95rem; color: #444; line-height: 1.8; }
+
+    /* Product Card */
+    .aic-rfid-product { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+    .aic-rfid-product-img { border-radius: 14px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    .aic-rfid-product-img img { width: 100%; height: auto; display: block; }
+    .aic-rfid-product-info h3 { font-size: 1.5rem; color: #2c3e50; margin-bottom: 6px; }
+    .aic-rfid-product-info .aic-rfid-product-sub { font-size: 0.95rem; color: #00880F; font-weight: 500; margin-bottom: 16px; }
+    .aic-rfid-product-info ul { list-style: none; padding: 0; margin: 0 0 20px 0; }
+    .aic-rfid-product-info ul li { font-size: 0.93rem; color: #333; padding: 7px 0; border-bottom: 1px solid #eee; }
+    .aic-rfid-product-info ul li i { color: #00880F; margin-right: 10px; font-size: 0.85rem; width: 16px; text-align: center; }
+    .aic-rfid-product-info .aic-rfid-chip-badge { display: inline-block; background: linear-gradient(135deg, #00880F, #305534); color: #fff; padding: 8px 18px; border-radius: 6px; font-size: 0.9rem; font-weight: 600; margin-top: 8px; }
+
+    /* RFID餐具区段 */
+    .aic-rfid-dish-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .aic-rfid-dish-card { background: #fff; border-radius: 12px; padding: 30px 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.3s; text-align: center; }
+    .aic-rfid-dish-card:hover { transform: translateY(-4px); }
+    .aic-rfid-dish-card i { font-size: 2.2rem; color: #00880F; margin-bottom: 14px; }
+    .aic-rfid-dish-card h3 { font-size: 1.05rem; margin-bottom: 10px; color: #2c3e50; }
+    .aic-rfid-dish-card p { font-size: 0.9rem; color: #666; margin: 0; line-height: 1.7; }
+
+    /* Features Grid */
+    .aic-rfid-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .aic-rfid-feature-card { background: #fff; border-radius: 12px; padding: 30px 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.3s; }
+    .aic-rfid-feature-card:hover { transform: translateY(-4px); }
+    .aic-rfid-feature-card i { font-size: 2rem; color: #00880F; margin-bottom: 14px; }
+    .aic-rfid-feature-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    .aic-rfid-feature-card p { font-size: 0.9rem; color: #666; margin: 0; line-height: 1.7; }
+
+    /* Spec Table */
+    .aic-rfid-spec { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .aic-rfid-spec th, .aic-rfid-spec td { padding: 14px 16px; border-bottom: 1px solid #ddd; text-align: left; font-size: 0.92rem; }
+    .aic-rfid-spec thead th { background: #305534; color: #fff; font-weight: 600; }
+    .aic-rfid-spec tbody tr:nth-child(even) { background: #f9f9f9; }
+    .aic-rfid-spec tbody tr:hover { background: #EFF6F0; }
+    .aic-rfid-spec td:first-child { font-weight: 600; color: #2c3e50; white-space: nowrap; min-width: 140px; }
+
+    /* CTA */
+    .aic-rfid-cta { background: #305534; padding: 60px 0; text-align: center; color: #fff; }
+    .aic-rfid-cta h2 { color: #fff; font-size: 1.6rem; margin-bottom: 12px; }
+    .aic-rfid-cta p { color: rgba(255,255,255,0.85); margin-bottom: 24px; }
+    .aic-rfid-cta .btn-primary { background: #00880F; color: #fff; padding: 14px 32px; border-radius: 6px; font-size: 1rem; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.3s; }
+    .aic-rfid-cta .btn-primary:hover { background: #00660C; text-decoration: none; }
+    .aic-rfid-cta .aic-rfid-phone { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-top: 16px; }
+    .aic-rfid-cta .aic-rfid-phone i { margin-right: 6px; }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+        .aic-rfid-hero-grid { grid-template-columns: 1fr; }
+        .aic-rfid-product { grid-template-columns: 1fr; }
+        .aic-rfid-features, .aic-rfid-dish-grid { grid-template-columns: repeat(2, 1fr); }
+        .aic-rfid-steps { grid-template-columns: repeat(2, 1fr); }
+        .aic-rfid-hero h1 { font-size: 1.8rem; }
+    }
+    @media (max-width: 575px) {
+        .aic-rfid-features, .aic-rfid-dish-grid, .aic-rfid-steps { grid-template-columns: 1fr; }
+        .aic-rfid-spec { font-size: 0.82rem; }
+        .aic-rfid-spec th, .aic-rfid-spec td { padding: 10px 10px; }
+    }
+    </style>
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "RFID一次可以读取多少个餐具？", "acceptedAnswer": {"@type": "Answer", "text": "一次可在1秒内读取30个以上餐具，读取精度99%以上。"}}, {"@type": "Question", "name": "RFID餐具可以清洗吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以，RFID内置餐具可清洗、反复使用，耐久性高，可长期使用。"}}, {"@type": "Question", "name": "如何向餐具写入信息？", "acceptedAnswer": {"@type": "Answer", "text": "通过智能出品机向餐具写入菜品信息。可随时更改，同一餐具可按不同餐次设置不同价格。"}}, {"@type": "Question", "name": "RFID方式的运营管理工作量如何？", "acceptedAnswer": {"@type": "Answer", "text": "RFID方式是三种方式中运营管理最省心的方式。只需将餐具放上即可自动识别和结算。"}}]}
+    </script>
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='#'><img src='../assets/img/logo/logo.webp' alt='Izumo Soan' style='height:100px;'></a>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
+            <nav>
+                <ul>
+                    <li><a href='index.html'>首页</a></li>
+                    <li><a href='services.html' class='active'>服务</a></li>
+                    <li><a href='products.html'>产品</a></li>
+                    <li><a href='case-studies.html'>实绩</a></li>
+                    <li><a href='about.html'>公司概要</a></li>
+                    <li><a href='overseas-partner.html'>海外合作伙伴</a></li>
+                    <li><a href='index.html#contact'>联系我们</a></li>
+                </ul>
+                <div class='language-switcher'>
+                    <span class='lang-label'><i class="fas fa-globe"></i></span>
+                    <select id='lang-select'>
+                        <option value='ja'>日本語</option>
+                        <option value='en'>English</option>
+                        <option value='zh' selected>中文</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <div class='aic-rfid-breadcrumb'>
+            <div class='container'>
+                <a href='index.html'>首页</a>
+                <span>›</span>
+                <a href='services.html'>服务</a>
+                <span>›</span>
+                <a href='smart-cafeteria.html'>智慧食堂</a>
+                <span>›</span>
+                <span class='current'>RFID结算</span>
+            </div>
+        </div>
+
+        <!-- 1. Hero -->
+        <section class='aic-rfid-hero'>
+            <div class='container aic-rfid-hero-grid'>
+                <div>
+                    <h1>放上即完成结算。</h1>
+                    <p class='subtitle'>将内置RFID的餐具放在结算台上，即可瞬间自动识别全部菜品和金额。<br>全球食堂广泛采用，稳定·高速·高精度的结算方式。</p>
+                    <div class='aic-rfid-hero-points'>
+                        <span><i class="fas fa-check"></i>一次读取30个以上</span>
+                        <span><i class="fas fa-check"></i>1秒内完成结算</span>
+                        <span><i class="fas fa-check"></i>全球食堂广泛应用</span>
+                    </div>
+                    <div class='aic-rfid-hero-buttons'>
+                        <a href='index.html#contact' class='btn-primary'>申请免费演示/POC</a>
+                        <a href='smart-cafeteria.html' class='btn-secondary'>← 返回3种方式对比</a>
+                    </div>
+                </div>
+                <div class='aic-rfid-hero-visual'>
+                    <img src='../assets/img/cafeteria/RFIDtype.jpg' alt='RFID结算台 - 双通道结算台，配备2个读取区域和显示屏'>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 工作原理（3步骤） -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>RFID结算的工作原理</h2>
+                    <p>餐具内置的RFID芯片由结算台读取器瞬间读取，简单可靠的结算方式。</p>
+                </div>
+                <div class='aic-rfid-steps'>
+                    <div class='aic-rfid-step'>
+                        <div class='aic-rfid-step-num'>1</div>
+                        <div class='aic-rfid-step-icon'><i class="fas fa-utensils"></i></div>
+                        <h3>使用RFID内置餐具选取菜品</h3>
+                        <p>每个餐具内置有RFID芯片。只需选择喜欢的菜品放入托盘即可。无需特殊操作。</p>
+                        <span class='aic-rfid-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                    </div>
+                    <div class='aic-rfid-step'>
+                        <div class='aic-rfid-step-num'>2</div>
+                        <div class='aic-rfid-step-icon'><i class="fas fa-broadcast-tower"></i></div>
+                        <h3>放上结算台即可全部自动识别</h3>
+                        <p>将托盘放上结算台，内置读取器在1秒内批量读取所有餐具的RFID芯片。品目和金额显示在屏幕上。</p>
+                        <span class='aic-rfid-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                    </div>
+                    <div class='aic-rfid-step'>
+                        <div class='aic-rfid-step-num'>3</div>
+                        <div class='aic-rfid-step-icon'><i class="fas fa-mobile-alt"></i></div>
+                        <h3>人脸识别 / QR / IC卡支付</h3>
+                        <p>通过人脸识别、QR码、IC卡等方式进行无现金支付。顺畅完成结算。</p>
+                    </div>
+                </div>
+                <div class='aic-rfid-how-note'>
+                    <strong>💡 RFID芯片工作原理：</strong>嵌入餐具底部的RFID芯片预先写入了菜单信息（品目·价格）。结算台内置的高频读取器通过电磁波激活芯片，无需电池即可读取信息。由此可在1秒内同时准确识别30个以上的餐具。
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 产品介绍 -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>RFID结算台</h2>
+                    <p>高速·稳定·高精度。全球食堂广泛采用的RFID智能结算台。</p>
+                </div>
+                <div class='aic-rfid-product'>
+                    <div class='aic-rfid-product-img'>
+                        <img src='../assets/img/cafeteria/RFIDtype.jpg' alt='RFID智能结算台 - 搭载双15.6英寸触控屏'>
+                    </div>
+                    <div class='aic-rfid-product-info'>
+                        <h3>RFID智能结算台</h3>
+                        <p class='aic-rfid-product-sub'>搭载双15.6英寸 1080P触控屏</p>
+                        <ul>
+                            <li><i class="fas fa-bolt"></i>一次在1秒内读取30个以上餐具</li>
+                            <li><i class="fas fa-id-card"></i>IC卡 / QR码 / 人脸识别支付</li>
+                            <li><i class="fas fa-volume-up"></i>语音·光引导（真人语音）</li>
+                            <li><i class="fas fa-wifi"></i>WiFi / TCP/IP（Ethernet）通信</li>
+                            <li><i class="fas fa-concierge-bell"></i>最适合小碗式·套餐式食堂</li>
+                            <li><i class="fas fa-edit"></i>可在屏幕上添加·删除订单</li>
+                        </ul>
+                        <div class='aic-rfid-chip-badge'>
+                            <i class="fas fa-microchip" style="margin-right: 6px;"></i>芯片方式：高精度·稳定·高速计算
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 关于RFID餐具 -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>关于RFID餐具</h2>
+                    <p>兼具可反复使用的耐久性和可自由改写菜单的灵活性的专用餐具。</p>
+                </div>
+                <div class='aic-rfid-dish-grid'>
+                    <div class='aic-rfid-dish-card'>
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>高耐久性</h3>
+                        <p>RFID餐具支持洗碗机清洗，可反复使用。芯片密封于餐具底部，防水抗冲击设计。可长期稳定使用。</p>
+                    </div>
+                    <div class='aic-rfid-dish-card'>
+                        <i class="fas fa-pen-fancy"></i>
+                        <h3>智能出品机写入</h3>
+                        <p>使用智能出品机将菜单信息（品目·价格）写入餐具芯片。可为每餐设置不同菜单·价格，同一餐具可对应早·午·晚不同菜单。</p>
+                    </div>
+                    <div class='aic-rfid-dish-card'>
+                        <i class="fas fa-layer-group"></i>
+                        <h3>批量一括写入</h3>
+                        <p>支持对多个餐具批量写入菜单信息。短时间内即可准备大量餐具，大幅提升食堂运营效率。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 主要特点 -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'><h2>主要特点</h2></div>
+                <div class='aic-rfid-features'>
+                    <div class='aic-rfid-feature-card'>
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h3>高速·高精度</h3>
+                        <p>一次在1秒内读取30个以上餐具。识别精度99%以上，实现稳定结算。</p>
+                    </div>
+                    <div class='aic-rfid-feature-card'>
+                        <i class="fas fa-globe-asia"></i>
+                        <h3>稳定的全球实绩</h3>
+                        <p>全球各大学、企业、医院食堂广泛采用。多年运营经验验证的高可靠性系统。</p>
+                    </div>
+                    <div class='aic-rfid-feature-card'>
+                        <i class="fas fa-desktop"></i>
+                        <h3>管理平台</h3>
+                        <p>通过网页统一管理菜品管理、食堂信息管理、订单明细、销售分析。支持数据驱动的食堂运营。</p>
+                    </div>
+                    <div class='aic-rfid-feature-card'>
+                        <i class="fas fa-magic"></i>
+                        <h3>自动识别·自动结算</h3>
+                        <p>放上餐具即自动显示品目和金额。无需工作人员操作，实现结算省力化。</p>
+                    </div>
+                    <div class='aic-rfid-feature-card'>
+                        <i class="fas fa-credit-card"></i>
+                        <h3>多样化支付</h3>
+                        <p>支持人脸识别、QR码、IC卡。提供适合用户需求的灵活支付方式。</p>
+                    </div>
+                    <div class='aic-rfid-feature-card'>
+                        <i class="fas fa-edit"></i>
+                        <h3>订单修改功能</h3>
+                        <p>结算前可在屏幕上添加·删除菜品。确保准确结算，提升用户安心感。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. 技术规格 -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'><h2>技术规格</h2></div>
+                <div style='overflow-x:auto;'>
+                    <table class='aic-rfid-spec'>
+                        <thead>
+                            <tr><th>项目</th><th>规格</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>CPU</td><td>64位8核CPU</td></tr>
+                            <tr><td>存储</td><td>16G FLASH, 2G DDR3</td></tr>
+                            <tr><td>显示屏</td><td>双15.6英寸 1080P触控屏</td></tr>
+                            <tr><td>QR扫描</td><td>QR Code, Code 128/39等，360°旋转</td></tr>
+                            <tr><td>人脸识别摄像头</td><td>双红外摄像头，200万像素</td></tr>
+                            <tr><td>RFID读取</td><td>一次30个以上，读取时间1秒内</td></tr>
+                            <tr><td>非接触式卡</td><td>M1/CPU卡，ISO/IEC14443兼容</td></tr>
+                            <tr><td>通信</td><td>Ethernet 10/100Mbps, WiFi 2.4GHz, Bluetooth 4.0</td></tr>
+                            <tr><td>语音引导</td><td>真人语音引导</td></tr>
+                            <tr><td>外形尺寸</td><td>1475×650×1100mm（台式）</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CTA -->
+        <section class='aic-rfid-cta'>
+            <div class='container'>
+                <h2>欢迎体验RFID结算的实力</h2>
+                <p>放上即完成结算 — 其速度与精准度，欢迎通过实机演示亲自体验。<br>免费演示·POC咨询、资料索取等，欢迎随时联系我们。</p>
+                <a href='index.html#contact' class='btn-primary'>咨询·演示申请</a>
+                <div class='aic-rfid-phone'><i class="fas fa-phone-alt"></i> 050-1258-9122</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../assets/img/logo/logo.webp' alt='Izumo Soan'>
+                    <p class='logo-desp'>技术赋能现场。</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>菜单</h4>
+                    <ul>
+                        <li><a href='index.html'>首页</a></li>
+                        <li><a href='about.html'>公司概况</a></li>
+                        <li><a href='services.html'>服务</a></li>
+                        <li><a href='case-studies.html'>案例</a></li>
+                        <li><a href='overseas-partner.html'>海外合作伙伴</a></li>
+                        <li><a href='privacy.html'>隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>产品信息</h4>
+                    
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='smart-cafeteria.html'>
+                            <span>智慧食堂</span>
+                            <small>AI图像识别·RFID·计量精算</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>智能现场的运维改善平台</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 出雲創安 Izumo Soan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src='../assets/js/main.js'></script>
+    <script src='../assets/js/lang-switcher.js'></script>
+</body>
+</html>

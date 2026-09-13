@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Weight-Based Checkout | Smart Cafeteria Solutions | Izumo Soan</title>
+    <meta name='description' content='High-precision electronic scales auto-weigh food by the gram for accurate checkout. Pay only for what you eat — ideal for buffet-style cafeterias. Reduce food waste, automate settlement, and leverage data analytics. Free POC available.'>
+
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/smart-cafeteria-weight.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/smart-cafeteria-weight.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/smart-cafeteria-weight.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/smart-cafeteria-weight.html">
+    <link rel="canonical" href="https://izumosoan.com/en/smart-cafeteria-weight.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="出雲創安 Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/en/smart-cafeteria-weight.html">
+    <meta property="og:title" content="Weight-Based Checkout | Smart Cafeteria Solutions | Izumo Soan">
+    <meta property="og:description" content="High-precision electronic scales auto-weigh food by the gram for accurate checkout. Pay only for what you eat — ideal for buffet-style cafeterias. Reduce food waste, automate settlement, and leverage data analytics.">
+    <meta property="og:locale" content="en_US">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"出雲創安 Izumo Soan","url":"[REDACTED_CONN_STRING]://type":"PostalAddress","addressLocality":"Katsushika-ku","addressRegion":"Tokyo","streetAddress":"Higashitateishi 4-37-8","addressCountry":"JP"},"description":"Technology partner connecting field, safety and operations"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://izumosoan.com/en/index.html"},{"@type":"ListItem","position":2,"name":"Services","item":"https://izumosoan.com/en/services.html"},{"@type":"ListItem","position":3,"name":"Smart Cafeteria","item":"https://izumosoan.com/en/smart-cafeteria.html"},{"@type":"ListItem","position":4,"name":"Weight-Based Checkout","item":"https://izumosoan.com/en/smart-cafeteria-weight.html"}]}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../assets/css/style.min.css'>
+
+    <style>
+    /* Weight Settlement page-specific styles */
+    .aic-wt-hero { background: linear-gradient(135deg, #EFF6F0 0%, #d4edda 100%); padding: 80px 0 60px; }
+    .aic-wt-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .aic-wt-hero h1 { font-size: 2.4rem; color: #2c3e50; margin-bottom: 10px; }
+    .aic-wt-hero .subtitle { font-size: 1.15rem; color: #555; line-height: 1.8; margin-bottom: 20px; }
+    .aic-wt-hero-points { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 28px; }
+    .aic-wt-hero-points span { background: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; color: #00880F; border: 1px solid #00880F; }
+    .aic-wt-hero-points span i { margin-right: 6px; }
+    .aic-wt-hero-visual { border-radius: 16px; overflow: hidden; min-height: 320px; }
+    .aic-wt-hero-visual img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; display: block; }
+    .aic-wt-hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* Breadcrumb */
+    .aic-wt-breadcrumb { padding: 14px 0; font-size: 0.85rem; color: #888; }
+    .aic-wt-breadcrumb a { color: #00880F; text-decoration: none; }
+    .aic-wt-breadcrumb a:hover { text-decoration: underline; }
+    .aic-wt-breadcrumb span { margin: 0 6px; color: #bbb; }
+
+    /* How it works — Steps */
+    .aic-wt-flow-img { text-align: center; margin-bottom: 40px; }
+    .aic-wt-flow-img img { max-width: 100%; border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
+    .aic-wt-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 30px; }
+    .aic-wt-step { text-align: center; position: relative; }
+    .aic-wt-step-num { width: 50px; height: 50px; border-radius: 50%; background: #00880F; color: #fff; font-size: 1.3rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .aic-wt-step-icon { font-size: 2.5rem; color: #00880F; margin-bottom: 12px; }
+    .aic-wt-step h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .aic-wt-step p { font-size: 0.9rem; color: #666; line-height: 1.7; }
+    .aic-wt-step-arrow { display: none; }
+    @media (min-width: 768px) {
+        .aic-wt-step-arrow { display: block; position: absolute; right: -20px; top: 50px; font-size: 1.5rem; color: #00880F; }
+    }
+
+    /* Product cards */
+    .aic-wt-products { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .aic-wt-product-card { background: #fff; border-radius: 14px; padding: 36px 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); transition: transform 0.3s; border-top: 4px solid #00880F; }
+    .aic-wt-product-card:hover { transform: translateY(-5px); }
+    .aic-wt-product-card .aic-wt-product-img { margin-bottom: 20px; text-align: center; min-height: 200px; display: flex; align-items: center; justify-content: center; }
+    .aic-wt-product-card .aic-wt-product-img img { width: 100%; max-height: 240px; object-fit: contain; border-radius: 8px; }
+    .aic-wt-product-card h3 { font-size: 1.2rem; text-align: center; margin-bottom: 14px; color: #2c3e50; }
+    .aic-wt-product-card .aic-wt-product-desc { font-size: 0.93rem; color: #555; line-height: 1.8; }
+
+    /* Features grid */
+    .aic-wt-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .aic-wt-feature-card { background: #fff; border-radius: 12px; padding: 30px 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.3s; }
+    .aic-wt-feature-card:hover { transform: translateY(-4px); }
+    .aic-wt-feature-card i { font-size: 2rem; color: #00880F; margin-bottom: 14px; }
+    .aic-wt-feature-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    .aic-wt-feature-card p { font-size: 0.9rem; color: #666; margin: 0; line-height: 1.7; }
+
+    /* Specs table */
+    .aic-wt-specs { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .aic-wt-specs th, .aic-wt-specs td { padding: 14px 16px; border-bottom: 1px solid #ddd; text-align: left; font-size: 0.92rem; }
+    .aic-wt-specs thead th { background: #305534; color: #fff; font-weight: 600; }
+    .aic-wt-specs tbody tr:nth-child(even) { background: #f9f9f9; }
+    .aic-wt-specs td:first-child { font-weight: 600; color: #2c3e50; min-width: 180px; }
+    .aic-wt-specs .aic-wt-spec-group td { background: #EFF6F0; font-weight: 700; color: #305534; font-size: 0.95rem; border-bottom: 2px solid #00880F; }
+
+    /* Impact section */
+    .aic-wt-impacts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .aic-wt-impact-card { background: #fff; border-radius: 14px; padding: 32px 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); display: flex; gap: 20px; align-items: flex-start; transition: transform 0.3s; }
+    .aic-wt-impact-card:hover { transform: translateY(-4px); }
+    .aic-wt-impact-icon { width: 56px; height: 56px; min-width: 56px; border-radius: 50%; background: linear-gradient(135deg, #00880F, #305534); color: #fff; font-size: 1.4rem; display: flex; align-items: center; justify-content: center; }
+    .aic-wt-impact-card h3 { font-size: 1.1rem; margin-bottom: 6px; color: #2c3e50; }
+    .aic-wt-impact-card p { font-size: 0.9rem; color: #666; margin: 0; line-height: 1.7; }
+
+    /* CTA */
+    .aic-wt-cta { background: #305534; padding: 60px 0; text-align: center; color: #fff; }
+    .aic-wt-cta h2 { color: #fff; font-size: 1.6rem; margin-bottom: 12px; }
+    .aic-wt-cta p { color: rgba(255,255,255,0.85); margin-bottom: 24px; }
+    .aic-wt-cta .btn-primary { background: #00880F; color: #fff; padding: 14px 32px; border-radius: 6px; font-size: 1rem; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.3s; }
+    .aic-wt-cta .btn-primary:hover { background: #00660C; text-decoration: none; }
+    .aic-wt-cta .aic-wt-phone { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-top: 16px; }
+    .aic-wt-cta .aic-wt-phone i { margin-right: 6px; }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+        .aic-wt-hero-grid { grid-template-columns: 1fr; }
+        .aic-wt-features { grid-template-columns: repeat(2, 1fr); }
+        .aic-wt-products { grid-template-columns: repeat(2, 1fr); }
+        .aic-wt-steps { grid-template-columns: repeat(2, 1fr); }
+        .aic-wt-impacts { grid-template-columns: repeat(2, 1fr); }
+        .aic-wt-hero h1 { font-size: 1.8rem; }
+    }
+    @media (max-width: 575px) {
+        .aic-wt-features, .aic-wt-products, .aic-wt-steps, .aic-wt-impacts { grid-template-columns: 1fr; }
+        .aic-wt-specs { font-size: 0.82rem; }
+        .aic-wt-specs th, .aic-wt-specs td { padding: 10px 10px; }
+    }
+    </style>
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How precise is the weighing settlement?", "acceptedAnswer": {"@type": "Answer", "text": "High-precision electronic scales enable gram-level measurement with a capacity of 30kg, ensuring accurate billing."}}, {"@type": "Question", "name": "Does weighing settlement require special tableware?", "acceptedAnswer": {"@type": "Answer", "text": "No special tableware is required. It works with existing dishes, using tray binding for automatic settlement."}}, {"@type": "Question", "name": "How much food waste reduction can be expected?", "acceptedAnswer": {"@type": "Answer", "text": "The pay-for-what-you-eat system reduces food waste by over 30%, contributing to SDGs."}}, {"@type": "Question", "name": "What type of cafeteria is weighing settlement best suited for?", "acceptedAnswer": {"@type": "Answer", "text": "It is ideal for buffet-style and self-service cafeterias. Users can freely choose their desired portions, improving satisfaction."}}]}
+    </script>
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='#'><img src='../assets/img/logo/logo.webp' alt='Izumo Soan' style='height:100px;'></a>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
+            <nav>
+                <ul>
+                    <li><a href='index.html'>Home</a></li>
+                    <li><a href='services.html' class='active'>Services</a></li>
+                    <li><a href='products.html'>Products</a></li>
+                    <li><a href='case-studies.html'>Case Studies</a></li>
+                    <li><a href='about.html'>About</a></li>
+                    <li><a href='overseas-partner.html'>Partners</a></li>
+                    <li><a href='index.html#contact'>Contact</a></li>
+                </ul>
+                <div class='language-switcher'>
+                    <span class='lang-label'><i class="fas fa-globe"></i></span>
+                    <select id='lang-select'>
+                        <option value='ja'>日本語</option>
+                        <option value='en' selected>English</option>
+                        <option value='zh'>中文</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <div class='aic-wt-breadcrumb'>
+            <div class='container'>
+                <a href='index.html'>Home</a><span>›</span>
+                <a href='services.html'>Services</a><span>›</span>
+                <a href='smart-cafeteria.html'>Smart Cafeteria</a><span>›</span>
+                Weight-Based Checkout
+            </div>
+        </div>
+
+        <!-- 1. Hero -->
+        <section class='aic-wt-hero'>
+            <div class='container aic-wt-hero-grid'>
+                <div>
+                    <h1>Pay Only for What You Eat.</h1>
+                    <p class='subtitle'>High-precision electronic scales calculate by the gram. The next-generation "pay for what you eat" solution — ideal for buffet-style cafeterias.</p>
+                    <div class='aic-wt-hero-points'>
+                        <span><i class="fas fa-check"></i>Gram-Level Precision</span>
+                        <span><i class="fas fa-check"></i>Reduces Food Waste</span>
+                        <span><i class="fas fa-check"></i>Ideal for Buffets</span>
+                    </div>
+                    <div class='aic-wt-hero-buttons'>
+                        <a href='index.html#contact' class='btn-primary'>Request Free Demo / POC</a>
+                        <a href='#how-it-works' class='btn-secondary'>Learn More</a>
+                    </div>
+                </div>
+                <div class='aic-wt-hero-visual'>
+                    <img src='../assets/img/cafeteria/weight-using.jpg' alt='Weight-based checkout system in use at a cafeteria buffet line'>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. How It Works -->
+        <section class='section-padding' id='how-it-works'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>How Weight-Based Checkout Works</h2>
+                    <p>Just 3 simple steps to smart pay-for-what-you-eat checkout.</p>
+                </div>
+                <div class='aic-wt-flow-img'>
+                    <img src='../assets/img/cafeteria/weightsys-en.jpg' alt='Weight-based checkout system flow diagram (tray linking → weigh and self-serve → auto settlement)'>
+                </div>
+                <div class='aic-wt-steps'>
+                    <div class='aic-wt-step'>
+                        <div class='aic-wt-step-num'>1</div>
+                        <div class='aic-wt-step-icon'><i class="fas fa-id-card"></i></div>
+                        <h3>Tray Linking</h3>
+                        <p>Link your tray to your identity via face recognition, QR code, or IC card. Simply place the tray on the sensing area to complete linking.</p>
+                        <span class='aic-wt-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                    </div>
+                    <div class='aic-wt-step'>
+                        <div class='aic-wt-step-num'>2</div>
+                        <div class='aic-wt-step-icon'><i class="fas fa-utensils"></i></div>
+                        <h3>Self-Serve</h3>
+                        <p>Take only the amount you want at each food station. Electronic scales measure weight in real-time, auto-calculating by the gram.</p>
+                        <span class='aic-wt-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                    </div>
+                    <div class='aic-wt-step'>
+                        <div class='aic-wt-step-num'>3</div>
+                        <div class='aic-wt-step-icon'><i class="fas fa-cash-register"></i></div>
+                        <h3>Auto Settlement</h3>
+                        <p>After your meal, the total is automatically calculated. Pay only for what you took. No cashier needed — smooth and seamless.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Products -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>Products</h2>
+                    <p>Two key devices that make weight-based checkout possible.</p>
+                </div>
+                <div class='aic-wt-products'>
+                    <div class='aic-wt-product-card'>
+                        <div class='aic-wt-product-img'>
+                            <img src='../assets/img/cafeteria/weight1.jpg' alt='Tray Linking Terminal (tablet + IC card reader + sensing area)'>
+                        </div>
+                        <h3>Tray Linking Terminal</h3>
+                        <p class='aic-wt-product-desc'>A dedicated terminal that links trays to users via face recognition, QR code, or IC card. Authentication status is displayed in real-time on the touchscreen. Simply place the tray on the sensing area (Tray Reading Area) to complete linking and start your meal smoothly.</p>
+                    </div>
+                    <div class='aic-wt-product-card'>
+                        <div class='aic-wt-product-img'>
+                            <img src='../assets/img/cafeteria/weightplate.jpg' alt='Weighing Station (electronic scale + food warmer + display panel + sensing area)'>
+                        </div>
+                        <h3>Weighing Station</h3>
+                        <p class='aic-wt-product-desc'>An all-in-one set with high-precision electronic scale, food warmer, and display panel. Weight is measured in real-time as food is served, auto-calculating by the gram. Place your tray on the sensing area to automatically record — only what you take is accurately charged.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Key Features -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'><h2>Key Features</h2></div>
+                <div class='aic-wt-features'>
+                    <div class='aic-wt-feature-card'>
+                        <i class="fas fa-balance-scale"></i>
+                        <h3>Gram-Level Precision</h3>
+                        <p>High-precision electronic scales measure food weight accurately. Ensures fair and transparent billing.</p>
+                    </div>
+                    <div class='aic-wt-feature-card'>
+                        <i class="fas fa-leaf"></i>
+                        <h3>Reduced Food Waste</h3>
+                        <p>Take only what you need, significantly reducing food waste. Contributes to SDGs and lower environmental impact.</p>
+                    </div>
+                    <div class='aic-wt-feature-card'>
+                        <i class="fas fa-concierge-bell"></i>
+                        <h3>Ideal for Self-Service</h3>
+                        <p>Perfect for buffet-style cafeterias. Diners freely choose their dishes and portions.</p>
+                    </div>
+                    <div class='aic-wt-feature-card'>
+                        <i class="fas fa-cash-register"></i>
+                        <h3>Auto Settlement</h3>
+                        <p>Totals are automatically calculated after meals. No cashier needed — dramatically reduces labor costs.</p>
+                    </div>
+                    <div class='aic-wt-feature-card'>
+                        <i class="fas fa-desktop"></i>
+                        <h3>PC Management Platform</h3>
+                        <p>Centralized web-based management for products, orders, sales analytics, and equipment. Supports data-driven operations.</p>
+                    </div>
+                    <div class='aic-wt-feature-card'>
+                        <i class="fas fa-wallet"></i>
+                        <h3>Multiple Payment Options</h3>
+                        <p>Supports face recognition, QR code, and IC card. Cashless operations for hygienic and smooth payments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Technical Specifications -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'><h2>Technical Specifications</h2></div>
+                <div style='overflow-x:auto;'>
+                    <table class='aic-wt-specs'>
+                        <thead>
+                            <tr><th>Item</th><th>Specification</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr class='aic-wt-spec-group'><td colspan='2'>Tray Linking Terminal</td></tr>
+                            <tr><td>OS</td><td>Android</td></tr>
+                            <tr><td>Display</td><td>8–10 inch touchscreen</td></tr>
+                            <tr><td>Authentication</td><td>Face recognition / QR / IC card</td></tr>
+                            <tr><td>Communication</td><td>WiFi / TCP/IP</td></tr>
+                            <tr class='aic-wt-spec-group'><td colspan='2'>Weighing Station</td></tr>
+                            <tr><td>Scale Precision</td><td>Gram-level (capacity 30kg)</td></tr>
+                            <tr><td>Display</td><td>With display panel</td></tr>
+                            <tr><td>Alerts</td><td>Voice and light guidance</td></tr>
+                            <tr><td>Communication</td><td>WiFi / TCP/IP</td></tr>
+                            <tr><td>Operating Environment</td><td>-10℃ to 50℃</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Implementation Benefits -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>Implementation Benefits</h2>
+                    <p>Concrete results delivered by the weight-based checkout system.</p>
+                </div>
+                <div class='aic-wt-impacts'>
+                    <div class='aic-wt-impact-card'>
+                        <div class='aic-wt-impact-icon'><i class="fas fa-recycle"></i></div>
+                        <div>
+                            <h3>30%+ Reduction in Food Waste</h3>
+                            <p>The pay-for-what-you-take model eliminates waste. Dramatically reduces food disposal while achieving cost savings and SDGs contribution.</p>
+                        </div>
+                    </div>
+                    <div class='aic-wt-impact-card'>
+                        <div class='aic-wt-impact-icon'><i class="fas fa-smile"></i></div>
+                        <div>
+                            <h3>Higher User Satisfaction</h3>
+                            <p>Freedom to choose portions boosts satisfaction. Also contributes to health management and increases cafeteria usage rates.</p>
+                        </div>
+                    </div>
+                    <div class='aic-wt-impact-card'>
+                        <div class='aic-wt-impact-icon'><i class="fas fa-user-slash"></i></div>
+                        <div>
+                            <h3>Zero Cashier Staff</h3>
+                            <p>Fully automated settlement eliminates the need for cashier staff. Dramatically reduces labor costs and fundamentally improves cafeteria cost structures.</p>
+                        </div>
+                    </div>
+                    <div class='aic-wt-impact-card'>
+                        <div class='aic-wt-impact-icon'><i class="fas fa-chart-line"></i></div>
+                        <div>
+                            <h3>Data-Driven Operations</h3>
+                            <p>Analyze popular menus and consumption trends in real-time. Enables data-informed menu improvements and management optimization.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CTA -->
+        <section class='aic-wt-cta'>
+            <div class='container'>
+                <h2>Experience the Future of Cafeteria Checkout</h2>
+                <p>Considering a weight-based checkout solution for your cafeteria?<br>Contact us for a free demo, POC consultation, or to request materials.</p>
+                <a href='index.html#contact' class='btn-primary'>Contact Us / Request Demo</a>
+                <div class='aic-wt-phone'><i class="fas fa-phone-alt"></i> 050-1258-9122</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../assets/img/logo/logo.webp' alt='Izumo Soan'>
+                    <p class='logo-desp'>Technology that powers the field</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href='index.html'>Home</a></li>
+                        <li><a href='about.html'>About</a></li>
+                        <li><a href='services.html'>Services</a></li>
+                        <li><a href='case-studies.html'>Case Studies</a></li>
+                        <li><a href='overseas-partner.html'>Overseas Partner</a></li>
+                        <li><a href='privacy.html'>Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>Products</h4>
+                    
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='smart-cafeteria.html'>
+                            <span>Smart Cafeteria</span>
+                            <small>AI Recognition · RFID · Weighing</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>Smart Site Operations Platform</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 Izumo Soan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src='../assets/js/main.js'></script>
+    <script src='../assets/js/lang-switcher.js'></script>
+</body>
+</html>
