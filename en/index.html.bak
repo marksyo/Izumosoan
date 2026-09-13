@@ -3,8 +3,8 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Izumo Soan | Bridging Technology and the Field</title>
-    <meta name='description' content='Izumo Soan implements domestic and international technologies on Japanese worksites, supporting everything from design, installation, system integration, to ongoing operations. Serving manufacturing, logistics, data centers, and facilities.'>
+    <title>Izumo Soan | Your Technology Partner for Field, Safety & Operations</title>
+    <meta name='description' content='Izumo Soan supports manufacturing plants, logistics warehouses, data centers, and commercial facilities with network construction, system deployment, and field DX across Kanto, Chubu, Kansai, and Kyushu.'>
     
     <!-- SEO: hreflang -->
     <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/index.html">
@@ -17,8 +17,8 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Izumo Soan">
     <meta property="og:url" content="https://izumosoan.com/en/index.html">
-    <meta property="og:title" content="Izumo Soan | Bridging Technology and the Field">
-    <meta property="og:description" content="Izumo Soan implements domestic and international technologies on Japanese worksites, supporting design, deployment, and operations as your engineering partner.">
+    <meta property="og:title" content="Izumo Soan | Your Technology Partner for Field, Safety & Operations">
+    <meta property="og:description" content="Izumo Soan is a technology engineering company that supports continuous field operations. We provide network, communications, fire safety infrastructure, technical system deployment support, and digital transformation services for field operations.">
     <meta property="og:locale" content="en_US">
 
     <!-- SEO: JSON-LD Organization -->
@@ -37,7 +37,7 @@
             "streetAddress": "4-37-8 Higashi-Tateishi",
             "addressCountry": "JP"
         },
-        "description": "Engineering partner bridging technology and Japanese worksites"
+        "description": "Your technology partner connecting field, safety & operations"
     }
     </script>
 
@@ -66,31 +66,6 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
     <link rel='stylesheet' href='../assets/css/style.min.css'>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <!-- What We Do 4-column balanced layout -->
-    <style>
-        .what-we-do-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-        }
-        .what-we-do-grid .solution-card {
-            text-align: center;
-            padding: 2rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .what-we-do-grid .solution-card p {
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-        @media (max-width: 992px) {
-            .what-we-do-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 576px) {
-            .what-we-do-grid { grid-template-columns: 1fr; }
-        }
-    </style>
     <script>
         (function() {
             var path = window.location.pathname;
@@ -127,7 +102,7 @@
                 </ul>                <div class='language-switcher'>
                     <span class='lang-label'><i class="fas fa-globe"></i></span>
                     <select id='lang-select'>
-                        <option value='ja'>日本語</option>
+<option value='ja'>日本語</option>
                         <option value='en' selected>English</option>
                         <option value='zh'>中文</option>
                     </select>
@@ -140,136 +115,103 @@
         <!-- Hero Section -->
         <section class='hero'>
             <div class='container'>
-                <h1>Technology that powers the field.</h1>
+                <h1>Technology that powers the field</h1>
                 <p class='subtitle'>
-                    We implement domestic and international technologies on Japanese worksites,<br>supporting design, deployment, and operations as your engineering partner.
+                    We support technology deployment and operations on Japanese worksites
+                </p>
+                <p class='hero-desc'>
+                    Your technology partner connecting field, safety & operations
                 </p>
                 <div class='hero-buttons'>
-                    <a href='services.html' class='btn-primary'>Discuss your field challenges</a>
-                    <a href='overseas-partner.html' class='btn-secondary'>Expand into the Japanese market</a>
+                    <a href='services.html' class='btn-primary'>View Our Services</a>
+                    <a href='index.html#contact' class='btn-secondary'>Contact Us</a>
                 </div>
             </div>
         </section>
 
-        <!-- What We Do — Technology → Bridge → Implementation → Operation -->
-        <section class='section-padding section-bg'>
-            <div class='container'>
-                <div class="section-title">
-                    <h2>Making Technology Work on Site</h2>
-                    <p>Izumo Soan connects technology, equipment, systems, and people — supporting deployment until it truly works in the field.</p>
-                </div>
-                <div class='what-we-do-grid'>
-                    <div class='card-item solution-card'>
-                        <div class='solution-number'>1</div>
-                        <div class='solution-icon' style='font-size:2.5rem; margin-bottom:1rem;'><i class="fas fa-microchip"></i></div>
-                        <h3>Technology</h3>
-                        <p>Understand products, systems,<br>and equipment. Select the best<br>technology with global partners.</p>
-                    </div>
-                    <div class='card-item solution-card'>
-                        <div class='solution-number'>2</div>
-                        <div class='solution-icon' style='font-size:2.5rem; margin-bottom:1rem;'><i class="fas fa-exchange-alt"></i></div>
-                        <h3>Bridge</h3>
-                        <p>Connect manufacturers, customers,<br>and worksites. Bridge differences in<br>language, standards, and process.</p>
-                    </div>
-                    <div class='card-item solution-card'>
-                        <div class='solution-number'>3</div>
-                        <div class='solution-icon' style='font-size:2.5rem; margin-bottom:1rem;'><i class="fas fa-tools"></i></div>
-                        <h3>Implementation</h3>
-                        <p>Execute installation, configuration,<br>integration, and deployment.<br>Deliver a working system on site.</p>
-                    </div>
-                    <div class='card-item solution-card'>
-                        <div class='solution-number'>4</div>
-                        <div class='solution-icon' style='font-size:2.5rem; margin-bottom:1rem;'><i class="fas fa-cogs"></i></div>
-                        <h3>Operation</h3>
-                        <p>Support training, maintenance,<br>and improvement. We stay until<br>operations are fully established.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Three Service Pillars -->
+        <!-- Target Industries -->
         <section class='section-padding'>
             <div class='container'>
                 <div class="section-title">
-                    <h2>Three Service Pillars</h2>
-                    <p>Covering every phase of the field with three core capabilities.</p>
+                    <h2>Industries We Serve</h2>
+                    <p>From manufacturing to data centers, we support technology deployment across a wide range of fields.</p>
+                </div>
+                <div class='industry-grid'>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-industry"></i> Manufacturing Factories</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Automation equipment deployment</li>
+                            <li><i class="fas fa-check"></i> PLC field tuning/debugging</li>
+                            <li><i class="fas fa-check"></i> Network &amp; OT environment setup</li>
+                            <li><i class="fas fa-check"></i> Fault investigation</li>
+                        </ul>
+                    </div>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-warehouse"></i> Logistics Warehouses</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> AGV/AMR deployment support</li>
+                            <li><i class="fas fa-check"></i> Wi-Fi coverage design</li>
+                            <li><i class="fas fa-check"></i> WMS on-site implementation</li>
+                            <li><i class="fas fa-check"></i> Equipment communication testing</li>
+                        </ul>
+                    </div>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-database"></i> Data Centers</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Fiber optic installation</li>
+                            <li><i class="fas fa-check"></i> Network cabling</li>
+                            <li><i class="fas fa-check"></i> Rack &amp; equipment installation</li>
+                            <li><i class="fas fa-check"></i> Verification testing</li>
+                        </ul>
+                    </div>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-building"></i> Buildings &amp; Facilities</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Security systems</li>
+                            <li><i class="fas fa-check"></i> Access control systems</li>
+                            <li><i class="fas fa-check"></i> Low-voltage electrical work</li>
+                            <li><i class="fas fa-check"></i> Network infrastructure</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Solutions -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>Our Solutions</h2>
+                    <p>Reliable, high-quality engineering backed by years of field experience.</p>
                 </div>
                 <div class='solution-grid'>
                     <div class='card-item solution-card'>
                         <div class='solution-number'>1</div>
                         <div class='solution-icon'><i class="fas fa-broadcast-tower"></i></div>
-                        <h3>Field Engineering<br><small>Build the foundation</small></h3>
-                        <p>Network construction, fiber optic installation, communications and facility infrastructure, security systems, on-site construction, testing, and commissioning. Building the foundation for safe and stable field operations.</p>
+                        <h3>Network, Communications &amp; Fire Safety Infrastructure</h3>
+                        <p>Total support for building a safe and stable operational foundation — from fiber optic installation to fire safety systems.</p>
                     </div>
                     <div class='card-item solution-card'>
                         <div class='solution-number'>2</div>
                         <div class='solution-icon'><i class="fas fa-tools"></i></div>
-                        <h3>Technology Implementation<br><small>Deploy technology on site</small></h3>
-                        <p>Overseas products, robotics, AGV/AMR, PLC/DCS, MES/WMS/ERP, system integration, and more. Ensuring domestic and international technologies run reliably in the field.</p>
+                        <h3>Technical System Deployment &amp; Field Support</h3>
+                        <p>Reliable deployment of advanced overseas technologies on Japanese worksites — from robotics to AI — with strong on-site operational support.</p>
                     </div>
                     <div class='card-item solution-card'>
                         <div class='solution-number'>3</div>
                         <div class='solution-icon'><i class="fas fa-laptop-code"></i></div>
-                        <h3>Digital Operations<br><small>Evolve your operations</small></h3>
-                        <p>Field DX, data visualization, QR management, safety management, work management, and process optimization. Making field information visible to improve operational efficiency.</p>
+                        <h3>Field Operations Digitalization</h3>
+                        <p>Visualize field data and improve operational efficiency. Next-generation site management through QR tracking and AI-assisted tools.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Industries We Serve -->
-        <section class='section-padding section-bg'>
-            <div class='container'>
-                <div class="section-title">
-                    <h2>Worksites We Support</h2>
-                    <p>From manufacturing to data centers, we support technology deployment and operations across a wide range of fields.</p>
-                </div>
-                <div class='industry-grid'>
-                    <div class='industry-item'>
-                        <h3><i class="fas fa-industry"></i> Manufacturing</h3>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Automation equipment deployment</li>
-                            <li><i class="fas fa-check"></i> On-site system commissioning</li>
-                            <li><i class="fas fa-check"></i> Network &amp; OT environment setup</li>
-                            <li><i class="fas fa-check"></i> Operations improvement, fault investigation</li>
-                        </ul>
-                    </div>
-                    <div class='industry-item'>
-                        <h3><i class="fas fa-warehouse"></i> Logistics</h3>
-                        <ul>
-                            <li><i class="fas fa-check"></i> AGV/AMR deployment support</li>
-                            <li><i class="fas fa-check"></i> Wi-Fi coverage design</li>
-                            <li><i class="fas fa-check"></i> WMS on-site implementation</li>
-                            <li><i class="fas fa-check"></i> Robot deployment support</li>
-                        </ul>
-                    </div>
-                    <div class='industry-item'>
-                        <h3><i class="fas fa-database"></i> Data Center</h3>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Fiber optic installation</li>
-                            <li><i class="fas fa-check"></i> Network cabling</li>
-                            <li><i class="fas fa-check"></i> Rack &amp; equipment installation</li>
-                            <li><i class="fas fa-check"></i> Facility SCADA support</li>
-                        </ul>
-                    </div>
-                    <div class='industry-item'>
-                        <h3><i class="fas fa-building"></i> Facility</h3>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Security systems</li>
-                            <li><i class="fas fa-check"></i> Access control systems</li>
-                            <li><i class="fas fa-check"></i> Low-voltage electrical work</li>
-                            <li><i class="fas fa-check"></i> SME automation support</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Project Highlights -->
+        <!-- Mini Case Studies -->
         <section class='section-padding'>
             <div class='container'>
                 <div class="section-title">
-                    <h2>Technology × Field Implementation</h2>
+                    <h2>Project Highlights</h2>
                     <p>Real projects that delivered measurable results for our clients.</p>
                 </div>
                 <div class='mini-case-grid'>
@@ -278,7 +220,7 @@
                         <div class='mini-case-body'>
                             <span class='case-cat'>Data Center</span>
                             <h3>Data Center Fiber Optic Project</h3>
-                            <p>Foreign-owned data center<br>Scale: 500 fibers / Duration: 3 weeks<br>Result: All link test records submitted, on-schedule go-live</p>
+                            <p>Scale: 500 fibers<br>Scope: Splicing, testing &amp; ODF installation<br>Duration: 3 weeks</p>
                             <div class='case-meta'>
                                 <span><i class="fas fa-map-marker-alt"></i> Kanto</span>
                                 <span><i class="fas fa-check-circle" style="color:#48bb78;"></i> Completed</span>
@@ -288,9 +230,9 @@
                     <div class='mini-case-card'>
                         <img src='../assets/img/cards/agv-robot.webp' alt='Logistics Warehouse AGV Deployment' style='width:100%;height:180px;object-fit:cover;display:block;'>
                         <div class='mini-case-body'>
-                            <span class='case-cat'>Logistics</span>
+                            <span class='case-cat'>Logistics Warehouse</span>
                             <h3>Logistics Warehouse AGV Deployment</h3>
-                            <p>Major logistics warehouse<br>Units: 20 AGVs / Duration: 6 months<br>Result: Improved transport efficiency and stabilized night operations</p>
+                            <p>Units: 20 AGVs<br>Scope: Network survey, route check, on-site tuning &amp; training<br>Duration: 6 months</p>
                             <div class='case-meta'>
                                 <span><i class="fas fa-map-marker-alt"></i> Kanto</span>
                                 <span><i class="fas fa-check-circle" style="color:#48bb78;"></i> Completed</span>
@@ -302,7 +244,7 @@
                         <div class='mini-case-body'>
                             <span class='case-cat'>Manufacturing</span>
                             <h3>Manufacturing ERP Upgrade</h3>
-                            <p>Mid-size manufacturer<br>Users: 100+ / Duration: 4 months<br>Result: Minimized cutover downtime, training completed</p>
+                            <p>Users: 100+<br>Scope: Data migration, network cutover, user training &amp; go-live support<br>Duration: 4 months</p>
                             <div class='case-meta'>
                                 <span><i class="fas fa-map-marker-alt"></i> Chubu</span>
                                 <span><i class="fas fa-check-circle" style="color:#48bb78;"></i> Completed</span>
@@ -323,23 +265,20 @@
                 <p class='section-sub'>We bridge technology and Japanese worksites.</p>
                 <div class='overseas-grid'>
                     <div class='overseas-left'>
-                        <h3>We support your technology deployment in the Japanese market — from the field.</h3>
+                        <h3>One-stop support for bringing your technology to the Japanese market</h3>
                         <p>
                             Getting overseas manufacturers' advanced products running reliably on Japanese worksites requires<br><br>
                             compliance with Japanese installation standards, effective communication with field staff, and ongoing operational support — a wide range of capabilities.<br><br>
-                            Izumo Soan bridges the gap between foreign technology and Japanese worksites, providing total support from deployment to long-term adoption.<br><br>
-                            <strong>Contact us even before establishing a Japanese entity.</strong>
+                            Izumo Soan bridges the gap between foreign technology and Japanese worksites, providing total support from deployment to long-term adoption.
                         </p>
                         <div style='text-align:center;margin-top:1.5rem;'>
-                            <a href='overseas-partner.html' class='overseas-btn'>Discuss Japanese market expansion →</a>
+                            <a href='overseas-partner.html' class='overseas-btn'>Learn More →</a>
                         </div>
                     </div>
                     <div class='overseas-right'>
                         <h4>Capabilities</h4>
                         <div class='overseas-capabilities'>
-                            <span><i class="fas fa-check-circle"></i> Japanese support</span>
-                            <span><i class="fas fa-check-circle"></i> English support</span>
-                            <span><i class="fas fa-check-circle"></i> Chinese support</span>
+                            <span><i class="fas fa-check-circle"></i> Japanese/English/Chinese language support</span>
                             <span><i class="fas fa-check-circle"></i> Field construction management</span>
                             <span><i class="fas fa-check-circle"></i> Network engineering</span>
                             <span><i class="fas fa-check-circle"></i> System deployment support</span>
@@ -351,32 +290,75 @@
             </div>
         </section>
 
-        <!-- Why Choose Izumo Soan -->
+        <!-- Why Choose Us -->
         <section class='section-padding why-section'>
             <div class='container'>
                 <div class="section-title">
                     <h2>Why Choose Izumo Soan</h2>
-                    <p>Our strengths in three key perspectives.</p>
+                    <p>Field capabilities visualized through four key metrics — experience, coverage, technology, and languages.</p>
                 </div>
-                                <div class='why-grid'>
+                <div class='why-number-row'>
+                    <div class='why-number-card'>
+                        <span>Field Experience</span>
+                        <strong>20<span>+ Years</span></strong>
+                        <p>Network, communications, and equipment integration — design, construction, and maintenance</p>
+                    </div>
+                    <div class='why-number-card'>
+                        <span>Coverage Areas</span>
+                        <strong>4<span> Regions</span></strong>
+                        <p>Kanto, Chubu, Kansai, Kyushu — proven deployment track record</p>
+                    </div>
+                    <div class='why-number-card'>
+                        <span>Technical Fields</span>
+                        <strong>3<span> Pillars</span></strong>
+                        <p>Network construction, system product deployment, field operations digitalization</p>
+                    </div>
+                    <div class='why-number-card'>
+                        <span>Languages</span>
+                        <strong>3<span> Languages</span></strong>
+                        <p>Japanese, English, Chinese — seamless field coordination</p>
+                    </div>
+                </div>
+                <div class='why-grid'>
                     <div class='card-item why-item why-metric-card' style='--why-color:#005a9c;'>
                         <div class='why-rank'>01</div>
-                        <h3>Field Experience<br><small>We know the field</small></h3>
-                        <p class='why-metric'>Decisions backed by experience</p>
+                        <h3>Over 20 Years of Field Experience</h3>
+                        <p class='why-metric'>Experience You Can Rely On</p>
                         <p>The founding team has years of experience in industrial network and communication system design, construction, and maintenance. We bring a field-first perspective to every proposal.</p>
                         <span class='why-tag'>Design / Construction / Maintenance</span>
                     </div>
                     <div class='card-item why-item why-metric-card' style='--why-color:#0f766e;'>
                         <div class='why-rank'>02</div>
-                        <h3>Technology Integration<br><small>Connecting OT, IT, equipment &amp; systems</small></h3>
-                        <p class='why-metric'>Bridging field equipment and IT</p>
-                        <p>Deep understanding of both control systems (OT) and information systems (IT). We consolidate multi-vendor systems to build optimally balanced architectures.</p>
-                        <span class='why-tag'>OT / IT / Multi Vendor</span>
+                        <h3>Nationwide Project Coverage</h3>
+                        <p class='why-metric'>Active Across Multiple Regions</p>
+                        <p>Construction and deployment experience across Japan — Kanto, Chubu, Kansai, Kyushu, and beyond.</p>
+                        <span class='why-tag'>Kanto / Chubu / Kansai / Kyushu</span>
+                    </div>
+                    <div class='card-item why-item why-metric-card' style='--why-color:#7c3aed;'>
+                        <div class='why-rank'>03</div>
+                        <h3>Three Technical Pillars</h3>
+                        <p class='why-metric'>Taking Full Responsibility from Zero to One</p>
+                        <p>Network construction, system product deployment, and field operations digitalization — we provide cross-functional support across all three domains.</p>
+                        <span class='why-tag'>Network / Systems / Digital</span>
                     </div>
                     <div class='card-item why-item why-metric-card' style='--why-color:#b45309;'>
-                        <div class='why-rank'>03</div>
-                        <h3>Operation Mindset<br><small>Beyond deployment — thinking about operations</small></h3>
-                        <p class='why-metric'>We plan for post-deployment operations</p>
+                        <div class='why-rank'>04</div>
+                        <h3>OT/IT Integration</h3>
+                        <p class='why-metric'>Connecting Field Equipment and Information Systems</p>
+                        <p>Deep understanding of both control systems (OT) and information systems (IT) to build optimally balanced system architectures.</p>
+                        <span class='why-tag'>Control / Info / Operations</span>
+                    </div>
+                    <div class='card-item why-item why-metric-card' style='--why-color:#be123c;'>
+                        <div class='why-rank'>05</div>
+                        <h3>Multi-Vendor Coordination</h3>
+                        <p class='why-metric'>Resolving Gaps Between Vendors</p>
+                        <p>Connecting systems from different manufacturers and making them work reliably in the field — preventing vendor lock-in.</p>
+                        <span class='why-tag'>Multi Vendor</span>
+                    </div>
+                    <div class='card-item why-item why-metric-card' style='--why-color:#2563eb;'>
+                        <div class='why-rank'>06</div>
+                        <h3>Engineering Mindset</h3>
+                        <p class='why-metric'>Thinking Beyond Deployment to Operations</p>
                         <p>"Technology exists for the field" — delivering solutions that are truly usable and sustainable on the worksite.</p>
                         <span class='why-tag'>Long-term Operations Focus</span>
                     </div>
@@ -384,11 +366,40 @@
             </div>
         </section>
 
-        <!-- Products -->
+        <!-- Compatible Technologies -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>Technology Expertise</h2>
+                    <p>Network, security, control, surveillance — broad technology coverage across multiple domains.</p>
+                </div>
+                <div class='tech-grid'>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-network-wired"></i> Network Infrastructure</span>
+                        <span class='tech-name'>From LAN and fiber optic cabling to network switch configuration and testing</span>
+                    </div>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-eye"></i> Surveillance &amp; Security</span>
+                        <span class='tech-name'>Surveillance camera installation and maintenance, various smart locks, and facial recognition deployment</span>
+                    </div>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-microchip"></i> Factory Control &amp; Robotics</span>
+                        <span class='tech-name'>Factory control systems using PLC/DCS, robot deployment in manufacturing and logistics warehouses</span>
+                    </div>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-robot"></i> WES / WMS / ERP</span>
+                        <span class='tech-name'>Implementation of various software systems, inter-system integration, and legacy system modification</span>
+                    </div>
+                </div>
+                <p style='text-align:center; font-size:0.85rem; color:var(--text-muted); margin-top:1.5rem;'>* Listed technologies represent areas of proven capability and do not imply official partner certification from any vendor.</p>
+            </div>
+        </section>
+
+        <!-- Our Products -->
         <section class='section-padding'>
             <div class='container'>
                 <div class="section-title">
-                    <h2>Products</h2>
+                    <h2>Our Product Solutions</h2>
                     <p>Products developed in-house and co-developed with technology partners to solve real on-site challenges.</p>
                 </div>
                 <div class='product-showcase-grid' style='grid-template-columns: repeat(3, 1fr); max-width: 1200px;'>
@@ -407,7 +418,7 @@
                     <a href='smart-cafeteria.html' class='product-showcase-card'>
                         <div class='product-showcase-icon'><i class="fas fa-utensils"></i></div>
                         <h3>Smart Cafeteria Solution</h3>
-                        <p>Eliminate cafeteria queues with image recognition, RFID, and weighing settlement. Co-developed with our technology partner, enabling 1-second checkout, cashless payment, and data-driven operations.</p>
+                        <p>Eliminate cafeteria queues with AI recognition, RFID, and weighing settlement. Co-developed with our technology partner, enabling 1-second checkout, cashless payment, and data-driven operations.</p>
                         <span class='product-showcase-cta'>Learn More →</span>
                     </a>
                 </div>
@@ -492,7 +503,7 @@
             <div class='footer-content'>
                 <div class='footer-logo'>
                     <img src='../assets/img/logo/logo.webp' alt='Izumo Soan'>
-                    <p class='logo-desp'>Technology that powers the field.</p>
+                    <p class='logo-desp'>Technology that powers the field</p>
                 </div>
                 <div class='footer-links'>
                     <h4>Menu</h4>
@@ -511,7 +522,7 @@
                     <div class='footer-product-banners'>
                         <a class='footer-product-banner footer-product-safeops' href='smart-cafeteria.html'>
                             <span>Smart Cafeteria</span>
-                            <small>Image Recognition · RFID · Weighing</small>
+                            <small>AI Recognition · RFID · Weighing</small>
                         </a>
                         <a class='footer-product-banner footer-product-sitebridge' href='products-sitebridge.html'>
                             <span>IZUMO SiteBridge</span>
@@ -533,3 +544,4 @@
     <script src='../assets/js/contact-form.js'></script>
 </body>
 </html>
+

@@ -3,8 +3,8 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>出云创安 | 技术赋能现场的工程合作伙伴</title>
-    <meta name='description' content='出云创安将国内外技术导入日本现场，提供从设计、施工、系统集成到运维的全方位支持。服务制造业、物流、数据中心及各类设施。'>
+    <title>出云创安 | 现场・安全・运营的技术伙伴</title>
+    <meta name='description' content='出云创安为制造业工厂、物流仓库、数据中心、楼宇设施提供网络构建、系统导入、现场DX服务。覆盖关东、中部、关西、九州地区，是支撑现场运营的技术合作伙伴。'>
     
     <!-- SEO: hreflang -->
     <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/index.html">
@@ -17,8 +17,8 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="出雲創安 Izumo Soan">
     <meta property="og:url" content="https://izumosoan.com/zh/index.html">
-    <meta property="og:title" content="出云创安 | 技术赋能现场的工程合作伙伴">
-    <meta property="og:description" content="出云创安将国内外技术导入日本现场，提供从设计、导入到运维的全方位支持。">
+    <meta property="og:title" content="出云创安 | 现场・安全・运营的技术伙伴">
+    <meta property="og:description" content="出云创安（Izumo Soan）是一家支持现场持续运营的技术工程公司。我们提供网络・通信・消防基础设施、技术系统导入支持、现场运营的数字化服务。">
     <meta property="og:locale" content="zh_CN">
 
     <!-- SEO: JSON-LD Organization -->
@@ -37,7 +37,7 @@
             "streetAddress": "东立石4-37-8",
             "addressCountry": "JP"
         },
-        "description": "将国内外技术导入日本现场的工程合作伙伴"
+        "description": "连接现场、安全与运营的技术伙伴"
     }
     </script>
 
@@ -66,31 +66,6 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
     <link rel='stylesheet' href='../assets/css/style.min.css'>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <!-- What We Do 4-column balanced layout -->
-    <style>
-        .what-we-do-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-        }
-        .what-we-do-grid .solution-card {
-            text-align: center;
-            padding: 2rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .what-we-do-grid .solution-card p {
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-        @media (max-width: 992px) {
-            .what-we-do-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 576px) {
-            .what-we-do-grid { grid-template-columns: 1fr; }
-        }
-    </style>
     <script>
         (function() {
             var path = window.location.pathname;
@@ -140,136 +115,103 @@
         <!-- Hero Section -->
         <section class='hero'>
             <div class='container'>
-                <h1>技术赋能现场。</h1>
+                <h1>技术赋能现场</h1>
                 <p class='subtitle'>
-                    将国内外技术导入日本现场，<br>从设计、导入到运维提供全方位支持的工程合作伙伴。
+                    支持海外技术在日本现场落地与持续运行
+                </p>
+                <p class='hero-desc'>
+                    连接现场、安全与运营的技术伙伴
                 </p>
                 <div class='hero-buttons'>
-                    <a href='services.html' class='btn-primary'>咨询现场技术课题</a>
-                    <a href='overseas-partner.html' class='btn-secondary'>咨询日本市场拓展</a>
+                    <a href='services.html' class='btn-primary'>查看我们的服务</a>
+                    <a href='index.html#contact' class='btn-secondary'>联系我们</a>
                 </div>
             </div>
         </section>
 
-        <!-- What We Do — Technology → Bridge → Implementation → Operation -->
-        <section class='section-padding section-bg'>
-            <div class='container'>
-                <div class="section-title">
-                    <h2>让技术真正「可用」</h2>
-                    <p>出云创安连接技术、设备、系统与人员，支持导入直至现场真正可用。</p>
-                </div>
-                <div class='what-we-do-grid'>
-                    <div class='card-item solution-card'>
-                        <div class='solution-number'>1</div>
-                        <div class='solution-icon' style='font-size:2.5rem; margin-bottom:1rem;'><i class="fas fa-microchip"></i></div>
-                        <h3>Technology</h3>
-                        <p>理解产品、系统和设备。<br>与国内外厂商合作，<br>为现场选择最优技术。</p>
-                    </div>
-                    <div class='card-item solution-card'>
-                        <div class='solution-number'>2</div>
-                        <div class='solution-icon' style='font-size:2.5rem; margin-bottom:1rem;'><i class="fas fa-exchange-alt"></i></div>
-                        <h3>Bridge</h3>
-                        <p>连接厂商、客户与现场。<br>跨越语言、标准和流程差异，<br>消除导入障碍。</p>
-                    </div>
-                    <div class='card-item solution-card'>
-                        <div class='solution-number'>3</div>
-                        <div class='solution-icon' style='font-size:2.5rem; margin-bottom:1rem;'><i class="fas fa-tools"></i></div>
-                        <h3>Implementation</h3>
-                        <p>执行施工、配置、集成与导入。<br>从设计到测试，<br>确保现场可靠运行。</p>
-                    </div>
-                    <div class='card-item solution-card'>
-                        <div class='solution-number'>4</div>
-                        <div class='solution-icon' style='font-size:2.5rem; margin-bottom:1rem;'><i class="fas fa-cogs"></i></div>
-                        <h3>Operation</h3>
-                        <p>支持培训、维护和改善。<br>不止于导入，<br>陪伴直至运营落地。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 三大服务领域 -->
+        <!-- 主要服务对象 (Target Industries) -->
         <section class='section-padding'>
             <div class='container'>
                 <div class="section-title">
-                    <h2>三大服务领域</h2>
-                    <p>以三大核心能力覆盖现场的每一个阶段。</p>
+                    <h2>主要服务对象</h2>
+                    <p>从制造业到数据中心，我们在广泛的行业领域支持技术导入与现场运营。</p>
+                </div>
+                <div class='industry-grid'>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-industry"></i> 制造业工厂</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 自动化设备导入</li>
+                            <li><i class="fas fa-check"></i> PLC现场调试</li>
+                            <li><i class="fas fa-check"></i> 网络与OT环境建设</li>
+                            <li><i class="fas fa-check"></i> 故障调查</li>
+                        </ul>
+                    </div>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-warehouse"></i> 物流仓库</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> AGV/AMR导入支援</li>
+                            <li><i class="fas fa-check"></i> Wi-Fi覆盖设计</li>
+                            <li><i class="fas fa-check"></i> WMS现场实施</li>
+                            <li><i class="fas fa-check"></i> 设备通信测试</li>
+                        </ul>
+                    </div>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-database"></i> 数据中心</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 光纤施工</li>
+                            <li><i class="fas fa-check"></i> 网络布线</li>
+                            <li><i class="fas fa-check"></i> 机柜与设备安装</li>
+                            <li><i class="fas fa-check"></i> 验证测试</li>
+                        </ul>
+                    </div>
+                    <div class='industry-item'>
+                        <h3><i class="fas fa-building"></i> 楼宇与园区</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 安防系统</li>
+                            <li><i class="fas fa-check"></i> 门禁系统</li>
+                            <li><i class="fas fa-check"></i> 弱电工程</li>
+                            <li><i class="fas fa-check"></i> 网络基础设施</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 我们的解决方案 -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>我们的解决方案</h2>
+                    <p>基于多年现场经验，提供可靠、高质量的工程服务。</p>
                 </div>
                 <div class='solution-grid'>
                     <div class='card-item solution-card'>
                         <div class='solution-number'>1</div>
                         <div class='solution-icon'><i class="fas fa-broadcast-tower"></i></div>
-                        <h3>Field Engineering<br><small>构建现场基础</small></h3>
-                        <p>网络构建、光纤施工、通信·设备基础设施、安防系统、现场施工·测试·调试。为现场安全稳定运营构建基础。</p>
+                        <h3>网络·通信·消防基础设施</h3>
+                        <p>为现场安全稳定运营构建基础。从光纤施工到消防系统，提供全面支持。</p>
                     </div>
                     <div class='card-item solution-card'>
                         <div class='solution-number'>2</div>
                         <div class='solution-icon'><i class="fas fa-tools"></i></div>
-                        <h3>Technology Implementation<br><small>将技术导入现场</small></h3>
-                        <p>海外产品、机器人、AGV/AMR、PLC/DCS、MES/WMS/ERP、系统集成等。确保国内外技术在现场可靠运行。</p>
+                        <h3>技术系统导入与现场支援</h3>
+                        <p>将海外优秀技术切实导入日本现场。从机器人到AI，强力支持现场实际运用。</p>
                     </div>
                     <div class='card-item solution-card'>
                         <div class='solution-number'>3</div>
                         <div class='solution-icon'><i class="fas fa-laptop-code"></i></div>
-                        <h3>Digital Operations<br><small>让运营持续进化</small></h3>
-                        <p>现场DX、数据可视化、QR管理、安全管理、作业管理、业务优化。实现现场信息可视化，提升运营效率。</p>
+                        <h3>现场运营的数字化</h3>
+                        <p>实现现场信息可视化，提升运营效率。通过QR管理和AI辅助，实现下一代现场运营。</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 我们支持的现场 -->
-        <section class='section-padding section-bg'>
-            <div class='container'>
-                <div class="section-title">
-                    <h2>我们支持的现场</h2>
-                    <p>从制造业到数据中心，我们在广泛的行业领域支持技术导入与现场运营。</p>
-                </div>
-                <div class='industry-grid'>
-                    <div class='industry-item'>
-                        <h3><i class="fas fa-industry"></i> Manufacturing<br><small>制造现场</small></h3>
-                        <ul>
-                            <li><i class="fas fa-check"></i> 自动化设备导入</li>
-                            <li><i class="fas fa-check"></i> 系统现场调试</li>
-                            <li><i class="fas fa-check"></i> 网络与OT环境建设</li>
-                            <li><i class="fas fa-check"></i> 运营改善、故障调查</li>
-                        </ul>
-                    </div>
-                    <div class='industry-item'>
-                        <h3><i class="fas fa-warehouse"></i> Logistics<br><small>物流·仓库</small></h3>
-                        <ul>
-                            <li><i class="fas fa-check"></i> AGV/AMR导入支援</li>
-                            <li><i class="fas fa-check"></i> Wi-Fi覆盖设计</li>
-                            <li><i class="fas fa-check"></i> WMS现场实施</li>
-                            <li><i class="fas fa-check"></i> 机器人导入支援</li>
-                        </ul>
-                    </div>
-                    <div class='industry-item'>
-                        <h3><i class="fas fa-database"></i> Data Center<br><small>数据中心</small></h3>
-                        <ul>
-                            <li><i class="fas fa-check"></i> 光纤施工</li>
-                            <li><i class="fas fa-check"></i> 网络布线</li>
-                            <li><i class="fas fa-check"></i> 机柜与设备安装</li>
-                            <li><i class="fas fa-check"></i> 设备SCADA支援</li>
-                        </ul>
-                    </div>
-                    <div class='industry-item'>
-                        <h3><i class="fas fa-building"></i> Facility<br><small>设施·楼宇</small></h3>
-                        <ul>
-                            <li><i class="fas fa-check"></i> 安防系统</li>
-                            <li><i class="fas fa-check"></i> 门禁系统</li>
-                            <li><i class="fas fa-check"></i> 弱电工程</li>
-                            <li><i class="fas fa-check"></i> 中小企业自动化支援</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 项目案例 -->
+        <!-- 项目案例 (Mini Case Studies) -->
         <section class='section-padding'>
             <div class='container'>
                 <div class="section-title">
-                    <h2>Technology × Field 的实施实绩</h2>
+                    <h2>项目案例</h2>
                     <p>为您介绍我们在客户现场实际取得成果的项目。</p>
                 </div>
                 <div class='mini-case-grid'>
@@ -278,7 +220,7 @@
                         <div class='mini-case-body'>
                             <span class='case-cat'>数据中心</span>
                             <h3>数据中心光纤工程</h3>
-                            <p>某外资数据中心<br>规模：500芯 / 工期：3周<br>成果：提交全链路测试记录，按计划投入运营</p>
+                            <p>规模：500芯光纤<br>内容：熔接·测试·ODF施工<br>工期：3周</p>
                             <div class='case-meta'>
                                 <span><i class="fas fa-map-marker-alt"></i> 关东</span>
                                 <span><i class="fas fa-check-circle" style="color:#48bb78;"></i> 已完成</span>
@@ -290,7 +232,7 @@
                         <div class='mini-case-body'>
                             <span class='case-cat'>物流仓库</span>
                             <h3>物流仓库AGV导入支援</h3>
-                            <p>大型物流仓库<br>数量：20台 / 工期：6个月<br>成果：提升搬运效率，稳定夜间运营</p>
+                            <p>数量：20台AGV<br>内容：网络调查·路径确认·现场联调·操作培训<br>工期：6个月</p>
                             <div class='case-meta'>
                                 <span><i class="fas fa-map-marker-alt"></i> 关东</span>
                                 <span><i class="fas fa-check-circle" style="color:#48bb78;"></i> 已完成</span>
@@ -302,7 +244,7 @@
                         <div class='mini-case-body'>
                             <span class='case-cat'>制造业</span>
                             <h3>制造企业ERP升级项目</h3>
-                            <p>中型制造企业<br>用户数：100+ / 工期：4个月<br>成果：最大限度缩短切换停机时间，培训全部完成</p>
+                            <p>用户数：100+<br>内容：数据迁移·网络切换·用户培训·上线支援<br>工期：4个月</p>
                             <div class='case-meta'>
                                 <span><i class="fas fa-map-marker-alt"></i> 中部</span>
                                 <span><i class="fas fa-check-circle" style="color:#48bb78;"></i> 已完成</span>
@@ -323,14 +265,13 @@
                 <p class='section-sub'>We bridge technology and Japanese worksites.</p>
                 <div class='overseas-grid'>
                     <div class='overseas-left'>
-                        <h3>从现场出发，支持您的技术在日本市场落地。</h3>
+                        <h3>一站式支持您的产品在日本现场落地</h3>
                         <p>
                             海外厂商的优质产品要在日本客户现场稳定运行，需要符合日本施工标准、与现场团队沟通、以及导入后的运维支持。<br><br>
-                            出云创安作为海外技术与日本现场之间的桥梁，提供从导入到落地的一站式服务。<br><br>
-                            <strong>在设立日本法人之前也可以咨询。</strong>
+                            出云创安作为海外技术与日本现场之间的桥梁，提供从导入到落地的一站式服务。
                         </p>
                         <div style='text-align:center;margin-top:1.5rem;'>
-                            <a href='overseas-partner.html' class='overseas-btn'>咨询日本市场拓展 →</a>
+                            <a href='overseas-partner.html' class='overseas-btn'>了解更多 →</a>
                         </div>
                     </div>
                     <div class='overseas-right'>
@@ -355,27 +296,70 @@
             <div class='container'>
                 <div class="section-title">
                     <h2>为什么选择出云创安</h2>
-                    <p>从三个角度展示我们的优势。</p>
+                    <p>将现场对应能力通过经验、覆盖范围、技术领域、语言支持的4个数字进行可视化呈现。</p>
                 </div>
-                                <div class='why-grid'>
+                <div class='why-number-row'>
+                    <div class='why-number-card'>
+                        <span>现场经验</span>
+                        <strong>20<span>年以上</span></strong>
+                        <p>网络、通信、设备联动的设计·构建·维护</p>
+                    </div>
+                    <div class='why-number-card'>
+                        <span>覆盖区域</span>
+                        <strong>4<span>大区域</span></strong>
+                        <p>关东·中部·关西·九州等地的导入实绩</p>
+                    </div>
+                    <div class='why-number-card'>
+                        <span>技术领域</span>
+                        <strong>3<span>大领域</span></strong>
+                        <p>网络工程施工、系统产品的现场导入、现场运营的数字化</p>
+                    </div>
+                    <div class='why-number-card'>
+                        <span>语言支持</span>
+                        <strong>3<span>种语言</span></strong>
+                        <p>日语·英语·中文进行现场协作</p>
+                    </div>
+                </div>
+                <div class='why-grid'>
                     <div class='card-item why-item why-metric-card' style='--why-color:#005a9c;'>
                         <div class='why-rank'>01</div>
-                        <h3>Field Experience<br><small>了解现场</small></h3>
+                        <h3>20年以上的现场经验</h3>
                         <p class='why-metric'>凭经验做出判断</p>
                         <p>创业团队在工业现场的网络、通信系统的设计、构建、维护方面有多年经验。能够从现场视角提出方案。</p>
                         <span class='why-tag'>设计·构建·维护</span>
                     </div>
                     <div class='card-item why-item why-metric-card' style='--why-color:#0f766e;'>
                         <div class='why-rank'>02</div>
-                        <h3>Technology Integration<br><small>连接OT·IT·设备·系统</small></h3>
-                        <p class='why-metric'>连接现场设备与信息系统</p>
-                        <p>同时理解控制系统(OT)和信息系统(IT)，整合多厂商系统，以最优平衡构建系统。</p>
-                        <span class='why-tag'>OT / IT / Multi Vendor</span>
+                        <h3>日本全国项目对应</h3>
+                        <p class='why-metric'>可在多地开展工作</p>
+                        <p>在关东、中部、关西、九州等日本各地拥有现场施工和导入实绩。</p>
+                        <span class='why-tag'>关东 / 中部 / 关西 / 九州</span>
+                    </div>
+                    <div class='card-item why-item why-metric-card' style='--why-color:#7c3aed;'>
+                        <div class='why-rank'>03</div>
+                        <h3>三大技术领域</h3>
+                        <p class='why-metric'>从现场零到一全程负责</p>
+                        <p>网络工程施工、系统产品的现场导入、现场运营的数字化，提供跨领域支持。</p>
+                        <span class='why-tag'>Network / Systems / Digital</span>
                     </div>
                     <div class='card-item why-item why-metric-card' style='--why-color:#b45309;'>
-                        <div class='why-rank'>03</div>
-                        <h3>Operation Mindset<br><small>不止于导入，更着眼运维</small></h3>
-                        <p class='why-metric'>考虑导入后的运维</p>
+                        <div class='why-rank'>04</div>
+                        <h3>OT/IT融合能力</h3>
+                        <p class='why-metric'>连接现场设备与信息系统</p>
+                        <p>同时理解控制系统(OT)和信息系统(IT)，以最佳平衡构建系统。</p>
+                        <span class='why-tag'>控制 / 信息 / 运营</span>
+                    </div>
+                    <div class='card-item why-item why-metric-card' style='--why-color:#be123c;'>
+                        <div class='why-rank'>05</div>
+                        <h3>多厂商整合能力</h3>
+                        <p class='why-metric'>协调厂商之间的偏差</p>
+                        <p>连接不同厂商的系统，使其在现场顺畅运行。防止供应商锁定。</p>
+                        <span class='why-tag'>Multi Vendor</span>
+                    </div>
+                    <div class='card-item why-item why-metric-card' style='--why-color:#2563eb;'>
+                        <div class='why-rank'>06</div>
+                        <h3>工程思维</h3>
+                        <p class='why-metric'>考虑到导入后的运维</p>
                         <p>秉承"技术为现场而生"的理念，提供真正可用的解决方案。</p>
                         <span class='why-tag'>注重长期运维</span>
                     </div>
@@ -383,11 +367,40 @@
             </div>
         </section>
 
-        <!-- 产品方案 -->
+        <!-- 对应实绩技术领域 -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class="section-title">
+                    <h2>对应实绩技术领域</h2>
+                    <p>网络·安防·控制·自动化——覆盖广泛的技术领域。</p>
+                </div>
+                <div class='tech-grid'>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-network-wired"></i> 网络构建</span>
+                        <span class='tech-name'>LAN及光纤布线工程到网络交换机设置、测试等</span>
+                    </div>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-eye"></i> 监控·安防</span>
+                        <span class='tech-name'>监控摄像头的设置·维护、各类智能锁、人脸识别导入</span>
+                    </div>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-microchip"></i> 工厂控制·机器人</span>
+                        <span class='tech-name'>PLC/DCS的工厂控制系统、制造现场与物流仓库的机器人导入</span>
+                    </div>
+                    <div class='tech-item'>
+                        <span class='tech-label'><i class="fas fa-robot"></i> WES / WMS / ERP</span>
+                        <span class='tech-name'>各类软件系统的导入、系统间的联动、旧系统改造</span>
+                    </div>
+                </div>
+                <p style='text-align:center; font-size:0.85rem; color:var(--text-muted); margin-top:1.5rem;'>* 以上为对应实绩的技术领域，不代表特定厂商的正式合作伙伴认证。</p>
+            </div>
+        </section>
+
+        <!-- 自研产品方案 -->
         <section class='section-padding'>
             <div class='container'>
                 <div class="section-title">
-                    <h2>产品方案</h2>
+                    <h2>自研产品方案</h2>
                     <p>自主研发及与技术合作伙伴共同开发的产品，解决现场实际课题。</p>
                 </div>
                 <div class='product-showcase-grid' style='grid-template-columns: repeat(3, 1fr); max-width: 1200px;'>
@@ -406,7 +419,7 @@
                     <a href='smart-cafeteria.html' class='product-showcase-card'>
                         <div class='product-showcase-icon'><i class="fas fa-utensils"></i></div>
                         <h3>智慧食堂解决方案</h3>
-                        <p>图像识别·RFID·计量精算三种方式消除食堂排队。与合作伙伴共同开发的精算终端，实现1秒结算、无现金支付和数据化运营。</p>
+                        <p>AI图像识别·RFID·计量精算三种方式消除食堂排队。与合作伙伴共同开发的精算终端，实现1秒结算、无现金支付和数据化运营。</p>
                         <span class='product-showcase-cta'>了解详情 →</span>
                     </a>
                 </div>
@@ -491,7 +504,7 @@
             <div class='footer-content'>
                 <div class='footer-logo'>
                     <img src='../assets/img/logo/logo.webp' alt='Izumo Soan'>
-                    <p class='logo-desp'>技术赋能现场。</p>
+                    <p class='logo-desp'>技术赋能现场</p>
                 </div>
                 <div class='footer-links'>
                     <h4>菜单</h4>
@@ -510,7 +523,7 @@
                     <div class='footer-product-banners'>
                         <a class='footer-product-banner footer-product-safeops' href='smart-cafeteria.html'>
                             <span>智慧食堂</span>
-                            <small>图像识别·RFID·计量精算</small>
+                            <small>AI图像识别·RFID·计量精算</small>
                         </a>
                         <a class='footer-product-banner footer-product-sitebridge' href='products-sitebridge.html'>
                             <span>IZUMO SiteBridge</span>

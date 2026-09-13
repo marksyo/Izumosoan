@@ -117,52 +117,6 @@
         @media (max-width: 576px) {
             .business-grid { grid-template-columns: 1fr; }
         }
-        .challenge-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-        }
-        .challenge-grid .problem-item {
-            display: flex;
-            flex-direction: column;
-        }
-        @media (max-width: 992px) {
-            .challenge-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 576px) {
-            .challenge-grid { grid-template-columns: 1fr; }
-        }
-        .challenge-grid .challenge-card {
-            background: var(--bg-white);
-            border: 1px solid var(--border-color);
-            border-top: 4px solid var(--accent-color, #005a9c);
-            border-radius: var(--border-radius);
-            padding: 2rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            transition: var(--transition);
-            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-        }
-        .challenge-grid .challenge-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0,53,84,0.10);
-            border-top-color: var(--primary-color, #003554);
-        }
-        .challenge-grid .challenge-card .challenge-icon {
-            font-size: 2rem;
-            color: var(--accent-color, #005a9c);
-            margin-bottom: 1rem;
-        }
-        .challenge-grid .challenge-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.75rem;
-        }
-        .challenge-grid .challenge-card p {
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: var(--text-muted);
-            margin-bottom: 0;
-        }
     </style>
 </head>
 <body>
@@ -292,30 +246,26 @@
                     <h2>私たちが解決する現場の課題</h2>
                     <p>こんな課題はありませんか？</p>
                 </div>
-                <div class='challenge-grid'>
-                    <div class='challenge-card'>
-                        <div class='challenge-icon'><i class="fas fa-exclamation-triangle"></i></div>
-                        <h3>技術と現場のギャップ</h3>
+                <div class='problem-grid'>
+                    <div class='problem-item'>
+                        <h3><i class="fas fa-exclamation-triangle"></i> 技術と現場のギャップ</h3>
                         <p><strong>技術はある。でも現場で使えない。</strong><br>
-                        メーカーの仕様と現場の運用にギャップがあり、導入した技術を使いこなせていない。</p>
+                        導入した技術が現場に合わず、使いこなせていない。メーカーの仕様と現場の運用にギャップがある。</p>
                     </div>
-                    <div class='challenge-card'>
-                        <div class='challenge-icon'><i class="fas fa-unlink"></i></div>
-                        <h3>システム連携の課題</h3>
-                        <p><strong>複数メーカーの設備がつながらない。</strong><br>
-                        異なる機器・ソフトが混在し、データや業務フローが分断されている。</p>
+                    <div class='problem-item'>
+                        <h3><i class="fas fa-unlink"></i> システム連携の課題</h3>
+                        <p><strong>複数メーカーの設備がうまくつながらない。</strong><br>
+                        異なるメーカーの機器・ソフトウェアが混在し、データの流れや業務フローが分断されている。</p>
                     </div>
-                    <div class='challenge-card'>
-                        <div class='challenge-icon'><i class="fas fa-redo-alt"></i></div>
-                        <h3>運用が定着しない</h3>
-                        <p><strong>導入したが、運用が定着しない。</strong><br>
-                        現場スタッフが使いこなせず、元の方法に戻ってしまう。</p>
+                    <div class='problem-item'>
+                        <h3><i class="fas fa-redo-alt"></i> 運用が定着しない</h3>
+                        <p><strong>システムは導入した。でも運用が定着しない。</strong><br>
+                        導入プロジェクトは完了しても、現場スタッフが使いこなせず、元の方法に戻ってしまう。</p>
                     </div>
-                    <div class='challenge-card'>
-                        <div class='challenge-icon'><i class="fas fa-globe"></i></div>
-                        <h3>海外技術の日本導入</h3>
-                        <p><strong>海外技術を日本に導入したい。</strong><br>
-                        言語、規格、施工基準、現場文化の違いで導入がスムーズに進まない。</p>
+                    <div class='problem-item'>
+                        <h3><i class="fas fa-globe"></i> 海外技術の日本導入</h3>
+                        <p><strong>海外メーカーの技術を日本に導入したいが、現場対応が難しい。</strong><br>
+                        言語、規格、施工基準、現場文化の違いにより、海外製品の導入がスムーズに進まない。</p>
                     </div>
                 </div>
             </div>
@@ -385,19 +335,39 @@
             <div class='container'>
                 <div class="section-title">
                     <h2>Vision</h2>
+                    <p>出雲創安が目指すエンジニアリングパートナーの姿。</p>
                 </div>
-                <div style='max-width:700px; margin:0 auto; text-align:center;'>
-                    <h2 style='font-size:2rem; margin-bottom:0.75rem;'>技術を、現場の力に。</h2>
-                    <p style='font-size:1.6rem; font-weight:700; color:var(--primary-color); letter-spacing:1px; margin-bottom:2rem;'>Connect. Implement. Operate.</p>
-                    <p style='font-size:1.1rem; line-height:2;'>
-                        技術をつなぐ。<br>
-                        現場に実装する。<br>
-                        運用まで支える。
-                    </p>
-                    <p style='font-size:1.05rem; line-height:2; margin-top:1.5rem;'>
-                        出雲創安は、国内外のテクノロジーを日本の現場につなぎ、<br>
-                        <strong>現場で使われ、長く価値を生み続ける仕組み</strong>をつくります。
-                    </p>
+                <div style='max-width:800px; margin:0 auto;'>
+                    <div style='display:grid; grid-template-columns:1fr; gap:2rem;'>
+                        <!-- Today -->
+                        <div style='background:var(--bg-white); border-left:4px solid var(--primary-color); padding:2rem; border-radius:var(--border-radius); box-shadow:var(--box-shadow);'>
+                            <div style='display:flex; align-items:center; gap:1rem; margin-bottom:1rem;'>
+                                <span style='background:var(--primary-color); color:#fff; padding:6px 16px; border-radius:20px; font-weight:700; font-size:0.85rem;'>TODAY</span>
+                                <h3 style='margin-bottom:0; font-size:1.2rem;'>現場への技術導入・エンジニアリング</h3>
+                            </div>
+                            <p style='margin-bottom:0;'>ネットワーク構築、システム導入、現場施工、技術連携、現場DXを中心に、日本の現場で技術を「使える状態」にするサービスを提供しています。</p>
+                        </div>
+                        <!-- Arrow -->
+                        <div style='text-align:center; font-size:1.5rem; color:var(--text-muted);'>↓</div>
+                        <!-- Next -->
+                        <div style='background:var(--bg-white); border-left:4px solid #0f766e; padding:2rem; border-radius:var(--border-radius); box-shadow:var(--box-shadow);'>
+                            <div style='display:flex; align-items:center; gap:1rem; margin-bottom:1rem;'>
+                                <span style='background:#0f766e; color:#fff; padding:6px 16px; border-radius:20px; font-weight:700; font-size:0.85rem;'>NEXT</span>
+                                <h3 style='margin-bottom:0; font-size:1.2rem;'>設計・調達・施工・システム導入</h3>
+                            </div>
+                            <p style='margin-bottom:0;'>エンジニアリングの対応範囲を広げ、設計から調達、施工管理、システムインテグレーションまでカバーします。</p>
+                        </div>
+                        <!-- Arrow -->
+                        <div style='text-align:center; font-size:1.5rem; color:var(--text-muted);'>↓</div>
+                        <!-- Future -->
+                        <div style='background:var(--bg-white); border-left:4px solid #b45309; padding:2rem; border-radius:var(--border-radius); box-shadow:var(--box-shadow);'>
+                            <div style='display:flex; align-items:center; gap:1rem; margin-bottom:1rem;'>
+                                <span style='background:#b45309; color:#fff; padding:6px 16px; border-radius:20px; font-weight:700; font-size:0.85rem;'>FUTURE</span>
+                                <h3 style='margin-bottom:0; font-size:1.2rem;'>運用・保守まで含めた長期エンジニアリングパートナー</h3>
+                            </div>
+                            <p style='margin-bottom:0;'>導入だけでなく、運用・保守・改善まで一貫して支援する、お客様の長期的なエンジニアリングパートナーを目指します。</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -450,6 +420,22 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 09 会社名の意味（小さく） -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div style='max-width:640px; margin:0 auto; text-align:center;'>
+                    <p style='font-size:0.85rem; color:var(--text-muted); letter-spacing:2px; margin-bottom:0.5rem;'>ABOUT OUR NAME</p>
+                    <h3 style='font-size:1.5rem; margin-bottom:1.5rem;'>出雲創安</h3>
+                    <p style='font-size:1rem; line-height:2; color:var(--text-muted);'>
+                        「出雲」は人や技術が集まり、つながる場所。<br>
+                        「創安」は、安全で安定した環境を創り出すこと。<br><br>
+                        人・技術・現場をつなぎ、安心して使い続けられる仕組みをつくる。<br>
+                        それが「出雲創安」という名前に込めた考えです。
+                    </p>
                 </div>
             </div>
         </section>
