@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>社員食堂のレジ人手不足は"無人精算"で解決｜AIとRFIDの実力比較｜出雲創安コラム</title>
+    <meta name='description' content='社員食堂のレジスタッフが確保できない——そんな人手不足の悩みを根本から解決する「無人精算」の2つのアプローチ（AI画像認識・RFID）を徹底比較。精算速度・識別精度・コスト・おすすめ施設タイプまで網羅。無料POC実施中。'>
+    <meta name='keywords' content='社員食堂 レジ 人手不足, 食堂 レジ 無人化, 食堂 省人化, 食堂 スタッフ不足, 食堂 無人精算, 社員食堂 人件費 削減'>
+    <link rel="canonical" href="https://izumosoan.com/ja/column/ai-vs-rfid.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="出雲創安 Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/ja/column/ai-vs-rfid.html">
+    <meta property="og:title" content="社員食堂のレジ人手不足は"無人精算"で解決｜AIとRFIDの実力比較">
+    <meta property="og:description" content="社員食堂のレジスタッフが確保できない——そんな人手不足の悩みを根本から解決する「無人精算」の2つのアプローチ（AI画像認識・RFID）を徹底比較。精算速度・識別精度・コスト・おすすめ施設タイプまで網羅。無料POC実施中。">
+    <meta property="og:locale" content="ja_JP">
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ホーム",
+            "item": "https://izumosoan.com/ja/index.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "コラム",
+            "item": "https://izumosoan.com/ja/column/index.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "社員食堂のレジ人手不足は\"無人精算\"で解決｜AIとRFIDの実力比較"
+        }
+    ]
+}</script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "社員食堂のレジ人手不足は\"無人精算\"で解決｜AIとRFIDの実力比較",
+    "description": "社員食堂のレジスタッフが確保できない——そんな人手不足の悩みを根本から解決する「無人精算」の2つのアプローチ（AI画像認識・RFID）を徹底比較。精算速度・識別精度・コスト・おすすめ施設タイプまで網羅。無料POC実施中。",
+    "author": {
+        "@type": "Organization",
+        "name": "出雲創安 Izumo Soan"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "出雲創安 Izumo Soan"
+    },
+    "mainEntityOfPage": "https://izumosoan.com/ja/column/ai-vs-rfid.html"
+}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../../assets/css/style.min.css'>
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo/favicon.ico">
+    <style>
+    .column-hero {
+        background: linear-gradient(135deg, #001d30 0%, #003554 100%);
+        padding: 100px 20px 60px; color: #fff; text-align: center;
+    }
+    .column-hero h1 {
+        font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 800; line-height: 1.4;
+        max-width: 800px; margin: 0 auto 16px; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .column-breadcrumb { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 20px; }
+    .column-breadcrumb a { color: rgba(255,255,255,0.95); text-decoration: none; }
+    .column-breadcrumb a:hover { text-decoration: underline; }
+    .column-body {
+        max-width: 820px; margin: 0 auto; padding: 48px 20px 80px;
+        font-size: 1rem; line-height: 1.85; color: #1e293b;
+    }
+    .column-body h2 {
+        font-size: 1.5rem; font-weight: 700; color: #003554;
+        margin: 56px 0 20px; padding-bottom: 10px; border-bottom: 3px solid #006494;
+    }
+    .column-body h3 { font-size: 1.2rem; font-weight: 700; color: #004a77; margin: 36px 0 14px; }
+    .column-body h4 { font-size: 1.05rem; font-weight: 700; color: #333; margin: 28px 0 10px; }
+    .column-body p { margin: 0 0 18px; }
+    .column-body strong { color: #003554; }
+    .column-body blockquote {
+        background: #f0f7ff; border-left: 4px solid #006494;
+        padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem;
+    }
+    .column-body blockquote p { margin: 0 0 8px; }
+    .column-body blockquote p:last-child { margin: 0; }
+    .column-body table {
+        width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.92rem;
+    }
+    .column-body table th {
+        background: #003554; color: #fff; padding: 12px 16px; text-align: left; font-weight: 600;
+    }
+    .column-body table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+    .column-body table tr:nth-child(even) { background: #f8fafc; }
+    .column-body table tr:hover { background: #f0f7ff; }
+    .column-body ul, .column-body ol { margin: 0 0 18px 20px; }
+    .column-body li { margin: 0 0 8px; }
+    .column-body a { color: #006494; text-decoration: underline; }
+    .column-body a:hover { color: #003554; }
+    .column-body hr { border: none; border-top: 1px solid #e2e8f0; margin: 48px 0; }
+    .column-cta {
+        background: linear-gradient(135deg, #001d30, #003554); color: #fff;
+        padding: 48px 32px; border-radius: 16px; text-align: center; margin: 56px 0 32px;
+    }
+    .column-cta h3 { color: #fff; font-size: 1.4rem; margin: 0 0 16px; border: none; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+    .column-cta p { color: #fff; margin: 0 0 24px; font-size: 1rem; text-shadow: 0 1px 4px rgba(0,0,0,0.2); }
+    .column-cta .cta-btn {
+        display: inline-block; background: #00880F; color: #fff;
+        padding: 16px 40px; border-radius: 8px; font-size: 1.1rem; font-weight: 700;
+        text-decoration: none; box-shadow: 0 4px 20px rgba(0,136,15,0.4); transition: all 0.3s;
+    }
+    .column-cta .cta-btn:hover { background: #006e0c; transform: translateY(-2px); color: #fff; }
+    .column-related {
+        margin: 48px 0 0; padding: 32px; background: #f4f7fa; border-radius: 12px;
+    }
+    .column-related h3 { color: #003554; font-size: 1.1rem; margin: 0 0 16px; border: none; }
+    .column-related ul { list-style: none; margin: 0; padding: 0; }
+    .column-related li { margin: 0 0 10px; }
+    .column-related a { color: #006494; text-decoration: none; font-size: 0.95rem; }
+    .column-related a:hover { text-decoration: underline; }
+    .column-related a::before { content: "📖 "; }
+    @media (max-width: 768px) {
+        .column-hero { padding: 80px 16px 40px; }
+        .column-body { padding: 32px 16px 60px; }
+        .column-body h2 { font-size: 1.3rem; }
+        .column-body table { font-size: 0.82rem; }
+        .column-body table th, .column-body table td { padding: 8px 10px; }
+        .column-cta { padding: 32px 20px; }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='../index.html'>
+                    <img src='../../assets/img/logo/logo.webp' alt='Izumo Soan' class='header-logo-img' style='height:80px;'>
+                </a>
+            </div>
+            <div class='language-switcher'>
+                <span class='lang-label'><i class="fas fa-globe"></i></span>
+                <select id='lang-select'>
+                    <option value='ja' selected>日本語</option>
+                    <option value='en'>English</option>
+                    <option value='zh'>中文</option>
+                </select>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
+            <nav>
+                <ul>
+                    <li><a href='../index.html'>ホーム</a></li>
+                    <li><a href='../services.html'>サービス</a></li>
+                    <li><a href='../products.html'>製品</a></li>
+                    <li><a href='../case-studies.html'>実績</a></li>
+                    <li><a href='../about.html'>会社概要</a></li>
+                    <li><a href='../overseas-partner.html'>海外パートナー</a></li>
+                    <li><a href='../index.html#contact'>お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="column-hero">
+            <div class="column-breadcrumb">
+                <a href="../index.html">ホーム</a> &gt; <a href="index.html">コラム</a> &gt; 社員食堂のレジ人手不足は"無人精算"で解決｜AIとRFIDの実力比較
+            </div>
+            <h1>社員食堂のレジ人手不足は"無人精算"で解決｜AIとRFIDの実力比較</h1>
+        </section>
+
+        <article class="column-body">
+            <blockquote>
+<p><strong>この記事でわかること</strong>
+- "無人精算"を実現する2つのアプローチ（AI画像認識・RFID）の仕組みと特徴
+- AI精算 vs RFID精算の比較表 — 精算速度・精度・コスト・おすすめ施設
+- レジ人件費以外に削減できる"隠れコスト"
+- 無料POCで効果を検証する方法</p>
+</blockquote>
+<p>本記事では、無人精算を実現する<strong>AI画像認識精算</strong>と<strong>RFID精算</strong>の2つのアプローチを徹底比較。自社の食堂に最適な方式を判断する材料として、ぜひ最後までご覧ください。</p>
+<hr />
+<h2>"無人精算"の2つのアプローチ</h2>
+<p>食堂レジの人手不足を根本から解決する手段が「<strong>無人精算</strong>」です。現在、実用化されている無人精算の方式は大きく2つ。それぞれの仕組みと特徴を解説します。</p>
+<h3>AI画像認識精算 — カメラが料理を自動識別</h3>
+<p><strong>仕組み</strong>: 精算台に搭載された<strong>AIカメラ（500万画素・単眼カラーカメラ）</strong>がトレー上の料理を撮影し、画像認識アルゴリズムが品目と数量を自動判定。識別結果に基づいて金額を瞬時に計算します。</p>
+<p><strong>3つのポイント</strong>:</p>
+<p><strong>① 特殊食器不要（料理識別モード）</strong>
+普通の食器のまま導入できるため、<strong>食器の入替コストがゼロ</strong>。既存の食堂レイアウトをほぼ変えずに導入可能です。識別精度は料理識別モードで<strong>99%以上</strong>。食器の形状・色で判定する「食器識別モード」を選べば<strong>99.99%以上</strong>の精度も実現できます。なお、実際の食堂では当日の提供メニュー数が10〜30品程度と限定的なため、料理識別モードでも<strong>実運用ではほぼ100%の精度</strong>を維持できます。</p>
+<p><strong>② メニュー登録はカメラで撮るだけ</strong>
+新メニューの追加は、端末上で料理の写真を撮影するだけでAIが自動学習。日替わりメニューにも即日対応でき、毎朝の仕込み時に数分で登録作業が完了します。</p>
+<p><strong>③ 導入コストを抑制</strong>
+必要な機器はAI精算台のみ。AIエンジンは精算台本体に搭載されたエッジ型設計のため、大規模なサーバー設置が不要です。初期コストを最小限に抑えられます。</p>
+<p><strong>こんな食堂におすすめ</strong>: 日替わりメニューが豊富な社員食堂、多品目の食堂、食器の入替が難しい施設</p>
+<blockquote>
+<p>📖 <strong>関連記事</strong>: <a href="ai-register.html">食堂AIレジとは？画像認識で変わる精算の新常識</a></p>
+</blockquote>
+<hr />
+<h3>RFID精算 — チップ内蔵食器で瞬時読取</h3>
+<p><strong>仕組み</strong>: 食器に埋め込まれた<strong>RFIDチップ</strong>にメニュー情報を記録。利用者がトレーをRFID精算台に乗せると、チップを瞬時に読み取り、複数食器の合計金額を自動計算します。</p>
+<p><strong>3つのポイント</strong>:</p>
+<p><strong>① 読取速度が最速</strong>
+30品程度の食器でも1秒で一括認識でき、識別精度は<strong>ほぼ100%</strong>。大量処理が求められる大規模食堂で威力を発揮します。ただし、RFID内蔵食器は<strong>最大耐熱温度が85度</strong>のため、高温の盛り付けには注意が必要です。</p>
+<p><strong>② 食器は洗浄後そのまま再利用可能</strong>
+RFID内蔵食器は業務用食器洗浄機にも対応。チップ内の情報は随時書き換え可能なため、同一食器で朝・昼・夜ごとに異なるメニュー・価格を設定することもできます。</p>
+<p><strong>③ 一括書き換え対応</strong>
+出品機（スマート食器情報書込み機）を使えば、食器へのメニュー情報書き込みは短時間で完了。メニュー変更時の運用負荷を最小限に抑えられます。</p>
+<p><strong>こんな食堂におすすめ</strong>: 固定メニュー中心の大規模食堂、高頻度利用・大量処理が必要な施設</p>
+<hr />
+<h3>共通する決済方式</h3>
+<p>AI精算・RFID精算ともに、以下の<strong>3つの決済方式</strong>に対応しています。</p>
+<table>
+<thead>
+<tr>
+<th>決済方式</th>
+<th>仕組み</th>
+<th>特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>顔認証</strong></td>
+<td>赤外線デュアルカメラ（200万画素）で本人確認</td>
+<td>手ぶらで決済。写真・3Dモデルによるなりすまし防止機能搭載</td>
+</tr>
+<tr>
+<td><strong>QRコード</strong></td>
+<td>正スキャン・逆スキャン両対応</td>
+<td>スマートフォンで手軽に決済</td>
+</tr>
+<tr>
+<td><strong>ICカード</strong></td>
+<td>非接触M1/CPU、ISO/IEC14443準拠</td>
+<td>既存の社員証・ICカードをそのまま利用可能</td>
+</tr>
+</tbody>
+</table>
+<p>利用者はトレーを置くだけ → 決済方式を選ぶだけ。<strong>精算のプロセス全体をスタッフなしで完結</strong>できます。</p>
+<hr />
+<h2>比較表：AI精算 vs RFID精算</h2>
+<p>2つの方式を一覧で比較します。自社の食堂に合う方式を判断する際の参考にしてください。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>AI画像認識精算</th>
+<th>RFID精算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>識別方式</strong></td>
+<td>カメラ画像認識</td>
+<td>RFIDチップ読取</td>
+</tr>
+<tr>
+<td><strong>食器の制約</strong></td>
+<td>不要（通常食器OK）※料理識別モード</td>
+<td>専用RFID食器が必要</td>
+</tr>
+<tr>
+<td><strong>精算速度</strong></td>
+<td>約1秒</td>
+<td>約1秒</td>
+</tr>
+<tr>
+<td><strong>識別精度</strong></td>
+<td>99%以上（料理識別） / 99.99%以上（食器識別）</td>
+<td>99.99%以上</td>
+</tr>
+<tr>
+<td><strong>初期コスト</strong></td>
+<td>中（機器のみ）</td>
+<td>高め（機器＋RFID内蔵食器＋出品機）</td>
+</tr>
+<tr>
+<td><strong>食器の耐熱制限</strong></td>
+<td>なし（通常食器）</td>
+<td>最大85度（高温の盛り付けに注意）</td>
+</tr>
+<tr>
+<td><strong>メニュー変更対応</strong></td>
+<td>撮影するだけ（即日対応）</td>
+<td>食器にチップ書き込み</td>
+</tr>
+<tr>
+<td><strong>サーバー要否</strong></td>
+<td>不要（エッジ型）</td>
+<td>不要</td>
+</tr>
+<tr>
+<td><strong>決済方式</strong></td>
+<td>顔認証・QR・ICカード</td>
+<td>顔認証・QR・ICカード</td>
+</tr>
+<tr>
+<td><strong>おすすめ施設</strong></td>
+<td>日替わりメニュー豊富な食堂</td>
+<td>固定メニュー中心の大規模食堂</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>ワンポイント</strong>: 「どちらが正解か」は食堂の規模・メニュー構成・食器の入替可否によって異なります。迷ったら<strong>無料POC（概念実証）</strong>で両方式を実際の食堂で試し、現場で比較するのが確実です。</p>
+</blockquote>
+<hr />
+<h2>削減できるのはレジ人件費だけじゃない</h2>
+<p>無人精算の導入効果は「レジスタッフの人件費削減」だけにとどまりません。精算データがデジタルで自動蓄積されることで、食堂運営の<strong>あらゆるコスト</strong>を可視化・最適化できるようになります。</p>
+<h3>経営データの自動集計</h3>
+<p>これまで手書きやExcelで管理していた売上データが、精算のたびに<strong>リアルタイムで自動集計</strong>されます。PC管理端末から確認できる情報は以下のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>データ項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ダッシュボード</strong></td>
+<td>当日の売上額・注文数・メニュー別販売数量をひと目で確認</td>
+</tr>
+<tr>
+<td><strong>売上レポート</strong></td>
+<td>日別・週別・月別・食事回別（朝/昼/夕）の売上集計</td>
+</tr>
+<tr>
+<td><strong>注文管理</strong></td>
+<td>全注文の明細検索・異常注文の検出とアラート</td>
+</tr>
+<tr>
+<td><strong>経営分析</strong></td>
+<td>食堂利用率・客単価推移・曜日別トレンド</td>
+</tr>
+</tbody>
+</table>
+<p>手作業での集計が不要になるため、<strong>管理スタッフの事務負担も大幅に削減</strong>されます。</p>
+<h3>メニュー別売上ランキング</h3>
+<p>「どのメニューが人気で、どのメニューが売れ残っているのか」——販売実績がリアルタイムで可視化されるため、<strong>データに基づくメニュー改善</strong>が可能になります。</p>
+<ul>
+<li><strong>人気メニュー</strong>: 仕込み量を増やして機会ロスを防ぐ</li>
+<li><strong>不人気メニュー</strong>: 味付けの変更や入替を検討</li>
+<li><strong>曜日別の傾向</strong>: 「月曜はカレーが出る」「金曜は麺類が人気」といった傾向に基づく仕入れ最適化</li>
+</ul>
+<p>経験と勘に頼っていた備品（仕込み）を<strong>販売データに基づいて最適化</strong>することで、作りすぎによる食品ロスを15〜30%削減する効果も期待できます。</p>
+<h3>栄養データ分析</h3>
+<p>利用者の消費データと栄養成分を紐付け、<strong>パーソナライズされた栄養レポート</strong>を提供できます。</p>
+<p>従業員の健康管理を重視する企業にとって、食堂の栄養データは<strong>健康経営の基盤</strong>にもなります。「社食を通じて社員の健康を守る」という福利厚生の価値が、データによって見える化されるのです。</p>
+<hr />
+<h2>導入への第一歩 — 無料POCで効果を検証</h2>
+<p>「本当に自社の食堂で効果があるのか？」「スタッフがいなくても現場は回るのか？」——そんな疑問に答える最善の方法は、<strong>実際の食堂で試すこと</strong>です。</p>
+<p>当社では、AI精算台・RFID精算台を実際の食堂に持ち込んでテスト運用する<strong>無料POC（概念実証）</strong>を実施しています。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>費用</strong></td>
+<td>一切かかりません</td>
+</tr>
+<tr>
+<td><strong>機器の設置・回収</strong></td>
+<td>すべて当社が対応</td>
+</tr>
+<tr>
+<td><strong>メニュー登録・初期設定</strong></td>
+<td>当社がサポート</td>
+</tr>
+<tr>
+<td><strong>検証できること</strong></td>
+<td>精算時間の短縮率、識別精度、利用者の反応、運用フローの確認</td>
+</tr>
+<tr>
+<td><strong>POC後の流れ</strong></td>
+<td>結果を踏まえて最適な構成・費用をご提案</td>
+</tr>
+</tbody>
+</table>
+<p>POC期間中に「精算時間がどれだけ短縮されるか」「利用者がスムーズに操作できるか」を実際のデータで確認できます。机上の比較だけでなく、<strong>現場で体験してから判断する</strong>のが確実です。</p>
+<p>人手不足に悩む今こそ、無人精算への第一歩を踏み出してみませんか？</p>
+<hr />
+
+            <div class="column-cta">
+                <h3>📞 無料POCのお申し込み</h3>
+                <p>AI画像認識・RFID・計量精算 — お客様の食堂に最適な方式を、実際の環境でテストいただけます。<br>
+                機器の持ち込み・設置・回収まで当社が対応。費用は一切かかりません。</p>
+                <a href="../lp-smart-cafeteria.html" class="cta-btn">無料POCを申し込む →</a>
+            </div>
+
+            <div class="column-related">
+                <h3>関連記事</h3>
+                <ul>
+                    <li><a href="cafeteria-auto-settlement.html">食堂の自動精算システムを徹底比較｜AI・RFID・計量の3方式を解説</a></li>
+                    <li><a href="ai-cafeteria.html">社員食堂にAI自動精算を導入する完全ガイド</a></li>
+                    <li><a href="ai-register.html">食堂AIレジとは？画像認識で変わる精算の新常識</a></li>
+                    <li><a href="rfid-settlement.html">食堂RFID精算システム完全解説</a></li>
+                    <li><a href="cafeteria-queue.html">社員食堂の行列を解消する5つの方法</a></li>
+                    <li><a href="cafeteria-dx.html">社員食堂DX入門｜アナログ運営から脱却する3つのステップ</a></li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../../assets/img/logo/logo.webp' alt='Izumo Soan'>
+                    <p class='logo-desp'>技術を、現場の力に。</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>メニュー</h4>
+                    <ul>
+                        <li><a href='../index.html'>ホーム</a></li>
+                        <li><a href='../about.html'>会社概要</a></li>
+                        <li><a href='../services.html'>サービス</a></li>
+                        <li><a href='../case-studies.html'>実績</a></li>
+                        <li><a href='../overseas-partner.html'>海外メーカーパートナー</a></li>
+                        <li><a href='index.html'>コラム</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>製品情報</h4>
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='../smart-cafeteria.html'>
+                            <span>スマート食堂</span>
+                            <small>画像認識・RFID・計量精算</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='../products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>スマート現場の運用改善プラットフォーム</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 出雲創安 Izumo Soan. All rights reserved. ｜ <a href='../privacy.html' style='color:inherit;text-decoration:underline;'>プライバシーポリシー</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src='../../assets/js/main.js'></script>
+</body>
+</html>

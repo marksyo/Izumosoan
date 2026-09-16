@@ -57,6 +57,18 @@
     .aic-ai-step h3 { font-size: 1.1rem; margin-bottom: 8px; }
     .aic-ai-step p { font-size: 0.9rem; color: #666; }
     .aic-ai-step-arrow { display: none; }
+
+    /* How-it-works highlight banner */
+    .aic-ai-highlight { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; margin-top: 40px; background: linear-gradient(135deg, #EFF6F0 0%, #d4edda 100%); border-radius: 16px; padding: 36px 40px; border-left: 5px solid #00880F; }
+    .aic-ai-highlight-text p { font-size: 1.3rem; line-height: 1.7; color: #2c3e50; margin: 0 0 14px; }
+    .aic-ai-highlight-text p strong { color: #00880F; }
+    .aic-ai-highlight-speed { font-size: 1.5rem !important; font-weight: 700; color: #00660C !important; margin-bottom: 0 !important; }
+    .aic-ai-highlight-speed i { color: #00880F; margin-right: 8px; }
+    .aic-ai-highlight-speed strong { font-size: 2rem; }
+    .aic-ai-highlight-img { text-align: center; }
+    .aic-ai-highlight-img img { max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+    @media (max-width: 768px) { .aic-ai-highlight { grid-template-columns: 1fr; padding: 28px 24px; } }
+
     @media (min-width: 768px) {
         .aic-ai-step-arrow { display: block; position: absolute; right: -20px; top: 50px; font-size: 1.5rem; color: #00880F; }
     }
@@ -169,8 +181,9 @@
             <div class='container aic-ai-hero-grid'>
                 <div>
                     <h1>AIが料理を瞬時に見分ける。</h1>
-                    <p class='subtitle'>トレーに載せた料理をAIカメラが自動認識し、品目・金額を瞬時に算出。<br>専用食器不要で既存食器をそのまま使え、顔認証やQRコードでスムーズに決済完了。</p>
+                    <p class='subtitle'>料理のAI認証と顔認証を<strong>同時に処理</strong>し、業界<strong>最速の決済</strong>を実現。<br>トレーに載せた料理をAIカメラが自動認識し、品目・金額を瞬時に算出。専用食器不要で既存食器をそのまま使えます。</p>
                     <div class='aic-ai-hero-points'>
+                        <span><i class="fas fa-bolt"></i>料理認証×顔認証を同時処理で最速決済</span>
                         <span><i class="fas fa-check"></i>専用食器不要</span>
                         <span><i class="fas fa-check"></i>約1秒で認識</span>
                         <span><i class="fas fa-check"></i>栄養データ自動分析</span>
@@ -180,7 +193,7 @@
                     </div>
                 </div>
                 <div class='aic-ai-hero-visual'>
-                    <img src='../assets/img/cafeteria/AIimagepay.jpg' alt='AI画像認識精算 - 料理を認識して金額計算・顔認証決済の画面'>
+                    <img src='../assets/img/cafeteria/AIimagepay-ja.jpg' alt='AI画像認識精算 - 料理を認識して金額計算・顔認証決済の画面'>
                 </div>
             </div>
         </section>
@@ -190,28 +203,15 @@
             <div class='container'>
                 <div class='section-title'>
                     <h2>AI画像認識の仕組み</h2>
-                    <p>トレーを置くだけで料理を自動認識。かんたん3ステップで精算完了。</p>
+                    <p>トレーを置くだけで料理を自動認識。料理認識と顔認証を同時に処理し、最速で精算完了。</p>
                 </div>
-                <div class='aic-ai-steps'>
-                    <div class='aic-ai-step'>
-                        <div class='aic-ai-step-num'>1</div>
-                        <div class='aic-ai-step-icon'><i class="fas fa-utensils"></i></div>
-                        <h3>トレーに料理を載せる</h3>
-                        <p>お好みの料理をトレーに載せ、精算端末にセット。特別な食器や操作は不要です。</p>
-                        <span class='aic-ai-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                <div class='aic-ai-highlight'>
+                    <div class='aic-ai-highlight-text'>
+                        <p>料理のAI認証と顔認証を<strong>同時に処理</strong>し、業界<strong>最速の決済</strong>を実現。</p>
+                        <p class='aic-ai-highlight-speed'><i class="fas fa-bolt"></i>トレーを置いてから決済完了まで<strong>3秒</strong>！</p>
                     </div>
-                    <div class='aic-ai-step'>
-                        <div class='aic-ai-step-num'>2</div>
-                        <div class='aic-ai-step-icon'><i class="fas fa-camera"></i></div>
-                        <h3>AIカメラが自動認識</h3>
-                        <p>AIが料理の品目を瞬時に識別し、品名と金額をディスプレイに表示します。</p>
-                        <span class='aic-ai-step-arrow'><i class="fas fa-chevron-right"></i></span>
-                    </div>
-                    <div class='aic-ai-step'>
-                        <div class='aic-ai-step-num'>3</div>
-                        <div class='aic-ai-step-icon'><i class="fas fa-user-check"></i></div>
-                        <h3>顔認証/QR/ICカードで決済</h3>
-                        <p>顔認証・QRコード・ICカードなど、お好みの方法でスムーズにお支払い完了。</p>
+                    <div class='aic-ai-highlight-img'>
+                        <img src='../assets/img/cafeteria/doubleAIimage-ja.jpg' alt='料理のAI認証と顔認証を同時処理して3秒で決済完了する様子'>
                     </div>
                 </div>
             </div>
@@ -222,19 +222,19 @@
             <div class='container'>
                 <div class='section-title'>
                     <h2>AI精算端末ラインナップ</h2>
-                    <p>食堂の規模やレイアウトに合わせて、2つのタイプからお選びいただけます。</p>
+                    <p>食堂の規模やレイアウトに合わせて、4つのタイプからお選びいただけます。</p>
                 </div>
                 <div class='aic-ai-products'>
                     <div class='aic-ai-product-card'>
                         <div class='aic-ai-product-img'>
                             <img src='../assets/img/cafeteria/AItype.jpg' alt='AI精算端末（双通道）- 大型テーブル型'>
                         </div>
-                        <h3>AI精算端末（双通道）</h3>
+                        <h3>AI精算端末（広いタイプ）</h3>
                         <p class='aic-ai-product-desc'>2つの認識エリアを搭載した高処理能力モデル。<br>大規模食堂やピーク時の高い処理量に対応します。</p>
                         <ul>
                             <li><i class="fas fa-check"></i>15.6インチ双画面タッチディスプレイ</li>
                             <li><i class="fas fa-check"></i>一度に8品以上を同時認識</li>
-                            <li><i class="fas fa-check"></i>2秒以内で認識完了</li>
+                            <li><i class="fas fa-check"></i>1秒以内で認識完了</li>
                             <li><i class="fas fa-check"></i>ICカード / QRコード / 顔認証対応</li>
                         </ul>
                     </div>
@@ -242,13 +242,41 @@
                         <div class='aic-ai-product-img'>
                             <img src='../assets/img/cafeteria/AItype-2.jpg' alt='AI精算端末（単通道）- スリムなキオスク型'>
                         </div>
-                        <h3>AI精算端末（単通道）</h3>
+                        <h3>AI精算端末（コンパクトタイプ）</h3>
                         <p class='aic-ai-product-desc'>コンパクトなスリム設計のキオスク型。<br>小～中規模食堂やスペースが限られた場所に最適です。</p>
                         <ul>
-                            <li><i class="fas fa-check"></i>15.6インチメイン画面 + サイドパネル</li>
+                            <li><i class="fas fa-check"></i>21.6インチメイン画面 + サイドパネル</li>
                             <li><i class="fas fa-check"></i>コンパクト設計で省スペース</li>
                             <li><i class="fas fa-check"></i>置き場所を選ばない柔軟な設置</li>
                             <li><i class="fas fa-check"></i>ICカード / QRコード / 顔認証対応</li>
+                        </ul>
+                    </div>
+                    <div class='aic-ai-product-card'>
+                        <div class='aic-ai-product-img'>
+                            <img src='../assets/img/cafeteria/AI-newmodel1.jpg' alt='AI精算端末 新モデル1 - 8インチタッチスクリーン型'>
+                        </div>
+                        <h3>AI精算端末（新モデル1）</h3>
+                        <p class='aic-ai-product-desc'>8インチタッチスクリーンを搭載したコンパクトモデル。<br>顔認証・QR・カード決済をオールインワンで統合します。</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>8インチタッチスクリーン</li>
+                            <li><i class="fas fa-check"></i>顔認証カメラ・QR・カードリーダー一体化</li>
+                            <li><i class="fas fa-check"></i>WiFi・Bluetooth・有線LAN対応</li>
+                            <li><i class="fas fa-check"></i>200万画素 赤外線デュアルカメラ</li>
+                            <li><i class="fas fa-check"></i>500万画素 料理識別カメラ</li>
+                        </ul>
+                    </div>
+                    <div class='aic-ai-product-card'>
+                        <div class='aic-ai-product-img'>
+                            <img src='../assets/img/cafeteria/AI-newmodel2.jpg' alt='AI精算端末 新モデル2 - 11.6インチタッチスクリーン型'>
+                        </div>
+                        <h3>AI精算端末（新モデル2）</h3>
+                        <p class='aic-ai-product-desc'>11.6インチタッチスクリーンを搭載したコンパクトモデル。<br>顔認証・QR・カード決済をオールインワンで統合します。</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>11.6インチタッチスクリーン</li>
+                            <li><i class="fas fa-check"></i>顔認証カメラ・QR・カードリーダー一体化</li>
+                            <li><i class="fas fa-check"></i>WiFi・Bluetooth・有線LAN対応</li>
+                            <li><i class="fas fa-check"></i>200万画素 赤外線デュアルカメラ</li>
+                            <li><i class="fas fa-check"></i>500万画素 料理識別カメラ</li>
                         </ul>
                     </div>
                 </div>
@@ -299,7 +327,7 @@
             <div class='container'>
                 <div class='section-title'>
                     <h2>技術仕様</h2>
-                    <p>AI精算端末（双通道）の主な仕様</p>
+                    <p>AI精算端末の主な仕様</p>
                 </div>
                 <div style='overflow-x:auto;'>
                     <table class='aic-ai-spec-table'>
@@ -307,11 +335,12 @@
                             <tr><th>項目</th><th>仕様</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>CPU</td><td>64ビット8コアCPU</td></tr>
-                            <tr><td>ストレージ</td><td>16G FLASH, 2G DDR3</td></tr>
+                            <tr><td>CPU</td><td>64ビット8コアCPU, 6T NPU</td></tr>
+                            <tr><td>ストレージ</td><td>16G FLASH, 4G DDR4</td></tr>
                             <tr><td>ディスプレイ</td><td>主画面: 15.6インチ 1080P タッチスクリーン / 副画面: 15.6インチ 1080P タッチスクリーン</td></tr>
                             <tr><td>QRスキャン</td><td>QR Code, Code 128/39等対応、360°回転読取</td></tr>
                             <tr><td>顔認証カメラ</td><td>デュアル赤外線カメラ、200万画素</td></tr>
+                            <tr><td>料理認識カメラ</td><td>500万画素</td></tr>
                             <tr><td>非接触カード</td><td>M1/CPUカード、ISO/IEC14443対応</td></tr>
                             <tr><td>通信</td><td>Ethernet 10/100Mbps, WiFi 2.4GHz, Bluetooth 4.0</td></tr>
                             <tr><td>電源</td><td>AC220V入力, DC12V/5A出力</td></tr>
@@ -358,7 +387,6 @@
                 <h2>まずはAI精算のデモをご体験ください</h2>
                 <p>AI画像認識精算の導入をご検討ですか？<br>無料デモ・POCのご相談、資料請求など、お気軽にお問い合わせください。</p>
                 <a href='index.html#contact' class='btn-primary'>お問い合わせ・デモ依頼</a>
-                <div class='aic-ai-phone'><i class="fas fa-phone-alt"></i> 050-1258-9122</div>
             </div>
         </section>
     </main>
@@ -378,7 +406,7 @@
                         <li><a href='services.html'>サービス</a></li>
                         <li><a href='case-studies.html'>実績</a></li>
                         <li><a href='overseas-partner.html'>海外メーカーパートナー</a></li>
-                        <li><a href='privacy.html'>プライバシーポリシー</a></li>
+                        <li><a href='column/index.html'>コラム</a></li>
                     </ul>
                 </div>
                 <div class='footer-products'>
@@ -399,7 +427,7 @@
         </div>
         <div class='footer-bottom'>
             <div class="container">
-                <p class='footer-copyright'>&copy; 2026 出雲創安 Izumo Soan. All rights reserved.</p>
+                <p class='footer-copyright'>&copy; 2026 出雲創安 Izumo Soan. All rights reserved. ｜ <a href='privacy.html' style='color:inherit;text-decoration:underline;'>プライバシーポリシー</a></p>
             </div>
         </div>
     </footer>

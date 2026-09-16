@@ -61,6 +61,17 @@
         .aic-ai-step-arrow { display: block; position: absolute; right: -20px; top: 50px; font-size: 1.5rem; color: #00880F; }
     }
 
+    /* How-it-works highlight banner */
+    .aic-ai-highlight { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; margin-top: 40px; background: linear-gradient(135deg, #EFF6F0 0%, #d4edda 100%); border-radius: 16px; padding: 36px 40px; border-left: 5px solid #00880F; }
+    .aic-ai-highlight-text p { font-size: 1.3rem; line-height: 1.7; color: #2c3e50; margin: 0 0 14px; }
+    .aic-ai-highlight-text p strong { color: #00880F; }
+    .aic-ai-highlight-speed { font-size: 1.5rem !important; font-weight: 700; color: #00660C !important; margin-bottom: 0 !important; }
+    .aic-ai-highlight-speed i { color: #00880F; margin-right: 8px; }
+    .aic-ai-highlight-speed strong { font-size: 2rem; }
+    .aic-ai-highlight-img { text-align: center; }
+    .aic-ai-highlight-img img { max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+    @media (max-width: 768px) { .aic-ai-highlight { grid-template-columns: 1fr; padding: 28px 24px; } }
+
     .aic-ai-products { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
     .aic-ai-product-card { background: #fff; border-radius: 14px; padding: 36px 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); transition: transform 0.3s; border-top: 4px solid #00880F; }
     .aic-ai-product-card:hover { transform: translateY(-5px); }
@@ -169,8 +180,9 @@
             <div class='container aic-ai-hero-grid'>
                 <div>
                     <h1>AI Instantly Identifies Every Dish.</h1>
-                    <p class='subtitle'>AI cameras automatically recognize dishes on the tray, instantly calculating items and totals.<br>No special dishware needed — use your existing dishes. Seamless payment via face recognition, QR code, or IC card.</p>
+                    <p class='subtitle'>Recognizes dishes and faces <strong>simultaneously</strong> for the <strong>fastest checkout</strong>.<br>AI cameras automatically recognize dishes on the tray, instantly calculating items and totals — no special dishware needed.</p>
                     <div class='aic-ai-hero-points'>
+                        <span><i class="fas fa-bolt"></i>Simultaneous dish &amp; face recognition — fastest checkout</span>
                         <span><i class="fas fa-check"></i>No Special Dishware</span>
                         <span><i class="fas fa-check"></i>~1 Second Recognition</span>
                         <span><i class="fas fa-check"></i>Auto Nutrition Analysis</span>
@@ -180,7 +192,7 @@
                     </div>
                 </div>
                 <div class='aic-ai-hero-visual'>
-                    <img src='../assets/img/cafeteria/AIimagepay.jpg' alt='AI image recognition checkout — recognizing dishes and calculating totals with face recognition payment'>
+                    <img src='../assets/img/cafeteria/AIimagepay-en.jpg' alt='AI image recognition checkout — recognizing dishes and calculating totals with face recognition payment'>
                 </div>
             </div>
         </section>
@@ -190,28 +202,15 @@
             <div class='container'>
                 <div class='section-title'>
                     <h2>How AI Image Recognition Works</h2>
-                    <p>Simply place the tray and dishes are automatically recognized. Checkout is complete in 3 easy steps.</p>
+                    <p>Simply place the tray and dishes are automatically recognized. Dish recognition and face recognition run simultaneously for the fastest checkout.</p>
                 </div>
-                <div class='aic-ai-steps'>
-                    <div class='aic-ai-step'>
-                        <div class='aic-ai-step-num'>1</div>
-                        <div class='aic-ai-step-icon'><i class="fas fa-utensils"></i></div>
-                        <h3>Place Dishes on the Tray</h3>
-                        <p>Load your chosen dishes onto the tray and set it on the terminal. No special dishware or operation required.</p>
-                        <span class='aic-ai-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                <div class='aic-ai-highlight'>
+                    <div class='aic-ai-highlight-text'>
+                        <p>Recognizes dishes and faces <strong>simultaneously</strong> for the industry's <strong>fastest checkout</strong>.</p>
+                        <p class='aic-ai-highlight-speed'><i class="fas fa-bolt"></i>Just <strong>3 seconds</strong> from placing the tray to completed payment!</p>
                     </div>
-                    <div class='aic-ai-step'>
-                        <div class='aic-ai-step-num'>2</div>
-                        <div class='aic-ai-step-icon'><i class="fas fa-camera"></i></div>
-                        <h3>AI Camera Auto-Recognition</h3>
-                        <p>AI instantly identifies each dish and displays the item names and prices on the screen.</p>
-                        <span class='aic-ai-step-arrow'><i class="fas fa-chevron-right"></i></span>
-                    </div>
-                    <div class='aic-ai-step'>
-                        <div class='aic-ai-step-num'>3</div>
-                        <div class='aic-ai-step-icon'><i class="fas fa-user-check"></i></div>
-                        <h3>Pay via Face / QR / IC Card</h3>
-                        <p>Complete payment smoothly using face recognition, QR code, IC card, or your preferred method.</p>
+                    <div class='aic-ai-highlight-img'>
+                        <img src='../assets/img/cafeteria/doubleAIimage-en.jpg' alt='Dish AI recognition and face recognition processed simultaneously, payment completed in 3 seconds'>
                     </div>
                 </div>
             </div>
@@ -222,19 +221,19 @@
             <div class='container'>
                 <div class='section-title'>
                     <h2>AI Checkout Terminal Lineup</h2>
-                    <p>Choose from two models to match your cafeteria's scale and layout.</p>
+                    <p>Choose from four models to match your cafeteria's scale and layout.</p>
                 </div>
                 <div class='aic-ai-products'>
                     <div class='aic-ai-product-card'>
                         <div class='aic-ai-product-img'>
                             <img src='../assets/img/cafeteria/AItype.jpg' alt='AI Checkout Terminal (Dual-Lane) — large table-top model'>
                         </div>
-                        <h3>AI Checkout Terminal (Dual-Lane)</h3>
+                        <h3>AI Checkout Terminal (Wide Type)</h3>
                         <p class='aic-ai-product-desc'>High-throughput model with two recognition zones.<br>Designed for large cafeterias and peak-hour high-volume processing.</p>
                         <ul>
                             <li><i class="fas fa-check"></i>Dual 15.6-inch touchscreen displays</li>
                             <li><i class="fas fa-check"></i>Recognizes 8+ items simultaneously</li>
-                            <li><i class="fas fa-check"></i>Recognition complete within 2 seconds</li>
+                            <li><i class="fas fa-check"></i>Recognition complete within 1 second</li>
                             <li><i class="fas fa-check"></i>IC card / QR code / face recognition</li>
                         </ul>
                     </div>
@@ -242,13 +241,41 @@
                         <div class='aic-ai-product-img'>
                             <img src='../assets/img/cafeteria/AItype-2.jpg' alt='AI Checkout Terminal (Single-Lane) — slim kiosk model'>
                         </div>
-                        <h3>AI Checkout Terminal (Single-Lane)</h3>
+                        <h3>AI Checkout Terminal (Compact Type)</h3>
                         <p class='aic-ai-product-desc'>Compact, slim kiosk design.<br>Ideal for small to mid-size cafeterias or spaces with limited room.</p>
                         <ul>
-                            <li><i class="fas fa-check"></i>15.6-inch main display + side panel</li>
+                            <li><i class="fas fa-check"></i>21.6-inch main display + side panel</li>
                             <li><i class="fas fa-check"></i>Compact design saves space</li>
                             <li><i class="fas fa-check"></i>Flexible placement — fits anywhere</li>
                             <li><i class="fas fa-check"></i>IC card / QR code / face recognition</li>
+                        </ul>
+                    </div>
+                    <div class='aic-ai-product-card'>
+                        <div class='aic-ai-product-img'>
+                            <img src='../assets/img/cafeteria/AI-newmodel1.jpg' alt='AI Checkout Terminal (New Model 1) — 8-inch touchscreen model'>
+                        </div>
+                        <h3>AI Checkout Terminal (New Model 1)</h3>
+                        <p class='aic-ai-product-desc'>Compact model with an 8-inch touchscreen.<br>Integrates face recognition, QR, and card payment in one unit.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>8-inch touchscreen</li>
+                            <li><i class="fas fa-check"></i>Integrated face camera / QR / card reader</li>
+                            <li><i class="fas fa-check"></i>WiFi / Bluetooth / wired LAN</li>
+                            <li><i class="fas fa-check"></i>2MP infrared binocular camera</li>
+                            <li><i class="fas fa-check"></i>5MP dish recognition camera</li>
+                        </ul>
+                    </div>
+                    <div class='aic-ai-product-card'>
+                        <div class='aic-ai-product-img'>
+                            <img src='../assets/img/cafeteria/AI-newmodel2.jpg' alt='AI Checkout Terminal (New Model 2) — 11.6-inch touchscreen model'>
+                        </div>
+                        <h3>AI Checkout Terminal (New Model 2)</h3>
+                        <p class='aic-ai-product-desc'>Compact model with an 11.6-inch touchscreen.<br>Integrates face recognition, QR, and card payment in one unit.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>11.6-inch touchscreen</li>
+                            <li><i class="fas fa-check"></i>Integrated face camera / QR / card reader</li>
+                            <li><i class="fas fa-check"></i>WiFi / Bluetooth / wired LAN</li>
+                            <li><i class="fas fa-check"></i>2MP infrared binocular camera</li>
+                            <li><i class="fas fa-check"></i>5MP dish recognition camera</li>
                         </ul>
                     </div>
                 </div>
@@ -299,7 +326,7 @@
             <div class='container'>
                 <div class='section-title'>
                     <h2>Technical Specifications</h2>
-                    <p>Key specifications for the AI Checkout Terminal (Dual-Lane)</p>
+                    <p>Key specifications for the AI Checkout Terminal</p>
                 </div>
                 <div style='overflow-x:auto;'>
                     <table class='aic-ai-spec-table'>
@@ -307,11 +334,12 @@
                             <tr><th>Item</th><th>Specification</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>CPU</td><td>64-bit 8-core CPU</td></tr>
-                            <tr><td>Storage</td><td>16G FLASH, 2G DDR3</td></tr>
+                            <tr><td>CPU</td><td>64-bit 8-core CPU, 6T NPU</td></tr>
+                            <tr><td>Storage</td><td>16G FLASH, 4G DDR4</td></tr>
                             <tr><td>Display</td><td>Main: 15.6" 1080P touchscreen / Sub: 15.6" 1080P touchscreen</td></tr>
                             <tr><td>QR Scanner</td><td>QR Code, Code 128/39, etc. — 360° rotation reading</td></tr>
                             <tr><td>Face Recognition Camera</td><td>Dual infrared camera, 2MP</td></tr>
+                            <tr><td>Dish Recognition Camera</td><td>5MP</td></tr>
                             <tr><td>Contactless Card</td><td>M1/CPU card, ISO/IEC14443 compliant</td></tr>
                             <tr><td>Communication</td><td>Ethernet 10/100Mbps, WiFi 2.4GHz, Bluetooth 4.0</td></tr>
                             <tr><td>Power</td><td>AC220V input, DC12V/5A output</td></tr>
@@ -358,7 +386,6 @@
                 <h2>Experience AI Checkout in Action</h2>
                 <p>Considering AI image recognition checkout for your cafeteria?<br>Contact us for a free demo, POC consultation, or to request materials.</p>
                 <a href='index.html#contact' class='btn-primary'>Contact Us / Request Demo</a>
-                <div class='aic-ai-phone'><i class="fas fa-phone-alt"></i> 050-1258-9122</div>
             </div>
         </section>
     </main>
@@ -378,7 +405,7 @@
                         <li><a href='services.html'>Services</a></li>
                         <li><a href='case-studies.html'>Case Studies</a></li>
                         <li><a href='overseas-partner.html'>Overseas Partner</a></li>
-                        <li><a href='privacy.html'>Privacy Policy</a></li>
+                        <li><a href='../ja/column/index.html'>Column</a></li>
                     </ul>
                 </div>
                 <div class='footer-products'>
@@ -399,7 +426,7 @@
         </div>
         <div class='footer-bottom'>
             <div class="container">
-                <p class='footer-copyright'>&copy; 2026 Izumo Soan. All rights reserved.</p>
+                <p class='footer-copyright'>&copy; 2026 Izumo Soan. All rights reserved. ｜ <a href='privacy.html' style='color:inherit;text-decoration:underline;'>Privacy Policy</a></p>
             </div>
         </div>
     </footer>

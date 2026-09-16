@@ -61,6 +61,17 @@
         .aic-ai-step-arrow { display: block; position: absolute; right: -20px; top: 50px; font-size: 1.5rem; color: #00880F; }
     }
 
+    /* How-it-works highlight banner */
+    .aic-ai-highlight { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; margin-top: 40px; background: linear-gradient(135deg, #EFF6F0 0%, #d4edda 100%); border-radius: 16px; padding: 36px 40px; border-left: 5px solid #00880F; }
+    .aic-ai-highlight-text p { font-size: 1.3rem; line-height: 1.7; color: #2c3e50; margin: 0 0 14px; }
+    .aic-ai-highlight-text p strong { color: #00880F; }
+    .aic-ai-highlight-speed { font-size: 1.5rem !important; font-weight: 700; color: #00660C !important; margin-bottom: 0 !important; }
+    .aic-ai-highlight-speed i { color: #00880F; margin-right: 8px; }
+    .aic-ai-highlight-speed strong { font-size: 2rem; }
+    .aic-ai-highlight-img { text-align: center; }
+    .aic-ai-highlight-img img { max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+    @media (max-width: 768px) { .aic-ai-highlight { grid-template-columns: 1fr; padding: 28px 24px; } }
+
     .aic-ai-products { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
     .aic-ai-product-card { background: #fff; border-radius: 14px; padding: 36px 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); transition: transform 0.3s; border-top: 4px solid #00880F; }
     .aic-ai-product-card:hover { transform: translateY(-5px); }
@@ -169,8 +180,9 @@
             <div class='container aic-ai-hero-grid'>
                 <div>
                     <h1>AI瞬间识别菜品。</h1>
-                    <p class='subtitle'>AI摄像头自动识别托盘上的菜品，瞬间计算品目与金额。<br>无需专用餐具，可直接使用现有餐具，支持人脸识别和QR码顺畅完成支付。</p>
+                    <p class='subtitle'>菜品AI识别与人脸识别<strong>同时进行</strong>，实现<strong>最快结算</strong>。<br>AI摄像头自动识别托盘上的菜品，瞬间计算品目与金额，无需专用餐具。</p>
                     <div class='aic-ai-hero-points'>
+                        <span><i class="fas fa-bolt"></i>菜品识别×人脸识别同时进行，最快结算</span>
                         <span><i class="fas fa-check"></i>无需专用餐具</span>
                         <span><i class="fas fa-check"></i>约1秒完成识别</span>
                         <span><i class="fas fa-check"></i>营养数据自动分析</span>
@@ -180,7 +192,7 @@
                     </div>
                 </div>
                 <div class='aic-ai-hero-visual'>
-                    <img src='../assets/img/cafeteria/AIimagepay.jpg' alt='AI图像识别结算 - 识别菜品计算金额·人脸识别支付画面'>
+                    <img src='../assets/img/cafeteria/AIimagepay-zh.jpg' alt='AI图像识别结算 - 识别菜品计算金额·人脸识别支付画面'>
                 </div>
             </div>
         </section>
@@ -190,28 +202,15 @@
             <div class='container'>
                 <div class='section-title'>
                     <h2>AI图像识别的工作原理</h2>
-                    <p>只需将托盘放上即可自动识别菜品。简单3步完成结算。</p>
+                    <p>只需将托盘放上即可自动识别菜品。菜品识别与人脸识别同时进行，实现最快结算。</p>
                 </div>
-                <div class='aic-ai-steps'>
-                    <div class='aic-ai-step'>
-                        <div class='aic-ai-step-num'>1</div>
-                        <div class='aic-ai-step-icon'><i class="fas fa-utensils"></i></div>
-                        <h3>将菜品放入托盘</h3>
-                        <p>将喜欢的菜品放入托盘，放置于结算终端上。无需特殊餐具或操作。</p>
-                        <span class='aic-ai-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                <div class='aic-ai-highlight'>
+                    <div class='aic-ai-highlight-text'>
+                        <p>菜品AI识别与人脸识别<strong>同时进行</strong>，实现业界<strong>最快结算</strong>。</p>
+                        <p class='aic-ai-highlight-speed'><i class="fas fa-bolt"></i>从放置托盘到完成支付仅需<strong>3秒</strong>！</p>
                     </div>
-                    <div class='aic-ai-step'>
-                        <div class='aic-ai-step-num'>2</div>
-                        <div class='aic-ai-step-icon'><i class="fas fa-camera"></i></div>
-                        <h3>AI摄像头自动识别</h3>
-                        <p>AI瞬间识别菜品种类，将品名和金额显示在屏幕上。</p>
-                        <span class='aic-ai-step-arrow'><i class="fas fa-chevron-right"></i></span>
-                    </div>
-                    <div class='aic-ai-step'>
-                        <div class='aic-ai-step-num'>3</div>
-                        <div class='aic-ai-step-icon'><i class="fas fa-user-check"></i></div>
-                        <h3>人脸识别/QR/IC卡支付</h3>
-                        <p>通过人脸识别、QR码、IC卡等方式顺畅完成支付。</p>
+                    <div class='aic-ai-highlight-img'>
+                        <img src='../assets/img/cafeteria/doubleAIimage-zh.jpg' alt='菜品AI识别与人脸识别同时处理，3秒完成支付'>
                     </div>
                 </div>
             </div>
@@ -222,19 +221,19 @@
             <div class='container'>
                 <div class='section-title'>
                     <h2>AI结算终端产品线</h2>
-                    <p>根据食堂规模和布局，可从两种类型中选择。</p>
+                    <p>根据食堂规模和布局，可从四种类型中选择。</p>
                 </div>
                 <div class='aic-ai-products'>
                     <div class='aic-ai-product-card'>
                         <div class='aic-ai-product-img'>
                             <img src='../assets/img/cafeteria/AItype.jpg' alt='AI结算终端（双通道）- 大型桌面式'>
                         </div>
-                        <h3>AI结算终端（双通道）</h3>
+                        <h3>AI结算终端（宽体型）</h3>
                         <p class='aic-ai-product-desc'>搭载2个识别区域的高处理能力型号。<br>适用于大规模食堂及高峰时段的大量处理需求。</p>
                         <ul>
                             <li><i class="fas fa-check"></i>15.6英寸双屏触控显示</li>
                             <li><i class="fas fa-check"></i>一次可同时识别8个以上菜品</li>
-                            <li><i class="fas fa-check"></i>2秒内完成识别</li>
+                            <li><i class="fas fa-check"></i>1秒内完成识别</li>
                             <li><i class="fas fa-check"></i>IC卡 / QR码 / 人脸识别支付</li>
                         </ul>
                     </div>
@@ -242,13 +241,41 @@
                         <div class='aic-ai-product-img'>
                             <img src='../assets/img/cafeteria/AItype-2.jpg' alt='AI结算终端（单通道）- 纤薄自助机型'>
                         </div>
-                        <h3>AI结算终端（单通道）</h3>
+                        <h3>AI结算终端（紧凑型）</h3>
                         <p class='aic-ai-product-desc'>紧凑纤薄设计的自助机型。<br>最适合中小规模食堂及空间有限的场所。</p>
                         <ul>
-                            <li><i class="fas fa-check"></i>15.6英寸主屏 + 侧面板</li>
+                            <li><i class="fas fa-check"></i>21.6英寸主屏 + 侧面板</li>
                             <li><i class="fas fa-check"></i>紧凑设计，节省空间</li>
                             <li><i class="fas fa-check"></i>灵活安装，不挑场地</li>
                             <li><i class="fas fa-check"></i>IC卡 / QR码 / 人脸识别支付</li>
+                        </ul>
+                    </div>
+                    <div class='aic-ai-product-card'>
+                        <div class='aic-ai-product-img'>
+                            <img src='../assets/img/cafeteria/AI-newmodel1.jpg' alt='AI结算终端（新款1）- 8寸触摸屏机型'>
+                        </div>
+                        <h3>AI结算终端（新款1）</h3>
+                        <p class='aic-ai-product-desc'>搭载8寸触摸屏的紧凑机型。<br>人脸识别、扫码、刷卡支付一体化集成。</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>8寸触摸屏</li>
+                            <li><i class="fas fa-check"></i>人脸摄像头、扫码、刷卡集成一体化</li>
+                            <li><i class="fas fa-check"></i>WiFi、蓝牙、有线网络</li>
+                            <li><i class="fas fa-check"></i>200万像素红外双目摄像头</li>
+                            <li><i class="fas fa-check"></i>500万像素菜品识别摄像头</li>
+                        </ul>
+                    </div>
+                    <div class='aic-ai-product-card'>
+                        <div class='aic-ai-product-img'>
+                            <img src='../assets/img/cafeteria/AI-newmodel2.jpg' alt='AI结算终端（新款2）- 11.6寸触摸屏机型'>
+                        </div>
+                        <h3>AI结算终端（新款2）</h3>
+                        <p class='aic-ai-product-desc'>搭载11.6寸触摸屏的紧凑机型。<br>人脸识别、扫码、刷卡支付一体化集成。</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>11.6寸触摸屏</li>
+                            <li><i class="fas fa-check"></i>人脸摄像头、扫码、刷卡集成一体化</li>
+                            <li><i class="fas fa-check"></i>WiFi、蓝牙、有线网络</li>
+                            <li><i class="fas fa-check"></i>200万像素红外双目摄像头</li>
+                            <li><i class="fas fa-check"></i>500万像素菜品识别摄像头</li>
                         </ul>
                     </div>
                 </div>
@@ -299,7 +326,7 @@
             <div class='container'>
                 <div class='section-title'>
                     <h2>技术规格</h2>
-                    <p>AI结算终端（双通道）主要规格</p>
+                    <p>AI结算终端主要规格</p>
                 </div>
                 <div style='overflow-x:auto;'>
                     <table class='aic-ai-spec-table'>
@@ -307,11 +334,12 @@
                             <tr><th>项目</th><th>规格</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>CPU</td><td>64位8核CPU</td></tr>
-                            <tr><td>存储</td><td>16G FLASH, 2G DDR3</td></tr>
+                            <tr><td>CPU</td><td>64位8核CPU, 6T NPU</td></tr>
+                            <tr><td>存储</td><td>16G FLASH, 4G DDR4</td></tr>
                             <tr><td>显示屏</td><td>主屏: 15.6英寸 1080P 触控屏 / 副屏: 15.6英寸 1080P 触控屏</td></tr>
                             <tr><td>QR扫描</td><td>QR Code, Code 128/39等，支持360°旋转读取</td></tr>
                             <tr><td>人脸识别摄像头</td><td>双红外摄像头，200万像素</td></tr>
+                            <tr><td>菜品识别摄像头</td><td>500万像素</td></tr>
                             <tr><td>非接触式卡</td><td>M1/CPU卡，ISO/IEC14443兼容</td></tr>
                             <tr><td>通信</td><td>Ethernet 10/100Mbps, WiFi 2.4GHz, Bluetooth 4.0</td></tr>
                             <tr><td>电源</td><td>AC220V输入, DC12V/5A输出</td></tr>
@@ -358,7 +386,6 @@
                 <h2>欢迎体验AI结算演示</h2>
                 <p>正在考虑导入AI图像识别结算系统？<br>免费演示·POC咨询、资料索取等，欢迎随时联系我们。</p>
                 <a href='index.html#contact' class='btn-primary'>咨询·演示申请</a>
-                <div class='aic-ai-phone'><i class="fas fa-phone-alt"></i> 050-1258-9122</div>
             </div>
         </section>
     </main>
@@ -378,7 +405,7 @@
                         <li><a href='services.html'>服务</a></li>
                         <li><a href='case-studies.html'>案例</a></li>
                         <li><a href='overseas-partner.html'>海外合作伙伴</a></li>
-                        <li><a href='privacy.html'>隐私政策</a></li>
+                        <li><a href='../ja/column/index.html'>专栏</a></li>
                     </ul>
                 </div>
                 <div class='footer-products'>
@@ -399,7 +426,7 @@
         </div>
         <div class='footer-bottom'>
             <div class="container">
-                <p class='footer-copyright'>&copy; 2026 出雲創安 Izumo Soan. All rights reserved.</p>
+                <p class='footer-copyright'>&copy; 2026 出雲創安 Izumo Soan. All rights reserved. ｜ <a href='privacy.html' style='color:inherit;text-decoration:underline;'>隐私政策</a></p>
             </div>
         </div>
     </footer>
