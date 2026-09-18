@@ -493,8 +493,32 @@
   </url>
   <url>
     <loc>https://izumosoan.com/ja/lp-smart-cafeteria.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/lp-smart-cafeteria.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/lp-smart-cafeteria.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/lp-smart-cafeteria.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/lp-smart-cafeteria.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/en/lp-smart-cafeteria.html</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/lp-smart-cafeteria.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/lp-smart-cafeteria.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/lp-smart-cafeteria.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/lp-smart-cafeteria.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/zh/lp-smart-cafeteria.html</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/lp-smart-cafeteria.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/lp-smart-cafeteria.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/lp-smart-cafeteria.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/lp-smart-cafeteria.html"/>
   </url>
 </urlset>

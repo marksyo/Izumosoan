@@ -13,23 +13,6 @@
     <meta property="og:title" content="社員食堂のAI自動精算｜行列・人手不足を解決するスマート食堂">
     <meta property="og:description" content="社員食堂・学校・病院・工場食堂の行列とレジ人手不足を解決。AI画像認識、RFID、計量精算から最適な方式をご提案。関東エリアで無料POCを実施しています。">
     <meta property="og:locale" content="ja_JP">
-    <meta property="og:image" content="https://izumosoan.com/assets/img/cafeteria/cafeteria-hero.webp">
-    <meta property="og:image:alt" content="AI画像認識・RFID・計量精算で社員食堂の行列を解消するスマート食堂ソリューション">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="社員食堂のAI自動精算｜行列・人手不足を解決するスマート食堂">
-    <meta name="twitter:description" content="AI画像認識・RFID・計量精算で1人あたり3〜5秒の高速精算。社員食堂・学校・病院・工場食堂の行列とレジ人手不足を解決。関東エリアで無料POCを実施中。">
-    <meta name="twitter:image" content="https://izumosoan.com/assets/img/cafeteria/cafeteria-hero.webp">
-
-    <!-- SEO meta -->
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="keywords" content="社員食堂,スマート食堂,AI画像認識精算,RFID精算,計量精算,セルフレジ,食堂自動精算,顔認証決済,行列解消,レジ人手不足,無料POC,食堂DX">
-    <meta name="author" content="出雲創安 Izumo Soan">
-    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/lp-smart-cafeteria.html">
-    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/lp-smart-cafeteria.html">
-    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/lp-smart-cafeteria.html">
-    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/lp-smart-cafeteria.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -125,7 +108,7 @@
     /* ===== 行列を解消する方法を比較 ===== */
     .lp-compare { display: grid; grid-template-columns: 1fr; gap: 24px; }
     /* Horizontal card: image left, content (head + body) right */
-    .lp-compare-card { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); border: 2px solid #e8eef3; transition: transform 0.3s; }
+    .lp-compare-card { display: grid; grid-template-columns: 300px 1fr; grid-template-rows: auto 1fr; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); border: 2px solid #e8eef3; transition: transform 0.3s; }
     .lp-compare-card:hover { transform: translateY(-4px); }
     .lp-compare-best { border-color: #00880F; box-shadow: 0 6px 26px rgba(0,136,15,0.18); }
     .lp-compare-card img { grid-column: 1; grid-row: 1 / 3; width: 100%; height: 100%; min-height: 220px; object-fit: contain; background: #f9f9f9; padding: 16px; align-self: stretch; }
@@ -237,155 +220,6 @@
         .lp-selector-table th, .lp-selector-table td { padding: 10px 12px; font-size: 0.85rem; }
     }
     </style>
-
-    <!-- ===== Structured Data (JSON-LD) for SEO / AI Overviews ===== -->
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "出雲創安 Izumo Soan",
-  "url": "https://izumosoan.com/",
-  "logo": "https://izumosoan.com/assets/img/logo/logo.webp",
-  "areaServed": {
-    "@type": "Place",
-    "name": "関東エリア（日本）"
-  }
-}
-    </script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "AIスマート食堂 自動精算ソリューション",
-  "serviceType": "社員食堂・学校・病院・工場食堂向けAI自動精算システム",
-  "provider": {
-    "@type": "Organization",
-    "name": "出雲創安 Izumo Soan",
-    "url": "https://izumosoan.com/"
-  },
-  "areaServed": {
-    "@type": "Place",
-    "name": "関東エリア（日本）"
-  },
-  "description": "AI画像認識・RFID・計量精算の3方式から最適な方式を選定し、社員食堂・学校・病院・工場食堂の行列とレジ人手不足を解決するスマート食堂ソリューション。顔認証決済を活用し、1人あたり3〜5秒の高速精算を実現。関東エリアで無料POCを実施。",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "JPY",
-    "description": "無料POC（実際の食堂で検証・機器貸出/設置/サポート含む・費用0円）",
-    "eligibleRegion": {
-      "@type": "Place",
-      "name": "関東エリア"
-    }
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "精算方式",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "AI画像認識精算",
-          "description": "置くだけでカメラが料理を認識。専用食器不要で既存食器をそのまま使用可能。約1秒で自動認識。"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "RFID精算",
-          "description": "RFID食器を置くだけで1秒で30品以上を瞬時読取。読取精度99%以上。"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "計量精算",
-          "description": "グラム単位で公平課金。食品ロス80%以上削減に貢献。ビュッフェ・自助式に最適。"
-        }
-      }
-    ]
-  }
-}
-    </script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "どの方式が自社に合っていますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "食堂の規模・形態・運営方法をヒアリングした上で、最適な方式をご提案いたします。定食スタイルには画像認識やRFID方式、ビュッフェスタイルには計量方式が適しています。複数方式の併用も可能です。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "既存の食器をそのまま使えますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "画像認識方式であれば、既存の食器をそのまま使用できます。RFID方式は専用のRFID内蔵食器が必要です。計量方式は専用トレーを使用します。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "どのような決済方法に対応していますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "顔認証、QRコード、ICカード（交通系含む）、クレジットカードに対応しています。方式によって対応範囲が異なりますので、詳細はお問い合わせください。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "導入にかかる期間はどのくらいですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "ヒアリングからPOC開始まで約1〜2ヶ月、POC実施期間は約1〜3ヶ月が目安です。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "3つの方式を組み合わせることは可能ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "はい、可能です。同一食堂内で複数の精算方式を併用できます。例えば、定食コーナーは画像認識方式、ビュッフェコーナーは計量方式といった運用が可能です。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "無料POCの条件は？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "対象は企業・学校・病院等の食堂運営者様です。関東エリア、1日100食以上の食堂が目安です。POC期間中の機器貸出・設置・サポートはすべて無料です。"
-      }
-    }
-  ]
-}
-    </script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "ホーム",
-      "item": "https://izumosoan.com/ja/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "スマート食堂 AI自動精算",
-      "item": "https://izumosoan.com/ja/lp-smart-cafeteria.html"
-    }
-  ]
-}
-    </script>
 </head>
 <body>
 <main>
@@ -406,8 +240,7 @@
     <section class='lp-section'>
         <div class='lp-container'>
             <div class='lp-section-title'>
-                <h2>たった1秒。食堂の清算が変わる。</h2>
-                <p style="max-width:760px;margin:0 auto;">出雲創安のスマート食堂ソリューションは、<strong>AI画像認識・RFID・計量精算</strong>の3方式から食堂に最適な方式を選定し、社員食堂・学校・病院・工場食堂の<strong>行列とレジ人手不足</strong>を解決します。顔認証決済を活用することで、<strong>1人あたり3〜5秒</strong>で精算が完了。関東エリアで<strong>費用0円の無料POC</strong>を実施しています。</p>
+                <h2>たった1秒。食堂の会計が変わる。</h2>
             </div>
             <div class='lp-stats'>
                 <div class='lp-stat-card'>
@@ -595,7 +428,7 @@
                         <ul>
                             <li><i class="fas fa-check"></i>高精度電子秤でグラム単位計量</li>
                             <li><i class="fas fa-check"></i>食べた分だけの公平な課金</li>
-                            <li><i class="fas fa-check"></i>食品ロス80%以上削減</li>
+                            <li><i class="fas fa-check"></i>食品ロス30%以上削減</li>
                             <li><i class="fas fa-check"></i>専用食器不要、既存食器で運用</li>
                             <li><i class="fas fa-check"></i>顔認証・QR・ICカード決済</li>
                         </ul>
@@ -622,7 +455,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>大規模食堂</strong></td>
+                        <td><strong>定食中心</strong></td>
                         <td><span class='lp-rec'>画像認識</span></td>
                         <td>専用食器不要。トレーを置くだけで完了</td>
                     </tr>
@@ -661,16 +494,16 @@
             </div>
             <div class='lp-gallery'>
                 <div class='lp-gallery-item'>
-                    <img src='../assets/img/cafeteria/AIimagepay-ja.jpg' alt='画像認識精算画面'>
+                    <img src='../assets/img/cafeteria/AIimagepay.jpg' alt='画像認識精算画面'>
                     <div class='lp-gallery-caption'>画像認識精算画面</div>
                 </div>
                 <div class='lp-gallery-item'>
-                    <img src='../assets/img/cafeteria/AItype.jpg' alt='AI料理認識精算端末（広い台）'>
-                    <div class='lp-gallery-caption'>AI料理認識精算端末（広い台）</div>
+                    <img src='../assets/img/cafeteria/AItype.jpg' alt='双通道画像認識精算端末'>
+                    <div class='lp-gallery-caption'>双通道画像認識精算端末</div>
                 </div>
                 <div class='lp-gallery-item'>
-                    <img src='../assets/img/cafeteria/AItype-2.jpg' alt='AI料理認識精算端末（コンパクトタイプ）'>
-                    <div class='lp-gallery-caption'>AI料理認識精算端末（コンパクトタイプ）</div>
+                    <img src='../assets/img/cafeteria/AItype-2.jpg' alt='単通道画像認識精算端末'>
+                    <div class='lp-gallery-caption'>単通道画像認識精算端末</div>
                 </div>
                 <div class='lp-gallery-item'>
                     <img src='../assets/img/cafeteria/RFIDtype.jpg' alt='RFID精算台'>
