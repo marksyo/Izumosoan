@@ -50,7 +50,7 @@
     <link rel='stylesheet' href='../assets/css/fontawesome-all.min.css'>
     <link rel='stylesheet' href='../assets/css/style.css'>
     <link rel='stylesheet' href='../assets/css/custom.css'>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script>
         (function() {
             var path = window.location.pathname;
@@ -433,6 +433,7 @@
                                 <label for='message'>Message</label>
                                 <textarea id='message' name='message' rows='5' placeholder="Please describe your inquiry" required></textarea>
                             </div>
+                            <div class="cf-turnstile" data-sitekey="0x4AAAAAAE9Wu2df0b05bHJW" data-theme="light" style="margin-bottom:16px;"></div>
                             <button type='submit' class='btn-primary'>Send Message</button>
                             <p style='font-size:0.85rem;color:var(--text-muted);margin-top:0.75rem;'><a href='privacy.html' target='_blank'>Privacy Policy</a></p>
                         </form>

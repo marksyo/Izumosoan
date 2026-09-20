@@ -20,7 +20,22 @@
     <meta property="og:locale" content="en_US">
 
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Organization","name":"出雲創安 Izumo Soan","url":"[REDACTED_CONN_STRING]://type":"PostalAddress","addressLocality":"Katsushika-ku","addressRegion":"Tokyo","streetAddress":"Higashitateishi 4-37-8","addressCountry":"JP"},"description":"Technology partner connecting field, safety and operations"}
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Izumo Soan",
+  "url": "https://izumosoan.com",
+  "telephone": "050-1258-9122",
+  "email": "info@izumosoan.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Katsushika-ku, Tokyo",
+    "addressRegion": "Tokyo",
+    "streetAddress": "4-37-8 Higashi-Tateishi",
+    "addressCountry": "JP"
+  },
+  "description": "Engineering partner bridging technology and Japanese worksites"
+}
     </script>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://izumosoan.com/en/index.html"},{"@type":"ListItem","position":2,"name":"Services","item":"https://izumosoan.com/en/services.html"},{"@type":"ListItem","position":3,"name":"Smart Cafeteria","item":"https://izumosoan.com/en/smart-cafeteria.html"},{"@type":"ListItem","position":4,"name":"Weight-Based Checkout","item":"https://izumosoan.com/en/smart-cafeteria-weight.html"}]}
@@ -123,7 +138,32 @@
     }
     </style>
     <script type="application/ld+json">
-The pay-for-what-you-eat system reduces food waste by over 80%, contributing to SDGs.
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Weight-Based Payment Smart Cafeteria Solution",
+  "serviceType": "Weight-based (by-gram) automatic payment system for corporate, buffet and self-service cafeterias",
+  "provider": {
+    "@type": "Organization",
+    "name": "Izumo Soan",
+    "url": "https://izumosoan.com/"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Kanto region (Japan)"
+  },
+  "description": "A weight-based payment solution for smart cafeterias that automatically measures the weight of dishes with high-precision electronic scales and charges by the gram. The pay-for-what-you-eat model ensures fair pricing and reduces food waste by over 80%. Ideal for buffet and self-service cafeterias, with automatic payment and data analytics that transform cafeteria operations. Free PoC available in the Kanto region.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "JPY",
+    "description": "Free PoC (validation at a real cafeteria, including equipment loan/installation/support, at no cost)",
+    "eligibleRegion": {
+      "@type": "Place",
+      "name": "Kanto region"
+    }
+  }
+}
     </script>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/img/logo/favicon.ico">

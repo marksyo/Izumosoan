@@ -624,12 +624,12 @@
                     <tr>
                         <td><strong>大規模食堂</strong></td>
                         <td><span class='lp-rec'>画像認識</span></td>
-                        <td>専用食器不要。トレーを置くだけで完了</td>
+                        <td>専用食器不要。食器購入コストを85%削減できる</td>
                     </tr>
                     <tr>
                         <td><strong>大規模食堂</strong></td>
                         <td><span class='lp-rec'>RFID</span></td>
-                        <td>30品以上を瞬時読取。回転率が最も高い</td>
+                        <td>30品以上を瞬時読取。成熟した技術で精度が一番高い。</td>
                     </tr>
                     <tr>
                         <td><strong>ビュッフェ・自助式</strong></td>
@@ -816,6 +816,7 @@
                         <label for='lp-hp-website'>Leave this field empty</label>
                         <input type='text' id='lp-hp-website' name='website' tabindex='-1' autocomplete='off'>
                     </div>
+                    <div class="cf-turnstile" data-sitekey="0x4AAAAAAE9Wu2df0b05bHJW" data-theme="light" style="margin:12px 0;"></div>
                     <button type='submit' class='lp-form-submit'>無料POCを試してみる</button>
                     <p class='lp-form-privacy'>
                         <a href='privacy.html' target='_blank'>プライバシーポリシー</a>に同意の上、送信します。
@@ -843,7 +844,7 @@
 </main>
 
 <!-- EmailJS -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script>
 /* Smooth scroll */
 document.querySelectorAll('.lp-smooth').forEach(function(btn) {
@@ -854,35 +855,105 @@ document.querySelectorAll('.lp-smooth').forEach(function(btn) {
     });
 });
 
-/* EmailJS form handler */
+/* Contact form handler (self-hosted API) */
 (function() {
     var form = document.getElementById('lp-contact-form');
     if (!form) return;
-    if (typeof emailjs !== 'undefined') { emailjs.init('43OQ_Ry644Q3c0bdc'); }
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', async function(e) {
         e.preventDefault();
-        var hp = form.querySelector('input[name="website"]');
-        if (hp && hp.value.trim() !== '') { alert(form.getAttribute('data-success')); form.reset(); return; }
-        if (typeof emailjs === 'undefined') { alert('送信機能を読み込み中です。ページを再読み込みしてください。'); return; }
+
         var btn = form.querySelector('.lp-form-submit');
-        var originalText = form.getAttribute('data-submit');
-        btn.disabled = true;
-        btn.textContent = form.getAttribute('data-sending');
+        var sendingText = form.getAttribute('data-sending');
+        var successText = form.getAttribute('data-success');
+        var errorText = form.getAttribute('data-error');
+        var submitText = form.getAttribute('data-submit');
+
+        // Status message element (create if missing).
+        var msg = document.getElementById('lp-form-message');
+        if (!msg) {
+            msg = document.createElement('p');
+            msg.id = 'lp-form-message';
+            msg.setAttribute('role', 'status');
+            msg.setAttribute('aria-live', 'polite');
+            msg.style.marginTop = '12px';
+            msg.style.fontWeight = '700';
+            form.appendChild(msg);
+        }
+
+        // Honeypot (name="website").
+        var hpEl = form.querySelector('input[name="website"]');
+        var honeypot = hpEl ? (hpEl.value || '') : '';
+
         var interests = [];
         form.querySelectorAll('input[name="interest"]:checked').forEach(function(cb) { interests.push(cb.value); });
-        var params = {
-            name: form.querySelector('[name="name"]').value,
-            email: form.querySelector('[name="email"]').value,
-            company: form.querySelector('[name="company"]').value || '未入力',
-            message: '[LP SMART CAFETERIA POC申込]\n'
-                + '食堂規模: ' + (form.querySelector('[name="scale"]').value || '未選択') + '\n'
-                + '関心方式: ' + (interests.join(', ') || '未選択') + '\n\n'
-                + (form.querySelector('[name="message"]').value || 'なし')
+        var scale = (form.querySelector('[name="scale"]') && form.querySelector('[name="scale"]').value) || '';
+        var email = (form.querySelector('[name="email"]') && form.querySelector('[name="email"]').value) || '';
+        var name = (form.querySelector('[name="name"]') && form.querySelector('[name="name"]').value) || '';
+        var company = (form.querySelector('[name="company"]') && form.querySelector('[name="company"]').value) || '';
+        var freeText = (form.querySelector('[name="message"]') && form.querySelector('[name="message"]').value) || '';
+        var turnstileToken = (new FormData(form)).get('cf-turnstile-response') || '';
+
+        var messageBody = '[LP SMART CAFETERIA POC申込]\n'
+            + '食堂規模: ' + (scale || '未選択') + '\n'
+            + '関心方式: ' + (interests.join(', ') || '未選択') + '\n\n'
+            + (freeText || 'なし');
+
+        btn.disabled = true;
+        btn.textContent = sendingText;
+        msg.style.color = '#555';
+        msg.textContent = sendingText;
+
+        var payload = {
+            site: 'izumosoan',
+            form: 'lp-smart-cafeteria-poc',
+            subject: '[LP SMART CAFETERIA POC申込]',
+            replyTo: email,
+            pageUrl: window.location.href,
+            turnstileToken: turnstileToken,
+            _gotcha: honeypot,
+            metadata: {
+                language: document.documentElement.lang || 'ja',
+                page: window.location.href,
+                version: '1.0',
+                cafeteriaScale: scale,
+                interests: interests
+            },
+            data: {
+                name: name,
+                company: company || '未入力',
+                email: email,
+                message: messageBody
+            }
         };
-        emailjs.send('izumosoan_contact', 'template_l4qxgu6', params)
-            .then(function() { alert(form.getAttribute('data-success')); form.reset(); })
-            .catch(function() { alert(form.getAttribute('data-error')); })
-            .finally(function() { btn.disabled = false; btn.textContent = originalText; });
+
+        try {
+            var response = await fetch('https://api.yasashiikaikei.com/api/v1/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            var result = {};
+            try { result = await response.json(); } catch (err) { /* non-JSON */ }
+            if (!response.ok || result.success === false) {
+                var code = (result.error && result.error.code) || ('HTTP_' + response.status);
+                throw new Error(code);
+            }
+            msg.style.color = '#00880f';
+            var okMsg = successText;
+            if (result.requestId) okMsg += ' (ID: ' + result.requestId + ')';
+            msg.textContent = okMsg;
+            form.reset();
+            if (window.turnstile && typeof window.turnstile.reset === 'function') {
+                try { window.turnstile.reset(); } catch (err) { /* ignore */ }
+            }
+        } catch (error) {
+            console.error('Contact form error:', error);
+            msg.style.color = '#c0392b';
+            msg.textContent = errorText;
+        } finally {
+            btn.disabled = false;
+            btn.textContent = submitText;
+        }
     });
 })();
 </script>
