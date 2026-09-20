@@ -21,6 +21,12 @@ R2 で1つのCSVに追記	Google Sheets（推奨）
 1つにまとまる	△ 可能だが不安定	✅ 1シートに全部
 
 
+kaiseix.com との共通　Site keyを使うべき
+
+0x4AAAAAAEt6McHvNClMhtK4
+0x4AAAAAAEt6McHvNClMhtK4
+Secret key
+0x4AAAAAAEt6Md-2-waKOUCCg9m8XvxIhc4
 
 
 あなた側で必要な作業（3ステップ）
