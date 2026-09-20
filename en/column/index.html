@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Column | Cafeteria Automated Checkout & DX Insights | Izumo Soan</title>
+    <meta name='description' content='A collection of columns on cafeteria automated checkout and DX. Practical information on AI image recognition, RFID, and weighing checkout, queue resolution, and labor-shortage measures.'>
+    <link rel="canonical" href="https://izumosoan.com/en/column/index.html">
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/column/index.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/column/index.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/column/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/column/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/en/column/index.html">
+    <meta property="og:title" content="Column | Cafeteria Automated Checkout & DX Insights">
+    <meta property="og:description" content="A collection of columns on cafeteria automated checkout and DX. Practical information on AI image recognition, RFID, and weighing checkout, queue resolution, and labor-shortage measures.">
+    <meta property="og:locale" content="en_US">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://izumosoan.com/en/index.html"}, {"@type": "ListItem", "position": 2, "name": "Column"}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../../assets/css/style.min.css'>
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo/favicon.ico">
+    <style>
+    .column-index-hero {
+        background: linear-gradient(135deg, #001d30 0%, #003554 100%);
+        padding: 100px 20px 60px;
+        color: #fff;
+        text-align: center;
+    }
+    .column-index-hero h1 {
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        font-weight: 800;
+        margin-bottom: 12px;
+        color: #fff;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .column-index-hero p {
+        font-size: 1.05rem;
+        color: rgba(255,255,255,0.95);
+        max-width: 600px;
+        margin: 0 auto;
+        text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+    .column-index-breadcrumb {
+        font-size: 0.85rem;
+        color: rgba(255,255,255,0.9);
+        margin-bottom: 20px;
+    }
+    .column-index-breadcrumb a {
+        color: rgba(255,255,255,0.95);
+        text-decoration: none;
+    }
+    .column-index-breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    .column-grid {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 60px 20px 80px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 28px;
+    }
+    .column-card {
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border-radius: 12px;
+        padding: 28px 24px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        text-decoration: none;
+        color: #1e293b;
+        transition: all 0.3s;
+        border: 1px solid #e2e8f0;
+    }
+    .column-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 30px rgba(0,53,84,0.12);
+        border-color: #006494;
+    }
+    .column-card-tag {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 14px;
+        align-self: flex-start;
+    }
+    .column-card h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #003554;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+    .column-card p {
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.6;
+        flex-grow: 1;
+        margin-bottom: 16px;
+    }
+    .column-card-link {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: #006494;
+    }
+
+    .column-cta-banner {
+        max-width: 1100px;
+        margin: 0 auto 60px;
+        padding: 0 20px;
+    }
+    .column-cta-inner {
+        background: linear-gradient(135deg, #001d30, #003554);
+        color: #fff;
+        padding: 48px 32px;
+        border-radius: 16px;
+        text-align: center;
+    }
+    .column-cta-inner h2 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+        color: #fff;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .column-cta-inner p {
+        font-size: 1rem;
+        color: #fff;
+        margin-bottom: 24px;
+        text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+    .column-cta-inner .cta-btn {
+        display: inline-block;
+        background: #00880F;
+        color: #fff;
+        padding: 16px 40px;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: 0 4px 20px rgba(0,136,15,0.4);
+        transition: all 0.3s;
+    }
+    .column-cta-inner .cta-btn:hover {
+        background: #006e0c;
+        transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+        .column-index-hero { padding: 80px 16px 40px; }
+        .column-grid { padding: 40px 16px 60px; gap: 20px; }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='../index.html'>
+                    <img src='../../assets/img/logo/logo.webp' alt='Izumo Soan' class='header-logo-img' style='height:80px;'>
+                </a>
+            </div>
+            <div class='language-switcher'>
+                <span class='lang-label'><i class="fas fa-globe"></i></span>
+                <select id='lang-select'>
+                    <option value='ja'>日本語</option>
+                    <option value='en' selected>English</option>
+                    <option value='zh'>中文</option>
+                </select>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
+            <nav>
+                <ul>
+                    <li><a href='../index.html'>Home</a></li>
+                    <li><a href='../services.html'>Services</a></li>
+                    <li><a href='../products.html'>Products</a></li>
+                    <li><a href='../case-studies.html'>Case Studies</a></li>
+                    <li><a href='../about.html'>About</a></li>
+                    <li><a href='../overseas-partner.html'>Overseas Partner</a></li>
+                    <li><a href='../index.html#contact'>Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="column-index-hero">
+            <div class="column-index-breadcrumb">
+                <a href="../index.html">Home</a> &gt; Column
+            </div>
+            <h1>Column</h1>
+            <p>The latest information on cafeteria automated checkout and DX.</p>
+        </section>
+
+        <div class="column-grid">
+                <a href="rfid-vs-ai.html" class="column-card">
+                    <span class="column-card-tag" style="background:#e74c3c;">Comparison</span>
+                    <h3>RFID vs. AI Image Recognition for Cafeteria Checkout: Accuracy, Cost & Flexibility Compared</h3>
+                    <p>Compare RFID and AI image recognition for automated cafeteria checkout in corporate cant…</p>
+                    <span class="column-card-link">Read article →</span>
+                </a>
+                <a href="cafeteria-auto-settlement.html" class="column-card">
+                    <span class="column-card-tag" style="background:#e74c3c;">Comparison</span>
+                    <h3>A Thorough Comparison of Cafeteria Automated Checkout Systems: AI, RFID & Weighing Explained</h3>
+                    <p>A guide for those considering an automated checkout system for corporate and staff cafet…</p>
+                    <span class="column-card-link">Read article →</span>
+                </a>
+                <a href="ai-cafeteria.html" class="column-card">
+                    <span class="column-card-tag" style="background:#006494;">AI Checkout</span>
+                    <h3>The Complete Guide to Introducing AI Automated Checkout in Corporate Cafeterias: How It Works, Costs & Rollout Steps</h3>
+                    <p>A thorough guide to AI automated checkout systems for corporate cafeterias. Covers how A…</p>
+                    <span class="column-card-link">Read article →</span>
+                </a>
+                <a href="ai-register.html" class="column-card">
+                    <span class="column-card-tag" style="background:#006494;">AI Checkout</span>
+                    <h3>What Is a Cafeteria AI Register? The New Common Sense of Checkout Powered by Image Recognition</h3>
+                    <p>A clear explanation of how a cafeteria AI register works. Covers AI-camera food image re…</p>
+                    <span class="column-card-link">Read article →</span>
+                </a>
+                <a href="rfid-settlement.html" class="column-card">
+                    <span class="column-card-tag" style="background:#00880F;">RFID</span>
+                    <h3>RFID Cafeteria Checkout System: A Complete Guide to Benefits and How to Choose</h3>
+                    <p>A thorough guide to the RFID cafeteria checkout system: how it works, 5 concrete benefit…</p>
+                    <span class="column-card-link">Read article →</span>
+                </a>
+                <a href="cafeteria-queue.html" class="column-card">
+                    <span class="column-card-tag" style="background:#f39c12;">Problem Solving</span>
+                    <h3>5 Ways to Eliminate the Cafeteria Queue</h3>
+                    <p>For general affairs and facility managers who want to eliminate cafeteria queues and con…</p>
+                    <span class="column-card-link">Read article →</span>
+                </a>
+                <a href="ai-vs-rfid.html" class="column-card">
+                    <span class="column-card-tag" style="background:#f39c12;">Problem Solving</span>
+                    <h3>Solving Cafeteria Checkout Staffing Shortages with "Unmanned Checkout": AI vs. RFID Compared</h3>
+                    <p>Cafeteria checkout staff are hard to find. Solve that labor shortage at its root with "u…</p>
+                    <span class="column-card-link">Read article →</span>
+                </a>
+                <a href="cafeteria-dx.html" class="column-card">
+                    <span class="column-card-tag" style="background:#8e44ad;">DX</span>
+                    <h3>Corporate Cafeteria DX: 3 Steps to Break Free from Analog Operations</h3>
+                    <p>A management-focused guide to corporate cafeteria DX (digital transformation). From digi…</p>
+                    <span class="column-card-link">Read article →</span>
+                </a>
+                <a href="cafeteria-payment-comparison.html" class="column-card">
+                    <span class="column-card-tag" style="background:#e74c3c;">Comparison</span>
+                    <h3>Comparing Cafeteria Payment Methods: Ticket Machines, Counter Payment & Auto-Checkout</h3>
+                    <p>A thorough comparison of corporate cafeteria payment methods. Learn how ticket machines,…</p>
+                    <span class="column-card-link">Read article →</span>
+                </a>
+        </div>
+
+        <div class="column-cta-banner">
+            <div class="column-cta-inner">
+                <h2>Request a Free PoC</h2>
+                <p>Test the checkout method best suited to your cafeteria in a real environment — no cost.</p>
+                <a href="../lp-smart-cafeteria.html" class="cta-btn">Apply for a free PoC →</a>
+            </div>
+        </div>
+    </main>
+<footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../../assets/img/logo/logo.webp' alt='Izumo Soan'>
+                    <p class='logo-desp'>Technology that powers the field.</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href='../index.html'>Home</a></li>
+                        <li><a href='../about.html'>About</a></li>
+                        <li><a href='../services.html'>Services</a></li>
+                        <li><a href='../case-studies.html'>Case Studies</a></li>
+                        <li><a href='../overseas-partner.html'>Overseas Partner</a></li>
+                        <li><a href='../../ja/column/index.html'>Column</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>Products</h4>
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='../smart-cafeteria.html'>
+                            <span>Smart Cafeteria</span>
+                            <small>Image Recognition · RFID · Weighing</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='../products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>Smart Site Operations Platform</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 Izumo Soan. All rights reserved. ｜ <a href='../privacy.html' style='color:inherit;text-decoration:underline;'>Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src='../../assets/js/main.js'></script>
+</body>
+</html>

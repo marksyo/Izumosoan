@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>A Thorough Comparison of Cafeteria Automated Checkout Systems: AI, RFID & Weighing Explained | Izumo Soan Column</title>
+    <meta name='description' content='A guide for those considering an automated checkout system for corporate and staff cafeterias. A thorough comparison of the three methods — AI image recognition, RFID, and weighing — covering how they work, checkout speed, cost, and the best facility type for each. Free PoC available.'>
+    <meta name='keywords' content='cafeteria automated checkout, cafeteria checkout system, automated cafeteria register comparison, cafeteria checkout machine, staff cafeteria automated checkout, AI checkout RFID comparison'>
+    <link rel="canonical" href="https://izumosoan.com/en/column/cafeteria-auto-settlement.html">
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/column/cafeteria-auto-settlement.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/column/cafeteria-auto-settlement.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/column/cafeteria-auto-settlement.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/column/cafeteria-auto-settlement.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/en/column/cafeteria-auto-settlement.html">
+    <meta property="og:title" content="A Thorough Comparison of Cafeteria Automated Checkout Systems: AI, RFID & Weighing Explained">
+    <meta property="og:description" content="A guide for those considering an automated checkout system for corporate and staff cafeterias. A thorough comparison of the three methods — AI image recognition, RFID, and weighing — covering how they work, checkout speed, cost, and the best facility type for each. Free PoC available.">
+    <meta property="og:image" content="https://izumosoan.com/assets/img/cafeteria/AItype.jpg">
+    <meta property="og:locale" content="en_US">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://izumosoan.com/en/index.html"}, {"@type": "ListItem", "position": 2, "name": "Column", "item": "https://izumosoan.com/ja/column/index.html"}, {"@type": "ListItem", "position": 3, "name": "A Thorough Comparison of Cafeteria Automated Checkout Systems: AI, RFID, and Weighing Explained"}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "A Thorough Comparison of Cafeteria Automated Checkout Systems: AI, RFID, and Weighing Explained", "description": "A guide for those considering an automated checkout system for corporate and staff cafeterias. A thorough comparison of the three methods — AI image recognition, RFID, and weighing — covering how they work, checkout speed, cost, and the best facility type for each. Free PoC available.", "image": "https://izumosoan.com/assets/img/cafeteria/AItype.jpg", "inLanguage": "en", "datePublished": "2026-09-20", "dateModified": "2026-09-20", "articleSection": "Smart Cafeteria Column", "keywords": "cafeteria automated checkout, cafeteria checkout system, automated cafeteria register comparison, cafeteria checkout machine, staff cafeteria automated checkout, AI checkout RFID comparison", "author": {"@type": "Organization", "name": "Izumo Soan", "url": "https://izumosoan.com/en/about.html"}, "publisher": {"@type": "Organization", "name": "Izumo Soan", "logo": {"@type": "ImageObject", "url": "https://izumosoan.com/assets/img/logo/logo.webp"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://izumosoan.com/en/column/cafeteria-auto-settlement.html"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does introducing an automated checkout system require major changes to my existing cafeteria layout?", "acceptedAnswer": {"@type": "Answer", "text": "No. Any of the methods can be introduced simply by placing the checkout unit in your existing register space. The AI method uses a server-free edge design, so no large-scale network construction is required."}}, {"@type": "Question", "name": "Can it handle daily-changing menus?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. With the AI image recognition method, you can register a new menu just by photographing it on the terminal, and it learns automatically. With the RFID method, menu information is written to the dishes on the dispensing machine. With the weighing method, you update the weight master on the management screen."}}, {"@type": "Question", "name": "What happens if a checkout error occurs?", "acceptedAnswer": {"@type": "Answer", "text": "With all methods, orders can be corrected on the checkout screen. The management terminal also has a function to detect and correct abnormal orders."}}, {"@type": "Question", "name": "Please tell me the rough introduction cost.", "acceptedAnswer": {"@type": "Answer", "text": "It varies by method, number of units, and cafeteria scale. First, please confirm the actual effect with a free PoC; based on those results we will propose the optimal configuration and cost."}}, {"@type": "Question", "name": "Can multiple methods be combined?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. For example, you can combine different methods by area within the cafeteria, such as 'AI method for the set-meal corner and weighing method for the salad bar.'"}}]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../../assets/css/style.min.css'>
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo/favicon.ico">
+    <style>
+    .column-hero {
+        background: linear-gradient(135deg, #001d30 0%, #003554 100%);
+        padding: 100px 20px 60px; color: #fff; text-align: center;
+    }
+    .column-hero h1 {
+        font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 800; line-height: 1.4;
+        max-width: 800px; margin: 0 auto 16px; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .column-breadcrumb { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 20px; }
+    .column-breadcrumb a { color: rgba(255,255,255,0.95); text-decoration: none; }
+    .column-breadcrumb a:hover { text-decoration: underline; }
+    .column-body {
+        max-width: 820px; margin: 0 auto; padding: 48px 20px 80px;
+        font-size: 1rem; line-height: 1.85; color: #1e293b;
+    }
+    .column-body h2 {
+        font-size: 1.5rem; font-weight: 700; color: #003554;
+        margin: 56px 0 20px; padding-bottom: 10px; border-bottom: 3px solid #006494;
+    }
+    .column-body h3 { font-size: 1.2rem; font-weight: 700; color: #004a77; margin: 36px 0 14px; }
+    .column-body h4 { font-size: 1.05rem; font-weight: 700; color: #333; margin: 28px 0 10px; }
+    .column-body p { margin: 0 0 18px; }
+    .column-body strong { color: #003554; }
+    .column-body blockquote {
+        background: #f0f7ff; border-left: 4px solid #006494;
+        padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem;
+    }
+    .column-body blockquote p { margin: 0 0 8px; }
+    .column-body blockquote p:last-child { margin: 0; }
+    .column-body table {
+        width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.92rem;
+    }
+    .column-body table th {
+        background: #003554; color: #fff; padding: 12px 16px; text-align: left; font-weight: 600;
+    }
+    .column-body table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+    .column-body table tr:nth-child(even) { background: #f8fafc; }
+    .column-body table tr:hover { background: #f0f7ff; }
+    .column-body ul, .column-body ol { margin: 0 0 18px 20px; }
+    .column-body li { margin: 0 0 8px; }
+    .column-body a { color: #006494; text-decoration: underline; }
+    .column-body a:hover { color: #003554; }
+    .column-body hr { border: none; border-top: 1px solid #e2e8f0; margin: 48px 0; }
+    .column-cta {
+        background: linear-gradient(135deg, #001d30, #003554); color: #fff;
+        padding: 48px 32px; border-radius: 16px; text-align: center; margin: 56px 0 32px;
+    }
+    .column-cta h3 { color: #fff; font-size: 1.4rem; margin: 0 0 16px; border: none; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+    .column-cta p { color: #fff; margin: 0 0 24px; font-size: 1rem; text-shadow: 0 1px 4px rgba(0,0,0,0.2); }
+    .column-cta .cta-btn {
+        display: inline-block; background: #00880F; color: #fff;
+        padding: 16px 40px; border-radius: 8px; font-size: 1.1rem; font-weight: 700;
+        text-decoration: none; box-shadow: 0 4px 20px rgba(0,136,15,0.4); transition: all 0.3s;
+    }
+    .column-cta .cta-btn:hover { background: #006e0c; transform: translateY(-2px); color: #fff; }
+    .column-related {
+        margin: 48px 0 0; padding: 32px; background: #f4f7fa; border-radius: 12px;
+    }
+    .column-related h3 { color: #003554; font-size: 1.1rem; margin: 0 0 16px; border: none; }
+    .column-related ul { list-style: none; margin: 0; padding: 0; }
+    .column-related li { margin: 0 0 10px; }
+    .column-related a { color: #006494; text-decoration: none; font-size: 0.95rem; }
+    .column-related a:hover { text-decoration: underline; }
+    .column-related a::before { content: "\U0001F4D6 "; }
+    @media (max-width: 768px) {
+        .column-hero { padding: 80px 16px 40px; }
+        .column-body { padding: 32px 16px 60px; }
+        .column-body h2 { font-size: 1.3rem; }
+        .column-body table { font-size: 0.82rem; }
+        .column-body table th, .column-body table td { padding: 8px 10px; }
+        .column-cta { padding: 32px 20px; }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='../index.html'>
+                    <img src='../../assets/img/logo/logo.webp' alt='Izumo Soan' class='header-logo-img' style='height:80px;'>
+                </a>
+            </div>
+            <div class='language-switcher'>
+                <span class='lang-label'><i class="fas fa-globe"></i></span>
+                <select id='lang-select'>
+                    <option value='ja'>日本語</option>
+                    <option value='en' selected>English</option>
+                    <option value='zh'>中文</option>
+                </select>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
+            <nav>
+                <ul>
+                    <li><a href='../index.html'>Home</a></li>
+                    <li><a href='../services.html'>Services</a></li>
+                    <li><a href='../products.html'>Products</a></li>
+                    <li><a href='../case-studies.html'>Case Studies</a></li>
+                    <li><a href='../about.html'>About</a></li>
+                    <li><a href='../overseas-partner.html'>Overseas Partner</a></li>
+                    <li><a href='../index.html#contact'>Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="column-hero">
+            <div class="column-breadcrumb">
+                <a href="../index.html">Home</a> &gt; <a href="index.html">Column</a> &gt; A Thorough Comparison of Cafeteria Automated Checkout Systems
+            </div>
+            <h1>A Thorough Comparison of Cafeteria Automated Checkout Systems: AI, RFID & Weighing Explained</h1>
+        </section>
+
+        <article class="column-body">
+            <blockquote>
+<p><strong>What you'll learn in this article</strong>
+- How the three cafeteria automated checkout methods (AI image recognition, RFID, and weighing) work
+- A side-by-side comparison of checkout speed, recognition accuracy, cost, and operational effort
+- A flowchart to choose the best method for your own cafeteria
+- A checklist to review before introduction</p>
+</blockquote>
+<p>"The queue at the staff cafeteria register is too long," "We can't secure enough checkout staff," "Checkout errors keep causing complaints" — the fundamental solution to these worries is an <strong>automated checkout system</strong>.</p>
+<p>But "automated checkout" is not just one thing: the methods vary — <strong>AI image recognition</strong>, <strong>RFID</strong>, and <strong>weighing</strong>. How they work, their cost, and the cafeteria types they suit all differ.</p>
+<p>In this article we explain how each of the three methods works and cover everything from a comparison table to a selection flowchart and an introduction checklist. Please read to the end as a resource for deciding "which method suits our cafeteria?"</p>
+<hr />
+<h2>The background behind the growing attention on cafeteria automated checkout</h2>
+<p>In the settings of mass catering — corporate cafeterias, school lunches, hospital cafeterias, and the like — "manual checkout" was the norm for many years. In recent years, however, the following three changes have accelerated the introduction of automated checkout.</p>
+<h3>1. The deepening labor shortage</h3>
+<p>Cafeteria registers require <strong>one or two staff per counter</strong>. In large cafeterias with many counters, checkout alone costs the labor of several people. On top of that, difficulty in hiring part-time staff and high turnover are compounding the labor shortage.</p>
+<h3>2. The queue problem at peak times</h3>
+<p>The peak time for lunch is limited. Because manual checkout takes <strong>30 to 60 seconds per person</strong>, cafeterias serving several hundred people can see queues of more than 20 minutes. Having employees' lunch breaks eaten up by "waiting in line" is a significant loss for the company too.</p>
+<h3>3. The demand for data-driven management and food-loss reduction</h3>
+<p>With equipment (procurement) that relies on experience and intuition, accurately grasping food loss is difficult. As social interest in SDGs and food-loss reduction rises, <strong>a high-accuracy procurement plan based on sales data</strong> is increasingly sought. Automated checkout is also a means of naturally building that data foundation.</p>
+<hr />
+<h2>Cafeteria automated checkout systems — an overview of the three methods</h2>
+<p>The automated checkout systems currently in practical use in cafeterias can be broadly divided into three.</p>
+
+<div style="background:#f0f7ff; border-radius:12px; padding:28px 28px 20px; margin:32px 0; border-left:5px solid #006494;">
+<h3 style="margin-top:0; color:#003554;">① AI image recognition method</h3>
+<p style="margin:0 0 16px;"><img src="../../assets/img/cafeteria/AItype.jpg" alt="AI image recognition checkout system" style="width:100%; border-radius:8px;"></p>
+<p><strong>How it works</strong>: An AI camera (5 megapixels) on the checkout counter photographs the dishes on the tray → image recognition automatically identifies items and quantities → the amount is calculated instantly</p>
+<table style="width:100%; font-size:0.92rem; margin:16px 0;">
+<tr><td style="width:28px; vertical-align:top; padding:6px 12px 6px 0;">✅</td><td style="padding:6px 0;"><strong>No special dishes needed</strong> — with "dish recognition mode" you can introduce it using ordinary tableware as-is</td></tr>
+<tr><td style="vertical-align:top; padding:6px 12px 6px 0;">✅</td><td style="padding:6px 0;"><strong>Menu registration is just a photo</strong> — take a picture on the terminal and it learns automatically. Handles daily specials instantly too</td></tr>
+<tr><td style="vertical-align:top; padding:6px 12px 6px 0;">✅</td><td style="padding:6px 0;"><strong>Server-free edge design</strong> — the AI engine is built into the checkout counter itself</td></tr>
+<tr><td style="vertical-align:top; padding:6px 12px 6px 0;">✅</td><td style="padding:6px 0;"><strong>Two recognition modes</strong> — dish recognition (99.99% accuracy) / food recognition (99% accuracy). In real cafeterias the daily menu is limited to 10–30 items, so <strong>in actual operation it is nearly 100%</strong></td></tr>
+</table>
+<p style="margin-bottom:0;"><strong>🎯 Recommended for:</strong> staff cafeterias with a rich variety of daily specials, cafeterias with many items</p>
+</div>
+
+<div style="background:#f5f0ff; border-radius:12px; padding:28px 28px 20px; margin:32px 0; border-left:5px solid #8e44ad;">
+<h3 style="margin-top:0; color:#6c2d91;">② RFID method</h3>
+<p style="margin:0 0 16px;"><img src="../../assets/img/cafeteria/RFIDtype.jpg" alt="RFID checkout system" style="width:100%; border-radius:8px;"></p>
+<p><strong>How it works</strong>: Menu information is recorded in dishes with a built-in RFID chip → just place them on the checkout counter to read them instantly → the total amount of multiple dishes is calculated automatically</p>
+<table style="width:100%; font-size:0.92rem; margin:16px 0;">
+<tr><td style="width:28px; vertical-align:top; padding:6px 12px 6px 0;">⚡</td><td style="padding:6px 0;"><strong>Fastest reading speed</strong> — even about 30 items are recognized together in about 1 second. Nearly 100% accuracy</td></tr>
+<tr><td style="vertical-align:top; padding:6px 12px 6px 0;">♻️</td><td style="padding:6px 0;"><strong>Dishes are reused as-is after washing</strong> — the information can be rewritten at any time. It also supports different prices for morning, noon, and night</td></tr>
+<tr><td style="vertical-align:top; padding:6px 12px 6px 0;">📦</td><td style="padding:6px 0;"><strong>Batch rewriting supported</strong> — writing menu data to dishes on the dispensing machine finishes in a short time</td></tr>
+<tr><td style="vertical-align:top; padding:6px 12px 6px 0;">🔑</td><td style="padding:6px 0;"><strong>Three payment methods supported</strong> — face authentication, QR code, and IC card. An order-correction function is also included</td></tr>
+<tr><td style="vertical-align:top; padding:6px 12px 6px 0;">⚠️</td><td style="padding:6px 0;"><strong>Note</strong> — RFID-embedded dishes are required (higher initial cost). Maximum heat resistance of 85°C</td></tr>
+</table>
+<p style="margin-bottom:0;"><strong>🎯 Recommended for:</strong> large cafeterias centered on fixed menus; facilities needing high-frequency use and high-volume processing</p>
+</div>
+
+<div style="background:#f0faf0; border-radius:12px; padding:28px 28px 20px; margin:32px 0; border-left:5px solid #00880F;">
+<h3 style="margin-top:0; color:#006e0c;">③ Weighing method</h3>
+<p style="margin:0 0 16px;"><img src="../../assets/img/cafeteria/weightsys-ja.jpg" alt="Weighing checkout system" style="width:100%; border-radius:8px;"></p>
+<p><strong>How it works</strong>: A tray-binding machine links dishes to a tray → customers serve themselves freely, buffet-style → the weighing checkout counter tallies automatically by the number of grams</p>
+<table style="width:100%; font-size:0.92rem; margin:16px 0;">
+<tr><td style="width:28px; vertical-align:top; padding:6px 12px 6px 0;">🍽️</td><td style="padding:6px 0;"><strong>"Take only what you want to eat" self-service</strong> — higher meal satisfaction plus a natural reduction in leftovers</td></tr>
+<tr><td style="vertical-align:top; padding:6px 12px 6px 0;">⚖️</td><td style="padding:6px 0;"><strong>Weighing accuracy is in grams</strong> — high-precision weighing combining gravity sensing and chip recognition</td></tr>
+<tr><td style="vertical-align:top; padding:6px 12px 6px 0;">💳</td><td style="padding:6px 0;"><strong>Frictionless payment</strong> — supports face authentication, QR, and IC card. No staff intervention needed</td></tr>
+<tr><td style="vertical-align:top; padding:6px 12px 6px 0;">🔍</td><td style="padding:6px 0;"><strong>Food-safety traceability</strong> — records the details of the dishes taken. Enables rapid tracing of food-safety issues</td></tr>
+<tr><td style="vertical-align:top; padding:6px 12px 6px 0;">📊</td><td style="padding:6px 0;"><strong>Nutrition data analysis</strong> — links consumption data with nutritional content and provides personalized nutrition reports</td></tr>
+</table>
+<p style="margin-bottom:0;"><strong>🎯 Recommended for:</strong> buffet- and cafeteria-style dining halls; facilities that prioritize food-loss reduction</p>
+</div>
+
+<h2>A thorough comparison table of the three methods</h2>
+<table>
+<thead>
+<tr>
+<th>Comparison item</th>
+<th>AI image recognition</th>
+<th>RFID</th>
+<th>Weighing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Recognition method</strong></td>
+<td>Camera + AI image recognition</td>
+<td>RFID chip reading</td>
+<td>Weight sensor + chip</td>
+</tr>
+<tr>
+<td><strong>Dish constraints</strong></td>
+<td>None (food recognition mode) / dedicated dishes (dish recognition mode)</td>
+<td>Dedicated RFID-embedded dishes required</td>
+<td>Ordinary dishes + dedicated tray</td>
+</tr>
+<tr>
+<td><strong>Checkout speed</strong></td>
+<td>About 1–2 seconds</td>
+<td>About 1 second</td>
+<td>About 10–15 seconds</td>
+</tr>
+<tr>
+<td><strong>Recognition accuracy</strong></td>
+<td>99% (food mode) – 99.99% (dish mode)</td>
+<td>99.99% or higher</td>
+<td>Weight-based (in grams)</td>
+</tr>
+<tr>
+<td><strong>Initial cost</strong></td>
+<td>Medium (checkout counter only)</td>
+<td>Higher (checkout counter + RFID-embedded dishes + dispensing machine)</td>
+<td>Medium (checkout counter + tray-binding machine + dedicated tray)</td>
+</tr>
+<tr>
+<td><strong>Dish heat-resistance limit</strong></td>
+<td>None</td>
+<td>Maximum 85°C</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Menu-change handling</strong></td>
+<td>Just photograph with the camera (same-day support)</td>
+<td>Write chips to dishes on the dispensing machine</td>
+<td>Update the weight master on the management screen</td>
+</tr>
+<tr>
+<td><strong>Server required?</strong></td>
+<td>Not required (edge type)</td>
+<td>Not required</td>
+<td>Not required</td>
+</tr>
+<tr>
+<td><strong>Payment methods</strong></td>
+<td>Face authentication, QR, IC card</td>
+<td>Face authentication, QR, IC card</td>
+<td>Face authentication, QR, IC card</td>
+</tr>
+<tr>
+<td><strong>Data analysis</strong></td>
+<td>◯ (sales by menu, nutrition analysis)</td>
+<td>◯ (sales by menu, nutrition analysis)</td>
+<td>◎ (consumption in grams + nutrition analysis)</td>
+</tr>
+<tr>
+<td><strong>Food-loss measures</strong></td>
+<td>◯ (sales data analysis → procurement optimization)</td>
+<td>◯ (sales data analysis → procurement optimization)</td>
+<td>◎ (encourages taking small portions + data analysis)</td>
+</tr>
+<tr>
+<td><strong>Recommended cafeteria</strong></td>
+<td>Cafeterias with a rich variety of daily specials</td>
+<td>Large cafeterias centered on fixed menus</td>
+<td>Buffet / cafeteria style</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>One point</strong>: Common to all three methods, from a <strong>PC management terminal</strong> you can perform menu management, order management, sales reporting, and management analysis. This enables you to break away from handwritten ledgers and Excel management, and becomes the first step toward data-driven cafeteria management.</p>
+</blockquote>
+<hr />
+<h2>Method-selection flowchart — determine the best method with three questions</h2>
+<p>You can determine which method is best for your cafeteria with the following three questions.</p>
+<h3>Q1. Is it buffet / cafeteria style?</h3>
+<p><strong>→ Yes → the weighing method is recommended</strong></p>
+<p>In buffet style, customers serve themselves freely, so rather than the AI or RFID methods that bill by "item × quantity," the <strong>weight-based weighing method</strong> fits naturally. Charging by the gram encourages "take only what you want to eat" behavior and directly leads to food-loss reduction.</p>
+<h3>Q2. Can you switch out the dishes?</h3>
+<p><strong>→ Yes → the RFID method is recommended</strong></p>
+<p>If your environment allows introducing dedicated RFID-embedded dishes, the <strong>RFID method with the fastest reading speed</strong> is powerful. Especially in large cafeterias centered on fixed menus that process several hundred to several thousand meals a day, its one-second-per-meal high-speed checkout shows its strength.</p>
+<h3>Q3. Do you have many daily-special menus?</h3>
+<p><strong>→ Yes → the AI image recognition method is recommended</strong></p>
+<p>In cafeterias where items change frequently with daily specials, the RFID method — which rewrites the dish chips every time the menu changes — takes effort. With the AI method you can <strong>just photograph the new menu with the camera</strong> for same-day support. Since special dishes are not needed either, you can introduce it with almost no change to your existing cafeteria layout.</p>
+<blockquote>
+<p><strong>Still undecided?</strong> → We conduct a <strong>free PoC (proof of concept)</strong> where you can try multiple methods in your actual cafeteria environment. Rather than a desktop comparison alone, judging after experiencing it on-site is the reliable approach.</p>
+</blockquote>
+<hr />
+<h2>Management features common to all methods</h2>
+<p>Regardless of method, automated checkout systems come standard with the following <strong>management platform</strong>.</p>
+<h3>🖥 PC management terminal</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dashboard</strong></td>
+<td>Check the day's sales, real-time order information, and sales quantity by menu at a glance</td>
+</tr>
+<tr>
+<td><strong>Menu management</strong></td>
+<td>Register and edit dish categories, items, prices, and images</td>
+</tr>
+<tr>
+<td><strong>Order management</strong></td>
+<td>Detailed search of all orders; detection of and alerts for abnormal orders</td>
+</tr>
+<tr>
+<td><strong>Sales reports</strong></td>
+<td>Sales totals by day, week, month, and meal occasion (morning/noon/evening)</td>
+</tr>
+<tr>
+<td><strong>Management analysis</strong></td>
+<td>Sales ranking by menu, cafeteria usage rate, and average spend trends</td>
+</tr>
+<tr>
+<td><strong>Device management</strong></td>
+<td>Operating status and alert management for each checkout counter</td>
+</tr>
+</tbody>
+</table>
+<h3>📱 Mobile integration</h3>
+<ul>
+<li>For users: view consumption history, nutrition analysis reports, and balance top-ups</li>
+<li>For administrators: sales flash-report notifications and device alerts</li>
+</ul>
+<h3>🔒 Security</h3>
+<ul>
+<li><strong>Face authentication</strong>: equipped with an infrared dual camera. Prevents spoofing with photos or 3D models</li>
+<li><strong>QR code</strong>: supports both forward and reverse scanning</li>
+<li><strong>IC card</strong>: contactless M1/CPU, ISO/IEC 14443 compliant</li>
+</ul>
+<hr />
+<h2>A checklist to review before introduction</h2>
+<p>When considering the introduction of an automated checkout system, organizing the following items in advance makes the process smooth.</p>
+<table>
+<thead>
+<tr>
+<th>Check item</th>
+<th>Confirmation point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>☐ <strong>Meals per day</strong></td>
+<td>Grasp the scale (up to 300 meals / 300–1,000 meals / 1,000+ meals)</td>
+</tr>
+<tr>
+<td>☐ <strong>Cafeteria format</strong></td>
+<td>Set-meal type / buffet type / mixed type</td>
+</tr>
+<tr>
+<td>☐ <strong>Current layout and traffic flow</strong></td>
+<td>Checkout-counter placement space, power supply, and network environment</td>
+</tr>
+<tr>
+<td>☐ <strong>Frequency of menu changes</strong></td>
+<td>Daily / weekly / fixed</td>
+</tr>
+<tr>
+<td>☐ <strong>Whether dishes can be switched out</strong></td>
+<td>Whether switching to dedicated RFID dishes is possible</td>
+</tr>
+<tr>
+<td>☐ <strong>Budget sense</strong></td>
+<td>Checkout equipment only / total cost including dishes</td>
+</tr>
+<tr>
+<td>☐ <strong>Network environment</strong></td>
+<td>Wi-Fi / wired LAN (Ethernet 10/100 Mbps)</td>
+</tr>
+<tr>
+<td>☐ <strong>Payment method requirements</strong></td>
+<td>Face authentication / QR / IC card / multiple support</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>How introduction proceeds — 5 steps</h2>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>STEP 1</strong></td>
+<td><strong>Current-state hearing</strong> — grasp the cafeteria's layout, number of meals, and operational challenges</td>
+</tr>
+<tr>
+<td><strong>STEP 2</strong></td>
+<td><strong>Method proposal</strong> — propose the best method (or combination) from the three</td>
+</tr>
+<tr>
+<td><strong>STEP 3</strong></td>
+<td><strong>Free PoC</strong> — install equipment in the actual cafeteria environment and verify the effect</td>
+</tr>
+<tr>
+<td><strong>STEP 4</strong></td>
+<td><strong>Full introduction</strong> — menu registration, AI training, and staff training</td>
+</tr>
+<tr>
+<td><strong>STEP 5</strong></td>
+<td><strong>Operation start & support</strong> — ongoing operational support and proposals for data utilization</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>What is a PoC (proof of concept)?</strong> It is a scheme in which, before full introduction, we bring equipment into your actual cafeteria and run a test operation. We handle everything from installing to collecting the equipment, and <strong>there is no cost at all</strong>. You can decide after confirming on-site whether it "really is effective."</p>
+</blockquote>
+<hr />
+<h2>Frequently Asked Questions (FAQ)</h2>
+<h3>Q. Does introducing an automated checkout system require major changes to my existing cafeteria layout?</h3>
+<p><strong>A.</strong> No. Any of the methods can be introduced simply by placing the checkout counter in your existing register space. The AI method uses a server-free edge design, so no large-scale network construction is required either.</p>
+<h3>Q. Can it handle daily-changing menus?</h3>
+<p><strong>A.</strong> Yes. With the AI image recognition method, you can register a new menu just by photographing it on the terminal, and it learns automatically. With the RFID method, menu information is written to the dishes on the dispensing machine. With the weighing method, you update the weight master on the management screen.</p>
+<h3>Q. What happens if a checkout error occurs?</h3>
+<p><strong>A.</strong> With all methods, orders can be corrected on the checkout screen. The management terminal also has a function to detect and correct abnormal orders.</p>
+<h3>Q. Please tell me the rough introduction cost.</h3>
+<p><strong>A.</strong> It varies by method, number of units, and cafeteria scale. First, please confirm the actual effect with a <strong>free PoC</strong>; based on those results we will propose the optimal configuration and cost.</p>
+<h3>Q. Can multiple methods be combined?</h3>
+<p><strong>A.</strong> Yes. For example, you can combine different methods by area within the cafeteria, such as "AI method for the set-meal corner and weighing method for the salad bar."</p>
+<hr />
+<h2>Summary — when in doubt, try a PoC first</h2>
+<p>Cafeteria automated checkout systems come in three methods — <strong>AI image recognition, RFID, and weighing</strong> — each with its own strengths.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>In a nutshell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AI image recognition</strong></td>
+<td>Easy to introduce without special dishes. Strong with daily-special menus</td>
+</tr>
+<tr>
+<td><strong>RFID</strong></td>
+<td>Fastest reading speed. Best for fixed menus × large cafeterias</td>
+</tr>
+<tr>
+<td><strong>Weighing</strong></td>
+<td>Best for buffet style. Greatest effect on food-loss reduction</td>
+</tr>
+</tbody>
+</table>
+<p>Which method is best for your own cafeteria is most reliably determined by trying it in the actual environment.</p>
+<p>We conduct a <strong>free PoC where you can experience all three methods</strong>. We handle everything from bringing in and installing to collecting the equipment, and <strong>there is no cost at all</strong>.</p>
+<p>Why not first confirm on-site "which method is effective for our cafeteria?"</p>
+<hr />
+
+            <div class="column-cta">
+                <h3>📞 Apply for a Free PoC</h3>
+                <p>AI image recognition, RFID, and weighing checkout — test the method best suited to your cafeteria in a real environment.<br>
+                We handle equipment delivery, installation, and collection. No cost involved.</p>
+                <a href="../lp-smart-cafeteria.html" class="cta-btn">Apply for a free PoC →</a>
+            </div>
+
+            <div class="column-related">
+                <h3>Related</h3>
+                <ul>
+
+                    <li><a href="rfid-vs-ai.html">RFID vs. AI Image Recognition for Cafeteria Checkout: Accuracy, Cost & Flexibility Compared</a></li><li><a href="ai-cafeteria.html">A Complete Guide to Introducing AI Automated Checkout in Staff Cafeterias</a></li>
+                    <li><a href="ai-register.html">What Is a Cafeteria AI Register? The New Norm in Checkout Transformed by Image Recognition</a></li>
+                    <li><a href="rfid-settlement.html">A Complete Explanation of Cafeteria RFID Checkout Systems</a></li>
+                    <li><a href="cafeteria-queue.html">5 Ways to Eliminate Queues at the Staff Cafeteria</a></li>
+                    <li><a href="ai-vs-rfid.html">Solving the Staff Cafeteria Register Labor Shortage with "Unmanned Checkout"</a></li>
+                    <li><a href="cafeteria-dx.html">An Introduction to Staff Cafeteria DX: 3 Steps to Break Away from Analog Operations</a></li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../../assets/img/logo/logo.webp' alt='Izumo Soan'>
+                    <p class='logo-desp'>Technology that powers the field.</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href='../index.html'>Home</a></li>
+                        <li><a href='../about.html'>About</a></li>
+                        <li><a href='../services.html'>Services</a></li>
+                        <li><a href='../case-studies.html'>Case Studies</a></li>
+                        <li><a href='../overseas-partner.html'>Overseas Partner</a></li>
+                        <li><a href='index.html'>Column</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>Products</h4>
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='../smart-cafeteria.html'>
+                            <span>Smart Cafeteria</span>
+                            <small>Image Recognition · RFID · Weighing</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='../products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>Smart Site Operations Platform</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 Izumo Soan. All rights reserved. ｜ <a href='../privacy.html' style='color:inherit;text-decoration:underline;'>Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src='../../assets/js/main.js'></script>
+</body>
+</html>

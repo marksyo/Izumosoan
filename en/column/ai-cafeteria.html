@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>The Complete Guide to Introducing AI Automated Checkout in Corporate Cafeterias: How It Works, Costs & Rollout Steps | Izumo Soan Column</title>
+    <meta name='description' content='A thorough guide to AI automated checkout systems for corporate cafeterias. Covers how AI image recognition works, five benefits of adopting it, how to think about costs, and a five-step rollout flow. Free PoC available in the Kanto area.'>
+    <meta name='keywords' content='corporate cafeteria AI automated checkout, AI checkout cafeteria, AI image recognition cafeteria, cafeteria self-checkout, corporate cafeteria checkout efficiency'>
+    <link rel="canonical" href="https://izumosoan.com/en/column/ai-cafeteria.html">
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/column/ai-cafeteria.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/column/ai-cafeteria.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/column/ai-cafeteria.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/column/ai-cafeteria.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/en/column/ai-cafeteria.html">
+    <meta property="og:title" content="The Complete Guide to Introducing AI Automated Checkout in Corporate Cafeterias: How It Works, Costs & Rollout Steps">
+    <meta property="og:description" content="A thorough guide to AI automated checkout systems for corporate cafeterias. Covers how AI image recognition works, five benefits of adopting it, how to think about costs, and a five-step rollout flow. Free PoC available in the Kanto area.">
+    <meta property="og:locale" content="en_US">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://izumosoan.com/en/index.html"}, {"@type": "ListItem", "position": 2, "name": "Column", "item": "https://izumosoan.com/ja/column/index.html"}, {"@type": "ListItem", "position": 3, "name": "The Complete Guide to Introducing AI Automated Checkout in Corporate Cafeterias: How It Works, Costs & Rollout Steps"}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The Complete Guide to Introducing AI Automated Checkout in Corporate Cafeterias: How It Works, Costs & Rollout Steps", "description": "A thorough guide to AI automated checkout systems for corporate cafeterias. Covers how AI image recognition works, five benefits of adopting it, how to think about costs, and a five-step rollout flow. Free PoC available in the Kanto area.", "inLanguage": "en", "datePublished": "2026-09-20", "dateModified": "2026-09-20", "author": {"@type": "Organization", "name": "Izumo Soan"}, "publisher": {"@type": "Organization", "name": "Izumo Soan"}, "mainEntityOfPage": "https://izumosoan.com/en/column/ai-cafeteria.html"}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../../assets/css/style.min.css'>
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo/favicon.ico">
+    <style>
+    .column-hero {
+        background: linear-gradient(135deg, #001d30 0%, #003554 100%);
+        padding: 100px 20px 60px; color: #fff; text-align: center;
+    }
+    .column-hero h1 {
+        font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 800; line-height: 1.4;
+        max-width: 800px; margin: 0 auto 16px; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .column-breadcrumb { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 20px; }
+    .column-breadcrumb a { color: rgba(255,255,255,0.95); text-decoration: none; }
+    .column-breadcrumb a:hover { text-decoration: underline; }
+    .column-body {
+        max-width: 820px; margin: 0 auto; padding: 48px 20px 80px;
+        font-size: 1rem; line-height: 1.85; color: #1e293b;
+    }
+    .column-body h2 {
+        font-size: 1.5rem; font-weight: 700; color: #003554;
+        margin: 56px 0 20px; padding-bottom: 10px; border-bottom: 3px solid #006494;
+    }
+    .column-body h3 { font-size: 1.2rem; font-weight: 700; color: #004a77; margin: 36px 0 14px; }
+    .column-body h4 { font-size: 1.05rem; font-weight: 700; color: #333; margin: 28px 0 10px; }
+    .column-body p { margin: 0 0 18px; }
+    .column-body strong { color: #003554; }
+    .column-body blockquote {
+        background: #f0f7ff; border-left: 4px solid #006494;
+        padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem;
+    }
+    .column-body blockquote p { margin: 0 0 8px; }
+    .column-body blockquote p:last-child { margin: 0; }
+    .column-body table {
+        width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.92rem;
+    }
+    .column-body table th {
+        background: #003554; color: #fff; padding: 12px 16px; text-align: left; font-weight: 600;
+    }
+    .column-body table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+    .column-body table tr:nth-child(even) { background: #f8fafc; }
+    .column-body table tr:hover { background: #f0f7ff; }
+    .column-body ul, .column-body ol { margin: 0 0 18px 20px; }
+    .column-body li { margin: 0 0 8px; }
+    .column-body a { color: #006494; text-decoration: underline; }
+    .column-body a:hover { color: #003554; }
+    .column-body hr { border: none; border-top: 1px solid #e2e8f0; margin: 48px 0; }
+    .column-cta {
+        background: linear-gradient(135deg, #001d30, #003554); color: #fff;
+        padding: 48px 32px; border-radius: 16px; text-align: center; margin: 56px 0 32px;
+    }
+    .column-cta h3 { color: #fff; font-size: 1.4rem; margin: 0 0 16px; border: none; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+    .column-cta p { color: #fff; margin: 0 0 24px; font-size: 1rem; text-shadow: 0 1px 4px rgba(0,0,0,0.2); }
+    .column-cta .cta-btn {
+        display: inline-block; background: #00880F; color: #fff;
+        padding: 16px 40px; border-radius: 8px; font-size: 1.1rem; font-weight: 700;
+        text-decoration: none; box-shadow: 0 4px 20px rgba(0,136,15,0.4); transition: all 0.3s;
+    }
+    .column-cta .cta-btn:hover { background: #006e0c; transform: translateY(-2px); color: #fff; }
+    .column-related {
+        margin: 48px 0 0; padding: 32px; background: #f4f7fa; border-radius: 12px;
+    }
+    .column-related h3 { color: #003554; font-size: 1.1rem; margin: 0 0 16px; border: none; }
+    .column-related ul { list-style: none; margin: 0; padding: 0; }
+    .column-related li { margin: 0 0 10px; }
+    .column-related a { color: #006494; text-decoration: none; font-size: 0.95rem; }
+    .column-related a:hover { text-decoration: underline; }
+    .column-related a::before { content: "\U0001F4D6 "; }
+    @media (max-width: 768px) {
+        .column-hero { padding: 80px 16px 40px; }
+        .column-body { padding: 32px 16px 60px; }
+        .column-body h2 { font-size: 1.3rem; }
+        .column-body table { font-size: 0.82rem; }
+        .column-body table th, .column-body table td { padding: 8px 10px; }
+        .column-cta { padding: 32px 20px; }
+    }
+    </style>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does the AI need to relearn every time the menu changes?", "acceptedAnswer": {"@type": "Answer", "text": "A. Large-scale relearning is not necessary. The AI learns automatically just by photographing the new menu on the terminal. It can handle daily-changing menus on the same day, and the work is completed in a few minutes during the morning prep."}}, {"@type": "Question", "name": "Do I need to make major changes to my existing cafeteria layout?", "acceptedAnswer": {"@type": "Answer", "text": "A. No. It can be introduced simply by installing the AI checkout unit in your existing register space. Thanks to the server-free edge design, large-scale network construction is also unnecessary. It runs as long as there is power and a network connection (wired or Wi-Fi)."}}, {"@type": "Question", "name": "How accurate is the recognition?", "acceptedAnswer": {"@type": "Answer", "text": "A. It is 99.99% or higher in dish recognition mode and 99% or higher in food recognition mode. However, because the number of menus offered on a given day in a real cafeteria is limited (usually around 10 to 30 items), recognition targets are narrowed down and accuracy is near 100% in actual operation. In the rare event of a misrecognition, it can be corrected on the checkout screen."}}, {"@type": "Question", "name": "What happens during a power or network outage?", "acceptedAnswer": {"@type": "Answer", "text": "A. Because the AI engine is built into the checkout unit itself, recognition and checkout are possible offline even during a network outage. Data is synchronized automatically after the network recovers."}}, {"@type": "Question", "name": "Please give me a rough idea of the introduction cost.", "acceptedAnswer": {"@type": "Answer", "text": "A. It varies by method, number of units, and cafeteria scale. First, please confirm the actual effect with a free PoC; based on those results, we will propose the optimal configuration and cost."}}, {"@type": "Question", "name": "What is the difference from the RFID method or the weighing method?", "acceptedAnswer": {"@type": "Answer", "text": "A. The biggest features of the AI method are that no special dishes are needed (when using food recognition mode) and its ability to respond instantly to menu changes. The RFID method has the fastest read speed and suits large-scale cafeterias, while the weighing method is best for buffet-style service. For details, please see the comparison article below."}}]}</script>
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='../index.html'>
+                    <img src='../../assets/img/logo/logo.webp' alt='Izumo Soan' class='header-logo-img' style='height:80px;'>
+                </a>
+            </div>
+            <div class='language-switcher'>
+                <span class='lang-label'><i class="fas fa-globe"></i></span>
+                <select id='lang-select'>
+                    <option value='ja'>日本語</option>
+                    <option value='en' selected>English</option>
+                    <option value='zh'>中文</option>
+                </select>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
+            <nav>
+                <ul>
+                    <li><a href='../index.html'>Home</a></li>
+                    <li><a href='../services.html'>Services</a></li>
+                    <li><a href='../products.html'>Products</a></li>
+                    <li><a href='../case-studies.html'>Case Studies</a></li>
+                    <li><a href='../about.html'>About</a></li>
+                    <li><a href='../overseas-partner.html'>Overseas Partner</a></li>
+                    <li><a href='../index.html#contact'>Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="column-hero">
+            <div class="column-breadcrumb">
+                <a href="../index.html">Home</a> &gt; <a href="index.html">Column</a> &gt; The Complete Guide to Introducing AI Automated Checkout in Corporate Cafeterias
+            </div>
+            <h1>The Complete Guide to Introducing AI Automated Checkout in Corporate Cafeterias<br><span style="font-size:0.7em;font-weight:600;">How It Works, Costs &amp; Rollout Steps</span></h1>
+        </section>
+
+        <article class="column-body">
+            <blockquote>
+<p><strong>What you'll learn in this article</strong>
+- How the AI automated checkout system works and its technical features
+- Five concrete benefits of adopting it
+- How to choose the right device (E716 compact model vs. E718 large-screen model)
+- The five rollout steps and how to make use of the free PoC
+- Answers to frequently asked questions</p>
+</blockquote>
+<p>"The checkout line never seems to clear," "We can't keep up with hiring checkout staff," "Manual-calculation mistakes lead to complaints" — if you run a corporate cafeteria, you have probably faced these worries at least once.</p>
+<p>What solves these problems at the root is an <strong>automated checkout system that uses AI image recognition</strong>. Simply place your tray down and the food is identified automatically, right through to checkout. Without any help from staff, the transaction finishes in just a few seconds.</p>
+<p>This article gives a comprehensive explanation of AI automated checkout, from how it works to the rollout steps. To help you picture concretely "Can it be introduced in our own cafeteria?", it also goes into the technical specifications and how to choose the right device.</p>
+<hr />
+<h2>Three challenges facing checkout operations in corporate cafeterias</h2>
+<p>To understand the benefits of AI automated checkout, let's first organize the typical challenges that arise with conventional manual checkout.</p>
+<h3>Challenge 1: Lines at peak time — 20 of the 60 lunch-break minutes spent waiting at the register</h3>
+<p>Use of a corporate cafeteria concentrates into the single hour between 12:00 and 13:00. Because manual checkout takes <strong>30 to 60 seconds per person</strong>, a cafeteria serving several hundred people sees lines of 20 minutes or more at peak time.</p>
+<p>For employees, the lunch break is not only for eating but also a time to refresh. Losing a third of that precious time to waiting in line is a problem that directly lowers employee satisfaction.</p>
+<h3>Challenge 2: Shortage of checkout staff and labor costs</h3>
+<p>A cafeteria register needs <strong>one to two staff per counter</strong>. In a five-counter cafeteria, you must secure 5 to 10 staff every day just for checkout.</p>
+<p>In recent years, hiring part-time staff has become difficult across the entire food-service industry, with more and more voices saying "we advertise but get no applicants" or "even when we hire, they quit right away." Combined with rising labor costs, this is a major factor squeezing cafeteria operating costs.</p>
+<h3>Challenge 3: Mistakes and complaints from manual calculation</h3>
+<p>In corporate cafeterias with many menu items, staff visually check the items and enter the amount manually or on a POS register. During busy peak times, <strong>calculation mistakes and mis-keying</strong> easily occur, becoming the cause of complaints such as "the bill is wrong" or "there's a dish I didn't order."</p>
+<p>Such mistakes damage trust in the cafeteria and can also lead to a drop in the usage rate.</p>
+<hr />
+<h2>What is an AI automated checkout system? The basic mechanism</h2>
+<p>An AI automated checkout system is a smart device that uses <strong>image recognition technology powered by artificial intelligence</strong> to identify food automatically and complete the checkout.</p>
+<h3>How the AI camera identifies food in an instant</h3>
+<p>At the core of AI automated checkout is a <strong>high-resolution AI camera (5 megapixels, single-lens color camera)</strong> mounted on the checkout unit. The checkout flow is as follows.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>What happens</th>
+<th>Time required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>STEP 1</strong></td>
+<td>The user places the tray in the checkout area</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>STEP 2</strong></td>
+<td>The AI camera captures an image of the food, and the image recognition algorithm determines the items and quantities</td>
+<td>Instant</td>
+</tr>
+<tr>
+<td><strong>STEP 3</strong></td>
+<td>At the same time, the face-recognition camera recognizes the user's face and completes identity verification</td>
+<td>Instant</td>
+</tr>
+<tr>
+<td><strong>STEP 4</strong></td>
+<td>Based on the recognition results, the total amount is calculated automatically and shown on screen</td>
+<td>Instant</td>
+</tr>
+<tr>
+<td><strong>STEP 5</strong></td>
+<td>The user selects a payment method and completes payment</td>
+<td>1 second</td>
+</tr>
+</tbody>
+</table>
+<p><strong>From placing the tray to completing checkout, roughly 1 to 2 seconds in total.</strong> The AI automated checkout system runs <strong>two cameras simultaneously</strong>. One is the AI camera for food recognition, the other is an infrared dual camera for face recognition. Because food identification and identity verification are processed in parallel, all processing finishes the instant the tray is placed, allowing checkout in just 1 second. Compared with conventional manual checkout (30 to 60 seconds), checkout time is <strong>cut by up to 1/30</strong>.</p>
+<h3>Two recognition modes — accuracy of 99% to 99.99%</h3>
+<p>The AI automated checkout system offers <strong>two recognition modes</strong> to choose from according to your cafeteria's operation.</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Recognition target</th>
+<th>Accuracy</th>
+<th>Dish constraint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dish recognition mode</strong></td>
+<td>Shape, color, and size of the dish</td>
+<td><strong>99.99% or higher</strong></td>
+<td>Dedicated dishes required</td>
+</tr>
+<tr>
+<td><strong>Food recognition mode</strong></td>
+<td>The food image itself</td>
+<td><strong>99% or higher</strong></td>
+<td><strong>Not needed (regular dishes OK)</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Dish recognition mode</strong>: Delivers the highest accuracy by using dedicated dishes. Because it judges items from the combination of dish shape and color, it is unaffected by differences in plating or portion.</li>
+<li><strong>Food recognition mode</strong>: Because it can be introduced with ordinary dishes, the <strong>cost of replacing dishes is zero</strong>. Even for daily-changing menus, the AI learns automatically just by photographing the new menu on the terminal. The theoretical recognition accuracy is 99%, but in a real cafeteria <strong>the number of menus offered on a given day is limited to around 10 to 30 items</strong>, so recognition targets are narrowed down and <strong>near-100% accuracy is maintained in actual operation</strong>.</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Which should you choose?</strong> If you can switch dishes, "dish recognition mode" secures the highest accuracy. If you want to use your existing dishes as-is, "food recognition mode" is the easy choice.</p>
+</blockquote>
+<h3>Three payment methods</h3>
+<p>The AI checkout unit supports the following <strong>three payment methods</strong>. You can operate them singly or in combination according to user convenience and the facility's security requirements.</p>
+<table>
+<thead>
+<tr>
+<th>Payment method</th>
+<th>How it works</th>
+<th>Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Face recognition</strong></td>
+<td>Identity verification with an infrared dual camera (2 megapixels)</td>
+<td>Hands-free payment. Equipped with anti-spoofing functions against photos and 3D models</td>
+</tr>
+<tr>
+<td><strong>QR code</strong></td>
+<td>Supports forward scan (user presents) and reverse scan (terminal reads)</td>
+<td>Easy payment with a smartphone</td>
+</tr>
+<tr>
+<td><strong>IC card</strong></td>
+<td>Contactless M1/CPU, ISO/IEC14443 compliant</td>
+<td>Existing employee IDs and IC cards can be used as-is</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Five benefits of introducing AI checkout</h2>
+<h3>① Cut checkout time by up to 1/30 — resolving lines at the root</h3>
+<p>Checkout that used to take 30 to 60 seconds now finishes in <strong>just 1 to 2 seconds</strong>. Because the AI automated checkout system runs the food-recognition camera and face-recognition camera at the same time, food identification and identity verification are processed in parallel the instant the tray is placed. Peak-time lines are dramatically resolved, giving employees their lunch break back as genuine "rest time."</p>
+<p>Since a single AI checkout unit has the processing capacity of roughly three or more conventional registers, you can also reduce the number of checkout units you need to install.</p>
+<h3>② No checkout staff needed — major reduction in labor costs</h3>
+<p>AI checkout is self-service. From the user placing the tray to completing payment, <strong>no staff involvement is needed at all</strong>. The one to two checkout staff previously assigned to each counter can be redirected to other work such as cooking or cleaning.</p>
+<p>In a five-counter cafeteria that assigned 5 to 10 checkout staff, all of those labor costs become subject to reduction.</p>
+<h3>③ Zero checkout mistakes — high-accuracy AI recognition</h3>
+<p>AI recognition accuracy is <strong>99% to 99.99%</strong>. Calculation mistakes and mis-keying that could not be avoided by human visual checks and manual calculation are reduced to nearly zero.</p>
+<p>In the rare event of a recognition error, the <strong>order can be corrected</strong> on the checkout screen. Because the management terminal also has functions to detect and correct anomalous orders, the risk of checkout trouble can be minimized.</p>
+<h3>④ Automatic aggregation of sales data — real-time management analysis</h3>
+<p>The AI checkout system automatically records all checkout data. The information you can check in real time from the PC management terminal is as follows.</p>
+<table>
+<thead>
+<tr>
+<th>Data item</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dashboard</strong></td>
+<td>Real-time display of the day's sales, number of orders, and sales quantity by menu</td>
+</tr>
+<tr>
+<td><strong>Sales reports</strong></td>
+<td>Aggregation by day, week, and month, and further by meal occasion (breakfast/lunch/dinner)</td>
+</tr>
+<tr>
+<td><strong>Menu ranking</strong></td>
+<td>Sales performance of popular and unpopular menus</td>
+</tr>
+<tr>
+<td><strong>Anomalous order alerts</strong></td>
+<td>Automatic detection of orders with patterns different from the norm</td>
+</tr>
+<tr>
+<td><strong>Nutrition analysis</strong></td>
+<td>Analysis of nutritional balance based on users' consumption data</td>
+</tr>
+</tbody>
+</table>
+<p>Because sales data that used to be managed by hand or in Excel now accumulates automatically, <strong>data-driven management decisions</strong> (menu improvement, price adjustment, optimization of prep volumes) become possible.</p>
+<h3>⑤ Reducing food loss — optimizing supplies based on sales data</h3>
+<p>Once sales performance by menu can be grasped in real time, the accuracy of predicting "which menu will sell how much" improves dramatically.</p>
+<p>By <strong>optimizing prep volumes based on sales data</strong> rather than relying on experience and intuition, you reduce food loss caused by over-preparing. It is also effective as a response to the SDGs.</p>
+<hr />
+<h2>Choosing the AI checkout device | E716 vs. E718</h2>
+<p>The AI checkout units we handle come in <strong>two models</strong> suited to the cafeteria's scale and installation environment.</p>
+<h3>E716 — compact dual-screen model</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Display</strong></td>
+<td>15.6-inch front + 15.6-inch rear (1080P, multi-touch support)</td>
+</tr>
+<tr>
+<td><strong>CPU</strong></td>
+<td>64-bit 8-core processor</td>
+</tr>
+<tr>
+<td><strong>Memory/Storage</strong></td>
+<td>2GB DDR3 / 16GB Flash</td>
+</tr>
+<tr>
+<td><strong>AI camera</strong></td>
+<td>5-megapixel single-lens color camera</td>
+</tr>
+<tr>
+<td><strong>Face-recognition camera</strong></td>
+<td>Infrared dual camera (2 megapixels)</td>
+</tr>
+<tr>
+<td><strong>Payment support</strong></td>
+<td>Face recognition, QR code, IC card</td>
+</tr>
+<tr>
+<td><strong>Connectivity</strong></td>
+<td>Ethernet (10/100Mbps), Wi-Fi (2.4GHz), Bluetooth 4.0</td>
+</tr>
+<tr>
+<td><strong>Voice guidance</strong></td>
+<td>Human-voice guidance</td>
+</tr>
+<tr>
+<td><strong>External connections</strong></td>
+<td>RJ45 ×1, 12V power ×1</td>
+</tr>
+<tr>
+<td><strong>Power</strong></td>
+<td>AC220V input / DC12V 5A output</td>
+</tr>
+</tbody>
+</table>
+<p><strong>For cafeterias like this</strong>: mid-sized corporate cafeterias, facilities with limited installation space</p>
+<h3>E718 — large-screen front-desk model</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Display</strong></td>
+<td>21.5-inch front (large display) + 15.6-inch rear</td>
+</tr>
+<tr>
+<td><strong>Other specs</strong></td>
+<td>Same as E716 (CPU, camera, payment, connectivity)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>For cafeterias like this</strong>: large-scale cafeterias, facilities that value screen visibility, facilities with many elderly users</p>
+<blockquote>
+<p>💡 <strong>Which should you choose?</strong> If you are unsure, we recommend installing both models in a free PoC and comparing them in practice.</p>
+</blockquote>
+<hr />
+<h2>Rollout steps for AI checkout | Five phases</h2>
+<h3>STEP 1: Current-state hearing &amp; cafeteria layout survey</h3>
+<p>First we conduct a detailed hearing on the cafeteria's current state.</p>
+<ul>
+<li>Number of meals per day (sense of scale)</li>
+<li>Current layout and checkout traffic lines</li>
+<li>Menu composition (fixed / daily-changing / mixed)</li>
+<li>Existing payment methods (cash / IC card / other)</li>
+<li>Power and network environment</li>
+</ul>
+<h3>STEP 2: Proposal of the optimal device configuration</h3>
+<p>Based on the hearing results, we propose the optimal device configuration.</p>
+<ul>
+<li><strong>Device model</strong>: E716 (compact) or E718 (large-screen)</li>
+<li><strong>Recognition mode</strong>: dish recognition or food recognition</li>
+<li><strong>Number of units</strong>: calculated from meal count and peak-time duration</li>
+<li><strong>Payment methods</strong>: face recognition / QR / IC card (combinations possible)</li>
+</ul>
+<h3>STEP 3: Free PoC (proof of concept)</h3>
+<p>Before full rollout, we <strong>install the equipment in your actual cafeteria environment and run a test operation</strong>.</p>
+<ul>
+<li>We handle equipment delivery, installation, and wiring</li>
+<li>We also support menu registration and initial AI-learning setup</li>
+<li>We measure effectiveness during the test period (checkout-time reduction rate, user reactions, etc.)</li>
+<li><strong>No cost whatsoever</strong></li>
+</ul>
+<blockquote>
+<p>During the PoC period, you can confirm with real data "how much checkout time is shortened" and "whether users can operate it smoothly."</p>
+</blockquote>
+<h3>STEP 4: Registration of menu images &amp; AI learning</h3>
+<p>Once full rollout is decided, we have the AI learn images of all menus.</p>
+<ul>
+<li><strong>Food recognition mode</strong>: Just photograph each menu on the terminal. Completed in a few seconds per item</li>
+<li><strong>Dish recognition mode</strong>: Register the shape and color of dishes to the AI</li>
+</ul>
+<p>Even for daily-changing menus, staff can respond immediately by photographing the new menu on the terminal during the morning prep.</p>
+<h3>STEP 5: Live operation &amp; ongoing support</h3>
+<p>After go-live, we continue to provide operational support.</p>
+<ul>
+<li>Periodic maintenance of the equipment</li>
+<li>Monitoring and improving AI recognition accuracy</li>
+<li>Operation training for the management screen</li>
+<li>Advice on making use of sales data</li>
+</ul>
+<hr />
+<h2>Frequently asked questions (FAQ)</h2>
+<h3>Q. Does the AI need to relearn every time the menu changes?</h3>
+<p><strong>A.</strong> Large-scale relearning is not necessary. The AI learns automatically just by photographing the new menu on the terminal. It can handle daily-changing menus on the same day, and the work is completed in a few minutes during the morning prep.</p>
+<h3>Q. Do I need to make major changes to my existing cafeteria layout?</h3>
+<p><strong>A.</strong> No. It can be introduced simply by installing the AI checkout unit in your existing register space. Thanks to the server-free edge design, large-scale network construction is also unnecessary. It runs as long as there is power and a network connection (wired or Wi-Fi).</p>
+<h3>Q. How accurate is the recognition?</h3>
+<p><strong>A.</strong> It is <strong>99.99% or higher</strong> in dish recognition mode and <strong>99% or higher</strong> in food recognition mode. However, because the number of menus offered on a given day in a real cafeteria is limited (usually around 10 to 30 items), recognition targets are narrowed down and <strong>accuracy is near 100% in actual operation</strong>. In the rare event of a misrecognition, it can be corrected on the checkout screen.</p>
+<h3>Q. What happens during a power or network outage?</h3>
+<p><strong>A.</strong> Because the AI engine is built into the checkout unit itself, recognition and checkout are possible offline even during a network outage. Data is synchronized automatically after the network recovers.</p>
+<h3>Q. Please give me a rough idea of the introduction cost.</h3>
+<p><strong>A.</strong> It varies by method, number of units, and cafeteria scale. First, please confirm the actual effect with a <strong>free PoC</strong>; based on those results, we will propose the optimal configuration and cost.</p>
+<h3>Q. What is the difference from the RFID method or the weighing method?</h3>
+<p><strong>A.</strong> The biggest features of the AI method are that <strong>no special dishes are needed</strong> (when using food recognition mode) and its <strong>ability to respond instantly to menu changes</strong>. The RFID method has the fastest read speed and suits large-scale cafeterias, while the weighing method is best for buffet-style service. For details, please see the comparison article below.</p>
+<blockquote>
+<p>📖 <strong>Related article</strong>: <a href="cafeteria-auto-settlement.html">A Thorough Comparison of Automated Cafeteria Checkout Systems | Explaining the Three Methods: AI, RFID, and Weighing</a></p>
+</blockquote>
+<hr />
+<h2>Summary — first, feel the effect with a free PoC</h2>
+<p>The AI automated checkout system for corporate cafeterias is a core solution for cafeteria DX that simultaneously delivers five benefits: <strong>resolving lines, cutting labor costs, zero checkout mistakes, data-driven management, and reducing food loss</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Before (manual checkout)</th>
+<th>After (AI automated checkout)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Checkout time / person</td>
+<td>30–60 seconds</td>
+<td><strong>1–2 seconds</strong></td>
+</tr>
+<tr>
+<td>Checkout staff / counter</td>
+<td>1–2 people</td>
+<td><strong>0 (self-service)</strong></td>
+</tr>
+<tr>
+<td>Checkout error rate</td>
+<td>3–5%</td>
+<td><strong>0.01% or less</strong></td>
+</tr>
+<tr>
+<td>Sales data</td>
+<td>Manual aggregation (next day or later)</td>
+<td><strong>Real-time automatic aggregation</strong></td>
+</tr>
+<tr>
+<td>Food loss</td>
+<td>Experience-based prep</td>
+<td><strong>15–30% reduction through data optimization</strong></td>
+</tr>
+</tbody>
+</table>
+<p>"Will it really be effective in our own cafeteria?" — the best way to answer that question is to <strong>try it in your actual cafeteria</strong>.</p>
+<p>We run a <strong>free PoC</strong> in which we bring an AI checkout unit into your actual cafeteria for a test operation. We handle everything from installation to collection of the equipment, at no cost whatsoever.</p>
+<hr />
+
+            <div class="column-cta">
+                <h3>📞 Apply for a Free PoC</h3>
+                <p>AI image recognition, RFID, and weighing checkout — test the method best suited to your cafeteria in a real environment.<br>
+                We handle equipment delivery, installation, and collection. No cost involved.</p>
+                <a href="../lp-smart-cafeteria.html" class="cta-btn">Apply for a free PoC →</a>
+            </div>
+
+            <div class="column-related">
+                <h3>Related</h3>
+                <ul>
+                    
+                    <li><a href="rfid-vs-ai.html">RFID vs. AI Image Recognition for Cafeteria Checkout: Accuracy, Cost &amp; Flexibility Compared</a></li><li><a href="cafeteria-auto-settlement.html">A Thorough Comparison of Automated Cafeteria Checkout Systems | Explaining the Three Methods: AI, RFID, and Weighing</a></li>
+                    <li><a href="ai-register.html">What Is a Cafeteria AI Register? The New Normal of Checkout Transformed by Image Recognition</a></li>
+                    <li><a href="rfid-settlement.html">A Complete Guide to Cafeteria RFID Checkout Systems</a></li>
+                    <li><a href="cafeteria-queue.html">Five Ways to Resolve Lines in Corporate Cafeterias</a></li>
+                    <li><a href="ai-vs-rfid.html">Solving the Checkout Staff Shortage in Corporate Cafeterias with "Unmanned Checkout"</a></li>
+                    <li><a href="cafeteria-dx.html">Introduction to Corporate Cafeteria DX | Three Steps to Break Free from Analog Operations</a></li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../../assets/img/logo/logo.webp' alt='Izumo Soan'>
+                    <p class='logo-desp'>Technology that powers the field.</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href='../index.html'>Home</a></li>
+                        <li><a href='../about.html'>About</a></li>
+                        <li><a href='../services.html'>Services</a></li>
+                        <li><a href='../case-studies.html'>Case Studies</a></li>
+                        <li><a href='../overseas-partner.html'>Overseas Partner</a></li>
+                        <li><a href='index.html'>Column</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>Products</h4>
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='../smart-cafeteria.html'>
+                            <span>Smart Cafeteria</span>
+                            <small>Image Recognition · RFID · Weighing</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='../products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>Smart Site Operations Platform</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 Izumo Soan. All rights reserved. ｜ <a href='../privacy.html' style='color:inherit;text-decoration:underline;'>Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src='../../assets/js/main.js'></script>
+</body>
+</html>

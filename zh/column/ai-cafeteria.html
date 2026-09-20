@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang='zh'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>在企业食堂引入AI自动结算的完整指南｜原理、费用、导入步骤｜出雲創安专栏</title>
+    <meta name='description' content='全面解读企业食堂的AI自动结算系统。涵盖AI图像识别的原理、导入可获得的5项收益、费用的考量方式，以及5个步骤的导入流程。关东地区正在实施免费PoC。'>
+    <meta name='keywords' content='企业食堂 AI 自动结算, AI结算 食堂, AI图像识别 食堂, 食堂 自助结算, 企业食堂 结算 效率化'>
+    <link rel="canonical" href="https://izumosoan.com/zh/column/ai-cafeteria.html">
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/column/ai-cafeteria.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/column/ai-cafeteria.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/column/ai-cafeteria.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/column/ai-cafeteria.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="出雲創安 Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/zh/column/ai-cafeteria.html">
+    <meta property="og:title" content="在企业食堂引入AI自动结算的完整指南｜原理、费用、导入步骤">
+    <meta property="og:description" content="全面解读企业食堂的AI自动结算系统。涵盖AI图像识别的原理、导入可获得的5项收益、费用的考量方式，以及5个步骤的导入流程。关东地区正在实施免费PoC。">
+    <meta property="og:locale" content="zh_CN">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "\u9996\u9875", "item": "https://izumosoan.com/zh/index.html"}, {"@type": "ListItem", "position": 2, "name": "\u4e13\u680f", "item": "https://izumosoan.com/ja/column/index.html"}, {"@type": "ListItem", "position": 3, "name": "\u5728\u4f01\u4e1a\u98df\u5802\u5f15\u5165AI\u81ea\u52a8\u7ed3\u7b97\u7684\u5b8c\u6574\u6307\u5357\uff5c\u539f\u7406\u3001\u8d39\u7528\u3001\u5bfc\u5165\u6b65\u9aa4"}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "\u5728\u4f01\u4e1a\u98df\u5802\u5f15\u5165AI\u81ea\u52a8\u7ed3\u7b97\u7684\u5b8c\u6574\u6307\u5357\uff5c\u539f\u7406\u3001\u8d39\u7528\u3001\u5bfc\u5165\u6b65\u9aa4", "description": "\u5168\u9762\u89e3\u8bfb\u4f01\u4e1a\u98df\u5802\u7684AI\u81ea\u52a8\u7ed3\u7b97\u7cfb\u7edf\u3002\u6db5\u76d6AI\u56fe\u50cf\u8bc6\u522b\u7684\u539f\u7406\u3001\u5bfc\u5165\u53ef\u83b7\u5f97\u76845\u9879\u6536\u76ca\u3001\u8d39\u7528\u7684\u8003\u91cf\u65b9\u5f0f\uff0c\u4ee5\u53ca5\u4e2a\u6b65\u9aa4\u7684\u5bfc\u5165\u6d41\u7a0b\u3002\u5173\u4e1c\u5730\u533a\u6b63\u5728\u5b9e\u65bd\u514d\u8d39PoC\u3002", "inLanguage": "zh", "datePublished": "2026-09-20", "dateModified": "2026-09-20", "author": {"@type": "Organization", "name": "\u51fa\u96f2\u5275\u5b89 Izumo Soan"}, "publisher": {"@type": "Organization", "name": "\u51fa\u96f2\u5275\u5b89 Izumo Soan"}, "mainEntityOfPage": "https://izumosoan.com/zh/column/ai-cafeteria.html"}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../../assets/css/style.min.css'>
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo/favicon.ico">
+    <style>
+    .column-hero {
+        background: linear-gradient(135deg, #001d30 0%, #003554 100%);
+        padding: 100px 20px 60px; color: #fff; text-align: center;
+    }
+    .column-hero h1 {
+        font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 800; line-height: 1.4;
+        max-width: 800px; margin: 0 auto 16px; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .column-breadcrumb { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 20px; }
+    .column-breadcrumb a { color: rgba(255,255,255,0.95); text-decoration: none; }
+    .column-breadcrumb a:hover { text-decoration: underline; }
+    .column-body {
+        max-width: 820px; margin: 0 auto; padding: 48px 20px 80px;
+        font-size: 1rem; line-height: 1.85; color: #1e293b;
+    }
+    .column-body h2 {
+        font-size: 1.5rem; font-weight: 700; color: #003554;
+        margin: 56px 0 20px; padding-bottom: 10px; border-bottom: 3px solid #006494;
+    }
+    .column-body h3 { font-size: 1.2rem; font-weight: 700; color: #004a77; margin: 36px 0 14px; }
+    .column-body h4 { font-size: 1.05rem; font-weight: 700; color: #333; margin: 28px 0 10px; }
+    .column-body p { margin: 0 0 18px; }
+    .column-body strong { color: #003554; }
+    .column-body blockquote {
+        background: #f0f7ff; border-left: 4px solid #006494;
+        padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem;
+    }
+    .column-body blockquote p { margin: 0 0 8px; }
+    .column-body blockquote p:last-child { margin: 0; }
+    .column-body table {
+        width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.92rem;
+    }
+    .column-body table th {
+        background: #003554; color: #fff; padding: 12px 16px; text-align: left; font-weight: 600;
+    }
+    .column-body table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+    .column-body table tr:nth-child(even) { background: #f8fafc; }
+    .column-body table tr:hover { background: #f0f7ff; }
+    .column-body ul, .column-body ol { margin: 0 0 18px 20px; }
+    .column-body li { margin: 0 0 8px; }
+    .column-body a { color: #006494; text-decoration: underline; }
+    .column-body a:hover { color: #003554; }
+    .column-body hr { border: none; border-top: 1px solid #e2e8f0; margin: 48px 0; }
+    .column-cta {
+        background: linear-gradient(135deg, #001d30, #003554); color: #fff;
+        padding: 48px 32px; border-radius: 16px; text-align: center; margin: 56px 0 32px;
+    }
+    .column-cta h3 { color: #fff; font-size: 1.4rem; margin: 0 0 16px; border: none; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+    .column-cta p { color: #fff; margin: 0 0 24px; font-size: 1rem; text-shadow: 0 1px 4px rgba(0,0,0,0.2); }
+    .column-cta .cta-btn {
+        display: inline-block; background: #00880F; color: #fff;
+        padding: 16px 40px; border-radius: 8px; font-size: 1.1rem; font-weight: 700;
+        text-decoration: none; box-shadow: 0 4px 20px rgba(0,136,15,0.4); transition: all 0.3s;
+    }
+    .column-cta .cta-btn:hover { background: #006e0c; transform: translateY(-2px); color: #fff; }
+    .column-related {
+        margin: 48px 0 0; padding: 32px; background: #f4f7fa; border-radius: 12px;
+    }
+    .column-related h3 { color: #003554; font-size: 1.1rem; margin: 0 0 16px; border: none; }
+    .column-related ul { list-style: none; margin: 0; padding: 0; }
+    .column-related li { margin: 0 0 10px; }
+    .column-related a { color: #006494; text-decoration: none; font-size: 0.95rem; }
+    .column-related a:hover { text-decoration: underline; }
+    .column-related a::before { content: "\U0001F4D6 "; }
+    @media (max-width: 768px) {
+        .column-hero { padding: 80px 16px 40px; }
+        .column-body { padding: 32px 16px 60px; }
+        .column-body h2 { font-size: 1.3rem; }
+        .column-body table { font-size: 0.82rem; }
+        .column-body table th, .column-body table td { padding: 8px 10px; }
+        .column-cta { padding: 32px 20px; }
+    }
+    </style>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "每次更换菜单都需要AI重新学习吗？", "acceptedAnswer": {"@type": "Answer", "text": "A. 无需大规模重新学习。只需在终端上拍摄新菜单的照片，AI便会自动学习。对日替菜单也可当日应对，每早备料时数分钟即可完成作业。"}}, {"@type": "Question", "name": "需要对现有的食堂布局做大幅改动吗？", "acceptedAnswer": {"@type": "Answer", "text": "A. 不需要。只需将AI结算台设置于现有的收银空间即可导入。由于采用无需服务器的边缘型设计，也无需大规模的网络工程。只要有电源与网络连接（有线或Wi-Fi）即可运行。"}}, {"@type": "Question", "name": "识别精度如何？", "acceptedAnswer": {"@type": "Answer", "text": "A. 餐具识别模式为99.99%以上，菜品识别模式为99%以上。不过，由于实际食堂当天提供的菜单数量有限（通常10～30品左右），识别对象被缩小，实际运营中精度近乎100%。万一发生误识别，也可在结算屏幕上修正。"}}, {"@type": "Question", "name": "发生停电或网络故障时如何处理？", "acceptedAnswer": {"@type": "Answer", "text": "A. 由于AI引擎搭载于结算台本体，网络故障时也可离线进行识别·结算。数据会在网络恢复后自动同步。"}}, {"@type": "Question", "name": "请告知导入成本的大致标准。", "acceptedAnswer": {"@type": "Answer", "text": "A. 因方式·台数·食堂规模而异。请先通过免费PoC确认实际效果，我们将根据其结果提出最优的构成与费用。"}}, {"@type": "Question", "name": "与RFID方式或计量方式有何区别？", "acceptedAnswer": {"@type": "Answer", "text": "A. AI方式最大的特点是无需特殊餐具（使用菜品识别模式时）以及对菜单变更的即时应对力。RFID方式读取速度最快，适合大规模食堂；计量方式最适合自助餐形式。详情请参阅以下比较文章。"}}]}</script>
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='../index.html'>
+                    <img src='../../assets/img/logo/logo.webp' alt='Izumo Soan' class='header-logo-img' style='height:80px;'>
+                </a>
+            </div>
+            <div class='language-switcher'>
+                <span class='lang-label'><i class="fas fa-globe"></i></span>
+                <select id='lang-select'>
+                    <option value='ja'>日本語</option>
+                    <option value='en'>English</option>
+                    <option value='zh' selected>中文</option>
+                </select>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
+            <nav>
+                <ul>
+                    <li><a href='../index.html'>首页</a></li>
+                    <li><a href='../services.html'>服务</a></li>
+                    <li><a href='../products.html'>产品</a></li>
+                    <li><a href='../case-studies.html'>案例展示</a></li>
+                    <li><a href='../about.html'>公司概况</a></li>
+                    <li><a href='../overseas-partner.html'>海外伙伴</a></li>
+                    <li><a href='../index.html#contact'>联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="column-hero">
+            <div class="column-breadcrumb">
+                <a href="../index.html">首页</a> &gt; <a href="index.html">专栏</a> &gt; 在企业食堂引入AI自动结算的完整指南
+            </div>
+            <h1>在企业食堂引入AI自动结算的完整指南<br><span style="font-size:0.7em;font-weight:600;">原理、费用与导入步骤</span></h1>
+        </section>
+
+        <article class="column-body">
+            <blockquote>
+<p><strong>本文要点</strong>
+- AI自动结算系统的原理与技术特点
+- 导入可获得的5项具体收益
+- 设备的选择方式（E716紧凑型 vs E718大屏型）
+- 5个导入步骤与免费PoC的活用方法
+- 常见问题解答</p>
+</blockquote>
+<p>「排队迟迟不见缓解」「结算人员的招聘跟不上」「手工计算出错导致投诉」——如果您是企业食堂的运营负责人，或许都曾为这些烦恼所困扰。</p>
+<p>从根本上解决这些问题的，正是<strong>运用AI图像识别的自动结算系统</strong>。只需放下餐盘，即可自动识别菜品并完成结算。无需员工插手，短短数秒即可完成收银。</p>
+<p>本文将从AI自动结算的原理到导入步骤进行全面讲解。为帮助您具体想象「能否在本公司食堂导入」，还将深入介绍技术规格与设备的选择方式。</p>
+<hr />
+<h2>企业食堂结算业务面临的3个课题</h2>
+<p>为理解AI自动结算的收益，我们先梳理传统手工结算中出现的典型课题。</p>
+<h3>课题1：高峰时段的排队——60分钟午休中有20分钟在排队等结算</h3>
+<p>企业食堂的使用集中在中午12点至13点的短短1小时。手工结算<strong>每人需30～60秒</strong>，因此在数百人规模的食堂，高峰时段会出现20分钟以上的排队。</p>
+<p>对员工而言，午休不仅是用餐，也是放松的时间。将这段宝贵时间的三分之一耗在排队上，是直接导致员工满意度下降的问题。</p>
+<h3>课题2：结算人员短缺与人工成本</h3>
+<p>食堂的收银台每个窗口需要<strong>1～2名员工</strong>。若是5个窗口的食堂，仅结算就必须每天确保5～10名员工。</p>
+<p>近年来，整个餐饮行业招聘兼职员工都变得困难，「即使招聘也无人应聘」「即便录用也很快辞职」的声音不断增多。加之人工成本上升，这成为压迫食堂运营成本的重大因素。</p>
+<h3>课题3：手工计算导致的差错与投诉</h3>
+<p>在菜品繁多的企业食堂，员工需目视确认品项，并手工或用POS收银机录入金额。在繁忙的高峰时段容易出现<strong>计算差错或误输入</strong>，成为「账目不对」「含有未点的菜品」等投诉的原因。</p>
+<p>此类差错会损害对食堂的信赖，也可能导致使用率下降。</p>
+<hr />
+<h2>什么是AI自动结算系统？基本原理</h2>
+<p>AI自动结算系统是运用<strong>基于人工智能的图像识别技术</strong>自动识别菜品并完成结算的智能设备。</p>
+<h3>AI摄像头瞬间识别菜品的原理</h3>
+<p>AI自动结算的核心，是搭载于结算台上的<strong>高精度AI摄像头（500万像素·单镜头彩色摄像头）</strong>。结算流程如下。</p>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>处理内容</th>
+<th>所需时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>STEP 1</strong></td>
+<td>用户将餐盘放到结算区域</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>STEP 2</strong></td>
+<td>AI摄像头拍摄菜品图像，图像识别算法判定品项与数量</td>
+<td>瞬时</td>
+</tr>
+<tr>
+<td><strong>STEP 3</strong></td>
+<td>同时，人脸识别摄像头识别用户面部，完成本人确认</td>
+<td>瞬时</td>
+</tr>
+<tr>
+<td><strong>STEP 4</strong></td>
+<td>依据识别结果自动计算合计金额，并显示在屏幕上</td>
+<td>瞬时</td>
+</tr>
+<tr>
+<td><strong>STEP 5</strong></td>
+<td>用户选择支付方式并完成支付</td>
+<td>1秒</td>
+</tr>
+</tbody>
+</table>
+<p><strong>从放下餐盘到完成结算，总计约1～2秒。</strong> AI自动结算系统让<strong>两个摄像头同时运行</strong>。一个是用于菜品识别的AI摄像头，另一个是用于人脸识别的红外双目摄像头。由于菜品识别与本人确认并行处理，放下餐盘的瞬间所有处理即告完成，仅需1秒即可结算。与传统手工结算（30～60秒）相比，结算时间<strong>最多可缩短至1/30</strong>。</p>
+<h3>两种识别模式——精度99%～99.99%</h3>
+<p>AI自动结算系统提供可根据食堂运营选择的<strong>两种识别模式</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>识别对象</th>
+<th>精度</th>
+<th>餐具的约束</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>餐具识别模式</strong></td>
+<td>餐具的形状·颜色·尺寸</td>
+<td><strong>99.99%以上</strong></td>
+<td>需要专用餐具</td>
+</tr>
+<tr>
+<td><strong>菜品识别模式</strong></td>
+<td>菜品图像本身</td>
+<td><strong>99%以上</strong></td>
+<td><strong>无需（普通餐具即可）</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>餐具识别模式</strong>：通过使用专用餐具发挥最高精度。因以餐具的形状与颜色的组合判定品项，不受摆盘或分量差异的影响。</li>
+<li><strong>菜品识别模式</strong>：可沿用普通餐具导入，因此<strong>餐具更换成本为零</strong>。即使是日替菜单，也只需在终端上拍摄新菜单的照片，AI便会自动学习。理论上的识别精度为99%，但在实际食堂中<strong>当天提供的菜单数量通常仅为10～30品左右，较为有限</strong>，因此识别对象被缩小，<strong>实际运营中可维持近乎100%的精度</strong>。</li>
+</ul>
+<blockquote>
+<p>💡 <strong>该选哪种？</strong> 若可更换餐具，用「餐具识别模式」确保最高精度。若想直接沿用现有餐具，「菜品识别模式」更为便捷。</p>
+</blockquote>
+<h3>三种支付方式</h3>
+<p>AI结算台支持以下<strong>三种支付方式</strong>。可根据用户便利性与设施的安全要求，单独或组合多种方式运营。</p>
+<table>
+<thead>
+<tr>
+<th>支付方式</th>
+<th>原理</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>人脸识别</strong></td>
+<td>用红外双目摄像头（200万像素）进行本人确认</td>
+<td>免手持支付。搭载针对照片·3D模型的防冒用功能</td>
+</tr>
+<tr>
+<td><strong>QR码</strong></td>
+<td>支持正扫（用户出示）·反扫（终端读取）</td>
+<td>用智能手机便捷支付</td>
+</tr>
+<tr>
+<td><strong>IC卡</strong></td>
+<td>非接触M1/CPU，符合ISO/IEC14443</td>
+<td>现有员工证·IC卡可直接使用</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>导入AI结算的5项收益</h2>
+<h3>① 结算时间最多缩短至1/30——从根本上消除排队</h3>
+<p>过去需30～60秒的结算，如今<strong>仅需1～2秒</strong>即可完成。由于AI自动结算系统让菜品识别摄像头与人脸识别摄像头同时运行，放下餐盘的瞬间即并行处理菜品识别与本人确认。高峰时段的排队被大幅消除，将员工的午休还原为本应的「休息时间」。</p>
+<p>由于1台AI结算台具备约相当于3台以上传统收银台的处理能力，结算台的设置台数本身也可削减。</p>
+<h3>② 无需结算人员——大幅削减人工成本</h3>
+<p>AI结算为自助方式。从用户放下餐盘到完成支付，<strong>完全无需员工插手</strong>。此前配置于各窗口的1～2名结算人员，可转向烹饪或清扫等其他业务。</p>
+<p>若5个窗口的食堂原本配置5～10名结算人员，那么这些人工成本便整体成为削减对象。</p>
+<h3>③ 结算差错为零——AI的高精度识别</h3>
+<p>AI的识别精度为<strong>99%～99.99%</strong>。人工目视·手工计算难以避免的计算差错或误输入，几乎降为零。</p>
+<p>万一识别出错，也可在结算屏幕上<strong>修正订单</strong>。管理终端一侧也具备检测·修正异常订单的功能，因此可将结算故障的风险降至最低。</p>
+<h3>④ 销售数据的自动汇总——实时经营分析</h3>
+<p>AI结算系统自动记录所有结算数据。可从PC管理终端实时确认的信息如下。</p>
+<table>
+<thead>
+<tr>
+<th>数据项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>仪表盘</strong></td>
+<td>实时显示当天的销售额·订单数·各菜品销售数量</td>
+</tr>
+<tr>
+<td><strong>销售报表</strong></td>
+<td>按日·周·月，进而按用餐时段（早/午/晚）的汇总</td>
+</tr>
+<tr>
+<td><strong>菜品排行</strong></td>
+<td>热门菜品·冷门菜品的销售业绩</td>
+</tr>
+<tr>
+<td><strong>异常订单警报</strong></td>
+<td>自动检测与通常不同模式的订单</td>
+</tr>
+<tr>
+<td><strong>营养分析</strong></td>
+<td>基于用户消费数据的营养均衡分析</td>
+</tr>
+</tbody>
+</table>
+<p>此前依靠手写或Excel管理的销售数据得以自动积累，因此<strong>基于数据的经营决策</strong>（菜单改善·价格调整·备料量的优化）成为可能。</p>
+<h3>⑤ 减少食品损耗——基于销售数据的备品优化</h3>
+<p>一旦能够实时掌握各菜品的销售业绩，「哪种菜品能卖出多少」的预测精度便会大幅提升。</p>
+<p>通过<strong>基于销售数据优化备料量</strong>，而非依赖经验与直觉，可减少因备料过多导致的食品损耗。作为对SDGs的响应也颇为有效。</p>
+<hr />
+<h2>AI结算台的设备选定｜E716 vs E718</h2>
+<p>本公司所经营的AI结算台，备有适应食堂规模与设置环境的<strong>两种型号</strong>。</p>
+<h3>E716——紧凑的双屏型号</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>规格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>显示屏</strong></td>
+<td>正面15.6英寸＋背面15.6英寸（1080P，支持多点触控）</td>
+</tr>
+<tr>
+<td><strong>CPU</strong></td>
+<td>64位8核处理器</td>
+</tr>
+<tr>
+<td><strong>内存/存储</strong></td>
+<td>2GB DDR3 / 16GB Flash</td>
+</tr>
+<tr>
+<td><strong>AI摄像头</strong></td>
+<td>500万像素单镜头彩色摄像头</td>
+</tr>
+<tr>
+<td><strong>人脸识别摄像头</strong></td>
+<td>红外双目摄像头（200万像素）</td>
+</tr>
+<tr>
+<td><strong>支付支持</strong></td>
+<td>人脸识别·QR码·IC卡</td>
+</tr>
+<tr>
+<td><strong>通信</strong></td>
+<td>以太网（10/100Mbps）、Wi-Fi（2.4GHz）、Bluetooth 4.0</td>
+</tr>
+<tr>
+<td><strong>语音提示</strong></td>
+<td>真人语音引导</td>
+</tr>
+<tr>
+<td><strong>外部连接</strong></td>
+<td>RJ45×1、12V电源×1</td>
+</tr>
+<tr>
+<td><strong>电源</strong></td>
+<td>AC220V输入 / DC12V 5A输出</td>
+</tr>
+</tbody>
+</table>
+<p><strong>适合这样的食堂</strong>：中等规模的企业食堂、设置空间受限的设施</p>
+<h3>E718——大屏前台型号</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>规格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>显示屏</strong></td>
+<td>正面21.5英寸（大型显示）＋背面15.6英寸</td>
+</tr>
+<tr>
+<td><strong>其他规格</strong></td>
+<td>与E716同等（CPU·摄像头·支付·通信）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>适合这样的食堂</strong>：大规模食堂、重视屏幕可视性的设施、老年用户较多的设施</p>
+<blockquote>
+<p>💡 <strong>该选哪种？</strong> 若难以取舍，建议通过免费PoC实际设置两种型号进行比较。</p>
+</blockquote>
+<hr />
+<h2>AI结算的导入步骤｜5个阶段</h2>
+<h3>STEP 1：现状访谈＆食堂布局调查</h3>
+<p>首先对食堂的现状进行详细访谈。</p>
+<ul>
+<li>每天的餐数（规模感）</li>
+<li>现有的布局与结算动线</li>
+<li>菜单构成（固定 / 日替 / 混合）</li>
+<li>现有的支付方式（现金 / IC卡 / 其他）</li>
+<li>电源·网络环境</li>
+</ul>
+<h3>STEP 2：最优设备构成的提案</h3>
+<p>基于访谈结果，提出最优的设备构成。</p>
+<ul>
+<li><strong>设备型号</strong>：E716（紧凑型）或 E718（大屏型）</li>
+<li><strong>识别模式</strong>：餐具识别 或 菜品识别</li>
+<li><strong>设置台数</strong>：根据餐数与高峰时段测算</li>
+<li><strong>支付方式</strong>：人脸识别 / QR / IC卡（可多种组合）</li>
+</ul>
+<h3>STEP 3：免费PoC（概念验证）</h3>
+<p>在正式导入前，<strong>在实际的食堂环境中设置设备进行试运营</strong>。</p>
+<ul>
+<li>设备的搬入·设置·布线由本公司负责</li>
+<li>菜单的登记·AI学习的初始设定也由本公司支持</li>
+<li>实施测试期间的效果测定（结算时间的缩短率、用户的反应等）</li>
+<li><strong>不产生任何费用</strong></li>
+</ul>
+<blockquote>
+<p>在PoC期间，可用实际数据确认「结算时间能缩短多少」「用户能否顺畅操作」。</p>
+</blockquote>
+<h3>STEP 4：菜单图像的登记＆AI学习</h3>
+<p>正式导入确定后，让AI学习全部菜单的图像。</p>
+<ul>
+<li><strong>菜品识别模式</strong>：只需在终端上拍摄各菜单的照片。每品数秒即可完成</li>
+<li><strong>餐具识别模式</strong>：将餐具的形状·颜色登记至AI</li>
+</ul>
+<p>即便是日替菜单，也只需在每早备料时由员工在终端拍摄新菜单，即可即时应对。</p>
+<h3>STEP 5：正式运行＆持续支持</h3>
+<p>正式运行后，也持续提供运营支持。</p>
+<ul>
+<li>设备的定期维护</li>
+<li>AI识别精度的监测与改善</li>
+<li>管理界面的操作培训</li>
+<li>销售数据的活用建议</li>
+</ul>
+<hr />
+<h2>常见问题（FAQ）</h2>
+<h3>Q. 每次更换菜单都需要AI重新学习吗？</h3>
+<p><strong>A.</strong> 无需大规模重新学习。只需在终端上拍摄新菜单的照片，AI便会自动学习。对日替菜单也可当日应对，每早备料时数分钟即可完成作业。</p>
+<h3>Q. 需要对现有的食堂布局做大幅改动吗？</h3>
+<p><strong>A.</strong> 不需要。只需将AI结算台设置于现有的收银空间即可导入。由于采用无需服务器的边缘型设计，也无需大规模的网络工程。只要有电源与网络连接（有线或Wi-Fi）即可运行。</p>
+<h3>Q. 识别精度如何？</h3>
+<p><strong>A.</strong> 餐具识别模式为<strong>99.99%以上</strong>，菜品识别模式为<strong>99%以上</strong>。不过，由于实际食堂当天提供的菜单数量有限（通常10～30品左右），识别对象被缩小，<strong>实际运营中精度近乎100%</strong>。万一发生误识别，也可在结算屏幕上修正。</p>
+<h3>Q. 发生停电或网络故障时如何处理？</h3>
+<p><strong>A.</strong> 由于AI引擎搭载于结算台本体，网络故障时也可离线进行识别·结算。数据会在网络恢复后自动同步。</p>
+<h3>Q. 请告知导入成本的大致标准。</h3>
+<p><strong>A.</strong> 因方式·台数·食堂规模而异。请先通过<strong>免费PoC</strong>确认实际效果，我们将根据其结果提出最优的构成与费用。</p>
+<h3>Q. 与RFID方式或计量方式有何区别？</h3>
+<p><strong>A.</strong> AI方式最大的特点是<strong>无需特殊餐具</strong>（使用菜品识别模式时）以及<strong>对菜单变更的即时应对力</strong>。RFID方式读取速度最快，适合大规模食堂；计量方式最适合自助餐形式。详情请参阅以下比较文章。</p>
+<blockquote>
+<p>📖 <strong>相关文章</strong>：<a href="cafeteria-auto-settlement.html">食堂自动结算系统的彻底比较｜解读AI·RFID·计量三种方式</a></p>
+</blockquote>
+<hr />
+<h2>总结——先用免费PoC切实感受效果</h2>
+<p>企业食堂的AI自动结算系统，是同时实现<strong>消除排队·削减人工成本·结算差错为零·数据经营·减少食品损耗</strong>这5项收益的食堂DX核心解决方案。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>Before（手工结算）</th>
+<th>After（AI自动结算）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>结算时间/人</td>
+<td>30～60秒</td>
+<td><strong>1～2秒</strong></td>
+</tr>
+<tr>
+<td>结算人员/窗口</td>
+<td>1～2名</td>
+<td><strong>0名（自助）</strong></td>
+</tr>
+<tr>
+<td>结算差错率</td>
+<td>3～5%</td>
+<td><strong>0.01%以下</strong></td>
+</tr>
+<tr>
+<td>销售数据</td>
+<td>手工汇总（次日以后）</td>
+<td><strong>实时自动汇总</strong></td>
+</tr>
+<tr>
+<td>食品损耗</td>
+<td>基于经验的备料</td>
+<td><strong>数据优化减少15～30%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>「在本公司食堂真的有效吗？」——回答这一疑问的最佳方法，就是<strong>在实际的食堂试一试</strong>。</p>
+<p>本公司实施<strong>免费PoC</strong>，将AI结算台带入实际食堂进行试运营。从设备的设置到回收均由本公司负责，不产生任何费用。</p>
+<hr />
+
+            <div class="column-cta">
+                <h3>📞 免费PoC申请</h3>
+                <p>AI图像识别·RFID·计量结算——可在真实环境中测试最适合贵食堂的方式。<br>
+                设备的搬入·设置·回收均由我方负责，不产生任何费用。</p>
+                <a href="../lp-smart-cafeteria.html" class="cta-btn">申请免费PoC →</a>
+            </div>
+
+            <div class="column-related">
+                <h3>相关内容</h3>
+                <ul>
+                    
+                    <li><a href="rfid-vs-ai.html">食堂结算中RFID识别与AI图像识别的比较：从精度、成本、灵活性看最优选择</a></li><li><a href="cafeteria-auto-settlement.html">食堂自动结算系统的彻底比较｜解读AI·RFID·计量三种方式</a></li>
+                    <li><a href="ai-register.html">什么是食堂AI收银？图像识别改变结算的新常识</a></li>
+                    <li><a href="rfid-settlement.html">食堂RFID结算系统完整解读</a></li>
+                    <li><a href="cafeteria-queue.html">消除企业食堂排队的5种方法</a></li>
+                    <li><a href="ai-vs-rfid.html">企业食堂收银人手不足，用「无人结算」解决</a></li>
+                    <li><a href="cafeteria-dx.html">企业食堂DX入门｜摆脱模拟化运营的3个步骤</a></li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../../assets/img/logo/logo.webp' alt='Izumo Soan'>
+                    <p class='logo-desp'>技术赋能现场。</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>菜单</h4>
+                    <ul>
+                        <li><a href='../index.html'>首页</a></li>
+                        <li><a href='../about.html'>公司概况</a></li>
+                        <li><a href='../services.html'>服务</a></li>
+                        <li><a href='../case-studies.html'>案例</a></li>
+                        <li><a href='../overseas-partner.html'>海外厂商伙伴</a></li>
+                        <li><a href='index.html'>专栏</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>产品信息</h4>
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='../smart-cafeteria.html'>
+                            <span>智慧食堂</span>
+                            <small>图像识别·RFID·计量结算</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='../products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>智能现场的运维改善平台</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 出雲創安 Izumo Soan. All rights reserved. ｜ <a href='../privacy.html' style='color:inherit;text-decoration:underline;'>隐私政策</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src='../../assets/js/main.js'></script>
+</body>
+</html>
