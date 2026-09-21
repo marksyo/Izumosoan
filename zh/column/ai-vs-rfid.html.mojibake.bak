@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang='zh'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>\u98df\u5802\u7ed3\u8d26\u4eba\u624b\u4e0d\u8db3\u7528\u201c\u65e0\u4eba\u7ed3\u8d26\u201d\u89e3\u51b3\uff5cAI\u4e0eRFID\u5b9e\u529b\u6bd4\u62fc\uff5c\u51fa\u96f2\u5275\u5b89\u4e13\u680f</title>
+    <meta name='description' content='\u98df\u5802\u7ed3\u8d26\u5458\u5de5\u62db\u4e0d\u5230\u2014\u2014\u4ece\u6839\u672c\u4e0a\u89e3\u51b3\u8fd9\u79cd\u4eba\u624b\u4e0d\u8db3\u56f0\u6270\u7684\u201c\u65e0\u4eba\u7ed3\u8d26\u201d\u4e24\u5927\u65b9\u6848\uff08AI\u56fe\u50cf\u8bc6\u522b\u00b7RFID\uff09\u5f7b\u5e95\u6bd4\u8f83\u3002\u4ece\u7ed3\u8d26\u901f\u5ea6\u3001\u8bc6\u522b\u7cbe\u5ea6\u3001\u6210\u672c\u5230\u63a8\u8350\u8bbe\u65bd\u7c7b\u578b\u5168\u9762\u8bb2\u89e3\u3002\u514d\u8d39PoC\u5b9e\u65bd\u4e2d\u3002'>
+    <meta name='keywords' content='\u98df\u5802\u7ed3\u8d26 \u4eba\u624b\u4e0d\u8db3, \u98df\u5802\u7ed3\u8d26 \u65e0\u4eba\u5316, \u98df\u5802 \u7701\u4eba\u5316, \u98df\u5802 \u5458\u5de5\u4e0d\u8db3, \u98df\u5802 \u65e0\u4eba\u7ed3\u8d26, \u4f01\u4e1a\u98df\u5802 \u4eba\u5de5\u6210\u672c \u524a\u51cf'>
+    <link rel="canonical" href="https://izumosoan.com/zh/column/ai-vs-rfid.html">
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/column/ai-vs-rfid.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/column/ai-vs-rfid.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/column/ai-vs-rfid.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/column/ai-vs-rfid.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="\u51fa\u96f2\u5275\u5b89 Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/zh/column/ai-vs-rfid.html">
+    <meta property="og:title" content="\u98df\u5802\u7ed3\u8d26\u4eba\u624b\u4e0d\u8db3\u7528\u201c\u65e0\u4eba\u7ed3\u8d26\u201d\u89e3\u51b3\uff5cAI\u4e0eRFID\u5b9e\u529b\u6bd4\u62fc">
+    <meta property="og:description" content="\u98df\u5802\u7ed3\u8d26\u5458\u5de5\u62db\u4e0d\u5230\u2014\u2014\u4ece\u6839\u672c\u4e0a\u89e3\u51b3\u8fd9\u79cd\u4eba\u624b\u4e0d\u8db3\u56f0\u6270\u7684\u201c\u65e0\u4eba\u7ed3\u8d26\u201d\u4e24\u5927\u65b9\u6848\uff08AI\u56fe\u50cf\u8bc6\u522b\u00b7RFID\uff09\u5f7b\u5e95\u6bd4\u8f83\u3002\u4ece\u7ed3\u8d26\u901f\u5ea6\u3001\u8bc6\u522b\u7cbe\u5ea6\u3001\u6210\u672c\u5230\u63a8\u8350\u8bbe\u65bd\u7c7b\u578b\u5168\u9762\u8bb2\u89e3\u3002\u514d\u8d39PoC\u5b9e\u65bd\u4e2d\u3002">
+    <meta property="og:locale" content="zh_CN">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "\u9996\u9875", "item": "https://izumosoan.com/zh/index.html"}, {"@type": "ListItem", "position": 2, "name": "\u4e13\u680f", "item": "https://izumosoan.com/ja/column/index.html"}, {"@type": "ListItem", "position": 3, "name": "\u98df\u5802\u7ed3\u8d26\u4eba\u624b\u4e0d\u8db3\u7528\u201c\u65e0\u4eba\u7ed3\u8d26\u201d\u89e3\u51b3\uff5cAI\u4e0eRFID\u5b9e\u529b\u6bd4\u62fc"}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "\u98df\u5802\u7ed3\u8d26\u4eba\u624b\u4e0d\u8db3\u7528\u201c\u65e0\u4eba\u7ed3\u8d26\u201d\u89e3\u51b3\uff5cAI\u4e0eRFID\u5b9e\u529b\u6bd4\u62fc", "description": "\u98df\u5802\u7ed3\u8d26\u5458\u5de5\u62db\u4e0d\u5230\u2014\u2014\u4ece\u6839\u672c\u4e0a\u89e3\u51b3\u8fd9\u79cd\u4eba\u624b\u4e0d\u8db3\u56f0\u6270\u7684\u201c\u65e0\u4eba\u7ed3\u8d26\u201d\u4e24\u5927\u65b9\u6848\uff08AI\u56fe\u50cf\u8bc6\u522b\u00b7RFID\uff09\u5f7b\u5e95\u6bd4\u8f83\u3002\u4ece\u7ed3\u8d26\u901f\u5ea6\u3001\u8bc6\u522b\u7cbe\u5ea6\u3001\u6210\u672c\u5230\u63a8\u8350\u8bbe\u65bd\u7c7b\u578b\u5168\u9762\u8bb2\u89e3\u3002\u514d\u8d39PoC\u5b9e\u65bd\u4e2d\u3002", "inLanguage": "zh", "datePublished": "2026-09-20", "dateModified": "2026-09-20", "articleSection": "\u667a\u6167\u98df\u5802\u4e13\u680f", "keywords": "\u98df\u5802\u7ed3\u8d26 \u4eba\u624b\u4e0d\u8db3, \u98df\u5802\u7ed3\u8d26 \u65e0\u4eba\u5316, \u98df\u5802 \u65e0\u4eba\u7ed3\u8d26, \u4f01\u4e1a\u98df\u5802 \u4eba\u5de5\u6210\u672c \u524a\u51cf", "author": {"@type": "Organization", "name": "\u51fa\u96f2\u5275\u5b89 Izumo Soan", "url": "https://izumosoan.com/zh/about.html"}, "publisher": {"@type": "Organization", "name": "\u51fa\u96f2\u5275\u5b89 Izumo Soan", "logo": {"@type": "ImageObject", "url": "https://izumosoan.com/assets/img/logo/logo.webp"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://izumosoan.com/zh/column/ai-vs-rfid.html"}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../../assets/css/style.min.css'>
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo/favicon.ico">
+    <style>
+    .column-hero {
+        background: linear-gradient(135deg, #001d30 0%, #003554 100%);
+        padding: 100px 20px 60px; color: #fff; text-align: center;
+    }
+    .column-hero h1 {
+        font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 800; line-height: 1.4;
+        max-width: 800px; margin: 0 auto 16px; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .column-breadcrumb { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 20px; }
+    .column-breadcrumb a { color: rgba(255,255,255,0.95); text-decoration: none; }
+    .column-breadcrumb a:hover { text-decoration: underline; }
+    .column-body {
+        max-width: 820px; margin: 0 auto; padding: 48px 20px 80px;
+        font-size: 1rem; line-height: 1.85; color: #1e293b;
+    }
+    .column-body h2 {
+        font-size: 1.5rem; font-weight: 700; color: #003554;
+        margin: 56px 0 20px; padding-bottom: 10px; border-bottom: 3px solid #006494;
+    }
+    .column-body h3 { font-size: 1.2rem; font-weight: 700; color: #004a77; margin: 36px 0 14px; }
+    .column-body h4 { font-size: 1.05rem; font-weight: 700; color: #333; margin: 28px 0 10px; }
+    .column-body p { margin: 0 0 18px; }
+    .column-body strong { color: #003554; }
+    .column-body blockquote {
+        background: #f0f7ff; border-left: 4px solid #006494;
+        padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem;
+    }
+    .column-body blockquote p { margin: 0 0 8px; }
+    .column-body blockquote p:last-child { margin: 0; }
+    .column-body table {
+        width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.92rem;
+    }
+    .column-body table th {
+        background: #003554; color: #fff; padding: 12px 16px; text-align: left; font-weight: 600;
+    }
+    .column-body table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+    .column-body table tr:nth-child(even) { background: #f8fafc; }
+    .column-body table tr:hover { background: #f0f7ff; }
+    .column-body ul, .column-body ol { margin: 0 0 18px 20px; }
+    .column-body li { margin: 0 0 8px; }
+    .column-body a { color: #006494; text-decoration: underline; }
+    .column-body a:hover { color: #003554; }
+    .column-body hr { border: none; border-top: 1px solid #e2e8f0; margin: 48px 0; }
+    .column-cta {
+        background: linear-gradient(135deg, #001d30, #003554); color: #fff;
+        padding: 48px 32px; border-radius: 16px; text-align: center; margin: 56px 0 32px;
+    }
+    .column-cta h3 { color: #fff; font-size: 1.4rem; margin: 0 0 16px; border: none; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+    .column-cta p { color: #fff; margin: 0 0 24px; font-size: 1rem; text-shadow: 0 1px 4px rgba(0,0,0,0.2); }
+    .column-cta .cta-btn {
+        display: inline-block; background: #00880F; color: #fff;
+        padding: 16px 40px; border-radius: 8px; font-size: 1.1rem; font-weight: 700;
+        text-decoration: none; box-shadow: 0 4px 20px rgba(0,136,15,0.4); transition: all 0.3s;
+    }
+    .column-cta .cta-btn:hover { background: #006e0c; transform: translateY(-2px); color: #fff; }
+    .column-related {
+        margin: 48px 0 0; padding: 32px; background: #f4f7fa; border-radius: 12px;
+    }
+    .column-related h3 { color: #003554; font-size: 1.1rem; margin: 0 0 16px; border: none; }
+    .column-related ul { list-style: none; margin: 0; padding: 0; }
+    .column-related li { margin: 0 0 10px; }
+    .column-related a { color: #006494; text-decoration: none; font-size: 0.95rem; }
+    .column-related a:hover { text-decoration: underline; }
+    .column-related a::before { content: "\1F4D6 "; }
+    @media (max-width: 768px) {
+        .column-hero { padding: 80px 16px 40px; }
+        .column-body { padding: 32px 16px 60px; }
+        .column-body h2 { font-size: 1.3rem; }
+        .column-body table { font-size: 0.82rem; }
+        .column-body table th, .column-body table td { padding: 8px 10px; }
+        .column-cta { padding: 32px 20px; }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='../index.html'>
+                    <img src='../../assets/img/logo/logo.webp' alt='Izumo Soan' class='header-logo-img' style='height:80px;'>
+                </a>
+            </div>
+            <div class='language-switcher'>
+                <span class='lang-label'><i class="fas fa-globe"></i></span>
+                <select id='lang-select'>
+                    <option value='ja'>\u65e5\u672c\u8a9e</option>
+                    <option value='en'>English</option>
+                    <option value='zh' selected>\u4e2d\u6587</option>
+                </select>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>\u2630</button>
+            <nav>
+                <ul>
+                    <li><a href='../index.html'>\u9996\u9875</a></li>
+                    <li><a href='../services.html'>\u670d\u52a1</a></li>
+                    <li><a href='../products.html'>\u4ea7\u54c1</a></li>
+                    <li><a href='../case-studies.html'>\u6848\u4f8b\u5c55\u793a</a></li>
+                    <li><a href='../about.html'>\u516c\u53f8\u6982\u51b5</a></li>
+                    <li><a href='../overseas-partner.html'>\u6d77\u5916\u4f19\u4f34</a></li>
+                    <li><a href='../index.html#contact'>\u8054\u7cfb\u6211\u4eec</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="column-hero">
+            <div class="column-breadcrumb">
+                <a href="../index.html">\u9996\u9875</a> &gt; <a href="index.html">\u4e13\u680f</a> &gt; \u65e0\u4eba\u7ed3\u8d26\u2014\u2014AI\u4e0eRFID\u5b9e\u529b\u6bd4\u62fc
+            </div>
+            <h1>\u98df\u5802\u7ed3\u8d26\u4eba\u624b\u4e0d\u8db3\u7528\u201c\u65e0\u4eba\u7ed3\u8d26\u201d\u89e3\u51b3\u2014\u2014AI\u4e0eRFID\u5b9e\u529b\u6bd4\u62fc</h1>
+        </section>
+
+        <article class="column-body">
+            <blockquote>
+<p><strong>\u672c\u6587\u8981\u70b9</strong>
+- \u5b9e\u73b0\u201c\u65e0\u4eba\u7ed3\u8d26\u201d\u7684\u4e24\u5927\u65b9\u6848\uff08AI\u56fe\u50cf\u8bc6\u522b\u00b7RFID\uff09\u7684\u539f\u7406\u4e0e\u7279\u70b9
+- AI\u7ed3\u8d26 vs RFID\u7ed3\u8d26\u6bd4\u8f83\u8868\u2014\u2014\u7ed3\u8d26\u901f\u5ea6\u3001\u7cbe\u5ea6\u3001\u6210\u672c\u3001\u63a8\u8350\u8bbe\u65bd
+- \u9664\u7ed3\u8d26\u4eba\u5de5\u6210\u672c\u4e4b\u5916\u8fd8\u80fd\u524a\u51cf\u7684\u201c\u9690\u5f62\u6210\u672c\u201d
+- \u5982\u4f55\u7528\u514d\u8d39PoC\u9a8c\u8bc1\u6548\u679c</p>
+</blockquote>
+<p>\u672c\u6587\u5c06\u5bf9\u5b9e\u73b0\u65e0\u4eba\u7ed3\u8d26\u7684<strong>AI\u56fe\u50cf\u8bc6\u522b\u7ed3\u8d26</strong>\u4e0e<strong>RFID\u7ed3\u8d26</strong>\u4e24\u5927\u65b9\u6848\u8fdb\u884c\u5f7b\u5e95\u6bd4\u8f83\u3002\u4f5c\u4e3a\u5224\u65ad\u54ea\u79cd\u65b9\u5f0f\u6700\u9002\u5408\u81ea\u5bb6\u98df\u5802\u7684\u53c2\u8003\uff0c\u6b22\u8fce\u60a8\u9605\u8bfb\u5230\u6700\u540e\u3002</p>
+<hr />
+<h2>\u201c\u65e0\u4eba\u7ed3\u8d26\u201d\u7684\u4e24\u5927\u65b9\u6848</h2>
+<p>\u4ece\u6839\u672c\u4e0a\u89e3\u51b3\u98df\u5802\u7ed3\u8d26\u4eba\u624b\u4e0d\u8db3\u7684\u624b\u6bb5\uff0c\u5c31\u662f\u201c<strong>\u65e0\u4eba\u7ed3\u8d26</strong>\u201d\u3002\u76ee\u524d\u5df2\u5b9e\u7528\u5316\u7684\u65e0\u4eba\u7ed3\u8d26\u65b9\u5f0f\u5927\u81f4\u6709\u4e24\u79cd\u3002\u4e0b\u9762\u8bb2\u89e3\u5404\u81ea\u7684\u539f\u7406\u4e0e\u7279\u70b9\u3002</p>
+<h3>AI\u56fe\u50cf\u8bc6\u522b\u7ed3\u8d26\u2014\u2014\u6444\u50cf\u5934\u81ea\u52a8\u8bc6\u522b\u83dc\u54c1</h3>
+<p><strong>\u539f\u7406</strong>\uff1a\u7ed3\u8d26\u53f0\u4e0a\u642d\u8f7d\u7684<strong>AI\u6444\u50cf\u5934\uff08500\u4e07\u50cf\u7d20\u00b7\u5355\u76ee\u5f69\u8272\u6444\u50cf\u5934\uff09</strong>\u62cd\u6444\u6258\u76d8\u4e0a\u7684\u83dc\u54c1\uff0c\u56fe\u50cf\u8bc6\u522b\u7b97\u6cd5\u81ea\u52a8\u5224\u5b9a\u83dc\u54c1\u4e0e\u6570\u91cf\u3002\u57fa\u4e8e\u8bc6\u522b\u7ed3\u679c\u77ac\u65f6\u8ba1\u7b97\u91d1\u989d\u3002</p>
+<p><strong>\u4e09\u5927\u8981\u70b9</strong>\uff1a</p>
+<p><strong>\u2460 \u65e0\u9700\u4e13\u7528\u9910\u5177\uff08\u83dc\u54c1\u8bc6\u522b\u6a21\u5f0f\uff09</strong>
+\u56e0\u53ef\u76f4\u63a5\u4f7f\u7528\u666e\u901a\u9910\u5177\u5bfc\u5165\uff0c<strong>\u9910\u5177\u66f4\u6362\u6210\u672c\u4e3a\u96f6</strong>\u3002\u51e0\u4e4e\u65e0\u9700\u6539\u53d8\u73b0\u6709\u98df\u5802\u5e03\u5c40\u5373\u53ef\u5bfc\u5165\u3002\u83dc\u54c1\u8bc6\u522b\u6a21\u5f0f\u4e0b\u8bc6\u522b\u7cbe\u5ea6\u4e3a<strong>99%\u4ee5\u4e0a</strong>\u3002\u82e5\u9009\u62e9\u4f9d\u9910\u5177\u5f62\u72b6\u00b7\u989c\u8272\u5224\u5b9a\u7684\u201c\u9910\u5177\u8bc6\u522b\u6a21\u5f0f\u201d\uff0c\u8fd8\u53ef\u5b9e\u73b0<strong>99.99%\u4ee5\u4e0a</strong>\u7684\u7cbe\u5ea6\u3002\u6b64\u5916\uff0c\u5b9e\u9645\u98df\u5802\u5f53\u65e5\u63d0\u4f9b\u7684\u83dc\u5355\u6570\u91cf\u4ec5\u4e3a10\uff5e30\u9053\u5de6\u53f3\u3001\u8f83\u4e3a\u6709\u9650\uff0c\u56e0\u6b64\u5373\u4f7f\u5728\u83dc\u54c1\u8bc6\u522b\u6a21\u5f0f\u4e0b\uff0c<strong>\u5b9e\u9645\u8fd0\u8425\u4e2d\u4e5f\u80fd\u4fdd\u6301\u51e0\u4e4e100%\u7684\u7cbe\u5ea6</strong>\u3002</p>
+<p><strong>\u2461 \u767b\u8bb0\u83dc\u5355\u53ea\u9700\u7528\u6444\u50cf\u5934\u62cd\u6444</strong>
+\u65b0\u589e\u83dc\u5355\u65f6\uff0c\u53ea\u9700\u5728\u7ec8\u7aef\u4e0a\u62cd\u6444\u83dc\u54c1\u7167\u7247\uff0cAI\u4fbf\u4f1a\u81ea\u52a8\u5b66\u4e60\u3002\u5373\u4f7f\u662f\u65e5\u66ff\u83dc\u5355\u4e5f\u80fd\u5f53\u5929\u5e94\u5bf9\uff0c\u6bcf\u65e9\u5907\u9910\u65f6\u51e0\u5206\u949f\u5373\u53ef\u5b8c\u6210\u767b\u8bb0\u4f5c\u4e1a\u3002</p>
+<p><strong>\u2462 \u6291\u5236\u5bfc\u5165\u6210\u672c</strong>
+\u6240\u9700\u8bbe\u5907\u4ec5\u4e3aAI\u7ed3\u8d26\u53f0\u3002\u7531\u4e8eAI\u5f15\u64ce\u91c7\u7528\u642d\u8f7d\u4e8e\u7ed3\u8d26\u53f0\u672c\u4f53\u7684\u8fb9\u7f18\u578b\u8bbe\u8ba1\uff0c\u65e0\u9700\u8bbe\u7f6e\u5927\u578b\u670d\u52a1\u5668\u3002\u53ef\u5c06\u521d\u671f\u6210\u672c\u63a7\u5236\u5728\u6700\u4f4e\u9650\u5ea6\u3002</p>
+<p><strong>\u63a8\u8350\u7ed9\u8fd9\u7c7b\u98df\u5802</strong>\uff1a\u65e5\u66ff\u83dc\u5355\u4e30\u5bcc\u7684\u4f01\u4e1a\u98df\u5802\u3001\u591a\u83dc\u54c1\u98df\u5802\u3001\u96be\u4ee5\u66f4\u6362\u9910\u5177\u7684\u8bbe\u65bd</p>
+<blockquote>
+<p>\U0001F4D6 <strong>\u76f8\u5173\u6587\u7ae0</strong>\uff1a<a href="ai-register.html">\u4ec0\u4e48\u662f\u98df\u5802AI\u6536\u94f6\uff1f\u56fe\u50cf\u8bc6\u522b\u5e26\u6765\u7684\u7ed3\u8d26\u65b0\u5e38\u8bc6</a></p>
+</blockquote>
+<hr />
+<h3>RFID\u7ed3\u8d26\u2014\u2014\u5185\u7f6e\u82af\u7247\u9910\u5177\u77ac\u65f6\u8bfb\u53d6</h3>
+<p><strong>\u539f\u7406</strong>\uff1a\u5c06\u83dc\u5355\u4fe1\u606f\u8bb0\u5f55\u5728\u5d4c\u5165\u9910\u5177\u7684<strong>RFID\u82af\u7247</strong>\u4e2d\u3002\u7528\u6237\u5c06\u6258\u76d8\u653e\u5230RFID\u7ed3\u8d26\u53f0\u65f6\uff0c\u5373\u53ef\u77ac\u65f6\u8bfb\u53d6\u82af\u7247\uff0c\u81ea\u52a8\u8ba1\u7b97\u591a\u4ef6\u9910\u5177\u7684\u5408\u8ba1\u91d1\u989d\u3002</p>
+<p><strong>\u4e09\u5927\u8981\u70b9</strong>\uff1a</p>
+<p><strong>\u2460 \u8bfb\u53d6\u901f\u5ea6\u6700\u5feb</strong>
+\u5373\u4f7f\u662f30\u9053\u5de6\u53f3\u7684\u9910\u5177\uff0c\u4e5f\u80fd\u57281\u79d2\u5185\u4e00\u62ec\u8bc6\u522b\uff0c\u8bc6\u522b\u7cbe\u5ea6<strong>\u51e0\u4e4e100%</strong>\u3002\u5728\u9700\u8981\u5927\u91cf\u5904\u7406\u7684\u5927\u578b\u98df\u5802\u4e2d\u5c3d\u663e\u5a01\u529b\u3002\u4e0d\u8fc7\uff0cRFID\u5185\u7f6e\u9910\u5177\u7684<strong>\u6700\u9ad8\u8010\u70ed\u6e29\u5ea6\u4e3a85\u5ea6</strong>\uff0c\u56e0\u6b64\u5bf9\u9ad8\u6e29\u76db\u88c5\u9700\u591a\u52a0\u6ce8\u610f\u3002</p>
+<p><strong>\u2461 \u9910\u5177\u6e05\u6d17\u540e\u53ef\u76f4\u63a5\u91cd\u590d\u4f7f\u7528</strong>
+RFID\u5185\u7f6e\u9910\u5177\u4e5f\u517c\u5bb9\u5546\u7528\u6d17\u78d7\u673a\u3002\u82af\u7247\u5185\u7684\u4fe1\u606f\u53ef\u968f\u65f6\u6539\u5199\uff0c\u56e0\u6b64\u53ef\u4e3a\u540c\u4e00\u9910\u5177\u8bbe\u5b9a\u65e9\u3001\u5348\u3001\u665a\u4e0d\u540c\u7684\u83dc\u5355\u4e0e\u4ef7\u683c\u3002</p>
+<p><strong>\u2462 \u652f\u6301\u4e00\u62ec\u6539\u5199</strong>
+\u4f7f\u7528\u51fa\u54c1\u673a\uff08\u667a\u80fd\u9910\u5177\u4fe1\u606f\u5199\u5165\u673a\uff09\uff0c\u5411\u9910\u5177\u5199\u5165\u83dc\u5355\u4fe1\u606f\u53ef\u5728\u77ed\u65f6\u95f4\u5185\u5b8c\u6210\u3002\u53ef\u5c06\u83dc\u5355\u53d8\u66f4\u65f6\u7684\u8fd0\u8425\u8d1f\u62c5\u6291\u5236\u5728\u6700\u4f4e\u9650\u5ea6\u3002</p>
+<p><strong>\u63a8\u8350\u7ed9\u8fd9\u7c7b\u98df\u5802</strong>\uff1a\u4ee5\u56fa\u5b9a\u83dc\u5355\u4e3a\u4e3b\u7684\u5927\u578b\u98df\u5802\u3001\u9700\u9ad8\u9891\u4f7f\u7528\u00b7\u5927\u91cf\u5904\u7406\u7684\u8bbe\u65bd</p>
+<hr />
+<h3>\u901a\u7528\u7684\u652f\u4ed8\u65b9\u5f0f</h3>
+<p>AI\u7ed3\u8d26\u00b7RFID\u7ed3\u8d26\u5747\u652f\u6301\u4ee5\u4e0b<strong>\u4e09\u79cd\u652f\u4ed8\u65b9\u5f0f</strong>\u3002</p>
+<table>
+<thead>
+<tr>
+<th>\u652f\u4ed8\u65b9\u5f0f</th>
+<th>\u539f\u7406</th>
+<th>\u7279\u70b9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>\u4eba\u8138\u8bc6\u522b</strong></td>
+<td>\u4ee5\u7ea2\u5916\u53cc\u76ee\u6444\u50cf\u5934\uff08200\u4e07\u50cf\u7d20\uff09\u786e\u8ba4\u672c\u4eba</td>
+<td>\u7a7a\u624b\u652f\u4ed8\u3002\u642d\u8f7d\u9632\u7167\u7247\u00b73D\u6a21\u578b\u5192\u5145\u7684\u9632\u4f2a\u529f\u80fd</td>
+</tr>
+<tr>
+<td><strong>QR\u7801</strong></td>
+<td>\u652f\u6301\u6b63\u626b\u4e0e\u53cd\u626b</td>
+<td>\u7528\u667a\u80fd\u624b\u673a\u8f7b\u677e\u652f\u4ed8</td>
+</tr>
+<tr>
+<td><strong>IC\u5361</strong></td>
+<td>\u975e\u63a5\u89e6M1/CPU\uff0c\u7b26\u5408ISO/IEC14443</td>
+<td>\u53ef\u76f4\u63a5\u4f7f\u7528\u73b0\u6709\u5458\u5de5\u8bc1\u00b7IC\u5361</td>
+</tr>
+</tbody>
+</table>
+<p>\u7528\u6237\u53ea\u9700\u653e\u4e0b\u6258\u76d8\u2192\u9009\u62e9\u652f\u4ed8\u65b9\u5f0f\u3002<strong>\u65e0\u9700\u5458\u5de5\u5373\u53ef\u5b8c\u6210\u6574\u4e2a\u7ed3\u8d26\u6d41\u7a0b</strong>\u3002</p>
+<hr />
+<h2>\u6bd4\u8f83\u8868\uff1aAI\u7ed3\u8d26 vs RFID\u7ed3\u8d26</h2>
+<p>\u4e0b\u9762\u5c06\u4e24\u79cd\u65b9\u5f0f\u4e00\u89c8\u5bf9\u6bd4\u3002\u8bf7\u5728\u5224\u65ad\u9002\u5408\u81ea\u5bb6\u98df\u5802\u7684\u65b9\u5f0f\u65f6\u4f5c\u4e3a\u53c2\u8003\u3002</p>
+<table>
+<thead>
+<tr>
+<th>\u9879\u76ee</th>
+<th>AI\u56fe\u50cf\u8bc6\u522b\u7ed3\u8d26</th>
+<th>RFID\u7ed3\u8d26</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>\u8bc6\u522b\u65b9\u5f0f</strong></td>
+<td>\u6444\u50cf\u5934\u56fe\u50cf\u8bc6\u522b</td>
+<td>RFID\u82af\u7247\u8bfb\u53d6</td>
+</tr>
+<tr>
+<td><strong>\u9910\u5177\u9650\u5236</strong></td>
+<td>\u65e0\u9700\uff08\u666e\u901a\u9910\u5177\u5373\u53ef\uff09\u203b\u83dc\u54c1\u8bc6\u522b\u6a21\u5f0f</td>
+<td>\u9700\u4e13\u7528RFID\u9910\u5177</td>
+</tr>
+<tr>
+<td><strong>\u7ed3\u8d26\u901f\u5ea6</strong></td>
+<td>\u7ea61\u79d2</td>
+<td>\u7ea61\u79d2</td>
+</tr>
+<tr>
+<td><strong>\u8bc6\u522b\u7cbe\u5ea6</strong></td>
+<td>99%\u4ee5\u4e0a\uff08\u83dc\u54c1\u8bc6\u522b\uff09 / 99.99%\u4ee5\u4e0a\uff08\u9910\u5177\u8bc6\u522b\uff09</td>
+<td>99.99%\u4ee5\u4e0a</td>
+</tr>
+<tr>
+<td><strong>\u521d\u671f\u6210\u672c</strong></td>
+<td>\u4e2d\uff08\u4ec5\u8bbe\u5907\uff09</td>
+<td>\u8f83\u9ad8\uff08\u8bbe\u5907\uff0bRFID\u5185\u7f6e\u9910\u5177\uff0b\u51fa\u54c1\u673a\uff09</td>
+</tr>
+<tr>
+<td><strong>\u9910\u5177\u8010\u70ed\u9650\u5236</strong></td>
+<td>\u65e0\uff08\u666e\u901a\u9910\u5177\uff09</td>
+<td>\u6700\u9ad885\u5ea6\uff08\u9ad8\u6e29\u76db\u88c5\u9700\u6ce8\u610f\uff09</td>
+</tr>
+<tr>
+<td><strong>\u83dc\u5355\u53d8\u66f4\u5e94\u5bf9</strong></td>
+<td>\u53ea\u9700\u62cd\u6444\uff08\u5f53\u5929\u5e94\u5bf9\uff09</td>
+<td>\u5411\u9910\u5177\u5199\u5165\u82af\u7247</td>
+</tr>
+<tr>
+<td><strong>\u662f\u5426\u9700\u8981\u670d\u52a1\u5668</strong></td>
+<td>\u65e0\u9700\uff08\u8fb9\u7f18\u578b\uff09</td>
+<td>\u65e0\u9700</td>
+</tr>
+<tr>
+<td><strong>\u652f\u4ed8\u65b9\u5f0f</strong></td>
+<td>\u4eba\u8138\u8bc6\u522b\u00b7QR\u00b7IC\u5361</td>
+<td>\u4eba\u8138\u8bc6\u522b\u00b7QR\u00b7IC\u5361</td>
+</tr>
+<tr>
+<td><strong>\u63a8\u8350\u8bbe\u65bd</strong></td>
+<td>\u65e5\u66ff\u83dc\u5355\u4e30\u5bcc\u7684\u98df\u5802</td>
+<td>\u4ee5\u56fa\u5b9a\u83dc\u5355\u4e3a\u4e3b\u7684\u5927\u578b\u98df\u5802</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>\u4e00\u53e5\u8bdd\u8981\u70b9</strong>\uff1a\u201c\u54ea\u79cd\u624d\u662f\u6b63\u786e\u9009\u62e9\u201d\u4f1a\u56e0\u98df\u5802\u7684\u89c4\u6a21\u3001\u83dc\u5355\u6784\u6210\u3001\u9910\u5177\u80fd\u5426\u66f4\u6362\u800c\u5f02\u3002\u82e5\u96be\u4ee5\u53d6\u820d\uff0c\u6700\u53ef\u9760\u7684\u505a\u6cd5\u662f\u7528<strong>\u514d\u8d39PoC\uff08\u6982\u5ff5\u9a8c\u8bc1\uff09</strong>\u5728\u5b9e\u9645\u98df\u5802\u4e2d\u5b9e\u9645\u8bd5\u7528\u4e24\u79cd\u65b9\u5f0f\uff0c\u5728\u73b0\u573a\u52a0\u4ee5\u6bd4\u8f83\u3002</p>
+</blockquote>
+<hr />
+<h2>\u80fd\u524a\u51cf\u7684\u4e0d\u53ea\u662f\u7ed3\u8d26\u4eba\u5de5\u6210\u672c</h2>
+<p>\u65e0\u4eba\u7ed3\u8d26\u7684\u5bfc\u5165\u6548\u679c\u5e76\u4e0d\u4ec5\u9650\u4e8e\u201c\u524a\u51cf\u7ed3\u8d26\u5458\u5de5\u7684\u4eba\u5de5\u6210\u672c\u201d\u3002\u7531\u4e8e\u7ed3\u8d26\u6570\u636e\u4ee5\u6570\u5b57\u5f62\u5f0f\u81ea\u52a8\u79ef\u7d2f\uff0c\u53ef\u5c06\u98df\u5802\u8fd0\u8425\u7684<strong>\u5404\u9879\u6210\u672c</strong>\u53ef\u89c6\u5316\u00b7\u6700\u4f18\u5316\u3002</p>
+<h3>\u7ecf\u8425\u6570\u636e\u7684\u81ea\u52a8\u6c47\u603b</h3>
+<p>\u4ee5\u5f80\u7528\u624b\u5199\u6216Excel\u7ba1\u7406\u7684\u9500\u552e\u6570\u636e\uff0c\u73b0\u5728\u4f1a\u5728\u6bcf\u6b21\u7ed3\u8d26\u65f6<strong>\u5b9e\u65f6\u81ea\u52a8\u6c47\u603b</strong>\u3002\u53ef\u4ece PC \u7ba1\u7406\u7ec8\u7aef\u786e\u8ba4\u7684\u4fe1\u606f\u5982\u4e0b\u3002</p>
+<table>
+<thead>
+<tr>
+<th>\u6570\u636e\u9879\u76ee</th>
+<th>\u5185\u5bb9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>\u4eea\u8868\u76d8</strong></td>
+<td>\u4e00\u76ee\u4e86\u7136\u5730\u786e\u8ba4\u5f53\u65e5\u9500\u552e\u989d\u00b7\u8ba2\u5355\u6570\u00b7\u5404\u83dc\u5355\u9500\u552e\u6570\u91cf</td>
+</tr>
+<tr>
+<td><strong>\u9500\u552e\u62a5\u8868</strong></td>
+<td>\u6309\u65e5\u00b7\u5468\u00b7\u6708\u00b7\u7528\u9910\u65f6\u6bb5\uff08\u65e9/\u5348/\u665a\uff09\u7684\u9500\u552e\u6c47\u603b</td>
+</tr>
+<tr>
+<td><strong>\u8ba2\u5355\u7ba1\u7406</strong></td>
+<td>\u5168\u90e8\u8ba2\u5355\u7684\u660e\u7ec6\u68c0\u7d22\u00b7\u5f02\u5e38\u8ba2\u5355\u7684\u68c0\u51fa\u4e0e\u62a5\u8b66</td>
+</tr>
+<tr>
+<td><strong>\u7ecf\u8425\u5206\u6790</strong></td>
+<td>\u98df\u5802\u4f7f\u7528\u7387\u00b7\u5ba2\u5355\u4ef7\u8d70\u52bf\u00b7\u5206\u661f\u671f\u8d8b\u52bf</td>
+</tr>
+</tbody>
+</table>
+<p>\u7531\u4e8e\u65e0\u9700\u4eba\u5de5\u6c47\u603b\uff0c<strong>\u7ba1\u7406\u5458\u5de5\u7684\u4e8b\u52a1\u8d1f\u62c5\u4e5f\u5927\u5e45\u524a\u51cf</strong>\u3002</p>
+<h3>\u5206\u83dc\u54c1\u9500\u552e\u6392\u884c</h3>
+<p>\u201c\u54ea\u9053\u83dc\u53d7\u6b22\u8fce\u3001\u54ea\u9053\u83dc\u5356\u4e0d\u51fa\u53bb\u201d\u2014\u2014\u7531\u4e8e\u9500\u552e\u5b9e\u7ee9\u5b9e\u65f6\u53ef\u89c6\u5316\uff0c<strong>\u57fa\u4e8e\u6570\u636e\u7684\u83dc\u5355\u6539\u8fdb</strong>\u53d8\u5f97\u53ef\u884c\u3002</p>
+<ul>
+<li><strong>\u4eba\u6c14\u83dc\u5355</strong>\uff1a\u589e\u52a0\u5907\u9910\u91cf\uff0c\u907f\u514d\u9519\u5931\u673a\u4f1a</li>
+<li><strong>\u4e0d\u53d7\u6b22\u8fce\u7684\u83dc\u5355</strong>\uff1a\u8003\u8651\u53d8\u66f4\u8c03\u5473\u6216\u66ff\u6362</li>
+<li><strong>\u5206\u661f\u671f\u8d8b\u52bf</strong>\uff1a\u57fa\u4e8e\u201c\u5468\u4e00\u5496\u55b1\u597d\u5356\u201d\u201c\u5468\u4e94\u9762\u7c7b\u53d7\u6b22\u8fce\u201d\u7b49\u8d8b\u52bf\u4f18\u5316\u5907\u8d27</li>
+</ul>
+<p>\u5c06\u4ee5\u5f80\u4f9d\u8d56\u7ecf\u9a8c\u4e0e\u76f4\u89c9\u7684\u5907\u8d27\uff08\u5907\u9910\uff09<strong>\u57fa\u4e8e\u9500\u552e\u6570\u636e\u52a0\u4ee5\u4f18\u5316</strong>\uff0c\u8fd8\u53ef\u671f\u5f85\u5c06\u56e0\u8fc7\u91cf\u5236\u4f5c\u9020\u6210\u7684\u98df\u54c1\u635f\u8017\u524a\u51cf15\uff5e30%\u7684\u6548\u679c\u3002</p>
+<h3>\u8425\u517b\u6570\u636e\u5206\u6790</h3>
+<p>\u5c06\u7528\u6237\u7684\u6d88\u8d39\u6570\u636e\u4e0e\u8425\u517b\u6210\u5206\u5173\u8054\uff0c\u53ef\u63d0\u4f9b<strong>\u4e2a\u6027\u5316\u7684\u8425\u517b\u62a5\u544a</strong>\u3002</p>
+<p>\u5bf9\u4e8e\u91cd\u89c6\u5458\u5de5\u5065\u5eb7\u7ba1\u7406\u7684\u4f01\u4e1a\u800c\u8a00\uff0c\u98df\u5802\u7684\u8425\u517b\u6570\u636e\u4e5f\u80fd\u6210\u4e3a<strong>\u5065\u5eb7\u7ecf\u8425\u7684\u57fa\u77f3</strong>\u3002\u201c\u901a\u8fc7\u5458\u5de5\u9910\u5b88\u62a4\u5458\u5de5\u5065\u5eb7\u201d\u8fd9\u4e00\u798f\u5229\u7684\u4ef7\u503c\uff0c\u5c06\u901a\u8fc7\u6570\u636e\u5f97\u4ee5\u53ef\u89c6\u5316\u3002</p>
+<hr />
+<h2>\u5bfc\u5165\u7684\u7b2c\u4e00\u6b65\u2014\u2014\u7528\u514d\u8d39PoC\u9a8c\u8bc1\u6548\u679c</h2>
+<p>\u201c\u5728\u81ea\u5bb6\u98df\u5802\u771f\u7684\u80fd\u89c1\u6548\u5417\uff1f\u201d\u201c\u6ca1\u6709\u5458\u5de5\u73b0\u573a\u4e5f\u80fd\u8fd0\u8f6c\u5417\uff1f\u201d\u2014\u2014\u56de\u7b54\u8fd9\u4e9b\u7591\u95ee\u7684\u6700\u4f73\u65b9\u6cd5\uff0c\u5c31\u662f<strong>\u5728\u5b9e\u9645\u98df\u5802\u4e2d\u8bd5\u7528</strong>\u3002</p>
+<p>\u672c\u516c\u53f8\u63d0\u4f9b\u5c06AI\u7ed3\u8d26\u53f0\u00b7RFID\u7ed3\u8d26\u53f0\u642c\u5165\u5b9e\u9645\u98df\u5802\u8fdb\u884c\u6d4b\u8bd5\u8fd0\u8425\u7684<strong>\u514d\u8d39PoC\uff08\u6982\u5ff5\u9a8c\u8bc1\uff09</strong>\u3002</p>
+<table>
+<thead>
+<tr>
+<th>\u9879\u76ee</th>
+<th>\u5185\u5bb9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>\u8d39\u7528</strong></td>
+<td>\u5b8c\u5168\u514d\u8d39</td>
+</tr>
+<tr>
+<td><strong>\u8bbe\u5907\u7684\u8bbe\u7f6e\u00b7\u56de\u6536</strong></td>
+<td>\u5747\u7531\u672c\u516c\u53f8\u8d1f\u8d23</td>
+</tr>
+<tr>
+<td><strong>\u83dc\u5355\u767b\u8bb0\u00b7\u521d\u671f\u8bbe\u5b9a</strong></td>
+<td>\u7531\u672c\u516c\u53f8\u652f\u6301</td>
+</tr>
+<tr>
+<td><strong>\u53ef\u9a8c\u8bc1\u7684\u5185\u5bb9</strong></td>
+<td>\u7ed3\u8d26\u65f6\u95f4\u7684\u7f29\u77ed\u7387\u3001\u8bc6\u522b\u7cbe\u5ea6\u3001\u7528\u6237\u53cd\u5e94\u3001\u8fd0\u8425\u6d41\u7a0b\u7684\u786e\u8ba4</td>
+</tr>
+<tr>
+<td><strong>PoC\u540e\u7684\u6d41\u7a0b</strong></td>
+<td>\u6839\u636e\u7ed3\u679c\u63d0\u51fa\u6700\u4f18\u7684\u914d\u7f6e\u4e0e\u8d39\u7528\u65b9\u6848</td>
+</tr>
+</tbody>
+</table>
+<p>\u5728PoC\u671f\u95f4\uff0c\u53ef\u7528\u5b9e\u9645\u6570\u636e\u786e\u8ba4\u201c\u7ed3\u8d26\u65f6\u95f4\u80fd\u7f29\u77ed\u591a\u5c11\u201d\u201c\u7528\u6237\u80fd\u5426\u987a\u7545\u64cd\u4f5c\u201d\u3002\u4e0d\u53ea\u662f\u7eb8\u4e0a\u6bd4\u8f83\uff0c\u800c\u662f<strong>\u5728\u73b0\u573a\u4f53\u9a8c\u540e\u518d\u5224\u65ad</strong>\uff0c\u624d\u6700\u53ef\u9760\u3002</p>
+<p>\u6b63\u56e0\u4e3a\u5982\u4eca\u6b63\u4e3a\u4eba\u624b\u4e0d\u8db3\u800c\u56f0\u6270\uff0c\u4e0d\u59a8\u8fc8\u51fa\u8d70\u5411\u65e0\u4eba\u7ed3\u8d26\u7684\u7b2c\u4e00\u6b65\uff1f</p>
+<hr />
+
+            <div class="column-cta">
+                <h3>\U0001F4DE \u514d\u8d39PoC\u7533\u8bf7</h3>
+                <p>AI\u56fe\u50cf\u8bc6\u522b\u00b7RFID\u00b7\u8ba1\u91cf\u7ed3\u8d26\u2014\u2014\u53ef\u5728\u771f\u5b9e\u73af\u5883\u4e2d\u6d4b\u8bd5\u6700\u9002\u5408\u8d35\u98df\u5802\u7684\u65b9\u5f0f\u3002<br>
+                \u8bbe\u5907\u7684\u642c\u5165\u00b7\u5b89\u88c5\u00b7\u56de\u6536\u5747\u7531\u672c\u516c\u53f8\u8d1f\u8d23\uff0c\u4e0d\u4ea7\u751f\u4efb\u4f55\u8d39\u7528\u3002</p>
+                <a href="../lp-smart-cafeteria.html" class="cta-btn">\u7533\u8bf7\u514d\u8d39PoC \u2192</a>
+            </div>
+
+            <div class="column-related">
+                <h3>\u76f8\u5173\u6587\u7ae0</h3>
+                <ul>
+                    
+                    <li><a href="rfid-vs-ai.html">\u98df\u5802\u7ed3\u8d26\u4e2dRFID\u8bc6\u522b\u4e0eAI\u56fe\u50cf\u8bc6\u522b\u7684\u6bd4\u8f83\uff5c\u4ece\u7cbe\u5ea6\u3001\u6210\u672c\u3001\u7075\u6d3b\u6027\u770b\u6700\u4f18\u9009\u62e9</a></li><li><a href="cafeteria-auto-settlement.html">\u98df\u5802\u81ea\u52a8\u7ed3\u8d26\u7cfb\u7edf\u5f7b\u5e95\u6bd4\u8f83\uff5cAI\u00b7RFID\u00b7\u8ba1\u91cf\u4e09\u79cd\u65b9\u5f0f\u8bb2\u89e3</a></li>
+                    <li><a href="ai-cafeteria.html">\u4f01\u4e1a\u98df\u5802\u5bfc\u5165AI\u81ea\u52a8\u7ed3\u8d26\u5b8c\u5168\u6307\u5357</a></li>
+                    <li><a href="ai-register.html">\u4ec0\u4e48\u662f\u98df\u5802AI\u6536\u94f6\uff1f\u56fe\u50cf\u8bc6\u522b\u5e26\u6765\u7684\u7ed3\u8d26\u65b0\u5e38\u8bc6</a></li>
+                    <li><a href="rfid-settlement.html">\u98df\u5802RFID\u7ed3\u8d26\u7cfb\u7edf\u5b8c\u5168\u8bb2\u89e3</a></li>
+                    <li><a href="cafeteria-queue.html">\u6d88\u9664\u4f01\u4e1a\u98df\u5802\u6392\u961f\u76845\u79cd\u65b9\u6cd5</a></li>
+                    <li><a href="cafeteria-dx.html">\u4f01\u4e1a\u98df\u5802DX\u5165\u95e8\uff5c\u6446\u8131\u6a21\u62df\u8fd0\u8425\u76843\u4e2a\u6b65\u9aa4</a></li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../../assets/img/logo/logo.webp' alt='Izumo Soan'>
+                    <p class='logo-desp'>\u6280\u672f\u8d4b\u80fd\u73b0\u573a\u3002</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>\u83dc\u5355</h4>
+                    <ul>
+                        <li><a href='../index.html'>\u9996\u9875</a></li>
+                        <li><a href='../about.html'>\u516c\u53f8\u6982\u51b5</a></li>
+                        <li><a href='../services.html'>\u670d\u52a1</a></li>
+                        <li><a href='../case-studies.html'>\u6848\u4f8b</a></li>
+                        <li><a href='../overseas-partner.html'>\u6d77\u5916\u5382\u5546\u4f19\u4f34</a></li>
+                        <li><a href='index.html'>\u4e13\u680f</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>\u4ea7\u54c1\u4fe1\u606f</h4>
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='../smart-cafeteria.html'>
+                            <span>\u667a\u6167\u98df\u5802</span>
+                            <small>\u56fe\u50cf\u8bc6\u522b\u00b7RFID\u00b7\u8ba1\u91cf\u7ed3\u8d26</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='../products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>\u667a\u80fd\u73b0\u573a\u7684\u8fd0\u7ef4\u6539\u5584\u5e73\u53f0</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 \u51fa\u96f2\u5275\u5b89 Izumo Soan. All rights reserved. \uff5c <a href='../privacy.html' style='color:inherit;text-decoration:underline;'>\u9690\u79c1\u653f\u7b56</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src='../../assets/js/main.js'></script>
+    <script src='../../assets/js/lang-switcher.js'></script>
+</body>
+</html>

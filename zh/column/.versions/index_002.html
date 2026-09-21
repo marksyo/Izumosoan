@@ -1,45 +1,28 @@
 <!DOCTYPE html>
-<html lang='ja'>
+<html lang='zh'>
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>コラム｜社員食堂の自動精算・DX情報｜出雲創安</title>
-    <meta name='description' content='社員食堂の自動精算・DXに関するコラム記事一覧。AI画像認識・RFID・計量精算の仕組み、行列解消、人手不足対策まで食堂運営に役立つ情報を発信。'>
-    <link rel="canonical" href="https://izumosoan.com/ja/column/index.html">
+    <title>专栏｜食堂自动结算・DX资讯｜出雲創安</title>
+    <meta name='description' content='关于食堂自动结算与DX的专栏文章合集。涵盖AI图像识别・RFID・计量结算的原理、排队解决、人手不足对策等有助于食堂运营的资讯。'>
+    <link rel="canonical" href="https://izumosoan.com/zh/column/index.html">
     <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/column/index.html">
     <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/column/index.html">
     <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/column/index.html">
     <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/column/index.html">
-
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="出雲創安 Izumo Soan">
-    <meta property="og:url" content="https://izumosoan.com/ja/column/index.html">
-    <meta property="og:title" content="コラム｜社員食堂の自動精算・DX情報">
-    <meta property="og:description" content="社員食堂の自動精算・DXに関するコラム記事一覧。食堂運営に役立つ情報を発信。">
-    <meta property="og:locale" content="ja_JP">
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://izumosoan.com/ja/index.html"},
-            {"@type": "ListItem", "position": 2, "name": "コラム"}
-        ]
-    }
-    </script>
-
+    <meta property="og:url" content="https://izumosoan.com/zh/column/index.html">
+    <meta property="og:title" content="专栏｜食堂自动结算・DX资讯">
+    <meta property="og:description" content="关于食堂自动结算与DX的专栏文章合集。涵盖AI图像识别・RFID・计量结算的原理、排队解决、人手不足对策等有助于食堂运营的资讯。">
+    <meta property="og:locale" content="zh_CN">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://izumosoan.com/zh/index.html"}, {"@type": "ListItem", "position": 2, "name": "专栏"}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
     <link rel='stylesheet' href='../../assets/css/style.min.css'>
-
     <link rel="icon" type="image/x-icon" href="../../assets/img/logo/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/logo/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/logo/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/logo/apple-touch-icon.png">
-
     <style>
     .column-index-hero {
         background: linear-gradient(135deg, #001d30 0%, #003554 100%);
@@ -187,123 +170,127 @@
             <div class='language-switcher'>
                 <span class='lang-label'><i class="fas fa-globe"></i></span>
                 <select id='lang-select'>
-                    <option value='ja' selected>日本語</option>
+                    <option value='ja'>日本語</option>
                     <option value='en'>English</option>
-                    <option value='zh'>中文</option>
+                    <option value='zh' selected>中文</option>
                 </select>
             </div>
             <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
             <nav>
                 <ul>
-                    <li><a href='../index.html'>ホーム</a></li>
-                    <li><a href='../services.html'>サービス</a></li>
-                    <li><a href='../products.html'>製品</a></li>
-                    <li><a href='../case-studies.html'>実績</a></li>
-                    <li><a href='../about.html'>会社概要</a></li>
-                    <li><a href='../overseas-partner.html'>海外パートナー</a></li>
-                    <li><a href='../index.html#contact'>お問い合わせ</a></li>
+                    <li><a href='../index.html'>首页</a></li>
+                    <li><a href='../services.html'>服务</a></li>
+                    <li><a href='../products.html'>产品</a></li>
+                    <li><a href='../case-studies.html'>案例展示</a></li>
+                    <li><a href='../about.html'>公司概况</a></li>
+                    <li><a href='../overseas-partner.html'>海外伙伴</a></li>
+                    <li><a href='../index.html#contact'>联系我们</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
     <main>
         <section class="column-index-hero">
             <div class="column-index-breadcrumb">
-                <a href="../index.html">ホーム</a> &gt; コラム
+                <a href="../index.html">首页</a> &gt; 专栏
             </div>
-            <h1>コラム</h1>
-            <p>社員食堂の自動精算・DXに関する最新情報をお届けします</p>
+            <h1>专栏</h1>
+            <p>为您带来食堂自动结算・DX的最新资讯。</p>
         </section>
 
         <div class="column-grid">
                 <a href="rfid-vs-ai.html" class="column-card">
-                    <span class="column-card-tag" style="background:#e74c3c;">比較</span>
-                    <h3>食堂会計におけるRFID認識とAI画像認識の比較｜精度・コスト・柔軟性から考える最適な選択</h3>
-                    <p>認識精度はRFID、柔軟性とコストはAI画像認識。仕組み・精度・処理速度・総保有コスト・向く食堂まで中立的に比較。</p>
-                    <span class="column-card-link">記事を読む →</span>
+                    <span class="column-card-tag" style="background:#e74c3c;">比较</span>
+                    <h3>食堂结账中RFID识别与AI图像识别的比较：从精度、成本、灵活性看最优选择</h3>
+                    <p>对企业食堂、学校供餐、医院及养老机构自动结账中使用的RFID识别与AI图像识别进行全面比较。精度稳定性RFID占优，菜单变更灵活性与成本AI图像识别更有利。清晰讲解两种方式的原…</p>
+                    <span class="column-card-link">阅读文章 →</span>
                 </a>
                 <a href="cafeteria-auto-settlement.html" class="column-card">
-                    <span class="column-card-tag" style="background:#e74c3c;">比較</span>
-                    <h3>食堂の自動精算システムを徹底比較｜AI・RFID・計量の3方式を解説</h3>
-                    <p>AI画像認識・RFID・計量精算の3方式を仕組み・速度・コストまで徹底比較。</p>
-                    <span class="column-card-link">記事を読む →</span>
+                    <span class="column-card-tag" style="background:#e74c3c;">比较</span>
+                    <h3>食堂自动结算系统全面比较：AI・RFID・计量三种方式详解</h3>
+                    <p>面向正在考虑为员工食堂・企业食堂引入自动结算系统的读者。全面比较AI图像识别・RFID・计量三种方式的原理、结算速度、成本以及各自适合的食堂类型。免费PoC实施中。</p>
+                    <span class="column-card-link">阅读文章 →</span>
                 </a>
                 <a href="ai-cafeteria.html" class="column-card">
                     <span class="column-card-tag" style="background:#006494;">AI精算</span>
-                    <h3>社員食堂にAI自動精算を導入する完全ガイド</h3>
-                    <p>AI自動精算の仕組みから導入ステップまで網羅的に解説。</p>
-                    <span class="column-card-link">記事を読む →</span>
+                    <h3>在企业食堂引入AI自动结算的完整指南</h3>
+                    <p>全面解读企业食堂的AI自动结算系统。涵盖AI图像识别的原理、导入可获得的5项收益、费用的考量方式，以及5个步骤的导入流程。关东地区正在实施免费PoC。</p>
+                    <span class="column-card-link">阅读文章 →</span>
                 </a>
                 <a href="ai-register.html" class="column-card">
                     <span class="column-card-tag" style="background:#006494;">AI精算</span>
-                    <h3>食堂AIレジとは？画像認識で変わる精算の新常識</h3>
-                    <p>AIレジの基本的な仕組みと食堂運営への4つの変化。</p>
-                    <span class="column-card-link">記事を読む →</span>
+                    <h3>什么是食堂AI收银机？图像识别带来的结账新常识</h3>
+                    <p>通俗易懂地讲解食堂AI收银机的原理。包括AI摄像头的菜品图像识别技术、两种识别模式、导入后带来的四项变化，以及所需设备与导入流程。一篇面向初学者的入门文章。</p>
+                    <span class="column-card-link">阅读文章 →</span>
                 </a>
                 <a href="rfid-settlement.html" class="column-card">
-                    <span class="column-card-tag" style="background:#8e44ad;">RFID</span>
-                    <h3>食堂RFID精算システム完全解説</h3>
-                    <p>RFIDチップ内蔵食器の仕組み、導入メリット5つ、選び方。</p>
-                    <span class="column-card-link">記事を読む →</span>
+                    <span class="column-card-tag" style="background:#00880F;">RFID</span>
+                    <h3>食堂RFID结算系统完全解析</h3>
+                    <p>全面解析食堂RFID结算系统的原理、导入的5大具体优势、适合选择RFID方式的食堂特征，以及导入前应确认的要点。附与AI方式的对比表。免费PoC实施中。</p>
+                    <span class="column-card-link">阅读文章 →</span>
                 </a>
                 <a href="cafeteria-queue.html" class="column-card">
-                    <span class="column-card-tag" style="background:#00880F;">課題解決</span>
-                    <h3>社員食堂の行列を解消する5つの方法</h3>
-                    <p>ピーク時の混雑を根本から解決する5つのアプローチ。</p>
-                    <span class="column-card-link">記事を読む →</span>
+                    <span class="column-card-tag" style="background:#f39c12;">课题解决</span>
+                    <h3>消除员工食堂排队的5种方法</h3>
+                    <p>面向希望消除食堂排队与拥堵的总务、设施管理人员。比较AI图像识别、RFID、计量结算、时段分散、移动点餐五种方法，全面讲解各自的导入效果与选择方式。免费PoC实施中。</p>
+                    <span class="column-card-link">阅读文章 →</span>
+                </a>
+                <a href="ai-vs-rfid.html" class="column-card">
+                    <span class="column-card-tag" style="background:#f39c12;">课题解决</span>
+                    <h3>食堂结账人手不足用“无人结账”解决｜AI与RFID实力比拼｜出雲創安专栏</h3>
+                    <p>食堂结账员工招不到——从根本上解决人手不足的“无人结账”两大方案（AI图像识别·RFID）彻底比较。从结账速度、识别精度、成本到推荐设施类型全面讲解。免费PoC实施中。</p>
+                    <span class="column-card-link">阅读文章 →</span>
                 </a>
                 <a href="cafeteria-dx.html" class="column-card">
-                    <span class="column-card-tag" style="background:#e67e22;">DX</span>
-                    <h3>社員食堂DX入門｜アナログ運営から脱却する3つのステップ</h3>
-                    <p>精算デジタル化→データ活用→体験向上の3ステップ。</p>
-                    <span class="column-card-link">記事を読む →</span>
+                    <span class="column-card-tag" style="background:#8e44ad;">DX</span>
+                    <h3>员工食堂DX入门</h3>
+                    <p>从经营视角解读员工食堂的DX（数字化转型）。从结算的数字化到数据利用、提升用餐者体验，介绍如何通过三个步骤从根本上变革食堂运营。并附AI·RFID·计量精算的技术要点与定量效果。</p>
+                    <span class="column-card-link">阅读文章 →</span>
                 </a>
                 <a href="cafeteria-payment-comparison.html" class="column-card">
-                    <span class="column-card-tag" style="background:#e74c3c;">比較</span>
-                    <h3>社員食堂の精算方式を比較｜券売機・カウンター決済・オートレジの選び方</h3>
-                    <p>3つの精算タイプを総合比較。オートレジはAI・RFID・計量の3方式で幅広い食堂に対応。</p>
-                    <span class="column-card-link">記事を読む →</span>
+                    <span class="column-card-tag" style="background:#e74c3c;">比较</span>
+                    <h3>员工食堂结账方式比较：售票机、柜台支付与自动结账的特点与选择</h3>
+                    <p>全面比较企业员工食堂的结账方式。讲解售票机、柜台支付、自动结账（AI图像识别、RFID、计量）的原理及各自优缺点，并介绍在无现金化与省人化趋势下选择方式的5个要点。</p>
+                    <span class="column-card-link">阅读文章 →</span>
                 </a>
         </div>
 
         <div class="column-cta-banner">
             <div class="column-cta-inner">
-                <h2>📞 まずは無料POCで効果を実感しませんか？</h2>
-                <p>AI画像認識・RFID・計量精算 — お客様の食堂に最適な方式を、実際の環境でテストいただけます。</p>
-                <a href="../lp-smart-cafeteria.html" class="cta-btn">無料POCを申し込む →</a>
+                <h2>免费PoC申请</h2>
+                <p>可在真实环境中测试最适合贵食堂的结算方式，不产生任何费用。</p>
+                <a href="../lp-smart-cafeteria.html" class="cta-btn">申请免费PoC →</a>
             </div>
         </div>
     </main>
-
-    <footer>
+<footer>
         <div class='container'>
             <div class='footer-content'>
                 <div class='footer-logo'>
                     <img src='../../assets/img/logo/logo.webp' alt='Izumo Soan'>
-                    <p class='logo-desp'>技術を、現場の力に。</p>
+                    <p class='logo-desp'>技术赋能现场。</p>
                 </div>
                 <div class='footer-links'>
-                    <h4>メニュー</h4>
+                    <h4>菜单</h4>
                     <ul>
-                        <li><a href='../index.html'>ホーム</a></li>
-                        <li><a href='../about.html'>会社概要</a></li>
-                        <li><a href='../services.html'>サービス</a></li>
-                        <li><a href='../case-studies.html'>実績</a></li>
-                        <li><a href='../overseas-partner.html'>海外メーカーパートナー</a></li>
-                        <li><a href='index.html'>コラム</a></li>
+                        <li><a href='../index.html'>首页</a></li>
+                        <li><a href='../about.html'>公司概况</a></li>
+                        <li><a href='../services.html'>服务</a></li>
+                        <li><a href='../case-studies.html'>案例</a></li>
+                        <li><a href='../overseas-partner.html'>海外厂商伙伴</a></li>
+                        <li><a href='../../ja/column/index.html'>专栏</a></li>
                     </ul>
                 </div>
                 <div class='footer-products'>
-                    <h4>製品情報</h4>
+                    <h4>产品信息</h4>
                     <div class='footer-product-banners'>
                         <a class='footer-product-banner footer-product-safeops' href='../smart-cafeteria.html'>
-                            <span>スマート食堂</span>
-                            <small>画像認識・RFID・計量精算</small>
+                            <span>智慧食堂</span>
+                            <small>图像识别·RFID·计量精算</small>
                         </a>
                         <a class='footer-product-banner footer-product-sitebridge' href='../products-sitebridge.html'>
                             <span>IZUMO SiteBridge</span>
-                            <small>スマート現場の運用改善プラットフォーム</small>
+                            <small>智能现场的运维改善平台</small>
                         </a>
                     </div>
                 </div>
@@ -311,11 +298,10 @@
         </div>
         <div class='footer-bottom'>
             <div class="container">
-                <p class='footer-copyright'>&copy; 2026 出雲創安 Izumo Soan. All rights reserved. ｜ <a href='../privacy.html' style='color:inherit;text-decoration:underline;'>プライバシーポリシー</a></p>
+                <p class='footer-copyright'>&copy; 2026 出雲創安 Izumo Soan. All rights reserved. ｜ <a href='../privacy.html' style='color:inherit;text-decoration:underline;'>隐私政策</a></p>
             </div>
         </div>
     </footer>
-
     <script src='../../assets/js/main.js'></script>
     <script src='../../assets/js/lang-switcher.js'></script>
 </body>
