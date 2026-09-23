@@ -60,7 +60,7 @@
     .aic-product-card .aic-detail-btn { display: inline-block; margin-top: 18px; padding: 8px 24px; background: #00880F; color: #fff; border-radius: 6px; font-size: 0.9rem; font-weight: 500; text-align: center; transition: background 0.3s; }
     .aic-product-card:hover .aic-detail-btn { background: #305534; }
     .aic-product-card:hover { transform: translateY(-5px); }
-    .aic-product-card .aic-product-icon { margin-bottom: 18px; text-align: center; min-height: 160px; display: flex; align-items: center; justify-content: center; }
+    .aic-product-card .aic-product-icon { margin-bottom: 18px; text-align: center; min-height: 260px; display: flex; align-items: center; justify-content: center; }
     .aic-product-card h3 { font-size: 1.2rem; text-align: center; margin-bottom: 14px; color: #2c3e50; }
     .aic-product-card .aic-product-desc { font-size: 0.93rem; color: #555; line-height: 1.8; margin-bottom: 18px; }
     .aic-product-card ul { list-style: none; padding: 0; margin: 0; }
@@ -132,6 +132,71 @@
         .aic-challenges, .aic-features, .aic-products, .aic-steps, .aic-scenes { grid-template-columns: 1fr; }
         .aic-comparison { font-size: 0.82rem; }
         .aic-comparison th, .aic-comparison td { padding: 10px 10px; }
+    }
+    /* ===== Solution Video (click-to-play, poster) ===== */
+    .lp-solution-video { position: relative; margin: 0 0 18px; border-radius: 10px; overflow: hidden; background: #000; aspect-ratio: 16 / 9; cursor: pointer; }
+    .lp-solution-video video { width: 100%; height: 100%; object-fit: cover; display: block; background: #000; }
+    .lp-video-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,20,40,0.28); transition: background 0.3s; pointer-events: none; }
+    .lp-solution-video:hover .lp-video-play { background: rgba(0,20,40,0.12); }
+    .lp-video-play::before { content: ''; width: 64px; height: 64px; border-radius: 50%; background: rgba(0,136,15,0.92); box-shadow: 0 4px 18px rgba(0,0,0,0.35); display: block; }
+    .lp-video-play::after { content: '\f04b'; font-family: 'Font Awesome 5 Free'; font-weight: 900; position: absolute; color: #fff; font-size: 1.35rem; margin-left: 4px; }
+    .lp-solution-video.is-playing .lp-video-play { display: none; }
+    /* ===== Widen solution cards so product images display larger ===== */
+    #solutions .container { max-width: 1500px; }
+    #solutions .aic-products { gap: 24px; }
+    #solutions .aic-product-card { padding: 32px 16px; }
+    #solutions .aic-product-card .aic-product-icon { height: 260px; min-height: 260px; margin-bottom: 18px; }
+    #solutions .aic-product-card .aic-product-icon img { width: 100%; height: 100%; max-height: 260px; object-fit: contain; }
+    /* ===== Compare card (copied from LP) ===== */
+    .lp-compare { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    .lp-compare-card { display: grid; grid-template-columns: 1.5fr 1fr; grid-template-rows: auto 1fr; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); border: 2px solid #e8eef3; transition: transform 0.3s; }
+    .lp-compare-card:hover { transform: translateY(-4px); }
+    .lp-compare-best { border-color: #00880F; box-shadow: 0 6px 26px rgba(0,136,15,0.18); }
+    .lp-compare-card img { grid-column: 1; grid-row: 1 / 3; width: 100%; height: 100%; min-height: 300px; object-fit: contain; background: #f9f9f9; padding: 16px; align-self: stretch; }
+    .lp-compare-head { grid-column: 2; grid-row: 1; padding: 24px 26px 12px; text-align: left; }
+    .lp-compare-badge { display: inline-block; padding: 3px 12px; border-radius: 999px; font-size: 0.78rem; font-weight: 700; margin-bottom: 10px; }
+    .lp-badge-gray { background: #e5e7eb; color: #555; }
+    .lp-badge-green { background: #00880F; color: #fff; }
+    .lp-compare-head h3 { font-size: 1.2rem; color: #003554; margin-bottom: 12px; }
+    .lp-compare-time { display: inline-block; font-family: 'Barlow', sans-serif; font-weight: 800; font-size: 1.05rem; padding: 8px 16px; border-radius: 8px; }
+    .lp-time-slow { background: #fdecec; color: #c0392b; }
+    .lp-time-mid { background: #fff5e6; color: #b8760a; }
+    .lp-time-fast { background: #e8f7ea; color: #00880F; }
+    .lp-compare-body { grid-column: 2; grid-row: 2; padding: 4px 26px 24px; }
+    .lp-compare-body p { font-size: 0.93rem; color: #444; margin: 0 0 12px; line-height: 1.7; }
+    .lp-compare-body ul { list-style: none; padding: 0; margin: 0; }
+    .lp-compare-body ul li { font-size: 0.9rem; color: #333; padding: 6px 0; line-height: 1.55; display: flex; gap: 8px; }
+    .lp-compare-body ul li i { color: #00880F; margin-top: 4px; font-size: 0.82rem; flex-shrink: 0; }
+    @media (max-width: 700px) {
+        .lp-compare-card { grid-template-columns: 1fr; grid-template-rows: auto auto auto; }
+        .lp-compare-card img { grid-column: 1; grid-row: 1; height: 200px; min-height: 0; }
+        .lp-compare-head { grid-column: 1; grid-row: 2; text-align: center; }
+        .lp-compare-body { grid-column: 1; grid-row: 3; }
+    }
+    /* ===== かんたん3ステップ message block ===== */
+    .cafeteria-3step-msg { max-width: 760px; margin: 0 auto 8px; text-align: center; }
+    .cafeteria-3step-msg .lp-compare-time { margin-bottom: 20px; font-size: 1.3rem; }
+    .cafeteria-3step-list { list-style: none; padding: 0; margin: 0 0 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 28px; counter-reset: step; }
+    .cafeteria-3step-list li { counter-increment: step; font-size: 1.05rem; font-weight: 600; color: #2c3e50; display: flex; align-items: center; gap: 8px; }
+    .cafeteria-3step-list li::before { content: counter(step); width: 30px; height: 30px; border-radius: 50%; background: #00880F; color: #fff; font-size: 0.95rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .cafeteria-3step-notes { list-style: none; padding: 0; margin: 0 auto; max-width: 640px; text-align: left; }
+    .cafeteria-3step-notes li { font-size: 0.92rem; color: #333; padding: 6px 0; line-height: 1.6; display: flex; gap: 8px; }
+    .cafeteria-3step-notes li i { color: #00880F; margin-top: 5px; font-size: 0.82rem; flex-shrink: 0; }
+    /* Image-only compare card: image fills the whole card */
+    .lp-compare-imgonly { grid-template-columns: 1fr; grid-template-rows: auto; }
+    .lp-compare-imgonly img { grid-column: 1; grid-row: 1; min-height: 0; }
+    /* ===== Difference from other cafeteria auto-settlement devices ===== */
+    .faq-diff-wrap { max-width: 980px; margin: 0 auto; }
+    .diff-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .diff-card { background: #fff; border-radius: 14px; padding: 28px 26px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); border: 2px solid #e8eef3; }
+    .diff-card h3 { font-size: 1.15rem; color: #003554; margin: 12px 0 12px; }
+    .diff-card p { font-size: 0.93rem; color: #444; line-height: 1.75; margin: 0; }
+    .diff-card-ours { border-color: #00880F; box-shadow: 0 6px 26px rgba(0,136,15,0.18); }
+    .diff-badge { display: inline-block; padding: 4px 14px; border-radius: 999px; font-size: 0.8rem; font-weight: 700; }
+    .diff-badge-gray { background: #e5e7eb; color: #555; }
+    .diff-badge-green { background: #00880F; color: #fff; }
+    @media (max-width: 700px) {
+        .diff-cards { grid-template-columns: 1fr; }
     }
     </style>
     <!-- Favicon -->
@@ -230,7 +295,13 @@
                 </div>
                 <div class='aic-products'>
                     <a href='smart-cafeteria-ai.html' class='aic-product-card'>
-                        <div class='aic-product-icon'><img src='../assets/img/cafeteria/cafeteria-ai.webp' alt='AI画像認識精算端末' style='width: 100%; max-height: 180px; object-fit: contain;'></div>
+                        <div class='aic-product-icon'><img src='../assets/img/cafeteria/cafeteria-ai.webp' alt='AI画像認識精算端末' style='width: 100%; height: 100%; object-fit: contain;'></div>
+                        <div class="lp-solution-video" onclick="lpPlayVideo(event, this)">
+                            <video preload="none" poster="../assets/img/cafeteria/cafeteria-ai.webp" playsinline controls controlslist="nodownload" aria-label="画像認識精算のデモ動画">
+                                <source src="../assets/img/cafeteria/AIimagepay.mp4" type="video/mp4">
+                            </video>
+                            <span class="lp-video-play"></span>
+                        </div>
                         <h3>AI画像認識精算</h3>
                         <p class='aic-product-desc'>AIカメラがトレー上の料理を瞬時に認識し、品目と合計金額を自動計算。専用食器不要で既存食器をそのまま使用可能。</p>
                         <ul>
@@ -242,7 +313,13 @@
                         <span class='aic-detail-btn'>詳細 <i class="fas fa-arrow-right"></i></span>
                     </a>
                     <a href='smart-cafeteria-rfid.html' class='aic-product-card'>
-                        <div class='aic-product-icon'><img src='../assets/img/cafeteria/cafeteria-rfid.webp' alt='RFID精算台' style='width: 100%; max-height: 180px; object-fit: contain;'></div>
+                        <div class='aic-product-icon'><img src='../assets/img/cafeteria/cafeteria-rfid.webp' alt='RFID精算台' style='width: 100%; height: 100%; object-fit: contain;'></div>
+                        <div class="lp-solution-video" onclick="lpPlayVideo(event, this)">
+                            <video preload="none" poster="../assets/img/cafeteria/cafeteria-rfid.webp" playsinline controls controlslist="nodownload" aria-label="RFID精算のデモ動画">
+                                <source src="../assets/img/cafeteria/RFIDpay_JA_with_title.mp4" type="video/mp4">
+                            </video>
+                            <span class="lp-video-play"></span>
+                        </div>
                         <h3>RFID精算</h3>
                         <p class='aic-product-desc'>食器に内蔵されたRFIDチップを読み取り、瞬時に精算。世界中の食堂で実績豊富な安定した方式。</p>
                         <ul>
@@ -254,7 +331,13 @@
                         <span class='aic-detail-btn'>詳細 <i class="fas fa-arrow-right"></i></span>
                     </a>
                     <a href='smart-cafeteria-weight.html' class='aic-product-card'>
-                        <div class='aic-product-icon'><img src='../assets/img/cafeteria/cafeteria-weighing.webp' alt='計量精算端末' style='width: 100%; max-height: 180px; object-fit: contain;'></div>
+                        <div class='aic-product-icon'><img src='../assets/img/cafeteria/cafeteria-weighing.webp' alt='計量精算端末' style='width: 100%; height: 100%; object-fit: contain;'></div>
+                        <div class="lp-solution-video" onclick="lpPlayVideo(event, this)">
+                            <video preload="none" poster="../assets/img/cafeteria/cafeteria-weighing.webp" playsinline controls controlslist="nodownload" aria-label="計量精算のデモ動画">
+                                <source src="../assets/img/cafeteria/weightpay_JA_with_title.mp4" type="video/mp4">
+                            </video>
+                            <span class="lp-video-play"></span>
+                        </div>
                         <h3>計量精算</h3>
                         <p class='aic-product-desc'>高精度電子秤で料理の重量を自動計測し、グラム単位で精算。「食べた分だけ支払う」自助式に最適。</p>
                         <ul>
@@ -273,26 +356,50 @@
         <section class='section-padding'>
             <div class='container'>
                 <div class='section-title'><h2>かんたん3ステップ</h2></div>
-                <div class='aic-steps'>
-                    <div class='aic-step'>
-                        <div class='aic-step-num'>1</div>
-                        <div class='aic-step-icon'><i class="fas fa-utensils"></i></div>
-                        <h3>お食事を選ぶ</h3>
-                        <p>お好みの料理をトレーに載せるだけ。特別な操作は不要です。</p>
-                        <span class='aic-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                <div class='cafeteria-3step-msg'>
+                    <div class='lp-compare-time lp-time-fast'>1人あたり わずか 3〜5秒</div>
+                    <ol class='cafeteria-3step-list'>
+                        <li>トレーを置く</li>
+                        <li>料理認識と自動清算</li>
+                        <li>トレーを受け取る</li>
+                    </ol>
+                    <ul class='cafeteria-3step-notes'>
+                        <li><i class="fas fa-bolt"></i> 顔認証を精算処理に利用するため、ポケットからカードを取り出す時間を削減します。</li>
+                        <li><i class="fas fa-bolt"></i> 1人あたりトータル<strong>3〜5秒</strong>だけで精算完了。他社製品より処理時間を大幅に短縮します。</li>
+                    </ul>
+                </div>
+                <div class='lp-compare' style='margin-top:32px;'>
+                    <!-- 弊社のソリューション: 画像のみ表示 -->
+                    <div class='lp-compare-card lp-compare-best lp-compare-imgonly'>
+                        <img src='../assets/img/cafeteria/quickestpay-ja.jpg' alt='弊社ソリューションの3ステップ高速精算'>
                     </div>
-                    <div class='aic-step'>
-                        <div class='aic-step-num'>2</div>
-                        <div class='aic-step-icon'><i class="fas fa-brain"></i></div>
-                        <h3>自動認識・精算</h3>
-                        <p>AI・RFID・計量、いずれの方式でも瞬時に認識・計算。ディスプレイに合計金額を表示します。</p>
-                        <span class='aic-step-arrow'><i class="fas fa-chevron-right"></i></span>
-                    </div>
-                    <div class='aic-step'>
-                        <div class='aic-step-num'>3</div>
-                        <div class='aic-step-icon'><i class="fas fa-mobile-alt"></i></div>
-                        <h3>キャッシュレス決済</h3>
-                        <p>顔認証・QR・ICカードでスムーズにお支払い。衛生的に処理完了。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4b. Difference from other cafeteria auto-settlement devices -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>他社の食堂自動精算設備との違い</h2>
+                    <p>「精算」と「決済」を1台の設備に一体化。ネットワーク・サーバー障害時でもオフラインで精算を完了できます。</p>
+                </div>
+                <div class='faq-diff-wrap'>
+                    <figure style='margin:0 0 28px;'>
+                        <img src='../assets/img/cafeteria/OtherRFIF-5step-ja.jpg' alt='他社のRFIDオートレジによる無人窓口精算の5ステップ図（1.トレーを置く 2.機器が料理を認識し金額を自動計算 3.支払金額を表示 4.従業員による支払い 5.精算完了・トレー受取）——Step3とStep4が2つの設備で実現されている' style='width:100%;height:auto;border-radius:12px;box-shadow:0 2px 16px rgba(0,0,0,0.1);'>
+                        <figcaption style='text-align:center;font-size:0.88rem;color:#666;margin-top:10px;'>他社の食堂自動精算設備：金額表示（Step3）と支払い（Step4）は通常、<strong>2つの独立した設備</strong>で実現されます。</figcaption>
+                    </figure>
+                    <div class='diff-cards'>
+                        <div class='diff-card diff-card-other'>
+                            <span class='diff-badge diff-badge-gray'>他社の食堂自動精算設備</span>
+                            <h3>精算と決済＝2つの設備</h3>
+                            <p>日本市場において、他社の食堂自動精算設備では、<strong>「金額の精算（計算）」</strong>と<strong>「支払い」</strong>を基本的に<strong>2つの独立した設備</strong>で実現しています。設備台数が多く動線も複雑で、ネットワークとサーバーに依存します。</p>
+                        </div>
+                        <div class='diff-card diff-card-ours'>
+                            <span class='diff-badge diff-badge-green'>弊社製品</span>
+                            <h3>精算と決済＝1台に一体化</h3>
+                            <p>弊社製品は<strong>「精算」と「決済」を1台の設備に一体化</strong>して実現します。<strong>ネットワーク障害・サーバー障害が発生しても、オフラインで食堂精算を完了</strong>でき、昼のピーク時でも運用が止まりません。</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -450,6 +557,21 @@
             a.classList.toggle('active');
         });
     });
+
+    /* Solution videos: click-to-play with sound, pause others.
+       Cards are <a> links, so stop navigation when the video is clicked. */
+    function lpPlayVideo(e, box) {
+        if (e) { e.preventDefault(); e.stopPropagation(); }
+        var v = box.querySelector('video');
+        if (!v) return;
+        document.querySelectorAll('.lp-solution-video.is-playing').forEach(function(o) {
+            if (o !== box) { var ov = o.querySelector('video'); if (ov) ov.pause(); o.classList.remove('is-playing'); }
+        });
+        box.classList.add('is-playing');
+        v.play();
+        v.addEventListener('pause', function() { box.classList.remove('is-playing'); }, { once: true });
+        v.addEventListener('ended', function() { box.classList.remove('is-playing'); });
+    }
     </script>
 </body>
 </html>

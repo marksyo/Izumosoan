@@ -791,6 +791,37 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/column/cafeteria-queue.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/column/cafeteria-queue.html"/>
   </url>
+
+  <url>
+    <loc>https://izumosoan.com/ja/column/cafeteria-faceauth-gate.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/column/cafeteria-faceauth-gate.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/column/cafeteria-faceauth-gate.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/column/cafeteria-faceauth-gate.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/column/cafeteria-faceauth-gate.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/en/column/cafeteria-faceauth-gate.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/column/cafeteria-faceauth-gate.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/column/cafeteria-faceauth-gate.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/column/cafeteria-faceauth-gate.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/column/cafeteria-faceauth-gate.html"/>
+  </url>
+  <url>
+    <loc>https://izumosoan.com/zh/column/cafeteria-faceauth-gate.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/column/cafeteria-faceauth-gate.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izumosoan.com/en/column/cafeteria-faceauth-gate.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/column/cafeteria-faceauth-gate.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/column/cafeteria-faceauth-gate.html"/>
+  </url>
   <url>
     <loc>https://izumosoan.com/ja/column/rfid-settlement.html</loc>
     <lastmod>2026-09-20</lastmod>

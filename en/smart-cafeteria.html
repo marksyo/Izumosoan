@@ -131,6 +131,52 @@
         .aic-comparison { font-size: 0.82rem; }
         .aic-comparison th, .aic-comparison td { padding: 10px 10px; }
     }
+    /* ===== Solution Video (click-to-play, poster) ===== */
+    .lp-solution-video { position: relative; margin: 0 0 18px; border-radius: 10px; overflow: hidden; background: #000; aspect-ratio: 16 / 9; cursor: pointer; }
+    .lp-solution-video video { width: 100%; height: 100%; object-fit: cover; display: block; background: #000; }
+    .lp-video-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,20,40,0.28); transition: background 0.3s; pointer-events: none; }
+    .lp-solution-video:hover .lp-video-play { background: rgba(0,20,40,0.12); }
+    .lp-video-play::before { content: ''; width: 64px; height: 64px; border-radius: 50%; background: rgba(0,136,15,0.92); box-shadow: 0 4px 18px rgba(0,0,0,0.35); display: block; }
+    .lp-video-play::after { content: '\f04b'; font-family: 'Font Awesome 5 Free'; font-weight: 900; position: absolute; color: #fff; font-size: 1.35rem; margin-left: 4px; }
+    .lp-solution-video.is-playing .lp-video-play { display: none; }
+    /* ===== Widen solution cards so product images display larger ===== */
+    #solutions .container { max-width: 1500px; }
+    #solutions .aic-products { gap: 24px; }
+    #solutions .aic-product-card { padding: 32px 16px; }
+    #solutions .aic-product-card .aic-product-icon { height: 260px; min-height: 260px; margin-bottom: 18px; }
+    #solutions .aic-product-card .aic-product-icon img { width: 100%; height: 100%; max-height: 260px; object-fit: contain; }
+    /* ===== Compare card (image-only variant used in steps section) ===== */
+    .lp-compare { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    .lp-compare-card { display: grid; grid-template-columns: 1.5fr 1fr; grid-template-rows: auto 1fr; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); border: 2px solid #e8eef3; transition: transform 0.3s; }
+    .lp-compare-card:hover { transform: translateY(-4px); }
+    .lp-compare-best { border-color: #00880F; box-shadow: 0 6px 26px rgba(0,136,15,0.18); }
+    .lp-compare-card img { grid-column: 1; grid-row: 1 / 3; width: 100%; height: 100%; min-height: 300px; object-fit: contain; background: #f9f9f9; padding: 16px; align-self: stretch; }
+    .lp-compare-time { display: inline-block; font-family: 'Barlow', sans-serif; font-weight: 800; font-size: 1.05rem; padding: 8px 16px; border-radius: 8px; }
+    .lp-time-fast { background: #e8f7ea; color: #00880F; }
+    .lp-compare-imgonly { grid-template-columns: 1fr; grid-template-rows: auto; }
+    .lp-compare-imgonly img { grid-column: 1; grid-row: 1; min-height: 0; }
+    /* ===== 3-step message block ===== */
+    .cafeteria-3step-msg { max-width: 760px; margin: 0 auto 8px; text-align: center; }
+    .cafeteria-3step-msg .lp-compare-time { margin-bottom: 20px; font-size: 1.3rem; }
+    .cafeteria-3step-list { list-style: none; padding: 0; margin: 0 0 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 28px; counter-reset: step; }
+    .cafeteria-3step-list li { counter-increment: step; font-size: 1.05rem; font-weight: 600; color: #2c3e50; display: flex; align-items: center; gap: 8px; }
+    .cafeteria-3step-list li::before { content: counter(step); width: 30px; height: 30px; border-radius: 50%; background: #00880F; color: #fff; font-size: 0.95rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .cafeteria-3step-notes { list-style: none; padding: 0; margin: 0 auto; max-width: 640px; text-align: left; }
+    .cafeteria-3step-notes li { font-size: 0.92rem; color: #333; padding: 6px 0; line-height: 1.6; display: flex; gap: 8px; }
+    .cafeteria-3step-notes li i { color: #00880F; margin-top: 5px; font-size: 0.82rem; flex-shrink: 0; }
+    /* ===== Difference from other cafeteria auto-settlement devices ===== */
+    .faq-diff-wrap { max-width: 980px; margin: 0 auto; }
+    .diff-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .diff-card { background: #fff; border-radius: 14px; padding: 28px 26px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); border: 2px solid #e8eef3; }
+    .diff-card h3 { font-size: 1.15rem; color: #003554; margin: 12px 0 12px; }
+    .diff-card p { font-size: 0.93rem; color: #444; line-height: 1.75; margin: 0; }
+    .diff-card-ours { border-color: #00880F; box-shadow: 0 6px 26px rgba(0,136,15,0.18); }
+    .diff-badge { display: inline-block; padding: 4px 14px; border-radius: 999px; font-size: 0.8rem; font-weight: 700; }
+    .diff-badge-gray { background: #e5e7eb; color: #555; }
+    .diff-badge-green { background: #00880F; color: #fff; }
+    @media (max-width: 700px) {
+        .diff-cards { grid-template-columns: 1fr; }
+    }
     </style>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/img/logo/favicon.ico">
@@ -228,7 +274,13 @@
                 </div>
                 <div class='aic-products'>
                     <a href='smart-cafeteria-ai.html' class='aic-product-card'>
-                        <div class='aic-product-icon'><img src='../assets/img/cafeteria/cafeteria-ai.webp' alt='AI Image Recognition Terminal' style='width: 100%; max-height: 180px; object-fit: contain;'></div>
+                        <div class='aic-product-icon'><img src='../assets/img/cafeteria/cafeteria-ai.webp' alt='AI Image Recognition Terminal' style='width: 100%; height: 100%; object-fit: contain;'></div>
+                        <div class="lp-solution-video" onclick="lpPlayVideo(event, this)">
+                            <video preload="none" poster="../assets/img/cafeteria/cafeteria-ai.webp" playsinline controls controlslist="nodownload" aria-label="AI image recognition checkout demo video">
+                                <source src="../assets/img/cafeteria/AIimagepay.mp4" type="video/mp4">
+                            </video>
+                            <span class="lp-video-play"></span>
+                        </div>
                         <h3>AI Image Recognition</h3>
                         <p class='aic-product-desc'>AI cameras instantly recognize dishes on the tray and auto-calculate the total. No special dishware needed — use your existing dishes as-is.</p>
                         <ul>
@@ -240,7 +292,13 @@
                         <span class='aic-detail-btn'>Details <i class="fas fa-arrow-right"></i></span>
                     </a>
                     <a href='smart-cafeteria-rfid.html' class='aic-product-card'>
-                        <div class='aic-product-icon'><img src='../assets/img/cafeteria/cafeteria-rfid.webp' alt='RFID Settlement Terminal' style='width: 100%; max-height: 180px; object-fit: contain;'></div>
+                        <div class='aic-product-icon'><img src='../assets/img/cafeteria/cafeteria-rfid.webp' alt='RFID Settlement Terminal' style='width: 100%; height: 100%; object-fit: contain;'></div>
+                        <div class="lp-solution-video" onclick="lpPlayVideo(event, this)">
+                            <video preload="none" poster="../assets/img/cafeteria/cafeteria-rfid.webp" playsinline controls controlslist="nodownload" aria-label="RFID checkout demo video">
+                                <source src="../assets/img/cafeteria/RFIDpay_JA_with_title.mp4" type="video/mp4">
+                            </video>
+                            <span class="lp-video-play"></span>
+                        </div>
                         <h3>RFID Checkout</h3>
                         <p class='aic-product-desc'>Reads RFID chips embedded in dishware for instant settlement. Proven and reliable technology used in cafeterias worldwide.</p>
                         <ul>
@@ -252,7 +310,13 @@
                         <span class='aic-detail-btn'>Details <i class="fas fa-arrow-right"></i></span>
                     </a>
                     <a href='smart-cafeteria-weight.html' class='aic-product-card'>
-                        <div class='aic-product-icon'><img src='../assets/img/cafeteria/cafeteria-weighing.webp' alt='Weight-Based Settlement Terminal' style='width: 100%; max-height: 180px; object-fit: contain;'></div>
+                        <div class='aic-product-icon'><img src='../assets/img/cafeteria/cafeteria-weighing.webp' alt='Weight-Based Settlement Terminal' style='width: 100%; height: 100%; object-fit: contain;'></div>
+                        <div class="lp-solution-video" onclick="lpPlayVideo(event, this)">
+                            <video preload="none" poster="../assets/img/cafeteria/cafeteria-weighing.webp" playsinline controls controlslist="nodownload" aria-label="Weight-based checkout demo video">
+                                <source src="../assets/img/cafeteria/weightpay_JA_with_title.mp4" type="video/mp4">
+                            </video>
+                            <span class="lp-video-play"></span>
+                        </div>
                         <h3>Weight-Based Checkout</h3>
                         <p class='aic-product-desc'>High-precision scales auto-weigh food by the gram. Pay for what you eat — ideal for buffet-style and self-service dining.</p>
                         <ul>
@@ -271,26 +335,49 @@
         <section class='section-padding'>
             <div class='container'>
                 <div class='section-title'><h2>How It Works — 3 Simple Steps</h2></div>
-                <div class='aic-steps'>
-                    <div class='aic-step'>
-                        <div class='aic-step-num'>1</div>
-                        <div class='aic-step-icon'><i class="fas fa-utensils"></i></div>
-                        <h3>Choose Your Meal</h3>
-                        <p>Select your dishes and place them on a tray — just like you normally would.</p>
-                        <span class='aic-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                <div class='cafeteria-3step-msg'>
+                    <div class='lp-compare-time lp-time-fast'>Only 3–5 seconds per person</div>
+                    <ol class='cafeteria-3step-list'>
+                        <li>Place your tray</li>
+                        <li>Dish recognition &amp; auto-checkout</li>
+                        <li>Pick up your tray</li>
+                    </ol>
+                    <ul class='cafeteria-3step-notes'>
+                        <li><i class="fas fa-bolt"></i> Face recognition is used for the checkout process, eliminating the time spent taking a card out of your pocket.</li>
+                        <li><i class="fas fa-bolt"></i> Checkout completes in a total of just <strong>3–5 seconds</strong> per person — dramatically faster than competing products.</li>
+                    </ul>
+                </div>
+                <div class='lp-compare' style='margin-top:32px;'>
+                    <div class='lp-compare-card lp-compare-best lp-compare-imgonly'>
+                        <img src='../assets/img/cafeteria/quickestpay-en.jpg' alt="Our solution&apos;s 3-step fast checkout">
                     </div>
-                    <div class='aic-step'>
-                        <div class='aic-step-num'>2</div>
-                        <div class='aic-step-icon'><i class="fas fa-brain"></i></div>
-                        <h3>Auto-Recognition &amp; Calculation</h3>
-                        <p>Whether AI, RFID, or weight-based — the system instantly recognizes items and calculates the total.</p>
-                        <span class='aic-step-arrow'><i class="fas fa-chevron-right"></i></span>
-                    </div>
-                    <div class='aic-step'>
-                        <div class='aic-step-num'>3</div>
-                        <div class='aic-step-icon'><i class="fas fa-mobile-alt"></i></div>
-                        <h3>Cashless Payment</h3>
-                        <p>Pay with face recognition, QR code, or IC card. Hygienic, fast, and complete.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4b. Difference from other cafeteria auto-settlement devices -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>How We Differ from Other Cafeteria Auto-Settlement Devices</h2>
+                    <p>"Settlement" and "payment" integrated into a single device — checkout can be completed offline even during network or server failures.</p>
+                </div>
+                <div class='faq-diff-wrap'>
+                    <figure style='margin:0 0 28px;'>
+                        <img src='../assets/img/cafeteria/OtherRFIF-5step-en.jpg' alt='A 5-step diagram of an unattended checkout with another company&apos;s RFID auto-register (1. place the tray, 2. the machine recognizes dishes and calculates the amount automatically, 3. show the amount due, 4. staff-handled payment, 5. settlement complete and pick up the tray) — Step 3 and Step 4 are handled by two separate devices' style='width:100%;height:auto;border-radius:12px;box-shadow:0 2px 16px rgba(0,0,0,0.1);'>
+                        <figcaption style='text-align:center;font-size:0.88rem;color:#666;margin-top:10px;'>Other cafeteria auto-settlement devices: showing the amount (Step 3) and payment (Step 4) are typically handled by <strong>two separate devices</strong>.</figcaption>
+                    </figure>
+                    <div class='diff-cards'>
+                        <div class='diff-card diff-card-other'>
+                            <span class='diff-badge diff-badge-gray'>Other cafeteria auto-settlement devices</span>
+                            <h3>Settlement &amp; payment = two devices</h3>
+                            <p>In the Japanese market, other cafeteria auto-settlement devices basically handle <strong>"amount settlement (calculation)"</strong> and <strong>"payment"</strong> with <strong>two separate devices</strong>. This means more units, a more complex flow, and dependence on the network and server.</p>
+                        </div>
+                        <div class='diff-card diff-card-ours'>
+                            <span class='diff-badge diff-badge-green'>Our product</span>
+                            <h3>Settlement &amp; payment = integrated in one device</h3>
+                            <p>Our product <strong>integrates "settlement" and "payment" into a single device</strong>. Even if a <strong>network failure or server failure occurs, cafeteria settlement can be completed offline</strong>, so operations never stop during the lunch peak.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -448,6 +535,21 @@
             a.classList.toggle('active');
         });
     });
-    </script>
+
+    /* Solution videos: click-to-play with sound, pause others.
+       Cards are <a> links, so stop navigation when the video is clicked. */
+    function lpPlayVideo(e, box) {
+        if (e) { e.preventDefault(); e.stopPropagation(); }
+        var v = box.querySelector('video');
+        if (!v) return;
+        document.querySelectorAll('.lp-solution-video.is-playing').forEach(function(o) {
+            if (o !== box) { var ov = o.querySelector('video'); if (ov) ov.pause(); o.classList.remove('is-playing'); }
+        });
+        box.classList.add('is-playing');
+        v.play();
+        v.addEventListener('pause', function() { box.classList.remove('is-playing'); }, { once: true });
+        v.addEventListener('ended', function() { box.classList.remove('is-playing'); });
+    }
+
 </body>
 </html>

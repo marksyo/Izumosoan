@@ -132,6 +132,52 @@
         .aic-comparison { font-size: 0.82rem; }
         .aic-comparison th, .aic-comparison td { padding: 10px 10px; }
     }
+    /* ===== Solution Video (click-to-play, poster) ===== */
+    .lp-solution-video { position: relative; margin: 0 0 18px; border-radius: 10px; overflow: hidden; background: #000; aspect-ratio: 16 / 9; cursor: pointer; }
+    .lp-solution-video video { width: 100%; height: 100%; object-fit: cover; display: block; background: #000; }
+    .lp-video-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,20,40,0.28); transition: background 0.3s; pointer-events: none; }
+    .lp-solution-video:hover .lp-video-play { background: rgba(0,20,40,0.12); }
+    .lp-video-play::before { content: ''; width: 64px; height: 64px; border-radius: 50%; background: rgba(0,136,15,0.92); box-shadow: 0 4px 18px rgba(0,0,0,0.35); display: block; }
+    .lp-video-play::after { content: '\f04b'; font-family: 'Font Awesome 5 Free'; font-weight: 900; position: absolute; color: #fff; font-size: 1.35rem; margin-left: 4px; }
+    .lp-solution-video.is-playing .lp-video-play { display: none; }
+    /* ===== Widen solution cards so product images display larger ===== */
+    #solutions .container { max-width: 1500px; }
+    #solutions .aic-products { gap: 24px; }
+    #solutions .aic-product-card { padding: 32px 16px; }
+    #solutions .aic-product-card .aic-product-icon { height: 260px; min-height: 260px; margin-bottom: 18px; }
+    #solutions .aic-product-card .aic-product-icon img { width: 100%; height: 100%; max-height: 260px; object-fit: contain; }
+    /* ===== Compare card (image-only variant used in steps section) ===== */
+    .lp-compare { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    .lp-compare-card { display: grid; grid-template-columns: 1.5fr 1fr; grid-template-rows: auto 1fr; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); border: 2px solid #e8eef3; transition: transform 0.3s; }
+    .lp-compare-card:hover { transform: translateY(-4px); }
+    .lp-compare-best { border-color: #00880F; box-shadow: 0 6px 26px rgba(0,136,15,0.18); }
+    .lp-compare-card img { grid-column: 1; grid-row: 1 / 3; width: 100%; height: 100%; min-height: 300px; object-fit: contain; background: #f9f9f9; padding: 16px; align-self: stretch; }
+    .lp-compare-time { display: inline-block; font-family: 'Barlow', sans-serif; font-weight: 800; font-size: 1.05rem; padding: 8px 16px; border-radius: 8px; }
+    .lp-time-fast { background: #e8f7ea; color: #00880F; }
+    .lp-compare-imgonly { grid-template-columns: 1fr; grid-template-rows: auto; }
+    .lp-compare-imgonly img { grid-column: 1; grid-row: 1; min-height: 0; }
+    /* ===== 3-step message block ===== */
+    .cafeteria-3step-msg { max-width: 760px; margin: 0 auto 8px; text-align: center; }
+    .cafeteria-3step-msg .lp-compare-time { margin-bottom: 20px; font-size: 1.3rem; }
+    .cafeteria-3step-list { list-style: none; padding: 0; margin: 0 0 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 28px; counter-reset: step; }
+    .cafeteria-3step-list li { counter-increment: step; font-size: 1.05rem; font-weight: 600; color: #2c3e50; display: flex; align-items: center; gap: 8px; }
+    .cafeteria-3step-list li::before { content: counter(step); width: 30px; height: 30px; border-radius: 50%; background: #00880F; color: #fff; font-size: 0.95rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .cafeteria-3step-notes { list-style: none; padding: 0; margin: 0 auto; max-width: 640px; text-align: left; }
+    .cafeteria-3step-notes li { font-size: 0.92rem; color: #333; padding: 6px 0; line-height: 1.6; display: flex; gap: 8px; }
+    .cafeteria-3step-notes li i { color: #00880F; margin-top: 5px; font-size: 0.82rem; flex-shrink: 0; }
+    /* ===== Difference from other auto-registers ===== */
+    .faq-diff-wrap { max-width: 980px; margin: 0 auto; }
+    .diff-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .diff-card { background: #fff; border-radius: 14px; padding: 28px 26px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); border: 2px solid #e8eef3; }
+    .diff-card h3 { font-size: 1.15rem; color: #003554; margin: 12px 0 12px; }
+    .diff-card p { font-size: 0.93rem; color: #444; line-height: 1.75; margin: 0; }
+    .diff-card-ours { border-color: #00880F; box-shadow: 0 6px 26px rgba(0,136,15,0.18); }
+    .diff-badge { display: inline-block; padding: 4px 14px; border-radius: 999px; font-size: 0.8rem; font-weight: 700; }
+    .diff-badge-gray { background: #e5e7eb; color: #555; }
+    .diff-badge-green { background: #00880F; color: #fff; }
+    @media (max-width: 700px) {
+        .diff-cards { grid-template-columns: 1fr; }
+    }
     </style>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/img/logo/favicon.ico">
@@ -227,7 +273,13 @@
                 </div>
                 <div class='aic-products'>
                     <a href='smart-cafeteria-ai.html' class='aic-product-card'>
-                        <div class='aic-product-icon'><img src='../assets/img/cafeteria/cafeteria-ai.webp' alt='AI图像识别精算终端' style='width: 100%; max-height: 180px; object-fit: contain;'></div>
+                        <div class='aic-product-icon'><img src='../assets/img/cafeteria/cafeteria-ai.webp' alt='AI图像识别精算终端' style='width: 100%; height: 100%; object-fit: contain;'></div>
+                        <div class="lp-solution-video" onclick="lpPlayVideo(event, this)">
+                            <video preload="none" poster="../assets/img/cafeteria/cafeteria-ai.webp" playsinline controls controlslist="nodownload" aria-label="图像识别结算演示视频">
+                                <source src="../assets/img/cafeteria/AIimagepay.mp4" type="video/mp4">
+                            </video>
+                            <span class="lp-video-play"></span>
+                        </div>
                         <h3>AI图像识别结算</h3>
                         <p class='aic-product-desc'>AI摄像头瞬间识别托盘上的菜品，自动计算总价。无需专用餐具，现有餐具直接使用。</p>
                         <ul>
@@ -239,7 +291,13 @@
                         <span class='aic-detail-btn'>详情 <i class="fas fa-arrow-right"></i></span>
                     </a>
                     <a href='smart-cafeteria-rfid.html' class='aic-product-card'>
-                        <div class='aic-product-icon'><img src='../assets/img/cafeteria/cafeteria-rfid.webp' alt='RFID精算台' style='width: 100%; max-height: 180px; object-fit: contain;'></div>
+                        <div class='aic-product-icon'><img src='../assets/img/cafeteria/cafeteria-rfid.webp' alt='RFID精算台' style='width: 100%; height: 100%; object-fit: contain;'></div>
+                        <div class="lp-solution-video" onclick="lpPlayVideo(event, this)">
+                            <video preload="none" poster="../assets/img/cafeteria/cafeteria-rfid.webp" playsinline controls controlslist="nodownload" aria-label="RFID结算演示视频">
+                                <source src="../assets/img/cafeteria/RFIDpay_JA_with_title.mp4" type="video/mp4">
+                            </video>
+                            <span class="lp-video-play"></span>
+                        </div>
                         <h3>RFID结算</h3>
                         <p class='aic-product-desc'>读取餐具内置RFID芯片，瞬间完成结算。全球食堂广泛应用，稳定可靠。</p>
                         <ul>
@@ -251,7 +309,13 @@
                         <span class='aic-detail-btn'>详情 <i class="fas fa-arrow-right"></i></span>
                     </a>
                     <a href='smart-cafeteria-weight.html' class='aic-product-card'>
-                        <div class='aic-product-icon'><img src='../assets/img/cafeteria/cafeteria-weighing.webp' alt='计量精算终端' style='width: 100%; max-height: 180px; object-fit: contain;'></div>
+                        <div class='aic-product-icon'><img src='../assets/img/cafeteria/cafeteria-weighing.webp' alt='计量精算终端' style='width: 100%; height: 100%; object-fit: contain;'></div>
+                        <div class="lp-solution-video" onclick="lpPlayVideo(event, this)">
+                            <video preload="none" poster="../assets/img/cafeteria/cafeteria-weighing.webp" playsinline controls controlslist="nodownload" aria-label="称重结算演示视频">
+                                <source src="../assets/img/cafeteria/weightpay_JA_with_title.mp4" type="video/mp4">
+                            </video>
+                            <span class="lp-video-play"></span>
+                        </div>
                         <h3>称重结算</h3>
                         <p class='aic-product-desc'>高精度电子秤自动称量，按克计费。"吃多少付多少"，最适合自助餐模式。</p>
                         <ul>
@@ -270,26 +334,49 @@
         <section class='section-padding'>
             <div class='container'>
                 <div class='section-title'><h2>简单3步</h2></div>
-                <div class='aic-steps'>
-                    <div class='aic-step'>
-                        <div class='aic-step-num'>1</div>
-                        <div class='aic-step-icon'><i class="fas fa-utensils"></i></div>
-                        <h3>选择菜品</h3>
-                        <p>将喜欢的菜品放入托盘，就这么简单。</p>
-                        <span class='aic-step-arrow'><i class="fas fa-chevron-right"></i></span>
+                <div class='cafeteria-3step-msg'>
+                    <div class='lp-compare-time lp-time-fast'>每人仅需 3〜5 秒</div>
+                    <ol class='cafeteria-3step-list'>
+                        <li>放置托盘</li>
+                        <li>菜品识别与自动结算</li>
+                        <li>取走托盘</li>
+                    </ol>
+                    <ul class='cafeteria-3step-notes'>
+                        <li><i class="fas fa-bolt"></i> 利用人脸识别进行结算处理，省去从口袋掏卡的时间。</li>
+                        <li><i class="fas fa-bolt"></i> 每人总计仅需 <strong>3〜5 秒</strong> 即可完成结算，处理时间较其他产品大幅缩短。</li>
+                    </ul>
+                </div>
+                <div class='lp-compare' style='margin-top:32px;'>
+                    <div class='lp-compare-card lp-compare-best lp-compare-imgonly'>
+                        <img src='../assets/img/cafeteria/quickestpay-zh.jpg' alt='本公司解决方案的3步快速结算'>
                     </div>
-                    <div class='aic-step'>
-                        <div class='aic-step-num'>2</div>
-                        <div class='aic-step-icon'><i class="fas fa-brain"></i></div>
-                        <h3>自动识别・结算</h3>
-                        <p>AI・RFID・称重，任何方式均可瞬间识别并自动计算金额。</p>
-                        <span class='aic-step-arrow'><i class="fas fa-chevron-right"></i></span>
-                    </div>
-                    <div class='aic-step'>
-                        <div class='aic-step-num'>3</div>
-                        <div class='aic-step-icon'><i class="fas fa-mobile-alt"></i></div>
-                        <h3>无现金支付</h3>
-                        <p>通过人脸识别、QR码或IC卡完成支付，卫生便捷。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4b. Difference from other auto-registers -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>与其他食堂自动结算设备的区别</h2>
+                    <p>结算与支付"一台设备一体化"，网络・服务器故障时也能离线完成结算。</p>
+                </div>
+                <div class='faq-diff-wrap'>
+                    <figure style='margin:0 0 28px;'>
+                        <img src='../assets/img/cafeteria/OtherRFIF-5step-zh.jpg' alt='其他公司RFID自动收银的无人窗口结算5步骤图（1.放置托盘 2.机器确认菜品并自动计算价格 3.显示应付金额 4.员工支付 5.完成结算并取走托盘）——第3步与第4步分别由两台设备实现' style='width:100%;height:auto;border-radius:12px;box-shadow:0 2px 16px rgba(0,0,0,0.1);'>
+                        <figcaption style='text-align:center;font-size:0.88rem;color:#666;margin-top:10px;'>其他食堂自动结算设备：显示金额（第3步）与支付（第4步）通常由<strong>两台独立设备</strong>实现。</figcaption>
+                    </figure>
+                    <div class='diff-cards'>
+                        <div class='diff-card diff-card-other'>
+                            <span class='diff-badge diff-badge-gray'>其他食堂自动结算设备</span>
+                            <h3>结算与支付＝两台设备</h3>
+                            <p>在日本市场，其他食堂自动结算设备中，<strong>「显示应付金额（计算）」</strong>与<strong>「支付」</strong>基本上由<strong>两台独立设备</strong>实现。设备数量多、动线复杂，且依赖网络与服务器。</p>
+                        </div>
+                        <div class='diff-card diff-card-ours'>
+                            <span class='diff-badge diff-badge-green'>本公司产品</span>
+                            <h3>结算与支付＝一台设备一体化</h3>
+                            <p>本公司产品将<strong>「结算」与「支付」整合到一台设备</strong>中一体化实现。即便发生<strong>网络故障、服务器故障，也能以离线方式完成食堂结算</strong>，让午餐高峰期的运营不中断。</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -447,6 +534,21 @@
             a.classList.toggle('active');
         });
     });
-    </script>
+
+    /* Solution videos: click-to-play with sound, pause others.
+       Cards are <a> links, so stop navigation when the video is clicked. */
+    function lpPlayVideo(e, box) {
+        if (e) { e.preventDefault(); e.stopPropagation(); }
+        var v = box.querySelector('video');
+        if (!v) return;
+        document.querySelectorAll('.lp-solution-video.is-playing').forEach(function(o) {
+            if (o !== box) { var ov = o.querySelector('video'); if (ov) ov.pause(); o.classList.remove('is-playing'); }
+        });
+        box.classList.add('is-playing');
+        v.play();
+        v.addEventListener('pause', function() { box.classList.remove('is-playing'); }, { once: true });
+        v.addEventListener('ended', function() { box.classList.remove('is-playing'); });
+    }
+
 </body>
 </html>
