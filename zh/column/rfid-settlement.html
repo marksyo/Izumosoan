@@ -159,9 +159,18 @@
 <p>本文将从RFID结算系统的原理、导入优势、应选择的食堂特征，到导入前应确认的要点进行全面解析。我们还准备了与AI方式的对比表，作为判断「自家食堂适合哪一种？」的参考，敬请阅读到最后。</p>
 <hr />
 <h2>什么是RFID？在食堂中的应用原理</h2>
-<p>RFID（Radio Frequency Identification）是利用电波非接触地读写数据的技术。它常见于交通IC卡和物流库存管理，近年来其应用也扩展到了<strong>食堂的结算系统</strong>。</p>
+<p>RFID（Radio Frequency Identification，射频识别）是一种利用无线电波，在无需接触、无需视线对准的情况下，自动读取目标对象数据的技术。它常见于交通IC卡和物流库存管理，近年来其应用也扩展到了<strong>食堂的结算系统</strong>。</p>
+<p>一套完整的RFID系统由三部分组成：</p>
+<p style='text-align:center;margin:24px 0;'><img src='../../assets/img/cafeteria/RFID_ZH.jpg' alt='RFID系统的三部分组成：电子标签、读写器、天线' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);'></p>
+<ul>
+<li><strong>电子标签（Tag）</strong>：嵌在目标物体内，存储唯一的身份数据。在食堂场景中，就是嵌入餐盘底部的芯片，写入了对应菜品的编码与价格信息；</li>
+<li><strong>读写器（Reader）</strong>：发射射频信号并接收标签回传的数据。在食堂场景中，就是结算台内置的读写模块；</li>
+<li><strong>天线（Antenna）</strong>：负责信号发射与接收的通道，实现读写器与标签之间的无线通信。</li>
+</ul>
+<p>整个过程是：读写器发出射频信号 → 餐盘芯片感应到能量被“唤醒” → 芯片将存储的菜品数据通过无线方式回传 → 读写器解析数据并上报系统完成计价。</p>
 <h3>内置RFID芯片的智慧餐具的机制</h3>
 <p>食堂用RFID结算系统的核心，就是<strong>内置RFID芯片的智慧餐具</strong>。餐具底部埋有小型RFID芯片，其中记录了菜名、价格、类别等信息。</p>
+<p style='text-align:center;margin:24px 0;'><img src='../../assets/img/cafeteria/RFIDtype.jpg' alt='内置RFID芯片的智慧餐具' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);'></p>
 <p>结算流程简单得令人惊讶。</p>
 <table>
 <thead>

@@ -159,9 +159,18 @@
 <p>This article comprehensively explains the RFID checkout system from how it works to the benefits of introduction, the traits of cafeterias it suits, and the points to check before adoption. We've also prepared a comparison table with the AI method, so please read to the end as material for judging "which one suits our cafeteria?"</p>
 <hr />
 <h2>What is RFID? The principle of its use in cafeterias</h2>
-<p>RFID (Radio Frequency Identification) is a technology that reads and writes data contactlessly using radio waves. It is familiar from transit IC cards and logistics inventory management, but in recent years its application has spread to <strong>cafeteria checkout systems</strong> as well.</p>
+<p>RFID (Radio Frequency Identification) is a technology that automatically reads a target object's data using radio waves, without contact and without requiring line-of-sight alignment. It is familiar from transit IC cards and logistics inventory management, but in recent years its application has spread to <strong>cafeteria checkout systems</strong> as well.</p>
+<p>A complete RFID system consists of three parts:</p>
+<p style='text-align:center;margin:24px 0;'><img src='../../assets/img/cafeteria/RFID_EN.jpg' alt='The three parts of an RFID system: tag, reader, and antenna' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);'></p>
+<ul>
+<li><strong>Tag</strong>: Embedded in the target object, it stores unique identity data. In the cafeteria scenario, it is the chip embedded in the bottom of the dish, written with the corresponding menu item's code and price information;</li>
+<li><strong>Reader</strong>: Emits a radio-frequency signal and receives the data returned by the tag. In the cafeteria scenario, it is the read/write module built into the checkout counter;</li>
+<li><strong>Antenna</strong>: The channel responsible for transmitting and receiving signals, enabling wireless communication between the reader and the tag.</li>
+</ul>
+<p>The whole process is: the reader emits a radio-frequency signal → the dish's chip is “awakened” by the induced energy → the chip wirelessly returns the stored menu-item data → the reader parses the data and reports it to the system to complete pricing.</p>
 <h3>How smart dishes with a built-in RFID chip work</h3>
 <p>The core of a cafeteria RFID checkout system is the <strong>smart dish with a built-in RFID chip</strong>. A small RFID chip is embedded in the bottom of the dish, and information such as the menu name, price, and category is recorded on it.</p>
+<p style='text-align:center;margin:24px 0;'><img src='../../assets/img/cafeteria/RFIDtype.jpg' alt='Smart dishes with a built-in RFID chip' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);'></p>
 <p>The checkout flow is remarkably simple.</p>
 <table>
 <thead>
