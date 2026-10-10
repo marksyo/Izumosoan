@@ -20,6 +20,11 @@
     <meta property="og:title" content="出雲創安 | 技術を現場の力に。エンジニアリングパートナー">
     <meta property="og:description" content="出雲創安は国内外のテクノロジーを日本の現場に実装し、設計・導入・運用まで支援するエンジニアリングパートナーです。">
     <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://izumosoan.com/assets/img/cafeteria/cafeteria-hero.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="出雲創安 | 技術を現場の力に。エンジニアリングパートナー">
+    <meta name="twitter:description" content="出雲創安は国内外のテクノロジーを日本の現場に実装し、設計・施工・システム連携・運用まで支援するエンジニアリングパートナーです。製造業・物流・データセンター・施設向けに、ネットワーク構築、技術システム導入、現場DXを提供。">
+    <meta name="twitter:image" content="https://izumosoan.com/assets/img/cafeteria/cafeteria-hero.webp">
 
     <!-- SEO: JSON-LD Organization -->
     <script type="application/ld+json">
@@ -110,6 +115,19 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/logo/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/logo/apple-touch-icon.png">
+<style>
+    /* Smart Cafeteria hero CTA — green accent (overrides blue primary on hover) */
+    .btn-cafeteria { background: #00880F !important; box-shadow: 0 4px 14px rgba(0,136,15,0.45) !important; }
+    .btn-cafeteria:hover { background: #00660C !important; box-shadow: 0 6px 20px rgba(0,136,15,0.6) !important; }
+    /* Hero buttons: allow wrapping on medium screens */
+    .hero-buttons { flex-wrap: wrap; }
+    /* Mobile: stack the 3 hero buttons vertically, full-width, easy to tap */
+    @media (max-width: 600px) {
+        .hero-buttons { flex-direction: column; align-items: stretch; gap: 0.75rem; width: 100%; max-width: 360px; margin-left: auto; margin-right: auto; }
+        .hero-buttons .btn-primary,
+        .hero-buttons .btn-secondary { width: 100%; box-sizing: border-box; padding: 14px 20px; font-size: 1rem; white-space: normal; }
+    }
+</style>
 </head>
 <body>
     <header>
@@ -151,8 +169,9 @@
                 </p>
                 <!-- 提案 #12: 日本企業/海外メーカーの導線分離 -->
                 <div class='hero-buttons'>
-                    <a href='services.html' class='btn-primary'>現場の技術課題を相談する</a>
+                    <a href='services.html' class='btn-secondary'>現場の技術課題を相談する</a>
                     <a href='overseas-partner.html' class='btn-secondary'>日本市場への展開を相談する</a>
+                    <a href='smart-cafeteria.html' class='btn-primary btn-cafeteria' style='background:#00880F;box-shadow:0 4px 14px rgba(0,136,15,0.45);'>スマート食堂ソリューション</a>
                 </div>
             </div>
         </section>
@@ -292,7 +311,7 @@
                         </div>
                     </div>
                     <div class='mini-case-card'>
-                        <img src='../assets/img/cards/agv-robot.webp' alt='物流倉庫AGV導入支援' style='width:100%;height:180px;object-fit:cover;display:block;'>
+                        <img src='../assets/img/cards/agv-robot.webp' alt='物流倉庫AGV導入支援' style='width:100%;height:180px;object-fit:cover;display:block;' loading='lazy'>
                         <div class='mini-case-body'>
                             <span class='case-cat'>物流倉庫</span>
                             <h3>物流倉庫AGV導入支援</h3>
@@ -304,7 +323,7 @@
                         </div>
                     </div>
                     <div class='mini-case-card'>
-                        <img src='../assets/img/cards/erp-upgrade.webp' alt='製造業ERP更新プロジェクト' style='width:100%;height:180px;object-fit:cover;display:block;'>
+                        <img src='../assets/img/cards/erp-upgrade.webp' alt='製造業ERP更新プロジェクト' style='width:100%;height:180px;object-fit:cover;display:block;' loading='lazy'>
                         <div class='mini-case-body'>
                             <span class='case-cat'>製造業</span>
                             <h3>製造業ERP更新プロジェクト</h3>
@@ -446,6 +465,10 @@
                             <div class='form-group'>
                                 <label for='company'>会社名・組織名</label>
                                 <input type='text' id='company' name='company' placeholder="出雲創安合同会社">
+                            </div>
+                            <div class='form-group'>
+                                <label for='phone'>電話番号 <span style='font-weight:400;color:var(--text-muted);font-size:0.85em;'>（任意）</span></label>
+                                <input type='tel' id='phone' name='phone' placeholder="03-1234-5678" autocomplete='tel'>
                             </div>
                             <div class='form-group'>
                                 <label for='message'>お問い合わせ内容</label>

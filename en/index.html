@@ -4,7 +4,7 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Izumo Soan | Bridging Technology and the Field</title>
-    <meta name='description' content='Izumo Soan implements domestic and international technologies on Japanese worksites, supporting everything from design, installation, system integration, to ongoing operations. Serving manufacturing, logistics, data centers, and facilities.'>
+    <meta name='description' content='Izumo Soan implements domestic and overseas technologies on Japanese worksites — design, installation, integration and operations for industry and logistics.'>
     
     <!-- SEO: hreflang -->
     <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/index.html">
@@ -20,6 +20,11 @@
     <meta property="og:title" content="Izumo Soan | Bridging Technology and the Field">
     <meta property="og:description" content="Izumo Soan implements domestic and international technologies on Japanese worksites, supporting design, deployment, and operations as your engineering partner.">
     <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://izumosoan.com/assets/img/cafeteria/cafeteria-hero.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Izumo Soan | Bridging Technology and the Field">
+    <meta name="twitter:description" content="Izumo Soan implements domestic and international technologies on Japanese worksites, supporting everything from design, installation, system integration, to ongoing operations. Serving manufacturing, logistics, data centers, and facilities.">
+    <meta name="twitter:image" content="https://izumosoan.com/assets/img/cafeteria/cafeteria-hero.webp">
 
     <!-- SEO: JSON-LD Organization -->
     <script type="application/ld+json">
@@ -110,6 +115,19 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/logo/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/logo/apple-touch-icon.png">
+<style>
+    /* Smart Cafeteria hero CTA — green accent (overrides blue primary on hover) */
+    .btn-cafeteria { background: #00880F !important; box-shadow: 0 4px 14px rgba(0,136,15,0.45) !important; }
+    .btn-cafeteria:hover { background: #00660C !important; box-shadow: 0 6px 20px rgba(0,136,15,0.6) !important; }
+    /* Hero buttons: allow wrapping on medium screens */
+    .hero-buttons { flex-wrap: wrap; }
+    /* Mobile: stack the 3 hero buttons vertically, full-width, easy to tap */
+    @media (max-width: 600px) {
+        .hero-buttons { flex-direction: column; align-items: stretch; gap: 0.75rem; width: 100%; max-width: 360px; margin-left: auto; margin-right: auto; }
+        .hero-buttons .btn-primary,
+        .hero-buttons .btn-secondary { width: 100%; box-sizing: border-box; padding: 14px 20px; font-size: 1rem; white-space: normal; }
+    }
+</style>
 </head>
 <body>
     <header>
@@ -150,8 +168,9 @@
                     We implement domestic and international technologies on Japanese worksites,<br>supporting design, deployment, and operations as your engineering partner.
                 </p>
                 <div class='hero-buttons'>
-                    <a href='services.html' class='btn-primary'>Discuss your field challenges</a>
+                    <a href='services.html' class='btn-secondary'>Discuss your field challenges</a>
                     <a href='overseas-partner.html' class='btn-secondary'>Expand into the Japanese market</a>
+                    <a href='smart-cafeteria.html' class='btn-primary btn-cafeteria' style='background:#00880F;box-shadow:0 4px 14px rgba(0,136,15,0.45);'>Smart Cafeteria Solutions</a>
                 </div>
             </div>
         </section>
@@ -291,7 +310,7 @@
                         </div>
                     </div>
                     <div class='mini-case-card'>
-                        <img src='../assets/img/cards/agv-robot.webp' alt='Logistics Warehouse AGV Deployment' style='width:100%;height:180px;object-fit:cover;display:block;'>
+                        <img src='../assets/img/cards/agv-robot.webp' alt='Logistics Warehouse AGV Deployment' style='width:100%;height:180px;object-fit:cover;display:block;' loading='lazy'>
                         <div class='mini-case-body'>
                             <span class='case-cat'>Logistics</span>
                             <h3>Logistics Warehouse AGV Deployment</h3>
@@ -303,7 +322,7 @@
                         </div>
                     </div>
                     <div class='mini-case-card'>
-                        <img src='../assets/img/cards/erp-upgrade.webp' alt='Manufacturing ERP Upgrade' style='width:100%;height:180px;object-fit:cover;display:block;'>
+                        <img src='../assets/img/cards/erp-upgrade.webp' alt='Manufacturing ERP Upgrade' style='width:100%;height:180px;object-fit:cover;display:block;' loading='lazy'>
                         <div class='mini-case-body'>
                             <span class='case-cat'>Manufacturing</span>
                             <h3>Manufacturing ERP Upgrade</h3>
@@ -444,6 +463,10 @@
                             <div class='form-group'>
                                 <label for='company'>Company / Organization</label>
                                 <input type='text' id='company' name='company' placeholder="Company Name">
+                            </div>
+                            <div class='form-group'>
+                                <label for='phone'>Phone Number <span style='font-weight:400;color:var(--text-muted);font-size:0.85em;'>(optional)</span></label>
+                                <input type='tel' id='phone' name='phone' placeholder="+81 3-1234-5678" autocomplete='tel'>
                             </div>
                             <div class='form-group'>
                                 <label for='message'>Message</label>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>AI精算端末（新モデル） | コンパクトな料理認識・キャッシュレス決済 | 出雲創安</title>
+    <meta name='description' content="AI料理認識とキャッシュレス決済を1台に統合したコンパクトなAI精算端末（新モデル1/2）。トレーを置いてから決済まで約3秒。社員食堂・大学食堂・病院食堂に。">
+
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/smart-cafeteria-ai-newmodel.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/smart-cafeteria-ai-newmodel.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/smart-cafeteria-ai-newmodel.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/smart-cafeteria-ai-newmodel.html">
+    <link rel="canonical" href="https://izumosoan.com/ja/smart-cafeteria-ai-newmodel.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="出雲創安 Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/ja/smart-cafeteria-ai-newmodel.html">
+    <meta property="og:title" content="AI精算端末（新モデル） | コンパクトな料理認識・キャッシュレス決済 | 出雲創安">
+    <meta property="og:description" content="AI料理認識とキャッシュレス決済を一体化したコンパクトな卓上型AI精算端末。料理の認識から決済まで約3秒。">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://izumosoan.com/assets/img/cafeteria/AI-newmodel2.jpg">
+    <meta property="og:image:alt" content="AI精算端末（新モデル2）コンパクトな卓上端末">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI精算端末（新モデル）">
+    <meta name="twitter:description" content="AI料理認識とキャッシュレス決済を1台に統合したコンパクトなAI精算端末（新モデル1/2）。トレーを置いてから決済まで約3秒。社員食堂・大学食堂・病院食堂に。">
+    <meta name="twitter:image" content="https://izumosoan.com/assets/img/cafeteria/AI-newmodel2.jpg">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://izumosoan.com/ja/index.html"},{"@type":"ListItem","position":2,"name":"サービス","item":"https://izumosoan.com/ja/services.html"},{"@type":"ListItem","position":3,"name":"スマート食堂","item":"https://izumosoan.com/ja/smart-cafeteria.html"},{"@type":"ListItem","position":4,"name":"AI画像認識精算","item":"https://izumosoan.com/ja/smart-cafeteria-ai.html"},{"@type":"ListItem","position":5,"name":"AI精算端末（新モデル）","item":"https://izumosoan.com/ja/smart-cafeteria-ai-newmodel.html"}]}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../assets/css/style.min.css'>
+
+    <style>
+    /* AI Checkout Terminal New Model page-specific styles */
+    .aic-nm-hero { background: linear-gradient(135deg, #EFF6F0 0%, #d4edda 100%); padding: 80px 0 60px; }
+    .aic-nm-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .aic-nm-hero h1 { font-size: 2.2rem; color: #2c3e50; margin-bottom: 8px; }
+    .aic-nm-hero .aic-nm-hero-lead { font-size: 1.2rem; font-weight: 600; color: #00660C; line-height: 1.6; margin-bottom: 16px; }
+    .aic-nm-hero .subtitle { font-size: 1.02rem; color: #555; line-height: 1.9; margin-bottom: 18px; }
+    .aic-nm-hero-tagline { font-size: 1.1rem; font-weight: 700; color: #2c3e50; margin-bottom: 24px; }
+    .aic-nm-hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+    .aic-nm-hero-buttons .btn-secondary { background: #fff; color: #00880F; border: 1px solid #00880F; padding: 14px 28px; border-radius: 6px; font-size: 1rem; font-weight: 600; text-decoration: none; display: inline-block; transition: all 0.3s; }
+    .aic-nm-hero-buttons .btn-secondary:hover { background: #00880F; color: #fff; text-decoration: none; }
+    .aic-nm-hero-visual { border-radius: 16px; overflow: hidden; }
+    .aic-nm-hero-visual img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; display: block; }
+
+    .aic-nm-breadcrumb { padding: 14px 0; font-size: 0.85rem; color: #888; }
+    .aic-nm-breadcrumb a { color: #00880F; text-decoration: none; }
+    .aic-nm-breadcrumb a:hover { text-decoration: underline; }
+    .aic-nm-breadcrumb span { margin: 0 6px; }
+
+    .aic-nm-challenge-lead { max-width: 860px; margin: 0 auto 28px; text-align: center; font-size: 0.98rem; color: #555; line-height: 1.9; }
+    .aic-nm-challenge-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 920px; margin: 0 auto; }
+    .aic-nm-challenge-item { background: #fff; border-radius: 12px; padding: 24px 26px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 4px solid #d9534f; }
+    .aic-nm-challenge-item h3 { font-size: 1.02rem; margin-bottom: 8px; color: #2c3e50; }
+    .aic-nm-challenge-item h3 i { color: #d9534f; margin-right: 8px; }
+    .aic-nm-challenge-item p { font-size: 0.9rem; color: #666; margin: 0; line-height: 1.7; }
+    .aic-nm-challenge-note { text-align: center; margin-top: 26px; font-size: 0.95rem; color: #888; }
+
+    .aic-nm-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 30px; }
+    .aic-nm-step { text-align: center; position: relative; background: #fff; border-radius: 12px; padding: 30px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .aic-nm-step-num { width: 48px; height: 48px; border-radius: 50%; background: #00880F; color: #fff; font-size: 1.2rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .aic-nm-step-icon { font-size: 2.2rem; color: #00880F; margin-bottom: 12px; }
+    .aic-nm-step h3 { font-size: 1.02rem; margin-bottom: 8px; }
+    .aic-nm-step p { font-size: 0.88rem; color: #666; margin: 0; }
+
+    .aic-nm-highlight { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; margin-top: 40px; background: linear-gradient(135deg, #EFF6F0 0%, #d4edda 100%); border-radius: 16px; padding: 36px 40px; border-left: 5px solid #00880F; }
+    .aic-nm-highlight-text p { font-size: 1.2rem; line-height: 1.7; color: #2c3e50; margin: 0 0 14px; }
+    .aic-nm-highlight-text p strong { color: #00880F; }
+    .aic-nm-highlight-speed { font-size: 1.4rem !important; font-weight: 700; color: #00660C !important; margin-bottom: 0 !important; }
+    .aic-nm-highlight-speed i { color: #00880F; margin-right: 8px; }
+    .aic-nm-highlight-speed strong { font-size: 1.9rem; }
+    .aic-nm-highlight-img { text-align: center; }
+    .aic-nm-highlight-img img { max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+    .aic-nm-note { font-size: 0.82rem; color: #999; margin-top: 16px; line-height: 1.7; }
+    .aic-nm-highlight--stack { grid-template-columns: 1fr; }
+    .aic-nm-highlight--stack .aic-nm-highlight-img { width: 100%; }
+    .aic-nm-highlight--stack .aic-nm-highlight-img img { width: 100%; max-width: 100%; height: auto; object-fit: contain; }
+    @media (max-width: 600px) {
+        .aic-nm-highlight--stack .aic-nm-highlight-img img { max-width: 420px; margin: 0 auto; display: block; }
+    }
+    .aic-nm-stability { margin-top: 20px; background: #fff; border-radius: 12px; padding: 20px 24px; border-left: 4px solid #00880F; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .aic-nm-stability-title { font-size: 1.1rem !important; font-weight: 700; color: #00660C; margin: 0 0 8px !important; }
+    .aic-nm-stability-title i { color: #00880F; margin-right: 8px; }
+    .aic-nm-stability-text { font-size: 0.95rem !important; line-height: 1.9 !important; color: #444 !important; margin: 0 !important; }
+    .aic-nm-stability-text strong { color: #00660C; }
+
+    .aic-nm-video { margin-top: 32px; }
+    .aic-nm-video video { width: 100%; max-width: 480px; display: block; margin: 0 auto; border-radius: 16px; box-shadow: 0 6px 28px rgba(0,0,0,0.15); background: #000; }
+    .aic-nm-video-caption { text-align: center; font-size: 0.95rem; color: #555; margin-top: 14px; }
+    .aic-nm-video-caption i { color: #00880F; margin-right: 6px; }
+
+    .aic-nm-design { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .aic-nm-design-img { text-align: center; }
+    .aic-nm-design-img img { max-width: 100%; max-height: 420px; object-fit: contain; border-radius: 12px; }
+    .aic-nm-design-text h3 { font-size: 1.3rem; color: #2c3e50; margin-bottom: 12px; }
+    .aic-nm-design-text > p { font-size: 0.96rem; color: #555; line-height: 1.9; margin-bottom: 18px; }
+    .aic-nm-design-text h4 { font-size: 1.02rem; color: #00660C; margin: 20px 0 10px; }
+    .aic-nm-design-text ul { list-style: none; padding: 0; margin: 0 0 18px; }
+    .aic-nm-design-text ul li { font-size: 0.92rem; color: #333; padding: 7px 0; border-bottom: 1px solid #f0f0f0; }
+    .aic-nm-design-text ul li:last-child { border-bottom: none; }
+    .aic-nm-design-text ul li i { color: #00880F; margin-right: 8px; }
+    .aic-nm-ideal { display: flex; flex-wrap: wrap; gap: 10px; }
+    .aic-nm-ideal span { background: #EFF6F0; color: #00660C; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; }
+    .aic-nm-ideal-photo { margin-top: 20px; }
+    .aic-nm-ideal-photo img { width: 100%; max-height: 240px; object-fit: cover; border-radius: 12px; box-shadow: 0 2px 14px rgba(0,0,0,0.1); }
+
+    .aic-nm-models { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .aic-nm-model-card { background: #fff; border-radius: 14px; padding: 32px 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); transition: transform 0.3s; border-top: 4px solid #00880F; }
+    .aic-nm-model-card:hover { transform: translateY(-5px); }
+    .aic-nm-model-img { margin-bottom: 20px; text-align: center; min-height: 220px; display: flex; align-items: center; justify-content: center; }
+    .aic-nm-model-img img { max-width: 100%; max-height: 240px; object-fit: contain; border-radius: 8px; }
+    .aic-nm-model-badge { display: inline-block; background: #00880F; color: #fff; font-size: 0.78rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; }
+    .aic-nm-model-card h3 { font-size: 1.2rem; text-align: center; margin-bottom: 10px; color: #2c3e50; }
+    .aic-nm-model-desc { font-size: 0.92rem; color: #555; line-height: 1.8; margin-bottom: 18px; text-align: center; }
+    .aic-nm-model-card ul { list-style: none; padding: 0; margin: 0; }
+    .aic-nm-model-card ul li { font-size: 0.9rem; color: #333; padding: 6px 0; border-bottom: 1px solid #f0f0f0; }
+    .aic-nm-model-card ul li:last-child { border-bottom: none; }
+    .aic-nm-model-card ul li i { color: #00880F; margin-right: 8px; font-size: 0.85rem; }
+
+    .aic-nm-payments { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .aic-nm-pay-card { background: #fff; border-radius: 12px; padding: 32px 24px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.3s; }
+    .aic-nm-pay-card:hover { transform: translateY(-4px); }
+    .aic-nm-pay-card i { font-size: 2.4rem; color: #00880F; margin-bottom: 16px; }
+    .aic-nm-pay-card h3 { font-size: 1.08rem; margin-bottom: 10px; }
+    .aic-nm-pay-card p { font-size: 0.9rem; color: #666; margin: 0; line-height: 1.7; }
+
+    .aic-nm-benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .aic-nm-benefit-card { background: #fff; border-radius: 12px; padding: 28px 18px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.3s; }
+    .aic-nm-benefit-card:hover { transform: translateY(-4px); }
+    .aic-nm-benefit-num { font-size: 1.3rem; font-weight: 700; color: #00880F; margin-bottom: 10px; }
+    .aic-nm-benefit-card i { font-size: 2rem; color: #00880F; margin-bottom: 12px; display: block; }
+    .aic-nm-benefit-card h3 { font-size: 0.98rem; margin-bottom: 8px; }
+    .aic-nm-benefit-card p { font-size: 0.85rem; color: #666; margin: 0; line-height: 1.6; }
+
+    .aic-nm-spec-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .aic-nm-spec-table th, .aic-nm-spec-table td { padding: 14px 18px; border-bottom: 1px solid #ddd; text-align: left; font-size: 0.92rem; }
+    .aic-nm-spec-table thead th { background: #305534; color: #fff; font-weight: 600; }
+    .aic-nm-spec-table tbody tr:nth-child(even) { background: #f9f9f9; }
+    .aic-nm-spec-table td:first-child { font-weight: 600; color: #2c3e50; white-space: nowrap; min-width: 150px; }
+
+    .aic-nm-cta { background: #305534; padding: 60px 0; text-align: center; color: #fff; }
+    .aic-nm-cta h2 { color: #fff; font-size: 1.6rem; margin-bottom: 12px; }
+    .aic-nm-cta p { color: rgba(255,255,255,0.85); margin-bottom: 24px; line-height: 1.8; }
+    .aic-nm-cta .btn-primary { background: #00880F; color: #fff; padding: 14px 32px; border-radius: 6px; font-size: 1rem; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.3s; margin: 6px; }
+    .aic-nm-cta .btn-primary:hover { background: #00660C; text-decoration: none; }
+
+    @media (max-width: 991px) {
+        .aic-nm-hero-grid { grid-template-columns: 1fr; }
+        .aic-nm-steps { grid-template-columns: repeat(2, 1fr); }
+        .aic-nm-models { grid-template-columns: 1fr; }
+        .aic-nm-payments { grid-template-columns: 1fr; }
+        .aic-nm-benefits { grid-template-columns: repeat(3, 1fr); }
+        .aic-nm-design { grid-template-columns: 1fr; }
+        .aic-nm-challenge-list { grid-template-columns: 1fr; }
+        .aic-nm-highlight { grid-template-columns: 1fr; padding: 28px 24px; }
+        .aic-nm-hero h1 { font-size: 1.8rem; }
+    }
+    @media (max-width: 575px) {
+        .aic-nm-steps, .aic-nm-benefits { grid-template-columns: 1fr; }
+        .aic-nm-spec-table { font-size: 0.82rem; }
+        .aic-nm-spec-table th, .aic-nm-spec-table td { padding: 10px 10px; }
+    }
+    </style>
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"出雲創安 Izumo Soan","url":"https://izumosoan.com/","logo":"https://izumosoan.com/assets/img/logo/logo.webp","description":"現場、安全、運用をつなぐテクノロジーパートナー","address":{"@type":"PostalAddress","addressLocality":"Katsushika-ku","addressRegion":"Tokyo","streetAddress":"Higashitateishi 4-37-8","addressCountry":"JP"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Product","name":"AI精算端末（新モデル）","description":"AI料理認識とキャッシュレス決済を一体化したコンパクトな卓上型AI精算端末。料理の認識から決済まで約3秒。","image":"https://izumosoan.com/assets/img/cafeteria/AI-newmodel2.jpg","brand":{"@type":"Brand","name":"出雲創安 Izumo Soan"},"category":"AI Checkout Terminal","url":"https://izumosoan.com/ja/smart-cafeteria-ai-newmodel.html"}
+    </script>
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "AI精算端末（新モデル）の精算時間はどのくらいですか？", "acceptedAnswer": {"@type": "Answer", "text": "トレーを置いてから決済完了まで、精算プロセス全体で約3秒です。"}}, {"@type": "Question", "name": "新モデル1と新モデル2の違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "新モデル1は8インチタッチスクリーン、新モデル2は11.6インチタッチスクリーンを搭載しています。どちらもAI料理認識とキャッシュレス決済を一体化したコンパクトな卓上型オールインワン端末です。"}}, {"@type": "Question", "name": "対応する決済方法は？", "acceptedAnswer": {"@type": "Answer", "text": "QRコード決済とICカード決済に対応し、必要な決済システムとアカウント連携が整っている場合は顔認証決済もご利用いただけます。"}}, {"@type": "Question", "name": "新モデルはどこに設置できますか？", "acceptedAnswer": {"@type": "Answer", "text": "コンパクト設計のため標準的な精算カウンターに設置でき、大きな設置スペースを必要としません。社員食堂・大学食堂・病院食堂・セルフ式レストランに最適です。"}}, {"@type": "Question", "name": "他社の2端末方式と何が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "他社製品の多くは、料理の精算と支払いを2つの端末に分けて実現しており、端末間の通信障害が発生するリスクがあります。本製品は認識・精算・決済を1台に統合し、端末間の通信処理そのものをなくすことで、通信起因のトラブルを根本から排除し、より安定した運用を実現します。"}}]}
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/logo/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/logo/apple-touch-icon.png">
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='#'><img src='../assets/img/logo/logo.webp' alt='Izumo Soan' class='header-logo-img' style='height:80px;' width='296' height='80'></a>
+            </div>
+            <div class='language-switcher'>
+                <span class='lang-label'><i class="fas fa-globe"></i></span>
+                <select id='lang-select'>
+                    <option value='ja' selected>日本語</option>
+                    <option value='en'>English</option>
+                    <option value='zh'>中文</option>
+                </select>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
+            <nav>
+                <ul>
+                    <li><a href='index.html'>ホーム</a></li>
+                    <li><a href='services.html' class='active'>サービス</a></li>
+                    <li><a href='products.html'>製品</a></li>
+                    <li><a href='case-studies.html'>実績</a></li>
+                    <li><a href='about.html'>会社概要</a></li>
+                    <li><a href='column/index.html'>コラム</a></li>
+                    <li><a href='index.html#contact'>お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <div class='aic-nm-breadcrumb'>
+            <div class='container'>
+                <a href='index.html'>ホーム</a><span>›</span>
+                <a href='services.html'>サービス</a><span>›</span>
+                <a href='smart-cafeteria.html'>スマート食堂</a><span>›</span>
+                <a href='smart-cafeteria-ai.html'>AI画像認識精算</a><span>›</span>
+                AI精算端末（新モデル）
+            </div>
+        </div>
+
+        <!-- 1. Hero -->
+        <section class='aic-nm-hero'>
+            <div class='container aic-nm-hero-grid'>
+                <div>
+                    <h1>AI精算端末（新モデル）</h1>
+                    <p class='aic-nm-hero-lead'>AI料理認識とキャッシュレス決済を1台に凝縮したコンパクト端末</p>
+                    <p class='subtitle'>料理の識別・金額計算・決済を約3秒で自動化。社員食堂・大学食堂・セルフ式レストラン向けに設計されたAI精算端末 新モデルは、AI料理認識とキャッシュレス決済をコンパクトな卓上端末に一体化しました。<br><br>料理の価格を覚えたり、一品ずつ手入力したりする必要はありません。トレーを認識エリアに置くだけで、システムが自動的に料理を識別し、合計金額を計算し、決済を可能にします。</p>
+                    <p class='aic-nm-hero-tagline'>精算をより速く。ミスをより少なく。食堂運営をよりスムーズに。</p>
+                    <div class='aic-nm-hero-buttons'>
+                        <a href='index.html#contact' class='btn-primary'>デモを依頼する</a>
+                        <a href='index.html#contact' class='btn-secondary'>お問い合わせ</a>
+                    </div>
+                </div>
+                <div class='aic-nm-hero-visual'>
+                    <img src='../assets/img/cafeteria/AI-newmodel2.jpg' alt='AI精算端末（新モデル2）- 11.6インチタッチスクリーン搭載、AI料理認識とキャッシュレス決済を備えたコンパクトな卓上端末' width='542' height='509' loading='lazy'>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. The Challenge -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>課題：従来の食堂精算は時間がかかる</h2>
+                    <p>手作業の精算がピーク時のボトルネックに</p>
+                </div>
+                <p class='aic-nm-challenge-lead'>社員食堂・大学食堂・セルフ式レストランでは、利用者がさまざまな料理の中から数品を選び、トレーを精算カウンターへ運びます。バーコードで商品をスキャンできるスーパーとは異なり、食堂の料理の多くには個別のバーコードがありません。レジ担当者は一品ずつ料理を識別し、価格を覚えるかメニューを参照し、金額を手入力し、合計を計算して決済処理を行う必要があります。</p>
+                <div class='aic-nm-challenge-list'>
+                    <div class='aic-nm-challenge-item'>
+                        <h3><i class="fas fa-users"></i>長い行列</h3>
+                        <p>価格の手入力により、混雑する昼食時間帯の精算が遅くなります。</p>
+                    </div>
+                    <div class='aic-nm-challenge-item'>
+                        <h3><i class="fas fa-exclamation-triangle"></i>人的ミス</h3>
+                        <p>似た見た目の料理や頻繁に変わるメニューにより、正確な会計が難しくなります。</p>
+                    </div>
+                    <div class='aic-nm-challenge-item'>
+                        <h3><i class="fas fa-user-clock"></i>スタッフの負担</h3>
+                        <p>絶え間なく訪れる利用者に対応しながら、料理の識別と価格入力に集中しなければなりません。</p>
+                    </div>
+                    <div class='aic-nm-challenge-item'>
+                        <h3><i class="fas fa-tachometer-alt"></i>運営上の負荷</h3>
+                        <p>人員が限られる中でも、食堂運営者は迅速で正確なサービスを維持する必要があります。</p>
+                    </div>
+                </div>
+                <p class='aic-nm-challenge-note'>従来の精算方法では、ピーク時の需要に対応しきれないことがあります。</p>
+            </div>
+        </section>
+
+        <!-- 3. The Solution -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>ソリューション：AI認識と決済を1台に</h2>
+                    <p>料理の認識から決済まで約3秒</p>
+                </div>
+                <div class='aic-nm-steps'>
+                    <div class='aic-nm-step'>
+                        <div class='aic-nm-step-num'>1</div>
+                        <div class='aic-nm-step-icon'><i class="fas fa-utensils"></i></div>
+                        <h3>トレーを置く</h3>
+                        <p>利用者がトレーと料理をAI認識エリアに置きます。</p>
+                    </div>
+                    <div class='aic-nm-step'>
+                        <div class='aic-nm-step-num'>2</div>
+                        <div class='aic-nm-step-icon'><i class="fas fa-camera"></i></div>
+                        <h3>自動で料理を認識</h3>
+                        <p>AIカメラが料理を識別し、対応する価格を判定します。</p>
+                    </div>
+                    <div class='aic-nm-step'>
+                        <div class='aic-nm-step-num'>3</div>
+                        <div class='aic-nm-step-icon'><i class="fas fa-calculator"></i></div>
+                        <h3>瞬時に金額を計算</h3>
+                        <p>一品ずつ手入力することなく、システムが自動的に合計を計算します。</p>
+                    </div>
+                    <div class='aic-nm-step'>
+                        <div class='aic-nm-step-num'>4</div>
+                        <div class='aic-nm-step-icon'><i class="fas fa-mobile-alt"></i></div>
+                        <h3>キャッシュレス決済</h3>
+                        <p>QRコード・ICカード、対応環境では顔認証で決済します。</p>
+                    </div>
+                </div>
+                <div class='aic-nm-highlight aic-nm-highlight--stack'>
+                    <div class='aic-nm-highlight-text'>
+                        <p>AIによる料理認識・自動金額計算・決済機能を<strong>1台に統合</strong>。</p>
+                        <p class='aic-nm-highlight-speed'><i class="fas fa-bolt"></i>精算プロセス全体で約<strong>3秒</strong>！</p>
+                        <div class='aic-nm-stability'>
+                            <p class='aic-nm-stability-title'><i class="fas fa-shield-alt"></i>一体型だから、もっと安定</p>
+                            <p class='aic-nm-stability-text'>他社製品の多くは、<strong>料理の精算</strong>と<strong>支払い</strong>を<strong>2つの端末</strong>に分けて実現しており、端末間の通信障害が発生するリスクがあります。本製品は認識・精算・決済を<strong>1台に統合</strong>。端末間の通信処理そのものがなくなり、<strong>通信起因のトラブルを根本から排除</strong>して、より安定した運用を実現します。</p>
+                        </div>
+                    </div>
+                    <div class='aic-nm-highlight-img'>
+                        <img src='../assets/img/cafeteria/AInewtype2.jpg' alt='AI精算端末 新モデルが料理認識と決済を約3秒で処理する様子' width='1022' height='698' loading='lazy'>
+                    </div>
+                </div>
+                <div class='aic-nm-video'>
+                    <video src='../assets/img/cafeteria/AInewmode.mp4' autoplay muted loop playsinline controls poster='../assets/img/cafeteria/AInewtype2.jpg'>
+                        お使いのブラウザは動画タグに対応していません。
+                    </video>
+                    <p class='aic-nm-video-caption'><i class="fas fa-play-circle"></i> AI精算端末 新モデルの動作をご覧ください — トレーを置いてから決済完了まで。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Compact Design -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>柔軟に設置できるコンパクト設計</h2>
+                    <p>AI精算端末（新モデル）</p>
+                </div>
+                <div class='aic-nm-design'>
+                    <div class='aic-nm-design-img'>
+                        <img src='../assets/img/cafeteria/AI-newmodel1.jpg' alt='AI精算端末 新モデル - コンパクトなオールインワン卓上端末' width='469' height='510' loading='lazy'>
+                    </div>
+                    <div class='aic-nm-design-text'>
+                        <h3>オールインワン、卓上対応</h3>
+                        <p>大型の専用精算機とは異なり、新モデルは標準的な精算カウンターに設置できるコンパクト設計です。主要機能を1台に統合し、大きな設置スペースを必要とせずにAI精算を導入できます。</p>
+                        <h4>主な特長</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i><strong>11.6インチタッチスクリーン</strong>（新モデル2）/ 8インチタッチスクリーン（新モデル1）— 操作しやすい精算インターフェース。</li>
+                            <li><i class="fas fa-check"></i><strong>500万画素AI認識カメラ</strong>— 料理画像を撮影し自動で識別。</li>
+                            <li><i class="fas fa-check"></i><strong>決済インターフェース統合</strong>— QRコード・ICカード決済に対応。</li>
+                            <li><i class="fas fa-check"></i><strong>顔認証対応</strong>— 対応環境では顔認証決済が可能。</li>
+                            <li><i class="fas fa-check"></i><strong>柔軟な接続性</strong>— Wi-Fi・Bluetooth・有線LANに対応。</li>
+                            <li><i class="fas fa-check"></i><strong>オールインワン設計</strong>— 料理認識と決済機能を1台のコンパクト端末に集約。</li>
+                        </ul>
+                        <h4>最適な導入先</h4>
+                        <div class='aic-nm-ideal'>
+                            <span>社員食堂</span>
+                            <span>大学食堂</span>
+                            <span>病院食堂</span>
+                            <span>セルフ式レストラン</span>
+                            <span>複数の料理を提供する施設</span>
+                        </div>
+                        <div class='aic-nm-ideal-photo'>
+                            <img src='../assets/img/cafeteria/self-service-restrauant.jpg' alt='AI精算端末 新モデルの導入に適したセルフ式・食堂タイプのレストラン' width='2097' height='750' loading='lazy'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Two Model Lineup -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>選べる2つのコンパクトモデル</h2>
+                    <p>カウンターと運用に合わせてディスプレイサイズをお選びいただけます。</p>
+                </div>
+                <div class='aic-nm-models'>
+                    <div class='aic-nm-model-card'>
+                        <div class='aic-nm-model-img'>
+                            <img src='../assets/img/cafeteria/AI-newmodel1.jpg' alt='AI精算端末（新モデル1）- 8インチタッチスクリーンのコンパクト端末' width='469' height='510' loading='lazy'>
+                        </div>
+                        <div style='text-align:center;'><span class='aic-nm-model-badge'>新モデル1</span></div>
+                        <h3>AI精算端末（新モデル1）</h3>
+                        <p class='aic-nm-model-desc'>8インチタッチスクリーンを搭載したコンパクトモデル。顔認証・QR・カード決済を1台に統合し、最も省スペースなカウンターに最適です。</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>8インチタッチスクリーン</li>
+                            <li><i class="fas fa-check"></i>顔認証カメラ・QR・カードリーダー一体化</li>
+                            <li><i class="fas fa-check"></i>500万画素 料理認識カメラ</li>
+                            <li><i class="fas fa-check"></i>200万画素 赤外線デュアルカメラ</li>
+                            <li><i class="fas fa-check"></i>Wi-Fi・Bluetooth・有線LAN</li>
+                        </ul>
+                    </div>
+                    <div class='aic-nm-model-card'>
+                        <div class='aic-nm-model-img'>
+                            <img src='../assets/img/cafeteria/AI-newmodel2.jpg' alt='AI精算端末（新モデル2）- 11.6インチタッチスクリーンのコンパクト端末' width='542' height='509' loading='lazy'>
+                        </div>
+                        <div style='text-align:center;'><span class='aic-nm-model-badge'>新モデル2</span></div>
+                        <h3>AI精算端末（新モデル2）</h3>
+                        <p class='aic-nm-model-desc'>より大きな11.6インチタッチスクリーンを搭載したコンパクトモデル。顔認証・QR・カード決済を1台に統合し、卓上に収まりつつ広い操作画面を実現します。</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>11.6インチタッチスクリーン</li>
+                            <li><i class="fas fa-check"></i>顔認証カメラ・QR・カードリーダー一体化</li>
+                            <li><i class="fas fa-check"></i>500万画素 料理認識カメラ</li>
+                            <li><i class="fas fa-check"></i>200万画素 赤外線デュアルカメラ</li>
+                            <li><i class="fas fa-check"></i>Wi-Fi・Bluetooth・有線LAN</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Payment Options -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>柔軟なキャッシュレス決済オプション</h2>
+                    <p>運用に合った決済方法をお選びいただけます</p>
+                </div>
+                <p class='aic-nm-challenge-lead'>食堂ごとに利用者層や決済要件は異なります。AI精算端末 新モデルは複数の決済オプションに対応し、運営者が適切な決済構成を選べるようサポートします。</p>
+                <div class='aic-nm-payments'>
+                    <div class='aic-nm-pay-card'>
+                        <i class="fas fa-qrcode"></i>
+                        <h3>QRコード決済</h3>
+                        <p>利用者がQRコードをスキャンし、対応する決済サービスで支払います。</p>
+                    </div>
+                    <div class='aic-nm-pay-card'>
+                        <i class="fas fa-credit-card"></i>
+                        <h3>ICカード決済</h3>
+                        <p>対応する非接触ICカードで支払います。</p>
+                    </div>
+                    <div class='aic-nm-pay-card'>
+                        <i class="fas fa-smile"></i>
+                        <h3>顔認証決済</h3>
+                        <p>必要な決済システムとアカウント連携が整っている場合、顔認証決済をご利用いただけます。</p>
+                    </div>
+                </div>
+                <p class='aic-nm-note'>これらのオプションにより現金取り扱いへの依存を減らし、より速い精算運用を支援します。<br>※ 対応する決済サービス、カード規格、顔認証決済の利用条件については、導入前の確認が必要です。</p>
+            </div>
+        </section>
+
+        <!-- 7. Business Benefits -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>導入メリット</h2>
+                    <p>より速いサービス、より少ない負担、より良い顧客体験</p>
+                </div>
+                <div class='aic-nm-benefits'>
+                    <div class='aic-nm-benefit-card'>
+                        <div class='aic-nm-benefit-num'>01</div>
+                        <i class="fas fa-stream"></i>
+                        <h3>精算の行列を削減</h3>
+                        <p>自動認識と決済により、ピーク時の待ち時間を短縮します。</p>
+                    </div>
+                    <div class='aic-nm-benefit-card'>
+                        <div class='aic-nm-benefit-num'>02</div>
+                        <i class="fas fa-hand-holding"></i>
+                        <h3>手作業を削減</h3>
+                        <p>一品ずつ識別・価格入力する必要がなくなり、他の業務に集中できます。</p>
+                    </div>
+                    <div class='aic-nm-benefit-card'>
+                        <div class='aic-nm-benefit-num'>03</div>
+                        <i class="fas fa-check-double"></i>
+                        <h3>会計精度を向上</h3>
+                        <p>自動識別と計算により、手入力によるミスを減らします。</p>
+                    </div>
+                    <div class='aic-nm-benefit-card'>
+                        <div class='aic-nm-benefit-num'>04</div>
+                        <i class="fas fa-smile-beam"></i>
+                        <h3>顧客満足度を向上</h3>
+                        <p>精算が速くなり、利用者は待ち時間を減らして食事を楽しめます。</p>
+                    </div>
+                    <div class='aic-nm-benefit-card'>
+                        <div class='aic-nm-benefit-num'>05</div>
+                        <i class="fas fa-cogs"></i>
+                        <h3>食堂運営を最適化</h3>
+                        <p>AI精算は食堂運営の近代化に向けた基盤となります。</p>
+                    </div>
+                    <div class='aic-nm-benefit-card'>
+                        <div class='aic-nm-benefit-num'>06</div>
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>より安定した運用</h3>
+                        <p>一体型設計で端末間の通信をなくし、通信起因のトラブルを防ぎます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Technical Specifications -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>技術仕様</h2>
+                    <p>AI精算端末（新モデル2）の主な仕様</p>
+                </div>
+                <div style='overflow-x:auto;'>
+                    <table class='aic-nm-spec-table'>
+                        <thead>
+                            <tr><th>項目</th><th>仕様</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>製品名</td><td>AI精算端末（新モデル2）</td></tr>
+                            <tr><td>ディスプレイ</td><td>11.6インチタッチスクリーン</td></tr>
+                            <tr><td>料理認識カメラ</td><td>500万画素</td></tr>
+                            <tr><td>顔認証カメラ</td><td>200万画素 赤外線双眼カメラ</td></tr>
+                            <tr><td>決済インターフェース</td><td>QRコード / ICカード / 顔認証</td></tr>
+                            <tr><td>接続性</td><td>Wi-Fi / Bluetooth / 有線LAN</td></tr>
+                            <tr><td>設計</td><td>コンパクトな一体型卓上端末</td></tr>
+                            <tr><td>構成</td><td>オールインワン一体型設計（認識・精算・決済を1台に統合／端末間通信なし）</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class='aic-nm-note'>※ 上記は既存製品ページに掲載されている仕様をもとにした案です。正式公開前に、最新の製品仕様書と照合してください。<br>※ 新モデル1は8インチタッチスクリーンを搭載したモデルです。その他の主な仕様は新モデル2に準じます。</p>
+            </div>
+        </section>
+
+        <!-- 9. CTA -->
+        <section class='aic-nm-cta'>
+            <div class='container'>
+                <h2>食堂の精算を近代化しませんか？</h2>
+                <p>AIによる料理認識とキャッシュレス決済の統合で、手作業の精算を減らし、行列を短縮し、顧客体験を向上させます。<br>社員食堂・大学食堂・病院食堂・セルフ式レストランのいずれでも、AI精算端末 新モデルがどのように貴施設に適合するかをご相談いただけます。</p>
+                <a href='index.html#contact' class='btn-primary'>デモを依頼する</a>
+                <a href='index.html#contact' class='btn-primary'>お問い合わせ</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../assets/img/logo/logo.webp' alt='Izumo Soan' width='739' height='200' loading='lazy'>
+                    <p class='logo-desp'>技術を現場の力に。</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>メニュー</h4>
+                    <ul>
+                        <li><a href='index.html'>ホーム</a></li>
+                        <li><a href='about.html'>会社概要</a></li>
+                        <li><a href='services.html'>サービス</a></li>
+                        <li><a href='case-studies.html'>実績</a></li>
+                        <li><a href='overseas-partner.html'>海外パートナー</a></li>
+                        <li><a href='column/index.html'>コラム</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>製品</h4>
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='smart-cafeteria.html'>
+                            <span>スマート食堂</span>
+                            <small>AI認識・RFID・計量</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>スマート現場運用プラットフォーム</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 Izumo Soan. All rights reserved. ｜ <a href='privacy.html' style='color:inherit;text-decoration:underline;'>プライバシーポリシー</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src='../assets/js/main.js'></script>
+    <script src='../assets/js/lang-switcher.js'></script>
+</body>
+</html>

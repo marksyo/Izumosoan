@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>AI Checkout Terminal (New Models) | Compact Food Recognition & Cashless Payment | Izumo Soan</title>
+    <meta name='description' content="Compact AI Checkout Terminal (New Model 1 / 2) combining AI food recognition and cashless payment. From tray to payment in about 3 seconds. For company, university & hospital cafeterias.">
+
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/smart-cafeteria-ai-newmodel.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/smart-cafeteria-ai-newmodel.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/smart-cafeteria-ai-newmodel.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/smart-cafeteria-ai-newmodel.html">
+    <link rel="canonical" href="https://izumosoan.com/en/smart-cafeteria-ai-newmodel.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="出雲創安 Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/en/smart-cafeteria-ai-newmodel.html">
+    <meta property="og:title" content="AI Checkout Terminal (New Models) | Compact Food Recognition & Cashless Payment | Izumo Soan">
+    <meta property="og:description" content="Compact tabletop AI Checkout Terminal combining AI food recognition and integrated cashless payment. From dish recognition to payment in approximately 3 seconds.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://izumosoan.com/assets/img/cafeteria/AI-newmodel2.jpg">
+    <meta property="og:image:alt" content="AI Checkout Terminal (New Model 2) compact tabletop device">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Checkout Terminal (New Models)">
+    <meta name="twitter:description" content="Compact AI Checkout Terminal (New Model 1 / 2) combining AI food recognition and cashless payment. From tray to payment in about 3 seconds. For company, university & hospital cafeterias.">
+    <meta name="twitter:image" content="https://izumosoan.com/assets/img/cafeteria/AI-newmodel2.jpg">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://izumosoan.com/en/index.html"},{"@type":"ListItem","position":2,"name":"Services","item":"https://izumosoan.com/en/services.html"},{"@type":"ListItem","position":3,"name":"Smart Cafeteria","item":"https://izumosoan.com/en/smart-cafeteria.html"},{"@type":"ListItem","position":4,"name":"AI Image Recognition Checkout","item":"https://izumosoan.com/en/smart-cafeteria-ai.html"},{"@type":"ListItem","position":5,"name":"AI Checkout Terminal (New Models)","item":"https://izumosoan.com/en/smart-cafeteria-ai-newmodel.html"}]}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../assets/css/style.min.css'>
+
+    <style>
+    /* AI Checkout Terminal New Model page-specific styles */
+    .aic-nm-hero { background: linear-gradient(135deg, #EFF6F0 0%, #d4edda 100%); padding: 80px 0 60px; }
+    .aic-nm-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .aic-nm-hero h1 { font-size: 2.2rem; color: #2c3e50; margin-bottom: 8px; }
+    .aic-nm-hero .aic-nm-hero-lead { font-size: 1.2rem; font-weight: 600; color: #00660C; line-height: 1.6; margin-bottom: 16px; }
+    .aic-nm-hero .subtitle { font-size: 1.02rem; color: #555; line-height: 1.9; margin-bottom: 18px; }
+    .aic-nm-hero-tagline { font-size: 1.1rem; font-weight: 700; color: #2c3e50; margin-bottom: 24px; }
+    .aic-nm-hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+    .aic-nm-hero-buttons .btn-secondary { background: #fff; color: #00880F; border: 1px solid #00880F; padding: 14px 28px; border-radius: 6px; font-size: 1rem; font-weight: 600; text-decoration: none; display: inline-block; transition: all 0.3s; }
+    .aic-nm-hero-buttons .btn-secondary:hover { background: #00880F; color: #fff; text-decoration: none; }
+    .aic-nm-hero-visual { border-radius: 16px; overflow: hidden; }
+    .aic-nm-hero-visual img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; display: block; }
+
+    .aic-nm-breadcrumb { padding: 14px 0; font-size: 0.85rem; color: #888; }
+    .aic-nm-breadcrumb a { color: #00880F; text-decoration: none; }
+    .aic-nm-breadcrumb a:hover { text-decoration: underline; }
+    .aic-nm-breadcrumb span { margin: 0 6px; }
+
+    /* Challenge section */
+    .aic-nm-challenge-lead { max-width: 860px; margin: 0 auto 28px; text-align: center; font-size: 0.98rem; color: #555; line-height: 1.9; }
+    .aic-nm-challenge-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 920px; margin: 0 auto; }
+    .aic-nm-challenge-item { background: #fff; border-radius: 12px; padding: 24px 26px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 4px solid #d9534f; }
+    .aic-nm-challenge-item h3 { font-size: 1.02rem; margin-bottom: 8px; color: #2c3e50; }
+    .aic-nm-challenge-item h3 i { color: #d9534f; margin-right: 8px; }
+    .aic-nm-challenge-item p { font-size: 0.9rem; color: #666; margin: 0; line-height: 1.7; }
+    .aic-nm-challenge-note { text-align: center; margin-top: 26px; font-size: 0.95rem; color: #888; }
+
+    /* Steps */
+    .aic-nm-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 30px; }
+    .aic-nm-step { text-align: center; position: relative; background: #fff; border-radius: 12px; padding: 30px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .aic-nm-step-num { width: 48px; height: 48px; border-radius: 50%; background: #00880F; color: #fff; font-size: 1.2rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .aic-nm-step-icon { font-size: 2.2rem; color: #00880F; margin-bottom: 12px; }
+    .aic-nm-step h3 { font-size: 1.02rem; margin-bottom: 8px; }
+    .aic-nm-step p { font-size: 0.88rem; color: #666; margin: 0; }
+
+    /* Highlight banner */
+    .aic-nm-highlight { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; margin-top: 40px; background: linear-gradient(135deg, #EFF6F0 0%, #d4edda 100%); border-radius: 16px; padding: 36px 40px; border-left: 5px solid #00880F; }
+    .aic-nm-highlight-text p { font-size: 1.2rem; line-height: 1.7; color: #2c3e50; margin: 0 0 14px; }
+    .aic-nm-highlight-text p strong { color: #00880F; }
+    .aic-nm-highlight-speed { font-size: 1.4rem !important; font-weight: 700; color: #00660C !important; margin-bottom: 0 !important; }
+    .aic-nm-highlight-speed i { color: #00880F; margin-right: 8px; }
+    .aic-nm-highlight-speed strong { font-size: 1.9rem; }
+    .aic-nm-highlight-img { text-align: center; }
+    .aic-nm-highlight-img img { max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+    .aic-nm-note { font-size: 0.82rem; color: #999; margin-top: 16px; line-height: 1.7; }
+    .aic-nm-highlight--stack { grid-template-columns: 1fr; }
+    .aic-nm-highlight--stack .aic-nm-highlight-img { width: 100%; }
+    .aic-nm-highlight--stack .aic-nm-highlight-img img { width: 100%; max-width: 100%; height: auto; object-fit: contain; }
+    @media (max-width: 600px) {
+        .aic-nm-highlight--stack .aic-nm-highlight-img img { max-width: 420px; margin: 0 auto; display: block; }
+    }
+    .aic-nm-stability { margin-top: 20px; background: #fff; border-radius: 12px; padding: 20px 24px; border-left: 4px solid #00880F; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .aic-nm-stability-title { font-size: 1.1rem !important; font-weight: 700; color: #00660C; margin: 0 0 8px !important; }
+    .aic-nm-stability-title i { color: #00880F; margin-right: 8px; }
+    .aic-nm-stability-text { font-size: 0.95rem !important; line-height: 1.9 !important; color: #444 !important; margin: 0 !important; }
+    .aic-nm-stability-text strong { color: #00660C; }
+
+    /* Full-width demo video block */
+    .aic-nm-video { margin-top: 32px; }
+    .aic-nm-video video { width: 100%; max-width: 480px; display: block; margin: 0 auto; border-radius: 16px; box-shadow: 0 6px 28px rgba(0,0,0,0.15); background: #000; }
+    .aic-nm-video-caption { text-align: center; font-size: 0.95rem; color: #555; margin-top: 14px; }
+    .aic-nm-video-caption i { color: #00880F; margin-right: 6px; }
+
+    /* Compact design feature split */
+    .aic-nm-design { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .aic-nm-design-img { text-align: center; }
+    .aic-nm-design-img img { max-width: 100%; max-height: 420px; object-fit: contain; border-radius: 12px; }
+    .aic-nm-design-text h3 { font-size: 1.3rem; color: #2c3e50; margin-bottom: 12px; }
+    .aic-nm-design-text > p { font-size: 0.96rem; color: #555; line-height: 1.9; margin-bottom: 18px; }
+    .aic-nm-design-text h4 { font-size: 1.02rem; color: #00660C; margin: 20px 0 10px; }
+    .aic-nm-design-text ul { list-style: none; padding: 0; margin: 0 0 18px; }
+    .aic-nm-design-text ul li { font-size: 0.92rem; color: #333; padding: 7px 0; border-bottom: 1px solid #f0f0f0; }
+    .aic-nm-design-text ul li:last-child { border-bottom: none; }
+    .aic-nm-design-text ul li i { color: #00880F; margin-right: 8px; }
+    .aic-nm-ideal { display: flex; flex-wrap: wrap; gap: 10px; }
+    .aic-nm-ideal span { background: #EFF6F0; color: #00660C; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; }
+    .aic-nm-ideal-photo { margin-top: 20px; }
+    .aic-nm-ideal-photo img { width: 100%; max-height: 240px; object-fit: cover; border-radius: 12px; box-shadow: 0 2px 14px rgba(0,0,0,0.1); }
+
+    /* Two model lineup */
+    .aic-nm-models { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .aic-nm-model-card { background: #fff; border-radius: 14px; padding: 32px 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); transition: transform 0.3s; border-top: 4px solid #00880F; }
+    .aic-nm-model-card:hover { transform: translateY(-5px); }
+    .aic-nm-model-img { margin-bottom: 20px; text-align: center; min-height: 220px; display: flex; align-items: center; justify-content: center; }
+    .aic-nm-model-img img { max-width: 100%; max-height: 240px; object-fit: contain; border-radius: 8px; }
+    .aic-nm-model-badge { display: inline-block; background: #00880F; color: #fff; font-size: 0.78rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; }
+    .aic-nm-model-card h3 { font-size: 1.2rem; text-align: center; margin-bottom: 10px; color: #2c3e50; }
+    .aic-nm-model-desc { font-size: 0.92rem; color: #555; line-height: 1.8; margin-bottom: 18px; text-align: center; }
+    .aic-nm-model-card ul { list-style: none; padding: 0; margin: 0; }
+    .aic-nm-model-card ul li { font-size: 0.9rem; color: #333; padding: 6px 0; border-bottom: 1px solid #f0f0f0; }
+    .aic-nm-model-card ul li:last-child { border-bottom: none; }
+    .aic-nm-model-card ul li i { color: #00880F; margin-right: 8px; font-size: 0.85rem; }
+
+    /* Payment options */
+    .aic-nm-payments { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .aic-nm-pay-card { background: #fff; border-radius: 12px; padding: 32px 24px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.3s; }
+    .aic-nm-pay-card:hover { transform: translateY(-4px); }
+    .aic-nm-pay-card i { font-size: 2.4rem; color: #00880F; margin-bottom: 16px; }
+    .aic-nm-pay-card h3 { font-size: 1.08rem; margin-bottom: 10px; }
+    .aic-nm-pay-card p { font-size: 0.9rem; color: #666; margin: 0; line-height: 1.7; }
+
+    /* Benefits */
+    .aic-nm-benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .aic-nm-benefit-card { background: #fff; border-radius: 12px; padding: 28px 18px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.3s; }
+    .aic-nm-benefit-card:hover { transform: translateY(-4px); }
+    .aic-nm-benefit-num { font-size: 1.3rem; font-weight: 700; color: #00880F; margin-bottom: 10px; }
+    .aic-nm-benefit-card i { font-size: 2rem; color: #00880F; margin-bottom: 12px; display: block; }
+    .aic-nm-benefit-card h3 { font-size: 0.98rem; margin-bottom: 8px; }
+    .aic-nm-benefit-card p { font-size: 0.85rem; color: #666; margin: 0; line-height: 1.6; }
+
+    /* Spec table */
+    .aic-nm-spec-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .aic-nm-spec-table th, .aic-nm-spec-table td { padding: 14px 18px; border-bottom: 1px solid #ddd; text-align: left; font-size: 0.92rem; }
+    .aic-nm-spec-table thead th { background: #305534; color: #fff; font-weight: 600; }
+    .aic-nm-spec-table tbody tr:nth-child(even) { background: #f9f9f9; }
+    .aic-nm-spec-table td:first-child { font-weight: 600; color: #2c3e50; white-space: nowrap; min-width: 150px; }
+
+    /* CTA */
+    .aic-nm-cta { background: #305534; padding: 60px 0; text-align: center; color: #fff; }
+    .aic-nm-cta h2 { color: #fff; font-size: 1.6rem; margin-bottom: 12px; }
+    .aic-nm-cta p { color: rgba(255,255,255,0.85); margin-bottom: 24px; line-height: 1.8; }
+    .aic-nm-cta .btn-primary { background: #00880F; color: #fff; padding: 14px 32px; border-radius: 6px; font-size: 1rem; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.3s; margin: 6px; }
+    .aic-nm-cta .btn-primary:hover { background: #00660C; text-decoration: none; }
+
+    @media (max-width: 991px) {
+        .aic-nm-hero-grid { grid-template-columns: 1fr; }
+        .aic-nm-steps { grid-template-columns: repeat(2, 1fr); }
+        .aic-nm-models { grid-template-columns: 1fr; }
+        .aic-nm-payments { grid-template-columns: 1fr; }
+        .aic-nm-benefits { grid-template-columns: repeat(3, 1fr); }
+        .aic-nm-design { grid-template-columns: 1fr; }
+        .aic-nm-challenge-list { grid-template-columns: 1fr; }
+        .aic-nm-highlight { grid-template-columns: 1fr; padding: 28px 24px; }
+        .aic-nm-hero h1 { font-size: 1.8rem; }
+    }
+    @media (max-width: 575px) {
+        .aic-nm-steps, .aic-nm-benefits { grid-template-columns: 1fr; }
+        .aic-nm-spec-table { font-size: 0.82rem; }
+        .aic-nm-spec-table th, .aic-nm-spec-table td { padding: 10px 10px; }
+    }
+    </style>
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"出雲創安 Izumo Soan","url":"https://izumosoan.com/","logo":"https://izumosoan.com/assets/img/logo/logo.webp","description":"Technology partner connecting field, safety and operations","address":{"@type":"PostalAddress","addressLocality":"Katsushika-ku","addressRegion":"Tokyo","streetAddress":"Higashitateishi 4-37-8","addressCountry":"JP"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Product","name":"AI Checkout Terminal (New Models)","description":"Compact tabletop AI checkout terminal combining AI food recognition and integrated cashless payment. From dish recognition to payment in approximately 3 seconds.","image":"https://izumosoan.com/assets/img/cafeteria/AI-newmodel2.jpg","brand":{"@type":"Brand","name":"出雲創安 Izumo Soan"},"category":"AI Checkout Terminal","url":"https://izumosoan.com/en/smart-cafeteria-ai-newmodel.html"}
+    </script>
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long does checkout take with the AI Checkout Terminal (New Model)?", "acceptedAnswer": {"@type": "Answer", "text": "The entire checkout process — from placing the tray to completed payment — takes approximately 3 seconds. Actual processing time may vary depending on dish types, recognition conditions, payment method, and system configuration."}}, {"@type": "Question", "name": "What is the difference between New Model 1 and New Model 2?", "acceptedAnswer": {"@type": "Answer", "text": "New Model 1 features an 8-inch touchscreen, while New Model 2 features an 11.6-inch touchscreen. Both are compact, all-in-one tabletop terminals combining AI food recognition and integrated cashless payment."}}, {"@type": "Question", "name": "What payment methods are supported?", "acceptedAnswer": {"@type": "Answer", "text": "QR code and IC card payments are supported, and face recognition payment is available where the required payment system and account integration are in place."}}, {"@type": "Question", "name": "Where can the New Model terminals be installed?", "acceptedAnswer": {"@type": "Answer", "text": "The compact design is suitable for placement on a standard checkout counter, making it ideal for company cafeterias, university cafeterias, hospital cafeterias, and self-service restaurants without requiring a large installation space."}}, {"@type": "Question", "name": "How is this different from a two-terminal setup?", "acceptedAnswer": {"@type": "Answer", "text": "Many competing solutions split dish checkout and payment across two separate terminals, which introduces a risk of communication failures between them. This product integrates recognition, checkout, and payment into a single device, eliminating inter-terminal communication entirely and removing communication-related failures at the root for more stable operation."}}]}
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/logo/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/logo/apple-touch-icon.png">
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='#'><img src='../assets/img/logo/logo.webp' alt='Izumo Soan' class='header-logo-img' style='height:80px;' width='296' height='80'></a>
+            </div>
+            <div class='language-switcher'>
+                <span class='lang-label'><i class="fas fa-globe"></i></span>
+                <select id='lang-select'>
+                    <option value='ja'>日本語</option>
+                    <option value='en' selected>English</option>
+                    <option value='zh'>中文</option>
+                </select>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
+            <nav>
+                <ul>
+                    <li><a href='index.html'>Home</a></li>
+                    <li><a href='services.html' class='active'>Services</a></li>
+                    <li><a href='products.html'>Products</a></li>
+                    <li><a href='case-studies.html'>Case Studies</a></li>
+                    <li><a href='about.html'>About</a></li>
+                    <li><a href='column/index.html'>Column</a></li>
+                    <li><a href='index.html#contact'>Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <div class='aic-nm-breadcrumb'>
+            <div class='container'>
+                <a href='index.html'>Home</a><span>›</span>
+                <a href='services.html'>Services</a><span>›</span>
+                <a href='smart-cafeteria.html'>Smart Cafeteria</a><span>›</span>
+                <a href='smart-cafeteria-ai.html'>AI Image Recognition Checkout</a><span>›</span>
+                AI Checkout Terminal (New Models)
+            </div>
+        </div>
+
+        <!-- 1. Hero -->
+        <section class='aic-nm-hero'>
+            <div class='container aic-nm-hero-grid'>
+                <div>
+                    <h1>AI Checkout Terminal (New Models)</h1>
+                    <p class='aic-nm-hero-lead'>AI-Powered Food Recognition and Cashless Payment in One Compact Device</p>
+                    <p class='subtitle'>Automate food identification, bill calculation, and payment in approximately 3 seconds. Designed for company cafeterias, university cafeterias, and self-service restaurants, the AI Checkout Terminal New Models combine AI-powered food recognition with integrated cashless payment in a compact, tabletop device.<br><br>No more memorizing dish prices or manually entering every item. Simply place the tray in the recognition area, and the system automatically identifies the dishes, calculates the total, and enables payment.</p>
+                    <p class='aic-nm-hero-tagline'>Faster Checkout. Fewer Errors. Smoother Cafeteria Operations.</p>
+                    <div class='aic-nm-hero-buttons'>
+                        <a href='index.html#contact' class='btn-primary'>Request a Demo</a>
+                        <a href='index.html#contact' class='btn-secondary'>Contact Us</a>
+                    </div>
+                </div>
+                <div class='aic-nm-hero-visual'>
+                    <img src='../assets/img/cafeteria/AI-newmodel2.jpg' alt='AI Checkout Terminal (New Model 2) — compact tabletop device with 11.6-inch touchscreen for AI food recognition and cashless payment' width='542' height='509' loading='lazy'>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. The Challenge -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>The Challenge: Traditional Cafeteria Checkout Is Time-Consuming</h2>
+                    <p>Manual Checkout Creates Bottlenecks During Peak Hours</p>
+                </div>
+                <p class='aic-nm-challenge-lead'>In company cafeterias, university cafeterias, and self-service restaurants, customers typically select several dishes from a variety of prepared meals and bring their trays to the checkout counter. Unlike supermarkets, where products can be scanned using barcodes, many cafeteria dishes do not have individual barcodes. Cashiers must identify each dish, remember its price or refer to the menu, manually enter the amount, calculate the total, and process payment.</p>
+                <div class='aic-nm-challenge-list'>
+                    <div class='aic-nm-challenge-item'>
+                        <h3><i class="fas fa-users"></i>Long Queues</h3>
+                        <p>Manual price entry slows down checkout during busy lunch periods.</p>
+                    </div>
+                    <div class='aic-nm-challenge-item'>
+                        <h3><i class="fas fa-exclamation-triangle"></i>Human Errors</h3>
+                        <p>Similar-looking dishes and frequently changing menus make accurate billing difficult.</p>
+                    </div>
+                    <div class='aic-nm-challenge-item'>
+                        <h3><i class="fas fa-user-clock"></i>Staff Workload</h3>
+                        <p>Cashiers must concentrate on identifying dishes and entering prices while handling a continuous flow of customers.</p>
+                    </div>
+                    <div class='aic-nm-challenge-item'>
+                        <h3><i class="fas fa-tachometer-alt"></i>Operational Pressure</h3>
+                        <p>Cafeteria operators need to maintain fast, accurate service despite staffing constraints.</p>
+                    </div>
+                </div>
+                <p class='aic-nm-challenge-note'>Traditional checkout methods can struggle to keep up with demand during peak hours.</p>
+            </div>
+        </section>
+
+        <!-- 3. The Solution -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>The Solution: AI Recognition and Payment in One Device</h2>
+                    <p>From Dish Recognition to Payment in Approximately 3 Seconds</p>
+                </div>
+                <div class='aic-nm-steps'>
+                    <div class='aic-nm-step'>
+                        <div class='aic-nm-step-num'>1</div>
+                        <div class='aic-nm-step-icon'><i class="fas fa-utensils"></i></div>
+                        <h3>Place the Tray</h3>
+                        <p>Customers place their trays and dishes in the AI recognition area.</p>
+                    </div>
+                    <div class='aic-nm-step'>
+                        <div class='aic-nm-step-num'>2</div>
+                        <div class='aic-nm-step-icon'><i class="fas fa-camera"></i></div>
+                        <h3>Automatic Dish Recognition</h3>
+                        <p>The AI camera identifies the dishes and determines their corresponding prices.</p>
+                    </div>
+                    <div class='aic-nm-step'>
+                        <div class='aic-nm-step-num'>3</div>
+                        <div class='aic-nm-step-icon'><i class="fas fa-calculator"></i></div>
+                        <h3>Instant Bill Calculation</h3>
+                        <p>The system automatically calculates the total without requiring manual entry of each dish.</p>
+                    </div>
+                    <div class='aic-nm-step'>
+                        <div class='aic-nm-step-num'>4</div>
+                        <div class='aic-nm-step-icon'><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Cashless Payment</h3>
+                        <p>Pay via QR code, IC card, or face recognition where available.</p>
+                    </div>
+                </div>
+                <div class='aic-nm-highlight aic-nm-highlight--stack'>
+                    <div class='aic-nm-highlight-text'>
+                        <p>Combining AI-powered dish recognition, automatic bill calculation, and integrated payment in <strong>one device</strong>.</p>
+                        <p class='aic-nm-highlight-speed'><i class="fas fa-bolt"></i>The entire checkout process takes approximately <strong>3 seconds</strong>!</p>
+                        <div class='aic-nm-stability'>
+                            <p class='aic-nm-stability-title'><i class="fas fa-shield-alt"></i>All-in-One Means Greater Stability</p>
+                            <p class='aic-nm-stability-text'>Many competing solutions split <strong>dish checkout</strong> and <strong>payment</strong> across <strong>two separate terminals</strong>, creating a risk of communication failures between them. This product integrates recognition, checkout, and payment into <strong>a single device</strong> — eliminating inter-terminal communication entirely and <strong>removing communication-related failures at the root</strong> for more stable operation.</p>
+                        </div>
+                    </div>
+                    <div class='aic-nm-highlight-img'>
+                        <img src='../assets/img/cafeteria/AInewtype2.jpg' alt='AI Checkout Terminal New Model product explanation showing dish recognition and payment in approximately 3 seconds' width='1022' height='698' loading='lazy'>
+                    </div>
+                </div>
+                <div class='aic-nm-video'>
+                    <video src='../assets/img/cafeteria/AInewmode.mp4' autoplay muted loop playsinline controls poster='../assets/img/cafeteria/AInewtype2.jpg'>
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class='aic-nm-video-caption'><i class="fas fa-play-circle"></i> Watch the AI Checkout Terminal New Model in action — from placing the tray to completed payment.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Compact Design -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>Compact Design for Flexible Installation</h2>
+                    <p>AI Checkout Terminal (New Models)</p>
+                </div>
+                <div class='aic-nm-design'>
+                    <div class='aic-nm-design-img'>
+                        <img src='../assets/img/cafeteria/AI-newmodel1.jpg' alt='AI Checkout Terminal New Model — compact all-in-one tabletop terminal' width='469' height='510' loading='lazy'>
+                    </div>
+                    <div class='aic-nm-design-text'>
+                        <h3>All-in-One, Tabletop-Ready</h3>
+                        <p>Unlike large, dedicated checkout machines, the New Models feature a compact design suitable for placement on a standard checkout counter. They integrate the main functions into one device, helping cafeterias introduce AI-powered checkout without requiring a large installation space.</p>
+                        <h4>Key Features</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i><strong>11.6-inch touchscreen</strong> (New Model 2) / 8-inch touchscreen (New Model 1) — an easy-to-use interface for checkout operations.</li>
+                            <li><i class="fas fa-check"></i><strong>5MP AI recognition camera</strong> — captures food images for automatic dish identification.</li>
+                            <li><i class="fas fa-check"></i><strong>Integrated payment interface</strong> — supports QR code and IC card payments.</li>
+                            <li><i class="fas fa-check"></i><strong>Face recognition capability</strong> — enables face recognition payment where supported.</li>
+                            <li><i class="fas fa-check"></i><strong>Flexible connectivity</strong> — supports Wi-Fi, Bluetooth, and wired LAN.</li>
+                            <li><i class="fas fa-check"></i><strong>All-in-one design</strong> — combines food recognition and payment functions in one compact terminal.</li>
+                        </ul>
+                        <h4>Ideal for</h4>
+                        <div class='aic-nm-ideal'>
+                            <span>Company cafeterias</span>
+                            <span>University cafeterias</span>
+                            <span>Hospital cafeterias</span>
+                            <span>Self-service restaurants</span>
+                            <span>Multi-dish establishments</span>
+                        </div>
+                        <div class='aic-nm-ideal-photo'>
+                            <img src='../assets/img/cafeteria/self-service-restrauant.jpg' alt='Self-service / cafeteria-style restaurant where the AI Checkout Terminal New Models are ideally suited' width='2097' height='750' loading='lazy'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Two Model Lineup -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>Two Compact Models to Choose From</h2>
+                    <p>Select the display size that fits your counter and operation.</p>
+                </div>
+                <div class='aic-nm-models'>
+                    <div class='aic-nm-model-card'>
+                        <div class='aic-nm-model-img'>
+                            <img src='../assets/img/cafeteria/AI-newmodel1.jpg' alt='AI Checkout Terminal (New Model 1) — 8-inch touchscreen compact terminal' width='469' height='510' loading='lazy'>
+                        </div>
+                        <div style='text-align:center;'><span class='aic-nm-model-badge'>New Model 1</span></div>
+                        <h3>AI Checkout Terminal (New Model 1)</h3>
+                        <p class='aic-nm-model-desc'>Compact model with an 8-inch touchscreen. Integrates face recognition, QR, and card payment in one unit — ideal for the most space-constrained counters.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>8-inch touchscreen</li>
+                            <li><i class="fas fa-check"></i>Integrated face camera / QR / card reader</li>
+                            <li><i class="fas fa-check"></i>5MP dish recognition camera</li>
+                            <li><i class="fas fa-check"></i>2MP infrared binocular face camera</li>
+                            <li><i class="fas fa-check"></i>Wi-Fi / Bluetooth / wired LAN</li>
+                        </ul>
+                    </div>
+                    <div class='aic-nm-model-card'>
+                        <div class='aic-nm-model-img'>
+                            <img src='../assets/img/cafeteria/AI-newmodel2.jpg' alt='AI Checkout Terminal (New Model 2) — 11.6-inch touchscreen compact terminal' width='542' height='509' loading='lazy'>
+                        </div>
+                        <div style='text-align:center;'><span class='aic-nm-model-badge'>New Model 2</span></div>
+                        <h3>AI Checkout Terminal (New Model 2)</h3>
+                        <p class='aic-nm-model-desc'>Compact model with a larger 11.6-inch touchscreen. Integrates face recognition, QR, and card payment in one unit — a roomier interface while staying tabletop-friendly.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>11.6-inch touchscreen</li>
+                            <li><i class="fas fa-check"></i>Integrated face camera / QR / card reader</li>
+                            <li><i class="fas fa-check"></i>5MP dish recognition camera</li>
+                            <li><i class="fas fa-check"></i>2MP infrared binocular face camera</li>
+                            <li><i class="fas fa-check"></i>Wi-Fi / Bluetooth / wired LAN</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Payment Options -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>Flexible Cashless Payment Options</h2>
+                    <p>Choose the Payment Method That Fits Your Operation</p>
+                </div>
+                <p class='aic-nm-challenge-lead'>Different cafeterias have different customer groups and payment requirements. The AI Checkout Terminal New Models support multiple payment options, helping operators choose an appropriate payment configuration.</p>
+                <div class='aic-nm-payments'>
+                    <div class='aic-nm-pay-card'>
+                        <i class="fas fa-qrcode"></i>
+                        <h3>QR Code Payment</h3>
+                        <p>Customers scan a QR code to complete payment using a compatible payment service.</p>
+                    </div>
+                    <div class='aic-nm-pay-card'>
+                        <i class="fas fa-credit-card"></i>
+                        <h3>IC Card Payment</h3>
+                        <p>Customers pay using compatible contactless IC cards.</p>
+                    </div>
+                    <div class='aic-nm-pay-card'>
+                        <i class="fas fa-smile"></i>
+                        <h3>Face Recognition Payment</h3>
+                        <p>Customers can use face recognition payment when the required payment system and account integration are available.</p>
+                    </div>
+                </div>
+                <p class='aic-nm-note'>These options help reduce reliance on cash handling and support faster checkout operations.</p>
+            </div>
+        </section>
+
+        <!-- 7. Business Benefits -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>Business Benefits</h2>
+                    <p>Faster Service, Lower Workload, Better Customer Experience</p>
+                </div>
+                <div class='aic-nm-benefits'>
+                    <div class='aic-nm-benefit-card'>
+                        <div class='aic-nm-benefit-num'>01</div>
+                        <i class="fas fa-stream"></i>
+                        <h3>Reduce Checkout Queues</h3>
+                        <p>Automatic recognition and payment shorten waiting times during peak periods.</p>
+                    </div>
+                    <div class='aic-nm-benefit-card'>
+                        <div class='aic-nm-benefit-num'>02</div>
+                        <i class="fas fa-hand-holding"></i>
+                        <h3>Reduce Manual Work</h3>
+                        <p>Cashiers no longer identify every dish or enter each price, freeing them for other tasks.</p>
+                    </div>
+                    <div class='aic-nm-benefit-card'>
+                        <div class='aic-nm-benefit-num'>03</div>
+                        <i class="fas fa-check-double"></i>
+                        <h3>Improve Billing Accuracy</h3>
+                        <p>Automatic identification and calculation help reduce manual-entry errors.</p>
+                    </div>
+                    <div class='aic-nm-benefit-card'>
+                        <div class='aic-nm-benefit-num'>04</div>
+                        <i class="fas fa-smile-beam"></i>
+                        <h3>Improve Customer Satisfaction</h3>
+                        <p>Faster checkout lets customers spend less time waiting and more time enjoying meals.</p>
+                    </div>
+                    <div class='aic-nm-benefit-card'>
+                        <div class='aic-nm-benefit-num'>05</div>
+                        <i class="fas fa-cogs"></i>
+                        <h3>Optimize Cafeteria Operations</h3>
+                        <p>AI-powered checkout provides a foundation for modernizing cafeteria management.</p>
+                    </div>
+                    <div class='aic-nm-benefit-card'>
+                        <div class='aic-nm-benefit-num'>06</div>
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>More Stable Operation</h3>
+                        <p>All-in-one design removes inter-terminal communication, preventing related failures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Technical Specifications -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>Technical Specifications</h2>
+                    <p>Key specifications for the AI Checkout Terminal (New Model 2)</p>
+                </div>
+                <div style='overflow-x:auto;'>
+                    <table class='aic-nm-spec-table'>
+                        <thead>
+                            <tr><th>Item</th><th>Specification</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Product Name</td><td>AI Checkout Terminal (New Model 2)</td></tr>
+                            <tr><td>Display</td><td>11.6-inch touchscreen</td></tr>
+                            <tr><td>Dish Recognition Camera</td><td>5MP</td></tr>
+                            <tr><td>Face Recognition Camera</td><td>2MP infrared binocular camera</td></tr>
+                            <tr><td>Payment Interface</td><td>QR code / IC card / face recognition</td></tr>
+                            <tr><td>Connectivity</td><td>Wi-Fi / Bluetooth / Wired LAN</td></tr>
+                            <tr><td>Design</td><td>Compact, integrated tabletop terminal</td></tr>
+                            <tr><td>Architecture</td><td>All-in-one integrated design (recognition + checkout + payment in one device; no inter-terminal communication)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. CTA -->
+        <section class='aic-nm-cta'>
+            <div class='container'>
+                <h2>Ready to Modernize Your Cafeteria Checkout?</h2>
+                <p>Reduce manual checkout work, shorten queues, and improve the customer experience with AI-powered food recognition and integrated cashless payment.<br>Whether you operate a company cafeteria, university cafeteria, hospital cafeteria, or self-service restaurant, we can discuss how the AI Checkout Terminal New Models may fit your operation.</p>
+                <a href='index.html#contact' class='btn-primary'>Request a Demo</a>
+                <a href='index.html#contact' class='btn-primary'>Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../assets/img/logo/logo.webp' alt='Izumo Soan' width='739' height='200' loading='lazy'>
+                    <p class='logo-desp'>Technology that powers the field</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href='index.html'>Home</a></li>
+                        <li><a href='about.html'>About</a></li>
+                        <li><a href='services.html'>Services</a></li>
+                        <li><a href='case-studies.html'>Case Studies</a></li>
+                        <li><a href='overseas-partner.html'>Overseas Partner</a></li>
+                        <li><a href='column/index.html'>Column</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>Products</h4>
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='smart-cafeteria.html'>
+                            <span>Smart Cafeteria</span>
+                            <small>AI Recognition · RFID · Weighing</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>Smart Site Operations Platform</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 Izumo Soan. All rights reserved. ｜ <a href='privacy.html' style='color:inherit;text-decoration:underline;'>Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src='../assets/js/main.js'></script>
+    <script src='../assets/js/lang-switcher.js'></script>
+</body>
+</html>

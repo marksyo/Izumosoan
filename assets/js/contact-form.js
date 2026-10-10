@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
         name: formData.get('name') || '',
         company: formData.get('company') || '',
         email: email,
+        phone: formData.get('phone') || '',
         message: formData.get('message') || ''
       }
     };

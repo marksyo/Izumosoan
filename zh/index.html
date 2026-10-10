@@ -20,6 +20,11 @@
     <meta property="og:title" content="出云创安 | 技术赋能现场的工程合作伙伴">
     <meta property="og:description" content="出云创安将国内外技术导入日本现场，提供从设计、导入到运维的全方位支持。">
     <meta property="og:locale" content="zh_CN">
+    <meta property="og:image" content="https://izumosoan.com/assets/img/cafeteria/cafeteria-hero.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="出云创安 | 技术赋能现场的工程合作伙伴">
+    <meta name="twitter:description" content="出云创安将国内外技术导入日本现场，提供从设计、施工、系统集成到运维的全方位支持。服务制造业、物流、数据中心及各类设施。">
+    <meta name="twitter:image" content="https://izumosoan.com/assets/img/cafeteria/cafeteria-hero.webp">
 
     <!-- SEO: JSON-LD Organization -->
     <script type="application/ld+json">
@@ -110,6 +115,19 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/logo/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/logo/apple-touch-icon.png">
+<style>
+    /* Smart Cafeteria hero CTA — green accent (overrides blue primary on hover) */
+    .btn-cafeteria { background: #00880F !important; box-shadow: 0 4px 14px rgba(0,136,15,0.45) !important; }
+    .btn-cafeteria:hover { background: #00660C !important; box-shadow: 0 6px 20px rgba(0,136,15,0.6) !important; }
+    /* Hero buttons: allow wrapping on medium screens */
+    .hero-buttons { flex-wrap: wrap; }
+    /* Mobile: stack the 3 hero buttons vertically, full-width, easy to tap */
+    @media (max-width: 600px) {
+        .hero-buttons { flex-direction: column; align-items: stretch; gap: 0.75rem; width: 100%; max-width: 360px; margin-left: auto; margin-right: auto; }
+        .hero-buttons .btn-primary,
+        .hero-buttons .btn-secondary { width: 100%; box-sizing: border-box; padding: 14px 20px; font-size: 1rem; white-space: normal; }
+    }
+</style>
 </head>
 <body>
     <header>
@@ -150,8 +168,9 @@
                     将国内外技术导入日本现场，<br>从设计、导入到运维提供全方位支持的工程合作伙伴。
                 </p>
                 <div class='hero-buttons'>
-                    <a href='services.html' class='btn-primary'>咨询现场技术课题</a>
+                    <a href='services.html' class='btn-secondary'>咨询现场技术课题</a>
                     <a href='overseas-partner.html' class='btn-secondary'>咨询日本市场拓展</a>
+                    <a href='smart-cafeteria.html' class='btn-primary btn-cafeteria' style='background:#00880F;box-shadow:0 4px 14px rgba(0,136,15,0.45);'>智慧食堂解决方案</a>
                 </div>
             </div>
         </section>
@@ -291,7 +310,7 @@
                         </div>
                     </div>
                     <div class='mini-case-card'>
-                        <img src='../assets/img/cards/agv-robot.webp' alt='物流仓库AGV导入支援' style='width:100%;height:180px;object-fit:cover;display:block;'>
+                        <img src='../assets/img/cards/agv-robot.webp' alt='物流仓库AGV导入支援' style='width:100%;height:180px;object-fit:cover;display:block;' loading='lazy'>
                         <div class='mini-case-body'>
                             <span class='case-cat'>物流仓库</span>
                             <h3>物流仓库AGV导入支援</h3>
@@ -303,7 +322,7 @@
                         </div>
                     </div>
                     <div class='mini-case-card'>
-                        <img src='../assets/img/cards/erp-upgrade.webp' alt='制造企业ERP升级项目' style='width:100%;height:180px;object-fit:cover;display:block;'>
+                        <img src='../assets/img/cards/erp-upgrade.webp' alt='制造企业ERP升级项目' style='width:100%;height:180px;object-fit:cover;display:block;' loading='lazy'>
                         <div class='mini-case-body'>
                             <span class='case-cat'>制造业</span>
                             <h3>制造企业ERP升级项目</h3>
@@ -443,6 +462,10 @@
                             <div class='form-group'>
                                 <label for='company'>公司/组织名称</label>
                                 <input type='text' id='company' name='company' placeholder="出云创安有限公司">
+                            </div>
+                            <div class='form-group'>
+                                <label for='phone'>电话号码 <span style='font-weight:400;color:var(--text-muted);font-size:0.85em;'>（选填）</span></label>
+                                <input type='tel' id='phone' name='phone' placeholder="+81 3-1234-5678" autocomplete='tel'>
                             </div>
                             <div class='form-group'>
                                 <label for='message'>咨询内容</label>
