@@ -26,7 +26,7 @@
     <meta name="twitter:image" content="https://izumosoan.com/assets/img/cafeteria/AI-newmodel2.jpg">
 
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://izumosoan.com/ja/index.html"},{"@type":"ListItem","position":2,"name":"サービス","item":"https://izumosoan.com/ja/services.html"},{"@type":"ListItem","position":3,"name":"スマート食堂","item":"https://izumosoan.com/ja/smart-cafeteria.html"},{"@type":"ListItem","position":4,"name":"AI画像認識精算","item":"https://izumosoan.com/ja/smart-cafeteria-ai.html"},{"@type":"ListItem","position":5,"name":"AI精算端末（新モデル）","item":"https://izumosoan.com/ja/smart-cafeteria-ai-newmodel.html"}]}
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://izumosoan.com/ja/index.html"},{"@type":"ListItem","position":2,"name":"製品","item":"https://izumosoan.com/ja/products.html"},{"@type":"ListItem","position":3,"name":"スマート食堂","item":"https://izumosoan.com/ja/smart-cafeteria.html"},{"@type":"ListItem","position":4,"name":"AI画像認識精算","item":"https://izumosoan.com/ja/smart-cafeteria-ai.html"},{"@type":"ListItem","position":5,"name":"AI精算端末（新モデル）","item":"https://izumosoan.com/ja/smart-cafeteria-ai-newmodel.html"}]}
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,6 +78,20 @@
     .aic-nm-highlight-img { text-align: center; }
     .aic-nm-highlight-img img { max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
     .aic-nm-note { font-size: 0.82rem; color: #999; margin-top: 16px; line-height: 1.7; }
+    .aic-nm-feature-table-wrap { max-width: 820px; margin: 0 auto; overflow-x: auto; }
+    .aic-nm-feature-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
+    .aic-nm-feature-table th { background: #305534; color: #fff; font-weight: 600; text-align: left; padding: 14px 20px; font-size: 0.95rem; }
+    .aic-nm-feature-table td { padding: 14px 20px; border-bottom: 1px solid #eee; font-size: 0.92rem; color: #444; line-height: 1.7; vertical-align: middle; }
+    .aic-nm-feature-table tbody tr:last-child td { border-bottom: none; }
+    .aic-nm-feature-table tbody tr:nth-child(even) { background: #f9fbf9; }
+    .aic-nm-feature-table td:first-child { font-weight: 700; color: #00660C; white-space: nowrap; }
+    .aic-nm-feature-table td:first-child i { color: #00880F; margin-right: 8px; }
+    .aic-nm-recommend { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 920px; margin: 0 auto; }
+    .aic-nm-recommend-item { background: #fff; border-radius: 12px; padding: 24px 26px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 4px solid #00880F; }
+    .aic-nm-recommend-item h3 { font-size: 1.05rem; margin-bottom: 8px; color: #2c3e50; }
+    .aic-nm-recommend-item h3 i { color: #00880F; margin-right: 8px; }
+    .aic-nm-recommend-item p { font-size: 0.9rem; color: #666; margin: 0; line-height: 1.7; }
+    .aic-nm-recommend-note { text-align: center; max-width: 820px; margin: 26px auto 0; font-size: 0.95rem; color: #666; line-height: 1.8; }
     .aic-nm-highlight--stack { grid-template-columns: 1fr; }
     .aic-nm-highlight--stack .aic-nm-highlight-img { width: 100%; }
     .aic-nm-highlight--stack .aic-nm-highlight-img img { width: 100%; max-width: 100%; height: auto; object-fit: contain; }
@@ -217,7 +231,7 @@
         <div class='aic-nm-breadcrumb'>
             <div class='container'>
                 <a href='index.html'>ホーム</a><span>›</span>
-                <a href='services.html'>サービス</a><span>›</span>
+                <a href='products.html'>製品</a><span>›</span>
                 <a href='smart-cafeteria.html'>スマート食堂</a><span>›</span>
                 <a href='smart-cafeteria-ai.html'>AI画像認識精算</a><span>›</span>
                 AI精算端末（新モデル）
@@ -229,16 +243,39 @@
             <div class='container aic-nm-hero-grid'>
                 <div>
                     <h1>AI精算端末（新モデル）</h1>
-                    <p class='aic-nm-hero-lead'>AI料理認識とキャッシュレス決済を1台に凝縮したコンパクト端末</p>
-                    <p class='subtitle'>料理の識別・金額計算・決済を約3秒で自動化。社員食堂・大学食堂・セルフ式レストラン向けに設計されたAI精算端末 新モデルは、AI料理認識とキャッシュレス決済をコンパクトな卓上端末に一体化しました。<br><br>料理の価格を覚えたり、一品ずつ手入力したりする必要はありません。トレーを認識エリアに置くだけで、システムが自動的に料理を識別し、合計金額を計算し、決済を可能にします。</p>
-                    <p class='aic-nm-hero-tagline'>精算をより速く。ミスをより少なく。食堂運営をよりスムーズに。</p>
+                    <p class='aic-nm-hero-lead'>食堂のレジ待ちを、もっと短く。</p>
+                    <p class='subtitle'>料理の自動認識・金額計算・キャッシュレス決済を1台に集約。AIカメラが複数の料理を自動認識することで、レジ担当者による価格確認や手入力の負担を軽減します。<br><br>コンパクトな卓上設計で、社員食堂・大学食堂・セルフ式レストランの精算業務を効率化します。料理の価格を覚えたり、一品ずつ手入力したりする必要はありません。トレーを認識エリアに置くだけで、システムが自動的に料理を識別し、合計金額を計算し、決済を可能にします。</p>
+                    <p class='aic-nm-hero-tagline'>料理認識＋自動精算＋キャッシュレス決済</p>
                     <div class='aic-nm-hero-buttons'>
-                        <a href='index.html#contact' class='btn-primary'>デモを依頼する</a>
-                        <a href='index.html#contact' class='btn-secondary'>お問い合わせ</a>
+                        <a href='index.html#contact' class='btn-primary'>お問い合わせ・デモ依頼</a>
                     </div>
                 </div>
                 <div class='aic-nm-hero-visual'>
                     <img src='../assets/img/cafeteria/AI-newmodel2.jpg' alt='AI精算端末（新モデル2）- 11.6インチタッチスクリーン搭載、AI料理認識とキャッシュレス決済を備えたコンパクトな卓上端末' width='542' height='509' loading='lazy'>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1b. Feature Summary -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>製品の特長</h2>
+                    <p>AI精算端末（新モデル）が選ばれる5つの理由</p>
+                </div>
+                <div class='aic-nm-feature-table-wrap'>
+                    <table class='aic-nm-feature-table'>
+                        <thead>
+                            <tr><th>特長</th><th>アピール内容</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><i class="fas fa-bolt"></i>約3秒</td><td>料理認識から決済までの迅速な処理。</td></tr>
+                            <tr><td><i class="fas fa-camera"></i>AI自動認識</td><td>料理ごとの価格を手入力する作業を削減。</td></tr>
+                            <tr><td><i class="fas fa-box"></i>一体型端末</td><td>料理認識と決済を1台に集約。</td></tr>
+                            <tr><td><i class="fas fa-compress"></i>コンパクト設計</td><td>カウンターへの設置スペースを抑制。</td></tr>
+                            <tr><td><i class="fas fa-credit-card"></i>キャッシュレス対応</td><td>QRコード・ICカードなどに対応。</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
@@ -342,6 +379,8 @@
                     <div class='aic-nm-design-text'>
                         <h3>オールインワン、卓上対応</h3>
                         <p>大型の専用精算機とは異なり、新モデルは標準的な精算カウンターに設置できるコンパクト設計です。主要機能を1台に統合し、大きな設置スペースを必要とせずにAI精算を導入できます。</p>
+                        <h3>コンパクトだから、導入しやすい。</h3>
+                        <p>大型の専用精算機とは異なり、コンパクトな卓上設計を採用。限られたレジカウンターのスペースを活用しながら、AIによる料理認識とキャッシュレス決済を導入できます。既存の食堂レイアウトを活かした運用についても、ご相談いただけます。<br><span style='font-size:0.86rem;color:#888;'>※ 既存レジとの連携や置き換えが可能かどうかは、導入環境によって異なるため、事前の確認が必要です。</span></p>
                         <h4>主な特長</h4>
                         <ul>
                             <li><i class="fas fa-check"></i><strong>11.6インチタッチスクリーン</strong>（新モデル2）/ 8インチタッチスクリーン（新モデル1）— 操作しやすい精算インターフェース。</li>
@@ -364,6 +403,35 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- 4b. Recommended For -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>こんな食堂におすすめ</h2>
+                    <p>料理の種類が多い食堂ほど、自動認識のメリットを実感いただけます</p>
+                </div>
+                <div class='aic-nm-recommend'>
+                    <div class='aic-nm-recommend-item'>
+                        <h3><i class="fas fa-building"></i>社員食堂</h3>
+                        <p>昼休みのレジ待ちを短縮したい。</p>
+                    </div>
+                    <div class='aic-nm-recommend-item'>
+                        <h3><i class="fas fa-graduation-cap"></i>大学食堂</h3>
+                        <p>多くの学生が集中する時間帯の混雑を緩和したい。</p>
+                    </div>
+                    <div class='aic-nm-recommend-item'>
+                        <h3><i class="fas fa-hospital"></i>病院食堂</h3>
+                        <p>限られたスタッフで効率よく運営したい。</p>
+                    </div>
+                    <div class='aic-nm-recommend-item'>
+                        <h3><i class="fas fa-utensils"></i>セルフ式レストラン</h3>
+                        <p>多種類の料理を提供し、会計作業に時間がかかっている。</p>
+                    </div>
+                </div>
+                <p class='aic-nm-recommend-note'>特に料理の種類が多い食堂では、料理の識別と価格入力を自動化することで、精算にかかる時間と手作業を大きく削減できます。</p>
             </div>
         </section>
 
@@ -510,7 +578,6 @@
                         </tbody>
                     </table>
                 </div>
-                <p class='aic-nm-note'>※ 上記は既存製品ページに掲載されている仕様をもとにした案です。正式公開前に、最新の製品仕様書と照合してください。<br>※ 新モデル1は8インチタッチスクリーンを搭載したモデルです。その他の主な仕様は新モデル2に準じます。</p>
             </div>
         </section>
 
@@ -519,8 +586,7 @@
             <div class='container'>
                 <h2>食堂の精算を近代化しませんか？</h2>
                 <p>AIによる料理認識とキャッシュレス決済の統合で、手作業の精算を減らし、行列を短縮し、顧客体験を向上させます。<br>社員食堂・大学食堂・病院食堂・セルフ式レストランのいずれでも、AI精算端末 新モデルがどのように貴施設に適合するかをご相談いただけます。</p>
-                <a href='index.html#contact' class='btn-primary'>デモを依頼する</a>
-                <a href='index.html#contact' class='btn-primary'>お問い合わせ</a>
+                <a href='index.html#contact' class='btn-primary'>お問い合わせ・デモ依頼</a>
             </div>
         </section>
     </main>
