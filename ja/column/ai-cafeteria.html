@@ -50,16 +50,25 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "datePublished": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-12",
     "headline": "社員食堂にAI自動精算を導入する完全ガイド｜仕組み・費用・導入ステップ",
     "description": "社員食堂のAI自動精算システムを徹底解説。AI画像認識の仕組み、導入メリット5つ、費用の考え方、5ステップの導入フローまで網羅。関東エリアで無料POC実施中。",
     "author": {
         "@type": "Organization",
-        "name": "出雲創安 Izumo Soan"
+        "name": "出雲創安 Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "sameAs": [
+            "https://izumosoan.com/"
+        ]
     },
     "publisher": {
         "@type": "Organization",
-        "name": "出雲創安 Izumo Soan"
+        "name": "出雲創安 Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://izumosoan.com/assets/img/logo/logo.png"
+        }
     },
     "mainEntityOfPage": "https://izumosoan.com/ja/column/ai-cafeteria.html"
 }</script>
@@ -93,6 +102,12 @@
     .column-body h4 { font-size: 1.05rem; font-weight: 700; color: #333; margin: 28px 0 10px; }
     .column-body p { margin: 0 0 18px; }
     .column-body strong { color: #003554; }
+    .column-body .column-lead {
+        background: #f0f7ff; border-left: 4px solid #00880F;
+        padding: 14px 20px; margin: 0 0 22px; border-radius: 0 8px 8px 0;
+        font-weight: 500; color: #1e293b; font-size: 1.02rem; line-height: 1.75;
+    }
+    .column-body .column-lead strong { color: #00660C; }
     .column-body blockquote {
         background: #f0f7ff; border-left: 4px solid #006494;
         padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem;
@@ -142,6 +157,7 @@
         .column-body table th, .column-body table td { padding: 8px 10px; }
         .column-cta { padding: 32px 20px; }
     }
+    .aic-demo-video { width: 100%; max-width: 720px; aspect-ratio: 16 / 9; height: auto; object-fit: contain; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); background: #000; display: block; margin: 0 auto; }
     </style>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "メニューが変わるたびにAIの再学習が必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "A. 大規模な再学習は不要です。端末上で新メニューの写真を撮影するだけでAIが自動学習します。日替わりメニューにも即日対応可能で、毎朝の仕込み時に数分で作業が完了します。"}}, {"@type": "Question", "name": "既存の食堂レイアウトを大きく変える必要がありますか？", "acceptedAnswer": {"@type": "Answer", "text": "A. いいえ。AI精算台を既存のレジスペースに設置するだけで導入可能です。サーバー不要のエッジ型設計のため、大規模なネットワーク工事も不要。電源とネットワーク接続（有線またはWi-Fi）さえあれば稼働します。"}}, {"@type": "Question", "name": "識別精度はどのくらいですか？", "acceptedAnswer": {"@type": "Answer", "text": "A. 食器識別モードで99.99%以上、料理識別モードで99%以上です。ただし、実際の食堂では当日の提供メニュー数が限定的（通常10〜30品程度）なため、識別対象が絞り込まれ、実運用ではほぼ100%の精度となります。万が一、誤識別が発生した場合も精算画面で修正可能です。"}}, {"@type": "Question", "name": "停電やネットワーク障害が発生した場合は？", "acceptedAnswer": {"@type": "Answer", "text": "A. AIエンジンは精算台本体に搭載されているため、ネットワーク障害時もオフラインで識別・精算が可能です。データはネットワーク復旧後に自動同期されます。"}}, {"@type": "Question", "name": "導入コストの目安を教えてください。", "acceptedAnswer": {"@type": "Answer", "text": "A. 方式・台数・食堂の規模によって異なります。まずは無料POCで実際の効果を確認していただき、その結果を踏まえて最適な構成・費用をご提案します。"}}, {"@type": "Question", "name": "RFID方式や計量方式との違いは？", "acceptedAnswer": {"@type": "Answer", "text": "A. AI方式の最大の特徴は特殊食器が不要であること（料理識別モード使用時）と、メニュー変更への即時対応力です。RFID方式は読取速度が最速で大規模食堂向き、計量方式はビュッフェ形式に最適です。詳しくは以下の比較記事をご覧ください。"}}]}</script>
 </head>
@@ -210,6 +226,7 @@
 <p>こうしたミスは食堂への信頼を損ない、利用率の低下にもつながりかねません。</p>
 <hr />
 <h2>AI自動精算システムとは？基本の仕組み</h2>
+            <p class="column-lead">AI自動精算システムとは、<strong>AIカメラで料理を画像認識し、品目と金額を自動判定して精算する仕組み</strong>です。トレーを置くだけで約1秒で認識が完了し、専用食器もレジ担当者も不要にできます。</p>
 <p>AI自動精算システムは、<strong>人工知能による画像認識技術</strong>を活用して料理を自動識別し、精算まで完了するスマートデバイスです。</p>
 <h3>AIカメラが料理を瞬時に識別する仕組み</h3>
 <p>AI自動精算の核となるのは、精算台に搭載された<strong>高精度AIカメラ（500万画素・単眼カラーカメラ）</strong>です。精算の流れは以下のとおりです。</p>
@@ -312,6 +329,10 @@
 </tbody>
 </table>
 <hr />
+<p style='text-align:center;margin:24px 0;'>
+    <video class='aic-demo-video' src='../../assets/img/cafeteria/AInewmode.mp4' autoplay muted loop playsinline controls preload='metadata'>お使いのブラウザは動画タグに対応していません。</video>
+    <br><span style='display:inline-block;font-size:0.95rem;color:#555;margin-top:12px;'><i class="fas fa-play-circle" style='color:#00880F;margin-right:6px;'></i>AIで料理認識＋顔認証で支払い</span>
+</p>
 <h2>AI精算を導入する5つのメリット</h2>
 <h3>① 精算時間を最大1/30に短縮 — 行列を根本から解消</h3>
 <p>従来30〜60秒かかっていた精算が<strong>わずか1〜2秒</strong>で完了。AI自動精算システムは料理認識カメラと顔認証カメラの2台が同時に稼働するため、トレーを置いた瞬間に料理識別と本人確認が並列処理されます。ピーク時の行列が劇的に解消され、社員の昼休みを本来の「休憩時間」に取り戻せます。</p>

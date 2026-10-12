@@ -40,12 +40,30 @@
     "image": "https://izumosoan.com/assets/img/cafeteria/RFID_AI_compare.jpg",
     "inLanguage": "ja",
     "datePublished": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-12",
     "articleSection": "スマート食堂コラム",
     "keywords": "食堂 RFID, 食堂 AI画像認識, 食堂 自動会計 比較, 食堂 精算 認識精度, スマート食堂",
-    "author": {"@type": "Organization", "name": "出雲創安 Izumo Soan", "url": "https://izumosoan.com/ja/about.html"},
-    "publisher": {"@type": "Organization", "name": "出雲創安 Izumo Soan", "logo": {"@type": "ImageObject", "url": "https://izumosoan.com/assets/img/logo/logo.webp"}},
-    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://izumosoan.com/ja/column/rfid-vs-ai.html"}
+    "author": {
+        "@type": "Organization",
+        "name": "出雲創安 Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "sameAs": [
+            "https://izumosoan.com/"
+        ]
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "出雲創安 Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://izumosoan.com/assets/img/logo/logo.png"
+        }
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://izumosoan.com/ja/column/rfid-vs-ai.html"
+    }
 }</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,6 +95,12 @@
     .column-body h4 { font-size: 1.05rem; font-weight: 700; color: #333; margin: 28px 0 10px; }
     .column-body p { margin: 0 0 18px; }
     .column-body strong { color: #003554; }
+    .column-body .column-lead {
+        background: #f0f7ff; border-left: 4px solid #00880F;
+        padding: 14px 20px; margin: 0 0 22px; border-radius: 0 8px 8px 0;
+        font-weight: 500; color: #1e293b; font-size: 1.02rem; line-height: 1.75;
+    }
+    .column-body .column-lead strong { color: #00660C; }
     .column-body blockquote {
         background: #f0f7ff; border-left: 4px solid #006494;
         padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem;
@@ -185,6 +209,7 @@
 <p>本記事では、両方式の仕組みと特徴、導入時の注意点を比較します。</p>
 <p style='text-align:center;margin:24px 0;'><img src='../../assets/img/cafeteria/RFID_AI_compare.jpg' alt='食堂会計におけるRFID認識とAI画像認識の比較' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);'></p>
 <h2>結論――RFIDとAI画像認識はどちらを選ぶべきか</h2>
+            <p class="column-lead">結論として、<strong>精度と速度を最優先し食器を統一運用できるならRFID、専用食器なしで日替わりメニューに柔軟に対応したいならAI画像認識</strong>が適しています。食堂の提供形式と食器運用で選ぶのが基本です。</p>
 <blockquote>
 <p><strong>認識精度の安定性と処理速度を最優先するなら「RFID認識」、メニュー変更への柔軟性・食器運用の自由度・導入コストを重視するなら「AI画像認識」が有力です。</strong></p>
 <p>RFIDは食器のタグを読み取るため見た目に左右されず高精度・高速ですが、専用食器やタグの購入・交換が必要で総保有コストは高めです。AI画像認識は既存食器を使え、日替わりメニューにも対応しやすい一方、見た目が似た料理は誤認識しやすいため、食器の使い分けやスタッフ確認との組み合わせが有効です。似た料理が多い食堂では、両者を組み合わせたハイブリッド方式も現実的な選択肢です。なお、RFIDタグの耐熱上限は約85℃のため、加熱・高温消毒を行う食器が多い現場ではRFIDが使いにくく、AI画像認識が有利になります。</p>

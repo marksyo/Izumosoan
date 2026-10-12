@@ -24,7 +24,33 @@
     <meta name="twitter:description" content="全面解读企业食堂的AI自动结算系统。涵盖AI图像识别的原理、导入可获得的5项收益、费用的考量方式，以及5个步骤的导入流程。关东地区正在实施免费PoC。">
     <meta name="twitter:image" content="https://izumosoan.com/assets/img/cafeteria/AItype.jpg">
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "\u9996\u9875", "item": "https://izumosoan.com/zh/index.html"}, {"@type": "ListItem", "position": 2, "name": "\u4e13\u680f", "item": "https://izumosoan.com/ja/column/index.html"}, {"@type": "ListItem", "position": 3, "name": "\u5728\u4f01\u4e1a\u98df\u5802\u5f15\u5165AI\u81ea\u52a8\u7ed3\u7b97\u7684\u5b8c\u6574\u6307\u5357\uff5c\u539f\u7406\u3001\u8d39\u7528\u3001\u5bfc\u5165\u6b65\u9aa4"}]}</script>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "\u5728\u4f01\u4e1a\u98df\u5802\u5f15\u5165AI\u81ea\u52a8\u7ed3\u7b97\u7684\u5b8c\u6574\u6307\u5357\uff5c\u539f\u7406\u3001\u8d39\u7528\u3001\u5bfc\u5165\u6b65\u9aa4", "description": "\u5168\u9762\u89e3\u8bfb\u4f01\u4e1a\u98df\u5802\u7684AI\u81ea\u52a8\u7ed3\u7b97\u7cfb\u7edf\u3002\u6db5\u76d6AI\u56fe\u50cf\u8bc6\u522b\u7684\u539f\u7406\u3001\u5bfc\u5165\u53ef\u83b7\u5f97\u76845\u9879\u6536\u76ca\u3001\u8d39\u7528\u7684\u8003\u91cf\u65b9\u5f0f\uff0c\u4ee5\u53ca5\u4e2a\u6b65\u9aa4\u7684\u5bfc\u5165\u6d41\u7a0b\u3002\u5173\u4e1c\u5730\u533a\u6b63\u5728\u5b9e\u65bd\u514d\u8d39PoC\u3002", "inLanguage": "zh", "datePublished": "2026-09-20", "dateModified": "2026-09-20", "author": {"@type": "Organization", "name": "\u51fa\u96f2\u5275\u5b89 Izumo Soan"}, "publisher": {"@type": "Organization", "name": "\u51fa\u96f2\u5275\u5b89 Izumo Soan"}, "mainEntityOfPage": "https://izumosoan.com/zh/column/ai-cafeteria.html"}</script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "在企业食堂引入AI自动结算的完整指南｜原理、费用、导入步骤",
+    "description": "全面解读企业食堂的AI自动结算系统。涵盖AI图像识别的原理、导入可获得的5项收益、费用的考量方式，以及5个步骤的导入流程。关东地区正在实施免费PoC。",
+    "inLanguage": "zh",
+    "datePublished": "2026-09-20",
+    "dateModified": "2026-10-12",
+    "author": {
+        "@type": "Organization",
+        "name": "出雲創安 Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "sameAs": [
+            "https://izumosoan.com/"
+        ]
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "出雲創安 Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://izumosoan.com/assets/img/logo/logo.png"
+        }
+    },
+    "mainEntityOfPage": "https://izumosoan.com/zh/column/ai-cafeteria.html"
+}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -55,6 +81,12 @@
     .column-body h4 { font-size: 1.05rem; font-weight: 700; color: #333; margin: 28px 0 10px; }
     .column-body p { margin: 0 0 18px; }
     .column-body strong { color: #003554; }
+    .column-body .column-lead {
+        background: #f0f7ff; border-left: 4px solid #00880F;
+        padding: 14px 20px; margin: 0 0 22px; border-radius: 0 8px 8px 0;
+        font-weight: 500; color: #1e293b; font-size: 1.02rem; line-height: 1.75;
+    }
+    .column-body .column-lead strong { color: #00660C; }
     .column-body blockquote {
         background: #f0f7ff; border-left: 4px solid #006494;
         padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem;
@@ -104,6 +136,7 @@
         .column-body table th, .column-body table td { padding: 8px 10px; }
         .column-cta { padding: 32px 20px; }
     }
+    .aic-demo-video { width: 100%; max-width: 720px; aspect-ratio: 16 / 9; height: auto; object-fit: contain; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); background: #000; display: block; margin: 0 auto; }
     </style>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "每次更换菜单都需要AI重新学习吗？", "acceptedAnswer": {"@type": "Answer", "text": "A. 无需大规模重新学习。只需在终端上拍摄新菜单的照片，AI便会自动学习。对日替菜单也可当日应对，每早备料时数分钟即可完成作业。"}}, {"@type": "Question", "name": "需要对现有的食堂布局做大幅改动吗？", "acceptedAnswer": {"@type": "Answer", "text": "A. 不需要。只需将AI结算台设置于现有的收银空间即可导入。由于采用无需服务器的边缘型设计，也无需大规模的网络工程。只要有电源与网络连接（有线或Wi-Fi）即可运行。"}}, {"@type": "Question", "name": "识别精度如何？", "acceptedAnswer": {"@type": "Answer", "text": "A. 餐具识别模式为99.99%以上，菜品识别模式为99%以上。不过，由于实际食堂当天提供的菜单数量有限（通常10～30品左右），识别对象被缩小，实际运营中精度近乎100%。万一发生误识别，也可在结算屏幕上修正。"}}, {"@type": "Question", "name": "发生停电或网络故障时如何处理？", "acceptedAnswer": {"@type": "Answer", "text": "A. 由于AI引擎搭载于结算台本体，网络故障时也可离线进行识别·结算。数据会在网络恢复后自动同步。"}}, {"@type": "Question", "name": "请告知导入成本的大致标准。", "acceptedAnswer": {"@type": "Answer", "text": "A. 因方式·台数·食堂规模而异。请先通过免费PoC确认实际效果，我们将根据其结果提出最优的构成与费用。"}}, {"@type": "Question", "name": "与RFID方式或计量方式有何区别？", "acceptedAnswer": {"@type": "Answer", "text": "A. AI方式最大的特点是无需特殊餐具（使用菜品识别模式时）以及对菜单变更的即时应对力。RFID方式读取速度最快，适合大规模食堂；计量方式最适合自助餐形式。详情请参阅以下比较文章。"}}]}</script>
 </head>
@@ -172,6 +205,7 @@
 <p>此类差错会损害对食堂的信赖，也可能导致使用率下降。</p>
 <hr />
 <h2>什么是AI自动结算系统？基本原理</h2>
+            <p class="column-lead">AI自动结算系统是指<strong>用AI摄像头对菜品进行图像识别、自动判定品项与金额并完成结算的机制</strong>。只需放上托盘约1秒即可完成识别，无需专用餐具和收银员。</p>
 <p>AI自动结算系统是运用<strong>基于人工智能的图像识别技术</strong>自动识别菜品并完成结算的智能设备。</p>
 <h3>AI摄像头瞬间识别菜品的原理</h3>
 <p>AI自动结算的核心，是搭载于结算台上的<strong>高精度AI摄像头（500万像素·单镜头彩色摄像头）</strong>。结算流程如下。</p>
@@ -274,6 +308,10 @@
 </tbody>
 </table>
 <hr />
+<p style='text-align:center;margin:24px 0;'>
+    <video class='aic-demo-video' src='../../assets/img/cafeteria/AInewmode.mp4' autoplay muted loop playsinline controls preload='metadata'>您的浏览器不支持视频标签。</video>
+    <br><span style='display:inline-block;font-size:0.95rem;color:#555;margin-top:12px;'><i class="fas fa-play-circle" style='color:#00880F;margin-right:6px;'></i>AI菜品识别＋人脸识别支付</span>
+</p>
 <h2>导入AI结算的5项收益</h2>
 <h3>① 结算时间最多缩短至1/30——从根本上消除排队</h3>
 <p>过去需30～60秒的结算，如今<strong>仅需1～2秒</strong>即可完成。由于AI自动结算系统让菜品识别摄像头与人脸识别摄像头同时运行，放下餐盘的瞬间即并行处理菜品识别与本人确认。高峰时段的排队被大幅消除，将员工的午休还原为本应的「休息时间」。</p>

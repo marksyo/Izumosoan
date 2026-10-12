@@ -582,6 +582,21 @@
         v.addEventListener('pause', function() { box.classList.remove('is-playing'); }, { once: true });
         v.addEventListener('ended', function() { box.classList.remove('is-playing'); });
     }
+
+    /* Prevent the parent <a> card link from navigating when the user
+       interacts anywhere inside the video area (including the native
+       video controls, which bypass the wrapper's onclick). */
+    document.querySelectorAll('.lp-solution-video').forEach(function(box) {
+        ['click', 'mousedown', 'touchstart', 'pointerdown'].forEach(function(evt) {
+            box.addEventListener(evt, function(e) {
+                e.stopPropagation();
+            });
+        });
+        var v = box.querySelector('video');
+        if (v) {
+            v.addEventListener('click', function(e) { e.stopPropagation(); });
+        }
+    });
     </script>
 </body>
 </html>

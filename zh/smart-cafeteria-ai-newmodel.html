@@ -183,13 +183,82 @@
         .aic-nm-spec-table { font-size: 0.82rem; }
         .aic-nm-spec-table th, .aic-nm-spec-table td { padding: 10px 10px; }
     }
+    .aic-nm-lead { max-width: 820px; margin: 0 auto 28px; background: #f0f7ff; border-left: 4px solid #00880F; padding: 14px 20px; border-radius: 0 8px 8px 0; font-size: 1.02rem; line-height: 1.8; color: #1e293b; }
+    .aic-nm-lead strong { color: #00660C; }
     </style>
 
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"Organization","name":"出云创安 Izumo Soan","url":"https://izumosoan.com/","logo":"https://izumosoan.com/assets/img/logo/logo.webp","description":"连接现场、安全与运营的技术合作伙伴","address":{"@type":"PostalAddress","addressLocality":"Katsushika-ku","addressRegion":"Tokyo","streetAddress":"Higashitateishi 4-37-8","addressCountry":"JP"}}
     </script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Product","name":"AI结算终端（新款）","description":"将AI菜品识别与无现金支付集成于紧凑台式终端的AI结算终端。从菜品识别到支付约3秒。","image":"https://izumosoan.com/assets/img/cafeteria/AI-newmodel2.jpg","brand":{"@type":"Brand","name":"出云创安 Izumo Soan"},"category":"AI Checkout Terminal","url":"https://izumosoan.com/zh/smart-cafeteria-ai-newmodel.html"}
+    {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "AI结算终端（新款）",
+    "description": "将AI菜品识别与无现金支付集成于紧凑台式终端的AI结算终端。从菜品识别到支付约3秒。",
+    "image": "https://izumosoan.com/assets/img/cafeteria/AI-newmodel2.jpg",
+    "brand": {
+        "@type": "Brand",
+        "name": "出云创安 Izumo Soan"
+    },
+    "category": "AI Checkout Terminal",
+    "url": "https://izumosoan.com/zh/smart-cafeteria-ai-newmodel.html",
+    "additionalProperty": [
+        {
+            "@type": "PropertyValue",
+            "name": "结算时间",
+            "value": "约3秒（从菜品识别到支付）"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "显示屏",
+            "value": "11.6英寸触摸屏"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "菜品识别摄像头",
+            "value": "500万像素"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "人脸识别摄像头",
+            "value": "200万像素 红外双目摄像头"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "支付接口",
+            "value": "二维码 / IC卡 / 人脸识别"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "连接性",
+            "value": "Wi-Fi / 蓝牙 / 有线LAN"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "设计",
+            "value": "紧凑的一体式桌面终端（一体化，无终端间通信）"
+        }
+    ],
+    "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "JPY",
+        "price": "0",
+        "priceSpecification": {
+            "@type": "PriceSpecification",
+            "priceCurrency": "JPY",
+            "valueAddedTaxIncluded": false
+        },
+        "url": "https://izumosoan.com/zh/index.html#contact",
+        "seller": {
+            "@type": "Organization",
+            "name": "出雲創安 Izumo Soan",
+            "url": "https://izumosoan.com/"
+        },
+        "description": "价格请咨询（提供免费POC与演示）。"
+    }
+}
     </script>
     <script type="application/ld+json">
     {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "AI结算终端（新款）的结算需要多长时间？", "acceptedAnswer": {"@type": "Answer", "text": "从放置托盘到完成支付，整个结算过程约3秒。实际处理时间可能因菜品种类、识别环境、支付方式和系统配置而有所不同。"}}, {"@type": "Question", "name": "新款1和新款2有什么区别？", "acceptedAnswer": {"@type": "Answer", "text": "新款1配备8寸触摸屏，新款2配备11.6寸触摸屏。两者均为将AI菜品识别与无现金支付集成于一体的紧凑型台式一体化终端。"}}, {"@type": "Question", "name": "支持哪些支付方式？", "acceptedAnswer": {"@type": "Answer", "text": "支持QR码和IC卡支付；在具备所需支付系统和账户对接的情况下，还可使用人脸识别支付。"}}, {"@type": "Question", "name": "新款终端可以安装在哪里？", "acceptedAnswer": {"@type": "Answer", "text": "紧凑设计适合放置在标准结算柜台，无需较大安装空间，非常适合企业食堂、大学食堂、医院食堂及自助式餐厅。"}}, {"@type": "Question", "name": "与他家的双终端方式有何不同？", "acceptedAnswer": {"@type": "Answer", "text": "许多竞品将菜品结算与支付分成两个终端实现，终端之间存在通信故障的风险。本产品将识别、结算与支付集成于一台，彻底取消终端间的通信处理，从根本上消除通信导致的故障，实现更稳定的运营。"}}]}
@@ -266,6 +335,7 @@
                     <h2>产品特点</h2>
                     <p>AI结算终端（新款）获得青睐的五大理由</p>
                 </div>
+                <p class='aic-nm-lead'>AI结算终端（新款）是<strong>将AI菜品识别与无现金支付集成于一台的紧凑桌面终端</strong>。只需放上托盘，从菜品识别到支付约3秒即可完成，无需专用餐具和收银员。</p>
                 <div class='aic-nm-feature-table-wrap'>
                     <table class='aic-nm-feature-table'>
                         <thead>
@@ -320,6 +390,7 @@
                     <h2>解决方案：AI识别与支付合为一台</h2>
                     <p>从菜品识别到支付约3秒</p>
                 </div>
+                <p class='aic-nm-lead'>用户的操作只有<strong>「放上托盘」</strong>。AI摄像头自动识别菜品、瞬间计算金额，并通过二维码·IC卡·人脸识别之一完成支付。由于识别与支付在一台设备上并行处理，几乎没有等待时间。</p>
                 <div class='aic-nm-steps'>
                     <div class='aic-nm-step'>
                         <div class='aic-nm-step-num'>1</div>
@@ -527,6 +598,7 @@
                     <h2>业务效益</h2>
                     <p>服务更快、负担更轻、顾客体验更佳</p>
                 </div>
+                <p class='aic-nm-lead'>导入可同时实现<strong>结算排队减少·人工作业减少·结账精度提升·顾客满意度提升</strong>。一台即可处理相当于多台传统收银台的处理量，在省人化的同时提升食堂运营的服务品质。</p>
                 <div class='aic-nm-benefits'>
                     <div class='aic-nm-benefit-card'>
                         <div class='aic-nm-benefit-num'>01</div>

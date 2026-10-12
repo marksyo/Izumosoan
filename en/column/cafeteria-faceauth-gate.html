@@ -50,18 +50,65 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "datePublished": "2026-09-23",
-    "dateModified": "2026-09-23",
+    "dateModified": "2026-10-12",
     "headline": "The Ultimate Way to Eliminate Cafeteria Queues｜Face-Recognition Gate × Flat-Rate Billing",
     "description": "The ultimate way to bring company-cafeteria queues to near zero: a new checkout concept combining a face-recognition gate with flat-rate billing. We explain how it works, its pros and cons, and which cafeterias it suits — in contrast to the existing three methods (image recognition, RFID, weighing).",
     "author": {
         "@type": "Organization",
-        "name": "Izumo Soan"
+        "name": "Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "sameAs": [
+            "https://izumosoan.com/"
+        ]
     },
     "publisher": {
         "@type": "Organization",
-        "name": "Izumo Soan"
+        "name": "Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://izumosoan.com/assets/img/logo/logo.png"
+        }
     },
     "mainEntityOfPage": "https://izumosoan.com/en/column/cafeteria-faceauth-gate.html"
+}</script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is the facial-recognition gate × flat-rate settlement method?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It is a method where a facial-recognition gate at the cafeteria entrance identifies users, and a flat per-visit fee — regardless of how much they eat — is settled automatically on the backend. No recognition or payment action occurs at a register, so the checkout step itself disappears."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What are the advantages of this method?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No register is needed so no checkout queue forms; no dish recognition is required so the system is simpler; no payment operation reduces user stress; and checkout staffing can be brought to nearly zero, cutting operating costs."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What are the disadvantages of this method?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Because light and heavy eaters pay the same amount, light eaters tend to feel it is overpriced; setting the flat fee too high may lower usage; and per-menu nutrition/calorie data becomes hard to obtain. Setting up a company subsidy helps address this."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What kind of cafeteria is it suited to?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It suits large employee cafeterias with consistently high daily usage, organizations with a clear policy of zero queues and zero checkout work, and environments where the company treats the cafeteria as a benefit and can provide a subsidy."
+            }
+        }
+    ]
 }</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -93,6 +140,12 @@
     .column-body h4 { font-size: 1.05rem; font-weight: 700; color: #333; margin: 28px 0 10px; }
     .column-body p { margin: 0 0 18px; }
     .column-body strong { color: #003554; }
+    .column-body .column-lead {
+        background: #f0f7ff; border-left: 4px solid #00880F;
+        padding: 14px 20px; margin: 0 0 22px; border-radius: 0 8px 8px 0;
+        font-weight: 500; color: #1e293b; font-size: 1.02rem; line-height: 1.75;
+    }
+    .column-body .column-lead strong { color: #00660C; }
     .column-body blockquote {
         background: #f0f7ff; border-left: 4px solid #006494;
         padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem;
@@ -212,6 +265,7 @@
             <hr />
 
             <h2>The Ultimate Way to Eliminate Queues</h2>
+            <p class="column-lead">The ultimate way to eliminate queues is <strong>a method that identifies users with a facial-recognition gate and settles a flat fee automatically on the backend</strong>. No recognition or payment at a register is needed and the checkout step itself disappears, so queues do not form in theory.</p>
             <h3>"Reduce the five manual-checkout steps to exactly zero"</h3>
             <p>The ultimate way to eliminate queues at the root is a new checkout concept: <strong>flat-rate billing × face-recognition gate</strong>. Conventional staffed registers and auto-registers required a five-step manual checkout process like the one below.</p>
             <ol>

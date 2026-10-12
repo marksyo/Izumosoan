@@ -50,18 +50,65 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "datePublished": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-12",
     "headline": "食堂RFID精算システム完全解説｜導入メリットと選び方のポイント",
     "description": "食堂RFID精算システムの仕組み・5つの導入メリット・選ぶべき食堂の特徴・導入前チェックポイントを徹底解説。AI方式との比較表付き。無料POC実施中。",
     "author": {
         "@type": "Organization",
-        "name": "出雲創安 Izumo Soan"
+        "name": "出雲創安 Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "sameAs": [
+            "https://izumosoan.com/"
+        ]
     },
     "publisher": {
         "@type": "Organization",
-        "name": "出雲創安 Izumo Soan"
+        "name": "出雲創安 Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://izumosoan.com/assets/img/logo/logo.png"
+        }
     },
     "mainEntityOfPage": "https://izumosoan.com/ja/column/rfid-settlement.html"
+}</script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "食堂のRFID精算システムとは何ですか？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "RFID（無線識別）技術を使い、RFID内蔵のスマート食器を精算台に置くだけで複数品を一括読み取りし、料金を自動計算・精算する仕組みです。電子タグ・リーダー・システムの3要素で構成されます。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "RFID精算のメリットは何ですか？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "精算時間が約1秒（従来の1/30）、チップ読取による自動判定で精算ミスがゼロ、1秒で30品以上を高精度に読み取り可能、顔認証・QR・ICカードの3決済方式に対応、といった点です。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "RFID方式はどんな食堂に向いていますか？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "定食・一品料理が中心で食器を統一運用できる食堂、精算スピードと正確性を最優先する大規模食堂に向いています。一方でメニューや食器が頻繁に変わる運用では専用食器の管理負担が課題になります。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "RFIDとAI画像認識はどちらを選ぶべきですか？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "RFIDは専用食器で高速・高精度に一括読取でき食器運用が安定した食堂向け、AI画像認識は専用食器が不要で日替わりメニューに柔軟です。食堂の提供形式と食器運用に応じて選定します。"
+            }
+        }
+    ]
 }</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -93,6 +140,12 @@
     .column-body h4 { font-size: 1.05rem; font-weight: 700; color: #333; margin: 28px 0 10px; }
     .column-body p { margin: 0 0 18px; }
     .column-body strong { color: #003554; }
+    .column-body .column-lead {
+        background: #f0f7ff; border-left: 4px solid #00880F;
+        padding: 14px 20px; margin: 0 0 22px; border-radius: 0 8px 8px 0;
+        font-weight: 500; color: #1e293b; font-size: 1.02rem; line-height: 1.75;
+    }
+    .column-body .column-lead strong { color: #00660C; }
     .column-body blockquote {
         background: #f0f7ff; border-left: 4px solid #006494;
         padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem;
@@ -197,6 +250,7 @@
 <p>本記事では、RFID精算システムの仕組みから導入メリット、選ぶべき食堂の特徴、そして導入前に確認すべきポイントまでを網羅的に解説します。AI方式との比較表も用意しましたので、「自社の食堂にはどちらが合うのか？」を判断する材料として、ぜひ最後までご覧ください。</p>
 <hr />
 <h2>RFIDとは？食堂での活用原理</h2>
+            <p class="column-lead">RFIDとは<strong>電波で非接触・見通し不要で対象のデータを自動読取する無線識別技術</strong>です。食堂ではRFID内蔵食器を精算台に置くだけで複数品を一括読取し、約1秒で自動精算できます。</p>
 <p>RFID（Radio Frequency Identification：無線識別）は、電波を利用し、非接触で見通し（直線）を必要とせずに、対象物のデータを自動的に読み取る技術です。交通系ICカードや物流の在庫管理でおなじみですが、近年は<strong>食堂の精算システム</strong>にも応用が広がっています。</p>
 <p>完全なRFIDシステムは、次の3つの要素で構成されます。</p>
 <p style='text-align:center;margin:24px 0;'><img src='../../assets/img/cafeteria/RFID-JA.jpg' alt='RFIDシステムの3つの構成要素：電子タグ、リーダー、アンテナ' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);'></p>
@@ -297,6 +351,9 @@
 </tbody>
 </table>
 <p>精算データはクラウドにリアルタイムで送信され、管理プラットフォーム上で<strong>メニュー管理・注文明細・販売統計・経営分析</strong>を一元管理できます。「精算台」でありながら、食堂運営全体のデータ基盤として機能する——それがRFID精算システムの真価です。</p>
+<p style='text-align:center;margin:24px 0;'>
+    <video src='../../assets/img/cafeteria/RFIDpay_JA_with_title.mp4' autoplay muted loop playsinline controls preload='metadata' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);background:#000;'>お使いのブラウザは動画タグに対応していません。</video>
+</p>
 <hr />
 <h2>RFID精算の導入メリット</h2>
 <p>RFID精算システムを導入することで、食堂運営はどのように変わるのでしょうか。5つの具体的なメリットを解説します。</p>

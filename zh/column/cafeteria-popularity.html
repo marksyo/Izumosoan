@@ -50,19 +50,64 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "datePublished": "2026-10-11",
-    "dateModified": "2026-10-11",
+    "dateModified": "2026-10-12",
     "headline": "什么样的食堂最受欢迎？｜不减少菜品种类也能消除排队的计量结算",
     "description": "学生食堂、员工食堂怎样才能最受欢迎？除了营养、健康、价格，关键还在于想吃的菜想吃多少拿多少还不用久等。结合中国·北京农业大学的案例与计量结算系统解说。",
     "image": "https://izumosoan.com/assets/img/columns/BN/3.jpg",
     "author": {
         "@type": "Organization",
-        "name": "出雲創安 Izumo Soan"
+        "name": "出雲創安 Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "sameAs": ["https://izumosoan.com/"]
     },
     "publisher": {
         "@type": "Organization",
-        "name": "出雲創安 Izumo Soan"
+        "name": "出雲創安 Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://izumosoan.com/assets/img/logo/logo.png"
+        }
     },
     "mainEntityOfPage": "https://izumosoan.com/zh/column/cafeteria-popularity.html"
+}</script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "什么样的食堂最受欢迎？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "最受欢迎的食堂，是能够以实惠的价格、不用久等，就能吃到喜欢的菜、想吃多少拿多少的食堂。除了运营方重视的「营养」「健康」「价格」之外，还能同时满足用户所追求的「美味」「丰富的选择」「短暂的等待时间」的食堂，才最受用户喜爱。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "为什么许多食堂无法增加菜品种类？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "最大的原因是午餐时段的结算排队。由于菜品没有条形码，传统收银台需要逐一确认菜品并输入价格，菜品种类越多，结算越复杂、排队越长。因此许多食堂只能通过减少菜品种类来应对。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "什么是计量结算（按重量结算）？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "计量结算是一种通过电子秤测量菜品重量、按克自动计算价格的结算方式。由于无需逐一识别菜品并输入价格，即使菜品种类增加，收银台也不会拥堵。用户可以自由选择喜欢的菜，想吃多少拿多少，吃多少付多少。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "引入计量结算会带来哪些效果？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "在中国·北京农业大学的食堂案例中，引入计量结算后，学生每餐选择的菜品种类据称从平均2种增加到6.2种，食物浪费减少了85％。无需减少菜品种类即可消除排队，同时实现用户满意度提升与食品损耗减少。"
+            }
+        }
+    ]
 }</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,6 +139,12 @@
     .column-body h4 { font-size: 1.05rem; font-weight: 700; color: #333; margin: 28px 0 10px; }
     .column-body p { margin: 0 0 18px; }
     .column-body strong { color: #003554; }
+    .column-body .column-lead {
+        background: #f0f7ff; border-left: 4px solid #00880F;
+        padding: 14px 20px; margin: 0 0 22px; border-radius: 0 8px 8px 0;
+        font-weight: 500; color: #1e293b; font-size: 1.02rem; line-height: 1.75;
+    }
+    .column-body .column-lead strong { color: #00660C; }
     .column-body blockquote {
         background: #f0f7ff; border-left: 4px solid #006494;
         padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem;
@@ -217,6 +268,7 @@
             <p>然而，仅凭这些，就能成为被用户喜爱的食堂吗？</p>
 
             <h2>食堂为什么会不受欢迎？</h2>
+            <p class="column-lead">食堂不受欢迎的一大原因是<strong>菜品种类少、选择有限</strong>。其背后的原因在于：为了抑制午餐时段的排队，食堂不得不缩减菜品种类。</p>
             <p>倾听学生和员工的声音，会发现对食堂的不满也不在少数。</p>
             <p>我自己回想起学生时代的食堂，也有过对饭菜内容不满意的记忆。</p>
             <p>后来，我进入大型企业工作，使用过员工食堂。虽然比学生食堂更充实，但菜品的种类并不算多。</p>
@@ -225,6 +277,7 @@
             <p>其中一个原因，就是午餐时间的排队。</p>
 
             <h2>为了减少排队，就减少菜品种类？</h2>
+            <p class="column-lead">传统收银台需要逐一确认菜品并输入价格，<strong>菜品种类越多，结算越慢、排队越长</strong>。许多食堂因此通过减少菜品种类来应对，但这同时也剥夺了用户的选择权。</p>
             <p>在员工食堂，有时可以通过轮班错开用餐时间。</p>
             <p>另一方面，在大学里，许多学生在同一时间段用午餐。必须在有限的午休时间内，为大量学生提供饭菜。</p>
             <p>因此，消除收银台前的排队，对大学食堂来说是非常重要的课题。</p>
@@ -252,6 +305,7 @@
             <p>这家食堂有意思的地方在于，它不仅让菜品种类丰富，还在结算的效率化上下了功夫。</p>
 
             <h2>喜欢的菜，想吃多少拿多少</h2>
+            <p class="column-lead">解决的关键在于<strong>按菜品重量以克为单位自动计算价格的「计量结算」</strong>。由于无需逐一识别菜品、输入价格，即使增加菜品种类收银台也不会拥堵，用户可以想吃什么就选什么、想吃多少拿多少。</p>
             <p>这家食堂的做法中，值得关注的是让学生自己挑选喜欢的菜、想拿多少拿多少的机制。</p>
             <p>不是选择规定好的套餐，而是可以从各种菜品中，自由组合自己想吃的东西。</p>
 
@@ -275,6 +329,7 @@
             <p>按照自己的喜好来挑选饭菜的乐趣，也是重要的价值。</p>
 
             <h2>菜品种类从2种增加到6.2种。食物浪费也减少85％</h2>
+            <p class="column-lead">在北京农业大学的食堂案例中，引入计量结算后，学生每餐选择的菜品种类据称从<strong>平均2种增加到6.2种</strong>，<strong>食物浪费减少了85％</strong>。</p>
             <p>关于这项举措，在被介绍的数据中，有一些很有意思的数字。</p>
             <p>学生一次用餐所选择的菜品种类，据称<strong>从平均2种增加到了6.2种</strong>。</p>
             <p>此外，据称<strong>食物浪费也减少了85％</strong>。</p>
@@ -296,6 +351,44 @@
                 <img src="../../assets/img/cafeteria/self-weight-zh.jpg" alt="改为计量结算方式后的效果数据 — 客流量增20％、营业额增28％、人均菜品种类2→6.2种、食物浪费减少85％" loading="lazy">
                 <figcaption>计量结算（自助餐形式）引入前后的对比数据。客流量、营业额、菜品种类均有提升，食物浪费减少了85％</figcaption>
             </figure>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>指标</th>
+                        <th>引入前</th>
+                        <th>引入后</th>
+                        <th>变化</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>人均菜品种类</strong></td>
+                        <td>平均2种</td>
+                        <td>平均6.2种</td>
+                        <td>约增至3.1倍</td>
+                    </tr>
+                    <tr>
+                        <td><strong>食物浪费（食品损耗）</strong></td>
+                        <td>基准</td>
+                        <td>&mdash;</td>
+                        <td>减少85％</td>
+                    </tr>
+                    <tr>
+                        <td><strong>客流量</strong></td>
+                        <td>基准</td>
+                        <td>&mdash;</td>
+                        <td>增加20％</td>
+                    </tr>
+                    <tr>
+                        <td><strong>营业额</strong></td>
+                        <td>基准</td>
+                        <td>&mdash;</td>
+                        <td>增加28％</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size:0.85rem;color:#64748b;margin-top:-8px;">※ 数值基于中国·北京农业大学的食堂案例。实际效果会因食堂的运营方式和菜单构成而有所不同。</p>
 
             <p>当然，实际效果会因食堂的运营方式和菜单构成等而有所不同。</p>
             <p>即便如此，这个案例也为解决食堂的课题，提供了重要的启示。</p>
@@ -326,6 +419,7 @@
             <a href="../smart-cafeteria-weight.html">https://izumosoan.com/zh/smart-cafeteria-weight.html</a></p>
 
             <h2>什么样的食堂最受欢迎呢？</h2>
+            <p class="column-lead">最受欢迎的食堂，是能够<strong>以实惠的价格、不用久等，就能吃到喜欢的菜、想吃多少拿多少</strong>的食堂。除了「营养·健康·价格」之外，还能满足「美味·选择·等待时间」，才是受用户喜爱的条件。</p>
             <p>最后，让我们回到最初的问题。</p>
             <p>最受欢迎的，是便宜的食堂吗？还是提供健康饮食的食堂呢？</p>
             <p>我认为，并不仅仅如此。</p>

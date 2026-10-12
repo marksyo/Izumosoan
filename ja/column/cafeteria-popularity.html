@@ -50,19 +50,64 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "datePublished": "2026-10-11",
-    "dateModified": "2026-10-11",
+    "dateModified": "2026-10-12",
     "headline": "どんな食堂が一番人気でしょうか？｜料理の種類を減らさず行列を解消する計量精算",
     "description": "学生食堂・社員食堂で一番人気になるのはどんな食堂か。栄養・健康・価格だけでなく「好きな料理を好きな量だけ、待たずに」が鍵。中国・北京農業大学の事例と計量精算システムで、料理の種類を減らさず行列を解消する方法を解説。",
     "image": "https://izumosoan.com/assets/img/columns/BN/3.jpg",
     "author": {
         "@type": "Organization",
-        "name": "出雲創安 Izumo Soan"
+        "name": "出雲創安 Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "sameAs": ["https://izumosoan.com/"]
     },
     "publisher": {
         "@type": "Organization",
-        "name": "出雲創安 Izumo Soan"
+        "name": "出雲創安 Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://izumosoan.com/assets/img/logo/logo.png"
+        }
     },
     "mainEntityOfPage": "https://izumosoan.com/ja/column/cafeteria-popularity.html"
+}</script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "どんな食堂が一番人気ですか？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "一番人気なのは、好きな料理を好きな量だけ、手頃な価格で、長時間待たずに食べられる食堂です。運営側が重視する「栄養」「健康」「価格」に加えて、利用者が求める「おいしさ」「選択肢の多さ」「待ち時間の短さ」を同時に満たす食堂が、最も利用者に愛されます。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "なぜ多くの食堂は料理の種類を増やせないのですか？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "最大の理由は昼食時のレジ行列です。料理にはバーコードがないため、従来のレジでは一品ずつ確認・価格入力が必要で、種類が増えるほど会計が複雑になり行列が伸びます。そのため行列を抑えようと料理の種類を絞る食堂が多いのです。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "計量精算（重量ベースの精算）とは何ですか？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "計量精算とは、料理の重量を電子秤で計測し、グラム単位で料金を自動計算する精算方式です。一品ずつ料理を識別して価格を入力する必要がないため、料理の種類を増やしてもレジが混雑しません。利用者は好きな料理を好きな量だけ選び、食べた分だけ支払えます。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "計量精算を導入するとどんな効果がありますか？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "中国・北京農業大学の食堂事例では、学生が一回の食事で選ぶ料理の種類が平均2種類から6.2種類へ増加し、食べ残しは85％減少したとされています。料理の種類を減らさずに行列を解消でき、利用者満足度の向上と食品ロス削減を両立できます。"
+            }
+        }
+    ]
 }</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,6 +139,12 @@
     .column-body h4 { font-size: 1.05rem; font-weight: 700; color: #333; margin: 28px 0 10px; }
     .column-body p { margin: 0 0 18px; }
     .column-body strong { color: #003554; }
+    .column-body .column-lead {
+        background: #f0f7ff; border-left: 4px solid #00880F;
+        padding: 14px 20px; margin: 0 0 22px; border-radius: 0 8px 8px 0;
+        font-weight: 500; color: #1e293b; font-size: 1.02rem; line-height: 1.75;
+    }
+    .column-body .column-lead strong { color: #00660C; }
     .column-body blockquote {
         background: #f0f7ff; border-left: 4px solid #006494;
         padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem;
@@ -217,6 +268,7 @@
             <p>しかし、それだけで利用者に愛される食堂になるのでしょうか？</p>
 
             <h2>なぜ食堂は不人気になるのか？</h2>
+            <p class="column-lead">食堂が不人気になる大きな原因は、<strong>料理の種類が少なく選択肢が限られること</strong>です。その背景には、昼食時の行列を抑えるために料理の種類を絞らざるを得ないという事情があります。</p>
             <p>学生や従業員の声を聞くと、食堂に対する不満も少なくありません。</p>
             <p>私自身、学生時代の食堂を思い出すと、食事の内容に満足できなかった記憶があります。</p>
             <p>その後、大手企業に勤めるようになり、社員食堂を利用しました。学生食堂よりも充実していましたが、料理の種類はそれほど多くありませんでした。</p>
@@ -225,6 +277,7 @@
             <p>その理由の一つが、昼食時間の行列です。</p>
 
             <h2>行列を減らすために、料理の種類を減らす？</h2>
+            <p class="column-lead">従来のレジでは料理を一品ずつ確認・価格入力する必要があり、<strong>種類が増えるほど会計が遅くなり行列が伸びます</strong>。そのため多くの食堂が料理の種類を減らして対応してきましたが、それは利用者の選択肢を奪う方法でもあります。</p>
             <p>社員食堂では、勤務シフトによって利用時間を分散できる場合があります。</p>
             <p>一方、大学では、多くの学生が同じ時間帯に昼食を取ります。限られた昼休みの間に、大勢の学生へ食事を提供しなければなりません。</p>
             <p>そのため、レジ前の行列を解消することは、大学食堂にとって非常に重要な課題です。</p>
@@ -252,6 +305,7 @@
             <p>この食堂の興味深い点は、料理の種類を豊富にするだけでなく、会計の効率化にも取り組んでいることです。</p>
 
             <h2>好きな料理を、好きな量だけ</h2>
+            <p class="column-lead">解決の鍵は、<strong>料理の重量でグラム単位に料金を自動計算する「計量精算」</strong>です。一品ずつの識別・価格入力が不要になるため、料理の種類を増やしてもレジが混雑せず、利用者は好きな料理を好きな量だけ選べます。</p>
             <p>この食堂の取り組みで注目したいのは、学生が自分で好きな料理を選び、好きな量だけ取れる仕組みです。</p>
             <p>決められた定食を選ぶのではなく、さまざまな料理の中から、自分が食べたいものを自由に組み合わせることができます。</p>
 
@@ -275,6 +329,7 @@
             <p>自分の好みに合わせて食事を選ぶ楽しさも、大切な価値なのです。</p>
 
             <h2>料理の種類は2種類から6.2種類へ。食べ残しも85％減少</h2>
+            <p class="column-lead">北京農業大学の食堂事例では、計量精算の導入後、学生が一回に選ぶ料理の種類が<strong>平均2種類から6.2種類へ増加</strong>し、<strong>食べ残しは85％減少</strong>したとされています。</p>
             <p>この取り組みについて、紹介されているデータには、興味深い数字があります。</p>
             <p>学生が一回の食事で選ぶ料理の種類は、<strong>平均2種類から6.2種類へ増加</strong>したとされています。</p>
             <p>さらに、<strong>食べ残しも85％減少</strong>したとされています。</p>
@@ -296,6 +351,44 @@
                 <img src="../../assets/img/cafeteria/self-weight-ja.jpg" alt="計量精算方式に変更後の効果データ — 来店者数20％増・売上28％増・1人あたり料理の種類2→6.2種類・食べ残し85％削減" loading="lazy">
                 <figcaption>計量精算（ビュッフェ形式）導入前後の比較データ。来店者数・売上・料理の種類が増え、食べ残しは85％減少した</figcaption>
             </figure>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>指標</th>
+                        <th>導入前</th>
+                        <th>導入後</th>
+                        <th>変化</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1人あたりの料理の種類</strong></td>
+                        <td>平均2種類</td>
+                        <td>平均6.2種類</td>
+                        <td>約3.1倍に増加</td>
+                    </tr>
+                    <tr>
+                        <td><strong>食べ残し（食品ロス）</strong></td>
+                        <td>基準</td>
+                        <td>&mdash;</td>
+                        <td>85％減少</td>
+                    </tr>
+                    <tr>
+                        <td><strong>来店者数</strong></td>
+                        <td>基準</td>
+                        <td>&mdash;</td>
+                        <td>20％増加</td>
+                    </tr>
+                    <tr>
+                        <td><strong>売上</strong></td>
+                        <td>基準</td>
+                        <td>&mdash;</td>
+                        <td>28％増加</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size:0.85rem;color:#64748b;margin-top:-8px;">※ 中国・北京農業大学の食堂事例に基づく数値。実際の効果は食堂の運営方法やメニュー構成により異なります。</p>
 
             <p>もちろん、実際の効果は食堂の運営方法やメニュー構成などによって異なります。</p>
             <p>それでも、この事例は、食堂の課題を解決するうえで重要なヒントを与えてくれます。</p>
@@ -326,6 +419,7 @@
             <a href="../smart-cafeteria-weight.html">https://izumosoan.com/ja/smart-cafeteria-weight.html</a></p>
 
             <h2>どんな食堂が一番人気なのでしょうか？</h2>
+            <p class="column-lead">一番人気の食堂とは、<strong>好きな料理を、好きな量だけ、手頃な価格で、長時間待たずに食べられる食堂</strong>です。「栄養・健康・価格」に加え、「おいしさ・選択肢・待ち時間」まで満たすことが、利用者に愛される条件です。</p>
             <p>最後に、最初の質問に戻りましょう。</p>
             <p>一番人気なのは、安い食堂でしょうか。それとも、健康的な食事を提供する食堂でしょうか。</p>
             <p>私は、それだけではないと思います。</p>

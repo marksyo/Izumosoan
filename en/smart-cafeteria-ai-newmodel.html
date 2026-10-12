@@ -193,13 +193,82 @@
         .aic-nm-spec-table { font-size: 0.82rem; }
         .aic-nm-spec-table th, .aic-nm-spec-table td { padding: 10px 10px; }
     }
+    .aic-nm-lead { max-width: 820px; margin: 0 auto 28px; background: #f0f7ff; border-left: 4px solid #00880F; padding: 14px 20px; border-radius: 0 8px 8px 0; font-size: 1.02rem; line-height: 1.8; color: #1e293b; }
+    .aic-nm-lead strong { color: #00660C; }
     </style>
 
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"Organization","name":"出雲創安 Izumo Soan","url":"https://izumosoan.com/","logo":"https://izumosoan.com/assets/img/logo/logo.webp","description":"Technology partner connecting field, safety and operations","address":{"@type":"PostalAddress","addressLocality":"Katsushika-ku","addressRegion":"Tokyo","streetAddress":"Higashitateishi 4-37-8","addressCountry":"JP"}}
     </script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Product","name":"AI Checkout Terminal (New Models)","description":"Compact tabletop AI checkout terminal combining AI food recognition and integrated cashless payment. From dish recognition to payment in approximately 3 seconds.","image":"https://izumosoan.com/assets/img/cafeteria/AI-newmodel2.jpg","brand":{"@type":"Brand","name":"出雲創安 Izumo Soan"},"category":"AI Checkout Terminal","url":"https://izumosoan.com/en/smart-cafeteria-ai-newmodel.html"}
+    {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "AI Checkout Terminal (New Models)",
+    "description": "Compact tabletop AI checkout terminal combining AI food recognition and integrated cashless payment. From dish recognition to payment in approximately 3 seconds.",
+    "image": "https://izumosoan.com/assets/img/cafeteria/AI-newmodel2.jpg",
+    "brand": {
+        "@type": "Brand",
+        "name": "出雲創安 Izumo Soan"
+    },
+    "category": "AI Checkout Terminal",
+    "url": "https://izumosoan.com/en/smart-cafeteria-ai-newmodel.html",
+    "additionalProperty": [
+        {
+            "@type": "PropertyValue",
+            "name": "Checkout time",
+            "value": "Approx. 3 seconds (from dish recognition to payment)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Display",
+            "value": "11.6-inch touchscreen"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Dish recognition camera",
+            "value": "5 megapixels"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Facial recognition camera",
+            "value": "2 megapixels, infrared binocular camera"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Payment interface",
+            "value": "QR code / IC card / facial recognition"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Connectivity",
+            "value": "Wi-Fi / Bluetooth / wired LAN"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Design",
+            "value": "Compact all-in-one desktop terminal (all-in-one, no inter-device communication)"
+        }
+    ],
+    "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "JPY",
+        "price": "0",
+        "priceSpecification": {
+            "@type": "PriceSpecification",
+            "priceCurrency": "JPY",
+            "valueAddedTaxIncluded": false
+        },
+        "url": "https://izumosoan.com/en/index.html#contact",
+        "seller": {
+            "@type": "Organization",
+            "name": "Izumo Soan",
+            "url": "https://izumosoan.com/"
+        },
+        "description": "Please contact us for pricing (free PoC and demo available)."
+    }
+}
     </script>
     <script type="application/ld+json">
     {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long does checkout take with the AI Checkout Terminal (New Model)?", "acceptedAnswer": {"@type": "Answer", "text": "The entire checkout process — from placing the tray to completed payment — takes approximately 3 seconds. Actual processing time may vary depending on dish types, recognition conditions, payment method, and system configuration."}}, {"@type": "Question", "name": "What is the difference between New Model 1 and New Model 2?", "acceptedAnswer": {"@type": "Answer", "text": "New Model 1 features an 8-inch touchscreen, while New Model 2 features an 11.6-inch touchscreen. Both are compact, all-in-one tabletop terminals combining AI food recognition and integrated cashless payment."}}, {"@type": "Question", "name": "What payment methods are supported?", "acceptedAnswer": {"@type": "Answer", "text": "QR code and IC card payments are supported, and face recognition payment is available where the required payment system and account integration are in place."}}, {"@type": "Question", "name": "Where can the New Model terminals be installed?", "acceptedAnswer": {"@type": "Answer", "text": "The compact design is suitable for placement on a standard checkout counter, making it ideal for company cafeterias, university cafeterias, hospital cafeterias, and self-service restaurants without requiring a large installation space."}}, {"@type": "Question", "name": "How is this different from a two-terminal setup?", "acceptedAnswer": {"@type": "Answer", "text": "Many competing solutions split dish checkout and payment across two separate terminals, which introduces a risk of communication failures between them. This product integrates recognition, checkout, and payment into a single device, eliminating inter-terminal communication entirely and removing communication-related failures at the root for more stable operation."}}]}
@@ -276,6 +345,7 @@
                     <h2>Product Highlights</h2>
                     <p>Five reasons the AI Checkout Terminal (New Models) stands out</p>
                 </div>
+                <p class='aic-nm-lead'>The AI Checkout Terminal (New Models) is a <strong>compact desktop terminal that integrates AI dish recognition and cashless payment into a single unit</strong>. Just placing the tray completes everything from dish recognition to payment in about 3 seconds, eliminating the need for special dishware or register staff.</p>
                 <div class='aic-nm-feature-table-wrap'>
                     <table class='aic-nm-feature-table'>
                         <thead>
@@ -330,6 +400,7 @@
                     <h2>The Solution: AI Recognition and Payment in One Device</h2>
                     <p>From Dish Recognition to Payment in Approximately 3 Seconds</p>
                 </div>
+                <p class='aic-nm-lead'>The only action the user takes is <strong>placing the tray</strong>. The AI camera automatically recognizes the dishes, instantly calculates the amount, and settles payment via QR code, IC card, or facial recognition. Because recognition and payment are processed in parallel on one device, waiting time is almost zero.</p>
                 <div class='aic-nm-steps'>
                     <div class='aic-nm-step'>
                         <div class='aic-nm-step-num'>1</div>
@@ -536,6 +607,7 @@
                     <h2>Business Benefits</h2>
                     <p>Faster Service, Lower Workload, Better Customer Experience</p>
                 </div>
+                <p class='aic-nm-lead'>Adoption simultaneously delivers <strong>shorter checkout queues, less manual work, higher accounting accuracy, and improved customer satisfaction</strong>. A single unit handles the throughput of several conventional registers, streamlining cafeteria operations while raising service quality.</p>
                 <div class='aic-nm-benefits'>
                     <div class='aic-nm-benefit-card'>
                         <div class='aic-nm-benefit-num'>01</div>

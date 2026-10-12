@@ -23,7 +23,39 @@
     <meta name="twitter:image" content="https://izumosoan.com/assets/img/cafeteria/plate_food_mode_en.jpg">
     <meta property="og:locale" content="en_US">
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://izumosoan.com/en/index.html"}, {"@type": "ListItem", "position": 2, "name": "Column", "item": "https://izumosoan.com/ja/column/index.html"}, {"@type": "ListItem", "position": 3, "name": "What Is a Cafeteria AI Register? The New Common Sense of Checkout Powered by Image Recognition"}]}</script>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "What Is a Cafeteria AI Register? The New Common Sense of Checkout Powered by Image Recognition", "description": "A clear explanation of how a cafeteria AI register works. Covers AI-camera food image recognition, the two recognition modes, four changes it brings, and the equipment and rollout flow needed. An introductory guide for first-timers.", "image": "https://izumosoan.com/assets/img/cafeteria/plate_food_mode_en.jpg", "inLanguage": "en", "datePublished": "2026-09-20", "dateModified": "2026-09-20", "articleSection": "Smart Cafeteria Column", "keywords": "cafeteria AI register, AI register how it works, AI image recognition register, smart cafeteria register", "author": {"@type": "Organization", "name": "Izumo Soan", "url": "https://izumosoan.com/en/about.html"}, "publisher": {"@type": "Organization", "name": "Izumo Soan", "logo": {"@type": "ImageObject", "url": "https://izumosoan.com/assets/img/logo/logo.webp"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://izumosoan.com/en/column/ai-register.html"}}</script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Is a Cafeteria AI Register? The New Common Sense of Checkout Powered by Image Recognition",
+    "description": "A clear explanation of how a cafeteria AI register works. Covers AI-camera food image recognition, the two recognition modes, four changes it brings, and the equipment and rollout flow needed. An introductory guide for first-timers.",
+    "image": "https://izumosoan.com/assets/img/cafeteria/plate_food_mode_en.jpg",
+    "inLanguage": "en",
+    "datePublished": "2026-09-20",
+    "dateModified": "2026-10-12",
+    "articleSection": "Smart Cafeteria Column",
+    "keywords": "cafeteria AI register, AI register how it works, AI image recognition register, smart cafeteria register",
+    "author": {
+        "@type": "Organization",
+        "name": "Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "sameAs": [
+            "https://izumosoan.com/"
+        ]
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://izumosoan.com/assets/img/logo/logo.png"
+        }
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://izumosoan.com/en/column/ai-register.html"
+    }
+}</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What happens if the AI checkout terminal breaks down?", "acceptedAnswer": {"@type": "Answer", "text": "We monitor the operating status of each checkout terminal in real time from the management console. If an anomaly is detected, an alert is issued and we respond quickly. Even in the unlikely event of a failure, operations can continue on the other checkout terminals."}}, {"@type": "Question", "name": "Can the AI recognize many menu items?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. AI image recognition can handle identifying several hundred or more items. Adding a new menu is done simply by taking a photo on the terminal, which is learned instantly, so a large number of items does not become an operational burden."}}, {"@type": "Question", "name": "What if the user does not accept the AI's judgment result?", "acceptedAnswer": {"@type": "Answer", "text": "The order can be corrected on the checkout screen. The user can amend items via the on-screen controls, and abnormal orders can also be detected and corrected from the management terminal side."}}, {"@type": "Question", "name": "Which is better, the AI register or the RFID method?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the cafeteria's characteristics. An AI register suits cafeterias with many daily-changing menus where swapping dishes is difficult. The RFID method suits large cafeterias centered on fixed menus where dishes can be swapped. See the comparison article for details."}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,6 +87,12 @@
     .column-body h4 { font-size: 1.05rem; font-weight: 700; color: #333; margin: 28px 0 10px; }
     .column-body p { margin: 0 0 18px; }
     .column-body strong { color: #003554; }
+    .column-body .column-lead {
+        background: #f0f7ff; border-left: 4px solid #00880F;
+        padding: 14px 20px; margin: 0 0 22px; border-radius: 0 8px 8px 0;
+        font-weight: 500; color: #1e293b; font-size: 1.02rem; line-height: 1.75;
+    }
+    .column-body .column-lead strong { color: #00660C; }
     .column-body blockquote {
         background: #f0f7ff; border-left: 4px solid #006494;
         padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem;
@@ -159,6 +197,7 @@
 <p>In this article, we explain &mdash; in a way that is easy even for first-timers &mdash; everything from how a cafeteria AI register basically works to how it transforms cafeteria operations once introduced.</p>
 <hr />
 <h2>The basics of a cafeteria AI register &mdash; the decisive difference from a conventional register</h2>
+            <p class="column-lead">The decisive difference between a cafeteria AI register and a conventional register is <strong>whether a person checks dishes and enters prices, or AI recognizes them automatically</strong>. An AI register auto-recognizes dishes just by placing the tray and completes checkout in about 1–2 seconds.</p>
 <h3>The checkout flow of a conventional register</h3>
 <p>At a conventional cafeteria register, checkout proceeds as follows.</p>
 <p style='text-align:center;margin:24px 0;'><img src='../../assets/img/cafeteria/operator-5step-en.jpg' alt='The 5-step checkout flow of a conventional register' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);'></p>
@@ -223,6 +262,9 @@
 <h3>STEP 2: The AI camera photographs and recognizes the food</h3>
 <p>A <strong>high-resolution AI camera (5 megapixels, monocular)</strong> mounted on the checkout stand instantly photographs the food on the tray. The image recognition algorithm analyzes the <strong>shape, color, size, and plating pattern</strong> of the food and determines the items and quantities.</p>
 <p>This recognition process completes <strong>within 0.5 seconds</strong>. Even when multiple items are on the tray, they are recognized all at once, so the user's waiting time is nearly zero.</p>
+<p style='text-align:center;margin:24px 0;'>
+    <video src='../../assets/img/cafeteria/AIimagepay.mp4' autoplay muted loop playsinline controls preload='metadata' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);background:#000;'>Your browser does not support the video tag.</video>
+</p>
 <h3>STEP 3: Pay and finish</h3>
 <p>Once the recognition results and total amount are displayed on the screen, the user pays with their preferred payment method.</p>
 <table>

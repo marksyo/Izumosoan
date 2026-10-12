@@ -50,16 +50,25 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "datePublished": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-12",
     "headline": "食堂AIレジとは？画像認識で変わる精算の新常識",
     "description": "食堂AIレジの仕組みをわかりやすく解説。AIカメラによる料理画像認識の技術、2つの識別モード、導入で変わる4つの変化、必要な機器と導入フローまで。初めての方向けの入門記事です。",
     "author": {
         "@type": "Organization",
-        "name": "出雲創安 Izumo Soan"
+        "name": "出雲創安 Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "sameAs": [
+            "https://izumosoan.com/"
+        ]
     },
     "publisher": {
         "@type": "Organization",
-        "name": "出雲創安 Izumo Soan"
+        "name": "出雲創安 Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://izumosoan.com/assets/img/logo/logo.png"
+        }
     },
     "mainEntityOfPage": "https://izumosoan.com/ja/column/ai-register.html"
 }</script>
@@ -93,6 +102,12 @@
     .column-body h4 { font-size: 1.05rem; font-weight: 700; color: #333; margin: 28px 0 10px; }
     .column-body p { margin: 0 0 18px; }
     .column-body strong { color: #003554; }
+    .column-body .column-lead {
+        background: #f0f7ff; border-left: 4px solid #00880F;
+        padding: 14px 20px; margin: 0 0 22px; border-radius: 0 8px 8px 0;
+        font-weight: 500; color: #1e293b; font-size: 1.02rem; line-height: 1.75;
+    }
+    .column-body .column-lead strong { color: #00660C; }
     .column-body blockquote {
         background: #f0f7ff; border-left: 4px solid #006494;
         padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem;
@@ -198,6 +213,7 @@
 <p>本記事では、食堂AIレジの基本的な仕組みから、導入によって食堂運営がどう変わるのかまでを、初めての方にもわかりやすく解説します。</p>
 <hr />
 <h2>食堂AIレジの基本 — 従来レジとの決定的な違い</h2>
+            <p class="column-lead">食堂AIレジと従来レジの決定的な違いは、<strong>人が料理を確認して価格を入力するか、AIが自動で認識するか</strong>です。AIレジはトレーを置くだけで料理を自動認識し、精算を約1〜2秒で完了します。</p>
 <h3>従来型レジの精算フロー</h3>
 <p>従来の食堂レジでは、以下のような流れで精算が行われます。</p>
 <p style='text-align:center;margin:24px 0;'><img src='../../assets/img/cafeteria/operator-5step-ja.jpg' alt='従来型レジの5ステップ精算フロー' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);'></p>
@@ -262,6 +278,9 @@
 <h3>STEP 2: AIカメラが料理を撮影・識別</h3>
 <p>精算台に搭載された<strong>高精度AIカメラ（500万画素・単眼カラー）</strong>が、トレー上の料理を瞬時に撮影。画像認識アルゴリズムが料理の<strong>形状・色・サイズ・盛り付けパターン</strong>を解析し、品目と数量を判定します。</p>
 <p>この識別処理は<strong>0.5秒以内</strong>に完了。複数の品目が載っていても一括で認識するため、利用者が待つ時間はほぼゼロです。</p>
+<p style='text-align:center;margin:24px 0;'>
+    <video src='../../assets/img/cafeteria/AIimagepay.mp4' autoplay muted loop playsinline controls preload='metadata' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);background:#000;'>お使いのブラウザは動画タグに対応していません。</video>
+</p>
 <h3>STEP 3: 決済して完了</h3>
 <p>識別結果と合計金額が画面に表示されたら、利用者は好みの決済方式で支払います。</p>
 <table>
