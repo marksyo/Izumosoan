@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>入退室管理システム | 顔認証・ICカード・QR認証と既存設備連携 | 出雲創安</title>
+    <meta name='description' content='施設の入退室管理に必要な機器・システムを選定し、顔認証・ICカード・QRなど多様な認証方式と、電気錠・制御盤・管理ソフトウェアを組み合わせて構築。既存設備との連携や海外メーカー製品の日本導入・カスタマイズ・導入支援まで対応します。工場・物流・研究所・データセンター・オフィス向け。'>
+
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/access-control.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/access-control.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/access-control.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/access-control.html">
+    <link rel="canonical" href="https://izumosoan.com/ja/access-control.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="出雲創安 Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/ja/access-control.html">
+    <meta property="og:title" content="入退室管理システム | 出雲創安">
+    <meta property="og:description" content="施設の入退室管理に必要な機器・システムを選定し、顔認証・ICカード・QRなど多様な認証方式と既存設備との連携を含めて、日本の現場への導入を支援します。">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://izumosoan.com/assets/img/accesscontrol/F972-door-access-hero.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="入退室管理システム | 出雲創安">
+    <meta name="twitter:description" content="施設の入退室管理に必要な機器・システムを選定し、顔認証・ICカード・QRなど多様な認証方式と既存設備との連携を含めて導入を支援します。">
+    <meta name="twitter:image" content="https://izumosoan.com/assets/img/accesscontrol/F972-door-access-hero.png">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"出雲創安 Izumo Soan","url":"https://izumosoan.com","telephone":"050-1258-9122","email":"info@izumosoan.com","address":{"@type":"PostalAddress","addressLocality":"葛飾区","addressRegion":"東京都","streetAddress":"東立石4-37-8","addressCountry":"JP"},"description":"現場、安全、運用をつなぐテクノロジーパートナー"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://izumosoan.com/ja/index.html"},{"@type":"ListItem","position":2,"name":"製品","item":"https://izumosoan.com/ja/products.html"},{"@type":"ListItem","position":3,"name":"入退室管理システム","item":"https://izumosoan.com/ja/access-control.html"}]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Service","name":"入退室管理システム","serviceType":"施設向け入退室管理システムの機器選定・システム構成・既存設備連携・導入支援","provider":{"@type":"Organization","name":"出雲創安 Izumo Soan","url":"https://izumosoan.com/"},"areaServed":{"@type":"Place","name":"日本"},"description":"顔認証・ICカード・QRなどの認証方式と、電気錠・制御機器・管理ソフトウェアを組み合わせ、施設の運用に合わせた入退室管理システムを構築。既存設備との連携や海外メーカー製品の日本導入・カスタマイズ・導入支援まで対応します。"}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../assets/css/style.min.css'>
+
+    <style>
+    /* Access Control page-specific styles (green theme) */
+    .aic-ac-hero { background: linear-gradient(135deg, #EFF6F0 0%, #d4edda 100%); padding: 80px 0 60px; }
+    .aic-ac-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .aic-ac-hero h1 { font-size: 2.3rem; color: #2c3e50; margin-bottom: 14px; line-height: 1.4; }
+    .aic-ac-hero .subtitle { font-size: 1.08rem; color: #555; line-height: 1.9; margin-bottom: 24px; }
+    .aic-ac-hero-points { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
+    .aic-ac-hero-points span { background: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.88rem; font-weight: 500; color: #00880F; border: 1px solid #00880F; }
+    .aic-ac-hero-points span i { margin-right: 6px; }
+    .aic-ac-hero-visual { text-align: center; }
+    .aic-ac-hero-visual img { max-width: 100%; max-height: 420px; object-fit: contain; }
+    .aic-ac-hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* Breadcrumb */
+    .aic-ac-breadcrumb { padding: 14px 0; font-size: 0.85rem; color: #888; }
+    .aic-ac-breadcrumb a { color: #00880F; text-decoration: none; }
+    .aic-ac-breadcrumb a:hover { text-decoration: underline; }
+    .aic-ac-breadcrumb span { margin: 0 6px; color: #bbb; }
+
+    /* Flow diagram (text) */
+    .aic-ac-flow { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; margin: 30px 0; }
+    .aic-ac-flow-step { background: #EFF6F0; border: 1px solid #00880F; color: #305534; font-weight: 600; padding: 12px 18px; border-radius: 10px; font-size: 0.95rem; }
+    .aic-ac-flow-arrow { color: #00880F; font-size: 1.1rem; }
+
+    /* Problem list */
+    .aic-ac-problems { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 24px; }
+    .aic-ac-problem { background: #fff; border-left: 4px solid #00880F; border-radius: 0 10px 10px 0; padding: 18px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); font-size: 0.95rem; color: #444; display: flex; align-items: flex-start; gap: 12px; }
+    .aic-ac-problem i { color: #00880F; font-size: 1.1rem; margin-top: 3px; }
+
+    /* System concept box */
+    .aic-ac-concept { background: #305534; color: #fff; border-radius: 16px; padding: 40px; text-align: center; margin-top: 30px; }
+    .aic-ac-concept p { color: rgba(255,255,255,0.92); font-size: 1.05rem; line-height: 1.9; margin: 0; }
+    .aic-ac-concept strong { color: #ffe14d; }
+
+    /* Auth methods */
+    .aic-ac-auth { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .aic-ac-auth-card { background: #fff; border-radius: 14px; padding: 32px 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); border-top: 4px solid #00880F; transition: transform 0.3s; }
+    .aic-ac-auth-card:hover { transform: translateY(-5px); }
+    .aic-ac-auth-card .aic-ac-auth-icon { font-size: 2.2rem; color: #00880F; margin-bottom: 14px; }
+    .aic-ac-auth-card h3 { font-size: 1.2rem; color: #2c3e50; margin-bottom: 12px; }
+    .aic-ac-auth-card p { font-size: 0.92rem; color: #555; line-height: 1.8; margin: 0 0 10px; }
+    .aic-ac-auth-card ul { margin: 0; padding-left: 1.2em; }
+    .aic-ac-auth-card li { font-size: 0.88rem; color: #666; line-height: 1.7; }
+
+    /* Product cards (devices) */
+    .aic-ac-products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .aic-ac-product-card { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 2px 14px rgba(0,0,0,0.06); text-align: center; transition: transform 0.3s; }
+    .aic-ac-product-card:hover { transform: translateY(-4px); }
+    .aic-ac-product-card .aic-ac-product-img { min-height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+    .aic-ac-product-card .aic-ac-product-img img { max-width: 100%; max-height: 180px; object-fit: contain; }
+    .aic-ac-product-card h4 { font-size: 1rem; color: #2c3e50; margin: 0 0 6px; }
+    .aic-ac-product-card .aic-ac-model { display: inline-block; background: #EFF6F0; color: #00880F; font-size: 0.78rem; font-weight: 700; padding: 2px 10px; border-radius: 12px; margin-bottom: 8px; }
+    .aic-ac-product-card p { font-size: 0.85rem; color: #666; line-height: 1.7; margin: 0; }
+
+    /* Feature grid (with images) */
+    .aic-ac-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .aic-ac-feature { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
+    .aic-ac-feature img { width: 100%; height: 220px; object-fit: cover; display: block; }
+    .aic-ac-feature-body { padding: 22px 24px; }
+    .aic-ac-feature-body h3 { font-size: 1.1rem; color: #2c3e50; margin: 0 0 8px; }
+    .aic-ac-feature-body p { font-size: 0.9rem; color: #666; line-height: 1.8; margin: 0; }
+
+    /* System composition table */
+    .aic-ac-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .aic-ac-table th, .aic-ac-table td { padding: 14px 16px; border-bottom: 1px solid #ddd; text-align: left; font-size: 0.92rem; }
+    .aic-ac-table thead th { background: #305534; color: #fff; font-weight: 600; }
+    .aic-ac-table tbody tr:nth-child(even) { background: #f9f9f9; }
+    .aic-ac-table td:first-child { font-weight: 600; color: #2c3e50; min-width: 160px; }
+
+    /* Scene cards */
+    .aic-ac-scenes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .aic-ac-scene { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); transition: transform 0.3s; }
+    .aic-ac-scene:hover { transform: translateY(-4px); }
+    .aic-ac-scene img { width: 100%; height: 200px; object-fit: cover; display: block; }
+    .aic-ac-scene-body { padding: 22px 24px; }
+    .aic-ac-scene-body h3 { font-size: 1.1rem; color: #305534; margin: 0 0 8px; }
+    .aic-ac-scene-body p { font-size: 0.9rem; color: #666; line-height: 1.8; margin: 0; }
+
+    /* Strengths */
+    .aic-ac-strengths { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .aic-ac-strength { background: #fff; border-radius: 12px; padding: 30px 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); text-align: center; }
+    .aic-ac-strength i { font-size: 2.2rem; color: #00880F; margin-bottom: 14px; }
+    .aic-ac-strength h3 { font-size: 1.05rem; color: #2c3e50; margin-bottom: 10px; }
+    .aic-ac-strength p { font-size: 0.9rem; color: #666; line-height: 1.8; margin: 0; }
+
+    /* Flow steps (process) */
+    .aic-ac-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; counter-reset: acstep; }
+    .aic-ac-step { background: #fff; border-radius: 12px; padding: 28px 22px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); position: relative; }
+    .aic-ac-step .aic-ac-step-num { width: 44px; height: 44px; border-radius: 50%; background: #00880F; color: #fff; font-weight: 700; font-size: 1.15rem; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+    .aic-ac-step h3 { font-size: 1rem; color: #2c3e50; margin: 0 0 8px; }
+    .aic-ac-step p { font-size: 0.88rem; color: #666; line-height: 1.7; margin: 0; }
+
+    /* FAQ */
+    .aic-ac-faq { max-width: 860px; margin: 0 auto; }
+    .aic-ac-faq-item { background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 14px; padding: 20px 24px; }
+    .aic-ac-faq-item h3 { font-size: 1rem; color: #305534; margin: 0 0 8px; display: flex; gap: 10px; align-items: flex-start; }
+    .aic-ac-faq-item h3 i { color: #00880F; margin-top: 2px; }
+    .aic-ac-faq-item p { font-size: 0.9rem; color: #555; line-height: 1.8; margin: 0; padding-left: 26px; }
+
+    /* CTA */
+    .aic-ac-cta { background: #305534; padding: 60px 0; text-align: center; color: #fff; }
+    .aic-ac-cta h2 { color: #fff; font-size: 1.6rem; margin-bottom: 12px; }
+    .aic-ac-cta p { color: rgba(255,255,255,0.85); margin-bottom: 24px; }
+    .aic-ac-cta .btn-primary { background: #00880F; color: #fff; padding: 14px 32px; border-radius: 6px; font-size: 1rem; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.3s; }
+    .aic-ac-cta .btn-primary:hover { background: #00660C; text-decoration: none; }
+
+    .aic-ac-note { font-size: 0.82rem; color: #888; margin-top: 16px; }
+
+    @media (max-width: 991px) {
+        .aic-ac-hero-grid { grid-template-columns: 1fr; }
+        .aic-ac-auth, .aic-ac-features, .aic-ac-scenes { grid-template-columns: 1fr; }
+        .aic-ac-products, .aic-ac-strengths, .aic-ac-steps { grid-template-columns: repeat(2, 1fr); }
+        .aic-ac-problems { grid-template-columns: 1fr; }
+        .aic-ac-hero h1 { font-size: 1.8rem; }
+    }
+    @media (max-width: 575px) {
+        .aic-ac-products, .aic-ac-strengths, .aic-ac-steps { grid-template-columns: 1fr; }
+        .aic-ac-table { font-size: 0.82rem; }
+        .aic-ac-table th, .aic-ac-table td { padding: 10px; }
+    }
+    </style>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/logo/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/logo/apple-touch-icon.png">
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='index.html'><img src='../assets/img/logo/logo.webp' alt='Izumo Soan' class='header-logo-img' style='height:80px;'></a>
+            </div>
+            <div class='language-switcher'>
+                <span class='lang-label'><i class="fas fa-globe"></i></span>
+                <select id='lang-select'>
+                    <option value='ja' selected>日本語</option>
+                    <option value='en'>English</option>
+                    <option value='zh'>中文</option>
+                </select>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
+            <nav>
+                <ul>
+                    <li><a href='index.html'>ホーム</a></li>
+                    <li><a href='services.html'>サービス</a></li>
+                    <li><a href='products.html' class='active'>製品</a></li>
+                    <li><a href='case-studies.html'>実績</a></li>
+                    <li><a href='about.html'>会社概要</a></li>
+                    <li><a href='column/index.html'>コラム</a></li>
+                    <li><a href='index.html#contact'>お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <div class='aic-ac-breadcrumb'>
+            <div class='container'>
+                <a href='index.html'>ホーム</a><span>›</span>
+                <a href='products.html'>製品</a><span>›</span>
+                入退室管理システム
+            </div>
+        </div>
+
+        <!-- 1. Hero -->
+        <section class='aic-ac-hero'>
+            <div class='container aic-ac-hero-grid'>
+                <div>
+                    <h1>施設の安全と利便性を両立する、<br>入退室管理システム</h1>
+                    <p class='subtitle'>顔認証・ICカードなどの認証技術と、電気錠・制御機器・管理ソフトウェアを組み合わせ、施設の運用に合わせた入退室管理システムを構築します。</p>
+                    <div class='aic-ac-hero-points'>
+                        <span><i class="fas fa-check"></i>顔・カード・QR対応</span>
+                        <span><i class="fas fa-check"></i>既存設備と連携</span>
+                        <span><i class="fas fa-check"></i>日本導入・サポート</span>
+                    </div>
+                    <div class='aic-ac-hero-buttons'>
+                        <a href='index.html#contact' class='btn-primary'>入退室管理について相談する</a>
+                        <a href='#system' class='btn-secondary'>システム構成を見る</a>
+                    </div>
+                </div>
+                <div class='aic-ac-hero-visual'>
+                    <img src='../assets/img/accesscontrol/F972-door-access-hero.png' alt='顔認証入退室管理端末（7インチ顔認証ドアアクセスデバイス）'>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 課題 -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>こんな入退室管理の課題はありませんか？</h2>
+                    <p>「顔認証を買いたい」ではなく「入退室管理を改善したい」—— そのための選定・構築をご支援します。</p>
+                </div>
+                <div class='aic-ac-problems'>
+                    <div class='aic-ac-problem'><i class="fas fa-key"></i>鍵やカードの貸し出し・回収管理に手間がかかる</div>
+                    <div class='aic-ac-problem'><i class="fas fa-user-edit"></i>退職者や異動者のアクセス権限変更を効率化したい</div>
+                    <div class='aic-ac-problem'><i class="fas fa-ban"></i>関係者以外の入室を制限したい</div>
+                    <div class='aic-ac-problem'><i class="fas fa-door-open"></i>工場・倉庫など複数の出入口を管理したい</div>
+                    <div class='aic-ac-problem'><i class="fas fa-users"></i>従業員と外部業者の入退室を区別したい</div>
+                    <div class='aic-ac-problem'><i class="fas fa-history"></i>入退室履歴を記録・確認したい</div>
+                    <div class='aic-ac-problem'><i class="fas fa-plug"></i>既存の電気錠や入退室設備を活用したい</div>
+                    <div class='aic-ac-problem'><i class="fas fa-sync"></i>勤怠管理や施設管理システムと連携したい</div>
+                    <div class='aic-ac-problem'><i class="fas fa-redo"></i>古い入退室管理システムを更新したい</div>
+                    <div class='aic-ac-problem'><i class="fas fa-smile"></i>顔認証など新しい認証方式を導入したい</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 入退室管理システムとは -->
+        <section class='section-padding section-bg' id='system'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>入退室管理を、機器だけでなくシステムとして考える</h2>
+                    <p>入退室管理システムは、認証端末だけで構成されるものではありません。</p>
+                </div>
+                <div class='aic-ac-concept'>
+                    <p>利用者の認証、ドアの解錠・施錠、入退室情報の記録、権限管理などを組み合わせることで、施設に適した<strong>セキュリティ環境</strong>を構築します。<br>必要に応じて、管理サーバー・クラウド・ネットワーク・勤怠管理・来訪者管理・防犯/監視システムなどとの連携を検討します。</p>
+                </div>
+                <div class='aic-ac-flow'>
+                    <div class='aic-ac-flow-step'>利用者</div>
+                    <span class='aic-ac-flow-arrow'><i class="fas fa-arrow-right"></i></span>
+                    <div class='aic-ac-flow-step'>認証端末<br>（顔・カード・QR）</div>
+                    <span class='aic-ac-flow-arrow'><i class="fas fa-arrow-right"></i></span>
+                    <div class='aic-ac-flow-step'>制御装置</div>
+                    <span class='aic-ac-flow-arrow'><i class="fas fa-arrow-right"></i></span>
+                    <div class='aic-ac-flow-step'>電気錠・ドア</div>
+                    <span class='aic-ac-flow-arrow'><i class="fas fa-arrow-right"></i></span>
+                    <div class='aic-ac-flow-step'>入室</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 主な認証方式 -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>主な認証方式</h2>
+                    <p>施設の運用に合わせて認証方式を選択できます。</p>
+                </div>
+                <div class='aic-ac-auth'>
+                    <div class='aic-ac-auth-card'>
+                        <div class='aic-ac-auth-icon'><i class="fas fa-smile"></i></div>
+                        <h3>顔認証</h3>
+                        <p>顔情報を利用して本人確認を行う方式。カードを持ち歩く必要がなく、非接触で認証できます。</p>
+                        <ul>
+                            <li>カード不要・非接触で利便性が高い</li>
+                            <li>認証精度・なりすまし対策・設置環境を検討</li>
+                            <li>顔データ・個人情報の取り扱いを確認</li>
+                        </ul>
+                    </div>
+                    <div class='aic-ac-auth-card'>
+                        <div class='aic-ac-auth-icon'><i class="far fa-credit-card"></i></div>
+                        <h3>ICカード・NFC等</h3>
+                        <p>カードやIC媒体を利用する方式。既存のカード運用を活用しやすく、権限変更も管理しやすいのが特長です。</p>
+                        <ul>
+                            <li>既存カード運用を活かしやすい</li>
+                            <li>利用者の権限変更を管理しやすい</li>
+                            <li>既存カード・リーダーとの互換性は機器ごとに確認</li>
+                        </ul>
+                    </div>
+                    <div class='aic-ac-auth-card'>
+                        <div class='aic-ac-auth-icon'><i class="fas fa-qrcode"></i></div>
+                        <h3>QRコード</h3>
+                        <p>QRコードを利用した認証方式。来訪者管理や一時的なアクセス権限など、用途に応じた活用を検討できます。</p>
+                        <ul>
+                            <li>来訪者・一時利用に適する</li>
+                            <li>発行・失効の運用を柔軟に設計</li>
+                        </ul>
+                    </div>
+                    <div class='aic-ac-auth-card'>
+                        <div class='aic-ac-auth-icon'><i class="fas fa-fingerprint"></i></div>
+                        <h3>その他</h3>
+                        <p>案件によって、暗証番号、指紋等の生体認証、複数認証の組み合わせなども検討対象とします。</p>
+                        <ul>
+                            <li>暗証番号・生体認証・多要素認証</li>
+                            <li>※実際の対応方式は採用する製品・システムにより異なります</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 製品ラインナップ -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>認証端末・機器のラインナップ</h2>
+                    <p>認証端末からコントローラー・リーダーまで、構成に合わせて機器を選定します。</p>
+                </div>
+                <div class='aic-ac-products'>
+                    <div class='aic-ac-product-card'>
+                        <div class='aic-ac-product-img'><img src='../assets/img/accesscontrol/F972-door-access-main.png' alt='7インチ顔認証ドアアクセスデバイス F9-C72' loading='lazy'></div>
+                        <span class='aic-ac-model'>F9-C72</span>
+                        <h4>7インチ顔認証ドアアクセス端末</h4>
+                        <p>7インチ画面を備えた顔認証ドアアクセス端末。マルチモーダル認証に対応。</p>
+                    </div>
+                    <div class='aic-ac-product-card'>
+                        <div class='aic-ac-product-img'><img src='../assets/img/accesscontrol/F961-face-terminal-8inch.png' alt='8インチ顔認証入退室端末 F9-C61' loading='lazy'></div>
+                        <span class='aic-ac-model'>F9-C61</span>
+                        <h4>8インチ顔認証入退室端末</h4>
+                        <p>AI・生体認証・IoT技術を統合し、高速な本人認証と入退室管理を実現。</p>
+                    </div>
+                    <div class='aic-ac-product-card'>
+                        <div class='aic-ac-product-img'><img src='../assets/img/accesscontrol/F973-attendance-terminal.png' alt='顔認証勤怠端末 F9-C73' loading='lazy'></div>
+                        <span class='aic-ac-model'>F9-C73</span>
+                        <h4>顔認証勤怠端末</h4>
+                        <p>顔認証と多モード認証で、本人確認・勤怠・入退室管理に対応。</p>
+                    </div>
+                    <div class='aic-ac-product-card'>
+                        <div class='aic-ac-product-img'><img src='../assets/img/accesscontrol/I2-controller.png' alt='スマート入退室コントローラー I2' loading='lazy'></div>
+                        <span class='aic-ac-model'>I2</span>
+                        <h4>スマートコントローラー</h4>
+                        <p>複数のセキュリティ機器を集中管理し、権限制御を一元化するコントローラー。</p>
+                    </div>
+                    <div class='aic-ac-product-card'>
+                        <div class='aic-ac-product-img'><img src='../assets/img/accesscontrol/F951-qr-card-reader.png' alt='QRコード・カードリーダー F9-C51' loading='lazy'></div>
+                        <span class='aic-ac-model'>F9-C51</span>
+                        <h4>QR・カードリーダー</h4>
+                        <p>QRコードとカード認証に対応し、さまざまな場面で安全・効率的な入退室管理を実現。</p>
+                    </div>
+                    <div class='aic-ac-product-card'>
+                        <div class='aic-ac-product-img'><img src='../assets/img/accesscontrol/F9C21-card-reader.png' alt='カードリーダー F9-C21' loading='lazy'></div>
+                        <span class='aic-ac-model'>F9-C21</span>
+                        <h4>カードリーダー</h4>
+                        <p>OLEDディスプレイとカード認証、Wiegand対応で安定した本人確認を提供。</p>
+                    </div>
+                </div>
+                <p class='aic-ac-note'>※掲載製品は構成例です。実際の機器選定は、出入口数・利用人数・既存設備・セキュリティ要件に応じて行います。</p>
+            </div>
+        </section>
+
+        <!-- 6. 製品の特長 -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>認証端末の主な特長</h2>
+                    <p>堅牢性・処理性能・操作性・認証の柔軟性を兼ね備えた端末。</p>
+                </div>
+                <div class='aic-ac-features'>
+                    <div class='aic-ac-feature'>
+                        <img src='../assets/img/accesscontrol/feature-ip66-housing.jpg' alt='IP66防塵防水の堅牢な筐体' loading='lazy'>
+                        <div class='aic-ac-feature-body'>
+                            <h3>IP66対応の堅牢な筐体</h3>
+                            <p>屋外や粉塵・水濡れのある環境でも設置を検討できる、堅牢な筐体設計。</p>
+                        </div>
+                    </div>
+                    <div class='aic-ac-feature'>
+                        <img src='../assets/img/accesscontrol/feature-quad-core.jpg' alt='クアッドコアによる安定動作' loading='lazy'>
+                        <div class='aic-ac-feature-body'>
+                            <h3>安定動作を支える処理性能</h3>
+                            <p>クアッドコアの処理性能により、安定した認証動作を実現します。</p>
+                        </div>
+                    </div>
+                    <div class='aic-ac-feature'>
+                        <img src='../assets/img/accesscontrol/feature-7inch-touchscreen.jpg' alt='7インチHDタッチスクリーン' loading='lazy'>
+                        <div class='aic-ac-feature-body'>
+                            <h3>直感的な7インチHDタッチ操作</h3>
+                            <p>7インチのHDタッチスクリーンで、分かりやすい操作と表示を実現。</p>
+                        </div>
+                    </div>
+                    <div class='aic-ac-feature'>
+                        <img src='../assets/img/accesscontrol/feature-multimodal-auth.jpg' alt='マルチモーダル認証による柔軟なアクセス' loading='lazy'>
+                        <div class='aic-ac-feature-body'>
+                            <h3>マルチモーダル認証に対応</h3>
+                            <p>顔・カード・QRなど複数の認証方式に対応し、柔軟なアクセス運用が可能です。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. システム構成 -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>システム構成</h2>
+                    <p>認証端末からドア設備まで、システム全体を検討します。</p>
+                </div>
+                <table class='aic-ac-table'>
+                    <thead>
+                        <tr><th>構成要素</th><th>役割</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>認証端末</td><td>利用者を認証する（顔・カード・QR等）</td></tr>
+                        <tr><td>カードリーダー</td><td>ICカード等を読み取る</td></tr>
+                        <tr><td>QRリーダー</td><td>QRコードを読み取る</td></tr>
+                        <tr><td>制御装置</td><td>解錠・施錠を制御する</td></tr>
+                        <tr><td>電気錠</td><td>ドアの施錠・解錠</td></tr>
+                        <tr><td>退出ボタン</td><td>内側からの退出</td></tr>
+                        <tr><td>センサー</td><td>ドア状態等を監視</td></tr>
+                        <tr><td>ネットワーク</td><td>端末・管理システムを接続</td></tr>
+                        <tr><td>管理ソフトウェア</td><td>利用者・権限・ログ等を管理</td></tr>
+                        <tr><td>サーバー／クラウド</td><td>データを管理</td></tr>
+                    </tbody>
+                </table>
+                <p class='aic-ac-note'>※実際のシステム構成は、出入口数・利用人数・既存設備・セキュリティ要件・ネットワーク環境・管理方法・必要なログ/レポートを確認して決定します。</p>
+            </div>
+        </section>
+
+        <!-- 8. 利用シーン -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>さまざまな施設の入退室管理に</h2>
+                    <p>工場・物流・研究所・データセンター・オフィスなど、現場に合わせて構成を検討します。</p>
+                </div>
+                <div class='aic-ac-scenes'>
+                    <div class='aic-ac-scene'>
+                        <img src='../assets/img/accesscontrol/scene-access-control.jpg' alt='工場・製造施設の入退室管理' loading='lazy'>
+                        <div class='aic-ac-scene-body'>
+                            <h3>工場・製造施設 / 研究所・開発施設</h3>
+                            <p>従業員・協力会社・関係者の入退室管理。特定エリアや管理区域へのアクセス制御も検討します。</p>
+                        </div>
+                    </div>
+                    <div class='aic-ac-scene'>
+                        <img src='../assets/img/accesscontrol/scene-passage-control.png' alt='物流センター・倉庫の通行管理' loading='lazy'>
+                        <div class='aic-ac-scene-body'>
+                            <h3>物流センター・倉庫</h3>
+                            <p>複数の出入口や高い通行量がある施設で、運用に合わせた認証方式と設備構成を検討します。</p>
+                        </div>
+                    </div>
+                    <div class='aic-ac-scene'>
+                        <img src='../assets/img/accesscontrol/scene-visitor.png' alt='データセンターの来訪者・アクセス管理' loading='lazy'>
+                        <div class='aic-ac-scene-body'>
+                            <h3>データセンター</h3>
+                            <p>重要設備・管理区域へのアクセス制御。既存のセキュリティ設備や監視システムとの関係を確認します。</p>
+                        </div>
+                    </div>
+                    <div class='aic-ac-scene'>
+                        <img src='../assets/img/accesscontrol/scene-attendance.png' alt='オフィス・事業所の入退室と勤怠連携' loading='lazy'>
+                        <div class='aic-ac-scene-body'>
+                            <h3>オフィス・事業所</h3>
+                            <p>従業員の入退室や来訪者へのアクセス管理。既存のカード運用から顔認証等への移行も検討できます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. 出雲創安の強み -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>出雲創安の強み</h2>
+                    <p>単なる機器販売ではなく、要件整理から導入支援まで。</p>
+                </div>
+                <div class='aic-ac-strengths'>
+                    <div class='aic-ac-strength'>
+                        <i class="fas fa-globe-asia"></i>
+                        <h3>海外製品 × 日本導入</h3>
+                        <p>海外メーカー製品の日本導入・カスタマイズ・技術調整を支援。要件に合わせて最適な機器を選定します。</p>
+                    </div>
+                    <div class='aic-ac-strength'>
+                        <i class="fas fa-sitemap"></i>
+                        <h3>システムとして構築</h3>
+                        <p>端末だけでなく、制御盤・電気錠・ネットワーク・管理ソフトウェアを含めてシステムとして構成します。</p>
+                    </div>
+                    <div class='aic-ac-strength'>
+                        <i class="fas fa-plug"></i>
+                        <h3>既存設備との連携</h3>
+                        <p>既存の電気錠・制御盤・入退室管理システムの活用や、勤怠・施設管理システムとの連携を検討します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. 既存システムとの連携 -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>既存設備・システムとの連携</h2>
+                    <p>すべて入れ替えるのではなく、既存の資産を活かすことも検討します。</p>
+                </div>
+                <div class='aic-ac-concept' style='background:#EFF6F0;'>
+                    <p style='color:#305534;'>入退室管理は単独で利用するだけでなく、施設内の他のシステムと連携することで、より効率的な運用を目指せます。<br><strong style='color:#00880F;'>勤怠管理・来訪者管理・監視カメラ・施設管理システム・人事/従業員管理</strong>などとの連携を検討します。</p>
+                </div>
+                <table class='aic-ac-table'>
+                    <thead>
+                        <tr><th>連携時の確認事項</th><th>内容</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>API / SDK</td><td>メーカー提供のAPI/SDKの有無を確認</td></tr>
+                        <tr><td>通信方式・データ形式</td><td>連携に必要な通信方式とデータ形式を確認</td></tr>
+                        <tr><td>利用者情報の同期</td><td>利用者情報・権限の同期方法を確認</td></tr>
+                        <tr><td>入退室ログ連携</td><td>入退室ログの連携方法を確認</td></tr>
+                        <tr><td>ソフトウェア開発</td><td>必要に応じて日本向けソフトウェアの開発・連携を検討</td></tr>
+                    </tbody>
+                </table>
+                <p class='aic-ac-note'>※実際の開発可否・開発費用・期間・対応範囲は案件ごとに確認します。</p>
+            </div>
+        </section>
+
+        <!-- 11. 導入までの流れ -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>導入までの流れ</h2>
+                    <p>要件整理から導入支援まで、案件に応じて対応します。</p>
+                </div>
+                <div class='aic-ac-steps'>
+                    <div class='aic-ac-step'><div class='aic-ac-step-num'>1</div><h3>お問い合わせ・ヒアリング</h3><p>現状の課題・施設・運用についてお聞かせください。</p></div>
+                    <div class='aic-ac-step'><div class='aic-ac-step-num'>2</div><h3>要件整理</h3><p>出入口・利用人数・既存設備・セキュリティ要件を整理します。</p></div>
+                    <div class='aic-ac-step'><div class='aic-ac-step-num'>3</div><h3>機器選定・システム構成</h3><p>認証方式・機器・システム構成をご提案します。</p></div>
+                    <div class='aic-ac-step'><div class='aic-ac-step-num'>4</div><h3>既存設備との連携調整</h3><p>既存設備やシステムとの連携可否・方法を確認します。</p></div>
+                    <div class='aic-ac-step'><div class='aic-ac-step-num'>5</div><h3>メーカーとの技術調整</h3><p>海外メーカーとの技術調整・カスタマイズを行います。</p></div>
+                    <div class='aic-ac-step'><div class='aic-ac-step-num'>6</div><h3>導入支援</h3><p>設置・設定・運用開始までを支援します。</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. FAQ -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>よくあるご質問</h2>
+                </div>
+                <div class='aic-ac-faq'>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>顔認証端末だけの購入もできますか？</h3>
+                        <p>機器単体のご相談も可能ですが、出雲創安では入退室管理をシステムとして捉え、要件整理から機器選定・システム構成・導入支援まで対応しています。まずはご相談ください。</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>既存の電気錠やカードを活かせますか？</h3>
+                        <p>既存の電気錠・制御盤・カード運用を活用できるか確認したうえでご提案します。互換性は採用機器ごとに確認します。</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>顔認証の個人情報はどう扱われますか？</h3>
+                        <p>顔データの管理方法・個人情報の取り扱いは、採用する製品やシステム、お客様の運用方針に応じて確認・検討します。</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>勤怠管理システムと連携できますか？</h3>
+                        <p>API/SDKの有無や通信方式を確認したうえで、勤怠管理・施設管理システム等との連携を検討します。</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>複数の出入口や拠点をまとめて管理できますか？</h3>
+                        <p>出入口数・拠点構成・利用人数に応じて、コントローラーや管理ソフトウェアを含めた構成を検討します。</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>海外メーカー製品の導入は可能ですか？</h3>
+                        <p>海外メーカー製品の日本導入・カスタマイズ・技術調整は出雲創安の強みです。要件に合わせて対応します。</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>対応エリアはどこですか？</h3>
+                        <p>案件により異なりますので、まずはお問い合わせください。</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>導入費用はどのくらいですか？</h3>
+                        <p>機器構成・システム規模・連携範囲によって異なります。ヒアリングのうえでお見積りします。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 関連製品 -->
+        <section class='section-padding section-bg'>
+            <div class='container' style='text-align:center;'>
+                <div class='section-title'>
+                    <h2>関連製品</h2>
+                </div>
+                <a href='products.html' class='btn-secondary'>製品一覧を見る</a>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class='aic-ac-cta'>
+            <div class='container'>
+                <h2>入退室管理についてご相談ください</h2>
+                <p>「何から始めればよいか分からない」段階でも大丈夫です。現状の課題からお聞かせください。</p>
+                <a href='index.html#contact' class='btn-primary'>お問い合わせ・ご相談</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../assets/img/logo/logo.webp' alt='Izumo Soan'>
+                    <p class='logo-desp'>技術を現場の力に。</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>メニュー</h4>
+                    <ul>
+                        <li><a href='index.html'>ホーム</a></li>
+                        <li><a href='about.html'>会社概要</a></li>
+                        <li><a href='products.html'>製品</a></li>
+                        <li><a href='services.html'>サービス</a></li>
+                        <li><a href='case-studies.html'>実績</a></li>
+                        <li><a href='overseas-partner.html'>海外メーカーパートナー</a></li>
+                        <li><a href='column/index.html'>コラム</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>製品情報</h4>
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='smart-cafeteria.html'>
+                            <span>スマート食堂</span>
+                            <small>AI画像認識・RFID・計量精算</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-access' href='access-control.html'>
+                            <span>入退室管理システム</span>
+                            <small>顔認証・ICカード・QR認証と既存設備連携</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>スマート現場の運用改善プラットフォーム</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 出雲創安 Izumo Soan. All rights reserved. ｜ <a href='privacy.html' style='color:inherit;text-decoration:underline;'>プライバシーポリシー</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src='../assets/js/main.js'></script>
+    <script src='../assets/js/lang-switcher.js'></script>
+</body>
+</html>

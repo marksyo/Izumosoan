@@ -43,7 +43,7 @@
 }
     </script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://izumosoan.com/en/index.html"},{"@type":"ListItem","position":2,"name":"Services","item":"https://izumosoan.com/en/services.html"},{"@type":"ListItem","position":3,"name":"Smart Cafeteria","item":"https://izumosoan.com/en/smart-cafeteria.html"},{"@type":"ListItem","position":4,"name":"Weight-Based Checkout","item":"https://izumosoan.com/en/smart-cafeteria-weight.html"}]}
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://izumosoan.com/en/index.html"},{"@type":"ListItem","position":2,"name":"Products","item":"https://izumosoan.com/en/products.html"},{"@type":"ListItem","position":3,"name":"Smart Cafeteria","item":"https://izumosoan.com/en/smart-cafeteria.html"},{"@type":"ListItem","position":4,"name":"Weight-Based Checkout","item":"https://izumosoan.com/en/smart-cafeteria-weight.html"}]}
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -118,6 +118,16 @@
     .aic-wt-impact-card h3 { font-size: 1.1rem; margin-bottom: 6px; color: #2c3e50; }
     .aic-wt-impact-card p { font-size: 0.9rem; color: #666; margin: 0; line-height: 1.7; }
 
+    /* Featured (highlighted) impact card */
+    .aic-wt-impact-card.featured { background: linear-gradient(135deg, #00880F 0%, #305534 100%); position: relative; box-shadow: 0 10px 32px rgba(0,136,15,0.35); border: 2px solid #ffe14d; transform: translateY(-4px); overflow: hidden; }
+    .aic-wt-impact-card.featured::after { content: ''; position: absolute; top: -40px; right: -40px; width: 120px; height: 120px; background: rgba(255,225,77,0.18); border-radius: 50%; }
+    .aic-wt-impact-card.featured:hover { transform: translateY(-8px); }
+    .aic-wt-impact-card.featured .aic-wt-impact-icon { background: #ffe14d; color: #305534; }
+    .aic-wt-impact-card.featured h3 { color: #fff; }
+    .aic-wt-impact-card.featured p { color: rgba(255,255,255,0.92); }
+    .aic-wt-impact-card.featured a { color: #ffe14d !important; }
+    .aic-wt-impact-badge { position: absolute; top: 16px; right: 16px; background: #ffe14d; color: #305534; font-size: 0.72rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; z-index: 1; letter-spacing: 0.03em; }
+
     /* CTA */
     .aic-wt-cta { background: #305534; padding: 60px 0; text-align: center; color: #fff; }
     .aic-wt-cta h2 { color: #fff; font-size: 1.6rem; margin-bottom: 12px; }
@@ -135,6 +145,33 @@
         .aic-wt-steps { grid-template-columns: repeat(2, 1fr); }
         .aic-wt-impacts { grid-template-columns: repeat(2, 1fr); }
         .aic-wt-hero h1 { font-size: 1.8rem; }
+    }
+
+    /* Satisfaction highlight band */
+    .aic-wt-sat { background: linear-gradient(135deg, #00880F 0%, #305534 100%); color: #fff; padding: 64px 0; }
+    .aic-wt-sat .aic-wt-sat-head { text-align: center; max-width: 760px; margin: 0 auto 40px; }
+    .aic-wt-sat .aic-wt-sat-eyebrow { display: inline-block; background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.4); color: #fff; font-size: 0.85rem; font-weight: 600; padding: 6px 16px; border-radius: 20px; margin-bottom: 18px; }
+    .aic-wt-sat h2 { color: #fff; font-size: 2rem; line-height: 1.4; margin: 0 0 10px; }
+    .aic-wt-sat h2 .hl { color: #ffe14d; }
+    .aic-wt-sat .aic-wt-sat-sub { color: rgba(255,255,255,0.9); font-size: 1.05rem; margin: 0; }
+    .aic-wt-sat-reasons { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 820px; margin: 0 auto 44px; }
+    .aic-wt-sat-reason { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 14px; padding: 28px 26px; text-align: center; backdrop-filter: blur(2px); }
+    .aic-wt-sat-reason .aic-wt-sat-badge { width: 40px; height: 40px; border-radius: 50%; background: #ffe14d; color: #305534; font-weight: 700; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
+    .aic-wt-sat-reason i { font-size: 2rem; margin-bottom: 12px; display: block; }
+    .aic-wt-sat-reason h3 { color: #fff; font-size: 1.2rem; margin: 0; font-weight: 700; }
+    .aic-wt-sat-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 940px; margin: 0 auto 40px; }
+    .aic-wt-sat-stat { text-align: center; }
+    .aic-wt-sat-stat .num { font-family: 'Barlow', sans-serif; font-size: 2.6rem; font-weight: 800; color: #ffe14d; line-height: 1; }
+    .aic-wt-sat-stat .num small { font-size: 1.3rem; font-weight: 700; }
+    .aic-wt-sat-stat .lbl { font-size: 0.9rem; color: rgba(255,255,255,0.9); margin-top: 8px; }
+    .aic-wt-sat-cta { text-align: center; }
+    .aic-wt-sat-cta a { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #00880F; font-weight: 700; font-size: 1.02rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 18px rgba(0,0,0,0.2); transition: transform 0.25s; }
+    .aic-wt-sat-cta a:hover { transform: translateY(-2px); text-decoration: none; color: #00660C; }
+    @media (max-width: 767px) {
+        .aic-wt-sat-reasons { grid-template-columns: 1fr; }
+        .aic-wt-sat-stats { grid-template-columns: repeat(2, 1fr); gap: 28px 16px; }
+        .aic-wt-sat h2 { font-size: 1.5rem; }
+        .aic-wt-sat-stat .num { font-size: 2.2rem; }
     }
     @media (max-width: 575px) {
         .aic-wt-features, .aic-wt-products, .aic-wt-steps, .aic-wt-impacts { grid-template-columns: 1fr; }
@@ -210,7 +247,7 @@
         <div class='aic-wt-breadcrumb'>
             <div class='container'>
                 <a href='index.html'>Home</a><span>›</span>
-                <a href='services.html'>Services</a><span>›</span>
+                <a href='products.html'>Products</a><span>›</span>
                 <a href='smart-cafeteria.html'>Smart Cafeteria</a><span>›</span>
                 Weight-Based Checkout
             </div>
@@ -371,6 +408,8 @@
                 <div class='section-title'>
                     <h2>Implementation Benefits</h2>
                     <p>Concrete results delivered by the weight-based checkout system.</p>
+                    <p style='display:inline-block;background:#EFF6F0;border:1px solid #00880F;color:#00880F;font-weight:700;font-size:1.05rem;padding:10px 22px;border-radius:24px;margin-top:14px;'><i class="fas fa-fire" style="margin-right:8px;"></i>Cafeterias that adopt this method are highly popular.</p>
+                    <p style='margin-top:12px;'><a href="column/cafeteria-popularity.html" style="color:#00880F;font-weight:600;text-decoration:none;border-bottom:2px solid #00880F;padding-bottom:2px;">Why so popular? Read the reasons behind the high satisfaction <i class="fas fa-arrow-right"></i></a></p>
                 </div>
                 <div class='aic-wt-impacts'>
                     <div class='aic-wt-impact-card'>
@@ -380,11 +419,12 @@
                             <p>The pay-for-what-you-take model eliminates waste. Dramatically reduces food disposal while achieving cost savings and SDGs contribution.</p>
                         </div>
                     </div>
-                    <div class='aic-wt-impact-card'>
+                    <div class='aic-wt-impact-card featured'>
+                        <span class='aic-wt-impact-badge'><i class="fas fa-star"></i> Featured</span>
                         <div class='aic-wt-impact-icon'><i class="fas fa-smile"></i></div>
                         <div>
                             <h3>Higher User Satisfaction</h3>
-                            <p>Freedom to choose portions boosts satisfaction. Also contributes to health management and increases cafeteria usage rates.</p>
+                            <p>Freedom to choose the dishes and portions you want boosts satisfaction. More variety and shorter waits drive higher cafeteria usage rates.</p>
                         </div>
                     </div>
                     <div class='aic-wt-impact-card'>
@@ -428,6 +468,7 @@
                     <ul>
                         <li><a href='index.html'>Home</a></li>
                         <li><a href='about.html'>About</a></li>
+                        <li><a href='products.html'>Products</a></li>
                         <li><a href='services.html'>Services</a></li>
                         <li><a href='case-studies.html'>Case Studies</a></li>
                         <li><a href='overseas-partner.html'>Overseas Partner</a></li>
@@ -441,6 +482,10 @@
                         <a class='footer-product-banner footer-product-safeops' href='smart-cafeteria.html'>
                             <span>Smart Cafeteria</span>
                             <small>AI Recognition · RFID · Weighing</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-access' href='access-control.html'>
+                            <span>Access Control</span>
+                            <small>Face · IC Card · QR authentication & existing-equipment integration</small>
                         </a>
                         <a class='footer-product-banner footer-product-sitebridge' href='products-sitebridge.html'>
                             <span>IZUMO SiteBridge</span>

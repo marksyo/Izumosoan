@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Access Control System | Face / IC Card / QR Authentication & Equipment Integration | Izumo Soan</title>
+    <meta name='description' content='We select the equipment and systems needed for facility access control, combining face recognition, IC card, QR and other authentication methods with electric locks, controllers and management software. We also support integration with existing equipment and the Japan rollout, customization and deployment of overseas-manufacturer products. For factories, logistics, research facilities, data centers and offices.'>
+
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/access-control.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/access-control.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/access-control.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/access-control.html">
+    <link rel="canonical" href="https://izumosoan.com/en/access-control.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/en/access-control.html">
+    <meta property="og:title" content="Access Control System | Izumo Soan">
+    <meta property="og:description" content="We select the equipment and systems for facility access control — face, IC card, QR authentication and integration with existing equipment — and support deployment in Japan.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://izumosoan.com/assets/img/accesscontrol/F972-door-access-hero.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Access Control System | Izumo Soan">
+    <meta name="twitter:description" content="We select the equipment and systems for facility access control — face, IC card, QR authentication and integration with existing equipment — and support deployment in Japan.">
+    <meta name="twitter:image" content="https://izumosoan.com/assets/img/accesscontrol/F972-door-access-hero.png">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"Izumo Soan","url":"[REDACTED_CONN_STRING]://izumosoan.com","address":{"@type":"PostalAddress","addressLocality":"Katsushika-ku, Tokyo","addressRegion":"Tokyo","streetAddress":"4-37-8 Higashi-Tateishi","addressCountry":"JP"},"description":"Engineering partner bridging technology and Japanese worksites"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://izumosoan.com/en/index.html"},{"@type":"ListItem","position":2,"name":"Products","item":"https://izumosoan.com/en/products.html"},{"@type":"ListItem","position":3,"name":"Access Control System","item":"https://izumosoan.com/en/access-control.html"}]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Service","name":"Access Control System","serviceType":"Equipment selection, system configuration, existing-equipment integration and deployment support for facility access control","provider":{"@type":"Organization","name":"Izumo Soan","url":"https://izumosoan.com/"},"areaServed":{"@type":"Place","name":"Japan"},"description":"We combine authentication methods such as face recognition, IC card and QR with electric locks, control devices and management software to build an access control system tailored to each facility's operation. We also support integration with existing equipment and the Japan rollout, customization and deployment of overseas-manufacturer products."}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../assets/css/style.min.css'>
+
+    <style>
+    /* Access Control page-specific styles (green theme) */
+    .aic-ac-hero { background: linear-gradient(135deg, #EFF6F0 0%, #d4edda 100%); padding: 80px 0 60px; }
+    .aic-ac-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .aic-ac-hero h1 { font-size: 2.3rem; color: #2c3e50; margin-bottom: 14px; line-height: 1.4; }
+    .aic-ac-hero .subtitle { font-size: 1.08rem; color: #555; line-height: 1.9; margin-bottom: 24px; }
+    .aic-ac-hero-points { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
+    .aic-ac-hero-points span { background: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.88rem; font-weight: 500; color: #00880F; border: 1px solid #00880F; }
+    .aic-ac-hero-points span i { margin-right: 6px; }
+    .aic-ac-hero-visual { text-align: center; }
+    .aic-ac-hero-visual img { max-width: 100%; max-height: 420px; object-fit: contain; }
+    .aic-ac-hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* Breadcrumb */
+    .aic-ac-breadcrumb { padding: 14px 0; font-size: 0.85rem; color: #888; }
+    .aic-ac-breadcrumb a { color: #00880F; text-decoration: none; }
+    .aic-ac-breadcrumb a:hover { text-decoration: underline; }
+    .aic-ac-breadcrumb span { margin: 0 6px; color: #bbb; }
+
+    /* Flow diagram (text) */
+    .aic-ac-flow { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; margin: 30px 0; }
+    .aic-ac-flow-step { background: #EFF6F0; border: 1px solid #00880F; color: #305534; font-weight: 600; padding: 12px 18px; border-radius: 10px; font-size: 0.95rem; }
+    .aic-ac-flow-arrow { color: #00880F; font-size: 1.1rem; }
+
+    /* Problem list */
+    .aic-ac-problems { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 24px; }
+    .aic-ac-problem { background: #fff; border-left: 4px solid #00880F; border-radius: 0 10px 10px 0; padding: 18px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); font-size: 0.95rem; color: #444; display: flex; align-items: flex-start; gap: 12px; }
+    .aic-ac-problem i { color: #00880F; font-size: 1.1rem; margin-top: 3px; }
+
+    /* System concept box */
+    .aic-ac-concept { background: #305534; color: #fff; border-radius: 16px; padding: 40px; text-align: center; margin-top: 30px; }
+    .aic-ac-concept p { color: rgba(255,255,255,0.92); font-size: 1.05rem; line-height: 1.9; margin: 0; }
+    .aic-ac-concept strong { color: #ffe14d; }
+
+    /* Auth methods */
+    .aic-ac-auth { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .aic-ac-auth-card { background: #fff; border-radius: 14px; padding: 32px 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); border-top: 4px solid #00880F; transition: transform 0.3s; }
+    .aic-ac-auth-card:hover { transform: translateY(-5px); }
+    .aic-ac-auth-card .aic-ac-auth-icon { font-size: 2.2rem; color: #00880F; margin-bottom: 14px; }
+    .aic-ac-auth-card h3 { font-size: 1.2rem; color: #2c3e50; margin-bottom: 12px; }
+    .aic-ac-auth-card p { font-size: 0.92rem; color: #555; line-height: 1.8; margin: 0 0 10px; }
+    .aic-ac-auth-card ul { margin: 0; padding-left: 1.2em; }
+    .aic-ac-auth-card li { font-size: 0.88rem; color: #666; line-height: 1.7; }
+
+    /* Product cards (devices) */
+    .aic-ac-products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .aic-ac-product-card { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 2px 14px rgba(0,0,0,0.06); text-align: center; transition: transform 0.3s; }
+    .aic-ac-product-card:hover { transform: translateY(-4px); }
+    .aic-ac-product-card .aic-ac-product-img { min-height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+    .aic-ac-product-card .aic-ac-product-img img { max-width: 100%; max-height: 180px; object-fit: contain; }
+    .aic-ac-product-card h4 { font-size: 1rem; color: #2c3e50; margin: 0 0 6px; }
+    .aic-ac-product-card .aic-ac-model { display: inline-block; background: #EFF6F0; color: #00880F; font-size: 0.78rem; font-weight: 700; padding: 2px 10px; border-radius: 12px; margin-bottom: 8px; }
+    .aic-ac-product-card p { font-size: 0.85rem; color: #666; line-height: 1.7; margin: 0; }
+
+    /* Feature grid (with images) */
+    .aic-ac-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .aic-ac-feature { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
+    .aic-ac-feature img { width: 100%; height: 220px; object-fit: cover; display: block; }
+    .aic-ac-feature-body { padding: 22px 24px; }
+    .aic-ac-feature-body h3 { font-size: 1.1rem; color: #2c3e50; margin: 0 0 8px; }
+    .aic-ac-feature-body p { font-size: 0.9rem; color: #666; line-height: 1.8; margin: 0; }
+
+    /* System composition table */
+    .aic-ac-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .aic-ac-table th, .aic-ac-table td { padding: 14px 16px; border-bottom: 1px solid #ddd; text-align: left; font-size: 0.92rem; }
+    .aic-ac-table thead th { background: #305534; color: #fff; font-weight: 600; }
+    .aic-ac-table tbody tr:nth-child(even) { background: #f9f9f9; }
+    .aic-ac-table td:first-child { font-weight: 600; color: #2c3e50; min-width: 160px; }
+
+    /* Scene cards */
+    .aic-ac-scenes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .aic-ac-scene { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); transition: transform 0.3s; }
+    .aic-ac-scene:hover { transform: translateY(-4px); }
+    .aic-ac-scene img { width: 100%; height: 200px; object-fit: cover; display: block; }
+    .aic-ac-scene-body { padding: 22px 24px; }
+    .aic-ac-scene-body h3 { font-size: 1.1rem; color: #305534; margin: 0 0 8px; }
+    .aic-ac-scene-body p { font-size: 0.9rem; color: #666; line-height: 1.8; margin: 0; }
+
+    /* Strengths */
+    .aic-ac-strengths { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .aic-ac-strength { background: #fff; border-radius: 12px; padding: 30px 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); text-align: center; }
+    .aic-ac-strength i { font-size: 2.2rem; color: #00880F; margin-bottom: 14px; }
+    .aic-ac-strength h3 { font-size: 1.05rem; color: #2c3e50; margin-bottom: 10px; }
+    .aic-ac-strength p { font-size: 0.9rem; color: #666; line-height: 1.8; margin: 0; }
+
+    /* Flow steps (process) */
+    .aic-ac-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; counter-reset: acstep; }
+    .aic-ac-step { background: #fff; border-radius: 12px; padding: 28px 22px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); position: relative; }
+    .aic-ac-step .aic-ac-step-num { width: 44px; height: 44px; border-radius: 50%; background: #00880F; color: #fff; font-weight: 700; font-size: 1.15rem; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+    .aic-ac-step h3 { font-size: 1rem; color: #2c3e50; margin: 0 0 8px; }
+    .aic-ac-step p { font-size: 0.88rem; color: #666; line-height: 1.7; margin: 0; }
+
+    /* FAQ */
+    .aic-ac-faq { max-width: 860px; margin: 0 auto; }
+    .aic-ac-faq-item { background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 14px; padding: 20px 24px; }
+    .aic-ac-faq-item h3 { font-size: 1rem; color: #305534; margin: 0 0 8px; display: flex; gap: 10px; align-items: flex-start; }
+    .aic-ac-faq-item h3 i { color: #00880F; margin-top: 2px; }
+    .aic-ac-faq-item p { font-size: 0.9rem; color: #555; line-height: 1.8; margin: 0; padding-left: 26px; }
+
+    /* CTA */
+    .aic-ac-cta { background: #305534; padding: 60px 0; text-align: center; color: #fff; }
+    .aic-ac-cta h2 { color: #fff; font-size: 1.6rem; margin-bottom: 12px; }
+    .aic-ac-cta p { color: rgba(255,255,255,0.85); margin-bottom: 24px; }
+    .aic-ac-cta .btn-primary { background: #00880F; color: #fff; padding: 14px 32px; border-radius: 6px; font-size: 1rem; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.3s; }
+    .aic-ac-cta .btn-primary:hover { background: #00660C; text-decoration: none; }
+
+    .aic-ac-note { font-size: 0.82rem; color: #888; margin-top: 16px; }
+
+    @media (max-width: 991px) {
+        .aic-ac-hero-grid { grid-template-columns: 1fr; }
+        .aic-ac-auth, .aic-ac-features, .aic-ac-scenes { grid-template-columns: 1fr; }
+        .aic-ac-products, .aic-ac-strengths, .aic-ac-steps { grid-template-columns: repeat(2, 1fr); }
+        .aic-ac-problems { grid-template-columns: 1fr; }
+        .aic-ac-hero h1 { font-size: 1.8rem; }
+    }
+    @media (max-width: 575px) {
+        .aic-ac-products, .aic-ac-strengths, .aic-ac-steps { grid-template-columns: 1fr; }
+        .aic-ac-table { font-size: 0.82rem; }
+        .aic-ac-table th, .aic-ac-table td { padding: 10px; }
+    }
+    </style>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/logo/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/logo/apple-touch-icon.png">
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='index.html'><img src='../assets/img/logo/logo.webp' alt='Izumo Soan' class='header-logo-img' style='height:80px;'></a>
+            </div>
+            <div class='language-switcher'>
+                <span class='lang-label'><i class="fas fa-globe"></i></span>
+                <select id='lang-select'>
+                    <option value='ja'>日本語</option>
+                    <option value='en' selected>English</option>
+                    <option value='zh'>中文</option>
+                </select>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
+            <nav>
+                <ul>
+                    <li><a href='index.html'>Home</a></li>
+                    <li><a href='services.html'>Services</a></li>
+                    <li><a href='products.html' class='active'>Products</a></li>
+                    <li><a href='case-studies.html'>Case Studies</a></li>
+                    <li><a href='about.html'>About</a></li>
+                    <li><a href='column/index.html'>Column</a></li>
+                    <li><a href='index.html#contact'>Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <div class='aic-ac-breadcrumb'>
+            <div class='container'>
+                <a href='index.html'>Home</a><span>›</span>
+                <a href='products.html'>Products</a><span>›</span>
+                Access Control System
+            </div>
+        </div>
+
+        <!-- 1. Hero -->
+        <section class='aic-ac-hero'>
+            <div class='container aic-ac-hero-grid'>
+                <div>
+                    <h1>An access control system that balances<br>facility security and convenience</h1>
+                    <p class='subtitle'>We combine authentication technologies such as face recognition and IC cards with electric locks, control devices and management software to build an access control system tailored to how your facility operates.</p>
+                    <div class='aic-ac-hero-points'>
+                        <span><i class="fas fa-check"></i>Face / Card / QR</span>
+                        <span><i class="fas fa-check"></i>Integrates with existing equipment</span>
+                        <span><i class="fas fa-check"></i>Japan deployment & support</span>
+                    </div>
+                    <div class='aic-ac-hero-buttons'>
+                        <a href='index.html#contact' class='btn-primary'>Consult about access control</a>
+                        <a href='#system' class='btn-secondary'>See the system configuration</a>
+                    </div>
+                </div>
+                <div class='aic-ac-hero-visual'>
+                    <img src='../assets/img/accesscontrol/F972-door-access-hero.png' alt='Face recognition access control terminal (7-inch face recognition door access device)'>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Challenges -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>Do you have any of these access control challenges?</h2>
+                    <p>Not "I want to buy a face scanner" but "I want to improve access control" — we support the selection and configuration for exactly that.</p>
+                </div>
+                <div class='aic-ac-problems'>
+                    <div class='aic-ac-problem'><i class="fas fa-key"></i>Lending out and collecting keys/cards takes effort</div>
+                    <div class='aic-ac-problem'><i class="fas fa-user-edit"></i>Want to streamline access-permission changes for leavers and transfers</div>
+                    <div class='aic-ac-problem'><i class="fas fa-ban"></i>Want to restrict entry by non-authorized people</div>
+                    <div class='aic-ac-problem'><i class="fas fa-door-open"></i>Want to manage multiple entrances at factories/warehouses</div>
+                    <div class='aic-ac-problem'><i class="fas fa-users"></i>Want to distinguish entry of employees vs. external contractors</div>
+                    <div class='aic-ac-problem'><i class="fas fa-history"></i>Want to record and review entry/exit history</div>
+                    <div class='aic-ac-problem'><i class="fas fa-plug"></i>Want to use existing electric locks / access equipment</div>
+                    <div class='aic-ac-problem'><i class="fas fa-sync"></i>Want to integrate with attendance or facility management systems</div>
+                    <div class='aic-ac-problem'><i class="fas fa-redo"></i>Want to update an old access control system</div>
+                    <div class='aic-ac-problem'><i class="fas fa-smile"></i>Want to introduce new authentication such as face recognition</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. What is an access control system -->
+        <section class='section-padding section-bg' id='system'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>Think of access control as a system, not just a device</h2>
+                    <p>An access control system is not built from authentication terminals alone.</p>
+                </div>
+                <div class='aic-ac-concept'>
+                    <p>By combining user authentication, door locking/unlocking, entry/exit logging and permission management, we build a <strong>security environment</strong> suited to the facility.<br>As needed, we examine integration with management servers, cloud, networks, attendance management, visitor management and security/surveillance systems.</p>
+                </div>
+                <div class='aic-ac-flow'>
+                    <div class='aic-ac-flow-step'>User</div>
+                    <span class='aic-ac-flow-arrow'><i class="fas fa-arrow-right"></i></span>
+                    <div class='aic-ac-flow-step'>Auth terminal<br>(face / card / QR)</div>
+                    <span class='aic-ac-flow-arrow'><i class="fas fa-arrow-right"></i></span>
+                    <div class='aic-ac-flow-step'>Controller</div>
+                    <span class='aic-ac-flow-arrow'><i class="fas fa-arrow-right"></i></span>
+                    <div class='aic-ac-flow-step'>Electric lock / door</div>
+                    <span class='aic-ac-flow-arrow'><i class="fas fa-arrow-right"></i></span>
+                    <div class='aic-ac-flow-step'>Entry</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Authentication methods -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>Main authentication methods</h2>
+                    <p>Choose the authentication method to match how your facility operates.</p>
+                </div>
+                <div class='aic-ac-auth'>
+                    <div class='aic-ac-auth-card'>
+                        <div class='aic-ac-auth-icon'><i class="fas fa-smile"></i></div>
+                        <h3>Face recognition</h3>
+                        <p>Verifies identity using facial information. No need to carry a card, and authentication is contactless.</p>
+                        <ul>
+                            <li>Card-free, contactless, convenient</li>
+                            <li>Consider accuracy, anti-spoofing, installation environment</li>
+                            <li>Confirm handling of face data / personal information</li>
+                        </ul>
+                    </div>
+                    <div class='aic-ac-auth-card'>
+                        <div class='aic-ac-auth-icon'><i class="far fa-credit-card"></i></div>
+                        <h3>IC card / NFC, etc.</h3>
+                        <p>Uses cards or IC media. Easy to leverage existing card operations, and permission changes are easy to manage.</p>
+                        <ul>
+                            <li>Easy to leverage existing card operations</li>
+                            <li>Easy to manage user permission changes</li>
+                            <li>Compatibility with existing cards/readers checked per device</li>
+                        </ul>
+                    </div>
+                    <div class='aic-ac-auth-card'>
+                        <div class='aic-ac-auth-icon'><i class="fas fa-qrcode"></i></div>
+                        <h3>QR code</h3>
+                        <p>Authentication using QR codes. Suited to use cases such as visitor management and temporary access permissions.</p>
+                        <ul>
+                            <li>Suited to visitors / temporary use</li>
+                            <li>Flexible issuance and revocation workflows</li>
+                        </ul>
+                    </div>
+                    <div class='aic-ac-auth-card'>
+                        <div class='aic-ac-auth-icon'><i class="fas fa-fingerprint"></i></div>
+                        <h3>Others</h3>
+                        <p>Depending on the project, we also consider PIN codes, biometrics such as fingerprints, and combinations of multiple authentication methods.</p>
+                        <ul>
+                            <li>PIN / biometrics / multi-factor</li>
+                            <li>* Actual supported methods vary by the product/system adopted</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Product lineup -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>Authentication terminals & device lineup</h2>
+                    <p>From authentication terminals to controllers and readers, we select equipment to match the configuration.</p>
+                </div>
+                <div class='aic-ac-products'>
+                    <div class='aic-ac-product-card'>
+                        <div class='aic-ac-product-img'><img src='../assets/img/accesscontrol/F972-door-access-main.png' alt='7-inch Face Recognition Door Access Device F9-C72' loading='lazy'></div>
+                        <span class='aic-ac-model'>F9-C72</span>
+                        <h4>7-inch Face Recognition Door Access Terminal</h4>
+                        <p>Face recognition door access terminal with a 7-inch screen. Supports multi-modal authentication.</p>
+                    </div>
+                    <div class='aic-ac-product-card'>
+                        <div class='aic-ac-product-img'><img src='../assets/img/accesscontrol/F961-face-terminal-8inch.png' alt='8-inch Face Recognition Access Terminal F9-C61' loading='lazy'></div>
+                        <span class='aic-ac-model'>F9-C61</span>
+                        <h4>8-inch Face Recognition Access Terminal</h4>
+                        <p>Integrates AI, biometrics and IoT for fast identity authentication and access management.</p>
+                    </div>
+                    <div class='aic-ac-product-card'>
+                        <div class='aic-ac-product-img'><img src='../assets/img/accesscontrol/F973-attendance-terminal.png' alt='Face Recognition Attendance Terminal F9-C73' loading='lazy'></div>
+                        <span class='aic-ac-model'>F9-C73</span>
+                        <h4>Face Recognition Attendance Terminal</h4>
+                        <p>Face recognition and multi-mode authentication for identity verification, attendance and access control.</p>
+                    </div>
+                    <div class='aic-ac-product-card'>
+                        <div class='aic-ac-product-img'><img src='../assets/img/accesscontrol/I2-controller.png' alt='Smart Access Control Controller I2' loading='lazy'></div>
+                        <span class='aic-ac-model'>I2</span>
+                        <h4>Smart Controller</h4>
+                        <p>Centrally manages multiple security devices and unifies permission control.</p>
+                    </div>
+                    <div class='aic-ac-product-card'>
+                        <div class='aic-ac-product-img'><img src='../assets/img/accesscontrol/F951-qr-card-reader.png' alt='QR Code & Card Reader F9-C51' loading='lazy'></div>
+                        <span class='aic-ac-model'>F9-C51</span>
+                        <h4>QR & Card Reader</h4>
+                        <p>Supports QR code and card authentication for secure, efficient access management in various scenarios.</p>
+                    </div>
+                    <div class='aic-ac-product-card'>
+                        <div class='aic-ac-product-img'><img src='../assets/img/accesscontrol/F9C21-card-reader.png' alt='Card Reader F9-C21' loading='lazy'></div>
+                        <span class='aic-ac-model'>F9-C21</span>
+                        <h4>Card Reader</h4>
+                        <p>OLED display, card authentication and Wiegand compatibility for reliable identity verification.</p>
+                    </div>
+                </div>
+                <p class='aic-ac-note'>* Listed products are configuration examples. Actual equipment selection depends on the number of entrances, number of users, existing equipment and security requirements.</p>
+            </div>
+        </section>
+
+        <!-- 6. Product features -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>Key features of the authentication terminal</h2>
+                    <p>A terminal that combines durability, processing performance, usability and authentication flexibility.</p>
+                </div>
+                <div class='aic-ac-features'>
+                    <div class='aic-ac-feature'>
+                        <img src='../assets/img/accesscontrol/feature-ip66-housing.jpg' alt='IP66 dust- and water-resistant rugged housing' loading='lazy'>
+                        <div class='aic-ac-feature-body'>
+                            <h3>Rugged IP66-rated housing</h3>
+                            <p>A rugged housing design that can be considered for outdoor or dust/water-exposed environments.</p>
+                        </div>
+                    </div>
+                    <div class='aic-ac-feature'>
+                        <img src='../assets/img/accesscontrol/feature-quad-core.jpg' alt='Stable operation with quad-core performance' loading='lazy'>
+                        <div class='aic-ac-feature-body'>
+                            <h3>Processing power for stable operation</h3>
+                            <p>Quad-core processing performance enables stable authentication operation.</p>
+                        </div>
+                    </div>
+                    <div class='aic-ac-feature'>
+                        <img src='../assets/img/accesscontrol/feature-7inch-touchscreen.jpg' alt='7-inch HD touchscreen' loading='lazy'>
+                        <div class='aic-ac-feature-body'>
+                            <h3>Intuitive 7-inch HD touch operation</h3>
+                            <p>A 7-inch HD touchscreen delivers clear operation and display.</p>
+                        </div>
+                    </div>
+                    <div class='aic-ac-feature'>
+                        <img src='../assets/img/accesscontrol/feature-multimodal-auth.jpg' alt='Multi-modal authentication for flexible access' loading='lazy'>
+                        <div class='aic-ac-feature-body'>
+                            <h3>Multi-modal authentication</h3>
+                            <p>Supports multiple authentication methods — face, card, QR — for flexible access operation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. System composition -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>System configuration</h2>
+                    <p>From authentication terminal to door equipment, we examine the whole system.</p>
+                </div>
+                <table class='aic-ac-table'>
+                    <thead>
+                        <tr><th>Component</th><th>Role</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Authentication terminal</td><td>Authenticates users (face / card / QR, etc.)</td></tr>
+                        <tr><td>Card reader</td><td>Reads IC cards, etc.</td></tr>
+                        <tr><td>QR reader</td><td>Reads QR codes</td></tr>
+                        <tr><td>Control device</td><td>Controls locking / unlocking</td></tr>
+                        <tr><td>Electric lock</td><td>Locks / unlocks the door</td></tr>
+                        <tr><td>Exit button</td><td>Exit from the inside</td></tr>
+                        <tr><td>Sensor</td><td>Monitors door status, etc.</td></tr>
+                        <tr><td>Network</td><td>Connects terminals and the management system</td></tr>
+                        <tr><td>Management software</td><td>Manages users, permissions, logs, etc.</td></tr>
+                        <tr><td>Server / cloud</td><td>Manages data</td></tr>
+                    </tbody>
+                </table>
+                <p class='aic-ac-note'>* The actual system configuration is decided after confirming the number of entrances, number of users, existing equipment, security requirements, network environment, management method and required logs/reports.</p>
+            </div>
+        </section>
+
+        <!-- 8. Use scenes -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>For access control at a variety of facilities</h2>
+                    <p>Factories, logistics, research facilities, data centers, offices — we examine the configuration to match the site.</p>
+                </div>
+                <div class='aic-ac-scenes'>
+                    <div class='aic-ac-scene'>
+                        <img src='../assets/img/accesscontrol/scene-access-control.jpg' alt='Access control at factories and manufacturing facilities' loading='lazy'>
+                        <div class='aic-ac-scene-body'>
+                            <h3>Factories / Manufacturing & Research / Development facilities</h3>
+                            <p>Access control for employees, partner companies and authorized personnel. We also consider access control to specific areas and managed zones.</p>
+                        </div>
+                    </div>
+                    <div class='aic-ac-scene'>
+                        <img src='../assets/img/accesscontrol/scene-passage-control.png' alt='Passage control at logistics centers and warehouses' loading='lazy'>
+                        <div class='aic-ac-scene-body'>
+                            <h3>Logistics centers / Warehouses</h3>
+                            <p>For facilities with multiple entrances or high traffic, we examine authentication methods and equipment configuration to match operations.</p>
+                        </div>
+                    </div>
+                    <div class='aic-ac-scene'>
+                        <img src='../assets/img/accesscontrol/scene-visitor.png' alt='Visitor and access management at data centers' loading='lazy'>
+                        <div class='aic-ac-scene-body'>
+                            <h3>Data centers</h3>
+                            <p>Access control to critical equipment and managed zones. We confirm the relationship with existing security equipment and surveillance systems.</p>
+                        </div>
+                    </div>
+                    <div class='aic-ac-scene'>
+                        <img src='../assets/img/accesscontrol/scene-attendance.png' alt='Office access control and attendance integration' loading='lazy'>
+                        <div class='aic-ac-scene-body'>
+                            <h3>Offices / Business sites</h3>
+                            <p>Access control for employees and visitors. Migration from existing card operations to face recognition can also be considered.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Izumo Soan's strengths -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>Izumo Soan's strengths</h2>
+                    <p>Not just selling equipment — from requirements analysis to deployment support.</p>
+                </div>
+                <div class='aic-ac-strengths'>
+                    <div class='aic-ac-strength'>
+                        <i class="fas fa-globe-asia"></i>
+                        <h3>Overseas products × Japan deployment</h3>
+                        <p>We support the Japan rollout, customization and technical coordination of overseas-manufacturer products, selecting the optimal equipment for your requirements.</p>
+                    </div>
+                    <div class='aic-ac-strength'>
+                        <i class="fas fa-sitemap"></i>
+                        <h3>Built as a system</h3>
+                        <p>Not just terminals — we configure the control panels, electric locks, network and management software together as a system.</p>
+                    </div>
+                    <div class='aic-ac-strength'>
+                        <i class="fas fa-plug"></i>
+                        <h3>Integration with existing equipment</h3>
+                        <p>We examine use of existing electric locks, control panels and access control systems, and integration with attendance / facility management systems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Integration with existing systems -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>Integration with existing equipment & systems</h2>
+                    <p>Rather than replacing everything, we also consider making use of existing assets.</p>
+                </div>
+                <div class='aic-ac-concept' style='background:#EFF6F0;'>
+                    <p style='color:#305534;'>Access control is not only used standalone — by integrating with other systems in the facility, you can aim for more efficient operation.<br>We examine integration with <strong style='color:#00880F;'>attendance management, visitor management, surveillance cameras, facility management systems and HR/employee management</strong>.</p>
+                </div>
+                <table class='aic-ac-table'>
+                    <thead>
+                        <tr><th>Items to confirm for integration</th><th>Details</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>API / SDK</td><td>Confirm availability of a manufacturer-provided API/SDK</td></tr>
+                        <tr><td>Communication / data format</td><td>Confirm the communication method and data format needed for integration</td></tr>
+                        <tr><td>User info sync</td><td>Confirm how user information and permissions are synchronized</td></tr>
+                        <tr><td>Entry/exit log integration</td><td>Confirm how entry/exit logs are integrated</td></tr>
+                        <tr><td>Software development</td><td>Consider Japan-oriented software development/integration as needed</td></tr>
+                    </tbody>
+                </table>
+                <p class='aic-ac-note'>* Actual development feasibility, cost, timeline and scope are confirmed per project.</p>
+            </div>
+        </section>
+
+        <!-- 11. Deployment flow -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>Flow to deployment</h2>
+                    <p>From requirements analysis to deployment support, handled according to the project.</p>
+                </div>
+                <div class='aic-ac-steps'>
+                    <div class='aic-ac-step'><div class='aic-ac-step-num'>1</div><h3>Inquiry & hearing</h3><p>Tell us about your current challenges, facility and operations.</p></div>
+                    <div class='aic-ac-step'><div class='aic-ac-step-num'>2</div><h3>Requirements analysis</h3><p>We organize entrances, number of users, existing equipment and security requirements.</p></div>
+                    <div class='aic-ac-step'><div class='aic-ac-step-num'>3</div><h3>Equipment selection & system configuration</h3><p>We propose authentication methods, equipment and system configuration.</p></div>
+                    <div class='aic-ac-step'><div class='aic-ac-step-num'>4</div><h3>Integration with existing equipment</h3><p>We confirm the feasibility and method of integrating with existing equipment and systems.</p></div>
+                    <div class='aic-ac-step'><div class='aic-ac-step-num'>5</div><h3>Technical coordination with manufacturers</h3><p>We carry out technical coordination and customization with overseas manufacturers.</p></div>
+                    <div class='aic-ac-step'><div class='aic-ac-step-num'>6</div><h3>Deployment support</h3><p>We support installation, configuration and the start of operations.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. FAQ -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>Frequently asked questions</h2>
+                </div>
+                <div class='aic-ac-faq'>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>Can I buy only the face recognition terminal?</h3>
+                        <p>We can discuss standalone equipment, but Izumo Soan treats access control as a system and supports everything from requirements analysis to equipment selection, system configuration and deployment. Please consult us first.</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>Can I use existing electric locks or cards?</h3>
+                        <p>We propose after confirming whether existing electric locks, control panels and card operations can be used. Compatibility is checked per adopted device.</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>How is personal information for face recognition handled?</h3>
+                        <p>The management of face data and handling of personal information are confirmed and examined according to the adopted product/system and your operational policy.</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>Can it integrate with an attendance management system?</h3>
+                        <p>After confirming the availability of an API/SDK and the communication method, we examine integration with attendance / facility management systems.</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>Can multiple entrances or sites be managed together?</h3>
+                        <p>Depending on the number of entrances, site structure and number of users, we examine a configuration that includes controllers and management software.</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>Is deployment of overseas-manufacturer products possible?</h3>
+                        <p>The Japan rollout, customization and technical coordination of overseas-manufacturer products are Izumo Soan's strengths. We respond to match your requirements.</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>What areas do you cover?</h3>
+                        <p>It varies by project, so please contact us first.</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>How much does deployment cost?</h3>
+                        <p>It varies by equipment configuration, system scale and integration scope. We provide a quote after a hearing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related products -->
+        <section class='section-padding section-bg'>
+            <div class='container' style='text-align:center;'>
+                <div class='section-title'>
+                    <h2>Related products</h2>
+                </div>
+                <a href='products.html' class='btn-secondary'>See the product list</a>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class='aic-ac-cta'>
+            <div class='container'>
+                <h2>Consult us about access control</h2>
+                <p>It's fine even if you're at the "not sure where to start" stage. Tell us about your current challenges.</p>
+                <a href='index.html#contact' class='btn-primary'>Contact / Consult</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../assets/img/logo/logo.webp' alt='Izumo Soan'>
+                    <p class='logo-desp'>Technology as power for the worksite.</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href='index.html'>Home</a></li>
+                        <li><a href='about.html'>About</a></li>
+                        <li><a href='products.html'>Products</a></li>
+                        <li><a href='services.html'>Services</a></li>
+                        <li><a href='case-studies.html'>Case Studies</a></li>
+                        <li><a href='overseas-partner.html'>Overseas Partner</a></li>
+                        <li><a href='column/index.html'>Column</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>Products</h4>
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='smart-cafeteria.html'>
+                            <span>Smart Cafeteria</span>
+                            <small>AI Recognition · RFID · Weighing</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-access' href='access-control.html'>
+                            <span>Access Control</span>
+                            <small>Face · IC Card · QR authentication & existing-equipment integration</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>Operations improvement platform for smart worksites</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 Izumo Soan. All rights reserved. ｜ <a href='privacy.html' style='color:inherit;text-decoration:underline;'>Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src='../assets/js/main.js'></script>
+    <script src='../assets/js/lang-switcher.js'></script>
+</body>
+</html>

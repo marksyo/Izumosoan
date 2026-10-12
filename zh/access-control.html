@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang='zh'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>门禁管理系统 | 人脸识别·IC卡·二维码认证与既有设备联动 | 出云创安</title>
+    <meta name='description' content='为设施的门禁管理选定所需的设备与系统，将人脸识别、IC卡、二维码等多种认证方式与电锁、控制设备、管理软件相结合。并支持与既有设备的联动，以及海外厂商产品的日本导入、定制与导入支持。适用于工厂、物流、研究所、数据中心、办公室等。'>
+
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/access-control.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/access-control.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/access-control.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/access-control.html">
+    <link rel="canonical" href="https://izumosoan.com/zh/access-control.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="出云创安 Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/zh/access-control.html">
+    <meta property="og:title" content="门禁管理系统 | 出云创安">
+    <meta property="og:description" content="为设施的门禁管理选定设备与系统——人脸识别、IC卡、二维码认证及与既有设备的联动，并支持在日本的导入。">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:image" content="https://izumosoan.com/assets/img/accesscontrol/F972-door-access-hero.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="门禁管理系统 | 出云创安">
+    <meta name="twitter:description" content="为设施的门禁管理选定设备与系统——人脸识别、IC卡、二维码认证及与既有设备的联动，并支持在日本的导入。">
+    <meta name="twitter:image" content="https://izumosoan.com/assets/img/accesscontrol/F972-door-access-hero.png">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"出云创安 Izumo Soan","url":"[REDACTED_CONN_STRING]://izumosoan.com","address":{"@type":"PostalAddress","addressLocality":"东京都葛饰区","addressRegion":"东京","streetAddress":"东立石4-37-8","addressCountry":"JP"},"description":"连接现场、安全与运营的技术伙伴"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://izumosoan.com/zh/index.html"},{"@type":"ListItem","position":2,"name":"产品","item":"https://izumosoan.com/zh/products.html"},{"@type":"ListItem","position":3,"name":"门禁管理系统","item":"https://izumosoan.com/zh/access-control.html"}]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Service","name":"门禁管理系统","serviceType":"面向设施门禁管理的设备选型、系统构成、既有设备联动与导入支持","provider":{"@type":"Organization","name":"出云创安 Izumo Soan","url":"https://izumosoan.com/"},"areaServed":{"@type":"Place","name":"日本"},"description":"将人脸识别、IC卡、二维码等认证方式与电锁、控制设备、管理软件相结合，构建适合各设施运营的门禁管理系统。并支持与既有设备的联动，以及海外厂商产品的日本导入、定制与导入支持。"}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../assets/css/style.min.css'>
+
+    <style>
+    /* Access Control page-specific styles (green theme) */
+    .aic-ac-hero { background: linear-gradient(135deg, #EFF6F0 0%, #d4edda 100%); padding: 80px 0 60px; }
+    .aic-ac-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .aic-ac-hero h1 { font-size: 2.3rem; color: #2c3e50; margin-bottom: 14px; line-height: 1.4; }
+    .aic-ac-hero .subtitle { font-size: 1.08rem; color: #555; line-height: 1.9; margin-bottom: 24px; }
+    .aic-ac-hero-points { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
+    .aic-ac-hero-points span { background: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.88rem; font-weight: 500; color: #00880F; border: 1px solid #00880F; }
+    .aic-ac-hero-points span i { margin-right: 6px; }
+    .aic-ac-hero-visual { text-align: center; }
+    .aic-ac-hero-visual img { max-width: 100%; max-height: 420px; object-fit: contain; }
+    .aic-ac-hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* Breadcrumb */
+    .aic-ac-breadcrumb { padding: 14px 0; font-size: 0.85rem; color: #888; }
+    .aic-ac-breadcrumb a { color: #00880F; text-decoration: none; }
+    .aic-ac-breadcrumb a:hover { text-decoration: underline; }
+    .aic-ac-breadcrumb span { margin: 0 6px; color: #bbb; }
+
+    /* Flow diagram (text) */
+    .aic-ac-flow { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; margin: 30px 0; }
+    .aic-ac-flow-step { background: #EFF6F0; border: 1px solid #00880F; color: #305534; font-weight: 600; padding: 12px 18px; border-radius: 10px; font-size: 0.95rem; }
+    .aic-ac-flow-arrow { color: #00880F; font-size: 1.1rem; }
+
+    /* Problem list */
+    .aic-ac-problems { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 24px; }
+    .aic-ac-problem { background: #fff; border-left: 4px solid #00880F; border-radius: 0 10px 10px 0; padding: 18px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); font-size: 0.95rem; color: #444; display: flex; align-items: flex-start; gap: 12px; }
+    .aic-ac-problem i { color: #00880F; font-size: 1.1rem; margin-top: 3px; }
+
+    /* System concept box */
+    .aic-ac-concept { background: #305534; color: #fff; border-radius: 16px; padding: 40px; text-align: center; margin-top: 30px; }
+    .aic-ac-concept p { color: rgba(255,255,255,0.92); font-size: 1.05rem; line-height: 1.9; margin: 0; }
+    .aic-ac-concept strong { color: #ffe14d; }
+
+    /* Auth methods */
+    .aic-ac-auth { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .aic-ac-auth-card { background: #fff; border-radius: 14px; padding: 32px 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); border-top: 4px solid #00880F; transition: transform 0.3s; }
+    .aic-ac-auth-card:hover { transform: translateY(-5px); }
+    .aic-ac-auth-card .aic-ac-auth-icon { font-size: 2.2rem; color: #00880F; margin-bottom: 14px; }
+    .aic-ac-auth-card h3 { font-size: 1.2rem; color: #2c3e50; margin-bottom: 12px; }
+    .aic-ac-auth-card p { font-size: 0.92rem; color: #555; line-height: 1.8; margin: 0 0 10px; }
+    .aic-ac-auth-card ul { margin: 0; padding-left: 1.2em; }
+    .aic-ac-auth-card li { font-size: 0.88rem; color: #666; line-height: 1.7; }
+
+    /* Product cards (devices) */
+    .aic-ac-products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .aic-ac-product-card { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 2px 14px rgba(0,0,0,0.06); text-align: center; transition: transform 0.3s; }
+    .aic-ac-product-card:hover { transform: translateY(-4px); }
+    .aic-ac-product-card .aic-ac-product-img { min-height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+    .aic-ac-product-card .aic-ac-product-img img { max-width: 100%; max-height: 180px; object-fit: contain; }
+    .aic-ac-product-card h4 { font-size: 1rem; color: #2c3e50; margin: 0 0 6px; }
+    .aic-ac-product-card .aic-ac-model { display: inline-block; background: #EFF6F0; color: #00880F; font-size: 0.78rem; font-weight: 700; padding: 2px 10px; border-radius: 12px; margin-bottom: 8px; }
+    .aic-ac-product-card p { font-size: 0.85rem; color: #666; line-height: 1.7; margin: 0; }
+
+    /* Feature grid (with images) */
+    .aic-ac-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .aic-ac-feature { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
+    .aic-ac-feature img { width: 100%; height: 220px; object-fit: cover; display: block; }
+    .aic-ac-feature-body { padding: 22px 24px; }
+    .aic-ac-feature-body h3 { font-size: 1.1rem; color: #2c3e50; margin: 0 0 8px; }
+    .aic-ac-feature-body p { font-size: 0.9rem; color: #666; line-height: 1.8; margin: 0; }
+
+    /* System composition table */
+    .aic-ac-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .aic-ac-table th, .aic-ac-table td { padding: 14px 16px; border-bottom: 1px solid #ddd; text-align: left; font-size: 0.92rem; }
+    .aic-ac-table thead th { background: #305534; color: #fff; font-weight: 600; }
+    .aic-ac-table tbody tr:nth-child(even) { background: #f9f9f9; }
+    .aic-ac-table td:first-child { font-weight: 600; color: #2c3e50; min-width: 160px; }
+
+    /* Scene cards */
+    .aic-ac-scenes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .aic-ac-scene { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); transition: transform 0.3s; }
+    .aic-ac-scene:hover { transform: translateY(-4px); }
+    .aic-ac-scene img { width: 100%; height: 200px; object-fit: cover; display: block; }
+    .aic-ac-scene-body { padding: 22px 24px; }
+    .aic-ac-scene-body h3 { font-size: 1.1rem; color: #305534; margin: 0 0 8px; }
+    .aic-ac-scene-body p { font-size: 0.9rem; color: #666; line-height: 1.8; margin: 0; }
+
+    /* Strengths */
+    .aic-ac-strengths { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .aic-ac-strength { background: #fff; border-radius: 12px; padding: 30px 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); text-align: center; }
+    .aic-ac-strength i { font-size: 2.2rem; color: #00880F; margin-bottom: 14px; }
+    .aic-ac-strength h3 { font-size: 1.05rem; color: #2c3e50; margin-bottom: 10px; }
+    .aic-ac-strength p { font-size: 0.9rem; color: #666; line-height: 1.8; margin: 0; }
+
+    /* Flow steps (process) */
+    .aic-ac-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; counter-reset: acstep; }
+    .aic-ac-step { background: #fff; border-radius: 12px; padding: 28px 22px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); position: relative; }
+    .aic-ac-step .aic-ac-step-num { width: 44px; height: 44px; border-radius: 50%; background: #00880F; color: #fff; font-weight: 700; font-size: 1.15rem; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+    .aic-ac-step h3 { font-size: 1rem; color: #2c3e50; margin: 0 0 8px; }
+    .aic-ac-step p { font-size: 0.88rem; color: #666; line-height: 1.7; margin: 0; }
+
+    /* FAQ */
+    .aic-ac-faq { max-width: 860px; margin: 0 auto; }
+    .aic-ac-faq-item { background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 14px; padding: 20px 24px; }
+    .aic-ac-faq-item h3 { font-size: 1rem; color: #305534; margin: 0 0 8px; display: flex; gap: 10px; align-items: flex-start; }
+    .aic-ac-faq-item h3 i { color: #00880F; margin-top: 2px; }
+    .aic-ac-faq-item p { font-size: 0.9rem; color: #555; line-height: 1.8; margin: 0; padding-left: 26px; }
+
+    /* CTA */
+    .aic-ac-cta { background: #305534; padding: 60px 0; text-align: center; color: #fff; }
+    .aic-ac-cta h2 { color: #fff; font-size: 1.6rem; margin-bottom: 12px; }
+    .aic-ac-cta p { color: rgba(255,255,255,0.85); margin-bottom: 24px; }
+    .aic-ac-cta .btn-primary { background: #00880F; color: #fff; padding: 14px 32px; border-radius: 6px; font-size: 1rem; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.3s; }
+    .aic-ac-cta .btn-primary:hover { background: #00660C; text-decoration: none; }
+
+    .aic-ac-note { font-size: 0.82rem; color: #888; margin-top: 16px; }
+
+    @media (max-width: 991px) {
+        .aic-ac-hero-grid { grid-template-columns: 1fr; }
+        .aic-ac-auth, .aic-ac-features, .aic-ac-scenes { grid-template-columns: 1fr; }
+        .aic-ac-products, .aic-ac-strengths, .aic-ac-steps { grid-template-columns: repeat(2, 1fr); }
+        .aic-ac-problems { grid-template-columns: 1fr; }
+        .aic-ac-hero h1 { font-size: 1.8rem; }
+    }
+    @media (max-width: 575px) {
+        .aic-ac-products, .aic-ac-strengths, .aic-ac-steps { grid-template-columns: 1fr; }
+        .aic-ac-table { font-size: 0.82rem; }
+        .aic-ac-table th, .aic-ac-table td { padding: 10px; }
+    }
+    </style>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/logo/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/logo/apple-touch-icon.png">
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='index.html'><img src='../assets/img/logo/logo.webp' alt='Izumo Soan' class='header-logo-img' style='height:80px;'></a>
+            </div>
+            <div class='language-switcher'>
+                <span class='lang-label'><i class="fas fa-globe"></i></span>
+                <select id='lang-select'>
+                    <option value='ja'>日本語</option>
+                    <option value='en'>English</option>
+                    <option value='zh' selected>中文</option>
+                </select>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>☰</button>
+            <nav>
+                <ul>
+                    <li><a href='index.html'>首页</a></li>
+                    <li><a href='services.html'>服务</a></li>
+                    <li><a href='products.html' class='active'>产品</a></li>
+                    <li><a href='case-studies.html'>案例</a></li>
+                    <li><a href='about.html'>公司概况</a></li>
+                    <li><a href='column/index.html'>专栏</a></li>
+                    <li><a href='index.html#contact'>联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <div class='aic-ac-breadcrumb'>
+            <div class='container'>
+                <a href='index.html'>首页</a><span>›</span>
+                <a href='products.html'>产品</a><span>›</span>
+                门禁管理系统
+            </div>
+        </div>
+
+        <!-- 1. Hero -->
+        <section class='aic-ac-hero'>
+            <div class='container aic-ac-hero-grid'>
+                <div>
+                    <h1>兼顾设施安全与便利的<br>门禁管理系统</h1>
+                    <p class='subtitle'>将人脸识别、IC卡等认证技术与电锁、控制设备、管理软件相结合，构建契合设施运营方式的门禁管理系统。</p>
+                    <div class='aic-ac-hero-points'>
+                        <span><i class="fas fa-check"></i>人脸/卡片/二维码</span>
+                        <span><i class="fas fa-check"></i>与既有设备联动</span>
+                        <span><i class="fas fa-check"></i>日本导入与支持</span>
+                    </div>
+                    <div class='aic-ac-hero-buttons'>
+                        <a href='index.html#contact' class='btn-primary'>咨询门禁管理</a>
+                        <a href='#system' class='btn-secondary'>查看系统构成</a>
+                    </div>
+                </div>
+                <div class='aic-ac-hero-visual'>
+                    <img src='../assets/img/accesscontrol/F972-door-access-hero.png' alt='人脸识别门禁终端（7英寸人脸识别门禁设备）'>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Challenges -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>您是否有这些门禁管理的困扰？</h2>
+                    <p>不是"想买一台人脸识别机"，而是"想改善门禁管理"——我们正是为此提供选型与构成的支持。</p>
+                </div>
+                <div class='aic-ac-problems'>
+                    <div class='aic-ac-problem'><i class="fas fa-key"></i>钥匙或卡片的借出、回收管理很费事</div>
+                    <div class='aic-ac-problem'><i class="fas fa-user-edit"></i>希望高效变更离职、调动人员的访问权限</div>
+                    <div class='aic-ac-problem'><i class="fas fa-ban"></i>希望限制无关人员进入</div>
+                    <div class='aic-ac-problem'><i class="fas fa-door-open"></i>希望管理工厂、仓库等多个出入口</div>
+                    <div class='aic-ac-problem'><i class="fas fa-users"></i>希望区分员工与外部人员的出入</div>
+                    <div class='aic-ac-problem'><i class="fas fa-history"></i>希望记录、查看出入历史</div>
+                    <div class='aic-ac-problem'><i class="fas fa-plug"></i>希望利用既有的电锁或门禁设备</div>
+                    <div class='aic-ac-problem'><i class="fas fa-sync"></i>希望与考勤或设施管理系统联动</div>
+                    <div class='aic-ac-problem'><i class="fas fa-redo"></i>希望更新老旧的门禁管理系统</div>
+                    <div class='aic-ac-problem'><i class="fas fa-smile"></i>希望导入人脸识别等新的认证方式</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. What is an access control system -->
+        <section class='section-padding section-bg' id='system'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>把门禁管理当作系统来考虑，而不只是设备</h2>
+                    <p>门禁管理系统并非仅由认证终端构成。</p>
+                </div>
+                <div class='aic-ac-concept'>
+                    <p>通过将用户认证、门的开锁/上锁、出入信息记录、权限管理等相结合，构建契合设施的<strong>安全环境</strong>。<br>并根据需要，研究与管理服务器、云、网络、考勤管理、访客管理、安防/监控系统等的联动。</p>
+                </div>
+                <div class='aic-ac-flow'>
+                    <div class='aic-ac-flow-step'>用户</div>
+                    <span class='aic-ac-flow-arrow'><i class="fas fa-arrow-right"></i></span>
+                    <div class='aic-ac-flow-step'>认证终端<br>（人脸/卡片/二维码）</div>
+                    <span class='aic-ac-flow-arrow'><i class="fas fa-arrow-right"></i></span>
+                    <div class='aic-ac-flow-step'>控制装置</div>
+                    <span class='aic-ac-flow-arrow'><i class="fas fa-arrow-right"></i></span>
+                    <div class='aic-ac-flow-step'>电锁·门</div>
+                    <span class='aic-ac-flow-arrow'><i class="fas fa-arrow-right"></i></span>
+                    <div class='aic-ac-flow-step'>进入</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Authentication methods -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>主要认证方式</h2>
+                    <p>可根据设施的运营方式选择认证方式。</p>
+                </div>
+                <div class='aic-ac-auth'>
+                    <div class='aic-ac-auth-card'>
+                        <div class='aic-ac-auth-icon'><i class="fas fa-smile"></i></div>
+                        <h3>人脸识别</h3>
+                        <p>利用面部信息进行本人确认的方式。无需携带卡片，可非接触认证。</p>
+                        <ul>
+                            <li>免卡、非接触、便利性高</li>
+                            <li>需考虑认证精度、防伪、安装环境</li>
+                            <li>确认面部数据与个人信息的处理方式</li>
+                        </ul>
+                    </div>
+                    <div class='aic-ac-auth-card'>
+                        <div class='aic-ac-auth-icon'><i class="far fa-credit-card"></i></div>
+                        <h3>IC卡·NFC等</h3>
+                        <p>使用卡片或IC介质的方式。易于沿用既有卡片运营，权限变更也便于管理。</p>
+                        <ul>
+                            <li>易于沿用既有卡片运营</li>
+                            <li>便于管理用户权限变更</li>
+                            <li>与既有卡片/读卡器的兼容性按设备逐一确认</li>
+                        </ul>
+                    </div>
+                    <div class='aic-ac-auth-card'>
+                        <div class='aic-ac-auth-icon'><i class="fas fa-qrcode"></i></div>
+                        <h3>二维码</h3>
+                        <p>使用二维码的认证方式。适合访客管理、临时访问权限等按用途的应用。</p>
+                        <ul>
+                            <li>适合访客、临时使用</li>
+                            <li>可灵活设计发放与失效流程</li>
+                        </ul>
+                    </div>
+                    <div class='aic-ac-auth-card'>
+                        <div class='aic-ac-auth-icon'><i class="fas fa-fingerprint"></i></div>
+                        <h3>其他</h3>
+                        <p>视项目而定，也可研究密码、指纹等生物识别，以及多种认证的组合。</p>
+                        <ul>
+                            <li>密码·生物识别·多因素认证</li>
+                            <li>※实际支持的方式因采用的产品/系统而异</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Product lineup -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>认证终端·设备阵容</h2>
+                    <p>从认证终端到控制器、读卡器，按构成选定设备。</p>
+                </div>
+                <div class='aic-ac-products'>
+                    <div class='aic-ac-product-card'>
+                        <div class='aic-ac-product-img'><img src='../assets/img/accesscontrol/F972-door-access-main.png' alt='7英寸人脸识别门禁设备 F9-C72' loading='lazy'></div>
+                        <span class='aic-ac-model'>F9-C72</span>
+                        <h4>7英寸人脸识别门禁终端</h4>
+                        <p>配备7英寸屏幕的人脸识别门禁终端，支持多模态认证。</p>
+                    </div>
+                    <div class='aic-ac-product-card'>
+                        <div class='aic-ac-product-img'><img src='../assets/img/accesscontrol/F961-face-terminal-8inch.png' alt='8英寸人脸识别门禁终端 F9-C61' loading='lazy'></div>
+                        <span class='aic-ac-model'>F9-C61</span>
+                        <h4>8英寸人脸识别门禁终端</h4>
+                        <p>融合AI、生物识别与IoT技术，实现快速的本人认证与门禁管理。</p>
+                    </div>
+                    <div class='aic-ac-product-card'>
+                        <div class='aic-ac-product-img'><img src='../assets/img/accesscontrol/F973-attendance-terminal.png' alt='人脸识别考勤终端 F9-C73' loading='lazy'></div>
+                        <span class='aic-ac-model'>F9-C73</span>
+                        <h4>人脸识别考勤终端</h4>
+                        <p>以人脸识别与多模式认证，对应本人确认、考勤与门禁管理。</p>
+                    </div>
+                    <div class='aic-ac-product-card'>
+                        <div class='aic-ac-product-img'><img src='../assets/img/accesscontrol/I2-controller.png' alt='智能门禁控制器 I2' loading='lazy'></div>
+                        <span class='aic-ac-model'>I2</span>
+                        <h4>智能控制器</h4>
+                        <p>集中管理多台安防设备，统一权限控制。</p>
+                    </div>
+                    <div class='aic-ac-product-card'>
+                        <div class='aic-ac-product-img'><img src='../assets/img/accesscontrol/F951-qr-card-reader.png' alt='二维码·卡片读卡器 F9-C51' loading='lazy'></div>
+                        <span class='aic-ac-model'>F9-C51</span>
+                        <h4>二维码·读卡器</h4>
+                        <p>支持二维码与卡片认证，在多种场景下实现安全、高效的门禁管理。</p>
+                    </div>
+                    <div class='aic-ac-product-card'>
+                        <div class='aic-ac-product-img'><img src='../assets/img/accesscontrol/F9C21-card-reader.png' alt='读卡器 F9-C21' loading='lazy'></div>
+                        <span class='aic-ac-model'>F9-C21</span>
+                        <h4>读卡器</h4>
+                        <p>配备OLED显示屏、卡片认证与Wiegand兼容，提供稳定的本人确认。</p>
+                    </div>
+                </div>
+                <p class='aic-ac-note'>※所列产品为构成示例。实际设备选型将根据出入口数量、使用人数、既有设备与安全要求进行。</p>
+            </div>
+        </section>
+
+        <!-- 6. Product features -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>认证终端的主要特点</h2>
+                    <p>兼具坚固性、处理性能、操作性与认证灵活性的终端。</p>
+                </div>
+                <div class='aic-ac-features'>
+                    <div class='aic-ac-feature'>
+                        <img src='../assets/img/accesscontrol/feature-ip66-housing.jpg' alt='IP66防尘防水的坚固外壳' loading='lazy'>
+                        <div class='aic-ac-feature-body'>
+                            <h3>IP66等级的坚固外壳</h3>
+                            <p>坚固的外壳设计，可用于户外或有粉尘、水汽的环境。</p>
+                        </div>
+                    </div>
+                    <div class='aic-ac-feature'>
+                        <img src='../assets/img/accesscontrol/feature-quad-core.jpg' alt='四核带来的稳定运行' loading='lazy'>
+                        <div class='aic-ac-feature-body'>
+                            <h3>支撑稳定运行的处理性能</h3>
+                            <p>四核处理性能，实现稳定的认证运行。</p>
+                        </div>
+                    </div>
+                    <div class='aic-ac-feature'>
+                        <img src='../assets/img/accesscontrol/feature-7inch-touchscreen.jpg' alt='7英寸高清触摸屏' loading='lazy'>
+                        <div class='aic-ac-feature-body'>
+                            <h3>直观的7英寸高清触控操作</h3>
+                            <p>7英寸高清触摸屏，实现清晰易懂的操作与显示。</p>
+                        </div>
+                    </div>
+                    <div class='aic-ac-feature'>
+                        <img src='../assets/img/accesscontrol/feature-multimodal-auth.jpg' alt='多模态认证带来灵活的访问' loading='lazy'>
+                        <div class='aic-ac-feature-body'>
+                            <h3>支持多模态认证</h3>
+                            <p>支持人脸、卡片、二维码等多种认证方式，实现灵活的访问运营。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. System composition -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>系统构成</h2>
+                    <p>从认证终端到门设备，统筹考虑整个系统。</p>
+                </div>
+                <table class='aic-ac-table'>
+                    <thead>
+                        <tr><th>构成要素</th><th>作用</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>认证终端</td><td>认证用户（人脸/卡片/二维码等）</td></tr>
+                        <tr><td>读卡器</td><td>读取IC卡等</td></tr>
+                        <tr><td>二维码读取器</td><td>读取二维码</td></tr>
+                        <tr><td>控制装置</td><td>控制开锁/上锁</td></tr>
+                        <tr><td>电锁</td><td>门的上锁/开锁</td></tr>
+                        <tr><td>退出按钮</td><td>从内侧退出</td></tr>
+                        <tr><td>传感器</td><td>监测门的状态等</td></tr>
+                        <tr><td>网络</td><td>连接终端与管理系统</td></tr>
+                        <tr><td>管理软件</td><td>管理用户、权限、日志等</td></tr>
+                        <tr><td>服务器／云</td><td>管理数据</td></tr>
+                    </tbody>
+                </table>
+                <p class='aic-ac-note'>※实际的系统构成将在确认出入口数量、使用人数、既有设备、安全要求、网络环境、管理方式及所需日志/报表后决定。</p>
+            </div>
+        </section>
+
+        <!-- 8. Use scenes -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>适用于各类设施的门禁管理</h2>
+                    <p>工厂、物流、研究所、数据中心、办公室等，按现场研究构成方案。</p>
+                </div>
+                <div class='aic-ac-scenes'>
+                    <div class='aic-ac-scene'>
+                        <img src='../assets/img/accesscontrol/scene-access-control.jpg' alt='工厂·制造设施的门禁管理' loading='lazy'>
+                        <div class='aic-ac-scene-body'>
+                            <h3>工厂·制造设施 / 研究所·研发设施</h3>
+                            <p>对员工、协力公司、关系人员的门禁管理。也研究对特定区域或管理区域的访问控制。</p>
+                        </div>
+                    </div>
+                    <div class='aic-ac-scene'>
+                        <img src='../assets/img/accesscontrol/scene-passage-control.png' alt='物流中心·仓库的通行管理' loading='lazy'>
+                        <div class='aic-ac-scene-body'>
+                            <h3>物流中心·仓库</h3>
+                            <p>对于有多个出入口或通行量大的设施，研究契合运营的认证方式与设备构成。</p>
+                        </div>
+                    </div>
+                    <div class='aic-ac-scene'>
+                        <img src='../assets/img/accesscontrol/scene-visitor.png' alt='数据中心的访客·访问管理' loading='lazy'>
+                        <div class='aic-ac-scene-body'>
+                            <h3>数据中心</h3>
+                            <p>对重要设备、管理区域的访问控制。确认与既有安防设备或监控系统的关系。</p>
+                        </div>
+                    </div>
+                    <div class='aic-ac-scene'>
+                        <img src='../assets/img/accesscontrol/scene-attendance.png' alt='办公室·营业所的门禁与考勤联动' loading='lazy'>
+                        <div class='aic-ac-scene-body'>
+                            <h3>办公室·营业所</h3>
+                            <p>对员工的门禁管理及对访客的访问管理。也可研究从既有卡片运营向人脸识别等的迁移。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Strengths -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>出云创安的优势</h2>
+                    <p>不只是销售设备，而是从需求梳理到导入支持。</p>
+                </div>
+                <div class='aic-ac-strengths'>
+                    <div class='aic-ac-strength'>
+                        <i class="fas fa-globe-asia"></i>
+                        <h3>海外产品 × 日本导入</h3>
+                        <p>支持海外厂商产品的日本导入、定制与技术调整，依据需求选定最合适的设备。</p>
+                    </div>
+                    <div class='aic-ac-strength'>
+                        <i class="fas fa-sitemap"></i>
+                        <h3>作为系统来构建</h3>
+                        <p>不仅是终端，还将控制盘、电锁、网络、管理软件一并作为系统来构成。</p>
+                    </div>
+                    <div class='aic-ac-strength'>
+                        <i class="fas fa-plug"></i>
+                        <h3>与既有设备联动</h3>
+                        <p>研究既有电锁、控制盘、门禁管理系统的利用，以及与考勤/设施管理系统的联动。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Integration -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>与既有设备·系统的联动</h2>
+                    <p>不是全部更换，而是也考虑利用既有资产。</p>
+                </div>
+                <div class='aic-ac-concept' style='background:#EFF6F0;'>
+                    <p style='color:#305534;'>门禁管理不仅可单独使用，通过与设施内的其他系统联动，可实现更高效的运营。<br>研究与<strong style='color:#00880F;'>考勤管理、访客管理、监控摄像、设施管理系统、人事/员工管理</strong>等的联动。</p>
+                </div>
+                <table class='aic-ac-table'>
+                    <thead>
+                        <tr><th>联动时的确认事项</th><th>内容</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>API / SDK</td><td>确认厂商提供的API/SDK是否具备</td></tr>
+                        <tr><td>通信方式·数据格式</td><td>确认联动所需的通信方式与数据格式</td></tr>
+                        <tr><td>用户信息同步</td><td>确认用户信息·权限的同步方式</td></tr>
+                        <tr><td>出入日志联动</td><td>确认出入日志的联动方式</td></tr>
+                        <tr><td>软件开发</td><td>根据需要研究面向日本的软件开发·联动</td></tr>
+                    </tbody>
+                </table>
+                <p class='aic-ac-note'>※实际的开发可行性、开发费用、周期与对应范围按项目逐一确认。</p>
+            </div>
+        </section>
+
+        <!-- 11. Deployment flow -->
+        <section class='section-padding section-bg'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>导入流程</h2>
+                    <p>从需求梳理到导入支持，按项目对应。</p>
+                </div>
+                <div class='aic-ac-steps'>
+                    <div class='aic-ac-step'><div class='aic-ac-step-num'>1</div><h3>咨询·需求了解</h3><p>请告诉我们当前的课题、设施与运营情况。</p></div>
+                    <div class='aic-ac-step'><div class='aic-ac-step-num'>2</div><h3>需求梳理</h3><p>梳理出入口、使用人数、既有设备与安全要求。</p></div>
+                    <div class='aic-ac-step'><div class='aic-ac-step-num'>3</div><h3>设备选型·系统构成</h3><p>提出认证方式、设备与系统构成方案。</p></div>
+                    <div class='aic-ac-step'><div class='aic-ac-step-num'>4</div><h3>与既有设备的联动调整</h3><p>确认与既有设备或系统联动的可行性与方式。</p></div>
+                    <div class='aic-ac-step'><div class='aic-ac-step-num'>5</div><h3>与厂商的技术调整</h3><p>与海外厂商进行技术调整与定制。</p></div>
+                    <div class='aic-ac-step'><div class='aic-ac-step-num'>6</div><h3>导入支持</h3><p>支持安装、设置到运营开始。</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. FAQ -->
+        <section class='section-padding'>
+            <div class='container'>
+                <div class='section-title'>
+                    <h2>常见问题</h2>
+                </div>
+                <div class='aic-ac-faq'>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>可以只购买人脸识别终端吗？</h3>
+                        <p>可以就单体设备进行咨询，但出云创安将门禁管理视为系统，提供从需求梳理到设备选型、系统构成与导入的全程支持。欢迎先行咨询。</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>可以沿用既有的电锁或卡片吗？</h3>
+                        <p>我们会在确认既有电锁、控制盘与卡片运营是否可用后再行提案。兼容性按采用设备逐一确认。</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>人脸识别的个人信息如何处理？</h3>
+                        <p>面部数据的管理方式与个人信息的处理，将根据采用的产品/系统及贵方的运营方针进行确认与研究。</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>能与考勤管理系统联动吗？</h3>
+                        <p>在确认API/SDK是否具备及通信方式后，研究与考勤/设施管理系统的联动。</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>能统一管理多个出入口或据点吗？</h3>
+                        <p>根据出入口数量、据点构成与使用人数，研究包含控制器与管理软件在内的构成。</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>可以导入海外厂商的产品吗？</h3>
+                        <p>海外厂商产品的日本导入、定制与技术调整正是出云创安的优势。我们将依据需求对应。</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>对应区域是哪里？</h3>
+                        <p>视项目而定，请先与我们联系。</p>
+                    </div>
+                    <div class='aic-ac-faq-item'>
+                        <h3><i class="fas fa-question-circle"></i>导入费用大约是多少？</h3>
+                        <p>因设备构成、系统规模与联动范围而异。将在了解需求后提供报价。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related products -->
+        <section class='section-padding section-bg'>
+            <div class='container' style='text-align:center;'>
+                <div class='section-title'>
+                    <h2>相关产品</h2>
+                </div>
+                <a href='products.html' class='btn-secondary'>查看产品列表</a>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class='aic-ac-cta'>
+            <div class='container'>
+                <h2>欢迎咨询门禁管理</h2>
+                <p>即使处于"不知从何入手"的阶段也没关系。请先告诉我们您当前的课题。</p>
+                <a href='index.html#contact' class='btn-primary'>联系·咨询</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../assets/img/logo/logo.webp' alt='Izumo Soan'>
+                    <p class='logo-desp'>以技术赋能现场。</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>菜单</h4>
+                    <ul>
+                        <li><a href='index.html'>首页</a></li>
+                        <li><a href='about.html'>公司概况</a></li>
+                        <li><a href='products.html'>产品</a></li>
+                        <li><a href='services.html'>服务</a></li>
+                        <li><a href='case-studies.html'>案例</a></li>
+                        <li><a href='overseas-partner.html'>海外合作伙伴</a></li>
+                        <li><a href='column/index.html'>专栏</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>产品信息</h4>
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='smart-cafeteria.html'>
+                            <span>智慧食堂</span>
+                            <small>AI图像识别·RFID·计量精算</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-access' href='access-control.html'>
+                            <span>门禁管理系统</span>
+                            <small>人脸识别·IC卡·二维码认证与既有设备联动</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>智慧现场的运营改善平台</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 出云创安 Izumo Soan. All rights reserved. ｜ <a href='privacy.html' style='color:inherit;text-decoration:underline;'>隐私政策</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src='../assets/js/main.js'></script>
+    <script src='../assets/js/lang-switcher.js'></script>
+</body>
+</html>
