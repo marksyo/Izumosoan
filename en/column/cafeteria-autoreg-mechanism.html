@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>How Does a Cafeteria Auto-Register Work? | Standard Systems vs. Register-Payment Integrated Systems | Izumo Soan Column</title>
+    <meta name='description' content='Compare how cafeteria auto-registers work across manned registers, standard auto-registers, and register-payment integrated auto-registers. From inter-device communication and continued operation during network outages to payment fees, learn the cafeteria operation challenges that processing speed alone cannot reveal, and the benefits of integrating the register and payment terminals.'>
+    <meta name='keywords' content='cafeteria auto-register, auto-register payment integrated, cafeteria self-checkout network outage, cafeteria payment terminal integration, cafeteria payment fees, register payment integration'>
+    <link rel="canonical" href="https://izumosoan.com/en/column/cafeteria-autoreg-mechanism.html">
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/column/cafeteria-autoreg-mechanism.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/column/cafeteria-autoreg-mechanism.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/column/cafeteria-autoreg-mechanism.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/column/cafeteria-autoreg-mechanism.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/en/column/cafeteria-autoreg-mechanism.html">
+    <meta property="og:title" content="How Does a Cafeteria Auto-Register Work? | Standard Systems vs. Register-Payment Integrated Systems">
+    <meta property="og:description" content="Compare how cafeteria auto-registers work across manned registers, standard auto-registers, and register-payment integrated auto-registers. From inter-device communication and continued operation during network outages to payment fees, learn the operation challenges processing speed alone cannot reveal, and the benefits of integrating the register and payment terminals.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://izumosoan.com/assets/img/cafeteria/AItype.jpg">
+    <meta property="og:image:alt" content="How Does a Cafeteria Auto-Register Work? | Standard Systems vs. Register-Payment Integrated Systems">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How Does a Cafeteria Auto-Register Work? | Standard Systems vs. Register-Payment Integrated Systems">
+    <meta name="twitter:description" content="Compare how cafeteria auto-registers work across manned registers, standard auto-registers, and register-payment integrated auto-registers, covering inter-device communication, outage resilience, and payment fees.">
+    <meta name="twitter:image" content="https://izumosoan.com/assets/img/cafeteria/AItype.jpg">
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://izumosoan.com/en/index.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Column",
+            "item": "https://izumosoan.com/en/column/index.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "How Does a Cafeteria Auto-Register Work? | Standard Systems vs. Register-Payment Integrated Systems"
+        }
+    ]
+}</script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "datePublished": "2026-10-15",
+    "dateModified": "2026-10-18",
+    "headline": "How Does a Cafeteria Auto-Register Work? | Standard Systems vs. Register-Payment Integrated Systems",
+    "description": "Compare how cafeteria auto-registers work across manned registers, standard auto-registers, and register-payment integrated auto-registers, covering inter-device communication, outage resilience, and payment fees, plus the benefits of integrating the register and payment terminals.",
+    "author": {
+        "@type": "Organization",
+        "name": "Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "sameAs": [
+            "https://izumosoan.com/"
+        ]
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://izumosoan.com/assets/img/logo/logo.png"
+        }
+    },
+    "mainEntityOfPage": "https://izumosoan.com/en/column/cafeteria-autoreg-mechanism.html"
+}</script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How does a cafeteria auto-register generally work?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It identifies dishes with RFID or AI image recognition and automatically calculates the total from registered prices. In a standard configuration, the register POS sends the transaction data to a linking PC, the PC passes the amount to the payment terminal, which communicates with the payment company, and the result is returned to the register to update the payment status. Some systems can calculate the amount in about one second when recognition conditions are met."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What challenges are often overlooked with standard auto-registers?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "In a configuration where multiple devices such as the dish-recognition unit, register POS, linking PC, and payment terminal work together, the stability of inter-device and external-server communication is critical. If order-data transmission or amount linking fails, checkout can stop or confirming the payment result can take time. If a successful payment is not reflected on the register, additional work such as sales reconciliation and double-payment checks may be required."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What are the benefits of a register-payment integrated auto-register?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Integrating the register and payment functions into a single terminal removes the amount linking between the PC and payment terminal and simplifies the configuration. Combining in-terminal data storage with automatic re-transmission after communication recovers makes it easier to keep checking out during network outages, and reduces causes of connection trouble and maintenance burden."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How much can the payment-fee burden be reduced?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "With typical cashless payments at a fee rate of around 3%, annual cashless sales of 50 million yen incur about 1.5 million yen in fees per year. By building the payment function into our own product and appropriately adopting methods such as prepaid, in-house accounts, or payroll deduction, the frequency of external payment-service use and the fee burden can potentially be reduced. Actual savings vary by payment method, operating cost, and implementation cost."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What payment methods does a register-payment integrated auto-register support?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our RFID and AI auto-registers have three payment methods built into the terminal: face recognition, QR code, and card. Depending on the configuration, they can also support methods that do not rely on external payment services, such as prepaid, in-house account, and payroll-deduction methods."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Which payment methods allow checkout to continue during a network outage?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An integrated auto-register completes register and payment processing within the terminal, stores transaction data locally, and automatically re-sends it after communication recovers. However, credit card and QR-code payments that require approval from an external payment company may still need communication. To keep checking out while offline, it is effective to design methods that can be processed without communication, such as prepaid or in-house account methods."
+            }
+        }
+    ]
+}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../../assets/css/style.min.css'>
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo/favicon.ico">
+    <style>
+    .column-hero {
+        background: linear-gradient(135deg, #001d30 0%, #003554 100%);
+        padding: 100px 20px 60px; color: #fff; text-align: center;
+    }
+    .column-hero h1 {
+        font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 800; line-height: 1.4;
+        max-width: 800px; margin: 0 auto 16px; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .column-breadcrumb { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 20px; }
+    .column-breadcrumb a { color: rgba(255,255,255,0.95); text-decoration: none; }
+    .column-breadcrumb a:hover { text-decoration: underline; }
+    .column-body {
+        max-width: 820px; margin: 0 auto; padding: 48px 20px 80px;
+        font-size: 1rem; line-height: 1.85; color: #1e293b;
+    }
+    .column-body h2 {
+        font-size: 1.5rem; font-weight: 700; color: #003554;
+        margin: 56px 0 20px; padding-bottom: 10px; border-bottom: 3px solid #006494;
+    }
+    .column-body h3 { font-size: 1.2rem; font-weight: 700; color: #004a77; margin: 36px 0 14px; }
+    .column-body h4 { font-size: 1.05rem; font-weight: 700; color: #333; margin: 28px 0 10px; }
+    .column-body p { margin: 0 0 18px; }
+    .column-body strong { color: #003554; }
+    .column-body .column-lead {
+        background: #f0f7ff; border-left: 4px solid #00880F;
+        padding: 14px 20px; margin: 0 0 22px; border-radius: 0 8px 8px 0;
+        font-weight: 500; color: #1e293b; font-size: 1.02rem; line-height: 1.75;
+    }
+    .column-body .column-lead strong { color: #00660C; }
+    .column-body .column-answer {
+        background: #eef6fb; border-left: 4px solid #006494;
+        padding: 14px 20px; margin: 0 0 24px; border-radius: 0 8px 8px 0;
+        font-size: 0.98rem; line-height: 1.8; color: #1e293b;
+    }
+    .column-body .column-answer strong { color: #003554; }
+    .column-body blockquote {
+        background: #f0f7ff; border-left: 4px solid #006494;
+        padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem;
+    }
+    .column-body blockquote p { margin: 0 0 8px; }
+    .column-body blockquote p:last-child { margin: 0; }
+    .column-body table {
+        width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.92rem;
+    }
+    .column-body table th {
+        background: #003554; color: #fff; padding: 12px 16px; text-align: left; font-weight: 600;
+    }
+    .column-body table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+    .column-body table tr:nth-child(even) { background: #f8fafc; }
+    .column-body table tr:hover { background: #f0f7ff; }
+    .column-body ul, .column-body ol { margin: 0 0 18px 20px; }
+    .column-body li { margin: 0 0 8px; }
+    .column-body a { color: #006494; text-decoration: underline; }
+    .column-body a:hover { color: #003554; }
+    .column-body hr { border: none; border-top: 1px solid #e2e8f0; margin: 48px 0; }
+    .column-cta {
+        background: linear-gradient(135deg, #001d30, #003554); color: #fff;
+        padding: 48px 32px; border-radius: 16px; text-align: center; margin: 56px 0 32px;
+    }
+    .column-cta h3 { color: #fff; font-size: 1.4rem; margin: 0 0 16px; border: none; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+    .column-cta p { color: #fff; margin: 0 0 24px; font-size: 1rem; text-shadow: 0 1px 4px rgba(0,0,0,0.2); }
+    .column-cta .cta-btn {
+        display: inline-block; background: #00880F; color: #fff;
+        padding: 16px 40px; border-radius: 8px; font-size: 1.1rem; font-weight: 700;
+        text-decoration: none; box-shadow: 0 4px 20px rgba(0,136,15,0.4); transition: all 0.3s;
+    }
+    .column-cta .cta-btn:hover { background: #006e0c; transform: translateY(-2px); color: #fff; }
+    .column-related {
+        margin: 48px 0 0; padding: 32px; background: #f4f7fa; border-radius: 12px;
+    }
+    .column-related h3 { color: #003554; font-size: 1.1rem; margin: 0 0 16px; border: none; }
+    .column-related ul { list-style: none; margin: 0; padding: 0; }
+    .column-related li { margin: 0 0 10px; }
+    .column-related a { color: #006494; text-decoration: none; font-size: 0.95rem; }
+    .column-related a:hover { text-decoration: underline; }
+    .column-related a::before { content: "📖 "; }
+    .column-body ol.flow-steps {
+        list-style: none; counter-reset: flow; margin: 0 0 18px 0; padding: 0;
+    }
+    .column-body ol.flow-steps li {
+        counter-increment: flow; position: relative; padding: 2px 0 2px 2.4em; margin: 0 0 10px;
+    }
+    .column-body ol.flow-steps li::before {
+        content: counter(flow) "."; position: absolute; left: 0; top: 2px;
+        font-weight: 700; color: #006494; min-width: 1.8em;
+    }
+    @media (max-width: 768px) {
+        .column-hero { padding: 80px 16px 40px; }
+        .column-body { padding: 32px 16px 60px; }
+        .column-body h2 { font-size: 1.3rem; }
+        .column-body table { font-size: 0.82rem; }
+        .column-body table th, .column-body table td { padding: 8px 10px; }
+        .column-cta { padding: 32px 20px; }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='../index.html'>
+                    <img src='../../assets/img/logo/logo.webp' alt='Izumo Soan' class='header-logo-img' style='height:80px;'>
+                </a>
+            </div>
+            <div class='language-switcher'>
+                <span class='lang-label'><i class="fas fa-globe"></i></span>
+                <select id='lang-select'>
+                    <option value='ja'>日本語</option>
+                    <option value='en' selected>English</option>
+                    <option value='zh'>中文</option>
+                </select>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>&#9776;</button>
+            <nav>
+                <ul>
+                    <li><a href='../index.html'>Home</a></li>
+                    <li><a href='../services.html'>Services</a></li>
+                    <li><a href='../products.html'>Products</a></li>
+                    <li><a href='../case-studies.html'>Case Studies</a></li>
+                    <li><a href='../about.html'>About</a></li>
+                    <li><a href='../column/index.html'>Column</a></li>
+                    <li><a href='../index.html#contact'>Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="column-hero">
+            <div class="column-breadcrumb">
+                <a href="../index.html">Home</a> &gt; <a href="index.html">Column</a> &gt; How Does a Cafeteria Auto-Register Work? | Standard Systems vs. Register-Payment Integrated Systems
+            </div>
+            <h1>How Does a Cafeteria Auto-Register Work? | Standard Systems vs. Register-Payment Integrated Systems</h1>
+        </section>
+
+        <article class="column-body">
+            <blockquote>
+<p><strong>What you will learn in this article</strong><br>
+- The checkout flow and differences among manned registers, standard auto-registers, and register-payment integrated auto-registers<br>
+- The often-overlooked "inter-device communication and system integration" challenges of standard auto-registers<br>
+- Design thinking that helps keep checkout running during network outages<br>
+- Options for reducing the payment-fee burden (prepaid, in-house accounts, payroll deduction)</p>
+</blockquote>
+
+            <p class="column-lead">In company and university cafeterias, users crowd in during lunchtime, and register wait times can grow long. An <strong>auto-register</strong> automatically calculates the price of the dishes, streamlining checkout and shortening the user's wait.</p>
+
+            <p>However, the performance of an auto-register is not determined by dish-recognition speed alone. How the register and payment terminals are linked, how network outages are handled, and payment fees all have a major impact on cafeteria operation.</p>
+
+            <p>This article compares the mechanisms of manned registers, standard auto-registers, and the <strong>register-payment integrated auto-register</strong> we provide, and explains the characteristics of each.</p>
+
+            <h2>1. How a Manned Register Works</h2>
+            <p class="column-answer"><strong>Key point:</strong> A manned register is a method where a cashier visually checks the dishes, enters the amounts, and processes payment on a payment terminal. It is reliable, but during the lunch peak, register queues and input errors tend to occur.</p>
+            <p>At a manned register, the cashier checks the dishes, enters the amounts, and completes the checkout.</p>
+            <p><img src='../../assets/img/cafeteria/operator-5step-en.jpg' alt='Five-step manned-register checkout flow (1. Place tray 2. Check dishes and enter amounts 3. Display total 4. Pay 5. Receive tray)' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);' loading='lazy'></p>
+            <h4>Checkout Flow</h4>
+            <ol class="flow-steps">
+                <li>The user places the tray with their dishes on the register counter.</li>
+                <li>The cashier checks the types of dishes and enters each price into the POS register.</li>
+                <li>The total appears on the POS screen. The cashier confirms the payment method with the user and, if necessary, enters the amount into the payment terminal.</li>
+                <li>The user pays with a card, QR code, or similar method.</li>
+                <li>Once checkout is complete, the user takes the tray and moves to a seat.</li>
+            </ol>
+            <p>Because a person checks the dishes and enters the amounts in this method, register queues tend to form during busy periods. Input errors and the cashier's workload are also challenges.</p>
+
+            <h2>2. How a Standard Auto-Register Works</h2>
+            <p class="column-answer"><strong>Key point:</strong> A standard auto-register automatically identifies dishes with RFID or AI image recognition to calculate the amount, with the register POS, linking PC, and payment terminal communicating with one another to complete checkout. Recognition is fast, but the number of inter-device and external-server links grows, creating a risk that checkout stops during a network outage.</p>
+            <p>A standard auto-register uses technologies such as RFID or AI image recognition to automatically calculate the types and prices of dishes.</p>
+            <p><img src='../../assets/img/cafeteria/OtherRFIF-5step-en.jpg' alt='Five-step standard auto-register checkout flow (1. Place tray 2. Identify dishes and calculate amount with RFID/AI 3. Display total and link to PC 4. Pay at payment terminal and link result 5. Receive tray)' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);' loading='lazy'></p>
+            <h4>Checkout Flow</h4>
+            <ol class="flow-steps">
+                <li>The user places the tray with their dishes on the register counter.</li>
+                <li>RFID or AI image recognition identifies the dishes and calculates the total based on registered prices. Some systems can calculate the amount in about one second when recognition conditions are met.</li>
+                <li>The total appears on the register POS screen. The register-side system sends this transaction data to a separate PC and links the amount and order information needed for payment processing.</li>
+                <li>The user selects a payment method such as a card or QR code. The amount information is sent from the PC to the payment terminal, which communicates with the payment company's server to process the payment. The result is returned from the payment terminal to the PC, and the order data's payment status is updated.</li>
+                <li>Once payment is complete, the user takes the tray and moves to a seat.</li>
+            </ol>
+
+            <h3>An Often-Overlooked Challenge: Inter-Device Communication and System Integration</h3>
+            <p>A standard auto-register may have a configuration where multiple devices and systems work together, such as the dish-recognition unit, register POS, linking PC, and payment terminal.</p>
+            <p><img src='../../assets/img/cafeteria/Checkout_Payment.jpg' alt='Standard auto-register configuration diagram: the dish-recognition unit, register POS, linking PC, and payment terminal communicate and connect to an external payment-company server' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);' loading='lazy'></p>
+            <p>In this configuration, it is important that communication between the devices and with external servers works correctly.</p>
+            <p><img src='../../assets/img/cafeteria/pos-pay-link_EN.jpg' alt='Communication flow between the POS register and payment terminal: sending the transaction amount, communicating with and getting approval from the payment service, and returning the payment result to the register' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);' loading='lazy'></p>
+            <p>The way the POS register and payment terminal work together becomes easier to understand once you grasp these three points.</p>
+            <ol>
+                <li><strong>The POS register calculates the transaction amount and sends the necessary information to the payment terminal.</strong></li>
+                <li><strong>The payment terminal communicates with the payment service and receives the payment approval result.</strong></li>
+                <li><strong>Returning the payment result to the POS register links the checkout with the sales record.</strong></li>
+            </ol>
+            <p>For example, if a fault occurs in sending order data from the register to the PC, or in linking the amount from the PC to the payment terminal, checkout may stop or confirming the payment result may take time.</p>
+            <p>Also, even when the payment itself succeeds, if the result is not correctly reflected on the register side, additional work such as reconciliation with sales data and checking for double payments may be required.</p>
+            <blockquote>
+                <p>In fact, at one cafeteria, communication failures caused situations twice in the past where checkout could not be completed properly, and the operator had to cover the amounts that could not be settled.</p>
+                <p>Cases like these show that for cafeteria auto-registers, not only processing speed but also continued operation and recovery methods when a communication failure occurs are important.</p>
+            </blockquote>
+
+            <h2>3. How Our Auto-Register Works: Integrating the Register and Payment Terminals</h2>
+            <p class="column-answer"><strong>Key point:</strong> Our auto-register integrates the register and payment functions into a single terminal, a configuration that removes the amount linking between the PC and payment terminal. This simplifies the configuration and makes it easier to keep checking out during network outages and to optimize payment costs.</p>
+            <p>Our auto-register adopts a configuration that integrates the register and payment functions into the same terminal.</p>
+            <p><img src='../../assets/img/cafeteria/whyallinone_EN.png' alt='Why the register and payment functions are integrated into the same terminal: a diagram showing how removing amount linking between the PC and payment terminal simplifies the configuration' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);' loading='lazy'></p>
+            <p>All of our <a href="../products.html">RFID and AI products</a> are designed with the POS register and payment terminal integrated.</p>
+            <p>By removing the amount linking between the register-side PC and a separate payment terminal that a standard configuration requires, we simplify the system configuration and aim to improve stability.</p>
+            <p><img src='../../assets/img/cafeteria/AInewtype2.jpg' alt='Configuration image of our auto-register with the register and payment terminals integrated' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);' loading='lazy'></p>
+            <h4>Checkout Flow</h4>
+            <ol class="flow-steps">
+                <li>The user places the tray with their dishes on the register counter.</li>
+                <li>RFID or AI image recognition identifies the dishes and automatically calculates the total. When recognition conditions are met, the amount can be calculated in about one second.</li>
+                <li>The total appears on the register POS screen, and the user selects a payment method.</li>
+                <li>The user pays using a method supported by the system, such as face recognition, QR code, or card. Because register and payment processing run within the same terminal, there is no need to link amount information between a separate PC and payment terminal. Order data and payment results are recorded within the terminal and sent to the server. Even if communication with the server is temporarily interrupted, the data to be sent can be retained on the terminal and automatically sent once communication recovers.</li>
+                <li>Once checkout is complete, the user takes the tray and moves to a seat.</li>
+            </ol>
+
+            <h3>Supported Payment Methods: Face Recognition, QR Code, Card</h3>
+            <p>Our RFID and AI auto-registers have three payment methods built into the terminal: face recognition, QR code, and card. To match cafeteria operations, methods such as prepaid and in-house accounts can also be combined.</p>
+            <p><img src='../../assets/img/cafeteria/AIcheckout_allinone_EN.jpg' alt='Three payment methods built into the integrated auto-register: a diagram of face-recognition, QR-code, and card payments' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);' loading='lazy'></p>
+            <ul>
+                <li>Face recognition</li>
+                <li>QR code</li>
+                <li>Card</li>
+            </ul>
+
+            <h3>Feature 1: A Design That Keeps Checkout Running During Network Outages</h3>
+            <p>In our system, by completing register and payment processing within the terminal, we can adopt a design that keeps the corresponding processing running within the terminal even if communication with external servers temporarily stops.</p>
+            <p>Transaction data is stored within the terminal and sent to the server after communication recovers. This reduces the risk that a temporary network failure immediately halts the entire checkout operation due to data waiting to be sent.</p>
+            <p>However, the payment methods available during a communication outage differ depending on the payment method and settings. Credit card and QR-code payments that require approval from an external payment company may still require communication. To keep checkout running while offline, it is important to appropriately design methods that can be processed without communication, such as prepaid or in-house account methods.</p>
+
+            <h3>Feature 2: Simplifying the Link Between Register and Payment</h3>
+            <p>When the register and payment terminals are separate, a mechanism to exchange amounts and payment results between them is required.</p>
+            <p>Our integrated system can remove this inter-device communication processing.</p>
+            <p>By reducing the number of links between devices, we reduce the causes of connection trouble and simplify maintenance and fault handling.</p>
+
+            <h3>Feature 3: Options to Reduce the Payment-Fee Burden</h3>
+            <p>With typical cashless payments, payment fees are incurred by the cafeteria operator according to the payment service's contract terms. When the payment-fee rate is around 3%, it can become a non-negligible cost depending on the sales scale.</p>
+            <p>For example, if annual cashless payment sales are 50 million yen and the fee rate is 3%, the annual fees come to 1.5 million yen.</p>
+            <p>In our system, by building the payment function into our own product, operating methods that do not rely on typical external payment services can also be considered.</p>
+            <p>For example, the following methods:</p>
+            <ul>
+                <li><strong>Prepaid method:</strong> Deduct meal costs from a balance the user has charged in advance.</li>
+                <li><strong>In-house account method:</strong> Manage usage amounts tied to the user's employee ID or account.</li>
+                <li><strong>Payroll-deduction method:</strong> Total the cafeteria usage amounts and link them with the company's payroll-deduction mechanism.</li>
+            </ul>
+            <p>If these methods are appropriately adopted, the frequency of external payment-service use and the fee burden can potentially be reduced. Note that actual cost-saving effects vary by payment method, operating cost, and system implementation cost.</p>
+
+            <h2>4. Why We Integrated the Register and Payment Terminals</h2>
+            <p class="column-answer"><strong>Key point:</strong> There are two aims of integration. (1) To improve the stability of checkout processing by removing inter-device communication, and (2) to reduce reliance on external payment services and curb the cafeteria operator's payment costs and operational burden.</p>
+            <p>There are two main reasons we adopted an integrated configuration.</p>
+
+            <h3>Reason 1: To Improve the Stability of Checkout Processing</h3>
+            <p>At cafeteria auto-registers, many users must be processed within a limited time such as the lunch break.</p>
+            <p>For that reason, not only recognizing dishes quickly but also ensuring checkout processing does not stop midway is important.</p>
+            <p>Integrating the register and payment terminals removes the communication used to exchange amount information and payment results between the two. Furthermore, by combining in-terminal data storage with re-transmission after communication recovers, resilience to network failures can be improved.</p>
+            <p>We aim not merely to automate checkout but to build a mechanism that lets cafeterias operate stably.</p>
+
+            <h3>Reason 2: To Reduce the Cafeteria Operator's Payment Costs and Operational Burden</h3>
+            <p>Using an external payment service can incur payment fees and costs associated with the service contract. Also, a configuration that relies on a specific payment provider requires measures in case the service stops or contract terms change.</p>
+            <p>By building the payment function into our own terminal and allowing methods such as prepaid or in-house accounts to be selected, a payment environment suited to the cafeteria's operation can be built.</p>
+            <p>That said, even when not using an external payment service, balance management, fraud prevention, settlement management, and system maintenance are still required. It is important to compare the costs and operating conditions of each payment method and then choose the optimal configuration.</p>
+
+            <h2>5. Conclusion: Toward an Auto-Register That Is Not Just Fast but Hard to Stop</h2>
+            <p class="column-answer"><strong>Key point:</strong> When choosing a cafeteria auto-register, it is important to compare not only dish-recognition speed but the whole system, including outage preparedness, payment cost, and ease of use. The table below compares a standard auto-register with the integrated type.</p>
+            <p>When choosing a cafeteria auto-register, you need to pay attention not only to dish-recognition speed but also to the overall system configuration.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Comparison item</th>
+                        <th>Standard auto-register</th>
+                        <th>Our integrated auto-register</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Dish amount calculation</td><td>Automatic calculation with RFID, AI, etc.</td><td>Automatic calculation with RFID, AI, etc.</td></tr>
+                    <tr><td>Register and payment configuration</td><td>May link a separate terminal and separate PC</td><td>Register and payment functions integrated in the same terminal</td></tr>
+                    <tr><td>Inter-device amount linking</td><td>Required depending on configuration</td><td>No linking needed between register and payment terminals</td></tr>
+                    <tr><td>Handling network outages</td><td>Depends on system configuration and settings</td><td>Supports in-terminal storage and re-transmission after recovery</td></tr>
+                    <tr><td>Payment methods</td><td>External payment services, etc.</td><td>Face recognition, QR code, card, prepaid, etc., supported per configuration</td></tr>
+                    <tr><td>Payment cost</td><td>Depends on the contracted payment service, etc.</td><td>Methods not reliant on external payment can also be selected</td></tr>
+                </tbody>
+            </table>
+            <p>What future cafeteria systems need is not only faster checkout. Including outage preparedness, operating-cost optimization, and ease of use for users, improving the cafeteria's overall operations is important.</p>
+            <p>Through a <a href="../smart-cafeteria.html">smart cafeteria auto-register</a> that integrates the register and payment terminals, Izumo Soan supports shorter wait times and stable operation for company and university cafeterias.</p>
+            <p><strong>IZUMO SOAN &mdash; Making cafeteria checkout faster and simpler.</strong></p>
+            <hr />
+
+            <div class="column-cta">
+                <h3>Why not experience the results firsthand with a free PoC?</h3>
+                <p>AI image recognition, RFID, and weight-based checkout &mdash; test the method best suited to your cafeteria in a real environment.<br>
+                We handle everything from bringing in and installing the equipment to removing it. There is no cost at all.</p>
+                <a href="../lp-smart-cafeteria.html" class="cta-btn">Apply for a free PoC &rarr;</a>
+            </div>
+
+            <div class="column-related">
+                <h3>Related Articles</h3>
+                <ul>
+                    <li><a href="cafeteria-payment-comparison.html">Comparing Cafeteria Settlement Methods | How to Choose Among Ticket Machines, Counter Payment, and Auto-Registers</a></li>
+                    <li><a href="cafeteria-faceauth-gate.html">The Ultimate Way to Eliminate Cafeteria Queues | Face-Recognition Gates x Flat-Rate Settlement</a></li>
+                    <li><a href="cafeteria-auto-settlement.html">A Thorough Comparison of Cafeteria Auto-Settlement Systems | Explaining the Three Methods: AI, RFID, and Weight</a></li>
+                    <li><a href="rfid-vs-ai.html">Comparing RFID Recognition and AI Image Recognition for Cafeteria Checkout | The Best Choice from Accuracy, Cost, and Flexibility</a></li>
+                    <li><a href="cafeteria-queue.html">Five Ways to Resolve Company Cafeteria Queues</a></li>
+                    <li><a href="cafeteria-dx.html">An Introduction to Company Cafeteria DX | Three Steps to Break Away from Analog Operations</a></li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../../assets/img/logo/logo.webp' alt='Izumo Soan'>
+                    <p class='logo-desp'>Technology, into on-site strength.</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href='../index.html'>Home</a></li>
+                        <li><a href='../about.html'>About</a></li>
+                        <li><a href='../products.html'>Products</a></li>
+                        <li><a href='../services.html'>Services</a></li>
+                        <li><a href='../case-studies.html'>Case Studies</a></li>
+                        <li><a href='../overseas-partner.html'>Overseas Manufacturer Partners</a></li>
+                        <li><a href='index.html'>Column</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>Product Information</h4>
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='../smart-cafeteria.html'>
+                            <span>Smart Cafeteria</span>
+                            <small>Image recognition, RFID, weight-based checkout</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-access' href='../access-control.html'>
+                            <span>Access Control System</span>
+                            <small>Face recognition, IC card, QR authentication with existing-equipment integration</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='../products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>Operation-improvement platform for smart sites</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 Izumo Soan. All rights reserved. | <a href='../privacy.html' style='color:inherit;text-decoration:underline;'>Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src='../../assets/js/main.js'></script>
+    <script src='../../assets/js/lang-switcher.js'></script>
+</body>
+</html>
