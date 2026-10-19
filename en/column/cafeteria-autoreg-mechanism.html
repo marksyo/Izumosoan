@@ -332,8 +332,8 @@
             <p class="column-answer"><strong>Key point:</strong> Our auto-register integrates the register and payment functions into a single terminal, a configuration that removes the amount linking between the PC and payment terminal. This simplifies the configuration and makes it easier to keep checking out during network outages and to optimize payment costs.</p>
             <p>Our auto-register adopts a configuration that integrates the register and payment functions into the same terminal.</p>
             <p><img src='../../assets/img/cafeteria/whyallinone_EN.png' alt='Why the register and payment functions are integrated into the same terminal: a diagram showing how removing amount linking between the PC and payment terminal simplifies the configuration' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);' loading='lazy'></p>
+            <p>The benefits of the integrated product are: (1) by eliminating communication between the register terminal and the payment terminal, we improved stability; and (2) it becomes possible to eliminate payment fees. Payment via payroll deduction for employees or prepaid balances for students can be easily realized using face recognition or QR codes.</p>
             <p>All of our <a href="../products.html">RFID and AI products</a> are designed with the POS register and payment terminal integrated.</p>
-            <p>By removing the amount linking between the register-side PC and a separate payment terminal that a standard configuration requires, we simplify the system configuration and aim to improve stability.</p>
             <p><img src='../../assets/img/cafeteria/AInewtype2.jpg' alt='Configuration image of our auto-register with the register and payment terminals integrated' style='max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);' loading='lazy'></p>
             <h4>Checkout Flow</h4>
             <ol class="flow-steps">
@@ -352,6 +352,21 @@
                 <li>QR code</li>
                 <li>Card</li>
             </ul>
+
+            <h2>4. Why We Integrated the Register and Payment Terminals</h2>
+            <p class="column-answer"><strong>Key point:</strong> There are two aims of integration. (1) To improve the stability of checkout processing by removing inter-device communication, and (2) to reduce reliance on external payment services and curb the cafeteria operator's payment costs and operational burden.</p>
+            <p>There are two main reasons we adopted an integrated configuration.</p>
+
+            <h3>Reason 1: To Improve the Stability of Checkout Processing</h3>
+            <p>At cafeteria auto-registers, many users must be processed within a limited time such as the lunch break.</p>
+            <p>For that reason, not only recognizing dishes quickly but also ensuring checkout processing does not stop midway is important.</p>
+            <p>Integrating the register and payment terminals removes the communication used to exchange amount information and payment results between the two. Furthermore, by combining in-terminal data storage with re-transmission after communication recovers, resilience to network failures can be improved.</p>
+            <p>We aim not merely to automate checkout but to build a mechanism that lets cafeterias operate stably.</p>
+
+            <h3>Reason 2: To Reduce the Cafeteria Operator's Payment Costs and Operational Burden</h3>
+            <p>Using an external payment service can incur payment fees and costs associated with the service contract. Also, a configuration that relies on a specific payment provider requires measures in case the service stops or contract terms change.</p>
+            <p>By building the payment function into our own terminal and allowing methods such as prepaid or in-house accounts to be selected, a payment environment suited to the cafeteria's operation can be built.</p>
+            <p>That said, even when not using an external payment service, balance management, fraud prevention, settlement management, and system maintenance are still required. It is important to compare the costs and operating conditions of each payment method and then choose the optimal configuration.</p>
 
             <h3>Feature 1: A Design That Keeps Checkout Running During Network Outages</h3>
             <p>In our system, by completing register and payment processing within the terminal, we can adopt a design that keeps the corresponding processing running within the terminal even if communication with external servers temporarily stops.</p>
@@ -375,42 +390,15 @@
             </ul>
             <p>If these methods are appropriately adopted, the frequency of external payment-service use and the fee burden can potentially be reduced. Note that actual cost-saving effects vary by payment method, operating cost, and system implementation cost.</p>
 
-            <h2>4. Why We Integrated the Register and Payment Terminals</h2>
-            <p class="column-answer"><strong>Key point:</strong> There are two aims of integration. (1) To improve the stability of checkout processing by removing inter-device communication, and (2) to reduce reliance on external payment services and curb the cafeteria operator's payment costs and operational burden.</p>
-            <p>There are two main reasons we adopted an integrated configuration.</p>
-
-            <h3>Reason 1: To Improve the Stability of Checkout Processing</h3>
-            <p>At cafeteria auto-registers, many users must be processed within a limited time such as the lunch break.</p>
-            <p>For that reason, not only recognizing dishes quickly but also ensuring checkout processing does not stop midway is important.</p>
-            <p>Integrating the register and payment terminals removes the communication used to exchange amount information and payment results between the two. Furthermore, by combining in-terminal data storage with re-transmission after communication recovers, resilience to network failures can be improved.</p>
-            <p>We aim not merely to automate checkout but to build a mechanism that lets cafeterias operate stably.</p>
-
-            <h3>Reason 2: To Reduce the Cafeteria Operator's Payment Costs and Operational Burden</h3>
-            <p>Using an external payment service can incur payment fees and costs associated with the service contract. Also, a configuration that relies on a specific payment provider requires measures in case the service stops or contract terms change.</p>
-            <p>By building the payment function into our own terminal and allowing methods such as prepaid or in-house accounts to be selected, a payment environment suited to the cafeteria's operation can be built.</p>
-            <p>That said, even when not using an external payment service, balance management, fraud prevention, settlement management, and system maintenance are still required. It is important to compare the costs and operating conditions of each payment method and then choose the optimal configuration.</p>
-
             <h2>5. Conclusion: Toward an Auto-Register That Is Not Just Fast but Hard to Stop</h2>
-            <p class="column-answer"><strong>Key point:</strong> When choosing a cafeteria auto-register, it is important to compare not only dish-recognition speed but the whole system, including outage preparedness, payment cost, and ease of use. The table below compares a standard auto-register with the integrated type.</p>
+            <p class="column-answer"><strong>Key point:</strong> When choosing a cafeteria auto-register, it is important to compare not only dish-recognition speed but the whole system, including outage preparedness, payment cost, and ease of use.</p>
             <p>When choosing a cafeteria auto-register, you need to pay attention not only to dish-recognition speed but also to the overall system configuration.</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Comparison item</th>
-                        <th>Standard auto-register</th>
-                        <th>Our integrated auto-register</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Dish amount calculation</td><td>Automatic calculation with RFID, AI, etc.</td><td>Automatic calculation with RFID, AI, etc.</td></tr>
-                    <tr><td>Register and payment configuration</td><td>May link a separate terminal and separate PC</td><td>Register and payment functions integrated in the same terminal</td></tr>
-                    <tr><td>Inter-device amount linking</td><td>Required depending on configuration</td><td>No linking needed between register and payment terminals</td></tr>
-                    <tr><td>Handling network outages</td><td>Depends on system configuration and settings</td><td>Supports in-terminal storage and re-transmission after recovery</td></tr>
-                    <tr><td>Payment methods</td><td>External payment services, etc.</td><td>Face recognition, QR code, card, prepaid, etc., supported per configuration</td></tr>
-                    <tr><td>Payment cost</td><td>Depends on the contracted payment service, etc.</td><td>Methods not reliant on external payment can also be selected</td></tr>
-                </tbody>
-            </table>
             <p>What future cafeteria systems need is not only faster checkout. Including outage preparedness, operating-cost optimization, and ease of use for users, improving the cafeteria's overall operations is important.</p>
+            <p>In particular, <strong>the integrated product has a clear advantage on two points:</strong></p>
+            <ol class="flow-steps">
+                <li><strong>Stability:</strong> By eliminating communication between the register and payment terminals, it is less affected by network outages and keeps checkout from stopping.</li>
+                <li><strong>Payment cost:</strong> By building the payment function into our own terminal, payment fees can be reduced, and operations such as prepaid, in-house accounts, and payroll deduction can be chosen.</li>
+            </ol>
             <p>Through a <a href="../smart-cafeteria.html">smart cafeteria auto-register</a> that integrates the register and payment terminals, Izumo Soan supports shorter wait times and stable operation for company and university cafeterias.</p>
             <p><strong>IZUMO SOAN &mdash; Making cafeteria checkout faster and simpler.</strong></p>
             <hr />
