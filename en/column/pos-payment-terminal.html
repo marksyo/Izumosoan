@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>What Is the Relationship Between a POS Register and a Payment Terminal? | Integration Methods and the Evolution of Cafeteria Auto-Registers | Izumo Soan Column</title>
+    <meta name='description' content='Learn the difference in roles between a POS register and a payment terminal, and the three integration methods: non-linked, semi-linked, and fully linked. We also explain the dish-price recognition methods (RFID and AI image recognition) needed for cafeteria auto-registers, and the features of an integrated system that does not rely on an external payment terminal.'>
+    <meta name='keywords' content='POS register payment terminal, POS payment integration method, fully linked semi-linked non-linked, cafeteria auto-register, RFID register AI recognition register, cafeteria auto checkout POS, cafeteria payment fees, cashless fee reduction, POS payment integrated'>
+    <link rel="canonical" href="https://izumosoan.com/en/column/pos-payment-terminal.html">
+    <link rel="alternate" hreflang="ja" href="https://izumosoan.com/ja/column/pos-payment-terminal.html">
+    <link rel="alternate" hreflang="en" href="https://izumosoan.com/en/column/pos-payment-terminal.html">
+    <link rel="alternate" hreflang="zh" href="https://izumosoan.com/zh/column/pos-payment-terminal.html">
+    <link rel="alternate" hreflang="x-default" href="https://izumosoan.com/ja/column/pos-payment-terminal.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Izumo Soan">
+    <meta property="og:url" content="https://izumosoan.com/en/column/pos-payment-terminal.html">
+    <meta property="og:title" content="What Is the Relationship Between a POS Register and a Payment Terminal? | Integration Methods and the Evolution of Cafeteria Auto-Registers">
+    <meta property="og:description" content="Learn the difference in roles between a POS register and a payment terminal, the three integration methods (non-linked, semi-linked, fully linked), the dish-price recognition methods for cafeteria auto-registers, and the features of an integrated system that does not rely on an external payment terminal.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://izumosoan.com/assets/img/cafeteria/AItype.jpg">
+    <meta property="og:image:alt" content="What Is the Relationship Between a POS Register and a Payment Terminal? | Integration Methods and the Evolution of Cafeteria Auto-Registers">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What Is the Relationship Between a POS Register and a Payment Terminal? | Integration Methods and the Evolution of Cafeteria Auto-Registers">
+    <meta name="twitter:description" content="Learn the difference in roles between a POS register and a payment terminal, the three integration methods, the dish-price recognition methods for cafeteria auto-registers, and the features of an integrated system that does not rely on an external payment terminal.">
+    <meta name="twitter:image" content="https://izumosoan.com/assets/img/cafeteria/AItype.jpg">
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://izumosoan.com/en/index.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Column",
+            "item": "https://izumosoan.com/en/column/index.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "What Is the Relationship Between a POS Register and a Payment Terminal? Integration Methods and the Evolution of Cafeteria Auto-Registers"
+        }
+    ]
+}</script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "datePublished": "2026-10-20",
+    "dateModified": "2026-10-20",
+    "headline": "What Is the Relationship Between a POS Register and a Payment Terminal? Integration Methods and the Evolution of Cafeteria Auto-Registers",
+    "description": "Learn the difference in roles between a POS register and a payment terminal, and the three integration methods: non-linked, semi-linked, and fully linked. We also explain the dish-price recognition methods (RFID and AI image recognition) needed for cafeteria auto-registers, and the features of an integrated system that does not rely on an external payment terminal.",
+    "author": {
+        "@type": "Organization",
+        "name": "Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "description": "Izumo Soan (IZUMO SOAN) provides cafeteria auto-registers using AI image recognition, RFID, and weight-based checkout, as well as access control systems, supporting the efficiency of checkout operations at company and university cafeterias.",
+        "sameAs": [
+            "https://izumosoan.com/"
+        ]
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Izumo Soan",
+        "url": "https://izumosoan.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://izumosoan.com/assets/img/logo/logo.png"
+        }
+    },
+    "image": "https://izumosoan.com/assets/img/cafeteria/AItype.jpg",
+    "inLanguage": "en",
+    "isPartOf": {
+        "@type": "Blog",
+        "name": "Izumo Soan Column",
+        "url": "https://izumosoan.com/en/column/index.html"
+    },
+    "mainEntityOfPage": "https://izumosoan.com/en/column/pos-payment-terminal.html"
+}</script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is the difference between a POS register and a payment terminal?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A POS register records and aggregates sales data such as when, what, how many, and at what price items were sold, and is used for sales totaling and inventory management. A payment terminal, on the other hand, handles the payment process of which payment method is used and how much is paid, using credit cards, electronic money, QR codes, and so on. The two have different roles and, by linking together, deliver smooth checkout."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What types of integration methods exist between a POS register and a payment terminal?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "There are generally three types: non-linked, semi-linked, and fully linked. Non-linked means entering the amount separately on both the POS and the payment terminal; semi-linked means the amount data is sent automatically to the payment terminal but operations remain on the terminal side; fully linked means payment proceeds starting from the POS register operation, so entering the amount on the payment terminal is no longer required."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Why does a cafeteria auto-register need a special mechanism?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "In company and university cafeterias, unlike supermarket products, dishes and tableware generally do not have barcodes. Therefore a mechanism that automatically recognizes dish prices is needed. Representative methods are the RFID recognition method, which identifies dishes with RFID tags on tableware, and the AI image recognition method, which identifies dishes from camera images."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How do the POS function and payment function work together in a cafeteria auto-register?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Generally, dishes are identified by RFID or AI image recognition, the total is calculated from registered prices, the POS function manages the transaction information, the payment is processed in conjunction with the payment terminal, and the payment result is confirmed to complete checkout. Many systems adopt a configuration that fully links the device handling the POS function with an external payment terminal."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What are the features of Izumo Soan's cafeteria auto-register?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Izumo Soan (IZUMO SOAN)'s cafeteria auto-register provides payment functions by face recognition, QR code, and card, in addition to dish-price recognition and checkout processing. Because it does not rely on a configuration that separately connects an external payment terminal, benefits such as a simpler system configuration, space savings, more efficient maintenance and operation, and the choice of payment methods suited to the cafeteria can be expected."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How much do cafeteria cashless payment fees cost?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "With typical cashless payment services, a fee of around 3% of the payment amount may occur depending on the contract terms. For example, a cafeteria serving meals at 500 yen each with annual payment turnover of 30 million yen would incur about 900,000 yen in fees per year at a 3% rate (an estimate). In company and university cafeterias, where meal prices cannot easily be raised, it is important to compare the total cost including payment fees, not just checkout speed. Methods that use in-cafeteria user accounts or prepaid balances allow a cost structure different from typical credit-card payments to be considered."
+            }
+        }
+    ]
+}</script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Cafeteria auto-register checkout flow",
+    "description": "The general flow from identifying dishes by RFID or AI image recognition to completing checkout by linking the POS function with the payment terminal.",
+    "step": [
+        {"@type": "HowToStep", "position": 1, "name": "Identify the dishes", "text": "Identify dishes by RFID or AI image recognition."},
+        {"@type": "HowToStep", "position": 2, "name": "Calculate the total", "text": "Calculate the total amount from registered prices."},
+        {"@type": "HowToStep", "position": 3, "name": "Manage transaction information", "text": "Manage the transaction information with the POS function."},
+        {"@type": "HowToStep", "position": 4, "name": "Process the payment", "text": "Process the payment in conjunction with the payment terminal."},
+        {"@type": "HowToStep", "position": 5, "name": "Complete checkout", "text": "Confirm the payment result and complete checkout."}
+    ]
+}</script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://izumosoan.com/en/column/pos-payment-terminal.html",
+    "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".column-lead", ".column-answer"]
+    }
+}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='../../assets/css/style.min.css'>
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo/favicon.ico">
+    <style>
+    .column-hero {
+        background: linear-gradient(135deg, #001d30 0%, #003554 100%);
+        padding: 100px 20px 60px; color: #fff; text-align: center;
+    }
+    .column-hero h1 {
+        font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 800; line-height: 1.4;
+        max-width: 800px; margin: 0 auto 16px; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .column-breadcrumb { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 20px; }
+    .column-breadcrumb a { color: rgba(255,255,255,0.95); text-decoration: none; }
+    .column-breadcrumb a:hover { text-decoration: underline; }
+    .column-body {
+        max-width: 820px; margin: 0 auto; padding: 48px 20px 80px;
+        font-size: 1rem; line-height: 1.85; color: #1e293b;
+    }
+    .column-body h2 {
+        font-size: 1.5rem; font-weight: 700; color: #003554;
+        margin: 56px 0 20px; padding-bottom: 10px; border-bottom: 3px solid #006494;
+    }
+    .column-body h3 { font-size: 1.2rem; font-weight: 700; color: #004a77; margin: 36px 0 14px; }
+    .column-body h4 { font-size: 1.05rem; font-weight: 700; color: #333; margin: 28px 0 10px; }
+    .column-body p { margin: 0 0 18px; }
+    .column-body strong { color: #003554; }
+    .column-body .column-lead {
+        background: #f0f7ff; border-left: 4px solid #00880F;
+        padding: 14px 20px; margin: 0 0 22px; border-radius: 0 8px 8px 0;
+        font-weight: 500; color: #1e293b; font-size: 1.02rem; line-height: 1.75;
+    }
+    .column-body .column-lead strong { color: #00660C; }
+    .column-body .column-answer {
+        background: #eef6fb; border-left: 4px solid #006494;
+        padding: 14px 20px; margin: 0 0 24px; border-radius: 0 8px 8px 0;
+        font-size: 0.98rem; line-height: 1.8; color: #1e293b;
+    }
+    .column-body .column-answer strong { color: #003554; }
+    .column-body blockquote {
+        background: #f0f7ff; border-left: 4px solid #006494;
+        padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem;
+    }
+    .column-body blockquote p { margin: 0 0 8px; }
+    .column-body blockquote p:last-child { margin: 0; }
+    .column-body table {
+        width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.92rem;
+    }
+    .column-body table th {
+        background: #003554; color: #fff; padding: 12px 16px; text-align: left; font-weight: 600;
+    }
+    .column-body table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+    .column-body table tr:nth-child(even) { background: #f8fafc; }
+    .column-body table tr:hover { background: #f0f7ff; }
+    .column-body ul, .column-body ol { margin: 0 0 18px 20px; }
+    .column-body li { margin: 0 0 8px; }
+    .column-body a { color: #006494; text-decoration: underline; }
+    .column-body a:hover { color: #003554; }
+    .column-body hr { border: none; border-top: 1px solid #e2e8f0; margin: 48px 0; }
+    .column-cta {
+        background: linear-gradient(135deg, #001d30, #003554); color: #fff;
+        padding: 48px 32px; border-radius: 16px; text-align: center; margin: 56px 0 32px;
+    }
+    .column-cta h3 { color: #fff; font-size: 1.4rem; margin: 0 0 16px; border: none; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+    .column-cta p { color: #fff; margin: 0 0 24px; font-size: 1rem; text-shadow: 0 1px 4px rgba(0,0,0,0.2); }
+    .column-cta .cta-btn {
+        display: inline-block; background: #00880F; color: #fff;
+        padding: 16px 40px; border-radius: 8px; font-size: 1.1rem; font-weight: 700;
+        text-decoration: none; box-shadow: 0 4px 20px rgba(0,136,15,0.4); transition: all 0.3s;
+    }
+    .column-cta .cta-btn:hover { background: #006e0c; transform: translateY(-2px); color: #fff; }
+    .column-related {
+        margin: 48px 0 0; padding: 32px; background: #f4f7fa; border-radius: 12px;
+    }
+    .column-related h3 { color: #003554; font-size: 1.1rem; margin: 0 0 16px; border: none; }
+    .column-related ul { list-style: none; margin: 0; padding: 0; }
+    .column-related li { margin: 0 0 10px; }
+    .column-related a { color: #006494; text-decoration: none; font-size: 0.95rem; }
+    .column-related a:hover { text-decoration: underline; }
+    .column-related a::before { content: "📖 "; }
+    .column-body ol.flow-steps {
+        list-style: none; counter-reset: flow; margin: 0 0 18px 0; padding: 0;
+    }
+    .column-body ol.flow-steps li {
+        counter-increment: flow; position: relative; padding: 2px 0 2px 2.4em; margin: 0 0 10px;
+    }
+    .column-body ol.flow-steps li::before {
+        content: counter(flow) "."; position: absolute; left: 0; top: 2px;
+        font-weight: 700; color: #006494; min-width: 1.8em;
+    }
+    @media (max-width: 768px) {
+        .column-hero { padding: 80px 16px 40px; }
+        .column-body { padding: 32px 16px 60px; }
+        .column-body h2 { font-size: 1.3rem; }
+        .column-body table { font-size: 0.82rem; }
+        .column-body table th, .column-body table td { padding: 8px 10px; }
+        .column-cta { padding: 32px 20px; }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <div class='logo'>
+                <a href='../index.html'>
+                    <img src='../../assets/img/logo/logo.webp' alt='Izumo Soan' class='header-logo-img' style='height:80px;'>
+                </a>
+            </div>
+            <div class='language-switcher'>
+                <span class='lang-label'><i class="fas fa-globe"></i></span>
+                <select id='lang-select'>
+                    <option value='ja'>日本語</option>
+                    <option value='en' selected>English</option>
+                    <option value='zh'>中文</option>
+                </select>
+            </div>
+            <button class='hamburger' id='hamburger' aria-label='Menu'>&#9776;</button>
+            <nav>
+                <ul>
+                    <li><a href='../index.html'>Home</a></li>
+                    <li><a href='../services.html'>Services</a></li>
+                    <li><a href='../products.html'>Products</a></li>
+                    <li><a href='../case-studies.html'>Case Studies</a></li>
+                    <li><a href='../about.html'>About</a></li>
+                    <li><a href='../column/index.html'>Column</a></li>
+                    <li><a href='../index.html#contact'>Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="column-hero">
+            <div class="column-breadcrumb">
+                <a href="../index.html">Home</a> &gt; <a href="index.html">Column</a> &gt; What Is the Relationship Between a POS Register and a Payment Terminal?
+            </div>
+            <h1>What Is the Relationship Between a POS Register and a Payment Terminal? Integration Methods and the Evolution of Cafeteria Auto-Registers</h1>
+        </section>
+
+        <article class="column-body">
+            <blockquote>
+<p><strong>What you will learn in this article</strong><br>
+- The difference in roles between a POS register and a payment terminal<br>
+- The difference between the three integration methods: non-linked, semi-linked, and fully linked<br>
+- The dish-price recognition methods (RFID and AI image recognition) needed for cafeteria auto-registers<br>
+- The features and benefits of an integrated cafeteria auto-register that does not rely on an external payment terminal</p>
+            </blockquote>
+
+            <p class="column-lead">To understand how checkout works, the roles of the <strong>POS register</strong> and the <strong>payment terminal</strong>, and how the two link together, are important points. In company and university cafeterias in particular, there is also the challenge of how to recognize the prices of dishes that have no barcodes. This article clearly explains everything from the relationship between the POS register and the payment terminal to the evolution of cafeteria auto-registers.</p>
+
+            <h2>1. What Is the Role of a POS Register?</h2>
+            <p class="column-answer"><strong>Key point:</strong> A POS register is a register system that records and aggregates sales data such as when, what, how many, and at what price items were sold. It can be used for sales totaling, sales-status analysis, and inventory management.</p>
+            <p>A POS register is a register system equipped with a POS (Point of Sale) function that records and aggregates the information of when, what, how many, and at what price items were sold at the time of sale.</p>
+            <p>By automatically recording sales data, it can be used for sales totaling, sales-status analysis, inventory management, and more.</p>
+            <p>At supermarkets and convenience stores, a mechanism that reads product barcodes to obtain product information and prices and calculate the checkout amount is common.</p>
+
+            <h2>2. What Is the Role of a Payment Terminal?</h2>
+            <p class="column-answer"><strong>Key point:</strong> A payment terminal is a device for cashless payment using credit cards, electronic money, QR codes, and so on. While a POS register manages what was sold and at what price, the payment terminal handles which payment method is used and how much is paid.</p>
+            <p>A payment terminal is a device for performing cashless payment using credit cards, electronic money, QR code payments, and the like.</p>
+            <p>While a POS register manages what was sold and at what price, the payment terminal handles the payment process of which payment method is used and how much is paid.</p>
+            <p>In other words, the POS register and the payment terminal each have different roles and, by working together, deliver smooth checkout.</p>
+
+            <h2>3. The Three Integration Methods Between a POS Register and a Payment Terminal</h2>
+            <p class="column-answer"><strong>Key point:</strong> Integration methods between a POS register and a payment terminal are generally divided into three types: non-linked, semi-linked, and fully linked. The higher the degree of integration, the more it prevents double entry of amounts and simplifies checkout operations.</p>
+            <p>Integration methods between a POS register and a payment terminal are generally divided into three types: non-linked, semi-linked, and fully linked.</p>
+
+            <h3>(1) Non-Linked Type: Enter the Amount on Each Device</h3>
+            <p>This is a method in which the POS register and the payment terminal are not linked.</p>
+            <p>After the checkout amount is confirmed on the POS register, the staff enters the same amount into the payment terminal as well to process payment.</p>
+            <p style="text-align:center;margin:24px 0;">
+                <img src="../../assets/img/columns/nolink_pos_pay_EN.jpg" alt="Image of the non-linked type, in which the amount is entered separately on the POS register and the payment terminal" style="max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);">
+            </p>
+            <h4>Characteristics</h4>
+            <ul>
+                <li>The POS register and the payment terminal must each be operated</li>
+                <li>Because the amount is entered twice, input errors can occur</li>
+                <li>Checkout tends to take time</li>
+            </ul>
+
+            <h3>(2) Semi-Linked Type: Amount Data Is Linked, Operations on the Payment Terminal</h3>
+            <p>This is a method in which the checkout amount confirmed on the POS register is sent automatically to the payment terminal.</p>
+            <p>There is no need to re-enter the amount, but operations such as selecting the payment method or starting the payment may be required on the payment terminal side.</p>
+            <p style="text-align:center;margin:24px 0;">
+                <img src="../../assets/img/columns/halflink_pos_pay_EN.jpg" alt="Image of the semi-linked type, in which the amount data is linked to the payment terminal and operated on the terminal side" style="max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);">
+            </p>
+            <h4>Characteristics</h4>
+            <ul>
+                <li>Double entry of the amount can be prevented</li>
+                <li>Amount mistakes from manual entry can be reduced</li>
+                <li>An operation is required to manually mark the payment terminal's payment result as complete on the POS register.</li>
+            </ul>
+
+            <h3>(3) Fully Linked Type: Payment Starting From the POS Register Operation</h3>
+            <p>This is a method in which, when payment processing is started on the POS register, information such as the checkout amount is linked to the payment terminal and the payment process proceeds.</p>
+            <p>There is no need to enter the amount on the payment terminal side, and in supported systems the checkout can proceed centered on the POS register operation.</p>
+            <p style="text-align:center;margin:24px 0;">
+                <img src="../../assets/img/columns/autolink_pos_pay_EN.jpg" alt="Image of the fully linked type, in which payment proceeds starting from the POS register operation in conjunction with the payment terminal" style="max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);">
+            </p>
+            <h4>Characteristics</h4>
+            <ul>
+                <li>Checkout operations can be simplified</li>
+                <li>Double entry of the amount can be prevented</li>
+                <li>It leads to shorter checkout times and a reduced burden on staff</li>
+            </ul>
+            <p>However, even with full linking, operations according to the payment method, such as the user tapping a card or entering a PIN, may still be required.</p>
+
+            <h3>Comparison of the Three Integration Methods</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Comparison item</th>
+                        <th>Non-linked</th>
+                        <th>Semi-linked</th>
+                        <th>Fully linked</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Automatic amount linking</td>
+                        <td>None</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Amount entry on the payment terminal</td>
+                        <td>Required</td>
+                        <td>Not required</td>
+                        <td>Not required</td>
+                    </tr>
+                    <tr>
+                        <td>Operation on the payment terminal side</td>
+                        <td>Required</td>
+                        <td>May be required</td>
+                        <td>In principle proceeds centered on POS-side operation</td>
+                    </tr>
+                    <tr>
+                        <td>Double entry of the amount</td>
+                        <td>Occurs</td>
+                        <td>Prevented</td>
+                        <td>Prevented</td>
+                    </tr>
+                    <tr>
+                        <td>Simplification of checkout operations</td>
+                        <td>Limited</td>
+                        <td>Some effect</td>
+                        <td>A higher effect can be expected</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>* The actual operation methods and scope of linking differ by product and payment method.</p>
+
+            <h2>4. A Cafeteria Auto-Register Needs a Mechanism to Recognize Dish Prices</h2>
+            <p class="column-answer"><strong>Key point:</strong> In company and university cafeterias, dishes and tableware have no barcodes, so a mechanism that automatically recognizes dish prices is needed. Representative methods are the RFID recognition method and the AI image recognition method.</p>
+            <p>In company and university cafeterias, unlike supermarket products, dishes and tableware generally do not have barcodes.</p>
+            <p>Therefore, if a general POS register is used as is, it becomes necessary to manually enter the price of each dish or register product information in some other way.</p>
+            <p>In cafeterias with many users in particular, a mechanism that automatically recognizes dish prices and enables quick checkout is important.</p>
+            <p>Representative methods are the RFID recognition method and the AI image recognition method.</p>
+
+            <h3>RFID Register: Identifying Dishes by RFID Tags on Tableware</h3>
+            <p>In the RFID method, RFID tags are attached to tableware and the like, and a reader reads the tag information.</p>
+            <p>By matching the pre-registered tags with dish information, the dish price is obtained and the checkout amount is calculated.</p>
+            <ol class="flow-steps">
+                <li>Read the RFID tag attached to the tableware</li>
+                <li>Identify the dish from the tag information</li>
+                <li>Obtain the registered price and calculate the total amount</li>
+            </ol>
+
+            <h3>AI Recognition Register: Identifying Dishes From Camera Images</h3>
+            <p>In the AI image recognition method, an AI analyzes images of dishes and tableware captured by a camera to identify the types of dishes.</p>
+            <p>By matching the identification results against pre-registered product information and prices, the checkout amount is calculated automatically.</p>
+            <ol class="flow-steps">
+                <li>Capture the dishes and tableware with a camera</li>
+                <li>The AI identifies the dishes from the images</li>
+                <li>Obtain the registered prices and calculate the total amount</li>
+            </ol>
+            <p>In this method, instead of attaching an RFID tag to each piece of tableware, dishes can be identified by image recognition. However, because recognition accuracy is affected by the appearance and plating of dishes and lighting conditions, verification suited to the installation environment is important.</p>
+
+            <h2>5. The POS Function and Payment Function in a Cafeteria Auto-Register</h2>
+            <p class="column-answer"><strong>Key point:</strong> A cafeteria auto-register needs both a function to recognize dishes and calculate prices and a function to process users' payments. Many systems adopt a configuration that fully links the device handling the POS function with an external payment terminal.</p>
+            <p>To realize a cafeteria auto-register, both a function to recognize dishes and calculate prices and a function to process users' payments are needed.</p>
+            <p>In a general configuration, the flow is as follows.</p>
+            <ol class="flow-steps">
+                <li>Identify dishes by RFID or AI image recognition</li>
+                <li>Calculate the total amount from the registered prices</li>
+                <li>Manage the transaction information with the POS function</li>
+                <li>Process the payment in conjunction with the payment terminal</li>
+                <li>Confirm the payment result and complete checkout</li>
+            </ol>
+            <p>In many systems, a configuration that combines a device handling the POS function with an external payment terminal and fully links the two is adopted.</p>
+            <p>This method makes it possible to streamline everything from dish recognition to checkout-amount calculation and payment processing. On the other hand, when using an external payment terminal, it is also necessary to consider the connection between devices, the supported payment methods, and the maintenance and support structure.</p>
+
+            <h2>6. A Cafeteria Auto-Register That Does Not Rely on an External Payment Terminal</h2>
+            <p class="column-answer"><strong>Key point:</strong> Izumo Soan (IZUMO SOAN)'s cafeteria auto-register provides payment functions by face recognition, QR code, and card, in addition to dish-price recognition and checkout processing. Without relying on separately connecting an external payment terminal, you can build a checkout system suited to the cafeteria's operation.</p>
+            <p>The cafeteria auto-register proposed by Izumo Soan (IZUMO SOAN) is a product that integrates the POS register and the payment terminal.</p>
+            <p style="text-align:center;margin:24px 0;">
+                <img src="../../assets/img/cafeteria/whyallinone_EN.png" alt="Image of Izumo Soan's cafeteria auto-register that integrates the POS register and the payment terminal" style="max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);">
+            </p>
+            <p>The cafeteria auto-register proposed by Izumo Soan (IZUMO SOAN) is a system that provides payment functions by face recognition, QR code, and card, in addition to dish-price recognition and checkout processing.</p>
+            <p>Its feature is that it does not rely on a configuration that separately connects an external payment terminal, so you can build a checkout system suited to the cafeteria's operation.</p>
+
+            <h3>Expected Benefits</h3>
+            <h4>1. A Simpler System Configuration</h4>
+            <p>By designing everything from dish recognition to checkout and payment in an integrated way, the complexity of configuration that comes with connecting external devices can be kept down.</p>
+            <h4>2. Space Savings</h4>
+            <p>Compared with a configuration that adds a separate payment terminal, the installation space for devices may be reduced.</p>
+            <h4>3. More Efficient Maintenance and Operation</h4>
+            <p>By designing the entire system in an integrated way, the burden of isolating problems between devices is reduced, making operation and maintenance easier to streamline.</p>
+            <h4>4. Payment Methods Suited to the Cafeteria</h4>
+            <p>Payment methods suited to the cafeteria's operating policy and users' needs, such as face recognition, QR code, and card, can be considered.</p>
+            <p>* The available payment methods, connection requirements with external services, and payment-processing configuration differ by the specifications of the product or service introduced.</p>
+
+            <h2>7. The Challenge of Payment Fees in Cafeteria Operation</h2>
+            <p class="column-answer"><strong>Key point:</strong> In company and university cafeteria operation, "nutrition," "health," and "price" are important keywords. Cashless payment fees, which are easily overlooked, can pile up and squeeze profits, so comparing the total cost is important.</p>
+            <p>In the operation of company and university cafeterias, not only the quality of the dishes but also three keywords—"nutrition," "health," and "price"—are important.</p>
+            <p>To provide users with nutritionally balanced meals at reasonable prices, it is necessary to pay attention not only to ingredient and labor costs but also to the operating costs that occur daily.</p>
+            <p>Among these, what tends to be overlooked are cashless payment fees.</p>
+
+            <h3>Payment Fees Are a Cost the Cafeteria Cannot Ignore</h3>
+            <p>With typical cashless payment services, a fee of around 3% of the payment amount may occur depending on the contract terms.</p>
+            <p>For example, in a cafeteria serving meals at 500 yen each, if the annual cashless payment amount were 30 million yen, a 3% payment fee would amount to 900,000 yen in costs per year.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Price per meal</td>
+                        <td>500 yen</td>
+                    </tr>
+                    <tr>
+                        <td>Annual payment turnover</td>
+                        <td>30 million yen</td>
+                    </tr>
+                    <tr>
+                        <td>Payment fee rate (assumed)</td>
+                        <td>3%</td>
+                    </tr>
+                    <tr>
+                        <td>Annual payment fees</td>
+                        <td>900,000 yen</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>* The above is an estimate to explain the mechanism and does not indicate an actual fee rate or turnover.</p>
+            <p>In cafeteria operation, such costs piling up can squeeze profits. In company and university cafeterias, where meal prices cannot easily be raised, especially careful cost management is required.</p>
+
+            <h3>The Choice of Payment System Affects the Cafeteria's Prices and Service</h3>
+            <p>When advancing a cafeteria's shift to cashless, it is important to compare not only checkout speed and convenience but also the total cost, including payment fees.</p>
+            <p>Izumo Soan (IZUMO SOAN)'s cafeteria auto-register is equipped with payment functions by face recognition, QR code, and card, and can realize a system configuration that does not rely on an external payment terminal.</p>
+            <p>For example, with methods that use in-cafeteria user accounts or prepaid balances, a cost structure different from typical credit-card payments and the like can be considered.</p>
+            <p>What matters is not simply automating checkout. Through the labor savings from introducing the system and the optimization of operating costs, the aim is to create an environment where users can be provided with nutritionally balanced meals at healthy, reasonable prices.</p>
+
+            <h2>8. Conclusion: For a Cafeteria Auto-Register, Both "Dish Recognition" and "Payment" Matter</h2>
+            <p class="column-answer"><strong>Key point:</strong> By linking the POS register and the payment terminal, checkout processing can be streamlined. In cafeterias, it is important to identify dishes without barcodes by RFID or AI image recognition, automatically calculate the total, and combine this with an appropriate payment function.</p>
+            <p>The POS register and the payment terminal each play different roles. By linking the two, double entry of amounts can be prevented and checkout processing can be streamlined.</p>
+            <p>On the other hand, in company and university cafeterias, there is also the challenge of how to identify dishes without barcodes and automatically calculate prices.</p>
+            <p>Identifying dishes by RFID or AI image recognition and automatically calculating the checkout amount, together with combining an appropriate payment function, is an important point for a cafeteria auto-register.</p>
+            <p>Through a cafeteria auto-register that considers everything from dish-price recognition to checkout and payment by face recognition, QR code, and card, Izumo Soan (IZUMO SOAN) supports the efficiency of checkout operations at company and university cafeterias.</p>
+            <p><strong>From dish recognition to payment, making cafeteria checkout simpler.</strong></p>
+            <p>For product details, please see the <a href="../smart-cafeteria-ai-newmodel.html">cafeteria auto-register product page</a>.</p>
+            <hr />
+
+            <div class="column-cta">
+                <h3>Why not experience the results firsthand with a free PoC?</h3>
+                <p>AI image recognition, RFID, and weight-based checkout — test the method best suited to your cafeteria in a real environment.<br>
+                We handle everything from bringing in and installing the equipment to removing it. There is no cost at all.</p>
+                <a href="../lp-smart-cafeteria.html" class="cta-btn">Apply for a free PoC →</a>
+            </div>
+
+            <div class="column-related">
+                <h3>Related Articles</h3>
+                <ul>
+                    <li><a href="cafeteria-autoreg-mechanism.html">How Does a Cafeteria Auto-Register Work? | Standard Systems vs. Register-Payment Integrated Systems</a></li>
+                    <li><a href="cafeteria-payment-comparison.html">Comparing Cafeteria Settlement Methods | How to Choose Among Ticket Machines, Counter Payment, and Auto-Registers</a></li>
+                    <li><a href="cafeteria-auto-settlement.html">A Thorough Comparison of Cafeteria Auto-Settlement Systems | Explaining the Three Methods: AI, RFID, and Weight</a></li>
+                    <li><a href="rfid-vs-ai.html">Comparing RFID Recognition and AI Image Recognition for Cafeteria Checkout | The Best Choice from Accuracy, Cost, and Flexibility</a></li>
+                    <li><a href="cafeteria-faceauth-gate.html">The Ultimate Way to Eliminate Cafeteria Queues | Face-Recognition Gates x Flat-Rate Settlement</a></li>
+                    <li><a href="cafeteria-dx.html">An Introduction to Company Cafeteria DX | Three Steps to Break Away from Analog Operations</a></li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-logo'>
+                    <img src='../../assets/img/logo/logo.webp' alt='Izumo Soan'>
+                    <p class='logo-desp'>Technology, into on-site strength.</p>
+                </div>
+                <div class='footer-links'>
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href='../index.html'>Home</a></li>
+                        <li><a href='../about.html'>About</a></li>
+                        <li><a href='../products.html'>Products</a></li>
+                        <li><a href='../services.html'>Services</a></li>
+                        <li><a href='../case-studies.html'>Case Studies</a></li>
+                        <li><a href='../overseas-partner.html'>Overseas Manufacturer Partners</a></li>
+                        <li><a href='index.html'>Column</a></li>
+                    </ul>
+                </div>
+                <div class='footer-products'>
+                    <h4>Product Information</h4>
+                    <div class='footer-product-banners'>
+                        <a class='footer-product-banner footer-product-safeops' href='../smart-cafeteria.html'>
+                            <span>Smart Cafeteria</span>
+                            <small>Image recognition, RFID, weight-based checkout</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-access' href='../access-control.html'>
+                            <span>Access Control System</span>
+                            <small>Face recognition, IC card, QR authentication with existing-equipment integration</small>
+                        </a>
+                        <a class='footer-product-banner footer-product-sitebridge' href='../products-sitebridge.html'>
+                            <span>IZUMO SiteBridge</span>
+                            <small>Operation-improvement platform for smart sites</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="container">
+                <p class='footer-copyright'>&copy; 2026 Izumo Soan. All rights reserved. | <a href='../privacy.html' style='color:inherit;text-decoration:underline;'>Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src='../../assets/js/main.js'></script>
+    <script src='../../assets/js/lang-switcher.js'></script>
+</body>
+</html>
